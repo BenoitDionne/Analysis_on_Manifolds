@@ -1,0 +1,25 @@
+\begin{picture}(0,0)%
+\includegraphics{vect_calculus/curl_interp2.pdf}%
+\end{picture}%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2349,1466)(289,-973)
+\put(765,-502){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{x}$}%
+}}}}
+\put(546,-869){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{v}_0$}%
+}}}}
+\put(2179,-566){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{v}(t) = \diff_{\VEC{x}}\phi(t,\VEC{x}) \VEC{v}_0$}%
+}}}}
+\put(2173,334){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{w}(t) = \diff_{\VEC{x}}\phi(t,\VEC{x}) \VEC{w}_0$}%
+}}}}
+\put(2172,-49){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\phi(t,\VEC{x})$}%
+}}}}
+\put(521, 34){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{w}_0$}%
+}}}}
+\end{picture}%

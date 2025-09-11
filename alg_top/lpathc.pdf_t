@@ -1,0 +1,14 @@
+\begin{picture}(0,0)%
+\includegraphics{alg_top/lpathc.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(2529,718)(-419,-175)
+\put(1936,344){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$X$}%
+}}}
+\put(1306,367){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{x}$}%
+}}}
+\put(-404,119){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}Path converges}%
+}}}
+\put(-404,-106){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}to $\VEC{x}$}%
+}}}
+\end{picture}%

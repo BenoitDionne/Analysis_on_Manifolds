@@ -1,0 +1,68 @@
+\begin{picture}(0,0)%
+\includegraphics{cohomology/degree1.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(5767,3549)(85,-2782)
+\put(226,-826){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}_2$}%
+}}}
+\put(736,-1201){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_3$}%
+}}}
+\put(636, 99){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_1$}%
+}}}
+\put(196,-1461){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}_3$}%
+}}}
+\put(236,379){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}_1$}%
+}}}
+\put(694,-643){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_2$}%
+}}}
+\put(586,614){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$S_1$}%
+}}}
+\put(1936,614){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$S_2$}%
+}}}
+\put(2026, 29){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{v}$}%
+}}}
+\put(2026,-511){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$K_1$}%
+}}}
+\put(2341,-241){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}$}%
+}}}
+\put(3286,-826){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}_2$}%
+}}}
+\put(3796,-1201){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_3$}%
+}}}
+\put(3696, 99){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_1$}%
+}}}
+\put(3256,-1461){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}_3$}%
+}}}
+\put(3296,379){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}_1$}%
+}}}
+\put(3754,-643){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_2$}%
+}}}
+\put(3646,614){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$S_1$}%
+}}}
+\put(4996,614){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$S_2$}%
+}}}
+\put(5086, 29){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{v}$}%
+}}}
+\put(5401,-241){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{U}$}%
+}}}
+\put(3826,-1771){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}step 2}%
+}}}
+\put(766,-1771){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}step 1}%
+}}}
+\put(4906,-511){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$K_3$}%
+}}}
+\put(136,-2716){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}We have a similar situation  for $U_1$ and $U_2$.}%
+}}}
+\put(136,-2491){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}because of boundary points are not included.}%
+}}}
+\put(136,-2266){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\displaystyle U_3 = f^{-1}(U) \cap \tilde{U}_3$ but is not equal to it}%
+}}}
+\put(136,-2041){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}Note that this region contains}%
+}}}
+\put(1801,-1006){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\displaystyle f^{-1}(K_1)$}%
+}}}
+\put(3871,-2041){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\displaystyle K_2=f^{-1}(K_1)\setminus (\tilde{U}_1 \cup \tilde{U}_2\cup\tilde{U}_3)$}%
+}}}
+\put(5356,-736){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$U = \tilde{U}\setminus K_3$}%
+}}}
+\end{picture}%

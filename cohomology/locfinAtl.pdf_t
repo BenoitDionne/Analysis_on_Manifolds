@@ -1,0 +1,26 @@
+\begin{picture}(0,0)%
+\includegraphics{cohomology/locfinAtl.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(4620,1896)(-1229,-1615)
+\put(3106,-196){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$V_{i-2}$}%
+}}}
+\put(181,-1546){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$V_{\VEC{u}}$}%
+}}}
+\put(3016,119){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$V_{i-3}$}%
+}}}
+\put(3376,-511){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$V_{i-1}$}%
+}}}
+\put(3376,-826){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$V_i$}%
+}}}
+\put(3241,-1141){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$V_{i+1}$}%
+}}}
+\put(3061,-1456){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$V_{i+2}$}%
+}}}
+\put(-1214,-1051){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}with}%
+}}}
+\put(-1214,-826){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$U_j$}%
+}}}
+\put(-1214,-1276){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$I_{i-1} < j \leq I_i$}%
+}}}
+\end{picture}%

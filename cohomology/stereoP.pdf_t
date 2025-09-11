@@ -1,0 +1,22 @@
+\begin{picture}(0,0)%
+\includegraphics{cohomology/stereoP.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(3534,1545)(-371,-1144)
+\put(1901,-321){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_1$}%
+}}}
+\put(1843,-815){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\displaystyle S^{k-1}_n$}%
+}}}
+\put(1313,175){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_k$}%
+}}}
+\put(1208,-1075){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$-\VEC{e}_k$}%
+}}}
+\put(2791,-61){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\displaystyle \RR^{k-1}$}%
+}}}
+\put(496,119){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$p(\VEC{u}_2)$}%
+}}}
+\put(2116,164){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$p(\VEC{u}_1)$}%
+}}}
+\put(1036,-111){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}_2$}%
+}}}
+\end{picture}%

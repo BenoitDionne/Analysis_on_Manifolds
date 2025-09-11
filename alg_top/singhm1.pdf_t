@@ -1,0 +1,28 @@
+\begin{picture}(0,0)%
+\includegraphics{alg_top/singhm1.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(1702,1944)(391,-1213)
+\put(1171,-1141){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_0$}%
+}}}
+\put(406,-691){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_0$}%
+}}}
+\put(811,-826){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_0$}%
+}}}
+\put(946,-241){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_1$}%
+}}}
+\put(406,-16){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_1$}%
+}}}
+\put(541,569){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_2$}%
+}}}
+\put(1801, 74){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{y}_s = (1-s)\VEC{e}_1 + (s/2)\VEC{e}_2$}%
+}}}
+\put(1711,-556){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_1$}%
+}}}
+\put(1981,-1141){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_1 = \VEC{y}_0$}%
+}}}
+\put(541,-1141){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_0$}%
+}}}
+\put(406,-241){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{y}_1$}%
+}}}
+\end{picture}%

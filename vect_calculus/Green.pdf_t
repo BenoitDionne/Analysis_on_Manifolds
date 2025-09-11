@@ -1,0 +1,19 @@
+\begin{picture}(0,0)%
+\includegraphics{vect_calculus/Green.pdf}%
+\end{picture}%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2655,1139)(811,-611)
+\put(3451, 89){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}where $\VEC{u} = \sigma(w)$}%
+}}}}
+\put(2980,-397){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\VEC{\sigma}(w)$}}}}
+\put(2461,369){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\displaystyle \VEC{t}(\VEC{u}) = \VEC{t}(\sigma(w))= \|\sigma'(w)\|^{-1}\,\sigma'(w)$}}}}
+\put(1501, 89){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$S$}}}}
+\put(826,-436){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\partial S$}}}}
+\end{picture}%

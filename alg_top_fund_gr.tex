@@ -1,0 +1,877 @@
+\section{Fundamental Groups}  \label{sectFundGr}
+
+All introductions to algebraic topology start with a study of
+fundamental groups associated to a topological spaces even if this is
+not the end goal.  It is a very visual introduction to the subject of
+algebraic topology.  We provide only a brief overview of this subject,
+leaving many of the stated results without proofs.
+As we said in the introduction to this chapter, the reader may find
+proofs of all the results that we state without proofs in \cite{GH,MUat,ST}
+xofor instance.
+
+The fundamental concept in this section is the notion of homotopy
+between continuous functions.  We have already defined the concept of
+homotopic functions in Definition~\ref{defnSmoothHomot} in the context
+of maps between manifolds.  We generalize this concept to any
+topological spaces.
+
+\begin{focus}{Note}
+From now on, when we talk about a topological space, we assume that it
+is a Hausdorff space.
+\end{focus}
+
+\begin{defn}
+Let $X$ and $Y$ be two topological spaces and
+$f,g:X \to Y$ be two continuous functions.  We say that $f$ is
+{\bfseries homotopic}\index{Homotopic Functions} to $g$ if there exists a
+continuous map $H:X\times[0,1] \to Y$ such that
+$H(x,0) = f(x)$ and $H(x,1) = g(x)$ for all $x \in X$.  We write
+$f \sim g$.  The function $H$ is called an
+{\bfseries homotopy}\index{Homotopy} from $f$ to $g$.
+\end{defn}
+
+This definition of homotopic functions differs from the definition
+given in Definition~\ref{defnSmoothHomot} because we now require only that
+functions be continuous.   Moreover, manifolds are replaced by any
+topological spaces.   The concept of homotopy between continuous
+functions defines an equivalence relation. Namely, if $f,g,h:X\to Y$
+are continuous functions between two topological spaces $X$ and $Y$, then
+\begin{enumerate}
+\item $f \sim f$,
+\item $f\sim g$ if and only if $g \sim f$, and
+\item $f\sim g$ and $g \sim h$ imply that $f \sim h$.
+\end{enumerate}
+
+\begin{defn}
+A topological space $X$ is {\bfseries contractible}\index{Contractible} if
+there exists $x_0 \in X$ such that the identity function
+$\Id_X:X \to X$ is homotopic to the constant function $f:X \to X$
+defined by $f(x) = x_0$ for all $x \in X$. 
+\end{defn}
+
+As for the previous definition for homotopy between functions, we only
+require a continuous homotopy for the definition of contractible
+spaces instead of a smooth homotopy as in definition~\ref{defnCtoP}.
+
+We also slightly modify our definition of path between two points
+given in Definition~\ref{defnPathV1} for the context where we require
+only that functions be continuous.
+
+\begin{defn}
+Let $X$ be a topological space.  A {\bfseries path from $x_0 \in X$ to
+$x_1 \in X$}\index{Path} is a continuous function
+$\alpha:[0,1] \to X$ such that $\alpha(0) = x_0$ and $\alpha(1) = x_1$.
+\end{defn}
+
+\begin{defn}
+Let $X$ be a topological space.
+If $\alpha$ is a path from $x_0\in X$ to $x_1 \in X$ and
+$\beta$ is a path from $x_1 \in X$ to $x_2 \in X$, the {\bfseries
+product}\index{Product of Paths} of $\alpha$ and $\beta$, denoted
+$\alpha \beta$, is the path from $x_0$ to $x_2$ defined by
+\[
+(\alpha \beta) (t) = \begin{cases}
+\alpha(2t) & \quad \text{if} \ 0 \leq t \leq 1/2 \\
+\beta(2t-1) & \quad \text{if} \ 1/2 < t \leq 1
+\end{cases}
+\]
+for $0 \leq t \leq 1$.
+Also, $\displaystyle \alpha^{-1}$ is the path from $x_1$ to $x_0$ defined by
+$\displaystyle \alpha^{-1}(t) = \alpha(1-t)$ for $0 \leq t \leq 1$.
+\end{defn}
+
+The product $\alpha \beta$ is what we informally called the union of the paths
+$\alpha$ and $\beta$ in Chapter~\ref{chaptCVC}.  In this section, we
+are really strict in preserving the interval $[0,1]$ of definition of
+a path.  We are not just interested in the image of $\alpha$ and
+$\beta$ as in Chapter~\ref{chaptCVC}. 
+
+\begin{defn} \label{defnHomPaths}
+Let $X$ be a topological space.  Suppose that $\alpha$ and $\beta$ are
+two paths from $x_0 \in X$ to $x_1 \in X$.  We say that $\alpha$ is
+{\bfseries homotopic}\index{Homotopic} to $\beta$ if there exists a
+continuous map $H:[0,1] \times [0,1] \to X$ such that
+$H(t,0) = \alpha(t)$ and $H(t,1) = \beta(t)$ for $0 \leq t \leq 1$,
+and $H(0,s) = x_0$ and $H(1,s) = x_1$ for $0 \leq s \leq 1$.
+We write $\alpha \dotsim[X] \beta$.  If there is no risk of confusion
+for the range $X$ of $H$, we may simply write $\alpha \dotsim \beta$. 
+\end{defn}
+
+The path $\alpha$ is deformed to the path $\beta$ without changing the
+end points (Figure \ref{FundGr1}).
+
+\pdfF{alg_top/fundgr1}{Homotopic paths}{The path $\alpha$ from
+$x_0$ to $x_1$ is homotopic to the path $\beta$ from $x_0$ to $x_1$.
+We have $0 < s_1, s_2 < 1$ in the figure.}{FundGr1}
+
+The homotopy of paths between two fixed points $x_0$ and $x_1$ of a
+topological space $X$ defines an equivalence relation.
+Suppose that $\alpha$, $\beta$ and $\gamma$ are paths from $x_0$ to $x_1$.
+Then
+\begin{enumerate}
+\item $\alpha \dotsim \alpha$,
+\item $\alpha \dotsim \beta$ if and only if $\beta \dotsim \alpha$, and
+\item $\alpha \dotsim \beta$ and $\beta \dotsim \gamma$ imply
+that $\alpha \dotsim \gamma$.
+\end{enumerate}
+We prove that last condition and left the proof of the two others to
+the reader.  Since $\alpha \dotsim \beta$, there exists a continuous
+function $H_1:[0,1] \times [0,1] \to X$ such that
+$H_1(t,0) = \alpha(t)$ and $H_1(t,1) = \beta(t)$ for $0 \leq t \leq 1$,
+and $H_1(0,s) = x_0$ and $H_1(1,s) = x_1$ for $0 \leq s \leq 1$.
+Since $\beta \dotsim \gamma$, there exists a continuous function
+$H_2:[0,1] \times [0,1] \to X$ such that
+$H_2(t,0) = \beta(t)$ and $H_2(t,1) = \gamma(t)$ for $0 \leq t \leq 1$,
+and $H_2(0,s) = x_0$ and $H_2(1,s) = x_1$ for $0 \leq s \leq 1$.
+Let
+\[
+H(t,s) = \begin{cases}
+H_1(t,2s) & \quad \text{if} \ 0 \leq s < 1/2 \ \text{and} \ 0\leq t \leq 1 \\
+H_1(t,2s-1) & \quad \text{if} \ 1/2 \leq s \leq 1
+\ \text{and} \ 0\leq t \leq 1
+\end{cases}
+\]
+Then $H:[0,1] \times [0,1] \to X$ is a continuous function such that
+$H(t,0) = \alpha(t)$ and $H(t,1) = \gamma(t)$ for $0 \leq t \leq 1$,
+and $H(0,s) = x_0$ and $H(1,s) = x_1$ for $0 \leq s \leq 1$.  Thus
+$\alpha \dotsim \gamma$.
+
+It is not hard to prove that if $\alpha_1,\alpha_2$ are two paths from
+$x_0\in X$ to $x_1 \in X$ such that $\alpha_1 \dotsim \alpha_2$, and
+$\beta_1,\beta_2$ are two paths from $x_1 \in X$ to $x_2 \in X$ such
+that $\beta_1 \dotsim \beta_2$, then $\alpha_1 \beta_1$ and
+$\alpha_2\beta_2$ are two paths from $x_0$ to $x_2$ such that
+$\alpha_1 \beta_1 \dotsim \alpha_2 \beta_2$.  Moreover,
+$\displaystyle \alpha_1^{-1},\alpha_2^{-1}$ are two paths from
+$x_1\in X$ to $x_0 \in X$ such that
+$\displaystyle \alpha_1^{-1} \dotsim \alpha_2^{-1}$.
+
+\begin{defn}
+Let $X$ be a topological space and $x_0 \in X$.  A closed path in $X$ from
+$x_0$ to $x_0$ is called a {\bfseries loop}\index{Loop} at $x_0$.
+\end{defn}
+
+Let $X$ be a topological space and $x_0 \in X$.  The set of
+equivalence classes $[\alpha]$ of homotopic loops $\alpha$ at $x_0$ is
+denoted $\pi_1(X,x_0)$.  It is a group where the product is defined by
+$[\alpha]\,[\beta] = [\alpha\,\beta]$ for all loops $\alpha$ and
+$\beta$ at $x_0$, the inverse is defined by 
+$\displaystyle [\alpha]^{-1} = [\alpha^{-1}]$ for all loops $\alpha$
+at $x_0$, and the identity element is defined by $[e_{x_0}]$ for the
+path $e_{x_0}$ given by $e_{x_0}(t) = x_0$ for $0 \leq t \leq 1$. 
+All these algebraic operations are well defined according to what we
+said in the paragraph preceding the definition above.
+
+\begin{defn} \label{defnFGpione}
+The group $\pi_1(X,x_0)$ is called the
+{\bfseries fundamental group}\index{Fundamental Group} or {\bfseries
+$\displaystyle \mathbf{1^{st}}$ homotopy
+group}\index{$\displaystyle 1^{st}$ Homotopy Group|see{Fundamental Group}} of
+the pair $(X,x_0)$.
+\end{defn}
+
+\begin{prop}
+Suppose that $f:X \to Y$ is a continuous function between two
+path-connected topological spaces and that $x_0 \in X$.  Then the map
+$f_\ast:\pi_1(X,x_0) \to \pi_1(Y,f(x_0))$ defined by
+$f_\ast([\alpha]) = [f\circ \alpha]$ for all
+$[\alpha] \in \pi_1(X,x_0)$ is an homomorphism.
+\end{prop}
+
+\begin{proof}
+\stage{i} The map $f_\ast$ is well defined.  If $\sigma_0$ and
+$\sigma_1$ are two loops in $X$ at $x_0$ such that
+$\sigma_0 \dotsim \sigma_1$, then there exists
+$H:[0,1]\times[0,1] \to X$ such that
+$H(0,s) = H(1,s) = x_0$ for $0\leq s \leq 1$, and
+$H(t,0) = \sigma_0(t)$ and $H(t,1) = \sigma_1(t)$ for $0\leq t \leq 1$.
+
+We have that $f\circ \sigma_0$ and $f\circ \sigma_1$ are two loops in
+$Y$ at $f(x_0)$.  Let $\tilde{H} = f \circ H$.  Then 
+$\tilde{H}:[0,1]\times[0,1] \to X$ is such that
+$\tilde{H}(0,s) = f(H(0,s)) = f(x_0)$ and
+$\tilde{H}(1,s) = f(H(1,s)) = f(x_0)$ for $0\leq s \leq 1$, and
+$\tilde{H}(t,0) = f(H(t,0)) = (f\circ \sigma_0)(t)$ and
+$\tilde{H}(t,1) = f(H(t,1)) = (f\circ \sigma_1)(t)$ for $0\leq t \leq 1$.
+Thus $f\circ \sigma_0 \dotsim f\circ \sigma_1$.
+
+Hence $f_\ast([\sigma])$ is
+independent of the representative path of $[\sigma]$ selected.
+
+\stage{ii} The map $f_\ast$ is an homomorphism because
+\begin{align*}
+f_\ast([\alpha_0][\alpha_1]) &= f_\ast([\alpha_0\,\alpha_1])
+= [f\circ (\alpha_0\,\alpha_1)] = [(f\circ \alpha_0)(f\circ\alpha_1)] \\
+&= [f\circ \alpha_0][f\circ\alpha_1]
+= f_\ast([\alpha_0]) f_\ast([\alpha_1])
+\end{align*}
+for all loops $\sigma_0$ and $\sigma_1$ in $X$ at $x_0$.
+\end{proof}
+
+Suppose that $X$, $Y$ and $Z$ are three path-connected topological
+spaces, that $f:X \to Y$ and $g:Y\to Z$ are continuous functions, and
+that $x_0 \in X$.  Then it is easy to prove that
+$g_\ast \circ f_\ast = (g\circ f)_\ast: \pi_1(X,x_0) \to \pi_1(Z,g(f(x_0)))$.
+
+\begin{prop}
+Suppose that $f:X \to Y$ is a homeomorphism between two
+path-connected topological spaces and that $x_0 \in X$.  Then the map
+$f_\ast:\pi_1(X,x_0) \to \pi_1(Y,f(x_0))$ is an isomorphism.
+\end{prop}
+
+\begin{proof}
+It follows from $\displaystyle f^{-1} \circ f = \Id_X$ that
+$\displaystyle (f^{-1})_\ast \circ f_\ast = (f^{-1} \circ f)_\ast = (\Id_X)_\ast
+= \Id_{\pi_1(X,x_0)}$ and
+from $\displaystyle f \circ f^{-1} = \Id_Y$ that
+$\displaystyle f_\ast \circ (f^{-1})_\ast = (f \circ f^{-1})_\ast =
+(\Id_Y)_\ast = \Id_{\pi_1(Y,f(x_0))}$.  Thus $f_\ast$ has an inverse given by
+$\displaystyle (f_\ast)^{-1} = (f^{-1})_\ast$.
+\end{proof}
+
+\begin{prop}
+Suppose that $X$ is a path-connected topological space and that
+$x_0 ,x_1 \in X$.  Then $\pi_1(X,x_0) \cong \pi_1(X,x_1)$.
+\end{prop}
+
+\begin{proof}
+Since $X$ is path-connected, there exits a path $\beta$ in $X$ from
+$x_0$ to $x_1$.
+Consider $\beta_\sharp : \pi_1(X,x_0) \to \pi_1(X,x_1)$ defined by
+$\displaystyle \beta_\sharp([\sigma]) = [\beta^{-1} \sigma \beta]$ for all
+$\sigma \in \pi_1(X,x_0)$.
+
+\stage{i}  We first note that $\beta_\sharp$ is well defined.
+If $\sigma_0$ and $\sigma_0$ are two loops in $X$ at $x_0$ such that
+$\sigma_0 \dotsim \sigma_1$, then there exists
+$H:[0,1]\times[0,1] \to X$ such that $H(0,s) = H(1,s) = x_0$
+for $0\leq s \leq 1$, and $H(t,0) = \sigma_0(t)$ and
+$H(t,1) = \sigma_1(t)$ for $0\leq t \leq 1$.
+
+We have that $\displaystyle \beta^{-1} \sigma_0 \beta$ and
+$\displaystyle \beta^{-1}\sigma_1 \beta$ are two loops in $X$ at $x_1$.
+Let $\tilde{H}:[0,1]\times[0,1] \to X$ be the function defined
+by
+\[
+\tilde{H}(t,s) = \begin{cases}
+\beta^{-1}(t) & \quad \text{if} \ 0 \leq t \leq 1/4
+\ \text{and} \ 0\leq s \leq 1 \\
+H(4t -1,s) & \quad \text{if} \ 1/4 < t < 1/2
+\ \text{and} \ 0\leq s \leq 1 \\
+\beta(t) & \quad \text{if} \ 1/2 \leq t \leq 1
+\ \text{and} \ 0\leq s \leq 1
+\end{cases}
+\]
+Then $\tilde{H}(0,s) = \beta^{-1}(0) = x_1$ and
+$\tilde{H}(1,s) = \beta(1) = x_1$ for $0\leq s \leq 1$, and
+\begin{align*}
+\tilde{H}(t,0) &= \begin{cases}
+\beta^{-1}(t) & \quad 0 \leq t \leq 1/4 \\
+\sigma_0(4t -1) & \quad \text{if} \ 1/4 < t < 1/2 \\
+\beta(t) & \quad \text{if} \ 1/2 \leq t \leq 1
+\end{cases} \\
+&= (\beta^{-1} \sigma_0\beta)(t)
+\end{align*}
+and
+\begin{align*}
+\tilde{H}(t,1) &= \begin{cases}
+\beta^{-1}(t) & \quad 0 \leq t \leq 1/4 \\
+\sigma_1(4t -1) & \quad \text{if} \ 1/4 < t < 1/2 \\
+\beta(t) & \quad \text{if} \ 1/2 \leq t \leq 1
+\end{cases} \\
+&= (\beta^{-1} \sigma_1\beta)(t)
+\end{align*}
+for $0\leq t \leq 1$.
+Thus $\beta^{-1} \sigma_0 \beta \dotsim \beta^{-1}\sigma_1 \beta$.
+
+\stage{ii} The map $\beta_\sharp$ is a homomorphism because
+\begin{align*}
+\beta_\sharp([\sigma_0][\sigma_1])
+&= \beta_\sharp([\sigma_0\sigma_1])
+= [\beta^{-1} \sigma_0\, \sigma_1 \beta]
+= [\beta^{-1} \sigma_0 \, \underbrace{\beta \beta^{-1}}_{\dotsim e_{x_0}} \,
+\sigma_1 \beta] \\
+&= [\beta^{-1} \sigma_0 \beta]\,[\beta^{-1}\sigma_1 \beta]
+= \beta_\sharp([\sigma_0])\beta_\sharp([\sigma_1])
+\end{align*}
+for all loops $\sigma_0$ and $\sigma_1$ in $X$ at $x_0$.
+
+\stage{iii} The map $\beta_\sharp$ is an isomorphism.  In fact, it is
+easy to verify that $\displaystyle \beta_\sharp^{-1} = (\beta^{-1})_\sharp$.
+\end{proof}
+
+If $X$ is a path-connected topological space, it follows from the
+previous proposition that the fundamental group of a pair $(X,x_0)$ is,
+up to isomorphism, the same group independently of the base point
+$x_0 \in X$ chosen.  Hence, the following definition is justified.
+
+\begin{defn}
+Let $X$ be a path-connected topological space.  The
+{\bfseries fundamental group}\index{Fundamental Group}
+of $X$, denoted $\pi_1(X)$, is the group $\pi_1(X,x_0)$ for any
+base point $x_0 \in X$.
+\end{defn}
+
+\subsection{Covering Spaces}
+
+In this section, we prove only the results that will be used later.
+The missing proofs and more information about covering spaces can be
+found in \cite{GH,ST}.
+
+\begin{defn}
+A topological space $X$ is locally path-connected if for every
+$x \in X$ and open neighbourhood $V \subset X$ of $x$, there exists an
+open neighbourhood $U \subset V$ such that $U$ is path-connected.
+\end{defn}
+
+We insist on the fact that $U$ is path-connected in the
+previous definition.  Namely, given any $x_1, x_2 \in X$, there exists
+a path $\alpha$ in $U$ from $x_1$ to $x_2$.  The fact that
+$\alpha(t) \in U$ for $0\leq t \leq 1$ is crucial.  A topological
+space could be path-connected without being locally path connected as
+can be seen in the following figure.
+\pdfbox{alg_top/lpathc}
+The set $X$ is a curve in $\displaystyle \RR^2$ with the induced
+topology from $\displaystyle \RR^2$.  There is no open neighbourhood
+of $\VEC{x}$ that is path-connected. 
+
+The notion of locally path-connected may be new to the reader but it
+is going to be essential for the next important concept.
+
+\begin{defn}  \label{defnCovering}
+Let $X$ and $Q$ be two path-connected and locally
+path-connected topological spaces.  Suppose that $p:Q \to X$
+is a continuous and surjective function such that, for all $x \in X$,
+there exists an open neighbourhood $U \subset X$ of $x$ satisfying the
+following conditions:
+\begin{enumerate}
+\item $\displaystyle p^{-1}(U) = \bigcup_{\tau \in T} V_\tau$ with
+$V_\tau\subset Q$ open sets and $V_{\tau_1} \cap V_{\tau_2} = \emptyset$
+for $\tau_1 \neq \tau_2$, and
+\item $p\big|_{V_\tau}:V_\tau \to U$ is a homeomorphism for all $\tau$.
+\end{enumerate}
+Then $(Q,p)$ is called a {\bfseries covering}\index{Covering}
+of $X$ (Figure \ref{FundGr2}).
+\end{defn}
+
+\pdfF{alg_top/fundgr2}{Covering of $S^1$}{Two illustrations of the covering
+of $\displaystyle S^1$.  In the lower illustration, if we assume that
+$\displaystyle S^1$ is represented by a circle of radius $1$ centred
+at the origin, $p$ is given by $\displaystyle p(t) = e^{2\pi t i}$ for
+$t \in \RR$.}{FundGr2}
+
+\begin{prop}
+If $(Q,p)$ is a covering of a topological space $X$, then $p:Q \to X$
+is an open mapping.
+\end{prop}
+
+\begin{proof}
+Let $W$ be an open subset of $Q$.  Given $x = p(W)$, there exists an
+open neighbourhood $U \subset X$ of $x$ satisfying
+Definition~\ref{defnCovering}.  Choose $y \in W$ such that $p(y) = x$.
+Then $y \in V_\tau$ for some $\tau$.  Since $W \cap V_\tau$ is an open subset
+of $V_\tau$ and $p\big|_{V_\tau}:V_\tau \to U$ is a homeomorphism, we have that
+$B = p(W\cap V_\tau)$ is an open neighbourhood of $x$ in $U$ and also in $X$
+because $U$ is open.  Thus $B$ is an open neighbourhood of $x$ with
+$B \subset p(W)$.  Since $x \in p(W)$ is arbitrary, this proves that
+$p(W)$ is an open subset of $X$.
+\end{proof}
+
+\begin{prop} \label{propUnLift}
+Let $(Q,p)$ be a covering of a topological space $X$.
+If $\alpha, \beta : Y \to Q$ are two continuous functions defined
+on a connected space $Y$ such that
+$p \circ \alpha = p \circ \beta$ on $Y$ and $\alpha(\tilde{y})
+= \beta(\tilde{y})$ for a point $\tilde{y} \in Y$, then $\alpha = \beta$.  
+\end{prop}
+
+\begin{proof}
+Let $h:Y \to Q \times Q$ be the function defined by
+$h(y) =(\alpha(y),\beta(y))$ for $y \in Y$.  We have that $h$ is a
+continuous function.
+
+Let $D = \{(q,q) : q \in Q\}$.  Since $D$ is a closed set
+\footnote{In fact $D$ is closed if and only if $Q$ is hausdorff.  One
+part of the proof consists in proving that $Q$ Hausdorff implies that
+$(Q\times Q) \setminus D$ is open.  The proof of the other direction
+is even more direct.  See \cite{Du}.}, we have that
+$Z = \{ \VEC{y} \in Y : \alpha(y) = \beta(y) \} = h^{-1}(D)$ is closed.
+We also have that $Z \neq \emptyset$ because $\tilde{y} \in Z$.  Since
+$Y$ is connected, it suffices to prove that $Z$ is also open to
+conclude that $Z=Y$.
+
+To prove that $Z$ is open, choose $\breve{y} \in Z$ and let
+$x = p(\alpha(\breve{y})) = p(\beta(\breve{y}))$.  There exists an
+open neighbourhood $U \subset X$ of $x$ satisfying
+Definition~\ref{defnCovering}.
+Then $\alpha(\breve{y}) = \beta(\breve{y}) \in V_\tau$ for some $\tau$.
+Since $\alpha$ is continuous, there exists an open neighbourhood
+$\displaystyle W_1 \subset \alpha^{-1}(V_\tau)$ of $\breve{y}$.
+Similarly, since $\beta$ is continuous, there exists an open neighbourhood
+$\displaystyle W_2 \subset \beta^{-1}(V_\tau)$ of $\breve{y}$.
+Since $p\big|_{V_\tau}:V_\tau \to U$ is one-to-one and
+$p \circ \alpha = p \circ \beta$ on $W_1 \cap W_2$, we get that
+$\alpha = \beta$ on the open set $W_1 \cap W_2$.  Thus
+$W_1 \cap W_2 \subset Z$.
+Since $\breve{y} \in Z$ is arbitrary, this proves that $Z$ is open.
+\end{proof}
+
+The following theorem has deep consequences.
+
+\begin{theorem}[Covering Homotopy Theorem]
+Suppose that $(Q,p)$ is a covering of a topological space $X$
+and that $Y$ is a compact and connected space.
+Moreover, suppose that $f,g:Y \to Q$ are two continuous
+functions and that $F:Y \times [0,1] \to X$ is a homotopy between 
+$p\circ f$ and $p \circ g$.  Then there exists a homotopy
+$G:Y \times [0,1]\to Q$ between $f$ and $g$ satisfying the
+following conditions.
+\begin{enumerate}
+\item $p \circ G = F$ on $Y \times [0,1]$.
+\item If there exists $y \in Y$ and an interval $E \subset [0,1]$
+such that $F(y,s)$ is constant for $s \in E$, then
+$G(y,s)$ is constant for $s \in E$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\stage{i} The set $Y \times [0,1]$ is compact because $Y$ and $[0,1]$
+are compact.  For each $x \in X$, let $\displaystyle U_x \subset X$
+be an open neighbourhood of $x$ satisfying Definition~\ref{defnCovering}.
+Since the collection $\displaystyle \{ U_x \}_{x\in X}$
+is an open cover of $F(Y\times[0,1])$, we have that the collection
+$\displaystyle \big\{ F^{-1}(U_x) \big\}_{x\in X}$
+is an open cover of the compact set $Y\times[0,1]$.  Hence, there
+exists a finite subcover
+$\displaystyle \big\{ F^{-1}(U_{x_j}) \big\}_{1 \leq j \leq J}$
+of $Y\times [0,1]$.
+
+We can cover $Y \times [0,1]$ with open sets of the form
+$W_\alpha \times I_\alpha$ where $W_\alpha \subset Y$ is a connected
+open set, $I_\alpha$ is an open interval, and
+$\displaystyle W_\alpha \times I_\alpha \subset F^{-1}(U_{x_j})$ for some
+$j \in \{1,2,\ldots, J\}$.  Again, because $Y \times [0,1]$ is
+compact, there exists a finite subcover
+$\displaystyle \{ W_{\alpha_k} \times I_{\alpha_k} \}_{1\leq k \leq K}$
+of $Y \times [0,1]$.  By splitting the intervals $I_{\alpha_k}$, we
+get a finite subcover of $Y \times [0,1]$ of the form
+$\displaystyle \{ W_{\alpha_k} \times [s_{i-1}, s_i]
+\}_{1\leq k \leq K,1\leq i \leq I}$ where
+$s_0 =0 < s_1 < s_2 < \ldots < s_I = 1$.  We still have that
+$\displaystyle F\big(W_{\alpha_k} \times [s_{i-1}, s_i]\big) \subset
+U_{x_{j(k,i)}}$ for some $j(k,i) \in \{1,2,\ldots, J\}$.
+
+\stage{ii}  We define continuous function
+$G_i:Y \times [s_{i-1},s_i] \to Q$ such that
+\[
+p \circ G_i = F\Big|_{Y \times [s_{i-1},s_i]}\quad  \text{and} \quad
+G_i\big|_{Y \times \{s_i\}} = G_{i-1}\big|_{Y \times \{s_i\}}
+\]
+for $1 \leq i \leq I$.
+Because of the second condition, we will have that
+$G:Y \times [0,1] \to Q$ defined by
+$G(y,s) = G_i(y,s)$ for $y\in Y$ and $t \in [s_{i-1},s_i]$ is a well
+defined continuous function satisfying (1) in the statement of the
+theorem.
+
+\stage{iii}
+Assume that $1 \leq i \leq I$.  Let
+\[
+G_i(y,s_{i-1}) =
+\begin{cases}
+f(y) & \quad \text{if}\ i = 1 \\
+G_{i-1}(y,s_{i-1}) & \quad \text{if} \ 1 < i \leq I
+\end{cases}
+\]
+for $y \in Y$.  Since $W_{\alpha_k}$ is connected, we have
+that
+\[
+G_i(W_{\alpha_k},s_{i-1})
+= \begin{cases}
+f(W_{\alpha_k}) & \quad \text{if}\ i = 1 \\
+G_{i-1}(W_{\alpha_k},s_{i-1}) & \quad \text{if} \ 1 < i \leq I
+\end{cases}
+\]
+is connected.  Since
+$F(W_{\alpha_k},[s_{i-1},s_i]) \subset U_{x_{j(k,i)}}$ for some
+$j(k,i) \in \{1,2,\ldots,J\}$ and
+\begin{align*}
+p \circ G_i\big|_{W_{\alpha_k} \times \{s_{i-1}\}} &=
+\begin{cases}
+p \circ f\big|_{W_{\alpha_k}} & \quad \text{if} \ i = 0 \\
+p \circ G_{i-1}\big|_{W_{\alpha_k} \times \{s_{i-1}\}} &
+\quad \text{if} \ 1 < i \leq I
+\end{cases} \\
+&= F\big|_{W_{\alpha_k} \times\{s_{i-1}\}} \ ,
+\end{align*}
+we have that
+$G_i(W_{\alpha_k},s_{i-1}) \subset V_{x_{j(k,i)},\tau}$ for some
+$\tau \in T$, where
+$\displaystyle p^{-1}(U_{x_{j(k,i)}})
+= \bigcup_{\tau \in T} V_{x_{j(k,i)},\tau}$ with
+$V_{x_{j(k,i)},\tau_1} \cap V_{x_{j(k,i)},\tau_2} = \emptyset$ if
+$\tau_1 \neq \tau_2$
+as given in Definition~\ref{defnCovering}.  More precisely,
+$G_i(W_{\alpha_k},s_{i-1})$ is a connected subset
+of $\displaystyle p^{-1}(U_{x_{j(k,i)}})
+= \bigcup_{\tau \in T} V_{x_{j(k,i)},\tau}$
+where the $V_{x_{j(k,i)},\tau}$ are distinct open sets.  Therefore
+$G_i(W_{\alpha_k},s_{i-1})$ is a subset of only one of them.
+
+Since $p\big|_{V_{x_{j(k,i)},\tau}} :V_{x_{j(k,i)},\tau} \to U_{x_{j(k,i)}}$ is a
+homeomorphism, we may set\\
+$\displaystyle G_{i,k}(y,s) = p^{-1}(F(y,s))$ for
+$(y,s) \in W_{\alpha_k} \times [s_{i-1},s_i]$.
+We define $G_i:Y \times [s_{i-1},s_i] \to Q$ by
+$G_i(y,s) = G_{i,k}(y,s)$ if
+$(y,s) \in W_{\alpha_k} \times [s_{i-1},s_i]$.  To prove that $G_i$
+is well defined and continuous on $Y \times [s_{i-1},s_i]$, we
+prove in the next step that
+$G_{i,k_1}(y,s) = G_{i,k_2}(y,s)$ for
+$(y,s) \in (W_{\alpha_{k_1}} \cap W_{\alpha_{k_2}}) \times [s_{i-1},s_i]$.
+
+\stage{iv}  Suppose that
+$W_{\alpha_{k_1}} \cap W_{\alpha_{k_2}} \neq \emptyset$.  We have by
+definition of $G_{i,k}$ that
+\[
+G_{i,k_m}(W_{\alpha_{k_m}},[s_{i-1},s_i]) \subset
+V_{x_{j(k_m,i)},\tau_m}
+\]
+for some $j(k_m,i) \in \{1,2,\ldots,J\}$ and $\tau_m \in T$ with
+$1\leq m \leq 2$.  We also have that
+\[
+G_{i,k_1}(y,s_{i-1}) = G_{i,k_2}(y,s_{i-1})
+= \begin{cases}
+f(y) & \quad \text{if} \ i = 1 \\
+G_{i-1}(y,s_{i-1}) & \quad \text{if} \ 1 < i \leq I
+\end{cases}
+\]
+for all $(y,s) \in (W_{\alpha_{k_1}} \cap W_{\alpha_{k_2}})
+\times [s_{i-1},s_i]$.  Thus
+$G_{i,k_1}(y,s_{i-1}) = G_{i,k_2}(y,s_{i-1}) \in 
+V_{x_{j(k_1,i)},\tau_1} \cap V_{x_{j(k_2,i)},\tau_2}$ for all
+$(y,s) \in (W_{\alpha_{k_1}} \cap W_{\alpha_{k_2}}) \times [s_{i-1},s_i]$.
+
+Consider $(y,s) \in (W_{\alpha_{k_1}} \cap W_{\alpha_{k_2}})
+\times [s_{i-1},s_i]$ and the two functions
+\begin{align*}
+\sigma_1:[0,1] &\to Q \\
+t & \mapsto G_{i,k_1}(y,t s + (1-t) s_{i-1})
+\end{align*}
+and
+\begin{align*}
+\sigma_2:[0,1] &\to Q \\
+t & \mapsto G_{i,k_2}(y,t s + (1-t) s_{i-1})
+\end{align*}
+We have that $\sigma_1(0) = \sigma_2(0)$ and
+\begin{align*}
+(p\circ \sigma_1)(t) &= (p \circ G_{i,k_1}(y,t s + (1-t) s_{i-1})
+= F(y, t s + (1-t) s_{i-1}) \\
+&= (p \circ G_{i,k_2}(y, t s + (1-t) s_{i-1})
+= (p\circ \sigma_2)(t)
+\end{align*}
+for $0 \leq t \leq 1$.  It follows from Proposition~\ref{propUnLift}
+that $\sigma_1(t) = \sigma_2(t)$ for $0\leq t \leq 1$.  Thus
+$G_{i,k_1}(y,s) = \sigma_1(1) = \sigma_2(1) = G_{i,k_2}(y,s)$.
+
+\stage{v} Repeating recursively (iii) and (iv) from $i=1$ to $i=I$
+yields the functions $G_i$ in (ii).
+
+\stage{vi} Recall that $G_{i,k}$ is defined by
+$\displaystyle G_{i,k}(y,s) = p^{-1}(F(y,s))$ for
+$(y,s) \in W_{\alpha_k} \times [s_{i-1},s_i]$ where
+$p\big|_{V_{x_{j(k,i)},\tau}} :V_{x_{j(k,i)},\tau} \to U_{x_{j(k,i)}}$ is a
+homeomorphism.  Therefore $G_{i,k}(y,s)$ is constant with respect to
+$s$ if $F(y,s)$ is constant with respect to $s$ because
+$p\big|_{V_{x_{j(k,i)},\tau}} :V_{x_{j(k,i)},\tau} \to U_{x_{j(k,i)}}$
+is one-to-one.
+\end{proof}
+
+It follows from Prop~\ref{propUnLift} that if $(Q,p)$ is a covering of
+a topological space $X$ and $q \in Q$, then
+$p_\ast: \pi_1(Q,q) \to \pi_1(X, p(q))$ is one-to-one.  If $\alpha$ is
+a path in $X$ such that $\alpha(0) = p(q)$, then there exists a unique
+path $\beta$ in $Q$ such that $p \circ \beta = \alpha$ and $\beta(0) = q$.
+
+There are several interesting and important corollaries to this
+theorem.  For instance, if $x \in X$ and $x = p(q)$, there exists a
+one-to-one map from the quotient group\\
+$\displaystyle \pi_1(X,x) / p_\ast(\pi_1(Q,q))$
+onto $\displaystyle p^{-1}(\{x\})$.  To prove this result, we first
+construct a map $M$ from $\displaystyle \pi_1(X,x)$ onto
+$\displaystyle p^{-1}(\{x\})$ as it follows.  Given
+$[\alpha] \in \pi_1(X,x)$, we have from the result stated in the previous 
+paragraph that there exists a unique path $\beta$ in $Q$ such that
+$p \circ \beta = \alpha$ with $\beta(0) = q$.  We set
+$M([\alpha]) = \beta(1)$.  The rest of the proof consists in proving
+that the definition of $M$ is independent of the representative $\alpha$
+chosen, that $M$ is onto and that the kernel of $M$ is
+$p_\ast(\pi_1(Q,q))$.
+
+\begin{defn}
+Let $X$ be a path-connected and locally path-connected topological space.
+We say that $X$ is {\bfseries simply connected}\index{Simply Connected}
+if $\pi_1(X)$, the fundamental group of $X$, is trivial.
+\end{defn}
+
+It follows that if $X$ is simply connected and $x \in X$, then
+$\alpha \dotsim e_x$ for all loops $\alpha$ in $X$ at $x$, where $e_x$ is the
+path defined by $e_x(t) = x$ for $0 \leq t \leq 1$.
+
+\begin{defn}
+A topological space $X$ is
+{\bfseries locally simply connected}\index{Locally Simply Connected}
+if for every $x \in X$ there exists an open neighbourhood $U$ of $x$ such
+$\alpha \dotsim[U] e_x$ for all loops $\alpha$ in $U$ at $x$.
+\end{defn}
+
+We insist on the fact that the range of the homotopy in the previous
+definition is only $U$.
+
+\begin{defn}
+Let $(Q,p)$ be a covering of a topological space $X$.  We say
+that $(Q,p)$ is a {\bfseries universal covering}\index{Universal Covering}
+of $X$ if $Q$ is simply connected
+\end{defn}
+
+\begin{theorem}  \label{thCoveringEx}
+Let $X$ be a path-connected, locally path-connected and locally simply
+connected topological space.  Given $x \in X$, let $H$ be a subgroup
+of $\pi_1(X,x)$.  Then there exists a covering $(Q,p)$ of $X$
+such that $p_\ast(\pi_1(Q,q)) = H$ for $q \in Q$ such that $p(q) = x$.
+\end{theorem}
+
+In particular, if $H = \{[e_x]\}$ for $x \in X$, we get a universal
+covering $(Q,p)$ of $X$ because, as we stated before,
+$p_\ast:\pi_1(Q,q) \to \pi_1(X,p(q))$ is one-to-one.
+
+It can be proved that if $(Q,p)$ is a covering of
+a topological space $X$ and $x \in X$, then
+$p_\ast(\pi_1(Q,q_1))$ and $p_\ast(\pi_1(Q,q_2))$ with
+$p(q_1)= p(q_2) = x$ are two conjugate subgroups in
+$\pi_1(X,x)$; namely, there exists $[\beta] \in \pi_1(X,x)$ such that
+$\displaystyle [\beta]\, p_\ast(p_1(Q,q_1))\, [\beta]^{-1}= p_\ast(p_1(Q,q_2))$.
+In fact, if $\gamma$ is a path in $Q$ from $q_1$ to $q_2$,
+then $\beta = p \circ \gamma$.
+
+\begin{defn}
+Two coverings $(Q_1,p_1)$ and $(Q_1,p_1)$ of a
+topological space $X$ are {\bfseries isomorphic}\index{Isomorphic Coverings}
+if there exists a homeomorphism $h:Q_1 \to Q_2$ such that $p_2 \circ h = p_1$. 
+\end{defn}
+
+Another result that can relatively easily be proved states that
+if $(Q_1,p_1)$ and $(Q_2,p_2)$ are two coverings of a locally simply
+connected space $X$ such that $p_\ast(\pi_1(Q_1,q_1)) = p_\ast(\pi_1(Q_2,q_2))$
+for any $q_1 \in Q_1$ and $q_2 \in Q_2$ with
+$p(q_1) = p(q_2)$, then $(Q_1,p_1)$ and $(Q_2,p_2)$ are isomorphic coverings.
+
+\begin{defn}
+Let $(Q,p)$ be a covering of a topological space $X$.
+A {\bfseries covering transformation}\index{Covering Transformation}
+of $(Q,p)$ is a homeomorphism $h:Q \to Q$ such that $p \circ h = p$.
+\end{defn}
+
+The set of covering transformations of $(Q,p)$ form a group
+under composition of functions.  This group is denoted
+${\cal G}(Q,p)$.
+
+If $U$ is in open set as in the definition of covering,
+Definition~\ref{defnCovering}, then a covering transformation $h$
+permutes the open sets $V_j$.
+
+\begin{defn}
+A {\bfseries regular covering}\index{Regular Covering} of a
+topological space $X$ is a covering $(Q,p)$ of $X$ such that
+$p_\ast(\pi_1(Q,q))$ is a normal subgroup of $\pi_1(X,p(q))$ for
+$q \in Q$; namely,\\
+$\displaystyle [\beta]\, p_\ast(\pi_1(Q,q))\, [\beta]^{-1} =
+p_\ast(\pi_1(Q,q))$ for all $[\beta] \in \pi_1(X,p(q))$.
+\end{defn}
+
+It follows from the paragraph following Theorem~\ref{thCoveringEx}
+that the definition of regularity is independent of the point
+$q \in Q$ selected.
+
+The next theorem is the fundamental theorem of this subsection.
+
+\begin{theorem}
+Suppose that $(Q,p)$ is a regular covering of a locally simply
+connected space $X$ and that $q \in Q$.
+Then ${\cal G}(Q,p)$ is group isomorphic
+to $\displaystyle \pi_1(X,p(q)) / p_\ast (\pi_1(Q,q))$.
+In particular, if the covering is also universal, then
+${\cal G}(Q,p)$ is group isomorphic to $\pi_1(X,p(q))$.
+\end{theorem}
+
+\begin{prop} \label{propFGSone}
+$\displaystyle \pi_1(S^1,1) \cong \ZZ$.  In fact, since
+$\displaystyle S^1$ is path-connected, we have that
+$\displaystyle \pi_1(S^1) \cong \ZZ$.
+\end{prop}
+
+\begin{proof}
+In the statement of the theorem, we assume the complex representation
+of $\displaystyle S^1$; namely,
+$\displaystyle S^1 = \{z \in \CC : |z| = 1 \}$.
+
+Suppose that $(Q,p)$ is the covering described in
+Figure~\ref{FundGr2}.  We have that $Q = \RR$ and $(Q,p)$ is an
+universal and regular covering of $\displaystyle S^1$.
+If $h:\RR \to \RR$ is a covering transformation, 
+then $p \circ h = p$ implies that
+\[
+e^{2\pi h(q) i} = e^{2\pi q i} \iff e^{2\pi (h(q)-q) i} = 1
+\]
+for all $q \in \RR$.  Thus $h(q)-q$ is a continuous function defined
+on $\RR$, a connected set, whose range is $\ZZ$.  This is possible
+only if there exists $n\in \ZZ$ such that $h(q) - q = n$ for all
+$q \in \RR$.  This proves that the covering transformations are all
+given by integer translations.  Hence ${\cal G}(Q,p) \cong \ZZ$ and
+from the previous theorem
+$\displaystyle \pi_1(S^1) \cong {\cal G}(Q,p) \cong \ZZ$.
+\end{proof}
+
+\begin{prop}
+Suppose that $X$ and $Y$ are path-connected topological spaces, and that
+$x_0 \in X$ and $y_0 \in Y$.  Then
+$\pi_1(X\times Y, (x_0,y_0)) \cong \pi_1(X,x_0) \times \pi_1(Y,y_0)$
+\end{prop}
+
+\begin{proof}
+It is easy to verify that the two projections
+$P:X\times Y \to X$ and $Q:X\times Y \to Y$ induces two homomorphism
+$P_\ast: \pi_1(X\times Y, (x_0,y_0)) \to \pi_1(X,x_0)$
+defined by $P_\ast([\sigma]) = [P \circ \sigma]$
+and $Q_\ast:\pi_1(X\times Y, (x_0,y_0)) \to \pi_1(Y,y_0)$
+defined by $Q_\ast([\sigma]) = [Q \circ \sigma]$
+for $[\sigma] \in \pi_1(X\times Y, (x_0,y_0))$.
+Thus $(P_\ast,Q_\ast): \pi_1(X\times Y, (x_0,y_0)) \to
+\pi_1(X,x_0) \times \pi_1(Y,y_0)$ defined by
+$(P_\ast,Q_\ast)([\sigma]) = (P_\ast([\sigma]),Q_\ast([\sigma]))$
+for $[\sigma] \in \pi_1(X\times Y, (x_0,y_0))$ is an homomorphism.
+
+The map $(P_\ast,Q_\ast)$ is also an isomorphism because it has an
+inverse.  If $\sigma_X$ is a loop in $X$ at $x_0$ and
+$\sigma_Y$ is a loop in $Y$ at $y_0$, then $(\sigma_X,\sigma_Y)$
+is a loop in $X \times Y$ at $(x_0,y_0)$.
+Let $R: \pi_1(X,x_0) \times \pi_1(Y,y_0) \to \pi_1(X\times Y, (x_0,y_0))$
+be the map defined by
+$\displaystyle R([\sigma_X],[\sigma_Y]) = [(\sigma_X,\sigma_Y)]$ 
+for $[\sigma_X] \in \pi_1(X,x_0)$ and
+$[\sigma_Y] \in \pi_1(Y,y_0)$.
+The map $R$ is well defined because
+$\sigma_X \dotsim \tilde{\sigma}_X$ and
+$\sigma_Y \dotsim \tilde{\sigma}_Y$ imply
+$(\sigma_X,\sigma_Y) \dotsim (\tilde{\sigma}_X,\tilde{\sigma}_Y)$
+\footnote{We leave it to the reader to construction the map
+$H:[0,1]\times[0,1] \to X \times Y$ needed to prove that
+$(\sigma_X,\sigma_Y) \dotsim (\tilde{\sigma}_X,\tilde{\sigma}_Y)$.}.
+Since all loops $\sigma$ in $X \times Y$ at $(x_0,y_0)$ are of the form
+$\sigma = (\sigma_X,\sigma_Y)$ where $\sigma_X = P\circ \sigma$
+is a loop in $X$ at $x_0$ and $\sigma_Y = Q\circ \sigma$ is a loop
+in $Y$ at $y_0$,  we have that $R$ is onto.  The map $R$ is also
+one-to-one because 
+$\sigma \dotsim \tilde{\sigma}$ in $X \times Y$ implies that
+$P\circ \sigma \dotsim P\circ \tilde{\sigma}$ in $X$ and
+$Q\circ \sigma \dotsim Q\circ \tilde{\sigma}_Y$ in $Y$
+\footnote{Again, we leave it to the reader to construction the map
+$H_P:[0,1]\times[0,1] \to X$ and $H_Q:[0,1]\times[0,1] \to Y$
+needed to prove that
+$P\circ \sigma \dotsim P\circ \tilde{\sigma}$ in $X$ and
+$Q\circ \sigma \dotsim Q\circ \tilde{\sigma}_Y$ in $Y$.}.
+
+It is now easy to verify that
+$\displaystyle R\circ (P_\ast,Q_\ast) = \Id_{\pi_1(X\times Y, (x_0,y_0))}$ and \\
+$\displaystyle (P_\ast,Q_\ast) \circ R = \Id_{\pi_1(X, x_0) \times \pi_1(Y,y_0)}$.
+\end{proof}
+
+\begin{egg}
+The torus $\displaystyle \torus{2} \subset \RR^3$         \label{eggFGtorus}
+is isomorphic to $\displaystyle S^1 \times S^1$.
+This can be seen from the parametric representation of the torus.
+Hence, it follows from the previous proposition that
+$\displaystyle \pi_1(\torus{2}) \cong \pi_1(S^1) \times \pi_1(S^1) \cong
+\ZZ \times \ZZ$ since $\torus{2}$ is path-connected.
+\end{egg}
+
+To conclude this section, we plan to prove a limited version of the
+famous Brouwer fixed point theorem.  Namely, a version limited to
+$\displaystyle \RR^2$.  We first need a new definition and a lemma.
+
+\begin{defn} \label{defnRetract}
+Let $Y$ be a subset of a topological space $X$.
+A {\bfseries retraction}\index{Retraction}
+of $X$ onto $Y$ is a continuous function $r:X \to Y$ such that $r(x) = x$
+for all $x \in Y$ or, equivalently, $r \circ \iota = \Id_Y$ for the
+inclusion map $\iota :Y \to X$.  We then say that $Y$ is a
+{\bfseries retract}\index{Retract} of $X$.
+\end{defn}
+
+\begin{lemma}  \label{lenNoRetract}
+Let $\displaystyle D = \{ \VEC{x} \in \RR^2 : \|\VEC{x}\| \leq 1 \}$.
+There does not exist any retraction of $D$ onto
+$\displaystyle S^1 = \{\VEC{x} \in \RR^2 : \|\VEC{x}\|=1 \}$.
+\end{lemma}
+
+\begin{proof}
+Suppose that there is a retraction $\displaystyle g:D \to S^1$.
+Let $\displaystyle \iota:S^1 \to D$ be the inclusion map.  
+Then $g \circ \iota = \Id_{S^1}$ and
+\begin{equation} \label{lemBrouwerEq1}
+g_\ast \circ \iota_\ast = (g \circ \iota)_\ast
+= \Id_{\pi_1(S^1,\VEC{e}_1)} \ .
+\end{equation}
+However, $\pi_1(D,\VEC{e}_1) = \{[e_{\VEC{e}_1}]\}$ where
+$e_{\VEC{e}_1}(t) = \VEC{e}_1$ for $0 \leq t \leq 1$
+because $D$ is contractible.  Thus
+$\displaystyle \iota_\ast(\pi_1(S^1,\VEC{e}_1)) \subset \pi_1(D,\VEC{e}_1) =
+\{[e_{\VEC{e}_1}]\}$ implies that
+$\displaystyle (g_\ast \circ \iota_\ast)(\pi_1(S^1,\VEC{e}_1))
+= \{[e_{\VEC{e}_1}]\}$.  This is a contradiction of
+Proposition~\ref{propFGSone} because, according to
+(\ref{lemBrouwerEq1}), the image of $g_\ast \circ \iota_\ast$ should
+be $\displaystyle \pi_1(S^1,\VEC{e}_1) \cong \ZZ \not\cong
+\{[e_{\VEC{e}_1}]\}$.
+\end{proof}
+
+\begin{theorem}[Brouwer Fixed Point Theorem]
+Let $\displaystyle D = \{ \VEC{x} \in \RR^2 : \|\VEC{x}\| \leq 1 \}$.
+Suppose that $f:D \to D$ is a continuous function.  Then there exists
+$\VEC{y} \in D$ such that $f(\VEC{y}) = \VEC{y}$; namely, $f$ has
+a {\bfseries fixed point}\index{Fixed Point} in $D$.
+\end{theorem}
+
+\begin{proof}
+Suppose that there does not exist $\VEC{y} \in D$ such that
+$f(\VEC{y}) = \VEC{y}$.
+Let $\displaystyle g:D \to S^1$ be the function defined by
+$\displaystyle g(\VEC{x})$ is the intersection with the circle
+$\displaystyle S^1$ of the line through $\VEC{x}$ originating from
+$f(\VEC{x})$.  Such a line is well defined because
+$f(\VEC{x}) \neq \VEC{x}$ for all $\VEC{x} \in D$.  It
+is also a continuous function because $f$ is continuous.
+Moreover $g(\VEC{x}) = \VEC{x}$ for all $\displaystyle \VEC{x} \in S^1$.
+Thus, $g$ is a retraction of $D$ onto $\displaystyle S^1$.
+This is a contradiction of Lemma~\ref{lenNoRetract}.
+\end{proof}
+
+The proof of the Brouwer fixed point theorem is standard and can be
+generalized to $\displaystyle \RR^{n+1}$ with $n>1$ using a group
+structure on $\displaystyle S^n$ other than the fundamental group of
+$\displaystyle S^n$ because
+$\displaystyle \pi_1(S^n,\VEC{e}_1) = \{[ e_{\VEC{e}_1}]\}$ for $n>1$.
+
+\begin{rmk}
+It is possible to define higher order homotopy groups as it is
+explained in \cite{GH}.  We however follow the tradition of instead
+introducing singular homology as we will do in
+Section~\ref{sectSingHom}.   As we will see in
+Subsection~\ref{subsectP1EquH1} later, it is a natural way to
+generalize the concept of fundamental group.
+\end{rmk}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End:

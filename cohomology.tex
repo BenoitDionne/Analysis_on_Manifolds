@@ -1,0 +1,2922 @@
+\chapter{Cohomology}  \label{chaptCohom}
+
+We have seen in Theorem~\ref{closedexact} that closed differential
+$k$-forms defined on a star-shaped domain are exact.  In this chapter,
+we show that the property that closed differential $k$-forms are exact
+is determined by the domain of the differential $k$-form only.
+
+Depending of the researcher to whom we talk, the topic of cohomology
+is either part of algebraic topology, differential topology or
+differential geometry.  This is another illustration that the
+boundaries between different fields of mathematics are often fluid and
+blur.
+
+The presentation in this section is inspired by the presentation of
+cohomology in \cite{GP,Sv1}.  The first section introduce some of the
+important tools that we will use in our study of cohomology.
+
+To simplify the presentation in this chapter, we will only consider
+smooth manifolds; namely, manifolds of class $\displaystyle C^\infty$.
+Similarly, all the differential forms will be of class
+$\displaystyle C^\infty$.  These restrictions may often be reduced to
+$\displaystyle C^j$ with $j$ larger than the dimension of the manifold.
+
+\section{Preliminaries}  \label{sectPrelCohom}
+
+\begin{defn}  \label{defnCtoP}
+A $k$-dimensional smooth manifold $S$ is
+{\bfseries (smoothly) contractible to a point}\index{Contractible to a
+Point}\index{Smoothly Contractible to a Point|see{Contractible to a
+Point}} if there exist a map $H:S\times [0,1] \to S$ of class
+$\displaystyle C^\infty$ \footnotemark and a point $\tilde{\VEC{u}}
+\in S$ such that $H(\VEC{u},1) = \VEC{u}$ and
+$H(\VEC{u},0) = \tilde{\VEC{u}}$ for all $\VEC{u} \in S$.
+\end{defn}
+
+\footnotetext{To follow our convention about function of class
+$\displaystyle C^\infty$ on a closed interval, we assume that
+there exists an open set $V \supset [0,1]$ such that $H$ can be
+extended to a $\displaystyle C^\infty$ function from
+$S \times V$ to $S$.}
+
+It is easy to show that $\displaystyle \RR^n$ is contractible to the origin.
+It suffices to use the map $\displaystyle H:\RR^n \times [0,1] \to \RR^n$
+defined by $H(\VEC{x},t) = t \VEC{x}$.
+
+\begin{rmk}
+Recall that the {\bfseries direct sum}\index{Direct Sum}
+of two linear spaces $M$ and $N$ over an integral domain $R$
+(e.g.\ $\RR$), denoted $M \oplus N$, is the linear
+space $M \times N$ with the addition defined by
+$(m_1,n_1) + (m_2,n_2) = (m_1 + m_2,n_1 + n_2)$ for 
+$m_1,m_2 \in M$ and $n_1,n_2 \in N$, and the product by a scalar
+defined by $c(m,n) = (c m, c n)$ for $m \in M$, $n \in N$ and $c \in R$.
+In particular, if $M$ and $N$ are two subspaces of a vector space
+$E$ such that $\dim(M) + \dim(N) = \dim(E)$ and
+$M \cap N = \{\VEC{0}\}$, then we may write $E = M \oplus N$
+by identifying $(m,n)$ to $m+n$ because every element of $E$ has a
+unique representation of the form $m+n$ with $m \in M$ and $n \in N$.
+If $M$, $N$, $\tilde{M}$ and $\tilde{N}$ are four linear spaces, and
+$f:M \to \tilde{M}$ and $g:N\to \tilde{N}$ are two linear maps, then
+$(f,g): M\oplus N \to \tilde{M} \oplus \tilde{N}$, defined by
+$(f,g)(m,n) = (f(m),g(n))$ for all $(m,n) \in M \times N$, is a linear map.
+\end{rmk}
+
+Let $S$ be a $k$-dimensional smooth manifold and $J \subset \RR$ be an
+open interval.  Then $S \times J$ with is a $(k+1)$-dimensional smooth
+manifold.  In particular, if
+$\displaystyle \{(W_\alpha,U_\alpha,\phi_\alpha)\}_{\alpha\in A}$ is
+an atlas for $S$, then
+$\displaystyle \left\{\big(W_\alpha \times J, U_\alpha \times J,
+(\phi_\alpha,\Id)\big)\right\}_{\alpha\in A}$
+is an atlas for $S\times J$ \footnote{The map
+$(\phi_\alpha,\Id):(W_i\times J) \to (U_i \times J)$
+is obviously defined as
+$(\phi_i,\Id)(\VEC{w},x) = (\phi_i(\VEC{w}),x)$ for all
+$(\VEC{w},x) \in W_i \times J$.}.  We also have that
+$\TS_{(\VEC{u},x)} (S \times J) = \TS_{\VEC{u}} S \oplus \TS_x J$
+for all $(\VEC{u},x) \in S\times J$, where\\
+$\TS_{\VEC{u}} S \cong \left\{ \big((\VEC{u},x),(\VEC{y},0)\big) :
+(\VEC{u},\VEC{y}) \in \TS_{\VEC{u}} S \right\}$ and
+$\TS_x J \cong \left\{ \big((\VEC{u},x),(\VEC{0},z)\big) :
+(x,z) \in \TS_x J \right\}$.
+
+\begin{prop} \label{propO1dxO2}
+Suppose that $S$ is a $k$-dimensional smooth manifold and $J\subset \RR$ is
+an open interval.  Any differential $q$-form $\omega$ on
+$S \times J$ can be expressed as
+$\omega = \omega_1 + \df{x} \wedge \omega_2$ where
+\begin{enumerate}
+\item $\omega_1$ is a differential $q$-form on $S \times J$ such that \\
+$\displaystyle \omega_1(\VEC{w},x)
+\big(\big((\VEC{u},x),(\VEC{v}_1,y_1)\big),
+\ldots, \big((\VEC{u},x),(\VEC{v}_q,y_q)\big)\big) = 0$
+if $\VEC{v}_i = 0$ for some $1\leq i \leq q$,
+\item $\omega_2$ is a differential $(q-1)$-form on $S\times J$ such that \\
+$\displaystyle \omega_2(\VEC{w},x)
+\big(\big((\VEC{u},x),(\VEC{v}_1,y_1)\big),
+\ldots, \big((\VEC{u},x),(\VEC{v}_{q-1},y_{q-1})\big)\big) = 0$
+if $\VEC{v}_i = 0$ for some $1\leq i \leq q-1$, and
+\item $\df{x}$ is the differential $1$-form on $S \times J$ defined by
+$\displaystyle \df{x} (\VEC{u},x) \big( (\VEC{u},x),(\VEC{v},y)\big) = y$
+for all $(\VEC{u},x) \in S \times J$ and
+$\displaystyle \big( (\VEC{u},x),(\VEC{v},y)\big) \in
+\TS_{(\VEC{u},x)} (S \times J)$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+We consider a local chart $\big(W \times J,U \times J, (\phi,\Id)\big)$
+of $S\times J$.
+
+Let $\displaystyle \left\{ \psi_j(\VEC{u}) \right\}_{1\leq j \leq k}
+\subset \left(\TS_{\VEC{u}} S\right)^\ast$ be the dual basis
+associated to the basis \\
+$\displaystyle \left\{ \big( \VEC{u}, (\diff \phi)(\phi^{-1}(\VEC{u})) \VEC{e}_j
+\big) \right\}_{1\leq j \leq k}$ of $\TS_{\VEC{u}} S$.
+Consider
+\begin{align*}
+\tilde{\psi}_j(\VEC{u},x) : \TS_{(\VEC{u},x)} (S\times J) & \to \RR \\
+\big( (\VEC{u},x),(\VEC{v},y) \big) &\mapsto 
+\psi_j(\VEC{u}) (\VEC{u},\VEC{v})
+\end{align*}
+for $1 \leq j \leq k$ and
+\begin{align*}
+\tilde{\psi}_{k+1}(\VEC{u},x) : \TS_{(\VEC{u},x)} (S\times J) & \to \RR \\
+\big( (\VEC{u},x),(\VEC{v},y) \big) &\mapsto \df{x}(x) (x,y) = y
+\end{align*}
+We have that
+$\displaystyle \left\{ \tilde{\psi}_j(\VEC{u},x) \right\}_{1\leq j \leq k+1}
+\subset \left(\TS_{(\VEC{u},x)} (S\times J) \right)^\ast$ is the dual basis
+associated to the basis\\
+$\displaystyle \left\{ \big( (\VEC{u},x), \big(
+\diff \phi(\phi^{-1}(\VEC{u}))\, \VEC{e}_j,0\big) \big) \right\}_{1\leq j \leq k}
+\cup \left\{ \big( (\VEC{u},x),(\VEC{0},1) \big)\right\}$ of
+$\TS_{(\VEC{u},x)} (S\times J) = \TS_{\VEC{u}} S \oplus \TS_x J$.
+
+It follows from Theorem~\ref{thOkbasis} that
+\begin{align*}
+\omega &= \sum_{1 \leq i_1< i_2< \ldots< i_q \leq k+1}
+\omega_{i_1,i_2,\ldots,i_q}\,
+\tilde{\psi}_{i_1} \wedge \tilde{\psi}_{i_2} \wedge \ldots \wedge
+\tilde{\psi}_{i_q} \\
+&= \underbrace{\sum_{1 \leq i_1< i_2< \ldots< i_q \leq k}
+\omega_{i_1,i_2,\ldots,i_q}\,
+\tilde{\psi}_{i_1} \wedge \tilde{\psi}_{i_2} \wedge \ldots \wedge
+\tilde{\psi}_{i_q}}_{=\, \omega_1} \\
+&\qquad + \tilde{\psi}_{k+1} \wedge \underbrace{\left(
+(-1)^{q-1}\sum_{1 \leq i_1< i_2< \ldots< i_{q-1} \leq k}
+\omega_{i_1,i_2,\ldots,i_{q-1},k+1}\,
+\tilde{\psi}_{i_1} \wedge \tilde{\psi}_{i_2} \wedge \ldots \wedge
+\tilde{\psi}_{i_{q-1}} \right)}_{= \, \omega_2}
+\end{align*}
+on $U\times J$, where the functions
+$\omega_{i_1,i_2,\ldots,i_q}:U\times J \to J$ and
+$\omega_{i_1,i_2,\ldots,i_{q-1},k+1}:U\times J \to J$ are of class
+$\displaystyle C^\infty$.
+From the definition of
+$\tilde{\psi}_j$ for $1\leq j \leq k$, it is clear that
+$\omega_1$ satisfies the condition (1) in the statement of the
+proposition and $\omega_2$ satisfies the condition (2).
+$\tilde{\psi}_{k+1}$ is the differential $1$-form $\df{x}$ defined in
+the statement of the proposition.
+
+Note that the local representation of $\omega_1$ and $\omega_2$ may change
+for a different local chart but their action will not.  As for
+$\df{x}$, it is invariant with respect to the local charts
+$\big(W \times J,U \times J, (\phi,\Id)\big)$ chosen.
+\end{proof}
+
+The inclusion $\iota_x:S \to S\times J$ is defined by
+$\iota_x(\VEC{u}) = (\VEC{u},x)$ for all $\VEC{u} \in S$ and $x \in J$.
+If $\omega$ is a differential $q$-form on $S \times J$, then
+$\displaystyle \iota_x^\ast(\omega)$ is the differential $q$-form on $S$
+defined by
+\begin{align*}
+\left(\iota_x^\ast(\omega)\right)(\VEC{u}) \big((\VEC{u},\VEC{v}_1),
+\ldots, (\VEC{u},\VEC{v}_q)\big)
+&= \iota_x^\ast( \omega(\VEC{u},x) )\big((\VEC{u},\VEC{v}_1),
+\ldots, (\VEC{u},\VEC{v}_q)\big) \\
+&= \omega(\VEC{u},x)\Big(\big((\VEC{u},x),(\VEC{v}_1,0)\big),
+\ldots, \big((\VEC{u},x),(\VEC{v}_q,0)\big)\Big)
+\end{align*}
+for all $x \in J$, $\VEC{u} \in S$ and
+$(\VEC{u},\VEC{v}_i) \in \TS_{\VEC{u}} S$ with $1\leq i \leq q$.
+
+\begin{rmk}
+Consider a local chart            \label{rmkistis}
+$\displaystyle \big(W \times J, U \times J, (\phi,\Id)\big)$
+of $S\times J$ where $\displaystyle \big(W, U, \phi\big)$ is a local
+chart of $S$.  We have that $\iota_x:S \to S \times J$ for $x \in J$
+and its local representation $\tilde{\iota}_x:W \to W \times J$
+satisfy the relation
+$\displaystyle (\phi,\Id) \circ \tilde{\iota}_x = \iota_x \circ \phi$;
+namely, we have the following commutative diagram.
+\[
+\xymatrix{
+S \ar[r]^-{\iota_x} & S \times J \\
+W \ar[r]_-{\tilde{\iota}_x} \ar[u]^{\phi} & W \times J \ar[u]_{(\phi,\Id)} 
+}
+\]
+Since
+$(\iota_x \circ \phi)(\VEC{w}) = (\phi(\VEC{w}), x)$, we get that
+$\tilde{\iota}_x(\VEC{w}) = (\VEC{w},x)$ for all $\VEC{w} \in W$.
+Since $\displaystyle \diff \tilde{\iota}_x(\VEC{w}) (\VEC{y}) =
+(\VEC{y},0)$ and
+\[
+(\tilde{\iota}_x)_\ast(\VEC{w},\VEC{y})
+= \big( \tilde{\iota}_x(\VEC{w}), \diff \tilde{\iota}_x(\VEC{w})(\VEC{y})\big)
+= \big( (\VEC{w},x), (\VEC{y}, 0)\big) \in \TS_{\VEC{w},x} (W \times J) \ ,
+\]
+we get from
+\[
+(\iota_x)_\ast \circ \phi_\ast
+= (\iota_x \circ \phi)_\ast
+= ((\phi,\Id) \circ \tilde{\iota}_x)_\ast
+= (\phi,\Id)_\ast \circ (\tilde{\iota}_x)_\ast
+\]
+that
+\begin{align*}
+(\iota_x)_\ast \big( \phi_\ast ( \VEC{w},\VEC{y})\big)
+&= (\phi,\Id)_\ast\big( (\tilde{\iota}_x)_\ast( \VEC{w},\VEC{y}) \big)
+= (\phi,\Id)_\ast\big( (\VEC{w},x) , (\VEC{y}, 0) \big) \\
+&= \big( (\phi(\VEC{w}),x) , (\diff \phi(\VEC{w}) \VEC{y}, 0) \big)
+\end{align*}
+for all $\VEC{w} \in W$ and $\displaystyle \VEC{y} \in \RR^k$, 
+This translates into
+$\displaystyle (\iota_x)_\ast (\VEC{u},\VEC{v}) =
+\big((\VEC{u},x),(\VEC{v},0)\big) \in \TS_{\VEC{u},x} (S\times J)$
+for $\VEC{u} \in U$ and $(\VEC{u},\VEC{v}) \in \TS_{\VEC{u}} S$.
+\end{rmk}
+
+From now on, we assume that $J \subset \RR$ is an open interval
+containing $[0,1]$.
+
+We define an operator $F$ that maps differential $q$-forms on $S\times
+J$ to differential $(q-1)$-forms on $S$ as it follows.  Suppose that
+$\omega$ is a differential $q$-form on $S \times J$.  From
+Proposition~\ref{propO1dxO2}, we may express $\omega$ as
+$\omega = \omega_1 + \df{x}\wedge \omega_2$.  We define $F(\omega)$ as
+\begin{align}
+&F(\omega)(\VEC{u})\big( (\VEC{u},\VEC{v}_1), \ldots, (\VEC{u},\VEC{v}_{q-1})
+\big)
+= \int_0^1 (\iota_x)^\ast(\omega_2)(\VEC{u})
+\big( (\VEC{u},\VEC{v}_1), \ldots, (\VEC{u},\VEC{v}_{q-1})\big) \dx{x}
+\nonumber \\
+&\hspace{7em} = \int_0^1 \omega_2(\VEC{u},x)
+\big( (\iota_x)_\ast(\VEC{u},\VEC{v}_1),
+\ldots, (\iota_x)_\ast(\VEC{u},\VEC{v}_{q-1}) \big) \dx{x} \nonumber \\
+&\hspace{7em} = \int_0^1 \omega_2(\VEC{u},x)
+\Big( \big((\VEC{u},x),(\VEC{v}_1,0)\big), \ldots,
+\big( (\VEC{u},x),(\VEC{v}_{q-1},0)\big) \Big)\dx{x}   \label{defFSItoS}
+\end{align}
+for all $\VEC{u} \in S$ and $(\VEC{u},\VEC{v}_1) \in \TS_{\VEC{w}} S$.
+
+\begin{prop} \label{propi1i0dffd}
+Suppose that $S$ is a $k$-dimensional smooth manifold and that
+$J \subset \RR$ is an open interval containing $[0,1]$.
+If $\omega$ is a differential $q$-form on $S \times \RR$,
+then $\displaystyle \iota_1^\ast(\omega) - \iota_0^\ast(\omega)
+= \df{(F(\omega))} + F(\df{\omega})$.
+\end{prop}
+
+\begin{proof}
+From Proposition~\ref{propO1dxO2}, we may express $\omega$ as
+$\omega = \omega_1 + \df{x}\wedge \omega_2$, where $\omega_1$
+satisfies the condition (1) in the statement of the proposition and
+$\omega_2$ satisfies the condition (2).
+
+Let $\big(W \times J,U \times J, (\phi,\Id)\big)$ be a local chart of
+$S\times J$.  We have that
+\begin{equation} \label{i1i0dffdEq1}
+\begin{split}
+(\phi,\Id)^\ast (\omega) &= (\phi,\Id)^\ast(\omega_1)
++ (\phi,\Id)^\ast(\df{x}) \wedge (\phi,\Id)^\ast(\omega_2) \\
+&= \underbrace{\sum_{1\leq i_1<i_2<\ldots<i_q \leq k} g_{i_1,i_2,\ldots,i_q}
+\, \df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}} \wedge \ldots \wedge
+\df{\tilde{w}_{i_q}}}_{=\, \tilde{\omega}_1} \\
+&\qquad + \df{x}\wedge \underbrace{ \sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+h_{i_1,i_2,\ldots,i_{q-1}} \, \df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}}
+\wedge \ldots \wedge \df{\tilde{w}_{i_{q-1}}}}_{=\, \tilde{\omega}_2}
+\end{split}
+\end{equation}
+for some continuously differentiable functions
+$g_{i_1,i_2,\ldots,i_q}:W \to \RR$ and
+$h_{i_1,i_2,\ldots,i_{q-1}}:W \to \RR$, where
+$\displaystyle \df{\tilde{w}_j}(\VEC{w},x)
+\big((\VEC{w},x),(\VEC{v},y)\big) = \df{w_j}(\VEC{w})\big(\VEC{w},\VEC{v}\big)
+= v_j$ and
+$\displaystyle \df{x}(\VEC{w},x) \big((\VEC{w},x),(\VEC{v},y)\big) = y$
+for $1\leq j \leq k$ and $\displaystyle \big((\VEC{w},x),(\VEC{v},y)\big) \in
+\TS_{(\VEC{w},x)} (W \times J) \cong \TS_{\VEC{w}} W \oplus \TS_xJ$.
+
+Moreover,  we have that
+\begin{align*}
+&(\phi^\ast(F(\omega)))(\VEC{w})\big( (\VEC{w},\VEC{v}_1), \ldots,
+(\VEC{w},\VEC{v}_{q-1})\big) \\
+&\quad = F(\omega)(\phi(\VEC{w}))\big( (\phi(\VEC{w}),\diff
+\phi(\VEC{w}) \, \VEC{v}_1), \ldots,
+(\phi(\VEC{w}),\diff \phi(\VEC{w})\,\VEC{v}_{q-1})\big) \\
+&\quad = \int_0^1 \omega_2(\phi(\VEC{w}),x)
+\Big( \big((\phi(\VEC{w}),x),(\diff \phi(\VEC{w})\,\VEC{v}_1,0)\big), \ldots,
+\big( (\phi(\VEC{w}),x),(\diff \phi(\VEC{w})\,\VEC{v}_{q-1},0)\big)
+\big) \dx{x} \\
+&\quad = \int_0^1 (\phi,\Id)^\ast(\omega_2)(\VEC{w},x)
+\Big( \big((\VEC{w},x),(\VEC{v}_1,0)\big), \ldots,
+\big( (\VEC{w},x),(\VEC{v}_{q-1},0)\big) \Big) \dx{x} \\
+&\quad =F\big((\phi,\Id)^\ast(\omega)\big)
+(\VEC{w})\big( (\VEC{w},\VEC{v}_1), \ldots,(\VEC{w},\VEC{v}_{q-1})\big)
+\end{align*}
+for all $\VEC{w} \in W$ and $(\VEC{w},\VEC{v}_i) \in \TS_{\VEC{w}} W$
+with $1\leq i \leq q-1$ \footnote{We should probably have used
+$\tilde{F}$ to denote the local representation of $F$.  Hopefully, the
+context should be enough to determine when we are referring to the
+local representation of $F$.}.  Similarly.
+\begin{align*}
+&\big(\phi^\ast(\iota_x^\ast(\omega))\big)
+(\VEC{w})\big( (\VEC{w},\VEC{v}_1), \ldots,
+(\VEC{w},\VEC{v}_{q-1})\big) \\
+&\quad = \iota_x^\ast(\omega)(\phi(\VEC{w}))\big( (\phi(\VEC{w}),\diff
+\phi(\VEC{w})\,\VEC{v}_1), \ldots,
+(\phi(\VEC{w}),\diff \phi(\VEC{w})\,\VEC{v}_{q-1})\big) \\
+&\quad = \omega(\phi(\VEC{w}),x)
+\Big( \big((\phi(\VEC{w}),x),(\diff \phi(\VEC{w})\,\VEC{v}_1,0)\big), \ldots,
+\big( (\phi(\VEC{w}),x),(\diff \phi(\VEC{w})\,\VEC{v}_{q-1},0)\big)
+\Big) \\
+&\quad = (\phi,\Id)^\ast(\omega)(\VEC{w},x)
+\Big( \big( (\VEC{w},x),(\VEC{v}_1,0)\big), \ldots,
+\big( (\VEC{w},x),(\VEC{v}_{q-1},0)\big) \Big) \\
+&\quad = \tilde{\iota}_x^\ast\big((\phi,\Id)^\ast(\omega)\big)
+(\VEC{w})\big( (\VEC{w},\VEC{v}_1), \ldots,
+(\VEC{w},\VEC{v}_{q-1})\big)
+\end{align*}
+for all $\VEC{w} \in W$ and $(\VEC{w},\VEC{v}_i) \in \TS_{\VEC{w}} W$
+with $1\leq i \leq q-1$, where
+$\displaystyle \tilde{\iota}_x(\VEC{w}) = (\VEC{w},x)$ for all $\VEC{w} \in W$
+and $x \in J$ as we have seen in Remark~\ref{rmkistis}.  Therefore, it
+suffices to prove that
+\[
+\tilde{\iota}_1^\ast\big((\phi,\Id)^\ast(\omega)\big)
+- \tilde{\iota}_0^\ast\big((\phi,\Id)^\ast(\omega)\big)
+= \df{(F((\phi,\Id)^\ast(\omega)))} + F(\df{((\phi,\Id)^\ast(\omega))}) \ .
+\]
+to get that
+\begin{align*}
+\phi^\ast(\iota_1^\ast(\omega)) - \phi^\ast(\iota_0^\ast(\omega))
+&= \tilde{\iota}_1^\ast\big((\phi,\Id)^\ast(\omega)\big)
+- \tilde{\iota}_0^\ast\big((\phi,\Id)^\ast(\omega)\big) \\
+&= \df{(F((\phi,\Id)^\ast(\omega)))} + F(\df{((\phi,\Id)^\ast(\omega))}) \\
+&= \df{(\phi^\ast(F(\omega)))} + F((\phi,\Id)^\ast(\df{\omega}))
+= \phi^\ast(\df{F(\omega)}) + \phi^\ast(F(\df{\omega})) \ .
+\end{align*}
+
+Using (\ref{i1i0dffdEq1}) and the linearity of the maps $F$ and
+$i_x$, we have to prove that
+\begin{equation} \label{i1i0dffdEq2}
+\tilde{\iota}_1^\ast(\tilde{\omega}_1) - \tilde{\iota}_0^\ast(\tilde{\omega}_1)
+= \df{(F(\tilde{\omega}_1))} + F(\df{(\tilde{\omega}_1)})
+\end{equation}
+and
+\begin{equation} \label{i1i0dffdEq3}
+\tilde{\iota}_1^\ast(\df{x} \wedge \tilde{\omega}_2)
+- \tilde{\iota}_0^\ast(\df{x} \wedge \tilde{\omega}_2)
+= \df{(F(\df{x} \wedge \tilde{\omega}_2))}
++ F(\df{(\df{x} \wedge \tilde{\omega}_2)}) \ .
+\end{equation}
+
+\stage{i} We first prove (\ref{i1i0dffdEq2}).  Since
+$F(\tilde{\omega}_1) = 0$, we have that
+$\df{(F(\tilde{\omega}_1))} = 0$.  Since
+\begin{align*}
+\df{(\tilde{\omega}_1)}
+&= \sum_{1\leq i_1<i_2<\ldots<i_q \leq k}
+\left( \sum_{j=1}^k \pdydx{g_{i_1,i_2,\ldots,i_q}}{w_j} \df{\tilde{w}_j}
+\right)\, \df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}} \wedge \ldots \wedge
+\df{\tilde{w}_{i_q}} \\
+&\qquad + \df{x} \wedge
+\sum_{1\leq i_1<i_2<\ldots<i_q \leq k} \pdydx{g_{i_1,i_2,\ldots,i_q}}{x}
+\, \df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}} \wedge \ldots \wedge
+\df{\tilde{w}_{i_q}} \ ,
+\end{align*}
+we get that
+\begin{align*}
+&F(\df{(\tilde{\omega}_1)})(\VEC{w})
+\big((\VEC{w},\VEC{v}_1), \ldots,(\VEC{w},\VEC{v}_q)\big)\\
+&\qquad = \sum_{1\leq i_1<i_2<\ldots<i_q \leq k}
+\bigg( \int_0^1 \pdydx{g_{i_1,i_2,\ldots,i_q}}{x}(\VEC{w},x) 
+\left( \df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}} \wedge \ldots \wedge
+\df{\tilde{w}_{i_q}}\right) (\VEC{w},x) \\
+&\hspace{17em} \Big( \big((\VEC{w},x),(\VEC{v}_1,0)\big), \ldots,
+\big( (\VEC{w},x),(\VEC{v}_q,0)\big) \Big) \dx{x} \bigg) \\
+&\qquad = \sum_{1\leq i_1<i_2<\ldots<i_q \leq k}
+\bigg( \int_0^1 \pdydx{g_{i_1,i_2,\ldots,i_q}}{x}(\VEC{w},x) 
+\left( \df{w_{i_1}} \wedge \df{w_{i_2}} \wedge \ldots \wedge
+\df{w_{i_q}}\right) (\VEC{w}) \\
+&\hspace{17em} \big((\VEC{w},\VEC{v}_1), \ldots,
+(\VEC{w},\VEC{v}_q) \big) \dx{x} \bigg) \\
+&\qquad = \sum_{1\leq i_1<i_2<\ldots<i_q \leq k}
+\left( \int_0^1 \pdydx{g_{i_1,i_2,\ldots,i_q}}{x}(\VEC{w},x) \dx{x} \right)
+\left( \df{w_{i_1}} \wedge \df{w_{i_2}} \wedge \ldots \wedge
+\df{w_{i_q}}\right) (\VEC{w}) \\
+&\hspace{17em} \big((\VEC{w},\VEC{v}_1), \ldots, (\VEC{w},\VEC{v}_q) \big) \\
+&\qquad = \sum_{1\leq i_1<i_2<\ldots<i_q \leq k}
+\left( g_{i_1,i_2,\ldots,i_q}(\VEC{w},1) -
+g_{i_1,i_2,\ldots,i_q}(\VEC{w},0) \right)
+\left( \df{w_{i_1}} \wedge \df{w_{i_2}} \wedge \ldots \wedge
+\df{w_{i_q}}\right) (\VEC{w}) \\
+&\hspace{17em} \big((\VEC{w},\VEC{v}_1), \ldots, (\VEC{w},\VEC{v}_q) \big) \\
+&\qquad = \sum_{1\leq i_1<i_2<\ldots<i_q \leq k}
+\left( g_{i_1,i_2,\ldots,i_q}(\VEC{w},1) -
+g_{i_1,i_2,\ldots,i_q}(\VEC{w},0) \right)
+\left( \df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}} \wedge \ldots \wedge
+\df{\tilde{w}_{i_q}} \right)(\VEC{w},x) \\
+&\hspace{17em} \Big( \big((\VEC{w},x),(\VEC{v}_1,0)\big), \ldots,
+\big( (\VEC{w},x),(\VEC{v}_q,0)\big) \Big)\\
+&\qquad = (\tilde{\iota}_1^\ast(\tilde{\omega}_1))(\VEC{w})
+\big( (\VEC{w},\VEC{v}_1), \ldots, (\VEC{w},\VEC{v}_q) \big)
+- (\tilde{\iota}_0^\ast(\tilde{\omega}_1))(\VEC{w})
+\big( (\VEC{w},\VEC{v}_1), \ldots, (\VEC{w},\VEC{v}_q) \big) \ .
+\end{align*}
+Thus (\ref{i1i0dffdEq2}) is satisfied.
+
+\stage{ii} We now prove (\ref{i1i0dffdEq3}).   We have that 
+$\displaystyle \tilde{\iota}_1^\ast(\df{x} \wedge \tilde{\omega}_2) =
+\tilde{\iota}_0^\ast(\df{x} \wedge \tilde{\omega}_2) = 0$ because\\
+$\df{x} \big((\VEC{w},x),(\VEC{v},0)\big) = 0$ for all
+$\big((\VEC{w},x),(\VEC{v},0)\big) \in \TS_{(\VEC{w},x)} (W \times J)$.
+Since
+\begin{align*}
+&F(\df{x} \wedge \tilde{\omega}_2)(\VEC{w})
+\big( (\VEC{w},\VEC{v}_1), \ldots, (\VEC{w},\VEC{v}_q) \big) \\
+&\qquad =\sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\bigg( \int_0^1 h_{i_1,i_2,\ldots,i_{q-1}}(\VEC{w},x)
+\big( \df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}}
+\wedge \ldots \wedge \df{\tilde{w}_{i_{q-1}}} \big) (\VEC{w},x)  \\
+&\hspace{17em} \big( \big((\VEC{w},x),(\VEC{v}_1,0)\big), \ldots,
+\big( (\VEC{w},x),(\VEC{v}_{q-1},0)\big) \big) \dx{x} \bigg) \\
+&\qquad =\sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\left( \int_0^1 h_{i_1,i_2,\ldots,i_{q-1}}(\VEC{w},x) \dx{x} \right)
+\left( \df{w_{i_1}} \wedge \df{w_{i_2}}
+\wedge \ldots \wedge \df{w_{i_{q-1}}} \right) (\VEC{w}) \\
+&\hspace{17em}
+\big( (\VEC{w},\VEC{v}_1), \ldots, (\VEC{w},\VEC{v}_{q-1}) \big)
+\end{align*}
+for all $\VEC{w} \in W$ and
+$(\VEC{w},\VEC{v}_i) \in \TS_{\VEC{w}} W$ with $1\leq i \leq k$,
+we get that
+\[
+F(\df{x} \wedge \tilde{\omega}_2)
+= \sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\left( \int_0^1 h_{i_1,i_2,\ldots,i_{q-1}}(\cdot,x) \dx{x} \right)
+\df{w_{i_1}} \wedge \df{w_{i_2}} \wedge \df{w_{i_{q-1}}}
+\]
+It follows that
+\begin{equation} \label{i1i0dffdEq4}
+\begin{split}
+\df{(F(\df{x} \wedge \tilde{\omega}_2))}
+& = \sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\sum_{j=1}^k \left( \int_0^1 \pdydx{h_{i_1,i_2,\ldots,i_{q-1}}}{w_j}
+  (\cdot,x) \dx{x} \right)\\
+&\hspace{10em} \df{w_j} \wedge
+\df{w_{i_1}} \wedge \df{w_{i_2}} \wedge \ldots \wedge \df{w_{i_{q-1}}} \ .
+\end{split}
+\end{equation}
+
+Since
+\begin{align*}
+& \df{(\df{x} \wedge \omega_2)} \\
+&\qquad = - \df{x} \wedge \left( \sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\sum_{j=1}^k \left( \pdydx{h_{i_1,i_2,\ldots,i_{q-1}}}{w_j}
+\right)\, \df{\tilde{w}_j} \wedge
+\df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}} \wedge
+\ldots \wedge \df{\tilde{w}_{i_{q-1}}} \right) \ ,
+\end{align*}
+we get that
+\begin{align*}
+&F{(\df{(\df{x} \wedge \omega_2)})} (\VEC{w})
+\big((\VEC{w},\VEC{v}_1), \ldots,(\VEC{w},\VEC{v}_q)\big) \\
+&= -\sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\sum_{j=1}^k \bigg( \int_0^1 \pdydx{h_{i_1,i_2,\ldots,i_{q-1}}}{w_j}(\VEC{w},x)
+\big( \df{\tilde{w}_j} \wedge
+\df{\tilde{w}_{i_1}} \wedge \df{\tilde{w}_{i_2}} \wedge
+\ldots \wedge \df{\tilde{w}_{i_{q-1}}} \big) (\VEC{w},x) \\
+&\hspace{13em} \Big( \big((\VEC{w},x),(\VEC{v}_1,0)\big), \ldots,
+\big( (\VEC{w},x),(\VEC{v}_q,0)\big) \Big) \dx{x} \bigg) \\
+&= -\sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\sum_{j=1}^k \left( \int_0^1 \pdydx{h_{i_1,i_2,\ldots,i_{q-1}}}{w_j}(\VEC{w},x)
+\dx{x} \right)\\
+&\hspace{13em} \big( \df{w_j} \wedge \df{w_{i_1}} \wedge \df{w_{i_2}} \wedge
+\ldots \wedge \df{w_{i_{q-1}}} \big)(\VEC{w})
+\big( (\VEC{w},\VEC{v}_1), \ldots, (\VEC{w},\VEC{v}_q) \big)
+\end{align*}
+for all $\VEC{w} \in W$ and
+$(\VEC{w},\VEC{v}_i) \in \TS_{\VEC{w}} W$ with $1\leq i \leq k$.
+Thus
+\begin{equation} \label{i1i0dffdEq5}
+\begin{split}
+F{(\df{(\df{x} \wedge \omega_2)})} &= -\sum_{1\leq i_1<i_2<\ldots<i_{q-1} \leq k}
+\sum_{j=1}^k \left( \int_0^1 \pdydx{h_{i_1,i_2,\ldots,i_{q-1}}}{w_j}(\cdot,x)
+\dx{x} \right) \\
+&\hspace{7em} \df{w_j} \wedge \df{w_{i_1}} \wedge \df{w_{i_2}} \wedge
+\ldots \wedge \df{w_{i_{q-1}}} \ .
+\end{split}
+\end{equation}
+It follows from (\ref{i1i0dffdEq4}) and (\ref{i1i0dffdEq5}) that
+$\df{(F(\df{x} \wedge \tilde{\omega}_2))} + 
+F{(\df{(\df{x} \wedge \omega_2)})} = 0$.  This completes the proof of
+(\ref{i1i0dffdEq3}).
+\end{proof}
+
+We may now generalize Theorem~\ref{closedexact}.
+
+\begin{theorem}[Poincaré Lemma] \label{closedexactCntrct}
+Let $S$ be a $k$-dimensional smooth manifold which is smoothly
+contractible to the point $\tilde{\VEC{u}} \in S$.
+Suppose that $\omega$ is a closed differential $q$-form on $S$ with $q>0$.
+Then there exists a differential $(q-1)$-form $\eta$ on $S$ such that
+$\df{\eta} = \omega$.
+\end{theorem}
+
+\begin{proof}
+Suppose that $H:S \times [0,1] \to S$ is a map of class
+$\displaystyle C^\infty$ such that $H(\VEC{u},1) = \VEC{u}$ and
+$H(\VEC{u},0) = \tilde{\VEC{u}}$ for all $\VEC{u} \in S$.
+
+Since $\Id = H \circ \iota_1:S \to S$ and
+$H\circ \iota_0:S \to \{\tilde{\VEC{u}} \}$. we get that
+$\displaystyle \iota_1^\ast(H^\ast(\omega))
+= (H \circ \iota_1)^\ast(\omega) = \omega$ and
+$\displaystyle \iota_0^\ast(H^\ast(\omega))
+= (H \circ \iota_0)^\ast(\omega) = 0$.
+Since $\df{\omega} = 0$, we also get that
+$\displaystyle \df{(H^\ast(\omega))} = H^\ast(\df{\omega}) = 0$.
+It follows from Proposition~\ref{propi1i0dffd} that
+\[
+\omega = \iota_1^\ast(H^\ast(\omega)) - \iota_0^\ast(H^\ast(\omega))
+= \df{(F(H^\ast(\omega)))} + F(\df{(H^\ast(\omega))})
+= \df{(F(H^\ast(\omega)))} \ .
+\]
+We may take $\displaystyle \eta = F(H^\ast(\omega))$.
+\end{proof}
+
+The following result coming out of Proposition~\ref{propi1i0dffd}
+will be quite useful for our presentation of cohomology in the next
+section.
+
+\begin{prop} \label{propDeEo}
+Suppose that
+$\omega = g \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_q}}$ 
+with $1 \leq i_1 < i_2 < \ldots < i_q \leq k$ and $q>0$ is a differential
+$q$-form on $\displaystyle \RR^k$, and that $\eta$ is the differential
+$(q-1)$-form on $\displaystyle \RR^k$ defined by
+\[
+\eta(\VEC{x}) = \left(\sum_{j=1}^q (-1)^{j-1}
+\left(\int_0^1 r^{q-1} g(r \VEC{x}) \dx{r}\right) x_{i_j} \right)
+\, \big(\df{x_{i_1}} \wedge \ldots \wedge \widehat{\df{x_{i_j}}} \wedge \ldots
+\wedge \df{x_{i_q}}\big)(\VEC{x})
+\]
+for $\displaystyle \VEC{x} \in \RR^k$.  Then $\df{\eta} = \omega$.
+\end{prop}
+
+\begin{proof}
+The reader should review Remark~\ref{rmkWarning1} before studying this
+proof.
+
+Let $\displaystyle H: \RR^k \times \RR \to \RR^k$ be the map
+defined by $H(\VEC{x},r) = r \VEC{x}$ for
+$\displaystyle (\VEC{x},r) \in \RR^k \times \RR$.
+If we apply Proposition~\ref{propi1i0dffd} to
+$\displaystyle H^\ast(\omega)$ we get
+\begin{equation} \label{detaEomEq1}
+i_1^\ast(H^\ast(\omega)) - i_0^\ast(H^\ast(\omega)) =
+\df{(F(H^\ast(\omega)))} + F(\df{(H^\ast(\omega))}) \ .
+\end{equation}
+
+Let $\displaystyle Z:\RR^k \to \RR^k$ be the function defined by
+$Z(\VEC{x}) = \VEC{0}$ for all $\displaystyle \VEC{x} \in \RR^k$.  We
+have that
+\begin{equation} \label{detaEomEq2}
+\iota_1^\ast(H^\ast(\omega))
+= (H \circ \iota_1)^\ast(\omega) = \Id^\ast(\omega) = \omega
+\end{equation}
+and
+\begin{equation}  \label{detaEomEq3}
+\iota_0^\ast(H^\ast(\omega))
+= (H \circ \iota_0)^\ast(\omega) = Z^\ast(\omega) = 0
+\end{equation}
+on $\displaystyle \RR^k$.
+
+Since
+\begin{align*}
+&H^\ast(\df{x_j})(\VEC{x},r)\big( (\VEC{x},r), (\VEC{v}, z)\Big)
+= \df{x_j} (H(\VEC{x},r)) \big( H_\ast\big((\VEC{x},r),(\VEC{v},z)
+\big)\big) \\
+&\qquad
+= \df{x_j} (r\VEC{x}) \big(H(\VEC{x},r),\diff H(\VEC{x},r) (\VEC{v},z)\big)
+= \df{x_j} (r\VEC{x}) \big(r\VEC{x}),r \VEC{v} + z \VEC{x}\big)
+= r v_j + z x_j \\
+&\qquad = r \df{x_j}(\VEC{x})(\VEC{x},\VEC{v}) + x_j \df{r}(r)(r,z)
+\end{align*}
+for all $\displaystyle \big( (\VEC{x},r), (\VEC{v}, z)\big)
+\in \TS_{(\VEC{x},r)} (\RR^k \times \RR)$ and
+$\displaystyle (\VEC{x},r) \in \RR^k \times \RR$ with
+$1 \leq j\leq k$, we may write that
+\[
+H^\ast(\df{x_j})(\VEC{x},r) = r \df{\tilde{x}_j}(\VEC{x},r)
++ x_j \df{\tilde{r}}(\VEC{x},r) \ ,
+\]
+where $\df{\tilde{x}_j} (\VEC{x},r) \big( (\VEC{x},r), (\VEC{v}, z)\big)
+= \df{x_j} (\VEC{x}) \big(\VEC{x},\VEC{v}\big) = \VEC{v}_j$ and \\
+$\df{\tilde{r}} (\VEC{x},r) \big( (\VEC{x},r), (\VEC{v}, z)\big)
+= \df{r} (r)\big(r,z\big) = z$ for all
+$\displaystyle \big( (\VEC{x},r), (\VEC{v}, z)\big)
+\in \TS_{(\VEC{x},r)}(\RR^k \times \RR)$ and
+$\displaystyle (\VEC{x},r) \in \RR^k \times \RR$ with
+$1 \leq j\leq k$.
+Hence
+\begin{align*}
+&H^\ast(\omega)
+= (g\circ H) \left( r \df{\tilde{x}_{i_1}}
++ x_{i_1} \df{\tilde{r}} \right) \wedge \ldots \wedge
+\left( r \df{\tilde{x}_{i_q}} + x_{i_q} \df{\tilde{r}} \right) \\
+&\ = r^q g(r\VEC{x}) \, \df{\tilde{x}_{i_1}} \wedge \ldots \df{\tilde{x}_{i_q}}
++ r^{q-1} g(r\VEC{x}) \left( \sum_{j=1}^q
+{-1}^{j-1} x_{i_j} \, \df{\tilde{r}} \wedge \df{\tilde{x}_{i_1}} \wedge
+\ldots \wedge \widehat{\df{\tilde{x_{i_j}}}} \wedge \ldots \wedge
+\df{\tilde{x}_{i_q}} \right) \\
+&\ = r^q g(r\VEC{x}) \, \df{\tilde{x}_{i_1}} \wedge \ldots \df{\tilde{x}_{i_q}}
++ \df{\tilde{r}} \wedge \left(
+\sum_{j=1}^q {-1}^{j-1} r^{q-1} g(r\VEC{x})  x_{i_j} \,\df{\tilde{x}_{i_1}} \wedge
+\ldots \wedge \widehat{\df{\tilde{x_{i_j}}}} \wedge \ldots \wedge
+\df{\tilde{x}_{i_q}} \right)
+\end{align*}
+on $\displaystyle \RR^k \times \RR$.  It follows from
+(\ref{defFSItoS}) that
+\begin{equation} \label{detaEomEq4}
+F(H^\ast(\omega))
+= \sum_{j=1}^q {-1}^{j-1} \left(\int_0^1 r^{q-1} g(r\VEC{x}) \dx{r}\right) x_{i_j}
+\, \df{x_{i_1}} \wedge \ldots \wedge \widehat{\df{x_{i_j}}} \wedge \ldots \wedge
+\df{x_{i_q}} = \eta
+\end{equation}
+on $\displaystyle \RR^k$.
+Moreover
+$\displaystyle \df{(H^\ast(\omega))} = H^\ast(\df{\omega}) = H^\ast(0)
+= 0$ because $\omega$ is a differential $k$-form on $\displaystyle \RR^k$.
+Thus
+\begin{equation}  \label{detaEomEq5}
+F(\df{(H^\ast(\omega))}) = 0 \ .
+\end{equation}
+
+If we substitute (\ref{detaEomEq2}), (\ref{detaEomEq3}),
+(\ref{detaEomEq4}) and (\ref{detaEomEq5}) into (\ref{detaEomEq1}), we
+get $\df{\eta} = \omega$.
+\end{proof}
+
+\section{Cohomology Modules}
+
+We will start with a more restrictive type of cohomology before moving
+on to the more general type.  This will prepare us for the more general
+type of cohomology by giving us some useful results for the study of
+the more general type of cohomology.  This more restrictive type of
+cohomology is really important in its own right.
+
+\subsection{Cohomology Modules with Compact Supports}
+
+\begin{defn} \label{defnCohomRelCompact}
+Let $S$ be a $k$-dimensional smooth manifold.
+Two closed differential $q$-forms with compact support, $\omega_1$ and
+$\omega_2$, on $S$ are {\bfseries cohomologous}\index{Cohomologous Forms}
+if there exists a differential $(q-1)$-form with compact support
+$\eta$ on $S$ such that 
+$\omega_1 - \omega_2 = \df{\eta}$.  We write $\omega_1 \sim \omega_2$.
+\end{defn}
+
+In the previous definition, the condition that the support of the
+differential $(q-1)$-form $\eta$ be compact is stronger than the
+condition that the support of $\df{\eta}$ be compact.  The
+differential $q$-form $\df{\eta}$ may have a compact support without the
+differential $(q-1)$-form $\eta$ having a compact support.
+
+The relation defined above is an equivalence relation.
+\begin{enumerate}
+\item If $\omega$ is a closed differential $q$-form with compact
+support, then obviously $\omega \sim \omega$.
+\item If $\omega_1$ and $\omega_2$ are two closed differential
+$q$-forms with compact support, then again it is obvious that
+$\omega_1 \sim \omega_2$ if and only if $\omega_2 \sim \omega_1$.
+\item If $\omega_i$ for $1\leq i \leq 3$ are three closed differential
+$q$-forms with compact support such that $\omega_1 \sim \omega_2$.
+and $\omega_2 \sim \omega_3$, then $\omega_1 \sim \omega_3$.  To
+verify this claim, let $\eta_1$ be a differential $(q-1)$-form with
+compact support such that $\omega_2 - \omega_1 = \df{\eta_1}$
+and $\eta_2$ be a differential $(q-1)$-form with compact support such that
+$\omega_3 - \omega_2 = \df{\eta_2}$.  Then
+$\omega_3 - \omega_1 = (\omega_3 - \omega_2) + (\omega_2 - \omega_1)
+= \df{\eta_2} + \df{\eta_1} = \df{(\eta_2+\eta_2)}$ where
+$\eta_1 + \eta_2$ is a differential $(q-1)$-form with compact support
+because the union of two compact sets is a compact set.
+\end{enumerate}
+
+\begin{defn}
+Let $S$ be a $k$-dimensional smooth manifold.
+The {\bfseries $\displaystyle \mathbf{q^{th}}$ (de Rham) Cohomology Module
+with compact support}\index{Cohomology Module with Compact
+Support}\index{(de Rham) Cohomology Module with Compact
+Support|see{Cohomology Module with Compact Support}} of $S$,
+denoted $\displaystyle H_c^q(S)$, is the set of all equivalent
+classes of closed differential $q$-forms on $S$ with compact support
+with respect to the equivalence relation given in
+Definition~\ref{defnCohomRelCompact}.
+The equivalence class for a closed differential $q$-form with compact
+support $\omega$ on $S$ is called a
+{\bfseries cohomology class}\index{Cohomology Class} and
+is denoted $[\omega]$.
+\end{defn}
+
+\begin{egg}
+We have that the dimension of $\displaystyle H^k_c(\RR^k)$ is greater
+than $0$.
+
+To prove this statement, let
+$\displaystyle \omega = f \df{x_1} \wedge
+\df{x_2} \wedge \ldots \wedge \df{x_k}$ where
+$\displaystyle f:\RR^k \to [0,\infty[$ is
+a continuous function with compact support such that $f(\VEC{x}) > 0$
+for some $\displaystyle \VEC{x} \in \RR^k$.  Then
+$\displaystyle \int_{\RR^k} \omega = \int_{\RR^k} f(\VEC{x}) \dx{\VEC{x}} > 0$.
+Suppose that there is a differential $(k-1)$-form $\eta$ on $S$ with
+compact support such that $\df{\eta} = \omega$.  Given $r >0$ such
+that $\supp \eta \subset B_r(\VEC{0})$, we then have from
+Stokes' theorem that
+$\displaystyle \int_{\RR^k} \omega = \int_{B_r(\VEC{0})} \omega 
+= \int_{B_r(\VEC{0})} \df{\eta} = \int_{\partial B_r(\VEC{0})} \eta = 0$.
+This is a contradiction.
+\end{egg}
+
+\begin{egg}
+If $S$ is an oriented $k$-dimensional         \label{eggOCSpos}
+smooth manifold, then the dimension of $\displaystyle H_c^k(S)$ is
+greater than $0$.
+
+To prove this statement, let $(W,U,\phi)$ be an orientation preserving
+local chart of $S$ such that $U \cap \partial S = \emptyset$.
+Let $\omega$ be a differential $k$-form on $S$ with compact support in $U$
+such that its local representation is
+$\displaystyle \phi^\ast(\omega) = f \df{w_1} \wedge
+\df{w_2} \wedge \ldots \wedge \df{w_k}$ where $f:W \to [0,\infty[$ is
+a continuous function with compact support and $f(\VEC{w}) > 0$
+for some $\VEC{w} \in W$.  Then
+$\displaystyle \int_S \omega = \int_W f(\VEC{w}) \dx{\VEC{w}} > 0$.
+Suppose that there is a differential $(k-1)$-form $\eta$ on $S$ with
+compact support such that $\df{\eta} = \omega$.  We must have that
+$\supp \eta \subset \supp \omega \subset U$ because
+$\df{\eta}(\VEC{u}) = \omega(\VEC{u}) = 0$ for
+$\VEC{u} \in S \setminus \supp \omega$.  Thus
+$\eta(\VEC{u})$ is constant for $\VEC{u} \in S \setminus \supp \omega$.
+Since $\eta$ has a compact support, we must have that
+$\eta(\VEC{u}) = 0$ for $\VEC{u} \in S \setminus \supp \omega$.
+In particular, we have that
+$\supp \eta \cap \partial S \subset U \cap \partial S = \emptyset$.
+It follows from Stokes' theorem that $\displaystyle \int_S \omega 
+= \int_S \df{\eta} = \int_{\partial S} \eta = 0$.  This is a
+contradiction.
+\end{egg}
+
+\begin{prop}  \label{HCqVectSpac}
+Suppose that $S$ is a $k$-dimensional smooth manifold.
+Then $\displaystyle H_c^q(S)$ is a vector space.
+\end{prop}
+
+\begin{proof}
+\stage{i} We prove that $[\omega_1 + \omega_2] =
+[\omega_1]+[\omega_2]$ is well defined for all closed differential $q$-forms
+with compact support $\omega_1$ and $\omega_2$ on $S$.
+
+We first note that $\omega_1 + \omega_2$ is closed because
+$\df{(\omega_1 + \omega_2)} = \df{\omega_1} + \df{\omega_2} = 0$.
+Moreover, $\omega_1 + \omega_2$ has a compact support because the
+union of two compact sets is a compact set.
+
+Suppose that $\tilde{\omega}_i \sim \omega_i$ for $i=1,2$.
+Then there exist two differential $(q-1)$-forms with compact support,
+$\eta_1$ and $\eta_2$, on $S$ such that
+$\tilde{\omega}_i - \omega_i = \df{\eta_i}$ for $i=1,2$.  It follows that
+$(\tilde{\omega}_1 + \tilde{\omega}_2) - (\omega_1 + \omega_2)
+= (\tilde{\omega}_2 - \omega_2) + (\tilde{\omega}_1 - \omega_1)
+= \df{\eta_2} + \df{\eta_1} = \df{(\eta_2+\eta_1)}$.
+Moreover, $\eta_1 + \eta_2$ has a compact support because the union of two
+compact sets is a compact set.
+Thus $(\tilde{\omega}_1 + \tilde{\omega}_2) \sim (\omega_1 + \omega_2)$
+and $[\tilde{\omega}_1 + \tilde{\omega}_2] =[\omega_1 + \omega_2]$.
+
+\stage{ii} We prove that $a [\omega] = [a\omega]$ is well defined for
+all differential $q$-form with compact support $\omega$ on $S$ and
+$a \in \RR$.
+
+We first note that $a \omega$ is closed because
+$\df{(a\omega)} = a\df{\omega} = 0$.  Moreover, $a \omega$ has a
+compact support because $\supp (a\omega) = \supp \omega$ if $a \neq 0$.
+
+Suppose that $\tilde{\omega} \sim \omega$.
+Then there exists a differential $(q-1)$-form with compact support
+$\eta$ on $S$ such that $\tilde{\omega} - \omega = \df{\eta}$.  It
+follows that $a\,\tilde{\omega} + a\,\omega = a(\tilde{\omega} - \omega)
+= a \df{\eta} = \df{(a\eta)}$ where $a\eta$ is a differential
+$(q-1)$-form with compact support. Thus
+$a\,\tilde{\omega} \sim a\,\omega$ and $[a\,\tilde{\omega}] =[a\,\omega]$.
+\end{proof}
+
+\begin{rmk}
+Let $S$ be a $k$-dimensional smooth manifold.
+The null element $[0]$ in $\displaystyle H_c^q(S)$ is the collection of
+all differential $q$-forms with compact support $\omega$ on $S$ such
+that $\omega = \df{\eta}$ for some differential $(q-1)$-form with
+compact support $\eta$ on $S$.  This follows from the fact that 
+$\omega$ in the class $[0]$ means that that
+$\omega = \omega - 0 = \df{\eta}$ for some differential $(q-1)$-form
+with compact support on $S$.
+\end{rmk}
+
+We want to compute the $\displaystyle q^{th}$ cohomology modules with
+compact support for the connected and oriented smooth manifolds.  To
+do that will however require some work.
+
+\begin{prop} \label{propHkSMequiv}
+Suppose that $S$ is a connected and oriented $k$-dimensional smooth
+manifold without boundary.  Then $\displaystyle H_c^k(S) \cong \RR$ if
+and only if the map $\displaystyle M : H_c^k(S) \to \RR$ defined by
+$M([\omega]) = \int_S \omega$ is an isomorphism.
+\end{prop}
+
+\begin{proof}
+We first have to prove that the map $M$ is well defined.
+Suppose that $[\omega_1] = [\omega_2]$ for two differential $k$-forms
+$\omega_1$ and $\omega_2$ on $S$ with compact support.  Then there
+exists a differential $(k-1)$-form on $S$ with compact support such
+that $\omega_1 - \omega_2 = \df{\eta}$.  It follows from Stokes'
+theorem that
+$\displaystyle \int_S \omega_1 - \int_S \omega_2 = \int_S (\omega_1 - \omega_2)
+= \int_S \df{\eta} = \int_{\partial S} \eta = 0$.  So
+$\displaystyle \int_S \omega_1 = \int_S \omega_2 =0 $ and thus
+$M([\omega_1]) = M([\omega_2])$.
+
+Suppose that $M$ is an isomorphism between $\displaystyle H_c^k(S)$
+and $\RR$, and that $\omega_1$ and $\omega_2$ are two differential
+$k$-forms on $S$ with compact support.  Choose $a \in \RR$ such that
+$M([\omega_1]) = a M([\omega_2])$.  Then
+$M([\omega_1] - a [\omega_2]) = M([\omega_1]) - a M([\omega_2]) = 0$
+Since $M$ is an isomorphism, we have that
+$[\omega_1] - a [\omega_2] = [0]$; namely,
+$[\omega_1] = a [\omega_2]$.
+
+Conversely, suppose that $\displaystyle H_c^k(S) \cong \RR$ and that
+$M([\omega_1]) = 0$ with $[\omega_1] \neq [0]$, where $\omega_1$
+is a differential $k$-forms on $S$ with compact support.
+For every differential $k$-forms $\omega_2$ on $S$ with compact
+support, we have that $[\omega_2] = a [\omega_1]$ for some $a \in \RR$.
+Thus $M([\omega_2]) = a M([\omega_1]) = 0$.
+It follows that $M$ is null on $\displaystyle H_c^k(S)$ which is not
+the case.  An example of a differential $k$-form $\omega$ with
+$M([\omega])>0$ is given in Example~\ref{eggOCSpos}.
+\end{proof}
+
+\begin{lemma} \label{ConnSequ}
+Suppose that $S$ is a connected set and that
+$\U = \{ U_\alpha \}_{\alpha \in A}$ is an open cover of $S$ with
+$U_\alpha \subset S$ for all $\alpha \in I$.
+Given any two sets $U_a, U_b \in \U$, there
+exists a finite collection $\{ U_{\alpha_j} \}_{0 \leq j \leq J}$ such that
+$U_{\alpha_0} = U_a$, $U_{\alpha_J} = U_b$ and
+$U_{\alpha_j} \cap U_{\alpha_{j-1}} \neq \emptyset$ for $1 \leq j \leq J$.
+\end{lemma}
+
+\begin{proof}
+Let $\BB$ be the set of all $U_c \in \U$ such that there exists a
+finite collection $\{ U_{\alpha_j} \}_{0 \leq j \leq J_c}$ satisfying
+$U_{\alpha_0} = U_a$, $U_{\alpha_{J_c}} = U_c$ and
+$U_{\alpha_j} \cap U_{\alpha_{j-1}} \neq \emptyset$ for $1 \leq j \leq J_c$.
+
+Let $\displaystyle C = \bigcup_{U_c \in \BB} U_c$.  We have that $C$ is
+an open set because it is the union of open sets.  We now show that
+$S \setminus C = \emptyset$ and thus that $U_b \in \BB$.
+
+Suppose that $S \setminus C \neq \emptyset$.  Given any
+$\VEC{x} \in S \setminus C$, there exists $U_d \in \U$ such that
+$\VEC{x} \in U_d$ because $\U$ is an open cover of $S$.  We have that
+$U_d \cap C = \emptyset$ otherwise $W_d$ would be in $\BB$ and
+$\VEC{x}$ in $C$.  To be more precise, 
+$U_d \cap C \neq \emptyset$ implies that $U_d \cap U_c \neq \emptyset$
+for some $U_c \in \BB$.  Thus $U_d$ may be added to the finite collection
+$\{ U_{\alpha_j} \}_{0 \leq j \leq J_c}$ joining $U_a$ to $U_c$ 
+with $U_{\alpha_j} \cap U_{\alpha_{j-1}} \neq \emptyset$ for $1 \leq j \leq J_c$
+to create a finite collection $\{ U_{\alpha_j} \}_{0 \leq j \leq J_c+1}$
+joining $U_a$ to $U_d$ with $U_{\alpha_{J_c+1}} = U_d$ and
+$U_{\alpha_j} \cap U_{\alpha_{j-1}} \neq \emptyset$ for $1 \leq j \leq J_c+1$.
+Thus $S\setminus C$ is a non-empty open set.
+Since $S$ is connected, this contradict the fact that $S$ cannot be
+the union of two disjoints non-empty open sets.
+\end{proof}
+
+\begin{theorem} \label{theoHckCR}
+If $S$ is an connected and oriented $k$-dimensional smooth manifold without
+boundary, then $\displaystyle H_c^k(S) \cong \RR$.
+\end{theorem}
+
+\begin{proof}
+\stage{i} We first prove that $\displaystyle H_c^1(\RR) \cong \RR$.
+To do so, we prove that the map $\displaystyle M:H_c^1(\RR) \to \RR$
+defined in Proposition~\ref{propHkSMequiv} is an isomorphism.
+Suppose that $\omega = g \df{x}$ is a differential $1$-form on $S$
+with compact support such that $\displaystyle \int_{\RR} \omega = 0$.
+In particular, $g:\RR\to \RR$ is a continuous function with compact
+support.
+
+There exists a function $f:\RR\to \RR$ such that $\omega = \df{f}$.  In
+fact, it suffices to take $\displaystyle f(x) = \int_0^x g(y)\dx{y}$ for
+$x \in \RR$.
+
+Since $\omega = \df{f} = f' \dx{x}$ has a compact support, there exists an
+interval $[a,b] \subset \RR$ such that $f'(x) = 0$ for
+$x \in \RR \setminus [a,b]$.
+Thus $f$ is constant on $\RR \setminus [a,b]$.  Suppose that 
+$f(x) = c$ for $x <a$ and $f(x) = d$ for $x>b$.  Then $c = d$ because
+$\displaystyle 0 = \int_{\RR} \omega = \int_{\RR} f'(x) \dx{x}
+= \int_a^b f'(x) \dx{x} = f(b) - f(a) = d - c$.
+
+We get that $\omega = \df{h}$ for $h = f - c$ with
+$\supp h \subset [a,b]$.  Thus $[\omega] = [0]$ in 
+$\displaystyle H^1(\RR)$.
+
+\stage{ii} We prove that $\displaystyle H_c^{k-1}(S) \cong \RR$
+for all connected and oriented $(k-1)$-dimensional smooth manifolds without
+boundary implies that $\displaystyle H_c^k(\RR^k) \cong \RR$.  Again, we
+do so by proving that $\displaystyle M:H_c^k(\RR) \to \RR$
+defined in Proposition~\ref{propHkSMequiv} is an isomorphism.
+
+Suppose that $\omega$ is a differential $k$-form on $\displaystyle \RR^k$
+with compact support and that $\displaystyle \int_{\RR^k} \omega = 0$.
+Since $\supp \omega$ is compact, there exists $b>0$ such that
+$\supp \omega \subset B_b(\VEC{0})$.
+
+Let $\displaystyle h:\RR^k \to \RR^k$ be the diffeomorphism defined by
+$h(\VEC{x}) = b\, \VEC{x}$ for $\displaystyle \VEC{x} \in \RR^k$.  We have that
+$\displaystyle h^\ast(\omega)$ is a differential $k$-form on
+$\displaystyle \RR^k$ with
+$\displaystyle \supp\, h^\ast(\omega) \subset B_1(\VEC{0})$.
+If we prove that there exists a differential $(k-1)$-form $\eta$ on
+$\displaystyle \RR^k$ with compact support such that
+$\displaystyle h^\ast(\omega) = \df{\eta}$, then
+$\displaystyle \omega = (h^{-1})^\ast(\df{\eta})
+= \df{\left( (h^{-1})^\ast(\eta)\right)}$ where
+$\displaystyle (h^{-1})^\ast(\eta)$ is a differential $(k-1)$-form $\eta$
+on $\displaystyle \RR^k$ with compact support.  Thus
+$[\omega] = [0]$ in $\displaystyle H_c^k(\RR^k)$.
+
+Therefore, we may assume without loss of generality that
+$\omega = g \df{x_1} \wedge \df{x_2} \wedge \ldots \wedge \df{x_k}$ 
+with $\supp g \subset B_1(\VEC{0})$.
+
+Let $\eta$ be the differential $(k-1)$-form on $\displaystyle \RR^k$ defined by
+\begin{equation} \label{theoHckCREq1}
+\eta(\VEC{x}) = \sum_{j=1}^k (-1)^{j-1}
+\left(\int_0^1 r^{k-1} g(r \VEC{x}) \dx{r}\right) 
+x_j \left( \df{x_1} \wedge \ldots \wedge \widehat{\df{x_j}} \wedge \ldots
+\wedge \df{x_k}\right)(\VEC{x})
+\end{equation}
+for $\displaystyle \VEC{x} \in \RR^k$.
+We have from Proposition~\ref{propDeEo} that $\df{\eta} = \omega$.  However,
+$\eta$ may not have a compact support.  We have to slightly modify
+$\eta$ to get a differential $(k-1)$-form on $S$ with compact support
+whose derivative is $\omega$.
+
+If we use the substitution $t = \|\VEC{x}\| r$ in the integral in
+(\ref{theoHckCREq1}) and use Proposition~\ref{propRanEntn}, we get
+\begin{align*}
+\eta(\VEC{x}) &= \sum_{j=1}^k (-1)^{j-1}
+\left(\int_0^{\|\VEC{x}\|} t^{k-1} g\left(\frac{t}{\|\VEC{x}\|} \VEC{x}\right)
+\dx{t}\right) \|\VEC{x}\|^{-k} x_j \left(\df{x_1}
+\wedge \ldots \wedge \widehat{\df{x_j}} \wedge \ldots
+\wedge \df{x_k}\right)(\VEC{x}) \\
+&= \left(\int_0^1 t^{k-1} g\left(\frac{t}{\|\VEC{x}\|} \VEC{x}\right)
+\dx{t}\right)
+\left( \sum_{j=1}^k (-1)^{j-1} \|\VEC{x}\|^{-k} x_j \left(\df{x_1}
+\wedge \ldots \wedge \widehat{\df{x_j}} \wedge \ldots
+\wedge \df{x_k} \right)(\VEC{x}) \right) \\
+&= \left( \int_0^1 t^{k-1} g\left(\frac{t}{\|\VEC{x}\|} \VEC{x}\right)
+\dx{t}\right) \, \rho^\ast(\nu)(\VEC{x})
+\end{align*}
+for $\displaystyle \VEC{x} \in \RR^k \setminus \{\VEC{0}\}$ where
+$\displaystyle \rho:\RR^k \setminus \{\VEC{0}\} \to \SS^{k-1}$ is the
+retraction defined by $\displaystyle \rho(\VEC{x}) = \|\VEC{x}\|^{-1} \VEC{x}$ 
+and $\nu$ is the volume element on $\displaystyle S^{k-1}$.
+We have used the fact that $g(\VEC{x}) = 0$ for $\|\VEC{x}\| > 1$ to
+modify the upper limit of integration.
+
+Let $\displaystyle G:\RR^k \to \RR$ be the function defined by
+$\displaystyle G(\VEC{x}) = \int_0^1 t^{k-1} g(t \VEC{x}) \dx{t}$
+for $\displaystyle \VEC{x} \in \RR^k$.  We have that
+$\displaystyle \eta(\VEC{x}) = G(\rho(\VEC{x})) \, \rho^\ast(\nu)(\VEC{x})
+= \rho^\ast(G \, \nu)(\VEC{x})$ for all
+$\displaystyle \VEC{x} \in \RR^k \setminus \{\VEC{0}\}$.  Moreover, we get from
+Proposition~\ref{propPolCoords} that
+\[
+\int_{S^{k-1}} G\, \nu =
+\int_{B_1(\VEC{0})} g \, \df{x_1} \wedge \df{x_2} \wedge \ldots
+\wedge \df{x_n} = \int_{\RR^k} \omega = 0 \ .
+\]
+
+Using the induction hypothesis with $\displaystyle S^{k-1}$, we have
+that $\displaystyle M: H_c^{k-1}(S^{k-1}) \to \RR$ defined by
+$\displaystyle M([\omega]) = \int_{S^{k-1}} \omega$ is an isomorphism.
+So $[G\, \nu] = [0]$ in $\displaystyle H_c^{k-1}(S^{k-1})$; namely,
+there exists a differential $(k-2)$-form $\xi$ on
+$\displaystyle S^{k-1}$ with compact support such that $G \, \nu = \df{\xi}$
+on $\displaystyle S^{k-1}$.  It follows that
+$\displaystyle \eta = \rho^\ast(G\, \nu) = \rho^\ast(\df{\xi}) =
+\df{\left(\rho^\ast(\xi)\right)}$ on
+$\displaystyle \RR^k \setminus \{\VEC{0}\}$.
+
+Choose $0 < \epsilon < \delta <1$ and let
+$\displaystyle h:\RR^k \to \RR$ be a function of class
+$\displaystyle C^\infty$ such that $h(\VEC{x}) = 1$ for
+$\|\VEC{x}\| \geq \delta$ and $h(\VEC{x}) = 0$ for $\|\VEC{x}\| < \epsilon$.
+Then $\displaystyle h \rho^\ast(\xi)$ is a differential $(k-2)$-form on
+$\displaystyle \RR^k\setminus \{\VEC{0}\}$.
+Since $\displaystyle h \rho^\ast(\xi)$ is null in a neighbourhood of the
+origin, we may assume that $\displaystyle h \rho^\ast(\xi)$ is defined on
+$\displaystyle \RR^k$ by setting $\displaystyle h \rho^\ast(\xi)(\VEC{0}) = 0$.
+
+We have that $\displaystyle \eta - \df{(h \rho^\ast(\xi))}$ 
+is a differential $(k-2)$-form on $\displaystyle \RR^k$ such that\\
+$\displaystyle \df{\left(\eta - \df{(h \rho^\ast(\xi))}\right)}
+= \df{\eta} = \omega$ and
+\begin{align*}
+\left(\eta - \df{(h \rho^\ast(\xi))}\right)(\VEC{x})
+&= \eta(\VEC{x}) - \df{h}(\VEC{x}) \wedge (h \rho^\ast(\xi))(\VEC{x})
+- h(\VEC{x}) \df{(\rho^\ast(\xi))}(\VEC{x}) \\
+&= (1 - h(\VEC{x})) \eta(\VEC{x}) - \df{h}(\VEC{x}) \wedge (h
+\rho^\ast(\xi))(\VEC{x})  = 0
+\end{align*}
+for $\|\VEC{x}\| >\delta$ because $h(\VEC{x}) = 1$ for $\|\VEC{x}\|>\delta$.
+So $\displaystyle \eta - \df{(h \rho^\ast(\xi))}$ has a compact support
+in $B_1(\VEC{0})$.
+
+This shows that $[\omega] = [0]$ in $\displaystyle H_c^k(\RR^k)$.
+
+\stage{iii} We prove that $\displaystyle H_c^k(\RR^k) \cong \RR$
+implies $\displaystyle H_c^k(S) \cong \RR$
+for all connected and oriented $k$-dimensional smooth manifolds without
+boundary.
+
+Let $\displaystyle \A = \left\{ (W_\alpha,U_\alpha,
+\phi_\alpha)\right\}_{\alpha\in A}$ be
+an atlas of orientation preserving local charts on $S$ and
+$\displaystyle \{\psi_j\}_{j \in \NNp}$ be a partition of
+unity subordinate to $\A$.  Without any loss of generality, we may
+assume that the $W_i$ are open ball in $\displaystyle \RR^k$ centred
+at the origin
+\footnote{For each $\VEC{x}$, there exists an orientation preserving
+local chart $(W,U,\phi)$ on $S$ with $\VEC{x} \in U$.  Choose a small ball
+$\displaystyle W_{\VEC{x}} = B_r(\phi^{-1}(\VEC{x})) \subset W$.  Let
+$U_{\VEC{x}} = \phi(B_{\VEC{x}})$ and $\phi_{\VEC{x}} = \phi$.  We
+get a new local chart $(W_{\VEC{x}},U_{\VEC{x}},\phi_{\VEC{x}})$ on $S$ 
+about $\VEC{x} \in S$.  The collection
+$\displaystyle \{(W_{\VEC{x}},U_{\VEC{x}},\phi_{\VEC{x}})\}_{\VEC{x} \in S}$
+is an atlas on $S$ which orientation preserving local charts such
+that the $W_{\VEC{x}}$ are open ball in $\displaystyle \RR^k$.}.
+
+Choose a local chart $(W_{\tau_0},U_{\tau_0},\phi_{\tau_0})$ with
+$\tau_0 \in A$ and a differential $k$-form $\omega$ on $S$ with
+compact support in $U_{\tau_0}$ such that $[\omega] \neq [0]$ in
+$\displaystyle H_c^k(S)$; namely, $\omega$ is not exact.  Given
+another differential
+$k$-form $\tilde{\omega}$ on $S$ with compact support, we want to show
+that there exists $a \in \RR$ such that $[\tilde{\omega}] = a [\omega]$;
+namely, there exist $a \in \RR$ and a differential $(k-1)$ form $\eta$
+on $S$ with compact support such that
+$\tilde{\omega} - a \omega = \df{\eta}$.
+
+Since $\tilde{\omega}$ has a compact support, it follows from
+Proposition~\ref{cov4forM} that there exists a finite subset $J$ of
+$\displaystyle \NNp$ such that
+$\displaystyle \tilde{\omega} = \sum_{j\in J} \psi_j\, \tilde{\omega}$.
+If we prove that for each $j \in J$ we can find $a_j \in \RR$ and
+a differential $(k-1)$-form $\eta_j$ on $S$ with compact support such that
+$\psi_j\, \tilde{\omega} - a_j \omega = \df{\eta_j}$, then we will have
+that
+\[
+\tilde{\omega} = \sum_{j\in J} \psi_j \tilde{\omega}
+= \bigg(\underbrace{\sum_{j\in J} a_j}_{= a}\bigg) \omega + \df{
+\bigg(\underbrace{\sum_{j\in J} \eta_j}_{= \eta}\bigg)} \ ,
+\]
+where $\eta$ a differential $(k-1)$-form on $S$ with compact support
+because each $\eta_j$ has a compact support and the finite union of
+compact sets is a compact set.
+
+Therefore, we only have to prove that for each $j \in J$ we can find
+$a_j \in \RR$ and a differential $(k-1)$-form $\eta_j$ on $S$ with compact
+support such that $\psi_j\, \tilde{\omega} - a_j \omega = \df{\eta_j}$.
+If $[\psi_j\, \tilde{\omega}] = [0]$ in $\displaystyle H_c^k(S)$, then
+$\psi_j\, \tilde{\omega} = \df{\eta_j}$ for some differential
+$(k-1)$-form $\eta_j$ on $S$ with compact support.  Thus, there is
+nothing to prove.  We may take $a_j=0$.  We assume that
+$[\psi_j\, \tilde{\omega}] \neq [0]$ in $\displaystyle H_c^k(S)$.
+
+Using Lemma~\ref{ConnSequ}, we can find a finite sequence
+$\displaystyle \{U_{\tau_m} \}_{0 \leq m \leq M}$ with $\tau_m \in A$
+and $U_{\tau_{m-1}} \cap U_{\tau_m} \neq \emptyset$ for $1 \leq m \leq M$
+where $U_{\tau_0}$ was defined above and $U_{\tau_M} = U_{\alpha_j}
+\supset \supp \psi_j \supset \supp \psi_j\, \tilde{\omega}$.
+Such an index $\alpha_j \in A$ exists by definition of a partition of
+unity.
+\pdfbox{cohomology/sequSets}
+
+Let $\omega_0 = \omega$.  For $0 \leq m < M$,
+choose a differential $k$-form $\omega_{m+1}$ on $S$ with compact support in
+$U_{\tau_m} \cap U_{\tau_{m+1}}$ and such that
+$M([\omega_{m+1}]) = \int_S\omega_{m+1} > 0$ (see
+Example~\ref{eggOCSpos}).  This implies that 
+$\displaystyle [\phi_{\tau_m}^\ast(\omega_{m+1})] \neq [0]$ in
+$\displaystyle H_c^k(\RR^k)$ \footnote{Since 
+$\displaystyle \supp \phi_{\tau_m}^\ast(\omega_{m+1}) \subset W_{\tau_m}$,
+we may assume that $\displaystyle \phi_{\tau_m}^\ast(\omega_{m+1})$ is
+defined on $\displaystyle \RR^k$ by setting it to $0$ outside $W_{\tau_m}$.}
+Since we assume that
+$\displaystyle H_c^k(\RR^k) \cong \RR$, there exists $a_{m+1} \in \RR$
+and a differential $(k-1)$-form $\tilde{\xi}_m$ on
+$\displaystyle \RR^k$ with compact
+support such that $\displaystyle \phi_{\tau_m}^\ast(\omega_{m+1}) - a_{m+1}
+\phi_{\tau_m}^\ast(\omega_m) = \df{\tilde{\xi}_m}$.  Proceeding as in the
+prove of (ii), since $\displaystyle \supp \phi_{i_m}^\ast(\omega_{m+1})$
+is a subset of the open ball $W_{\tau_m}$ centred at the origin, we may modify
+$\tilde{\xi}_m$ to get that $\supp \tilde{\xi}_m \subset W_{\tau_m}$.
+We may therefore define a differential $(k-1)$-form $\xi_m$ on $S$
+with compact support in $W_{\tau_m}$ by $\xi_m = 0$ on
+$S \setminus U_{\tau_m}$ and
+$\displaystyle \phi_{\tau_m}^\ast(\xi_m) = \tilde{\xi}_m$ on $U_{\tau_m}$.
+Hence, $\displaystyle \df{\tilde{\xi}_m} =
+\df{\big(\phi_{\tau_m}^\ast(\xi_m)\big)}
+= \phi_{\tau_m}^\ast(\df{\xi_m})$ and we get that
+\begin{equation} \label{theoHckCREq2}
+\omega_{m+1} - a_{m+1} \omega_m = \df{\xi_m}
+\end{equation}
+for $0\leq m < M$.
+
+For $m = M$, we consider the differential $k$-form
+$\displaystyle \omega_{M+1} =  \psi_j \tilde{\omega}$
+which has a compact support in $U_{\tau_M} = U_{\alpha_j}$.  We proceed
+exactly as in the previous paragraph to 
+find $a_{M+1} \in \RR$ and a differential $(k-1)$-form $\xi_M$ on $S$
+with compact support in $U_{\tau_M}$ such that
+\begin{equation} \label{theoHckCREq3}
+\omega_{M+1} - a_{M+1} \omega_M = \df{\xi_M} \ .
+\end{equation}
+
+Using induction, it follows from (\ref{theoHckCREq2}) and
+(\ref{theoHckCREq3}) that
+\begin{align*}
+\psi_j \tilde{\omega} &= \omega_{M+1} = a_{M+1} \omega_M + \df{\xi_M}
+= a_{M+1} \left(a_M \omega_{M-1} + \df{\xi_{M-1}} \right) + \df{\xi_M} \\
+&= a_{M+1} a_M \omega_{M-1} + \left( a_{M+1} \df{\xi_{M-1}} + \df{\xi_M} \right)
+\\
+&= a_{M+1} a_M \left(a_{M-1} \omega_{M-2} + \df{\xi_{M-2}}\right)
++ \left( a_{M+1} \df{\xi_{M-1}} + \df{\xi_M} \right) \\
+&= a_{M+1} a_M a_{M-1} \omega_{M-2} + \left( a_{M+1}a_M \df{\xi_{M-2}}
++ a_{M+1} \df{\xi_{M-1}} + \df{\xi_M} \right) \\
+&= \ldots \\
+&= \left(\prod_{i=1}^{M+1} a_i\right) \omega_0 +
+\df{\left(\xi_M + \sum_{i=0}^{M-1} \left(\prod_{m=i+2}^{M+1} a_m\right)
+\xi_i \right)} \\
+&= \underbrace{\left(\prod_{i=1}^{M+1} a_i\right)}_{=a_j} \omega +
+\df{\underbrace{
+\left(\xi_M + \sum_{i=0}^{M-1} \left(\prod_{m=i+2}^{M+1} a_m\right)
+\xi_i \right)}_{=\eta_j}} \ ,
+\end{align*}
+where $\eta_j$ a differential $(k-1)$-form on $S$ with compact support
+because each $\xi_j$ has a compact support and the finite union of
+compact sets is a compact set.
+
+\stage{iv} We finally have that
+(i) and (iii) implies that $\displaystyle H_c^1(S) \cong \RR$
+for all connected and oriented $1$-dimensional smooth manifolds without
+boundary.  This result combined with (ii) implies that
+$\displaystyle H_c^2(\RR^2) \cong \RR$.  Then, this result combined with (iii)
+implies that $\displaystyle H_c^2(S) \cong \RR$
+for all connected and oriented $2$-dimensional smooth manifolds without
+boundary.  And so on.
+\end{proof}
+
+\begin{egg}
+It is interesting to note that
+$\displaystyle H_c^1(S^1) \cong \RR$ could be proved directly.
+
+We first note that all differential $1$-form on $\displaystyle S^1$
+are closed because there are no non-null differential $2$-form on
+$\displaystyle S^1$.  They also all have compact support because
+$\displaystyle S^1$ is a compact set.  Moreover, every exact
+differential $1$-form $\omega$ on $\displaystyle S^1$ is of the form
+$\omega  = \df{f}$ for some $\displaystyle f:S^1 \to \RR$ of class
+$\displaystyle C^\infty$.
+
+We have seen in Example~\ref{CnotEpart2} that 
+\[
+\omega = \frac{-x_2}{x_1^2+x_2^2} \df{x_1} + \frac{x_1}{x_1^2+x_2^2} \df{x_2}
+\]
+is a differential $1$-form which is not exact.  In fact, $\omega$ is
+the volume (or length) element on $\displaystyle S^1$.
+
+Suppose that $\mu$ is a differential $1$-form.  Let
+$\displaystyle \phi:\RR  \to \RR^2$ be the function defined by
+$\phi(\theta) = \big(\cos(\theta), \sin(\theta)\big)$ for all
+$\theta \in \RR$.  We have that
+$\displaystyle \phi^\ast(\mu) = f \df{\theta}$ for some
+$2\pi$-periodic function $f:\RR \to \RR$.
+
+There are two cases to consider.  If
+$\displaystyle \int_{[0,2\pi]} \phi^\ast(\mu) = \int_0^{2\pi}
+f(\theta) \dx{\theta}  = 0$, then $\tilde{f}:\RR\to \RR$ defined by
+$\displaystyle \tilde{f}(\theta) = \int_0^\theta f(t)\dx{t}$ is a
+$2\pi$-periodic function of class $\displaystyle C^\infty$ such that
+$\df{\tilde{f}} = f \df{\theta}$.  Consider
+$\displaystyle F: S^1 \to \RR$ defined by
+$\displaystyle F = \tilde{f} \circ (\phi\big|_J)^{-1}$ on $\phi(J)$
+for all open interval of length less that $2\pi$ to ensure that
+$\phi\big|_J$ be one-to-one.  This function is of class
+$\displaystyle C^\infty$ on $\displaystyle S^1$ and $\df{F} = \mu$ because
+$\displaystyle \phi^\ast(\df{F}) = \df{(\phi^\ast(F))}
+= \df{\tilde{f}} = f \df{\theta} = \phi^\ast(\mu)$.  Thus $\mu$ is exact.
+Hence $[\mu] = [0]$ in $\displaystyle H_c^1(S^1)$.
+
+If $\displaystyle c = \int_{[0,2\pi]} \phi^\ast(f) = \int_0^{2\pi}
+f(\theta) \dx{\theta} \neq 0$, then
+$\mu - c/(2\pi) \, \omega$ is exact.  To prove this claim, we first
+note that $\displaystyle \phi^\ast(\omega) = \df{\theta}$.  Hence
+$\displaystyle \int_{[0,2\pi]} \phi^\ast\big( \mu - c/(2\pi)\, \omega\big)
+= \int_0^{2\pi} \big(f(\theta) - c/(2\pi) \big) \dx{\theta} = 0$.
+Let $\tilde{f}:\RR\to \RR$ be the function of period $2\pi$ defined by
+$\displaystyle \tilde{f}(\theta) = \int_0^\theta f(t)\dx{t} -
+c\theta/(2\pi)$ for $0 \leq \theta \leq 2\pi$.  This is a
+$2\pi$-periodic function of class $\displaystyle C^\infty$ such that
+$\df{\tilde{f}} = f \df{\theta} - c/(2\pi)$.  Hence
+$F$ defined as above is a function of class
+$\displaystyle C^\infty$ on $\displaystyle S^1$
+such that $\df{F} = \mu - c/(2\pi)\, \omega$ because
+$\phi^\ast(\df{F}) = \df{(\phi^\ast(F))} = \df{\tilde{f} -c\theta/(2\pi)}
+= f \df{\theta} - c/(2\pi)\,\df{\theta}
+= \phi^\ast(\mu -c/(2\pi)\, \omega)$.  Thus $[\mu] = [c/(2\pi)\,\omega]$
+in $\displaystyle H_c^1(S^1)$.
+
+We have an isomorphism between
+$\displaystyle H_c^1(S^1)$ and $\RR$ given by
+$[a\, \omega] \mapsto a$ for all $a \in \RR$.
+\end{egg}
+
+The next step should normally be to compute $\displaystyle H_c^q(S)$
+for the connected and oriented $k$-dimensional smooth manifolds $S$
+and $0 \leq q <k$.  We will prove the following result
+at the end of the next section.
+
+\begin{theorem}  \label{thrmHqRkE0lk}
+$\displaystyle H_c^q(\RR^k) = \{[0]\}$ for $0 \leq q < k$.  
+\end{theorem}
+
+\begin{focus}{Note}
+Suppose that $S$ is an oriented $k$-dimensional smooth manifold and
+$0 \leq q \leq k$.  It is the tradition to write
+$\displaystyle H_c^q(S) = 0$ when
+$\displaystyle H_c^q(S) = \{[0]\}$.  We will adopt this
+tradition from now on.
+\end{focus}
+
+\subsection{Cohomology Modules (General Case)} \label{ssubCMGcase}
+
+We now drop the condition that the differential $q$-forms have a
+compact support.
+
+\begin{defn} \label{defnCohomRel}
+Let $S$ be a $k$-dimensional smooth manifold.
+Two closed differential $q$-forms, $\omega_1$ and $\omega_2$, on $S$ are
+{\bfseries cohomologous}\index{Cohomologous Forms} if there exists a
+differential $(q-1)$-form $\eta$ on $S$ such that
+$\omega_1 - \omega_2 = \df{\eta}$.  We write $\omega_1 \sim \omega_2$
+\footnotemark.
+\end{defn}
+
+\footnotetext{We use the same symbol to denote cohomologous
+differential forms with or without compact supports.  The context
+should be enough to determine which cohomologous definition should be
+used.  The readers may wonder why we did not use a different symbol.
+They will understand when reading the next chapter why we choose to
+not introduce a new symbol at this time.  There will be enough
+different similarity symbols in the next chapter to drive someone crazy.}
+
+As we had for the relation defined in
+Definition~\ref{defnCohomRelCompact}, the relation defined in
+Definition~\ref{defnCohomRel} is an equivalence relation.  The
+justification is basically identical.  We have two definitions of
+cohomologous forms.  The context will determine which definition is to
+be used.
+
+\begin{defn}  \label{defnqdeRhamCM}
+Let $S$ be a $k$-dimensional smooth manifold.  The
+{\bfseries $\displaystyle \mathbf{q^{th}}$ (de Rham) Cohomology Module}
+\index{Cohomology Module}\index{(de Rham) Cohomology
+Module|see{Cohomology Module}}
+of $S$, denoted $\displaystyle H^q(S)$, is the set of all equivalent
+classes of closed differential $q$-forms on $S$ with respect to the
+equivalence relation given in Definition~\ref{defnCohomRel}.
+An equivalence class for a closed differential $q$-form $\omega$ on $S$
+is called a {\bfseries cohomology class}\index{Cohomology Class} and
+is denoted $[\omega]$.
+\end{defn}
+
+\begin{rmk}
+$\displaystyle H^q(S)$ is also called the
+{\bfseries $\displaystyle \mathbf{q^{th}}$ cohomology
+group}\index{Cohomology Group|see{Cohomology Module}}
+because the space of differential $q$-form on $S$ can be view as a
+free abelian group generated by a finite basis of differential
+$q$-forms.  Moreover, since we are using $\RR$ for the scalars, we may
+also have talked about vector spaces instead of module.  However, the
+use of the word module is justified by the fact that the theory can be
+expanded to modules.
+\end{rmk}
+
+A proof almost identical (and simpler) to the proof of
+Proposition~\ref{HCqVectSpac} yields the following result.
+
+\begin{prop}
+Suppose that $S$ is a $k$-dimensional smooth manifold.
+Then $\displaystyle H^q(S)$ is a vector space.
+\end{prop}
+
+\begin{rmk}
+Let $S$ be a $k$-dimensional smooth manifold.
+The null element $[0]$ in $\displaystyle H^q(S)$ is the collection of
+all exact differential $q$-forms on $S$ because $\omega$ in the class
+$[0]$ means that that $\omega = \omega - 0 = \df{\eta}$ for some
+differential $(q-1)$-form on $S$.
+\end{rmk}
+
+\begin{egg}
+If $S$ is a compact and oriented $k$-dimensional smooth manifold
+without boundary, then the dimension of
+$\displaystyle H^k(S)$ is larger than $0$.  To prove this claim, we
+only have to show that there exists a closed and non-exact
+differential $k$-form on $S$.  This is what we did in
+Example~\ref{eggHkDim}.
+
+We have a more precise result.  Since $S$ is compact, we get from
+Theorem~\ref{theoHckCR} that $\displaystyle H^k(S) = H^k_c(S) \cong \RR$.
+\end{egg}
+
+\begin{egg}
+We have from Example~\ref{HR0dim} that
+$\displaystyle H^{n-1}\left(\RR^n \setminus \{ \VEC{0}\}\right)$
+is of dimension greater than $0$ for $n\geq 2$.
+\end{egg}
+
+\begin{prop} \label{H0kdimS}
+Suppose that $S$ is a $k$-dimensional smooth manifold.  The dimension of
+$\displaystyle H^0(S)$ is equal to the number of (connected)
+components of $S$.
+\end{prop}
+
+\begin{proof}
+To justify this claim, we first note that a differential $0$-form on
+$S$ is a function.  Let $f:S \to \RR$ be smooth function.
+
+If $(W,U,\phi)$ is a local chart of $S$, then
+$\df{f}=0$ implies that
+$\displaystyle 0 = \phi^\ast(\df{f}) = \df{(\phi^\ast f)}
+= \df{(f\circ \phi)}
+= \sum_{j=1}^k \pdfdx{(f \circ \phi)}{w_j} \df{w_j} = 0$ on $W$ and so
+$\displaystyle \pdfdx{(f \circ \phi)}{w_j} = 0$ on $W$ for $1\leq j \leq k$.
+Since $\phi$ is one-to-one, this implies that $f$ is constant on $U$.
+Thus $f$ is constant on open subsets of $S$ and therefore on the
+components of $S$.  Suppose that $S$ is the union of the disjoint
+components $S_i$ for $i \in I$.  Let
+\[
+\Chi_i(\VEC{u}) = \begin{cases}
+1 & \quad \text{if} \ \VEC{u} \in S_i \\
+0 & \quad \text{if} \ \VEC{u} \in S \setminus S_i
+\end{cases}
+\]
+Then $\displaystyle \{ [\Chi_i] \}_{i\in I}$ is a basis of
+$\displaystyle H^0(S)$.
+
+It is important to note that each equivalent class $[f]$ of
+$\displaystyle H^0(S)$ consists in one element only, the function $f$.
+If $g$ is an element of the class $[f]$, then we must have that
+$g - f = 0$ because there are no such thing as a differential
+$-1$-forms $\eta$ such that $\df{\eta} = g - f$.
+\end{proof}
+
+The following result is a consequence of the previous proposition.
+
+\begin{cor} \label{corHqe0e1}
+$\displaystyle H^0(\RR^k) \cong \RR$.
+\end{cor}
+
+It follows from Poincaré Lemma, Theorem~\ref{closedexactCntrct}, that
+if $S$ is a $k$-dimensional smooth manifold which is smoothly
+contractible to the point of $S$, then
+$\displaystyle H^q(S) = 0$ for $0 <q \leq k$.
+In particular, we get the following result.
+
+\begin{cor} \label{corHqg0e0}
+$\displaystyle H^q(\RR^k) = 0$ for $0 <q \leq k$.
+\end{cor}
+
+Now that we have computed the $\displaystyle q^{th}$ cohomology module
+of $\displaystyle \RR^k$ for $0 \leq q \leq k$, we would like to do
+the same for other smooth manifolds than $\displaystyle \RR^k$.  In
+fact, we can easily
+obtain the $\displaystyle q^{th}$ cohomology module of the smooth manifolds
+that are diffeomorphic to $\displaystyle \RR^k$.
+
+Suppose that $S_1$ and $S_2$ are two $k$-dimensional smooth manifolds.  Let
+$f:S_1 \to S_2$ be a function of class $\displaystyle C^\infty$.  We
+have that $\displaystyle f^\ast$ maps differential $q$-forms on $S_2$ to 
+differential $q$-forms on $S_1$.  The following map is well
+defined.
+\begin{align*}
+f^\sharp : H^q(S_2) &\to H^q(S_1) \\
+[\omega] &\mapsto [f^\ast(\omega)]
+\end{align*}
+Suppose that
+$\omega_1$ and $\omega_2$ are two differential $q$-forms on $S_2$
+such that $\omega_1 \sim \omega_2$.  Then there exists a differential
+$(q-1)$-form $\eta$ on $S_2$ such that
+$\omega_2 - \omega_1 = \df{\eta}$.  Using
+Proposition~\ref{manifSDFitem4}, we get that
+$\displaystyle f^\ast(\omega_2) - f^\ast(\omega_1) = f^\ast(\omega_2- \omega_1)
+= f^\ast (\df{\eta})  = \df{(f^\ast(\eta))}$.  Since
+$\displaystyle f^\ast(\eta)$ is
+a differential $(q-1)$-form on $S_1$, we have that
+$\displaystyle f^\ast(\omega_2) \sim f^\ast(\omega_1)$ and
+$\displaystyle [f^\ast(\omega_2)] = [f^\ast(\omega_1)]$.
+
+\begin{prop}  \label{propFsharpP}
+\begin{enumerate}
+\item Suppose that $S_1$ and $S_2$ are two $k$-dimensional smooth
+manifolds and that $f:S_1 \to S_2$ is a function of class
+$\displaystyle C^\infty$.  Then
+$\displaystyle f^\sharp : H^q(S_2) \to H^q(S_1)$ is a linear map.
+\item  Suppose that $S_i$ for $1\leq i \leq 3$ are three
+$k$-dimensional smooth manifolds and that $f_i:S_i \to S_{i+1}$ for
+$1\leq i \leq 2$ are two function of class $\displaystyle C^\infty$.  Then
+$\displaystyle (f_2 \circ f_1)^\sharp = f_1^\sharp \circ f_2^\sharp$.
+\end{enumerate}
+\end{prop}
+
+We leave the proof of this proposition to the reader.
+
+If $f:S_1 \to S_2$ is a diffeomorphism of class $\displaystyle C^\infty$
+between two $k$-dimensional smooth manifolds $S_1$ and $S_2$.  Then
+$\displaystyle f^\sharp: H^q(S_2) \to H^q(S_1)$ is a linear isomorphism.
+Therefore $\displaystyle H^q(S_2) \cong H^q(S_1)$.
+
+Our next goal is to compute the $\displaystyle q^{th}$ cohomology modules
+of $\displaystyle \RR^k \setminus \{\VEC{0}\}$ for $0 \leq q \leq k$.
+This will also give us the $\displaystyle q^{th}$ cohomology module of
+$\displaystyle S^{k-1}$ for $0 \leq q \leq k-1$ as we will show shortly.
+
+\begin{defn} \label{defnSmoothHomot}
+Let $S_1$ and $S_2$ be two $k$-dimensional smooth manifolds
+and $f,g:S_1 \to S_2$ be two functions of class
+$\displaystyle C^\infty$.  We say that $f$ and $g$ are
+{\bfseries (smoothly) homotopic}\index{Homotopic Functions}
+if there exists a function $H:S_1 \times [0,1] \to S_2$ of class
+$\displaystyle C^\infty$ such that $H(\VEC{u},0) = f(\VEC{u})$ and
+$H(\VEC{u},1) = g(\VEC{u})$ for all $\VEC{u} \in S_1$.  The function
+$H$ is called an {\bfseries homotopy}\index{Homotopy} between $f$ and $g$.
+\end{defn}
+
+We can reformulate Definition~\ref{defnCtoP} by saying that
+a smooth manifold $S$ is contractible to a point $\tilde{\VEC{u}} \in S$
+if the identity map $\Id:S \to S$ and the map $g:S \to S$
+defined by $g(\VEC{u}) = \tilde{\VEC{u}}$ for all $\VEC{u} \in S$
+are homotopic.
+
+\begin{prop} \label{propfsEgs}
+Suppose that $S_1$ and $S_2$ are two $k$-dimensional smooth manifolds
+and that $f,g:S_1 \to S_2$ are two homotopic functions of class
+$\displaystyle C^\infty$.  Then $\displaystyle f^\sharp = g^\sharp$
+as maps from $\displaystyle H^q(S_2)$ to $\displaystyle H^q(S_1)$.
+\end{prop}
+
+\begin{proof}
+Let $F$ be the map defined in (\ref{defFSItoS}) that
+maps differential $q$-forms on $S_1\times I$ to differential
+$(q-1)$-forms on $S_1$.  Moreover, let $\iota_s:S_1 \to S_1 \times [0,1]$
+for $s \in [0,1]$ be the inclusion defined by
+$\iota_s(\VEC{u}) = (\VEC{u},s)$.
+
+Since $f$ and $g$ are homotopic, there exists a smooth function
+$H:S_1 \times [0,1] \to S_2$ such that
+$f = H\circ \iota_0$ and $g = H \circ \iota_1$.
+
+Given $\omega$, a closed differential $q$-form on $S_2$, we have from
+Proposition~\ref{propi1i0dffd} that
+\begin{align*}
+&g^\ast(\omega) - f^\ast(\omega)
+= (H \circ \iota_1)^\ast(\omega) - (H \circ \iota_0)^\ast(\omega)
+= \iota_1^\ast(H^\ast(\omega)) - \iota_0^\ast(H^\ast(\omega)) \\
+&\qquad = \df{\left(F(H^\ast(\omega))\right)}
++ F\left(\df{(H^\ast(\omega))}\right)
+= \df{\left(F(H^\ast(\omega))\right)} + F\left(H^\ast(\df{\omega})\right)
+= \df{\left(F(H^\ast(\omega))\right)} \ .
+\end{align*}
+Thus $\displaystyle g^\ast(\omega) \sim f^\ast(\omega)$.  it follows that
+$\displaystyle f^\sharp([\omega]) = [f^\ast(\omega)] = [g^\ast(\omega)]
+=g^\sharp([\omega])$.
+\end{proof}
+
+\begin{prop} \label{propHqSkm1cHqRk}
+$\displaystyle H^q(S^{k-1}) \cong H^q(\RR^k \setminus \{\VEC{0}\})$
+for $0 \leq q \leq k$.
+\end{prop}
+
+\begin{proof}
+The inclusion $\displaystyle \iota:S^{k-1} \to \RR^k\setminus \{\VEC{0}\}$
+defined by $\iota(\VEC{u}) = \VEC{u}$ and the retraction
+$\displaystyle \rho:\RR^k\setminus \{\VEC{0}\}$ defined by
+$\displaystyle \rho(\VEC{u}) = \|\VEC{u}\|^{-1} \VEC{u}$ satisfy
+$\displaystyle \rho \circ \iota = \Id : S^{k-1} \to S^{k-1}$.
+However,
+$\displaystyle \iota \circ \rho : \RR^k \setminus \{\VEC{0}\} \to
+\RR^k \setminus \{\VEC{0}\}$ is not the identity but it is homotopic to
+the identity $\displaystyle \Id: \RR^k \setminus \{\VEC{0}\} \to
+\RR^k \setminus \{\VEC{0}\}$.  An homotopy
+$\displaystyle H: (\RR^k \setminus \{\VEC{0}\})\times [0,1] \to
+\RR^k \setminus \{\VEC{0}\}$ between $\iota \circ \rho$
+and $\Id$ is given by
+$H(\VEC{u},t) = t \VEC{u} + (1-t) (\iota\circ \rho)(\VEC{u})$ for all
+$\displaystyle (\VEC{u},t) \in (\RR^k \setminus \{\VEC{0}\})\times [0,1]$.
+It follows from Proposition~\ref{propfsEgs} that
+$\displaystyle (\iota \circ \rho)^\sharp = \Id^\sharp : H^q(\RR^k \setminus
+\{\VEC{0}\}) \to H^q(\RR^k \setminus \{\VEC{0}\})$ for $0 \leq q \leq k$.
+
+Hence,
+$\displaystyle \iota^\sharp \circ \rho^\sharp = (\rho \circ \iota)^\sharp = 
+\Id^\sharp : H^q(S^{k-1}) \to H^q(S^{k-1})$ and
+$\displaystyle \rho^\sharp \circ \iota^\sharp =
+(\iota \circ \rho)^\sharp = \Id^\sharp : H^q(\RR^k \setminus
+\{\VEC{0}\}) \to H^q(\RR^k \setminus \{\VEC{0}\})$ for $0 \leq q \leq k$.
+Thus
+$\displaystyle \rho^\sharp : H^q(S^{k-1}) \to H^q(\RR^k \setminus \{\VEC{0}\})$
+is the inverse of
+$\displaystyle \iota^\sharp : H^q(\RR^k \setminus \{\VEC{0}\}) \to
+H^q(S^{k-1})$.  Therefore $\displaystyle \rho^\sharp$ provides an
+isomorphism between $\displaystyle H^q(S^{k-1})$ and
+$\displaystyle H^q(\RR^k \setminus \{\VEC{0}\})$.
+\end{proof}
+
+The following result follows from Proposition~\ref{H0kdimS} and is
+consistent with the previous proposition.
+
+\begin{cor}
+$\displaystyle H^0(S^{k-1}) \cong H^0(\RR^k \setminus \{\VEC{0}\})
+\cong \RR$.
+\end{cor}
+
+The next result follows directly from Proposition~\ref{propHqSkm1cHqRk}
+because differential $q$-forms on a $(k-1)$-dimensional manifold are null
+if $q>k-1$.
+
+\begin{cor}
+$\displaystyle H^k(\RR^k \setminus \{\VEC{0}\}) \cong H^k(S^{k-1}) = 0$.
+\end{cor}
+
+Obviously, if $S$ is a compact $k$-dimensional smooth manifold, then
+$\displaystyle H^k(S) = H_c^k(S)$.  In particular, if $S$ is a
+compact, connected and oriented $k$-dimensional smooth manifold
+without boundary, then we get from Theorem~\ref{theoHckCR} that
+$\displaystyle H^k(S) = H_c^k(S) \cong \RR$.
+The next result then follows from Proposition~\ref{propHqSkm1cHqRk}.
+
+\begin{cor}
+$\displaystyle H^{k-1}(\RR^k \setminus \{\VEC{0}\} )\cong H^{k-1}(S^{k-1}) 
+\cong \RR$.  
+\end{cor}
+
+To compute $\displaystyle H^q(\RR^k \setminus \{\VEC{0}\}) \cong H^q(S^{k-1})$
+for $0 < q < k-1$, we need to compute
+$\displaystyle H^k(S)$ for $S$ a non-compact, connected and oriented
+$k$-dimensional smooth manifold without boundary.  The proof is
+similar to the proof of Theorem~\ref{theoHckCR}.  However, the fact
+that we are no longer limited to differential forms with compact
+supports complicates the proofs.
+
+Many of the topological results that are presented below could be
+simplified and even skipped if we consider that all our manifolds are
+submanifolds of the metric space $\displaystyle \RR^n$ and if we use
+all the properties of a metric space with a countable dense set.
+However, with just a little bit more work, we can present a general
+theory that may be useful to the reader if they wish to study more
+advanced topics of differential and topological geometry later.
+
+We need the following preliminary information.  
+
+\begin{defn}
+A topological space $S$ is a
+{\bfseries Hausdorff space}\index{Hausdorff Space} if, for every two
+distinct elements $x_1$ and $x_2$ in $S$, there exist disjoint open
+neighbourhoods $U_1$ and $U_2$ of $x_1$ and $x_2$ respectively.
+\end{defn}
+
+All the manifolds that we consider are Hausdorff spaces because they are
+subsets of some Euclidean space $\displaystyle \RR^n$ and their
+topology is induced from the topology on $\displaystyle \RR^n$.
+
+\begin{defn}
+A Hausdorff space $S$ is a {\bfseries Lindelöf space}\index{Lindelöf Space}
+if every open cover of $S$ admit a countable open subcover.
+\end{defn}
+
+Again, every manifold $S$ that we consider is a Lindelöf space.  This
+result follows from the next proposition because $S$ is a subset of
+some Euclidean space $\displaystyle \RR^n$.  Therefore, it admits a
+countable basis.
+
+\begin{prop}
+If $S$ is a Hausdorff space with a countable basis, then $S$ is
+a Lindelöf space.
+\end{prop}
+
+\begin{proof}
+Let $\displaystyle \{B_j\}_{j\in \NN}$  be a countable basis of $S$;
+namely, every open set in $S$ can be expressed as the union of some
+$B_j$.
+
+Suppose that $\displaystyle \{U_\alpha\}_{\alpha\in A}$ is an open
+cover of $S$.  We have that each $U_\alpha$ is the union of some
+$\displaystyle B_j$ for
+$j \in J_\alpha \subset \NN$.  For each set $B_j$ with
+$\displaystyle j \in N = \bigcup_{\alpha\in \alpha} J_\alpha \subset \NN$,
+we associate one of the $U_\alpha$ containing $B_j$, say $U_{\alpha_j}$.
+Since $\displaystyle S = \bigcup_{\alpha \in A} U_\alpha
+= \bigcup_{j \in N} B_j$, we have that
+$\displaystyle \{U_{\alpha_j}\}_{j\in N}$ is a (at most)
+countable open cover of $S$.
+\end{proof}
+
+\begin{defn}
+A Hausdorff space $S$ is a
+{\bfseries locally compact space}\index{Locally Compact Space} if, for
+every element $x$ in $S$, there exists an open neighbourhood $U$
+of $x$ in $S$ such that $\overline{U}$ is compact.
+\end{defn}
+
+Every manifold $S$ is a locally compact space because, for every
+$\VEC{u} \in S$, there exists a local chart $(W,U,\phi)$ such that
+$\VEC{u} \in U$ and $U$ is homeomorphic to
+$\displaystyle W \subset H_k$ which is locally compact.
+
+\begin{prop} \label{topolProp1}
+If $S$ is a locally compact and Lindelöf space, then $S$ is
+{\bfseries $\sigma$-compact}\index{$\sigma$-compact}; namely, $S$ can
+be expressed as the union of at most countably many compact sets.
+\end{prop}
+
+\begin{proof}
+For each $x \in S$, there exists an open set $V_x$ such that
+$\overline{V}_x$ is compact.  The collection
+$\displaystyle \{ V_x\}_{x\in S}$ is an open cover of $S$.  Since $S$
+is a Lindelöf space, there exists a countable open subcover
+$\displaystyle \{ V_{x_i}\}_{i \in \NN}$ of $S$.
+Hence $\displaystyle S = \bigcup_{i\in \NN} \overline{V}_{x_i}$
+where $\overline{V}_{x_i}$ is compact for all $i \in \NN$.
+\end{proof}
+
+An elementary proof of this result for connected and locally compact
+metric spaces is also given in \cite{Sv1}.
+
+\begin{prop}  \label{topolProp2}
+Suppose that $S$ is a locally compact space.  Given any compact set 
+$K$ and open set $U$ of $S$ such that $K \subset U$, there exist an
+open set $V$ such that $K \subset V \subset \overline{V} \subset U$ 
+and $\overline{V}$ is compact.
+\end{prop}
+
+A proof of this proposition can be found in \cite{Du}.
+
+\begin{prop} \label{BjUilocfin}
+Suppose that $\displaystyle \{ B_\tau \}_{\tau \in T}$ is an open cover of
+a manifold $S$.  There exists an atlas
+$\displaystyle \JJ = \{ (W_j,U_j,\phi_j) \}_{j \in \NN}$ on $S$ 
+such that each $U_j$ is a subset of a $B_{\tau_j}$ for some $\tau_j \in T$ and 
+$\displaystyle \{ U_j \}_{j\in \NN}$ is
+{\bfseries locally finite}\index{Locally Finite}; namely, for every
+$\VEC{u} \in S$, there exists an open neighbourhood $V_{\VEC{u}}$ of
+$\VEC{u}$ such that $U_j \cap V_{\VEC{u}} = \emptyset$ for all but at
+most a finite number of $j \in \NN$.
+\end{prop}
+
+\begin{proof}
+Since $S$ is a locally compact and Lindelöf space, we may use
+Proposition~\ref{topolProp1}.  So, we can express $S$ as
+$\displaystyle S = \bigcup_{i\in \NN} K_i$ where the $K_i$ are compact
+sets.
+
+From Proposition~\ref{topolProp2}, there exists an open set $V_0$ such
+that $K_0 \subset V_0 \subset \overline{V}_0 \subset S$ and
+$\overline{V}_0$ is compact.  It follows that $\overline{V_0} \cup K_1$ is 
+a compact set.  Again, we have from Proposition~\ref{topolProp2} that
+there exists an open set $V_1$ such $\overline{V}_0 \cup K_1 \subset
+V_1 \subset \overline{V}_1 \subset S$ and $\overline{V}_1$ is compact.
+In general, given $\overline{V}_{i-1}$ with $i >0$ such that
+$\overline{V}_{i-1}$ is compact, we have that
+$\overline{V}_{i-1} \cup K_i$ is compact.  We again use
+Proposition~\ref{topolProp2} to get an open set $V_i$ such
+$\overline{V}_{i-1} \cup K_i \subset V_i \subset \overline{V}_i \subset S$
+and $\overline{V}_i$ is compact.
+We get a sequence of open sets $V_i$ such that
+$V_1 \subset \overline{V}_1 \subset V_2 \subset \overline{V}_2 \subset
+V_ 3 \subset \ldots$ and the $\overline{V}_i$ are compact sets
+and $K_ i \subset V_i$ for all $i \in \NN$.
+
+Since $\displaystyle S = \bigcup_{i\in \NN} K_i \subset \bigcup_{i\in \NN} V_i
+\subset S$, we get that $\displaystyle S = \bigcup_{i \in \NN} V_i$.
+If we set $V_{-1} = \emptyset$, then we have that 
+$\displaystyle S = \bigcup_{i\in \NN} (\overline{V}_i \setminus V_{i-1})$
+where each $\overline{V}_i \setminus V_{i-1}$ is a compact set because it
+is a closed set of the compact set $\overline{V}_i$.
+
+Given $i \in \NN$ and
+$\displaystyle \VEC{u} \in \overline{V}_i \setminus V_{i-1}$,
+there exists a local chart $(W,U,\phi)$ and a set $B_\tau$ such that
+$\VEC{u} \in U \cap B_\tau$.  Let $V_{-2} = \emptyset$.
+If we set $\displaystyle
+U_{\VEC{u}} = U\cap B_\tau \cap (V_{i+1} \setminus \overline{V}_{i-2})$,
+$\displaystyle W_{\VEC{u}} = \phi^{-1}(U_{\VEC{u}})$ and
+$\phi_{\VEC{u}} = \phi$, we get a local chart
+$(W_{\VEC{u}},U_{\VEC{u}},\phi_{\VEC{u}})$ with
+$\displaystyle \VEC{u} \in U_{\VEC{u}} \subset (V_{i+1} \setminus
+\overline{V}_{i-2})$ and $\displaystyle U_{\VEC{u}} \subset B_\tau$ for
+some $\tau \in T$.
+Repeating this for all $\VEC{x} \in S$, we get an atlas
+$\displaystyle \{(W_{\VEC{u}},U_{\VEC{u}},\phi_{\VEC{u}}) \}_{\VEC{u} \in S}$
+on $S$ such that $\displaystyle
+U_{\VEC{u}} \subset (V_{i+1} \setminus \overline{V}_{i-2})$
+for $\VEC{u} \in \overline{V}_i \setminus V_{i-1}$ and
+$\displaystyle U_{\VEC{u}} \subset B_\tau$ for some $\tau \in T$.
+
+Since $\displaystyle \{U_{\VEC{u}}\}_{\VEC{u} \in \overline{V}_0}$ is
+an open cover of the compact set $\overline{V}_0$, there is a finite
+subcover $\displaystyle \{U_{\VEC{u}_j}\}_{0 \leq j \leq J_0}$
+for some $J_0 \in \NN$.  This yields a finite number of local charts
+$\displaystyle \{ (W_j,U_j,\phi_j) \}_{0 \leq j \leq J_0}$
+such that $\displaystyle \{U_j\}_{0\leq j \leq J_0}$ is an open cover
+of $\overline{V}_0$ and $U_j \subset V_1$ for $1 \leq j \leq J_0$.
+
+Let $I_{-1} = 0$.  Suppose that we have a finite number of local charts\\
+$\displaystyle \{ (W_j,U_j,\phi_j) \}_{J_{m-1}+1 \leq j \leq J_m}$
+for some $J_{i-1} < J_i$ and $i\geq 0$ such that
+$\displaystyle \{ U_j \}_{J_{i-1}+1 \leq j \leq J_i}$
+is an open cover of $\displaystyle \overline{V}_i \setminus V_{i-1}$ and
+$U_j \subset (V_{i+1} \setminus \overline{V}_{i-2})$ for
+$J_{i-1}+1 \leq j \leq J_i$.
+
+Since $\displaystyle \{U_{\VEC{u}}\}_{\VEC{u} \in \overline{V}_{i+1}\setminus V_i}$
+is an open cover of the compact set
+$\displaystyle \overline{V}_{i+1}\setminus V_i$, there is a finite
+subcover $\displaystyle \{U_{\VEC{u}_j}\}_{J_i+1 \leq j \leq J_{i+1}}$
+for some $J_{i+1} \in \NN$.  This yields a finite number of local charts
+$\displaystyle \{ (W_j,U_j,\phi_j) \}_{J_i+1 \leq j \leq J_{i+1}}$
+such that
+$\displaystyle \{ U_j \}_{J_i+1 \leq j \leq J_{i+1}}$
+is an open cover of $\displaystyle \overline{V}_{i+1} \setminus V_i$ and
+$U_j \subset (V_{i+2} \setminus \overline{V}_{i-1})$ for
+$J_i+1 \leq j \leq J_{i+1}$.
+\pdfbox{cohomology/locfinAtl}
+
+By induction, we get the atlas $\JJ = \{ (W_j,U_j,\phi_j) \}_{j \in \NN}$
+that we were looking for.  By construction, we have that
+$U_j$ is a subset of a $B_{\tau_j}$ for some $\tau_j \in T$.
+To show that $\{ U_j \}_{j\in \NN}$ is
+locally finite, we consider $\VEC{u} \in S$.  Let $I_{-3} = 0$.
+We have that $\displaystyle \VEC{u} \in \overline{V}_i \setminus V_{i-1}$ for
+some $i \in \NN$.  If we choose an open neighbourhood
+$\displaystyle V_{\VEC{u}} \subset V_{i+1} \setminus \overline{V}_{i-2}$
+of $\VEC{u}$, then $U_j \cap V_{\VEC{u}} = \emptyset$ for all
+$j \leq J_{i-3}$ and $j > J_{i+2}$.
+\end{proof}
+
+\begin{lemma} \label{locfinIfinnumb}
+Suppose that $\{ U_\alpha \}_{\alpha\in A}$ is a locally finite open
+cover of a topological space $S$.  Given any compact set
+$K \subset S$, there exists an open set $V \supset K$ such that
+$V\cap U_\alpha = \emptyset$ for all but a finite number of $\alpha \in A$.
+\end{lemma}
+
+\begin{proof}
+Since the local cover is locally finite, there exists for   
+each $\VEC{x} \in K$ an open set $V_{\VEC{x}}$ such that
+$U_\alpha \cap V_{\VEC{x}} = \emptyset$ for all but a finite number of
+$U_\alpha$.
+Since $\displaystyle \{ V_{\VEC{x}} \}_{\VEC{x} \in K}$ is an open
+cover of the compact set $K$, there exists a finite subcover
+$\displaystyle \{ V_{\VEC{x}_i} \}_{1 \leq i \leq I}$ of $K$.
+
+Let $\displaystyle V = \bigcup_{1 \leq i \leq I}V_{\VEC{x}_i}$.
+We have that $V$ is an open set such that $K \subset V$ and
+there exists only a finite number of $U_\alpha$ that intersect $V$ because
+a set $U_\alpha$ that intersects $V$ must also intersects one of the
+$V_{\VEC{x}_i}$ with $1 \leq i \leq I$ and there are only a finite
+number of $U_\alpha$ that intersect each $V_{\VEC{x}_i}$.
+\end{proof}
+
+\begin{theorem}
+If $S$ is a non-compact, connected and oriented $k$-dimensional
+smooth manifold without boundary, then $\displaystyle H^k(S) = 0$.
+\end{theorem}
+
+\begin{proof}
+Since $S$ is not compact, there exists an open cover
+$\displaystyle \{B_\tau\}_{\tau\in T}$ of $S$ such that no finite subcover
+can cover $S$.  Using Proposition~\ref{BjUilocfin}, we get an atlas
+$\displaystyle \A = \{ (W_i,U_i,\phi) \}_{i \in \NN}$ on $S$
+such that each $U_i$ is a subset of a $B_{\tau_i}$ for some $\tau_i \in T$ and 
+$\displaystyle \{ U_i \}_{i\in \NN}$ is locally finite.
+
+We have that $\displaystyle \{U_i\}_{i \in \NN}$ is an
+open cover of $S$ with the property that no finite subcover can cover $S$.
+If there were a finite subcover
+$\displaystyle \{U_{i_m} \}_{1 \leq m \leq M}$ of $S$, then
+$\displaystyle \{B_{\tau_{i_m}} \}_{1 \leq m \leq M}$ would be a
+finite subcover of $S$, contradicting our hypothesis.
+
+Let $\displaystyle \{\psi_m\}_{m \in \NNp}$ be a partition of
+unity subordinate to $\A$.  Given a differential $k$-form $\omega$ on
+$S$, we may express $\omega$ as
+$\displaystyle \omega = \sum_{m \in \NNp} \psi_m \omega$.
+Recall that the sum is well define because it is finite on any compact
+subset of $S$.  If we prove for each $\displaystyle m \in \NNp$ that
+there exists a differential $(k-1)$-form of $S$ such that
+$\psi_m \omega = \df{\eta_m}$, then we will have that
+$\displaystyle \omega = \sum_{m \in \NNp} \df{\eta_m} 
+= \df{\Big(\sum_{m \in \NNp} \eta_m\Big)}$.  Hence $[\omega] = [0]$.
+This is what we plan to do.
+
+Suppose that $\omega$ is a differential $k$-form $\omega$ on
+$S$ with compact support in $U_i$ for some $i \in \NN$.
+Since no finite subcover of $\displaystyle \{U_i\}_{i \in \NN}$ can cover
+$S$, we have that $U_i \subsetneqq S$.  Let $U_{i_0} = U_i$.  Since $S$ is
+connected, there is a set $U_{i_1}$ such that 
+$U_{i_0} \cap U_{i_1} \neq \emptyset$.  Given
+$\displaystyle \{ U_{i_m} \}_{0 \leq m \leq M}$ such that
+$U_{i_m} \cap U_{i_{m-1}} \neq \emptyset$ for $1 \leq m \leq M$.
+we can again use the facts that no finite subcover of
+$\displaystyle \{U_i\}_{i \in \NN}$ can cover $S$ and that $S$ is
+connected, to find a set $U_{i_{M+1}}$ such that
+$U_{i_{M+1}} \cap U_{i_M} \neq \emptyset$.  Hence, by induction, we
+get an infinite sequence of sets
+$\displaystyle \{ U_{i_m} \}_{m \in \NN}$ such that
+$U_{i_m} \cap U_{i_{m-1}} \neq \emptyset$ for $m > 0$.
+
+Choose a differential $k$-form $\omega_{i_1}$ with compact support in 
+$U_{i_0} \cap U_{i_1}$.  Since $\omega$ has a compact support in
+$U_{i_0}$, we may proceed as we did in the proof of
+Theorem~\ref{theoHckCR} to get a differential $(k-1)$-form
+$\eta_{i_0}$ with support in $U_{i_0}$ and $b_{i_1} \in \RR$ such that 
+$b_{i_1} \omega_{i_1} - \omega = \df{\eta_{i_0}}$.
+For $m>0$, choose a differential $k$-form $\omega_{i_{m+1}}$ with
+compact support in $U_{i_m} \cap U_{i_{m+1}}$.  Since $\omega_{i_m}$
+has a compact support in $U_{i_m}$, we may again proceed as we did in
+the proof of Theorem~\ref{theoHckCR} to get a differential $(k-1)$-form
+$\eta_{i_m}$ with support in $U_{i_m}$ and $b_{i_{m+1}} \in \RR$ such that 
+$b_{i_{m+1}}\omega_{i_{m+1}} - \omega_{i_m} = \df{\eta_{i_m}}$.
+
+We have that
+\begin{align}
+\omega &= b_{i_1} \omega_{i_1} - \df{\eta_{i_0}} \nonumber \\
+&= b_{i_1} b_{i_2} \omega_{i_2} - b_{i_1}
+\df{\eta_{i_1}} - \df{\eta_{i_0}} \nonumber \\
+&= b_{i_1} b_{i_2} b_{i_3} \omega_{i_3}
+- b_{i_2} b_{i_1} \df{\eta_{i_2}} - b_{i_1} \df{\eta_{i_1}} - \df{\eta_{i_0}}
+\nonumber \\
+&= \quad \ldots \nonumber \\
+&= \left(\prod_{s=1}^m b_{i_s}\right) \omega_{i_m}
+- \left(\prod_{s=1}^{m-1} b_{i_s}\right) \df{\eta_{i_{m-1}}}
+- \left(\prod_{s=1}^{m-2} b_{i_s}\right) \df{\eta_{i_{m-2}}}
+- b_{i_1} \df{\eta_{i_1}} - \df{\eta_{i_0}} \nonumber \\
+&= \left(\prod_{s=1}^m b_{i_s}\right) \omega_{i_m}
++\df{\left( - \left(\prod_{s=1}^{m-1} b_{i_s}\right) \eta_{i_{m-1}}
+- \left(\prod_{s=1}^{m-2} b_{i_s}\right) \eta_{i_{m-2}}
+- b_{i_1} \eta_{i_1} - \eta_{i_0}\right)}   \label{theoHkCzeroEq1}
+\end{align}
+for $m>0$.  Let
+\[
+\eta = -\sum_{m=1}^\infty \left(\prod_{s=1}^m b_{i_s}\right) \eta_{i_m}
+- \eta_{i_0} \ .
+\]
+We first note that this sum is finite on every compact subset $K$ of
+$S$.  We have that $\supp \eta_{i_m} \subset U_{i_m}$ for all $m \in \NN$.
+Since $\displaystyle \{U_i\}_{i \in \NN}$ is a locally finite open cover of
+$S$, we get from Lemma~\ref{locfinIfinnumb} that there exists $M_K \geq 0$
+such that $U_{i_m} \cap K = \emptyset$ for $m>M_K$.  Thus
+$\eta_{i_m}\big|_K = 0$ for $m > M_K$.  We get
+\[
+\eta\big|_K = -\sum_{m=1}^{M_K} \left(\prod_{s=1}^m b_{i_s}\right)
+\eta_{i_m}\big|_K - \eta_{i_0}\big|_K \ .
+\]
+Moreover, since $\supp \omega_{i_m} \subset U_{i_m}$, we get from
+(\ref{theoHkCzeroEq1}) that
+\[
+\omega\big|_K  = \left(\prod_{s=1}^{M_K+1} b_{i_s}\right)
+\underbrace{\omega_{i_{M_K+1}}\big|_K}_{= 0} +\df{\left( \eta\big|_K\right)}
+= \df{\left( \eta\big|_K\right)}
+\]
+Since $S$ is $\sigma$-compact according to
+Proposition~\ref{topolProp1}, we have that
+$\displaystyle S = \bigcup_{i\in \NN} K_i$ where the $K_i$ are compact
+sets.  The previous discussion applied to
+$\displaystyle K = \bigcup_{0 \leq i \leq I} K_i$ for all $I$ shows
+that $\omega = \df{\eta}$.  This completes the proof.
+\end{proof}
+
+\begin{lemma}  \label{lemScStimesR}
+Suppose that $S$ is a $k$-dimensional smooth manifold.  Then
+$\displaystyle H^q(S) \cong H^q(S \times \RR)$.
+\end{lemma}
+
+\begin{proof}
+This proof is similar to the proof of Proposition~\ref{propHqSkm1cHqRk}.
+
+Consider the injection $\iota : S \to S \times \{0\}$ defined by
+$\iota(\VEC{u}) = (\VEC{u}, 0)$ and the restriction
+$\rho:S \times \RR \to S$ defined by $\rho(\VEC{u},x) = \VEC{u}$.
+
+We have that $\rho \circ \iota = \Id: S \to S$.  We also have that
+$\iota \circ \rho : S \times \RR \to S \times \RR$ and
+$\Id : S \times \RR \to S \times \RR$ are homotopic.  An homotopy
+$H: (S \times \RR) \times [0,1] \to S \times \RR$ between
+$\iota \circ \rho$ and $\Id$ is given by
+$H\big((\VEC{u},x),t\big) = t (\VEC{u},x) + (1-t)
+(\iota\circ \rho)(\VEC{u},x))$ for all
+$(\VEC{u},x) \in S \times \RR$.  It follows from 
+Proposition~\ref{propfsEgs} that
+$\displaystyle (\iota \circ \rho)^\sharp = \Id^\sharp : H^q(S\times \RR)
+\to H^q(S\times \RR)$.
+
+Hence,
+$\displaystyle \iota^\sharp \circ \rho^\sharp = (\rho \circ \iota)^\sharp = 
+\Id^\sharp : H^q(S) \to H^q(S)$ and
+$\displaystyle \rho^\sharp \circ \iota^\sharp =
+(\iota \circ \rho)^\sharp = \Id^\sharp : H^q(S\times \RR) \to H^q(S\times \RR)$
+for $0 \leq q \leq k$.
+Thus
+$\displaystyle \rho^\sharp : H^q(S) \to H^q(S \times \RR)$
+is the inverse of
+$\displaystyle \iota^\sharp : H^q(S\times \RR) \to H^q(S)$.
+Therefore $\displaystyle \rho^\sharp$ provides an
+isomorphism between $\displaystyle H^q(S)$ and
+$\displaystyle H^q(S \times \RR)$.
+\end{proof}
+
+We are now ready to complete the computations of
+$\displaystyle H^q(\RR^k \setminus \{\VEC{0}\})$ for the missing cases
+of $0 < q < k-1$.
+
+\begin{prop}
+$\displaystyle H^q(\RR^k \setminus \{\VEC{0}\}) \cong H^q(S^{k-1}) = 0$
+for $0 < q < k-1$.
+\end{prop}
+
+\begin{proof}
+We prove by induction on $k >2$ that
+$\displaystyle H^q(\RR^k\setminus \{\VEC{0}\}) = 0$ for $0 < q < k-1$.
+
+\stage{i}
+We first prove the hypothesis of induction for $k=3$.
+Suppose that $\omega$ is a differential $1$-form on
+$\displaystyle \RR^3 \setminus \{\VEC{0}\} = R_+ \cup R_-$ where
+$\displaystyle R_+ = \RR^3 \setminus \{ (0,0,x_3) : x_3 \geq 0 \}$ and
+$\displaystyle R_- = \RR^3 \setminus \{ (0,0,x_3) : x_3 \leq 0 \}$.
+Since $R_+$ and $R_-$ are star-shaped (one may use $(0,0,-1)$
+as the centre of the star for $R_+$ and $(0,0,1)$ as the
+centre of the star for $R_-$), we get from Poincaré Lemma,
+Theorem~\ref{closedexact}, that there exist two differential
+$0$-forms $\eta_+$ and $\eta_-$ on $R_+$ and $R_-$ respectively such that
+$\omega = \df{\eta_+}$ on $R_+$ and $\omega = \df{\eta_-}$ on $R_-$.
+Since $\eta_+$ and $\eta_-$ are functions such that
+$\df{(\eta_+-\eta_-)} = \df{\eta_+}- \df{\eta_-} = 0$ on
+$R_+ \cap R_-$, we have that $\eta_+ -\eta_- = c$, a constant, on
+$R_+ \cap R_-$.  Let
+\[
+\eta(\VEC{u}) =
+\begin{cases}
+\eta_+(\VEC{u}) - c & \quad \text{if} \ \VEC{u} \in R_+ \\
+\eta_-(\VEC{u}) & \quad \text{if} \ \VEC{u} \in R_-\setminus R_+
+\end{cases}
+\]
+This is a well defined continuous function on
+$\displaystyle \RR^3 \setminus \{\VEC{0}\} = R_+ \cup R_-$ because
+$\eta_+(\VEC{u}) - c = \eta_-(\VEC{u})$ for $\VEC{u} \in R_-\cap R_+$.
+We have that $\df{\eta} = \omega$ on
+$\displaystyle \RR^3 \setminus \{\VEC{0}\}$.  Thus $[\omega] = [0]$ in
+$\displaystyle H^1(\RR^3 \setminus \{\VEC{0}\})$.
+This proves that  $\displaystyle H^q(\RR^3 \setminus \{\VEC{0}\}) = 0$
+for $0 < q < 2$.
+
+\stage{ii} We assume that the hypothesis of induction is true for
+$k=j-1$ with $j>3$; namely,
+$\displaystyle H^q(\RR^{j-1}\setminus \{\VEC{0}\}) = 0$ for $0 < q < j-2$.
+
+\stage{iii} We now prove that the hypothesis of induction is true for $k=j$.
+Let\\
+$I_+ = \{ (0,\ldots,0,x_j) \in \RR^j : x_j \geq 0 \}$ and
+$I_- = \{ (0,\ldots,0,x_j) \in \RR^j : x_j \leq 0 \}$.
+Suppose that $\omega$ is a differential $1$-form on
+$\displaystyle \RR^j \setminus \{\VEC{0}\} = R_+ \cup R_-$ where
+$\displaystyle R_+ = \RR^j \setminus I_+$ and
+$\displaystyle R_- = \RR^j \setminus I_-$.
+As in (i), since $R_+$ and $R_-$ are star-shaped, we get from Poincaré Lemma,
+Theorem~\ref{closedexact}, that there exist two differential
+$0$-forms $\eta_+$ and $\eta_-$ on $R_+$ and $R_-$ respectively such that
+$\omega = \df{\eta_+}$ on $R_+$ and $\omega = \df{\eta_-}$ on $R_-$.
+Since $\eta_+$ and $\eta_-$ are functions such that
+$\df{(\eta_+-\eta_-)} = \df{\eta_+}- \df{\eta_-} = 0$ on
+$R_+ \cap R_-$, we have that $\eta_+ -\eta_- = c$, a constant, on
+$R_+ \cap R_-$.  Let
+\[
+\eta(\VEC{u}) =
+\begin{cases}
+\eta_+(\VEC{u}) - c & \quad \text{if} \ \VEC{u} \in R_+ \\
+\eta_-(\VEC{u}) & \quad \text{if} \ \VEC{u} \in R_-\setminus R_+
+\end{cases}
+\]
+This is a well defined continuous function on
+$\displaystyle \RR^j \setminus \{\VEC{0}\} = R_+ \cup R_-$ because
+$\eta_+(\VEC{u}) - c = \eta_-(\VEC{u})$ for $\VEC{u} \in R_-\cap R_+$.
+We have that $\df{\eta} = \omega$ on
+$\displaystyle \RR^j \setminus \{\VEC{0}\}$.  Thus $[\omega] = [0]$ in
+$\displaystyle H^1(\RR^j \setminus \{\VEC{0}\})$.
+This proves that  $\displaystyle H^1(\RR^j \setminus \{\VEC{0}\}) = 0$.
+
+Suppose that $\omega$ is a differential $q$-form on
+$\displaystyle \RR^j \setminus \{\VEC{0}\} = R_+ \cup R_-$ with $1<q<j-1$.
+Again, we get from Poincaré Lemma that there exist two
+differential $(q-1)$-form $\eta_+$ and $\eta_-$ on $R_+$ and $R_-$
+respectively such that $\omega = \df{\eta_+}$ on $R_+$ and
+$\omega = \df{\eta_-}$ on $R_-$.
+We have that
+$\df{(\eta_+-\eta_-)} = \df{\eta_+}- \df{\eta_-} = 0$ on
+$\displaystyle R_+ \cap R_- = \{\VEC{x} \in \RR^j : x_j = 0 \}
+= (\RR^{j-1} \setminus \{\VEC{0}\}) \times \RR$.
+However, we get from Lemma~\ref{lemScStimesR} and our hypothesis of induction
+that $\displaystyle H^{q-1}((\RR^{j-1} \setminus \{\VEC{0}\}) \times \RR)
+\cong H^{q-1}(\RR^{j-1} \setminus \{\VEC{0}\}) = 0$
+for $1<q<j-1$.  Therefore, there exists a differential $(q-2)$-form
+$\mu$ on $R_+ \cap R_-$ such that
+$\eta_+-\eta_- = \df{\mu}$ on $R_+ \cap R_-$.
+
+Let $\{ \psi_j \}_{j\in \NNp}$ be a partition of unity subordinate to the
+open cover $\{ R_+,R_-\}$ of $\displaystyle \RR^j\setminus \{\VEC{0}\}$,
+and let $\displaystyle \psi_+ = \sum_{\supp \psi_j \subset R_+} \psi_j$ and
+$\displaystyle \psi_- = \sum_{\supp \psi_j \subset R_-} \psi_j$.  Note
+that the two sums are finite on compact sets according to
+Proposition~\ref{cov4}.  We have that
+$\psi_+$ and $\psi_-$ are two functions of class $\displaystyle C^\infty$
+such that $\supp \psi_+ \subset R_+$ and $\supp \psi_- \subset R_-$.
+Let
+\[
+\tilde{\mu}_-(\VEC{u}) = \begin{cases}
+\psi_+(\VEC{u}) \mu(\VEC{u}) &\quad \text{if} \ \VEC{u} \in R_+\cap R_- \\
+0 &\displaystyle
+\quad \text{if} \ \VEC{u} \in I_+
+\end{cases}
+\]
+and
+\[
+\tilde{\mu}_+(\VEC{u}) = \begin{cases}
+\psi_-(\VEC{u}) \mu(\VEC{u}) &\quad \text{if} \ \VEC{u} \in R_+\cap R_- \\
+0 &\displaystyle
+\quad \text{if} \ \VEC{u} \in I_-
+\end{cases}
+\]
+By construction, $\tilde{\mu}_-$ is a differentiable $(q-2)$-form on
+$R_-$ because $\supp \tilde{\mu}_- \cap I_+ = \emptyset$.
+Similarly, $\tilde{\mu}_+$ is a differentiable $(q-2)$-form on $R_+$
+because $\supp \tilde{\mu}_+ \cap I_- = \emptyset$.
+
+Since we have on $R_+ \cap R_-$ that
+\begin{align*}
+\eta_+ - \df{\tilde{\mu}_+}
+&= \eta_+ - \psi_- \df{\mu} - \df{\psi_-}\wedge \mu
+= \eta_+ - (1- \psi_+) \df{\mu} - \df{(1-\psi_+)}\wedge \mu \\
+&= \eta_+ - \df{\mu} - \psi_+ \df{\mu} - \df{\psi_+}\wedge \mu
+= \eta_+ - \df{\mu} - \df{\tilde{\mu}_-}
+= \eta_- - \df{\tilde{\mu}_-} \ ,
+\end{align*}
+we may define the following differential $(q-1)$-form on
+$\displaystyle \RR^j \setminus \{\VEC{0}\}$.
+\[
+\eta(\VEC{u}) =
+\begin{cases}
+\eta_+(\VEC{u}) - \df{\tilde{\mu}_+}(\VEC{u}) & \quad \text{if} \
+\VEC{u} \in R_+ \\
+\eta_-(\VEC{u}) - \df{\tilde{\mu}_-}(\VEC{u}) & \quad \text{if} \
+\VEC{u} \in R_-\setminus R_+ 
+\end{cases}
+\]
+We then have that $\df{\mu} = \df{(\eta_+ - \df{\tilde{\mu}_+})}
+= \df{\eta_+} = \omega$ on $R_+$ and
+$\df{\mu} = \df{(\eta_- - \df{\tilde{\mu}_-})}
+= \df{\eta_-} = \omega$ on $R_-$.  Thus $[\omega] = [0]$ in
+$\displaystyle H^q(\RR^j \setminus \{\VEC{0}\}$.  This proves 
+that $\displaystyle H^q(\RR^j \setminus \{\VEC{0}\}) = 0$.
+\end{proof}
+
+We are now in a position to prove Theorem~\ref{thrmHqRkE0lk}
+
+\begin{proof}[Proof (of Theorem~\ref{thrmHqRkE0lk})]
+\stage{i} We first compute $\displaystyle H^0_c(\RR^k)$.  
+Let $\displaystyle f:\RR^k \to \RR$ be smooth function.  We can proceed
+as in the proof of Proposition~\ref{H0kdimS} to show that $f$ is
+constant on $\displaystyle \RR^k$.  Namely, we have that
+$\displaystyle \df{f} = \sum_{i=1}^k \pdydx{f}{x_i} \df{x_i} = 0$ on
+$\displaystyle \RR^k$ implies $\displaystyle \pdydx{f}{x_i} =0$ for
+$1\leq i \leq k$ on $\displaystyle \RR^k$.  Thus $f$ is constant.  But
+since $f$ has a compact support, we must have that $f = 0$ on
+$\displaystyle \RR^k$.  Thus $\displaystyle H_c^0(\RR^k) = 0$.
+
+\stage{ii} We compute $\displaystyle H^1_c(\RR^k)$.  
+Suppose that $\omega$ is a differential $1$-form with compact support
+on $\displaystyle \RR^k$.  We have from Proposition~\ref{propDeEo} or
+Poincaré Lemma (Theorem~\ref{closedexact} or
+Theorem~\ref{closedexactCntrct}) that
+there exists a differential $0$-form $f$ on $\displaystyle \RR^k$ such that
+$\omega = \df{f}$.
+
+Since $\omega$ has a compact support, there exists $r>0$ such that
+$\supp \omega \subset B_r(\VEC{0})$.  It follows from $\df{f} = \omega = 0$ on 
+$\displaystyle \RR^k \setminus B_r(\VEC{0})$ that
+$f$ is constant on $\displaystyle \RR^k \setminus B_r(\VEC{0})$.
+Suppose that $f(\VEC{x}) = c$ for
+$\displaystyle \VEC{x} \in \RR^k \setminus B_r(\VEC{0})$.
+Then $f -c$ is a differential $0$-form on $\displaystyle \RR^k$ with
+compact support in $B_r(\VEC{0})$ such that $\df{(f-c)} = \df{f} = \omega$.
+Thus, $\omega \sim 0$ and we obtain that $[\omega] = [0]$ in $\displaystyle H^1_c(\RR^k)$.
+Since $\omega$ is an arbitrary $1$-form with compact support, we
+get that $\displaystyle H^1_c(\RR^k) = 0$.
+
+\stage{iii} We now assume that $1 < q <k$.  Suppose that $\omega$ is a
+differential $q$-form with compact support on $\displaystyle \RR^k$.
+We have from Proposition~\ref{propDeEo} or Poincaré Lemma
+(Theorem~\ref{closedexact} or Theorem~\ref{closedexactCntrct}) that
+there exists a differential $(q-1)$-form $\eta$ on
+$\displaystyle \RR^k$ such that $\omega = \df{\eta}$.
+
+Since $\omega$ has a compact support, there exists $r>0$ such that
+$\supp \omega \subset B_r(\VEC{0})$.  Since
+$\displaystyle \RR^k \setminus \overline{B_r(\VEC{0})}$ is diffeomorphic to
+$\displaystyle \RR^k \setminus \{\VEC{0}\}$ \footnote{A diffeomorphism
+is given by $\displaystyle g:\RR^k \setminus \overline{B_r(\VEC{0})} \to
+\RR^k \setminus \{\VEC{0}\}$ defined by
+$\displaystyle g(\VEC{x}) = \VEC{x} - r\|\VEC{x}\|^{-1} \VEC{x}$.},
+we get from the previous proposition that
+$\displaystyle H^{q-1}\big(\RR^k \setminus \overline{B_r(\VEC{0})}\,\big) \cong
+H^{q-1}(\RR^k \setminus \{\VEC{0}\}) \cong 0$ (see comments after
+Proposition~\ref{propFsharpP}).  Thus, there exists a differential
+$(q-2)$-form $\mu$ on $\displaystyle \RR^k \setminus \overline{B_r(\VEC{0})}$
+such that $\eta = \df{\mu}$
+
+Choose a function $\displaystyle \psi:\RR^k \to \RR$ of class
+$\displaystyle C^\infty$
+such that $\psi(\VEC{x}) = 0$ for $\VEC{x} \in B_{5r/4}(\VEC{0})$ and
+$\psi(\VEC{x}) = 1$ for
+$\displaystyle \VEC{x} \in \RR^k \setminus B_{2r}(\VEC{0})$.
+Let $\tilde{\mu}$ be the differential $(q-2)$-form on
+$\displaystyle \RR^k$ defined by
+\[
+\tilde{\mu}(\VEC{x}) = \begin{cases}
+\psi(\VEC{x}) \mu(\VEC{x}) & \quad \text{if} \ \VEC{x} \in \RR^k
+\setminus \overline{B_r(\VEC{0})} \\
+0 & \quad \text{if} \ \VEC{x} \in \overline{B_r(\VEC{0})}
+\end{cases}
+\]
+We have that $\supp (\eta - \df{\tilde{\mu}}) \subset B_{2r}(\VEC{0})$ because
+$\eta - \df{\tilde{\mu}} = \eta - \df{\mu} = 0$ on
+$\displaystyle \RR^k \setminus B_{2r}(\VEC{0})$.  Thus 
+$\eta - \df{\tilde{\mu}}$ is a differential $(q-1)$-form with
+compact support on $\displaystyle \RR^k$.  Moreover,
+$\df{(\eta - \df{\tilde{\mu}})} = \df{\eta} = \omega$.
+Hence, $\omega \sim 0$ and we get that $[\omega] = [0]$ in $\displaystyle H^q_c(\RR^k)$.
+Since $\omega$ is an arbitrary $q$-form with compact support, we
+conclude that $\displaystyle H^q_c(\RR^k) = 0$.
+\end{proof}
+
+\subsection{Mayer-Vietoris Argument} \label{subsectMVarg}
+
+The Mayer-Vietoris argument refers to a standard technique used in
+algebraic topology to compute the homology modules of some manifolds.
+We will have more to say on this technique in
+Section~\ref{sectSingHom} on singular homology. As the
+reader will realize in the discussion below, we have kind
+of used this technique in our presentation of cohomology.
+We will use Mayer-Vietoris argument to compute the $\displaystyle q^{th}$ 
+cohomology module of the sphere $\displaystyle S^k$ from scratch.
+
+Let $\displaystyle S_n^{k-1} = S^{k-1}\setminus \{-\VEC{e}_k\}$ and
+$\displaystyle S_s^{k-1} = S^{k-1}\setminus \{\VEC{e}_k\}$ be,
+respectively, the sphere in $\displaystyle \RR^k$ minus the
+``south pole'' and the sphere in $\displaystyle \RR^k$ minus the
+``north pole''.
+
+The following information about $\displaystyle S_n^{k-1}$ and
+$\displaystyle S_s^{k-1}$ will be useful later.
+
+\begin{lemma} \label{lemSnsContr}
+$\displaystyle S_n^{k-1}$ and $\displaystyle S_s^{k-1}$ are smoothly
+contractible to a point.
+\end{lemma}
+
+\begin{proof}
+We prove that $\displaystyle S_n^{k-1}$ is smoothly
+contractible to $\VEC{e}_k$ and leave to the reader the task of
+proving that $\displaystyle S_s^{k-1}$ is smoothly
+contractible to $-\VEC{e}_k$.
+
+Let $\displaystyle p:S_n^{k-1} \to \RR^{k-1}$ be the stereographic
+projection defined in the following figure.
+\pdfbox{cohomology/stereoP}
+We have represented $\displaystyle \RR^{k-1}$ as the classical tangent
+plane $\VEC{e}_k + \{ (x_1,x_2, \ldots, x_{k-1},0) : x_i \in \RR \
+\text{and}\ 1 \leq i \leq k-1 \}$ to the sphere $\displaystyle
+S^{k-1}$ at $\VEC{e}_k$.  In particular, the origin in $\displaystyle
+\RR^{k-1}$ is associated to $\VEC{e}_k$ in the tangent plane.
+
+Let $\displaystyle H:S^{k-1}_n \times [0,1] \to S^{k-1}_n$ be the
+map defined by $\displaystyle H(\VEC{u},t) = p^{-1}(t\,p(\VEC{u}))$ for
+$\displaystyle (\VEC{u},t) \in S^{k-1} \times [0,1]$.  $H$ is a smooth
+function such that $H(\VEC{u},0) = \VEC{e}_k$ and
+$H(\VEC{u},1) = \VEC{u}$ for all $\displaystyle \VEC{u} \in S^{k-1}_n$.
+\end{proof}
+
+\begin{prop}  \label{propHqSeHqSns}
+$\displaystyle H^q(S^{k-1}) = H^q(S^{k-1}_n \cup S^{k-1}_s)
+= H^{q-1}(S^{k-1}_n \cap S^{k-1}_s)$ for $q>1$.  
+\end{prop}
+
+\begin{proof}
+The goal is to build a linear isomorphism between
+$\displaystyle H^q(S^{k-1}_n \cup S^{k-1}_s)$ and
+$\displaystyle H^{q-1}(S^{k-1}_n \cap S^{k-1}_s)$.
+
+\stage{i} We first define a function that maps closed differential
+$q$-form on $\displaystyle S^{k-1}_n \cup S^{k-1}_s$ to closed 
+differential $(q-1)$-form on $\displaystyle S^{k-1}_n \cap S^{k-1}_s$.
+
+Let $\omega$ be a closed differential $q$-form on
+$\displaystyle S^{k-1}_n \cup S^{k-1}_s$.  Since
+$\displaystyle S^{k-1}_n$ and $\displaystyle S^{k-1}_s$ are smoothly
+contractible to a point according to Lemma~\ref{lemSnsContr}, it
+follows from Poincaré lemma, Theorem~\ref{closedexactCntrct}, that
+there exist a differential $(q-1)$-form $\eta_n$ on
+$\displaystyle S^{k-1}_n$ such that $\omega = \df{\eta_n}$ and a
+differential $(q-1)$-form $\eta_s$ on $\displaystyle S^{k-1}_s$ such
+that $\omega = \df{\eta_s}$.
+
+Let $\eta = \eta_n - \eta_s$.  we have that $\eta$ is a closed
+differential $(q-1)$-form on $\displaystyle S^{k-1}_n \cap S^{k-1}_s$
+because $\df{\eta} = \df{\eta_n} - \df{\eta_s} = 0$ on
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$.
+
+We now prove that the map $\displaystyle F: H^q(S^{k-1}_n \cup S^{k-1}_s)
+\to H^{q-1}(S^{k-1}_n \cap S^{k-1}_s)$ defined by $F([\omega]) = [\eta]$
+is well defined.
+
+We first note that $[\eta]$ is independent of the choice of $\eta_n$
+and $\eta_s$.  If $\tilde{\eta}_n$ and $\tilde{\eta}_s$ are two other
+differential $(q-1)$-forms on $\displaystyle S^{k-1}_n$ and
+$\displaystyle S^{k-1}_s$ respectively such that
+$\omega = \df{\tilde{\eta}_n}$ on $\displaystyle S^{k-1}_n$ and
+$\omega = \df{\tilde{\eta}_s}$ on $\displaystyle S^{k-1}_s$.
+Then $\df{(\eta_n - \tilde{\eta}_n)} = \df{\eta_n} - \df{\tilde{\eta}_n} = 0$
+on $\displaystyle S^{k-1}_n$.  It follows from Poincaré lemma that
+there exists a differential $(q-2)$-form $\mu_n$ on $\displaystyle S^{k-1}_n$
+such that $\eta_n - \tilde{\eta}_n = \df{\mu_n}$.  Similarly,
+there exists a differential $(q-2)$-form $\mu_s$ on $\displaystyle S^{k-1}_s$
+such that $\eta_s - \tilde{\eta}_s = \df{\mu_s}$.  Thus
+$(\eta_n - \eta_s) -(\tilde{\eta}_n - \tilde{\eta}_s) 
+= \df{(\mu_n - \mu_s)}$ on $\displaystyle S^{k-1}_n \cap S^{k-1}_s$.
+Hence $\eta_n - \eta_s \sim \tilde{\eta}_n - \tilde{\eta}_s$.
+
+We also have that $[\eta]$ is independent of the chosen representative
+of the cohomology class $[\omega]$.  Suppose that
+$\tilde{\omega} \sim \omega$.  Then there exists a differential
+$(q-1)$-form $\mu$ on $\displaystyle S^{k-1}$ such that
+$\displaystyle \tilde{\omega} = \omega + \df{\mu}$.
+Hence, the differential $(q-1)$-form $\eta_n+\mu$ on
+$\displaystyle S^{k-1}_n$ is such that $\tilde{\omega} = \df{(\eta_n+\mu)}$ and
+the differential $(q-1)$-form $\eta_s+\mu$ on
+$\displaystyle S^{k-1}_s$ is such that $\tilde{\omega} = \df{(\eta_s+\mu)}$.
+Thus, according to our procedure to define $F$, the closed differential
+$q$-form $\tilde{\omega}$ yields $(\eta_n + \mu) - (\eta_s + \mu) =
+\eta_n - \eta_s$.
+
+\stage{ii} We define a function that maps closed
+differential $(q-1)$-form on $\displaystyle S^{k-1}_n \cap S^{k-1}_s$
+to closed differential $q$-form on $\displaystyle S^{k-1}_n \cup S^{k-1}_s$.
+
+Let $\{ \psi_n, \psi_s\}$ be a partition of unity subordinate to the
+open cover $\displaystyle \{ S^{k-1}_n, S^{k-1}_s\}$ of
+$\displaystyle S^{k-1}$ such that
+$\displaystyle \supp \psi_n \subset S^{k-1}_n$ and
+$\displaystyle \supp \psi_s \subset S^{k-1}_s$.
+Given a closed differential $(q-1)$-form $\eta$ on
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$, we define two closed
+differential $(q-1)$-form $\eta_n$ and $\eta_s$ on $\displaystyle S^{k-1}_n$
+and $\displaystyle S^{k-1}_s$ respectively as it follows.
+\[
+\eta_n(\VEC{u}) = \begin{cases}
+\psi_s(\VEC{u}) \eta(\VEC{u}) &
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \setminus
+\{\VEC{e}_k \} \\
+0 &\quad \text{if} \ \VEC{u} = \VEC{e}_k
+\end{cases}
+\]
+and
+\[
+\eta_s(\VEC{u}) = \begin{cases}
+-\psi_n(\VEC{u}) \eta(\VEC{u}) &
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_s \setminus
+\{-\VEC{e}_k \} \\
+0 &\quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+These two differential $(q-1)$-forms are well defined and smooth because
+$\psi_s$ is null in a neighbourhood of $\VEC{e}_k$ since
+its compact support is in $\displaystyle S^{k-1}_s$ and
+$\psi_n$ is null in a neighbourhood of $-\VEC{e}_k$ since
+its compact support is in $\displaystyle S^{k-1}_n$.
+We define a differential $q$-form $\omega$ on $\displaystyle S^{k-1}$
+as it follows.
+\[
+\omega(\VEC{u}) = \begin{cases}
+\df{\eta_n}(\VEC{u}) & \displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \\
+\df{\eta_s}(\VEC{u}) & \quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+This is a smooth differential $q$-form on
+$\displaystyle S^{k-1}$ because
+$\df{\eta_n} - \df{\eta_s} = \df{(\eta_n + \eta_s)} = \df{\eta} = 0$
+on $\displaystyle S^{k-1}_n \cap S^{k-1}_s$.  It is obviously closed
+because $\df{\,\omega} = \df[2]{\eta_n} = 0$ on $\displaystyle S^{k-1}_n$
+and $\df{\,\omega} = -\df[2]{\eta_s} = 0$ on $\displaystyle S^{k-1}_s$.
+
+We prove that the map $\displaystyle G: H^{q-1}(S^{k-1}_n \cap S^{k-1}_s)
+\to H^q(S^{k-1}_n \cup S^{k-1}_s)$ defined by $G([\eta]) = [\omega]$
+is well defined.
+
+Suppose that $\tilde{\eta}$ is another closed differential $(q-1)$-form on
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$ such that $\eta \sim \tilde{\eta}$.
+We then have that $\tilde{\eta} = \eta + \df{\tilde{\mu}}$ for some
+differential $(q-2)$-form $\tilde{\mu}$ on
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$.  We follow the procedure
+describe above.  We set
+\[
+\tilde{\eta}_n(\VEC{u}) = \begin{cases}
+\psi_s(\VEC{u}) \eta(\VEC{u}) + \psi_s(\VEC{u}) \df{\tilde{\mu}} &
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \setminus
+\{\VEC{e}_k \} \\
+0 &\quad \text{if} \ \VEC{u} = \VEC{e}_k
+\end{cases}
+\]
+and
+\[
+\tilde{\eta}_s(\VEC{u}) = \begin{cases}
+-\psi_n(\VEC{u}) \eta(\VEC{u}) - \psi_n(\VEC{u}) \df{\tilde{\mu}}&
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_s \setminus
+\{-\VEC{e}_k \} \\
+0 &\quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+to get the differential $q$-form on $\displaystyle S^{k-1}$ defined by
+\[
+\tilde{\omega}(\VEC{u}) = \begin{cases}
+\df{\tilde{\eta}_n}(\VEC{u})
+& \displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \\
+\df{\tilde{\eta}_s}(\VEC{u}) & \quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+Let $\tilde{\mu}_n$ be the differential $(q-2)$-form on 
+$\displaystyle S^{k-1}_n$ defined by
+\[
+\tilde{\mu}_n(\VEC{u}) = \begin{cases}
+\psi_s(\VEC{u}) \tilde{\mu}(\VEC{u}) &
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \setminus \{\VEC{e}_k\} \\
+0 &\quad \text{if} \ \VEC{u} = \VEC{e}_k
+\end{cases}
+\]
+and $\tilde{\mu}_s$ be the differential $(q-2)$-form on 
+$\displaystyle S^{k-1}_s$ defined by
+\[
+\tilde{\mu}_s(\VEC{u}) = \begin{cases}
+-\psi_n(\VEC{u}) \tilde{\mu}(\VEC{u}) &
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_s \setminus
+\{-\VEC{e}_k\} \\
+0 &\quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+Since $\psi_s\tilde{\mu} = -\psi_n \tilde{\mu}$ on
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$, we may define a
+differential $(q-2)$-form $\mu$ on $\displaystyle S^{k-1}$ by
+\[
+\mu(\VEC{u}) = \begin{cases}
+\tilde{\mu}_n(\VEC{u}) & \displaystyle \quad \text{if} \ \VEC{u} \in
+S^{k-1}_n \setminus \{-\VEC{e}_k\} \\
+\tilde{\mu}_s(\VEC{u}) &\quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+We have that
+$\tilde{\omega} = \omega + \df{\tilde{\mu}}$ because
+$\tilde{\omega} - \omega = \df{\tilde{\eta}_n}$ on 
+$\displaystyle S^{k-1}_n$ and
+$\tilde{\omega} - \omega = \df{\tilde{\eta}_s}$ on 
+$\displaystyle S^{k-1}_s$.  Thus $\tilde{\omega} \sim \omega$ on
+$\displaystyle S^{k-1}$.
+
+\stage{iii}  We have that $F = G^{-1}$.  It is follows directly from
+the definitions of $F$ and $G$ that
+$\displaystyle F\circ G = \Id: H^{q-1}(S^{k-1}_n \cap S^{k-1}_s) \to 
+H^{q-1}(S^{k-1}_n \cap S^{k-1}_s)$.  To prove that 
+$\displaystyle G\circ F = \Id: H^q(S^{k-1}_n \cup S^{k-1}_s) \to 
+H^q(S^{k-1}_n \cup S^{k-1}_s)$, we consider a differential $q$-form
+$\omega$ on $\displaystyle H^q(S^{k-1}_n \cup S^{k-1}_s)$.
+
+According to the definition of $F$, starting with $\omega$, we get a
+differential $(q-1)$-form $\eta_n$ on $\displaystyle S^{k-1}_n$ such
+that $\omega = \df{\eta_n}$ and a differential $(q-1)$-form $\eta_s$
+on $\displaystyle S^{k-1}_s$ such that $\omega = \df{\eta_s}$, and set
+$\eta = \eta_n - \eta_s$.  Thus $F([\omega]) = [\eta]$.
+
+According to the definition of $G$, starting with $\eta$, we first
+define two differential $(q-1)$-form $\tilde{\eta}_n$ and
+$\tilde{\eta}_s$ on $\displaystyle S^{k-1}_n$ and $\displaystyle S^{k-1}_s$ by
+\[
+\tilde{\eta}_n(\VEC{u}) = \begin{cases}
+\psi_s(\VEC{u}) \eta(\VEC{u}) &
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \setminus
+\{\VEC{e}_k \} \\
+0 &\quad \text{if} \ \VEC{u} = \VEC{e}_k
+\end{cases}
+\]
+and
+\[
+\tilde{\eta}_s(\VEC{u}) = \begin{cases}
+-\psi_n(\VEC{u}) \eta(\VEC{u}) &
+\displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_s \setminus
+\{-\VEC{e}_k \} \\
+0 &\quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+We then define a differential $q$-form $\omega$ on $\displaystyle S^{k-1}$ by
+\[
+\tilde{\omega}(\VEC{u}) = \begin{cases} \df{\tilde{\eta}_n}(\VEC{u})
+& \displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \\
+\df{\tilde{\eta}_s}(\VEC{u}) & \quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+Since $\eta_s + \psi_n\eta = \eta_n - \psi_s\eta$ on
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$, we may define the
+differential $(q-1)$-form $\mu$ on $\displaystyle S^{k-1}$ by
+\[
+\mu(\VEC{u}) = \begin{cases}
+\eta_s(\VEC{u}) + \psi_n(\VEC{u})\eta(\VEC{u})
+& \displaystyle \quad \text{if} \ \VEC{u} \in S^{k-1}_n \\
+\eta_n(\VEC{u}) - \psi_s(\VEC{u})\eta(\VEC{u})
+& \quad \text{if} \ \VEC{u} = -\VEC{e}_k
+\end{cases}
+\]
+We have that $\tilde{\omega} = \omega - \df{\mu}$ on
+$\displaystyle S^{k-1}$ because
+$\tilde{\omega} = \df{(\psi_s \eta)} = \df{(\eta - \psi_n\eta)}
+= \df{(\eta_n - \eta_s - \psi_n\eta)}
+= \omega - \df{(\eta_s + \psi_n\eta)}$ on $\displaystyle S^{k-1}_n$ and
+$\tilde{\omega} = -\df{(\psi_n \eta)} = -\df{(\eta - \psi_s\eta)}
+= -\df{(\eta_n - \eta_s - \psi_s\eta)}
+= \omega - \df{(\eta_n - \psi_s\eta)}$ on $\displaystyle S^{k-1}_s$.
+Hence $\tilde{\omega} \sim \omega$.  Thus $G([\eta]) = [\omega]$ and
+$G(F([\omega]) = [\omega]$ as desired.
+\end{proof}
+
+Using the stereographic projection $p$ defined in the proof of
+Lemma~\ref{lemSnsContr}, we have that
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$ is diffeomorphic to
+$\displaystyle \RR^{k-1} \setminus \{\VEC{0}\}$.  Using spherical coordinates 
+defined by $\VEC{x} \mapsto (\|\VEC{x}\|^{-1}\VEC{x},\|\VEC{x}\|)$
+for $\displaystyle \VEC{x} \in \RR^{k-1} \setminus \{\VEC{0}\}$, we
+have that $\displaystyle \RR^{k-1} \setminus \{\VEC{0}\}$ is
+diffeomorphic to $\displaystyle S^{k-2} \times ]0,\infty[$.  Therefore,
+$\displaystyle S^{k-1}_n \cap S^{k-1}_s$ is diffeomorphic to
+$\displaystyle S^{k-2} \times ]0,\infty[$.  It then follows from
+Lemma~\ref{lemScStimesR} (slightly modified) that
+$\displaystyle H^{q-1}(S^{k-1}_n \cap S^{k-1}_s) \cong
+H^{q-1}(S^{k-2} \times ]0,\infty[) \cong H^{q-1}(S^{k-2})$.  Combining this
+result with Proposition~\ref{propHqSeHqSns}, we get
+\begin{equation}  \label{relHqSk1Hq1Sk2}
+H^q(S^{k-1}) \cong H^{q-1}(S^{k-2})
+\end{equation}
+for $k>1$ and $q>1$.
+
+\begin{prop} \label{propH1Sk}
+$\displaystyle H^1(S^1) \cong \RR$ and
+$\displaystyle H^1(S^k) = 0$ for $k>1$.
+\end{prop}
+
+\begin{proof}
+\stage{i} We get from Example~\ref{CnotEpart2} that the dimension of
+$\displaystyle H^1(S^1)$ is non null.  Since $\displaystyle S^1$ is a
+compact manifold without boundary, we may use
+Proposition~\ref{propHkSMequiv} to prove that 
+$\displaystyle H^1(S^1) \cong \RR$.
+
+Suppose that $\omega$ is a differential $1$-form on $\displaystyle S^1$
+such that $\displaystyle \int_{S^1} \omega = 0$.
+
+Consider the path $\displaystyle \sigma : \RR \to S^1$ defined by
+$\sigma(s) = (\cos(2\pi s),\sin(2\pi s))$ for $s \in \RR$.  Let
+$\displaystyle g(t) = = \int_0^t \sigma^\ast(\omega)$ for $t \in \RR$.  We have by
+hypothesis that $\displaystyle g(0) = g(1) = \int_0^1 \sigma^\ast(\omega)
+\int_{\sigma(]0,1[)} \omega = \int_{S^1} \omega = 0$.
+Thus $g = f \circ \sigma = \sigma^\ast(f)$
+for some functions $\displaystyle f:S^1 \to \RR$.
+If we derive both sides of
+$\displaystyle \sigma^\ast(f)(t) = g(t) = \int_0^t \sigma^\ast(\omega)$
+with respect to $t$, then we get
+$\displaystyle \sigma^\ast(\df{f}) = \df{(\sigma^\ast(f))}
+= \sigma^\ast(\omega)$.
+Thus $\df{f} = \omega$ and therefore $[\omega]= [0]$.  This proves that the
+map $M$ in Proposition~\ref{propHkSMequiv} is an isomorphism.
+
+\stage{ii}
+The proof is very similar to the proof of Proposition~\ref{DGconserveA}.
+The context is a little more general.
+
+Suppose that $\omega$ is a closed differential $1$-form on
+$\displaystyle S^k$ with $k>1$.
+
+Choose $\displaystyle \VEC{u}_0 \in S^k$.  Since $\displaystyle S^k$
+is path connected, we can select for each
+$\displaystyle \VEC{u} \in S^k$ a path $\displaystyle \sigma:[0,1] \to S^k$
+between $\VEC{u}_0$ and $\VEC{u}$.
+Let
+\[
+f(\VEC{u}) = \int_\sigma \omega  = \int_{[0,1]}\sigma^\ast(\omega) \ .
+\]
+This function is well defined because the value of the integral is
+independent of the path chosen between $\VEC{u}_0$ and $\VEC{u}$.
+To prove this claim, suppose that
+$\displaystyle \tilde{\sigma}:[0,1] \to S^k$
+is another path between $\VEC{u}_0$ and $\VEC{u}$.  Then
+$\sigma - \tilde{\sigma}$ is a closed path in $\displaystyle S^k$
+which is the boundary of a region $\displaystyle R \subset S^k$.
+Thus, according to Stokes' theorem,
+\begin{equation} \label{propH1SkEq1}
+\int_\sigma \omega - \int_{\tilde{\sigma}} \omega
+= \int_{\sigma - \tilde{\sigma}} \omega
+= \int_{\partial R} \omega = \int_R \df{\omega} = 0
+\end{equation}
+because $\omega$ is closed.  Thus
+$\displaystyle \int_{\sigma} \omega = \int_{\tilde{\sigma}} \omega$.
+As a little note of caution, we have assumed in (\ref{propH1SkEq1})
+that $\sigma([0,1]) \cap \tilde{\sigma}([0,1]) =
+\{\VEC{u}_0,\VEC{u}\}$ and that the induced orientation on
+$\partial R = \sigma([0,1]) \cup \tilde{\sigma}([0,1])$ from $R$ (and
+so $\displaystyle S^k$) matches the orientation provided by
+$\sigma - \tilde{\sigma}$.
+\pdfbox{cohomology/path1}
+We still get that
+$\displaystyle \int_{\sigma} \omega = \int_{\tilde{\sigma}} \omega$
+even if $\sigma([0,1])$ and $\tilde{\sigma}([0,1])$ intersect at
+points other than $\VEC{u}_0$ and $\VEC{u}$ as in the following
+figure.
+\pdfbox{cohomology/path2}
+Stokes' theorem can be used by spitting the integral.
+Nevertheless, the conclusion is the same because $\df{\omega} = 0$ on $R$.
+
+We now shows that $\df{f} = \omega$.  Since $\omega$ is arbitrary,
+this will prove that $[\omega] = [0]$ and so that
+$\displaystyle H^1(S^k) = 0$.
+
+To compute the derivative of $f$ at $\displaystyle \VEC{u}_1 \in S^k$,
+we only need to know the value of $f$ in an open neighbourhood $U$ of
+$\VEC{u}_1$.  We may assume that $(W,U,\phi)$ is a local chart about
+$\VEC{u}_1$.  Let $\sigma_1$ be a path between $\VEC{u}_0$
+and $\VEC{u}_1$.  Given $\VEC{u}_2 \in U$, let $\sigma_2$ be a path
+between $\VEC{u}_1$ and $\VEC{u}_2$ in $U$.  Then $\sigma_1 + \sigma_2$ is a
+path between $\VEC{u}_0$ and $\VEC{u}_2$ that can be used to compute
+$f(\VEC{u}_2)$.  Hence
+\[
+f(\VEC{u}_2) - f(\VEC{u}_1) = \int_{\sigma_1 + \sigma_2} \omega
+- \int_{\sigma_1} \omega = \int_{\sigma_2} \omega
+= \int_{[0,1]} \sigma_2^\ast(\omega) \ .
+\]
+Since $\sigma_2([0,1]) \subset U$, we get that
+\begin{equation} \label{propH1SkEq2}
+f(\VEC{u}_2) - f(\VEC{u}_1) = \int_{[0,1]} \sigma_2^\ast(\omega)
+= \int_{[0,1]} (\phi^{-1} \circ \sigma_2)^\ast \phi^\ast(\omega) \ .
+\end{equation}
+Suppose that the local representation of $\omega$ in $W$ is given by
+$\displaystyle \phi^\ast \omega = \sum_{j=1}^k \tilde{\omega}_j \df{w_j}$.
+If we show that
+$\displaystyle \phi^\ast(\df{f}) = \df{(\phi^\ast(f))} = \phi^\ast(\omega)$
+on $W$, then we will have that $\df{f} = \omega$ because $\VEC{u}_1$
+and the local chart $(W,U,\phi)$ about $\VEC{u}_1$ are arbitrary.
+
+Suppose that $\VEC{u}_1 = \phi(\VEC{w}_1)$.  To prove that
+$\displaystyle \df{(\phi^\ast(f))}(\VEC{w}_1) = \phi^\ast(\omega)(\VEC{w}_1)$,
+we need to prove that
+$\displaystyle \pdfdx{\big(\phi^\ast(f)\big)}{w_j}(\VEC{w}_1) =
+\tilde{\omega}_j(\VEC{w}_1)$ for $1\leq j \leq k$.    We have that
+\[
+\frac{1}{h} \big(( \phi^\ast(f)(\VEC{w}_1 + h\VEC{e}_j) - 
+    \phi^\ast(f)(\VEC{w}_1) \big)
+= \frac{1}{h} \big( f(\phi(\VEC{w}_1 + h\VEC{e}_j)) -
+f(\phi(\VEC{w}_1)) \big)
+= \frac{1}{h} \int_{[0,1]} \sigma_h^\ast \phi^\ast(\omega)
+\]
+where $\sigma_h:[0,1] \to W$ is the path from $\VEC{w}_1$ to
+$\VEC{w}_1 + h \VEC{e}_j$ defined by $\sigma_h(s) = \VEC{w}_1 + s h \VEC{e}_j$
+for $0\leq s \leq 1$.  We obviously assume that $h$ is small enough.
+The path $\sigma_2$ in (\ref{propH1SkEq2}) is given by
+$\sigma_2 = \phi \circ \sigma_h$.  We get that
+\begin{align*}
+&\pdfdx{\big(\phi^\ast(f)\big)}{w_j}
+= \lim_{h\to 0} \frac{1}{h} \left( \phi^\ast(f)(\VEC{w}_1 + h\VEC{e}_j) - 
+    \phi^\ast(f)(\VEC{w}_1) \right)
+= \lim_{h\to 0} \frac{1}{h} \int_{[0,1]} \sigma_h^\ast \phi^\ast(\omega) \\
+&\qquad = \lim_{h\to 0} \frac{1}{h} \int_{[0,1]} \left( \sum_{j=1}^k
+\tilde{\omega}_j(\sigma_h(s)) \left(\pdfdx{(\sigma_h(s))_j}{s}\right)
+\dx{s} \right)
+= \lim_{h\to 0} \frac{1}{h} \int_{[0,1]} \tilde{\omega}_j(\VEC{w}_1 +
+s h\VEC{e}_j) \, h \dx{s} \\
+&\qquad = \lim_{h\to 0} \frac{1}{h} \int_0^h \tilde{\omega}_j(\VEC{w}_1 +
+t\VEC{e}_j) \dx{t}
+= \tilde{\omega}_j(\VEC{w}_1) \ .  \qedhere
+\end{align*}
+\end{proof}
+
+It follows from (\ref{relHqSk1Hq1Sk2}) and Proposition~\ref{propH1Sk} that
+$\displaystyle H^q(S^{k-1}) = 0$ for $1 < q+1 < k$ because
+$\displaystyle H^q(S^{k-1}) \cong H^{q-1}(S^{k-2}) \cong H^{q-2}(S^{k-3}) 
+\cong \ldots \cong H^1(S^{k-q}) = 0$ for $k-q > 1$
+and $\displaystyle H^{k-1}(S^{k-1}) \cong \RR$ for $k >1$ because
+$\displaystyle H^{k-1}(S^{k-1}) \cong H^{k-2}(S^{k-2}) \cong \ldots
+\cong H^1(S^1) \cong \RR$ for $k>1$.  For the $\displaystyle 0^{th}$
+cohomology module on $\displaystyle S^{k-1}$, we have that
+$\displaystyle H^0(S^{k-1}) \cong \RR$ for $k>1$ according to
+Proposition~\ref{H0kdimS}.
+
+\section{Applications}
+
+There are many very important results that can be obtained using
+cohomology.  We present a couple of them in this section.
+
+Let $S_1$ and $S_2$ be two connected and oriented compact
+$k$-dimensional smooth manifolds without boundary.  Suppose moreover
+that $f:S_1 \to S_2$ is a function of class $\displaystyle C^\infty$.
+Is there a relation between $\displaystyle \int_{S_2} \omega$ and
+$\displaystyle \int_{S_1} f^\ast(\omega)$ for all
+differential $k$-forms $\omega$ on $S_2$?
+
+Choose a differential $k$-form $\omega_0$ on $S_2$ such that
+$\displaystyle \int_{S_2} \omega_0 \neq 0$.  Such a differential
+$k$-form exists according to Proposition~\ref{propHkSMequiv}
+because $\displaystyle H^k(S_2) \cong \RR$ according to
+Theorem~\ref{theoHckCR}.  There is a number $n$ such that
+\begin{equation} \label{defnDergree}
+\int_{S_2} f^\ast(\omega_0) = n \int_{S_2} \omega_0 \ .
+\end{equation}
+
+For any other differential $k$-form $\omega$ on $S_2$, we have that
+$\omega = a_\omega \omega_0 + \df{\mu_\omega}$ for some differential
+$(k-1)$-form $\mu_{\omega}$ on $S_2$ and $a_{\omega} \in \RR$.
+Hence, using Stokes' theorem, we find that
+\[
+\int_{S_2} \omega = a_{\omega} \int_{S_2} \omega_0 + \int_{S_2}\df{\mu}
+= a_{\omega} \int_{S_2} \omega_0 + \int_{\partial S_2}\mu
+= a_{\omega} \int_{S_2} \omega_0
+\]
+and
+\begin{align*}
+\int_{S_1} f^\ast(\omega) &= a_{\omega} \int_{S_1} f^\ast(\omega_0)
++ \int_{S_1}f^\ast(\df{\mu})
+= a_{\omega} \int_{S_1} f^\ast(\omega_0) + \int_{S_1}\df{(f^\ast(\mu))} \\
+&= a_{\omega} \int_{S_1} f^\ast(\omega_0) + \int_{\partial S_1}f^\ast(\mu)
+= a_{\omega} \int_{S_1} f^\ast(\omega_0)
+\end{align*}
+because $\partial S_i = \emptyset$ for $1\leq i \leq 2$.
+Thus
+\[
+\int_{S_1} f^\ast(\omega) = a_{\omega} \int_{S_1} f^\ast(\omega_0)
+= n a_{\omega} \int_{S_2} \omega_0 = n \int_{S_2} \omega
+\]
+for all differential $k$-form $\omega$ on $S_2$.
+The constant $n$ depends only on $f$.  This in itself is pretty
+amazing.  But there is something more amazing to come.
+
+The previous discussion is also valid if we consider connected and
+oriented $k$-dimensional smooth manifolds $S_1$ and $S_2$ without
+boundary, and assume that the function $f:S_1 \to S_2$ is of class
+$\displaystyle C^\infty$ and {\bfseries proper}\index{Proper Function}; namely,
+$\displaystyle f^{-1}(K)$ is compact if $K$ is compact.  Obviously, we
+have in that context to consider $\displaystyle H_c^k(S_i) \cong \RR$
+for $1\leq i \leq 2$ instead of $\displaystyle H^k(S_i) \cong \RR$
+for $1\leq i \leq 2$.
+
+\begin{defn}
+The number $n$ defined in (\ref{defnDergree}) is called the
+{\bfseries degree}\index{Degree of a Function} of $f$ and is denoted
+$\deg(f)$.
+\end{defn}
+
+The surprising fact is that $\deg(f)$ is an integer number.
+
+\begin{theorem} \label{thmDegree}
+Let $S_1$ and $S_2$ be two connected and oriented $k$-dimensional
+smooth manifolds without boundary, and $f:S_1 \to S_2$ be a
+proper function of class $\displaystyle C^\infty$.  Suppose that $\VEC{v}$ is a
+regular value of $f$ and set, for each $\VEC{u} \in f^{-1}(\{\VEC{v}\})$,
+$\sgn_{\VEC{u}}(f)= 1$ if $f_\ast: \TS_{\VEC{u}} S_1 \to \TS_{\VEC{v}} S_2$
+is orientation preserving and
+$\sgn_{\VEC{u}}(f)= -1$ if $f_\ast: \TS_{\VEC{u}} S_1 \to \TS_{\VEC{v}} S_2$
+is not orientation preserving.  Then
+\[
+\deg(f) = \sum_{\VEC{u} \in f^{-1}(\{\VEC{v}\})} \sgn_{\VEC{u}}(f) \ .
+\]
+\end{theorem}
+
+\begin{proof}
+It follows from Proposition~\ref{regValCoIm} that
+$\displaystyle f^{-1}(\{\VEC{v}\})$ is the union of isolated points
+\footnote{We leave it to the reader to generalize
+Proposition~\ref{regValCoIm} to a map between manifolds.
+Note that $\VEC{u}_2 \in S_2$ is a regular value of a continuously
+differentiable function $f:S_1 \to S_2$ between two $k$-dimensional
+smooth manifolds $S_1$ and $S_2$ if
+$\displaystyle \phi_2^{-1}(\VEC{u}_2)$ is a regular value of
+$\displaystyle \phi_2^{-1} \circ f \circ \phi_1$ for all local charts
+$(W_1,U_1,\phi_1)$ of $S_1$ and local charts $(W_2,U_2,\phi_2)$ of
+$S_2$ with $\displaystyle \phi_2^{-1}(\VEC{u}_2) \in W_2$.
+The fact that countable atlases can be used according to 
+Proposition~\ref{BjUilocfin} is also needed to generalize
+Proposition~\ref{regValCoIm}.}.
+Since $f$ is proper, $\displaystyle f^{-1}(\{\VEC{v}\})$ is also a compact
+set.  Therefore, $\displaystyle f^{-1}(\{\VEC{v}\})$ is the finite
+union of isolate points.
+
+Suppose that $\displaystyle f^{-1}(\{\VEC{v}\}) = \{ \VEC{u}_1,
+\VEC{u}_2, \ldots, \VEC{u}_q\}$.  We now present one method
+(suggested in \cite{Sv1}) to select
+local charts $\{ (W_i,U_i,\phi_i)\}_{1\leq i \leq q}$ of $S_1$ and a
+local chart $(W, U,\phi)$ of $S_2$ such that
+$U_i \cap U_j = \emptyset$ for $i\neq j$, $\VEC{u}_i \in U_i$ for
+$1\leq i \leq q$, $\VEC{v} \in U$, and
+$\displaystyle f^{-1}(U) = \bigcup_{1\leq i \leq q} U_i$
+
+Let $\{ (\tilde{W}_i,\tilde{U}_i,\tilde{\phi}_i)\}_{1\leq i \leq q}$
+be local charts of $S_1$ with $\VEC{u}_i \in \tilde{U}_i$ for
+$1\leq i \leq q$ and $(\tilde{W}, \tilde{U},\tilde{\phi})$ be a local
+chart of $S_2$ such that $\VEC{v} \in \tilde{U}$.  Since the points 
+$\VEC{u}_i$ are isolated, we may assume by shrinking the sets
+$\tilde{U}_i$ if needed that
+$\tilde{U}_i \cap \tilde{U}_j = \emptyset$ if $i \neq j$.
+
+According to Proposition~\ref{topolProp2}, we may choose an open
+neighbourhood $\breve{U}$ of $\VEC{v}$ with compact closure
+$K_1 \subset \tilde{U}$.
+Since $f$ is a proper function, $\displaystyle f^{-1}(K_1)$ is a
+compact subset of $S_1$.  Thus $\displaystyle K_2 = f^{-1}(K_1) \setminus
+\big( \bigcup_{1\leq i \leq q} \tilde{U}_i\big) \subset f^{-1}(\tilde{U})$ is
+a compact subset of $S_1$.  Since $f$ is continuous, $K_3 = f(K_2)$ is a
+compact subset of $\tilde{U}$.  So $K_3$ is a closed subset of $\tilde{U}$ that
+does not contain $\VEC{v}$.
+
+The local charts that we were looking for are defined as it follows.
+Let $U = \breve{U} \setminus K_3$ and $\displaystyle W = \phi^{-1}(U)$.
+The local chart of $S_2$ that contains $\VEC{v}$ is given by $(W,U,\phi)$.
+Let $\displaystyle U_i = \tilde{U}_i \cap f^{-1}(U)$ for $1\leq i \leq q$.
+Note that $\VEC{u}_i \in U_i$ for $1\leq i \leq q$ because
+$\VEC{v} \in U$.
+The local charts of $S_1$ are given by
+$\displaystyle (W_i,U_i,\phi_i) = (\phi_i^{-1}(U_i),U_i,\phi_i)$
+for $1\leq i \leq q$.
+\pdfbox{cohomology/degree1}
+
+Let $g:W \to \RR$ be a non null smooth function with compact support
+in $W$ and such that $g(\VEC{w}) \geq 0$ for all $\VEC{w} \in W$.
+We consider the differential $k$-form $\omega$ on $S_2$ with the local
+representation $\displaystyle \phi^\ast(\omega) = g \df{w_1} \wedge
+\df{w_2} \wedge \ldots \wedge \df{x_k}$ on $U$ and null on
+$S_2 \setminus U$.  Since
+$\displaystyle \supp f^\ast(\omega) \subset f^{-1}(\supp \omega)
+\subset f^{-1}(U) = \bigcup_{1\leq i \leq q} U_i$ and
+$U_i \cap U_j = \emptyset$ for $i \neq j$, we get that
+\[
+\int_{S_1} f^\ast(\omega) = \sum_{i=1}^q \int_{U_i} f^\ast(\omega)
+= \sum_{i=1}^q \left(\sgn_{\VEC{u}_i}(f) \int_U \omega \right)
+= \Big(\underbrace{\sum_{i=1}^q \sgn_{\VEC{u}_i}(f)}_{=n}\Big) \int_U \omega
+= n \int_{S^2} \omega 
+\]
+because
+$\displaystyle \int_{U_i} f^\ast(\omega) = \int_U \omega$ if $f$ is
+orientation preserving and
+$\displaystyle \int_{U_i} f^\ast(\omega) = -\int_U \omega$ if $f$ does
+not preserve the orientation (i.e.\ reverse the orientation)
+according to Proposition~\ref{propCVforDF}.
+
+Note that $\phi$ and $\phi_i$ for $1\leq i \leq q$ are
+orientation preserving, and $\det (\phi\circ f \circ \phi_i) \neq 0$
+on $W_i$ for $1\leq i \leq q$.  Therefore, either
+$f_\ast: \TS_{\VEC{u}} S_1 \to \TS_{\VEC{v}} S_2$
+is orientation preserving for all $\VEC{u} \in U_i$ or
+$f_\ast: \TS_{\VEC{u}} S_1 \to \TS_{\VEC{v}} S_2$
+reverses the orientation for all $\VEC{u} \in U_i$.
+To change the orientation on $W_i$,
+$\det (\phi\circ f \circ \phi_i)$
+would have to change sign and so be null at some point in $W_i$.
+\end{proof}
+
+\begin{cor}  \label{cordegFdegG}
+Let $S_1$ and $S_2$ be two connected and oriented compact $k$-dimensional
+smooth manifolds without boundary.  If $f,g:S_1 \to S_2$ are two
+homotopic functions of class $\displaystyle C^\infty$, then $\deg(f) = \deg(g)$.
+\end{cor}
+
+\begin{proof}
+Since $f$ and $g$ are homotopic, there exists a smooth map
+$H:S_1 \times [0,1] \to S_2$ such that $H(\VEC{u},0) = f(\VEC{u})$ and
+$H(\VEC{u},1) = g(\VEC{u})$ for all $\VEC{u} \in S_1$.
+Let $H_t(\VEC{u}) = H(\VEC{u},t)$ for all $(\VEC{u},t) \in S_1 \times [0,1]$.
+If $\omega$ is a differential $k$-form on $S_2$, then we have that
+\[
+\int_{S_1} H_t^\ast(\omega) = n_t \int_{S_2} \omega
+\]
+for each $t \in [0,1]$ where $n_t \in \ZZ$.  Since the value of the
+integral on the left side varies continuously with respect to $t$, we
+have that $t \mapsto n_t$ is an integer valued continuous function.
+Therefore $n_t$ is constant.  Hence $\deg(f) = n_0 = n_1 = \deg(g)$.
+\end{proof}
+
+We have defined vector fields on a $k$-dimensional manifold at the
+beginning of Section~\ref{sectVFandDF} but we have not referred to
+them until now.  The next result is very interesting.  It is often
+humorously stated as saying that there is no way to comb our hair and
+not have one hair standing perpendicular.  This is true if we assume
+that one's head is a ball fully covered with hair.  But, other than
+for cartoon characters, we have not seen any such head yet.
+
+\begin{prop} \label{propNNVFodd}
+There does not exist a nowhere null vector field on $\displaystyle S^{k-1}$ 
+if $k$ is odd.
+\end{prop}
+
+\begin{proof}
+If $\displaystyle g_0:S^{k-1} \to S^{k-1}$ is the restriction to
+$\displaystyle S^{k-1}$ of the identity map
+$\displaystyle \Id:\RR^k \to \RR^k$,
+then $\deg(g_0) = 1$ because $\det \Id = 1$.
+  
+If $\displaystyle g_1:S^{k-1} \to S^{k-1}$ is the restriction to
+$\displaystyle S^{k-1}$ of the map $\displaystyle -\Id:\RR^k \to \RR^k$,
+so $g_1$ is the antipodal map defined by $g(\VEC{u}) =-\VEC{u}$
+for all $\displaystyle \VEC{u} \in S^{k-1}$,
+then $\deg(g_1) = -1$ because $\det (-\Id) = -1$ for $k$ odd.
+\pdfbox{cohomology/nnVF}
+
+We have from Corollary~\ref{cordegFdegG} that $g_1$ cannot be
+smoothly homotopic to $g_0$.
+
+Suppose that there is a nowhere null vector field
+$\displaystyle F : S^{k-1} \to \bigcup_{\VEC{u}\in S} \TS_{\VEC{u}} S^{k-1}$.
+Let $\displaystyle F(\VEC{u}) = (\VEC{u},f(\VEC{u})) \in
+\TS_{\VEC{u}} S^{k-1}$ for all $\displaystyle \VEC{u} \in S^{k-1}$.
+We have that $\displaystyle f:S^{k-1} \to \RR^k$ is a smooth function
+such that $f(\VEC{u}) \neq \VEC{0}$ for all
+$\displaystyle \VEC{u} \in S^{k-1}$ because $F$ is nowhere null.
+
+Let $\displaystyle H:S^{k-1} \times [0,1] \to S^{k-1}$ be the
+function defined by
+\[
+H(\VEC{u},t) = \cos(\pi t) \VEC{u} + \sin(\pi t)
+\, \|f(\VEC{u}\|^{-1} f(\VEC{u})
+\]
+for all $\displaystyle (\VEC{u},t) \in S^{k-1}$.
+The function $H$ is an homotopy between $g_0$ and $g_1$.  This is a
+contradiction.
+\pdfbox{cohomology/nnVF2}
+Note that $\| H(\VEC{u},t)\| = 1$ for all
+$\displaystyle (\VEC{u},t) \in S^{k-1}$ because
+$f(\VEC{u})$ is perpendicular to $\VEC{u}$ by definition of
+$\displaystyle \TS_{\VEC{u}} S^{k-1}$.  Hence, if we set
+$\displaystyle \VEC{y} = \|f(\VEC{u})\|^{-1} f(\VEC{u})$ for
+$\displaystyle \VEC{u} \in S^{k-1}$, we get that
+\begin{align*}
+\| H(\VEC{u},t\|^2 &= \sum_{j=1}^k (\cos(\pi t) u_j + \sin(\pi t) y_j)^2 \\
+&= \cos^2(\pi t) \underbrace{\|\VEC{u}\|^2}_{=1}
++ 2 \cos(\pi t) \sin(\pi t) \underbrace{\VEC{u} \cdot \VEC{y}}_{=0}
++ \sin^2(\pi t) \underbrace{\|\VEC{y}\|^2}_{=1} = 1
+\end{align*}
+for $t \in [0,1]$.  In fact, $t \mapsto H(\VEC{u},t)$ is a parametric
+representation of half the great circle from $\VEC{u}$ to $-\VEC{u}$
+that goes through $\displaystyle \|f(\VEC{u})\|^{-1}f(\VEC{u})$.  
+\end{proof}
+
+If $k$ is even, then it is always possible to define a nowhere null
+vector field of $\displaystyle S^{k-1}$.  For instance,
+$\displaystyle F:S^{k-1} \to \bigcup_{\VEC{u}\in S} \TS_{\VEC{u}} S^{k-1}$
+defined by $F(\VEC{u}) = (\VEC{u}, f(\VEC{u})$ for
+$\displaystyle \VEC{u} \in S^{k-1}$ where
+$f(\VEC{u}) = (-u_2,u_1,-u_4,u_3, \ldots, -u_k,u_{k-1})$ is such a
+vector field.  It is represented in the figure below for $\displaystyle S^1$.
+\pdfbox{cohomology/nnVF3}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End:

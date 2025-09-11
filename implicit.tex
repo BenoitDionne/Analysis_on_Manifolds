@@ -1,0 +1,152 @@
+\chapter{Inverse and Implicit Function
+Theorems} \label{chaptInvImplTh}
+
+\section{Review}
+
+We review two of the main results about differentiation that will be
+very useful later.  The proofs of these results can be found in any
+good textbooks in analysis including \cite{S}. 
+
+\begin{theorem}[Inverse Function Theorem]
+Let $V$ be an open subset of $\displaystyle \RR^n$ and
+$\displaystyle f:V \to \RR^n$ be a continuously
+differentiable function.  Suppose that $\diff f(\VEC{a}) \neq 0$ for some
+$\VEC{a} \in V$.  Then, there exist an open neighbourhood $U \subset V$ of
+$\VEC{a}$ and an open neighbourhood $W$ of $f(\VEC{a})$ such that $f:V\to W$
+is one-to-one and onto, the function $\displaystyle f^{-1}:W\to V$
+is continuously differentiable and
+\[
+\diff f^{-1} (\VEC{y}) = \big( \diff f(f^{-1}(\VEC{y})) \big)^{-1}
+\]
+for all $\VEC{y} \in W$.
+\end{theorem}
+
+A consequence of the Inverse Function Theorem is the following theorem.
+
+\begin{theorem}[Implicit Function Theorem]
+Let $\displaystyle f:U\times V\to \RR^m$ be a continuously
+differentiable function where $\displaystyle U\subset \RR^n$ and
+$\displaystyle V \subset \RR^m$ are open sets.  Suppose that
+$f(\VEC{a}, \VEC{b}) = \VEC{0}$ for some $(\VEC{a},\VEC{b}) \in U\times V$.
+Let
+\[
+A = \begin{pmatrix}
+\displaystyle \pdydx{f_1}{x_{1}}(\VEC{a},\VEC{b}) & \ldots &
+\displaystyle \pdydx{f_1}{x_{n}}(\VEC{a},\VEC{b}) \\[1em]
+\vdots & \ddots & \vdots \\
+\displaystyle \pdydx{f_m}{x_{1}}(\VEC{a},\VEC{b}) & \ldots &
+\displaystyle \pdydx{f_m}{x_{n}}(\VEC{a},\VEC{b})
+\end{pmatrix}
+\quad \text{and} \quad
+B =
+\begin{pmatrix}
+\displaystyle \pdydx{f_1}{x_{n+1}}(\VEC{a},\VEC{b}) & \ldots &
+\displaystyle \pdydx{f_1}{x_{n+m}}(\VEC{a},\VEC{b}) \\[1em]
+\vdots & \ddots & \vdots \\
+\displaystyle \pdydx{f_m}{x_{n+1}}(\VEC{a},\VEC{b}) & \ldots &
+\displaystyle \pdydx{f_m}{x_{n+m}}(\VEC{a},\VEC{b})
+\end{pmatrix} \ .
+\]
+If $\det B \neq 0$, then there exist open neighbourhoods
+$U_1 \subset U$ of $\VEC{a}$ and
+$V_1 \subset V$ of $\VEC{b}$ with the property that for each
+$\VEC{x} \in U_1$ there exists a unique $g(\VEC{x}) \in V_1$ such that
+$\displaystyle f(\VEC{x}, g(\VEC{x}))=0$.  Moreover, the function
+$g:U_1\to V_1$ is continuously differentiable and
+$\displaystyle \diff g(\VEC{a}) = - B^{-1} A$.
+\end{theorem}
+
+The Implicit Function Theorem is in fact equivalent to the Inverse Function
+Theorem.  One is a consequence of the other.
+
+\section{Local Immersion Theorem}
+
+\begin{theorem}[Local Immersion Theorem]\label{implLImT}
+Let $V$ be an open subset of $\displaystyle \RR^n$ and
+$\displaystyle f:V\to \RR^m$ be a continuously
+differentiable function with $m \leq n$.  Suppose that there exists
+$\VEC{a} \in V$ such that $f(\VEC{a}) = 0$ and $\diff f(\VEC{a})$ has rank
+$m$.  Then there exist an open set $\displaystyle W \subset \RR^n$, an
+open neighbourhood $U \subset V$ of $\VEC{a}$ and a diffeomorphism
+$h:W \to U$ such that $\displaystyle f(h(\VEC{x}))
+= \begin{pmatrix}x_1 & x_2 & \ldots &  x_m\end{pmatrix}^\top$
+for $\VEC{x} \in W$.
+\end{theorem}
+
+In the previous theorem, the function $h$ is a local change of coordinates
+near $\VEC{a}$.
+
+\begin{proof}
+Since $\diff f(\VEC{a})$ has rank $m$, there exists an
+$(m \times m)$-submatrix of $\diff f(\VEC{a})$ with non-zero determinant.  We
+choose a permutation of the coordinates
+$\displaystyle P:\RR^n \to \RR^n$ such that the
+first $m$ columns of $\diff f(\VEC{a})\, P$ formed an \nm{m}{m}-matrix with
+non-zero determinant.  Since $P$ is a permutation, it is its own inverse. 
+
+Let $\VEC{b} = P(\VEC{a})$.  The first $m$ columns of
+$\diff (f \circ P)(\VEC{b})$ form an \nm{m}{m}-matrix with
+non-zero determinant because
+$\displaystyle \diff (f\circ P) (\VEC{b}) = \diff f(P(\VEC{b})) P =
+\diff f(\VEC{a})P$.
+
+Let
+\[
+M = 
+\begin{pmatrix}
+\displaystyle \pdydx{(f_1\circ P)}{x_1}(\VEC{b}) & \ldots &
+\displaystyle \pdydx{(f_1\circ P)}{x_m}(\VEC{b}) \\
+\vdots & \ddots & \vdots \\
+\displaystyle \pdydx{(f_m\circ P)}{x_1}(\VEC{b}) & \ldots &
+\displaystyle \pdydx{(f_m\circ P)}{x_m}(\VEC{b})
+\end{pmatrix} \ .
+\]
+It is the \nm{m}{m}-submatrix of $\diff (f\circ P)(\VEC{b})$ formed by
+the first $m$ columns.  Consider the map
+\begin{align*}
+H: P(V) & \to \RR^n \\
+\VEC{x} & \mapsto
+\begin{pmatrix} (f_1 \circ P)(\VEC{x}) & \ldots & (f_m\circ P)(\VEC{x})
+& x_{m+1} & x_{m+2}  & \ldots & x_n \end{pmatrix}^\top
+\end{align*}
+We have that
+$\displaystyle H(\VEC{b}) = \begin{pmatrix}
+0 & \ldots & 0 & b_{m+1} & b_{m+2} & \ldots & b_n \end{pmatrix}^\top$
+because $(f\circ P)(\VEC{b}) = f(P(\VEC{b})) = f(\VEC{a}) = \VEC{0}$, and
+\[
+\det \diff H(\VEC{b}) =
+\det \begin{pmatrix}
+M & * \\
+0 & \Id_{n-m}
+\end{pmatrix} = \det M \neq 0 \ .
+\]
+It follows from the Inverse Function Theorem that there exist
+an open neighbourhood
+$\displaystyle U_1 \subset P(V) \subset \RR^n$ of $\VEC{b}$ and
+an open neighbourhood $\displaystyle W_1 \subset \RR^n$ of
+$\displaystyle \begin{pmatrix} 0 &\ldots &\ 0 &
+b_{m+1} & b_{m+2} & \ldots & b_n \end{pmatrix}^\top$ such that
+$H:U_1 \to W_1$ is a diffeomorphism.  Let
+$\displaystyle \pi:\RR^n \to \RR^m$ be the
+projection on the first $m$ components.  We have
+\[
+(f\circ P)(H^{-1}(\VEC{x})) = (\pi \circ H)(H^{-1}(\VEC{x}))
+= \pi(\VEC{x}) =
+\begin{pmatrix} x_1 & x_2 & \ldots & x_m \end{pmatrix}^\top
+\]
+for $\VEC{x} \in W_1$.  We have the following commutative diagram.
+\[
+\begin{CD}
+V @>{f}>> \RR^m \\
+@A{P}AA @AA{\pi}A \\
+U_1 @<<{H^{-1}}< W_1
+\end{CD}
+\]
+The conclusion of the theorem is given by $U = P(U_1)$, $W=W_1$ and
+$\displaystyle h = P \circ H^{-1}$.
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End: 

@@ -1,0 +1,26 @@
+\begin{picture}(0,0)%
+\includegraphics{riemann_geom/geodfig2.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(5956,1138)(-1004,-872)
+\put(1621,119){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$G$}%
+}}}
+\put(773,-581){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$0$}%
+}}}
+\put(2926,-16){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$U$}%
+}}}
+\put(766, 74){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$D_{\epsilon_{\VEC{u}}}$}%
+}}}
+\put(-269,-286){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$G^{-1}(\VEC{v})$}%
+}}}
+\put(3421,-556){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$K(\VEC{v}) = G(\tilde{K}(G^{-1}(\VEC{v})))$}%
+}}}
+\put(2471,-361){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{v}$}%
+}}}
+\put(2544,-631){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}$}%
+}}}
+\put(-989,-601){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\tilde{K}(G^{-1}(\VEC{v}))$}%
+}}}
+\put(1531,-331){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\eta$}%
+}}}
+\end{picture}%

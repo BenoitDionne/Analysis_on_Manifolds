@@ -1,0 +1,1890 @@
+\section{Simplicial Homology} \label{sectSimplHomol}
+
+As mentioned in the introduction of this chapter, readers may choose
+to only browse through this and the next sections if they are not
+very interested in learning about simplicial homology and cohomology.
+There are however some concepts and definitions in this two sections
+that the reader should learn because they are used in the next
+chapter.  In particular, we are talking about the definitions of
+simplex and simplicial complex in Section~\ref{subsOShomo}, oriented
+simplex in Section~\ref{ssectSimpCo}, and smoothly triangulated
+manifold in Section~\ref{ssectSCandCM}.  Sections~\ref{sectSingHom} and
+\ref{sectSingCohom} on singular homology and cohomology are the
+important sections in this chapter.  In particular,
+Subsection~\ref{ssectdeRhamSing} contains the statement and the proof 
+of de Rham theorem, Theorem~\ref{deRhamThmSing}. which is the
+motivation for this chapter.
+
+We present and sketch the proof of a version of de Rham theorem for
+simplicial cohomology in Section~\ref{ssectSCandCM} for those who
+may only be interested in a brief study of simplicial homology and
+cohomology.
+
+Our presentation of the simplicial homology and cohomology is more for
+a pedagogical purpose, to prepare the reader to the study of singular
+homology and cohomology.  There is a lot of similarity between the
+results and techniques of proof used in simplicial theory and those used in
+singularity theory.  This is not surprising as it is explained in
+Section~\ref{sectRelSandS}.  Nevertheless, there are really
+important and interesting results that can only be deduced from
+simplicial homology.  Theorem~\ref{thmEulerAlpha} is one of them.
+Both simplicial and singular theories are important.  It is not a
+question of which one is better than the other.
+
+\subsection{Simplicial Complexes} \label{ssectSimpCo}
+
+\begin{defn}
+A subset $\{\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k\}$ of
+$\displaystyle \RR^n$ is
+{\bfseries convex independent}\index{Convex Independent} if
+$\{\VEC{x}_1-\VEC{x}_0,\VEC{x}_2-\VEC{x}_0,\ldots, \VEC{x}_k-\VEC{x}_0\}$
+are linearly independent.
+\end{defn}
+
+\begin{defn}
+Let $s = \{\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k\}$ be a
+convex independent subset of $\displaystyle \RR^n$.   The set
+$\displaystyle \left\{ \sum_{j=0}^k a_j\VEC{x}_j : a_j \geq 0 \ \text{and} \
+\sum_{j=0}^k a_k = 1 \right\}$, denoted $[s]$ or
+$[\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots,\VEC{x}_k]$, is called a
+{\bfseries closed $\mathbf{k}$-simplex}\index{Closed $k$-Simplex}.
+The {\bfseries vertices}\index{Vertex} of $[s]$ are the
+points $\VEC{x}_j$ for $0\leq j \leq k$. The
+{\bfseries closed faces}\index{Closed Face} of $[s]$ are the
+closed $\mathbf{m}$-simplices
+$[\VEC{x}_{j_0},\VEC{x}_{j_1},\VEC{x}_{j_2},\ldots, \VEC{x}_{j_m}]$
+for $\{ j_0, j_1, \ldots, j_m\} \subset \{0,1,2,\ldots, k\}$
+and $0\leq m \leq k$.
+The {\bfseries dimension}\index{Dimension} of $[s]$, denoted $\dim \, [s]$,
+is $k$.
+\end{defn}
+
+The reader should prove that $[s]$ is the smallest
+convex set containing $s$.
+
+\begin{defn}
+The coefficients $a_j$ in the expression
+$\displaystyle \VEC{x} = \sum_{j=0}^k a_j\VEC{x}_j$ with $a_j \geq 0$ and
+$\displaystyle \sum_{j=0}^k a_k = 1$ are called
+{\bfseries barycentric coordinates}\index{Barycentric Coordinates}
+of $x$.
+\end{defn}
+
+\begin{defn}
+Let $s = \{\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k\}$ be a
+convex independent subset of $\displaystyle \RR^n$.
+The set $\displaystyle \left\{ \sum_{j=0}^k a_j\VEC{x}_j : a_j > 0
+\ \text{and} \ \sum_{j=0}^k a_k = 1 \right\}$, denoted $(s)$ or
+$(\VEC{x}_0,\VEC{x}_1,\VEC{x}_2, \ldots, \VEC{x}_k)$,
+is called an {\bfseries open $\mathbf{k}$-simplex}\index{Open $k$-Simplex}.
+The {\bfseries dimension}\index{Dimension} of $(s)$, denoted $\dim\, (s)$,
+is $k$.
+\end{defn}
+
+\begin{defn}
+The {\bfseries open faces}\index{Open Face} of the closed $k$-simplex
+$[\VEC{x}_0,\VEC{x}_1,\ldots,\VEC{x}_k]$ are the
+open $m$-simplices
+$(\VEC{x}_{j_0},\VEC{x}_{j_1},\VEC{x}_{j_2},\ldots, \VEC{x}_{j_m})$
+for $\{ j_0, j_1, \ldots, j_m\} \subset \{0,1,2,\ldots, k\}$
+and $0\leq m \leq k$.
+\end{defn}
+
+A closed $k$-simplex $[\VEC{x}_0,\VEC{x}_1,\ldots,\VEC{x}_k]$ is the
+union of all its open faces (Figure~\ref{SimpCpx1}).  The reader must
+realize that the closed $0$-complex $[\VEC{x}_j]$ is equal to the open
+$0$-complex $(\VEC{x}_j)$.  If $(s_1)$ and $(s_2)$ are two open faces
+of a closed $k$-simplex, then either $(s_1) = (s_2)$ or
+$(s_1) \cap (s_2) = \emptyset$.
+
+\pdfF{alg_top/simpcpx1}{Closed $3$-simplex}{Illustration of a closed
+$3$-simplex
+$\displaystyle [\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\VEC{x}_3] \subset \RR^3$.
+This closed simplex is the union of the open faces
+$(\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\VEC{x}_3)$, $(\VEC{x}_0,\VEC{x}_1,\VEC{x}_2)$,
+$(\VEC{x}_0,\VEC{x}_1,\VEC{x}_3)$,
+$(\VEC{x}_0,\VEC{x}_2,\VEC{x}_3)$, $(\VEC{x}_1,\VEC{x}_2,\VEC{x}_3)$,
+$(\VEC{x}_0,\VEC{x}_1)$, $(\VEC{x}_0,\VEC{x}_2)$, $(\VEC{x}_0,\VEC{x}_3)$,
+$(\VEC{x}_1,\VEC{x}_2)$, $(\VEC{x}_1,\VEC{x}_3)$, $(\VEC{x}_2,\VEC{x}_3)$,
+$(\VEC{x}_0)$, $(\VEC{x}_1)$, $(\VEC{x}_2)$ and $(\VEC{x}_3)$.}{SimpCpx1}
+
+\begin{defn}
+A {\bfseries simplicial complex}\index{Simplicial Complex} $K$ in
+$\displaystyle \RR^n$ is a finite set of open simplices such that:
+\begin{enumerate}
+\item If $(s)$ is an open simplices in $K$, then all the open faces of
+the closed simplex $[s]$ are also in $K$.
+\item If $(s_1)$ and $(s_2)$ are two open simplices in $K$, then
+either $(s_1) = (s_2)$ or $(s_1) \cap (s_2) = \emptyset$.
+\end{enumerate}
+The {\bfseries dimension}\index{Dimension} of the simplicial complex
+$K$, denoted $\dim K$, is defined as the dimension of the largest open
+simplex in $K$.  The union of the open simplices in $K$ is the subset
+of $\displaystyle \RR^n$ denoted $[K]$.
+The {\bfseries vertices}\index{Vertices} of $K$ are the elements
+$\VEC{x} \in [K]$ such that $(\VEC{x}) \in K$; namely, $(\VEC{x})$ is a
+$0$-simplex in $K$.
+\end{defn}
+
+We have that $\displaystyle [K] = \bigcup_{(s) \in K} (s)
+= \bigcup_{(s) \in K} [s]$ and $[K]$ is a compact subsets of
+$\displaystyle \RR^n$ because it is a finite union of the compact sets
+$[s]$ for $(s) \in K$.
+
+\pdfF{alg_top/simpcpx2}{Simplicial complex}{The simplicial complex
+$K$ represented by the set $\displaystyle [K] \subset \RR^3$ in the
+figure above is the union of the set of all the open faces of the
+closed $3$-simplex $[\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\VEC{x}_3]$ listed in
+Figure~\ref{SimpCpx1} with the set
+$\displaystyle \left\{ (\VEC{x}_0,\VEC{x}_4,\VEC{x}_5),
+(\VEC{x}_0,\VEC{x}_4), (\VEC{x}_0,\VEC{x}_5), (\VEC{x}_4,\VEC{x}_5),
+(\VEC{x}_4), (\VEC{x}_5) \right\}$.  The dimension of $K$ is $3$.}{SimpCpx2}
+
+All the following notions will be very useful to study simplicial
+complexes.
+
+\begin{defn}
+A subset $L$ of a simplicial complex $K$ is called a
+{\bfseries subcomplex}\index{Subcomplex} of $K$ if $L$ is itself a
+simplicial complex.
+\end{defn}
+
+\begin{defn}
+Let $K$ be a simplicial complex of dimension $k$.  Given
+$0 \leq r \leq k$, the {\bfseries $\mathbf{r}$-skeleton}\index{$r$-Skeleton} 
+of $K$, denoted $\displaystyle K^r$, is the set
+$\displaystyle K^r = \left\{ (s) : (s) \in K \ \text{and}\ \dim\, (s)
+\leq r \right\}$.
+\end{defn}
+
+Since a closed $k$-simplex $[s]$ is the union of all its open faces,
+we may treat $s$ as the set of all the open faces of $[s]$; namely,
+we may treat $s$ as a simplicial complex.  Note that all the open
+faces of $[s]$ are open $m$-simplices with $m \leq \dim\, [s]$.
+By extension, the {\bfseries $r$-skeleton}\index{$r$-Skeleton} of $s$ for
+$0 \leq r \leq k$, denoted $\displaystyle s^r$, is the set of all open
+faces of $[s]$ corresponding to open $m$-simplex with $m \leq r$.
+Moreover, $\displaystyle [s^r]$ will denote the union
+of all the open simplices in $\displaystyle s^r$.
+
+\begin{defn}
+Given $\displaystyle \VEC{x} \in \RR^n$ and
+$\displaystyle A \subset \RR^n$, the pair $(\VEC{x},A)$ is in
+{\bfseries general position}\index{General Position} if
+$\VEC{x} \not\in A$ and, for any two distinct points
+$\VEC{a}_1$ and $\VEC{a}_2$ in $A$, we have that
+$[\VEC{x},\VEC{a}_1] \cap [\VEC{x},\VEC{a}_2] = \{ \VEC{x}\}$.
+If $(\VEC{x},A)$ is in general position, then the {\bfseries cone}\index{Cone}
+with base $A$ and vertex $\VEC{x}$, denoted $\VEC{x} \ast A$, is the set
+$\displaystyle \VEC{x} \ast A = \bigcup_{\VEC{a} \in A} [\VEC{x},\VEC{a}]$.
+
+Given a simplicial complex $K$, the {\bfseries cone}\index{Cone}
+$\VEC{x} \ast K$ is the simplicial
+complex consisting of all the open simplices of the form
+$(\VEC{x},\VEC{x}_0, \VEC{x}_1, \ldots , \VEC{x}_k)$ with
+all their faces for all
+$(\VEC{x}_0, \VEC{x}_1, \ldots , \VEC{x}_m) \in K$ with $m \leq \dim K$.
+\end{defn}
+
+The closed $k$-simplex
+$[s] = [\VEC{x}_0,\VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k]$ can be
+expressed as $\displaystyle [s] = \VEC{x} \ast [s^{k-1}]$ for any
+$\VEC{x} \in (s)$.
+
+\subsection{Barycentric Subdivisions} \label{ssectBarSubd}
+
+\begin{defn}
+The {\bfseries barycentre}\index{Barycentre} of an open $k$-simplex
+$(s) = (\VEC{x}_0, \VEC{x}_1, \ldots, \VEC{x}_k)$ is the point
+$\VEC{b}_{(s)} \in (s)$ defined by
+$\displaystyle \VEC{b}_{(s)} = (k+1)^{-1} \sum_{j=0}^k \VEC{x}_j$.
+\end{defn}
+
+\begin{defn}
+A {\bfseries subdivision}\index{Subdivision} of a simplicial complex
+$K$ is another simplicial complex $L$ such that $[L] = [K]$ and, if
+$(s) \in L$, then $(s)$ is a subset of an open simplex in $K$.
+\end{defn}
+
+\pdfF{alg_top/simpcpx3}{Subdivision of a simplicial complex}{
+(b) and (c) illustrate two possible subdivisions of the simplicial
+complex illustrated in (a).  (b) is not a subdivision of the
+simplicial complex illustrated in (c) and vice-versa.}{SimpCpx3}
+
+\begin{defn}
+A {\bfseries partial order}\index{Partial order} on a simplicial
+complex $K$ is defined as follows.  Given $(s_1)$ and $(s_2)$ in $K$,
+we write that $(s_1) \leq (s_2)$ if $(s_1)$ is an open face of
+$[s_2]$.  If in addition $(s_1) \neq (s_2)$, we write that
+$(s_1) < (s_2)$.
+\end{defn}
+
+The following result will play a fundamental role in the ``simplicial
+approximation'' of ``simplicial function'' in the next subsection.
+Its proof is not too complicated but it is long (see \cite{ST}).  It
+uses the concept of general position introduced above.
+
+\begin{theorem}
+Suppose that $K$ is a simplicial complex in $\displaystyle \RR^n$.  Let
+$\displaystyle K^{[1]}$ be the simplicial complex defined by
+\begin{align*}
+K^{[1]} & = \left\{ (\VEC{b}_{(s_0)}, \VEC{b}_{(s_1)},\ldots, \VEC{b}_{(s_m)}) :
+(s_1) < (s_2) < \ldots < (s_m) \ \text{and} \right. \\
+&\hspace{13em} \left.  \ (s_j) \in K \ \text{for}
+\ 0 \leq j \leq m \leq \dim K  \right\} \ .
+\end{align*}
+Then $\displaystyle K^{[1]}$ is a subdivision of $K$
+(Figure~\ref{SimpCpx4}).  Moreover, we have that \\
+$(\VEC{b}_{(s_0)}, \VEC{b}_{(s_1)},\ldots, \VEC{b}_{(s_m)})$ is a
+subset of $(s_m)$ for all sequences
+$(s_1) < (s_2) < \ldots < (s_m)$ of open simplices in $K$.
+\end{theorem}
+
+\pdfF{alg_top/simpcpx4}{First barycentric subdivision}{We have
+illustrated some of the open simplices in the simplicial complex
+$\displaystyle s^{[1]}$ where $s$ is the simplicial complex
+associated to the closed $2$-simplex $[s] = [x_0,x_1,x_2]$.  We have
+drawn in blue the open $2$-simplex
+$(\VEC{b}_{(s_1)}, \VEC{b}_{(s_2)}, \VEC{b}_{(s_3)})$ for $(s_1) = (\VEC{x}_1)$,
+$(s_2) = (\VEC{x}_1,\VEC{x}_2)$ and $(s_3) = (s)$.  We effectively
+have that $(s_1) < (s_2) < (s_3)$.  We have drawn in red the
+open $1$-simplex $(\VEC{b}_{(s_4)}, \VEC{b}_{(s_3)})$ for
+$(s_4) = (\VEC{x}_2)$ and $(s_3)$.  Again, we have that $(s_4) < (s_3)$.
+Note that the open $0$-simplex $(\VEC{b}_{(t)})$ is associated to a
+$0$-simplex $(t)$ is $(t)$ itself.}{SimpCpx4}
+
+It follows from the definition of $\displaystyle K^{[1]}$ that
+$\dim K^{[1]} = \dim K$.
+
+\begin{defn} \label{defnBarySubd}
+Let $K$ be a simplicial complex in $\displaystyle \RR^n$.
+The simplicial complex $\displaystyle K^{[1]}$ is called the
+{\bfseries first barycentric subdivision}\index{Barycentric
+Subdivision!First Barycentric Subdivision} of $K$.  Inductively, we
+may define the {\bfseries $\displaystyle \mathbf{m^{th}}$ barycentric
+subdivision}\index{Barycentric Subdivision!$m^{th}$
+Barycentric Subdivision} of $K$ as the simplicial complex
+$\displaystyle K^{[m]} = (K^{[m-1]})^{[1]}$ for $m>1$.
+\end{defn}
+
+Recall that the diameter of a set $\displaystyle S \subset \RR^n$ is defined
+by $\displaystyle \diam S = \inf_{\VEC{x},\VEC{y} \in S}
+\|\VEC{x}- \VEC{y}\|$ where $\|\cdot\|$ is a norm on
+$\displaystyle \RR^n$, usually the Euclidean norm. 
+
+\begin{lemma} \label{lemDiams}
+If $[s] = [\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k]$ is a
+closed $k$-simplex, then $\diam\, [s] = \|\VEC{x}_{j_1}  - \VEC{x}_{j_2}\|$
+for some $j_1,j_2 \in \{0,1,2,\ldots,k\}$.
+\end{lemma}
+
+\begin{proof}
+Since $[s]$ is a compact set, there exist $\VEC{y}_1$ and $\VEC{y}_2$
+in $[s]$ such that $\diam\, [s] = \|\VEC{y}_1 - \VEC{y}_2\|$.
+Without loss of generality, suppose that $\VEC{y}_2$ is not a vertex.
+Then we may express $\VEC{y}_2$ as
+$\VEC{y}_2 = p \VEC{w}_1 + (1-p) \VEC{w}_2$ for some $0 < p < 1$ and
+$\VEC{w}_1, \VEC{w}_2 \in [s]$.  Let
+$g(t) = \|\VEC{y}_1 - t \VEC{w}_1 - (1-t) \VEC{w}_2\|$ for
+$0 \leq t \leq 1$.  We have that $g$ is a convex function; namely,
+$g(tq_1 + (1-t)q_2) \leq t g(q_1) + (1-t) g(q_2)$ for $0\leq q_1,q_2 \leq 1$
+and $0 \leq t \leq 1$.  Here is a possible graph of $g$.
+\pdfbox{alg_top/convex}
+Thus $g$ reaches its maximum at one of the end points.  This implies
+that $\diam\, [s] = g(p) < \max\{ g(0),g(1)\}
+= \max \{ \|\VEC{y}_1 - \VEC{w}_1\|, \|\VEC{y}_1 -\VEC{w}_2\| \}$. 
+This is a contradiction.
+\end{proof}
+
+\begin{defn}
+Let $K$ be a simplicial complex.  The {\bfseries mesh}\index{Mesh}
+of $K$ is defined as $\displaystyle \mesh K = \max_{(s) \in K} \diam\, [s]$.
+\end{defn}
+
+\begin{prop} \label{propMeshMBS}
+Suppose that $K$ is a simplicial complex of dimension $k$.  Then
+$\displaystyle \mesh K^{[1]} \leq (k/(k+1)) \mesh K$.
+\end{prop}
+
+\begin{proof}
+By definitions of $\displaystyle K^{[1]}$ and the mesh of a simplicial
+complex, there exists $(s_1) < (s_2) < \ldots < (s_m)$ in $K$ with $m \leq k$
+such that
+$\displaystyle \mesh K^{[1]}
+= \diam\, [\VEC{b}_{(s_0)}, \VEC{b}_{(s_1)},\ldots, \VEC{b}_{(s_m)}]$.
+It follows from Lemma~\ref{lemDiams} that
+$\displaystyle \mesh^{[1]} K = \|\VEC{b}_{(s_p)} - \VEC{b}_{(s_q)}\|$ for some
+$p,q \in \{0,1,\ldots,m\}$.  Without loss of generality, we may
+re-index the vertices of $K$ and assume
+that $p < q$, $(s_p) = (\VEC{x}_0,\VEC{x}_1,\ldots, \VEC{x}_p)$ and
+$(s_q) = (\VEC{x}_0,\VEC{x}_1,\ldots, \VEC{x}_q)$.  Hence
+\begin{align*}
+&\mesh K^{[1]} = \|\VEC{b}_{(s_p)} - \VEC{b}_{(s_q)}\|
+= \left\| \frac{1}{p+1} \sum_{j=0}^p \VEC{x}_j - 
+\frac{1}{q+1} \sum_{i=0}^q \VEC{x}_i \right\| \\
+&= \left\| \left(\frac{1}{p+1}- \frac{1}{q+1}\right) \sum_{j=0}^p \VEC{x}_j - 
+\frac{1}{q+1} \sum_{i=p+1}^q \VEC{x}_i \right\|
+= \left\| \frac{q-p}{(p+1)(q+1)}\sum_{j=0}^p \VEC{x}_j - 
+\frac{1}{q+1} \sum_{i=p+1}^q \VEC{x}_k \right\| \\
+&= \frac{1}{q+1}\left\| \frac{q-p}{p+1}\sum_{j=0}^p \VEC{x}_j - 
+\sum_{i=p+1}^q \VEC{x}_i \right\|
+= \frac{1}{q+1}\left\| \frac{q+1}{p+1}\sum_{j=0}^p \VEC{x}_j - 
+\sum_{i=0}^q \VEC{x}_i \right\| \\
+&= \frac{1}{q+1}\left\| \sum_{i=0}^q \left( \frac{1}{p+1}\sum_{j=0}^p
+\VEC{x}_j - \VEC{x}_i \right) \right\|
+= \frac{1}{(q+1)(p+1)} \left\| \sum_{i=0}^q \left( \sum_{j=0}^p
+(\VEC{x}_j - \VEC{x}_i) \right) \right\| \\
+&\leq \frac{1}{(q+1)(p+1)} \sum_{i=0}^q \sum_{j=0}^p
+\left\|  \VEC{x}_j - \VEC{x}_i\right\| \ ,
+\end{align*}
+where we have used $(q-p) = (q+1) - (p+1)$ to get the fifth equality.
+There are $(p+1)(q+1) - (p+1) = q(p+1)$ terms in the last sum because
+$(p+1)$ of the terms are null, those for $i = j$.  Moreover
+$\left\|  \VEC{x}_j - \VEC{x}_i\right\| \leq \mesh K$ for all $i$ and $j$.
+thus
+\[
+\mesh K^{[1]} \leq \frac{q(p+1)}{(q+1)(p+1)} \mesh K 
+= \frac{q}{q+1} \mesh K \leq \frac{k}{k+1} \mesh K
+\]
+because $q \leq k$.
+\end{proof}
+
+It follows from the previous proposition that
+$\displaystyle \mesh K^{[m]} \leq \big( (k/(k+1)\big)^m \mesh K \to 0$
+as $m \to \infty$.
+
+\subsection{Simplicial Approximation} \label{ssectSA}
+
+\begin{defn} \label{defnsimplMaps}
+Let $K$ and $L$ be two simplicial complexes.  A
+{\bfseries simplicial map}\index{Simplicial Map} between $K$ and $L$ is a
+function $\phi :[K] \to [L]$ that satisfies the following conditions.
+\begin{enumerate}
+\item $\phi(\VEC{x})$ is a vertex of $L$ if $\VEC{x}$ is a vertex of $K$.
+\item If $(s) = (\VEC{x}_0,\VEC{x}_1, \ldots, \VEC{x}_k)\in K$, then
+there exists $(t) \in L$ such that $\phi(\VEC{x}_i) \in [t]$ for
+$0 \leq i \leq k$. 
+\item If $\VEC{x} \in (s) = (\VEC{x}_0,\VEC{x}_1, \ldots, \VEC{x}_k)$
+and $\displaystyle \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j$ with $a_j >0$
+and $\displaystyle \sum_{j=0}^k a_j = 1$, then 
+$\displaystyle \phi(\VEC{x}) = \sum_{j=0}^k a_j \phi(\VEC{x}_j)$.
+\end{enumerate}
+\end{defn}
+
+The set $\displaystyle \bigg\{ \phi(\VEC{x}) :
+\displaystyle \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j \ \text{with}\ a_j >0
+\ \text{and} \ \sum_{j=0}^k a_j = 1\bigg\}$ in (3) represents an
+open face of $[t]$ mentioned in (2).  It may not be $(t)$ itself because
+$\phi(\VEC{x}_i)$ for $0\leq i \leq k$ may not be all
+the vertices of $[t]$.
+
+\begin{defn} \label{defnStarV}
+Let $K$ be a simplicial complex and $\VEC{x}$ be a vertex of
+$K$.  The {\bfseries star}\index{Star} of $\VEC{x}$, denoted $\St(\VEC{x})$,
+is the set defined by $\displaystyle
+\St(\VEC{x}) = \bigcup_{\substack{(s) \in K\\\VEC{x} \in [s]}} (s)$
+(Figure~\ref{Star1}).
+\end{defn}
+
+\pdfF{alg_top/star1}{Star of a vertex}{We have illustrated on the
+left a simplicial complex $K$ where $[K]$ is the union of the
+closed simplices $[\VEC{x}_0,\VEC{x}_1,\VEC{x}_6]$,
+$[\VEC{x}_1,\VEC{x}_5,\VEC{x}_6]$, $[\VEC{x}_3,\VEC{x}_4,\VEC{x}_5]$, 
+$[\VEC{x}_1,\VEC{x}_2]$ and $[\VEC{x}_2,\VEC{x}_3]$.  We have
+illustrated on the right in blue the star of $\VEC{x}_1$.}{Star1}
+
+Given a vertex $\VEC{x}$ of a simplicial complex $K$, we have that
+$\St(\VEC{x})$ is open in the induced topology on $[K]$ from
+$\displaystyle \RR^n$.  Moreover, $\VEC{x}$ is the only vertex of $K$ in
+$\St(\VEC{x})$ and
+$\displaystyle \{\St(\VEC{x}) : \VEC{x} \ \text{is a vertex of} \ K\}$
+is an open cover of $[K]$ with respect to the induced topology
+on $[K]$ from $\displaystyle \RR^n$.
+
+\begin{defn}
+Let $K$ and $L$ be two simplicial complexes.  A
+simplicial map $\phi:[K]\to [L]$ is a {\bfseries simplicial
+approximation}\index{Simplicial Approximation} of a continuous
+function $f:[K] \to [L]$ if
+$f( \St(\VEC{x}) ) \subset \St(\phi(\VEC{x}))$ for all vertices
+$\VEC{x}$ of $K$.
+\end{defn}
+
+\begin{prop} \label{propNfmg}
+Suppose that $K$ and $L$ are two simplicial complexes.
+If $\phi:[K]\to [L]$ is a simplicial approximation of a continuous
+function $f:[K] \to [L]$ and $\VEC{x} \in [K]$, then
+$f(\VEC{x})$ and $\phi(\VEC{x})$ belongs to the same closed simple
+$[t]$ with $(t) \in L$.
+\end{prop}
+
+\begin{proof}
+Given $\VEC{x} \in [K]$, there exists an open simplex
+$(s) = (\VEC{x}_0,\VEC{x}_1,\ldots, \VEC{x}_m) \in K$ such that
+$\VEC{x} \in (s)$.  Since
+$\VEC{x} \in (s) \subset \St(\VEC{x}_j)$ for all $0\leq j \leq m$, we
+get from the definition of simplicial approximation that
+$f(\VEC{x}) \in f(\St(\VEC{x}_j)) \subset \St(\phi(\VEC{x}_j))$
+for $0 \leq j \leq m$.
+
+There exists an open simplex $(t) \in L$ such that $f(\VEC{x}) \in (t)$.
+Since $f(\VEC{x}) \in (t) \cap \St(\phi(\VEC{x}_j))$ for
+$0 \leq j \leq m$, we get that
+$(t) \cap \St(\phi(\VEC{x}_j)) \neq \emptyset$
+for $0 \leq j \leq m$.  By definition of simplicial complex, we
+have that $(t) \subset \St(\phi(\VEC{x}_j))$
+for $0 \leq j \leq m$.  By definition of the star of a vertex, we
+have that $\phi(\VEC{x}_j)$ for $0 \leq j \leq m$ are vertices of 
+$[t]$.  Note that they may not be all the vertices of $[t]$.
+
+Since $\VEC{x} \in (s)$, we have that
+$\displaystyle \VEC{x} = \sum_{j=0}^m a_j \VEC{x}_j$ for some
+$a_j> 0$ such that $\displaystyle \sum_{j=0}^m a_j = 1$.  Hence, we
+get from the definition of simplicial map that
+$\displaystyle \phi(\VEC{x}) = \sum_{j=0}^m a_j \phi(\VEC{x}_j)$ with
+$a_j> 0$ such that $\displaystyle \sum_{j=0}^m a_j = 1$.  Thus
+$\phi(\VEC{x}) \in \big(\phi(\VEC{x}_0), \phi(\VEC{x}_1), \ldots,
+\phi(\VEC{x}_k)\big) \subset [t]$.  Note that we may not have that
+$\big(\phi(\VEC{x}_0), \phi(\VEC{x}_1), \ldots, \phi(\VEC{x}_k)\big) = (t)$
+because, as we said above, $\phi(\VEC{x}_j)$ for $0 \leq j \leq m$ may
+not be all the vertices of $[t]$.  Therefore
+$\big(\phi(\VEC{x}_0), \phi(\VEC{x}_1), \ldots, \phi(\VEC{x}_k)\big)$
+may be only an open face of $[t]$ not equal to $(t)$ itself..
+\end{proof}
+
+This proposition implies that
+$\displaystyle \|f - \phi\|_{[K]} = \max_{\VEC{x} \in [K]}
+\|f(\VEC{x}) - \phi(\VEC{x}\| \leq \mesh L$.
+
+\begin{prop}
+Suppose that $K$ and $L$ are two simplicial complexes.
+If $\phi:[K]\to [L]$ is a simplicial approximation of a simplicial map
+$f:[K] \to [L]$, then $\phi = f$.
+\end{prop}
+
+\begin{proof}
+For each vertex $\VEC{x} \in K$, we have that
+$f(\VEC{x}) \in f(\St(\VEC{x})) \subset \St(\phi(\VEC{x}))$.
+Since $f$ is a simplicial map, $f(\VEC{x})$ is a vertex of $L$.
+Since $\St(\phi(\VEC{x}))$ contains only one vertex of $L$, namely
+$\phi(\VEC{x})$, we get that $f(\VEC{x}) = \phi(\VEC{x})$.
+
+Since $f$ and $\phi$ are simplicial maps that take the same value at
+all the vertices of $K$, then it follows from the third condition of the
+definition of simplicial maps, Definition~\ref{defnsimplMaps},
+that $f = \phi$.
+\end{proof}
+
+The following theorem provides a necessary and sufficient condition to
+create a simplicial approximation to a continuous function between two
+simplicial complexes.
+
+\begin{prop} \label{propExtSApprox}
+Suppose that $K$ and $L$ are two simplicial complexes and that
+$f:[K]\to [L]$ is a continuous function.  If $\phi$ is a map defined
+on the set of vertices of $K$ with values in the set of vertices of
+$L$, then $\phi$ can be extended to a simplicial approximation of
+$f$ if and only if $f(\St(\VEC{x})) \subset \St(\phi(\VEC{x}))$ for
+all vertices $\VEC{x}$ of $K$.
+\end{prop}
+
+\begin{proof}
+Obviously, if $\phi$ can be extended to a simplicial approximation of
+$f$, then we have from the definition of simplicial approximation that
+$f(\St(\VEC{x})) \subset \St(\phi(\VEC{x}))$ for
+all vertices $\VEC{x}$ of $K$.
+
+Suppose that $f(\St(\VEC{x})) \subset \St(\phi(\VEC{x}))$ for
+all vertices $\VEC{x}$ of $K$.  Consider a simplex
+$(s) = (\VEC{x}_0,\VEC{x}_1,\ldots,\VEC{x}_m) \in K$.
+Since $(s) \subset \St(\VEC{x}_j)$ for $0 \leq j \leq m$, we have
+that $f\big( (s)\big) \subset f(\St(\VEC{x}_j)) \subset \St(\phi(\VEC{x}_j))$
+for $0 \leq j \leq m$.  Thus $\displaystyle
+\bigcap_{j=0}^m \St(\phi(\VEC{x}_j)) \neq \emptyset$.  Therefore,
+there exists an open simplex $(t) \subset \St(\phi(\VEC{x}_j))$ for
+$0 \leq j \leq m$.  We get that $\phi(\VEC{x}_j)$ for $0 \leq j \leq m$
+are vertices of $[t]$.  Thus, we may define $\phi\big|_{[s]}$ by
+$\displaystyle \phi\big|_{[s]}(\VEC{x}) = \sum_{j=0}^m a_j \phi(\VEC{x}_j)$ for
+$\displaystyle \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j$ with $a_j >0$
+and $\displaystyle \sum_{j=0}^k a_j = 1$.  In particular,
+$\phi\big((s)\big) \subset [t]$.
+
+Since $(s_1) = (s_2)$ or $(s_1) \cap (s_2) = \emptyset$ for all
+simplices $(s_1)$ and $(s_2)$ of $K$, and $\phi\big|_{[s_1]}(\VEC{x})
+= \phi\big|_{[s_2]}(\VEC{x})$ for $\VEC{x} \in [s_1]\cap [s_2]$,
+we have that $\phi$ is a well defined simplicial map between $K$ and
+$L$.
+\end{proof}
+
+\begin{theorem} \label{thESAf}
+Suppose that $K$ and $L$ are two simplicial complexes and that
+$f:[K]\to [L]$ is a continuous function.  Moreover, suppose that
+$\{K_m\}_{m\in \NN}$ is a collection of subdivision of $K$ such that
+$\mesh K_m \to 0$ as $m \to \infty$.  Then there exists $M>0$ such that
+there exists a simplicial approximation $\phi_m:[K_n] \to [L]$ of $f$
+for each $m \geq M$.
+\end{theorem}
+
+\begin{proof}
+Since $\displaystyle \{\St(\VEC{y}) : \VEC{y} \ \text{is a vertex of} \ L\}$
+is an open cover of $[L]$ with respect to the induced topology on
+$[L]$ and $f:[K]\to [L]$ is continuous, we have that
+$\displaystyle \{f^{-1}(\St(\VEC{y})) :
+\VEC{y} \ \text{is a vertex of} \ L\}$ is an open cover of $[K]$ with
+respect to the induce topology om $[K]$.  Since $[K]$ is compact,
+there exists a number $\epsilon>0$, called the Lebesgue number, such
+that any open ball in $[K]$ of radius less than or equal to $\epsilon$
+is a subset $\displaystyle f^{-1}(\St(\VEC{y}))$ for some vertex
+$\VEC{y}$ of $L$ \footnote{Since the number of vertices of $L$ is
+finite, we could have proved the existence of $\epsilon$ without
+making use of the theory of compact sets.}.
+
+Choose $M$ such that $\mesh K_m < \epsilon/2$ for $m \geq M$.
+Assume that $m \geq M$.  If ${s} \in K_m$, then
+$\diam [s] \leq \mesh K_m < \epsilon/2$.  Hence, for each vertex
+$\VEC{x}$ of $K_m$, we have that
+$\displaystyle \St(\VEC{x}) \subset B_\epsilon(\VEC{x}) \subset 
+f^{-1}(\St(\VEC{y}))$ for some vertex $\VEC{y}$ of $L$; namely,
+\begin{equation} \label{scapproEq1}
+  f(\St(\VEC{x})) \subset \St(\VEC{y})
+\end{equation}
+for some vertex $\VEC{y}$ of $L$.  If there are more then one vertex
+$\VEC{y}$ of $L$ satisfying the previous statement, select one of
+them.  Let $\phi_m(\VEC{x}) = \VEC{y}$.  This define a map from the set
+of vertices of $K_m$ to the set of vertices of $L$.  We also have from
+(\ref{scapproEq1}) that
+$\displaystyle f(\St(\VEC{x})) \subset \St(\phi(\VEC{x}))$.
+We can then use Proposition~\ref{propExtSApprox} to get a simplicial
+approximation $\phi_m:[K_m] \to [L]$ of $f$.
+\end{proof}
+
+The previous theorem ensures that we can always find a simplicial
+approximation as closed as we want to a continuous function between
+two simplicial complexes.
+
+\begin{cor}
+Suppose that $K$ and $L$ are two simplicial complexes and that
+$f:[K]\to [L]$ is a continuous function.  Given $\epsilon >0$, there
+exist subdivisions $\tilde{K}$ and $\tilde{L}$ of $K$ and $L$
+respectively, and a simplicial approximation
+$\phi:[\tilde{K}]\to [\tilde{L}]$ of $f$, such that
+$\|f - \phi\|_{[K]} < \epsilon$.
+\end{cor}
+
+\begin{proof}
+As remarked after Proposition~\ref{propMeshMBS}, if
+$\displaystyle L_j = L^{[j]}$ for $\displaystyle j\in \NNp$, then we
+get a sequence of barycentric subdivisions of $L$ such that
+$\mesh L_j \to 0$ as $j \to \infty$.  Thus there exists $j > 0$ such that
+$\mesh L_j < \epsilon$.
+
+Similarly, if $\displaystyle K_m = K^{[m]}$ for
+$\displaystyle m\in \NNp$, then we get a sequence of barycentric
+subdivisions of $M$ such that $\mesh K_m \to 0$ as
+$m \to \infty$.  If we apply Theorem~\ref{thESAf} to
+$f:[K] \to [L_j] = [L]$ using the collection of subdivisions
+$\{K_m\}_{m\in \NNp}$ of $K$, we find that there exists $m > 0$ and
+a simplicial approximation $\phi:[K_m]\to [L_j]$ of $f$.
+As remarked after Proposition~\ref{propNfmg}, we then have that
+$\|f - \phi\|_{[K]} \leq \mesh L_j < \epsilon$.
+We take $\tilde{K} = K_m$ and $\tilde{L} = L_j$.
+\end{proof}
+
+\subsection{Oriented Simplicial Homology} \label{subsOShomo}
+
+From now on, when we refer to a simplicial simplex $K$, we assume that
+a fixed indexing of the vertices of $K$ has been selected.  More
+specifically, we assume that $\VEC{x}_0$, $\VEC{x}_1$, $\VEC{x}_2$,
+\ldots are the vertices of $K$.
+
+\begin{defn}
+Let $[s]= [\VEC{x}_{j_0}, \VEC{x}_{j_1}, \ldots, \VEC{x}_{j_k}]$ be a
+closed $k$-simplex.
+An {\bfseries oriented $\mathbf{k}$-simplex}\index{Oriented $k$-simplex}
+associated to $[s]$ is the pair $([s],\sigma)$ where
+$\sigma: \{j_0,j_1,j_2,\ldots,j_k\} \to \{j_0,j_1,j_2,\ldots,j_k\}$
+is a permutation.
+\end{defn}
+
+\begin{defn} \label{defnECordks}
+Let $[s]= [\VEC{x}_{j_0}, \VEC{x}_{j_1}, \ldots, \VEC{x}_{j_k}]$
+be a closed $k$-simplex.  We say that
+two oriented $k$-simplices $([s],\sigma_1)$ and $([s],\sigma_2)$ are
+{\bfseries equivalent}\index{Equivalent} if there exists an even
+permutation $\beta:\{j_0,j_1,j_2,\ldots,j_k\} \to \{j_0,j_1,j_2,\ldots,j_k\}$
+such that $\beta\circ \sigma_1 = \sigma_2$; namely,
+$\beta(\sigma_1(j_i)) = \sigma_2(j_i)$ for $0 \leq i \leq k$.
+\end{defn}
+
+The notion of equivalence defined in the previous definition is an
+equivalence relation that partitions the oriented $k$-simplices
+associated to a closed $k$-simplex into two equivalence classes.
+
+\begin{defn}
+Let $[s] = [\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_k}]$
+be a closed $k$-simplex.  We use the notations
+$\os{\VEC{x}_{\sigma(j_0)}}{}{\VEC{x}_{\sigma(j_1)}}{}{\VEC{x}_{\sigma(j_k)}}$
+or simply $\os{s_\sigma}{}{}{}{}$ to denote the equivalence class
+associated to $([s],\sigma)$.
+\end{defn}
+
+If $[s]=[\VEC{x}_{j_0}, \VEC{x}_{j_1}, \ldots, \VEC{x}_{j_k}]$, then the
+two equivalence classes of oriented $k$-simplices associate to $[s]$ are
+$\os{\VEC{x}_{j_0}}{\VEC{x}_{j_1}}{\VEC{x}_{j_2}}{}{\VEC{x}_{j_k}}$ and
+$\os{\VEC{x}_{j_1}}{\VEC{x}_{j_0}}{\VEC{x}_{j_2}}{}{\VEC{x}_{j_k}}$.
+Note that
+$\os{\VEC{x}_{j_0}}{\VEC{x}_{j_1}}{\VEC{x}_{j_2}}{}{\VEC{x}_{j_k}}$
+is the equivalence class associated to $([s],\sigma_1)$ with
+$\sigma_1 = \Id$ and
+$\os{\VEC{x}_{j_1}}{\VEC{x}_{j_0}}{\VEC{x}_{j_2}}{}{\VEC{x}_{j_k}}$
+is the equivalence class associated to $([s],\sigma_2)$ with
+$\sigma_2$ is defined by
+\[
+\sigma_2(j_m) = \begin{cases}
+j_1 & \quad \text{if} \ m = 0 \\
+j_0 & \quad \text{if} \ m = 1 \\
+j_m & \quad \text{otherwise}
+\end{cases}
+\]
+
+\begin{defn}
+Let $K$ be a simplicial complex and $R$ be an integral domain.
+The {\bfseries module of $\mathbf{k}$-chains}\index{Module of $k$-Chains}
+of $K$, denoted $C_k(K;R)$, is the free abelian group generated by the
+equivalence classes of oriented $k$-simplices $\os{s_\sigma}{}{}{}{}$ for all
+$(s) \in K$ where, given $(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1},
+\ldots, \VEC{x}_{j_k})$, we set
+$\os{s_{\sigma_1}}{}{}{}{} = - \os{s_{\sigma_2}}{}{}{}{}$ if
+$\beta\, \circ\, \sigma_1 = \sigma_2$ for an odd permutation
+$\beta:\{j_0,j_1,j_2,\ldots,j_k\} \to \{j_0,j_1,j_2,\ldots,j_k\}$.
+The elements of
+$C_k(K;R)$ are called {\bfseries $\mathbf{k}$-chains}\index{$k$-Chain}
+of $K$.
+\end{defn}
+
+For us, the integral domain $R$ will either be $\ZZ$ or $\RR$.
+
+The elements $c \in C_k(K;R)$ are finite sums of the form
+$\displaystyle c = \sum_{\substack{(s) \in K\\\dim(s)=k}} a_{(s)}
+\os{s}{}{}{}{}{}$ with $a_{(s)} \in R$, or more explicitly
+\[
+  c = \sum_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k}) \in K}
+a_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k})}
+\os{\VEC{x}_{j_0}}{}{\VEC{x}_{j_1}}{}{\VEC{x}_{j_k}}
+\]
+for $a_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k})}\in R$.
+
+\begin{defn}
+Let $K$ be a simplicial complex and $R$ be an integral domain.
+If $(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots, \VEC{x}_{j_k}) \in K$
+with $k>0$, then
+the {\bfseries boundary}\index{Boundary} of $\os{s}{}{}{}{} \in C_k(K;R)$,
+denoted $\partial_k \os{s}{}{}{}{}$, is defined by
+\[
+\partial_k \os{s}{}{}{}{} = \sum_{i=0}^k (-1)^i
+\os{\VEC{x}_{j_0}}{}{\VEC{x}_{j_1}}{\widehat{\VEC{x}_{j_i}}}{\VEC{x}_{j_k}}
+\in C_{k-1}(K;R) \ .
+\]
+(Figure~\ref{SimpHm1}).  If $(s) = (\VEC{x}_j) \in K$, then
+$\partial_0 \os{\VEC{x}_j}{}{}{}{} = 0$.
+\end{defn}
+
+\pdfF{alg_top/simphm1}{Boundary of $k$-chains}{Examples of the
+boundary of $k$-chains for the simplest $k$-chains.  For the $1$-chain
+$\os{\VEC{x}_0}{}{}{}{\VEC{x}_1}$, we have that
+$\partial_1 \os{\VEC{x}_0}{}{}{}{\VEC{x}_1} =
+\os{\VEC{x}_0}{}{}{}{} - \os{\VEC{x}_1}{}{}{}{}$.
+For the $2$-chain $\os{\VEC{x}_0}{\VEC{x}_1}{}{}{\VEC{x}_3}$, we have that
+$\partial_2 \os{\VEC{x}_0}{\VEC{x}_1}{}{}{\VEC{x}_3} =
+\os{\VEC{x}_1}{}{}{}{\VEC{x}_2} - \os{\VEC{x}_0}{}{}{}{\VEC{x}_2}
++ \os{\VEC{x}_0}{}{}{}{\VEC{x}_1} = 
+\os{\VEC{x}_0}{}{}{}{\VEC{x}_1} + \os{\VEC{x}_1}{}{}{}{\VEC{x}_2}
++ \os{\VEC{x}_2}{}{}{}{\VEC{x}_0}$
+as we have illustrated in the figure above.}{SimpHm1}
+
+\begin{defn}
+Let $K$ be a simplicial complex and $R$ an integral domain.
+The {\bfseries boundary map}\index{Boundary Map}
+$\partial_k: C_k(K;R) \to C_{k-1}(K;R)$ is define by
+$\displaystyle \partial_k \bigg( \sum_{\substack{(s) \in K\\ \dim(s) = k}}
+a_{(s)}\os{s}{}{}{}{} \bigg)
+= \sum_{\substack{(s) \in K\\ \dim(s) =k}}  a_{(s)} \partial_k  \os{s}{}{}{}{}$
+or more explicitly
+\begin{align*}
+&\partial_k \bigg( \sum_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k}) \in K}
+  a_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k})}
+  \os{\VEC{x}_{j_0}}{}{\VEC{x}_{j_1}}{}{\VEC{x}_{j_k}} \bigg) \\
+&\hspace{7em} = \sum_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k}) \in K}
+  a_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k})}
+\partial_k  \os{\VEC{x}_{j_0}}{}{\VEC{x}_{j_1}}{}{\VEC{x}_{j_k}} \ .
+\end{align*}
+\end{defn}
+
+A simple computation yields $\partial_{k-1} (\partial_k(c)= 0$ for all
+$k$-chains $c$.  Note that $\partial_{k-1} (\partial_k(c)$ is the sum
+of expressions of the form
+\begin{align*}
+&(-1)^{j_s+j_r}a_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}}
+\os{\VEC{x}_{j_0}}{\VEC{x}_{j_1}}
+{\ldots,\widehat{\VEC{x}_{j_r}}}{\widehat{\VEC{x}_{j_s}}}{\VEC{x}_{j_k}} \\
+&\qquad\qquad + (-1)^{j_s+j_r-1}a_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}}
+\os{\VEC{x}_{j_0}}{\VEC{x}_{j_1}}
+{\ldots,\widehat{\VEC{x}_{j_r}}}{\widehat{\VEC{x}_{j_s}}}{\VEC{x}_{j_k}}
+\end{align*}
+that cancel each other.
+
+\begin{defn}
+Let $K$ be a simplicial complex and $R$ an integral domain,\\
+$Z_k(K;R) = \{ c \in C_k(K;R) : \partial_k(c) = 0 \}$
+and $B_k(K;R) = \{ \partial_{k+1}(c) : c \in C_{k+1}(K;R) \}$.
+The {\bfseries (simplicial) $\displaystyle \mathbf{k^{th}}$ homology
+module}\index{Homology Module!Simplicial $k^{th}$ Homology Module} of $K$ is the
+free abelian quotient group $H_k(K;R) = Z_k(K;R) / B_k(K;R)$.  The
+elements of $Z_k(K;R)$ are called {\bfseries cycles}\index{Cycle} and those of
+$B_k(K;R)$ are called {\bfseries boundaries}\index{Boundary}.
+The equivalence class of $H_k(K;R)$ associated to $c \in Z_k(K;R)$ is
+denoted $[c]_K$.
+\end{defn}
+
+Suppose that $K$ and $L$ are two simplicial complexes and that
+$f:[K] \to [L]$ is a homeomorphism that maps open simplices in $K$ to
+open simplices in $L$.  The map $C(f): C_k(K;R) \to C_k(L;R)$ defined by
+$\displaystyle C(f)\Big( \sum_{\substack{(s) \in K\\ \dim(s) =k}}
+a_{(s)}\os{s}{}{}{}{} \Big)
+= \sum_{\substack{(s) \in K\\ \dim(s) =k}} a_{(s)} \os{f((s))}{}{}{}{}$
+is an isomorphism.
+Since $C(f)$ commutes with $\partial_k$ for all $k$, we may use $C(f)$
+to induce a map $H(f): H_k(K;R) \to H_k(L,R)$ because
+$C(f)(Z_k(K;R)) \subset Z_k(L;R)$ and 
+$C(f)(B_k(K;R)) \subset B_k(L;R)$.
+
+\begin{prop} \label{propK0KZ}
+Let $K$ be a simplicial complex and $R$ be an integral domain.  The
+dimension of $H_0(K;R)$ is equal to the number of (connected) components
+of $[K]$.  Namely, the number of independent generators of $H_0(K;R)$
+is equal to the number of (connected) components of $[K]$.
+\end{prop}
+
+\begin{proof}[Proof (Sketch)]
+Since $Z_0(K;R) = C_0(K;R)$ and all elements of $C_0(K;R)$
+are of the form $\displaystyle c = \sum_{(\VEC{x}_j) \in K} a_{(\VEC{x}_j)}
+\os{\VEC{x}_j}{}{}{}{}$ with $a_{(\VEC{x}_j)} \in R$,  it therefore
+suffices to consider the linear independence of the equivalence
+classes in $H_0(K;R)$ associated to
+$\os{\VEC{x}_j}{}{}{}{} \in C_0(K;R)$ for $(\VEC{x}_j) \in K$ to
+determine the dimension of $H_0(K;R)$.
+
+If $(\VEC{x}_{j_0},\VEC{x}_{j_1}) \in K$, then
+$\partial_1 \os{\VEC{x}_{j_0}}{}{}{}{\VEC{x}_{j_1}} = \os{\VEC{x}_{j_1}}{}{}{}{}
+- \os{\VEC{x}_{j_0}}{}{}{}{}$.  Hence
+$\os{\VEC{x}_{j_0}}{}{}{}{}$ and $\os{\VEC{x}_{j_1}}{}{}{}{}$ are
+in the same equivalence classes of $H_0(K;R)$.
+Inductively, we find that two equivalence classes of
+$H_0(K;R)$, one associated to $\os{\VEC{x}_{j_0}}{}{}{}{}$ and one associated
+$\os{\VEC{x}_{j_1}}{}{}{}{}$, are distinct if there is no sequence
+$(x_{j_0},x_{k_1})$, $(x_{k_1},x_{k_2})$, $(x_{k_2},x_{k_3})$, \ldots,
+$(x_{k_{m-1}},x_{k_m})$, $(x_{k_m},x_{j_1})$ of open $1$-simplices in
+$K$.  This is only possible if $\VEC{x}_{j_0}$ and $\VEC{x}_{j_1}$
+belongs to two distinct connected components of $[K]$.
+\end{proof}
+
+\begin{egg}
+We consider the simplicial complex
+\[
+K = \{ (\VEC{x}_0), (\VEC{x}_1),
+(\VEC{x}_2), (\VEC{x}_0,\VEC{x}_1), (\VEC{x}_1,\VEC{x}_2),
+(\VEC{x}_0,\VEC{x}_2), (\VEC{x}_0,\VEC{x}_1,\VEC{x}_3) \} \ .
+\]
+
+\stage{a} It follows from Proposition~\ref{propK0KZ} that
+$\displaystyle H_0(K^1;\ZZ) \cong \ZZ$.
+
+\stage{b} We have that
+\begin{align*}
+C_1(K^1;\ZZ) &= \left\{ a_{(\VEC{x}_0,\VEC{x}_1)}
+\os{\VEC{x}_0}{}{}{}{\VEC{x}_1}
++ a_{(\VEC{x}_1,\VEC{x}_2)} \os{\VEC{x}_1}{}{}{}{\VEC{x}_2}
++ a_{(\VEC{x}_0,\VEC{x}_2)} \os{\VEC{x}_0}{}{}{}{\VEC{x}_2} : \right. \\
+&\hspace{7em} \left. a_{(\VEC{x}_0,\VEC{x}_1)}, a_{(\VEC{x}_1,\VEC{x}_2)},
+a_{(\VEC{x}_0,\VEC{x}_2)} \in \ZZ \right\}
+\cong \ZZ^3
+\end{align*}
+and
+\begin{align*}
+&\partial_1 \left(a_{(\VEC{x}_0,\VEC{x}_1)} \os{\VEC{x}_0}{}{}{}{\VEC{x}_1}
++ a_{(\VEC{x}_1,\VEC{x}_2)} \os{\VEC{x}_1}{}{}{}{\VEC{x}_2}
++ a_{(\VEC{x}_0,\VEC{x}_2)} \os{\VEC{x}_0}{}{}{}{\VEC{x}_2} \right) \\
+&\quad = a_{(\VEC{x}_0,\VEC{x}_1)}
+\left(\os{\VEC{x}_1}{}{}{}{} - \os{\VEC{x}_0}{}{}{}{} \right)
++ a_{(\VEC{x}_1,\VEC{x}_2)}
+\left(\os{\VEC{x}_2}{}{}{}{} - \os{\VEC{x}_1}{}{}{}{} \right)
++ a_{(\VEC{x}_0,\VEC{x}_2)}
+\left(\os{\VEC{x}_2}{}{}{}{} - \os{\VEC{x}_0}{}{}{}{} \right) \\
+&\quad = \left( a_{(\VEC{x}_0,\VEC{x}_1)} - a_{(\VEC{x}_1,\VEC{x}_2)} \right)
+\os{\VEC{x}_1}{}{}{}{}
+- \left( a_{(\VEC{x}_0,\VEC{x}_2)} + a_{(\VEC{x}_0,\VEC{x}_1)} \right)
+\os{\VEC{x}_0}{}{}{}{}
++ \left(a_{(\VEC{x}_1,\VEC{x}_2)} + a_{(\VEC{x}_0,\VEC{x}_2)} \right)
+\os{\VEC{x}_2}{}{}{}{} = 0
+\end{align*}
+if and only if
+$a_{(\VEC{x}_0,\VEC{x}_1)} = a_{(\VEC{x}_1,\VEC{x}_2)} 
+= - a_{(\VEC{x}_0,\VEC{x}_2)}$.  Hence
+\[
+Z_1(K^1;\ZZ)
+= \left\{ a \left( \os{\VEC{x}_0}{}{}{}{\VEC{x}_1}
++ \os{\VEC{x}_1}{}{}{}{\VEC{x}_2}
+- \os{\VEC{x}_0}{}{}{}{\VEC{x}_2} \right) : a \in \ZZ \right\}
+\cong \ZZ \ .
+\]
+We also have that $\displaystyle B_1(K^1;\ZZ) = \{ 0 \}$ because
+$\displaystyle C_2(K^1;\ZZ) = \{ 0 \}$.  Therefore
+$\displaystyle H_1(K^1;\ZZ) = Z_1(K^1;\ZZ) / B_1(K^1;\ZZ) \cong \ZZ$.
+
+\stage{c} It follows from Proposition~\ref{propK0KZ} that
+$H_0(K;\ZZ) \cong \ZZ$. 
+
+\stage{d} As before, we have that
+\[
+Z_1(K;\ZZ)
+= \left\{ a \left( \os{\VEC{x}_0}{}{}{}{\VEC{x}_1}
++ \os{\VEC{x}_1}{}{}{}{\VEC{x}_2}
+- \os{\VEC{x}_0}{}{}{}{\VEC{x}_2} \right) : a \in \ZZ \right\}
+\cong \ZZ \ .
+\]
+We have that
+\[
+C_2(K;\ZZ) = \left\{ a \os{\VEC{x}_0}{\VEC{x}_2}{}{}{\VEC{x}_3}
+: a \in \ZZ \right\} \cong \ZZ \ .
+\]
+Since
+\begin{equation} \label{eggHkKZ2}
+\partial_2 \left(a \os{\VEC{x}_0}{\VEC{x}_1}{}{}{\VEC{x}_2} \right)
+= a \left(\os{\VEC{x}_1}{}{}{}{\VEC{x}_2} - \os{\VEC{x}_0}{}{}{}{\VEC{x}_2}
++ \os{\VEC{x}_0}{}{}{}{\VEC{x}_1} \right)
+\end{equation}
+for $a \in \ZZ$, we get that
+\[
+B_1(K;\ZZ) = \left\{
+a \left(\os{\VEC{x}_1}{}{}{}{\VEC{x}_2} - \os{\VEC{x}_0}{}{}{}{\VEC{x}_2}
++ \os{\VEC{x}_0}{}{}{}{\VEC{x}_1} \right) : a \in \ZZ \right\}
+= Z_1(K^2;\ZZ) \cong \ZZ \ .
+\]
+Thus $H_1(K;\ZZ) = Z_1(K;\ZZ) / B_1(K;\ZZ) = 0$.
+
+\stage{e} Finally, it follows from (\ref{eggHkKZ2}) that
+$\partial_3 \left( a \os{\VEC{x}_1}{\VEC{x}_2}{}{}{\VEC{x}_3} \right) = 0$
+if and only if $a = 0$.  So $Z_2(K;\ZZ) = \{ 0 \}$ and therefore
+$H_2(K;\ZZ) = 0$.
+\end{egg}
+
+If $R = \RR$, then $C_k(K,\RR)$, $B_k(K,\RR)$ can be treated as
+vector spaces over $\RR$.
+
+We now define the Euler characteristic of a simplicial complex and
+deduce some very interesting properties associated to
+the Euler characteristic of a simplicial complex.
+
+\begin{defn}   \label{defnBettiEulerC}
+Let $K$ be a simplicial complex.
+The {\bfseries $\displaystyle \mathbf{j^{th}}$ Betti
+number}\index{$\displaystyle j^{th}$ Betti Number}
+of $K$, denoted $\beta_j$, is the non-negative integer defined by
+$\beta_j = \dim(H_j(K;\RR))$.
+The {\bfseries Euler characteristic}\index{Euler Characteristic} of $K$,
+denote $\Chi(K)$, is the integer defined by
+$\displaystyle \Chi(K) = \sum_{j=0}^{\dim(K)} (-1)^j \beta_j$.
+\end{defn}
+
+Some of the readers may have recognized the famous Euler
+characteristic formula introduced in undergraduate geometry courses
+\cite{C}. 
+Suppose that $K$ is the triangulation of the unit sphere
+$\displaystyle S^2 \subset \RR^3$.   The Euler characteristic of this
+triangulation $K$ of $\displaystyle S^2$ is given by $V - E + F$ where
+$V$ is the number of vertices, $E$ is the number of edges, and $F$ is
+the number of faces (i.e. triangles) of $K$.  It is a 
+value independent of the triangulation of $\displaystyle S^2$.
+
+\begin{theorem} \label{thmEulerAlpha}
+Let $K$ be a simplicial complex and $\alpha_j$ be the number of
+open $j$-simplices in $K$.  Then
+$\displaystyle \Chi(K) = \sum_{j=0}^{\dim(K)} (-1)^j \alpha_j$.
+\end{theorem}
+
+\begin{proof}
+Let $C_{-1}(K;\RR) = \{ 0 \}$.
+Since $\partial_0(\os{\VEC{x}_j}{}{}{}{}) = 0$ for all vertices $\VEC{x}_j$
+of $K$, we may also set $B_{-1}(K;\RR) = \{ 0 \}$.  Since
+$\partial_i: C_i(K,\RR) \to C_{i-1}(K;\RR)$ is a linear operator for
+$0 \leq i \leq \dim(K)$, we have that
+\[
+\alpha_i = \dim(C_i(K;\RR)) = \dim(\KE(\partial_i)) + \dim(\IMG(\partial_i))
+= \dim(Z_i(K;\RR)) + \dim(B_{i-1}(K;\RR))
+\]
+for $0\leq i \leq \dim(K)$.  We also have that
+\[
+\beta_i = \dim(H_i(K;\RR)) = \dim\left(Z_i(K;\RR)/B_i(K;\RR)\right)
+= \dim(Z_i(K;\RR)) - \dim(B_i(K;\RR))
+\]
+for $0\leq i \leq \dim(K)$.  Hence
+\begin{align*}
+\Chi(K) &= \sum_{i=0}^{\dim(K)} (-1)^i \beta_i
+= \sum_{i=0}^{\dim(K)} (-1)^i \left( \dim(Z_i(K;\RR)) -
+\dim(B_i(K;\RR)) \right) \\
+&= \sum_{i=0}^{\dim(K)} (-1)^i \dim(Z_i(K;\RR))
++ \sum_{i=0}^{\dim(K)} (-1)^{i+1} \dim(B_i(K;\RR)) \\
+&= \sum_{i=0}^{\dim(K)} (-1)^i \dim(Z_i(K;\RR))
++ \sum_{i=1}^{1+\dim(K)} (-1)^i \dim(B_{i-1}(K;\RR)) \\
+&= \big( \dim(Z_0(K;\RR)) + \underbrace{\dim(B_{-1}(K;\RR))}_{=0} \big) \\
+&\qquad
++ \sum_{i=1}^{\dim(K)} (-1)^i \left( \dim(Z_i(K;\RR)) + \dim(B_{i-1}(K;\RR))
+\right) \\
+&\qquad + (-1)^{1+\dim(K)} \underbrace{\dim(B_{\dim(K)}(K;\RR))}_{=0} \\
+&= \sum_{i=0}^{\dim(K)} (-1)^i \left( \dim(Z_i(K;\RR)) + \dim(B_{i-1}(K;\RR))
+\right)
+= \sum_{i=0}^{\dim(K)} (-1)^i \alpha_i \ .
+\end{align*}
+Note that
+$\dim(B_{\dim(K)}(K;\RR)) = 0$ because $C_{1+\dim(K)}(K;\RR) = \{ 0 \}$.
+\end{proof}
+
+\subsection{Reduced and Relative Homology} \label{ssectSimplRDh}
+
+Let $K$ be a simplicial complex and $R$ be an integral domain.
+We have by definition that $\partial_0(c) = 0$ for all 
+$c \in C_0(K;R)$.  Namely, we are assuming that the
+image of $\partial_0$ is in the space $C_{-1}(K;R) = \{ 0 \}$.
+
+We replace $C_{-1}(K;R) = \{0\}$ and the boundary operator
+$\partial_0 : C_0(K;R) \to C_{-1}(K;R)$ 
+to obtain a slightly new collection of homology modules.
+Let
+\[
+C_k^\sharp(K;R) = \begin{cases}
+R & \quad \text{if} \ k = -1 \\
+C_k(K;R) & \quad \text{if} \ k \neq -1
+\end{cases}
+\]
+Also, let $\displaystyle \partial_k^\sharp = \partial_k$ for $k \neq 0$ and
+\[
+\partial_0^\sharp \Big( \sum_{(\VEC{x}_j)\in K}
+a_{(\VEC{x}_j)}\os{\VEC{x}_j}{}{}{}{} \Big)
+= \sum_{(\VEC{x}_j) \in K} a_{(\VEC{x}_j)}
+\]
+for $a_{(\VEC{x}_j)} \in R$.
+It is not difficult to prove that
+$\displaystyle \partial_0^\sharp \circ \partial_1^\sharp= 0$.
+We can then proceed as we did before to define
+$\displaystyle Z_k^\sharp(X;R)$, $\displaystyle B_k^\sharp(X;R)$
+and $\displaystyle H_k^\sharp(X;R)$.
+
+\begin{defn}
+Let $K$ be a simplicial complex and $R$ be an integral domain.
+The quotient $\displaystyle H_k^\sharp(K;R) =
+Z_k^\sharp(X;R) / B_k^\sharp(X;R)$ is called the
+{\bfseries reduced (simplicial) $\mathbf{k^{th}}$ homology
+module}\index{Homology Module!Reduced (Simplicial) $k^{th}$ Homology Module}
+of $X$.
+\end{defn}
+
+Again, let $K$ be a simplicial complex and $R$ be an integral domain.
+Suppose that $L$ is a simplicial subcomplex of $K$.  Recall that this
+means that $L \subset K$ and $L$ is itself a simplicial complex.
+Assuming that we keep the same indexing of the vertices of $L$ as the
+one used for $K$, then $C_k(L;R)$ is a submodule of $C_k(K;R)$.
+
+\begin{defn}
+Let $L$ be a simplicial subcomplex of a simplicial complex $K$ and $R$
+be an integral domain.
+The {\bfseries module of relative chains}\index{Module of Relative Chains}
+of $K \mod L$, denoted $C_k(K,L;R)$, is the free abelian group defined as
+$\displaystyle C_k(K,L;R) = C_k(K;R)/C_k(L;R)$.
+\end{defn}
+
+Since $\partial_k:C_k(L;R) \to C_{k-1}(L;R)$, we may define 
+the operator $\overline{\partial}_k:C_k(K,L;R) \to C_{k-1}(K,L;R)$
+as $\overline{\partial}_k(\relC[K,L]{c}) = \relC[K,L]{\partial_k c}$ for all
+$\relC[K,L]{c} \in C_k(K,L;R)$ where $\relC[K,L]{c}$ denotes the equivalence
+class in $C_k(K,L;R)$ associated to $c \in C_k(K;R)$.
+We get the following commutative diagram.
+\[
+\xymatrix@C+2ex{
+C_k(K;R) \ar[d]^{\partial_k} \ar[r]^-{\pi_k} & C_k(K,L;R)
+\ar[d]^{\overline{\partial}_k} \\
+C_{k-1}(K;R) \ar[r]^-{\pi_{k-1}} & C_{k-1}(K,L;R)
+}
+\]
+where $\pi_k:C_k(K;R) \to C_k(K,L;R)$ is the projection defined
+by $\pi_k(c) = \relC[K,L]{c}$ for $c \in C_k(K;R)$.
+
+\begin{defn}
+Let $L$ be a simplicial subcomplex of a simplicial complex $K$ and $R$
+be an integral domain.
+The {\bfseries relative (simplicial) $\displaystyle \mathbf{k^{th}}$ homology
+module}\index{Homology Module!Relative (Simplicial) $k^{th}$ Homology Module} of
+$K \mod L$ is the free abelian group
+$\displaystyle H_k(K,L;R) = \KE(\overline{\partial}_k)
+/\IMG(\overline{\partial}_{k-1})$.
+The equivalence class in $H_k(K,L;R)$ associated to
+$\relC[K,L]{c} \in Z_k(K,L;R) = \KE(\overline{\partial}_k)$ is denoted
+$[c]_{K,L}$.
+\end{defn}
+
+It is possible to develop the theory of reduced and relative homology
+as it is done in \cite{MUat} but we will only do so in the context of
+singular homology later on.
+Since singular homology seems to be more accessible and
+user friendly than simplicial homology (though the latest is more
+visual), we will only study reduced and relative homology
+in the context of singular homology in Sections~\ref{sectSingHom}.
+
+\section{Simplicial Cohomology} \label{sectSimplCohom}
+
+We only provide a very brief introduction to simplicial cohomology.
+We give just enough information to reach our goal of providing a
+relation between the de Rham cohomology on a manifold $S$ and the
+simplicial cohomology on a simplicial complex $K$ associated (in some
+way to be defined) to $S$.
+
+\subsection{Cohomology Modules}
+
+\begin{defn}
+Let $K$ be a simplicial complex.  For $0 \leq k \leq \dim(K)$, let
+$\displaystyle C^k(K;\RR)$ denote the dual space of $C_k(K;\RR)$.
+Namely, $\displaystyle C^k(K;\RR)$ is the vector space of all linear
+functionals on $C_k(K;\RR)$.  The elements of $\displaystyle C^k(K;\RR)$
+are called {\bfseries cochaines}\index{Cochaines}. 
+\end{defn}
+
+\begin{defn}
+Let $K$ be a simplicial complex.  The adjoint of the boundary map
+$\partial_k: C_k(K;\RR) \to C_{k-1}(K;\RR)$ is the map
+$\displaystyle \dfC_{k-1}: C^{k-1}(K;\RR) \to C^k(K;\RR)$ defined
+by
+\begin{equation} \label{simplCoOpEq1}
+\big(\dfC_{k-1}(\phi)\big)(c) = \phi\big(\partial_k(c)\big)
+\end{equation}
+for all $c \in C_k(K;\RR)$ and $\displaystyle \phi \in C^{k-1}(K;\RR)$.
+The map $\displaystyle \dfC_k$ is called
+the {\bfseries coboundary operator}\index{Coboundary Operator}.
+\end{defn}
+
+It is clear that $\displaystyle \dfC_k$ is well and uniquely
+defined by (\ref{simplCoOpEq1}).  It is easy to prove using
+$\partial_{k+1} \circ \partial_{k+2} = 0$ that
+$\displaystyle \dfC_{k+1} \circ \dfC_k = 0$.
+
+\begin{defn}
+Let $K$ be a simplicial complex,
+$\displaystyle Z^k(K;\RR) = \{ \phi \in C^k(K;\RR) :
+\dfC_k \phi = 0 \}$
+and $\displaystyle B^k(K;\RR) = \{ \dfC_{k-1} \phi : \phi \in
+C^{k-1}(K;\RR) \}$.
+The {\bfseries $\displaystyle \mathbf{k^{th}}$ cohomology
+module}\index{Cohomology Module!$k^{th}$ Cohomology Module}
+of $K$ is the
+quotient $\displaystyle H^k(K;\RR) = Z^k(K;\RR) / B^k(K;\RR)$.
+The elements of $\displaystyle Z^k(K;\RR)$ are called
+{\bfseries cocycles}\index{Cocycle} and those of
+$\displaystyle B^k(K;\RR)$ are called
+{\bfseries coboundaries}\index{Coboundary}.
+The equivalence class in $\displaystyle H^k(K;R)$ associated to
+$\displaystyle \phi \in Z^k(K;R)$ is denoted $[\phi]_K$.
+\end{defn}
+
+\begin{theorem} \label{thmHupeHdk}
+Let $K$ be a simplicial complex.  Then $\displaystyle H^k(K;\RR)$ is
+isomorphic to $\displaystyle (H_k(K;\RR))^\ast$.
+\end{theorem}
+
+\begin{proof}
+The map $\displaystyle h:H^k(K;\RR) \to (H_k(K;\RR))^\ast$ defined by
+$h([\phi]_K) = \phi$ for $\displaystyle \phi \in Z^k(K;\RR)$ is well
+defined because
+\begin{align*}
+\phi \in Z^k(K;\RR) & \Rightarrow \dfC_k(\phi) = 0
+\Rightarrow \phi(\partial_{k+1}(c)) = (\dfC_k \phi)(c) =  0
+\ \text{for all} \ c \in C_{k+1}(K;\RR) \\
+&\Rightarrow \phi = 0 \ \text{on} \ B_k(K;\RR)
+\Rightarrow \phi \in (H_k(K;\RR))^\ast \ .
+\end{align*}
+
+We have that $h$ is one-to-one.  Suppose that $[\phi_1]_K = [\phi_2]_K$.
+Then $\displaystyle \phi_1 - \phi_2 = \psi \in B^k(K;\RR)$.  Hence
+$h([\phi_1]_K) = h([\phi_2]_K) + h([\psi]_K) = h([\phi_2]_K)$
+because
+\begin{align*}
+\psi \in B^k(K;\RR)
+&\Rightarrow \psi = \dfC_{k-1} \eta \ \text{for some}
+\ \eta \in C^{k-1}(K;\RR) \\
+&\Rightarrow \psi(c) = (\dfC_{k-1} \eta)(c)
+= \eta(\partial_k(c)) = 0 \ \text{for all} \ c \in Z_k(K;\RR) \\
+&\Rightarrow \psi = 0 \ \text{on}\ Z_k(K;\RR)
+\Rightarrow h([\psi]_K) = 0 \ .
+\end{align*}
+
+We have that $h$ is onto.  Given $\displaystyle \phi \in (H_k(K;\RR))^\ast$,
+then $\displaystyle [\phi]_K \in H^k(K;\RR)$ because
+\begin{align*}
+\phi(c) = 0 \ \text{for all}\ c \in B_k(K;\RR)
+&\Rightarrow (\dfC_k \phi)(c) = \phi(\partial_{k+1}(c)) = 0
+\ \text{for all} \ c \in C_{k+1}(K;\RR) \ \text{since} \\
+&\qquad \ \partial_{k+1}(c) \in B_k(K;\RR) \ \text{for all}
+\ c \in C_{k+1}(K;\RR) \\
+&\Rightarrow \dfC_k \phi = 0 \Rightarrow \phi \in Z^k(K;\RR) \ .
+\end{align*}
+Thus $h([\phi]_K) = \phi$.
+
+We leave it to the reader to proof that $h$ is a linear mapping.
+
+Hence, the map $h$ is an isomorphism between $\displaystyle H^k(K;\RR)$ and
+$\displaystyle (H_k(K;\RR))^\ast$.
+\end{proof}
+
+It is possible to describe explicitly the action of the coboundary
+operator $\displaystyle \dfC_k$.  Suppose that $K$ is a
+simplicial complex.   Given an open $k$-simplex $(s)$ in $K$, we defined
+$\displaystyle \phi_{\osscript{s}{}{}{}{}} \in C^k(K;\RR)$ by
+\begin{equation} \label{dfnBCkKR}
+\phi_{\osscript{s}{}{}{}{}}(\os{t}{}{}{}{}) =
+\begin{cases}
+1 & \quad \text{if} \ \os{t}{}{}{}{} = \os{s}{}{}{}{} \\    
+-1 & \quad \text{if} \ \os{t}{}{}{}{} = -\os{s}{}{}{}{} \\    
+0 & \quad \text{otherwise}
+\end{cases}
+\end{equation}
+for all open $k$-simplices $(t)$ in $K$.
+If $\big\{ \os{s_1}{}{}{}{}, \os{s_2}{}{}{}{}, \ldots, \os{s_m}{}{}{}{} \big\}$
+is a basis of $C_k(K;\RR)$, then
+$\big\{ \phi_{\osscript{s_1}{}{}{}{}}, \phi_{\osscript{s_2}{}{}{}{}}, \ldots,
+\phi_{\osscript{s_m}{}{}{}{}} \big\}$ is a basis of $\displaystyle C^k(K;\RR)$.
+
+\begin{prop}
+We have for all open $k$-simplices
+$(s) = (\VEC{x}_0,\VEC{x}_1,\ldots,\VEC{x}_k) \in K$ that
+\begin{equation} \label{pakpoEq1}
+\dfC_k (\phi_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}})
+= \sum_{\substack{(\VEC{y}) \in K\\
+(\VEC{y},\VEC{x}_0,\VEC{x}_1,\ldots, \VEC{x}_k) \in K}}
+\phi_{\osscript{\VEC{y}}{\VEC{x}_0}{\VEC{x}_1}{}{\VEC{x}_k}} \ .
+\end{equation}
+\end{prop}
+
+\begin{proof}
+Since $C_{k+1}(K;\RR)$ is generated by oriented $(k+1)$-simplices, we
+only have to prove (\ref{pakpoEq1}) for an arbitrary ordered
+$(k+1)$-simplex $\os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}}$.
+
+By definition,
+\begin{align*}
+\big(\dfC_k (\phi_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}})
+\big)(\os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}})
+&= \phi_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}}
+\big(\partial_{k+1}(\os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}})\big) \\
+&= \phi_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}}
+\bigg(\sum_{j=0}^{k+1} (-1)^j
+\os{\VEC{z}_0}{}{\VEC{z}_1}{\widehat{\VEC{z}_j}}{\VEC{z}_{k+1}}\bigg) \\
+&= \sum_{j=0}^{k+1} (-1)^j
+\phi_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}}
+\big(\os{\VEC{z}_0}{}{\VEC{z}_1}{\widehat{\VEC{z}_j}}{\VEC{z}_{k+1}}\big) \ .
+\end{align*}
+However
+\begin{align*}
+&\phi_{\osscript{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k}}
+\big(\os{\VEC{z}_0}{}{\VEC{z}_1}{\widehat{\VEC{z}_j}}{\VEC{z}_{k+1}}\big) \\
+& \qquad = \begin{cases}
+1 & \quad \text{if}
+\ \os{\VEC{z}_0}{}{\VEC{z}_1}{\widehat{\VEC{z}_j}}{\VEC{z}_{k+1}}
+= \os{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k} \\
+-1 & \quad \text{if}
+\ \os{\VEC{z}_0}{}{\VEC{z}_1}{\widehat{\VEC{z}_j}}{\VEC{z}_{k+1}}
+= - \os{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_k} \\
+0 & \quad \text{otherwise}
+\end{cases} \\
+& \qquad = \begin{cases}
+1 & \quad \text{if}
+\ \os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}}
+= (-1)^j \os{\VEC{z}_j}{\VEC{x}_0}{\VEC{x}_1}{}{\VEC{x}_k} \\
+-1 & \quad \text{if}
+\ \os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}}
+= (-1)^{j+1} \os{\VEC{z}_j}{\VEC{x}_0}{\VEC{x}_1}{}{\VEC{x}_k} \\
+0 & \quad \text{otherwise}
+\end{cases} \\
+& \qquad = \begin{cases}
+(-1)^j \phi_{\osscript{\VEC{z}_j}{\VEC{x}_0}{\VEC{x}_1}{}{\VEC{x}_k}}
+\big(\os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}}\big)
+& \quad \text{if}
+\ \os{\VEC{z}_j}{\VEC{x}_0}{\VEC{x}_1}{}{\VEC{x}_k} \\
+& \quad = \pm \os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}} \\
+0 & \quad \text{otherwise}
+\end{cases}
+\end{align*}
+Thus (\ref{pakpoEq1}) is true for 
+$\os{\VEC{z}_0}{}{\VEC{z}_1}{}{\VEC{z}_{k+1}}$.
+\end{proof}
+
+\subsection{Relative Cohomology}
+
+It is also natural to define relative $k$-cohomology modules.  This is
+another topic that we only briefly introduce but that could be greatly
+developed.  We will not do so in the context of simplicial theory but
+will treat it a little bit more seriously in
+Subsection~\ref{ssectRCsingT} in the context of singular theory.
+
+\begin{defn}
+Let $L$ be a simplicial subcomplex of a simplicial complex $K$, and $R$
+be an integral domain.  The adjoint of the boundary operator 
+$\overline{\partial}_k : C_k(K,L;R) \to C_{k-1}(K,L;R)$ is the operator
+$\overline{\dfC}_{k-1} : \big(C_{k-1}(K,L;R)\big)^\ast
+\to \big(C_k(K,L;R)\big)^\ast$ defined
+\begin{equation} \label{relsimplCoOpEq1}
+\big(\overline{\dfC}_{k-1}(\phi)\big)([c])
+= \phi\big(\overline{\partial}_k([c])\big)
+\end{equation}
+for all $\relC[K,L]{c} \in C_k(K,L;R)$ and
+$\displaystyle \phi \in \big(C_{k-1}(K,L;R)\big)^\ast$.
+\end{defn}
+
+It is clear that $\displaystyle \overline{\dfC}_k$ is well
+and uniquely defined by (\ref{relsimplCoOpEq1}).
+
+\begin{defn}
+Let $L$ be a simplicial subcomplex of a simplicial complex $K$, and $R$
+be an integral domain.
+The {\bfseries relative $\displaystyle \mathbf{k^{th}}$ cohomology
+module}\index{Cohomology Module!Relative $k^{th}$ Cohomology Module} of
+$K \mod L$ is the
+quotient space $\displaystyle H^k(K,L;R) = \KE(\overline{\dfC}_k)/
+\IMG(\overline{\dfC}_{k-1})$.
+\end{defn}
+
+\subsection{Cup Product}
+
+There is a feature of cohomology theory that is equivalent to the
+wedge product of differential forms on manifolds.  It is called the
+cup product.
+
+\begin{defn}
+Let $K$ be a simplicial complex and $R$ be an integral domain.
+The {\bfseries cup product}\index{Cup Product} of
+$\displaystyle \phi_1 \in C^{k_1}(K;R)$ with
+$\displaystyle \phi_2 \in C^{k_2}(K;R)$ is the linear functional
+$\displaystyle \phi_1 \cup \phi_2 \in C^{k_1+k_2}(K;R)$ defined first by
+$(\phi_1 \cup \phi_2)(\os{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_{k_1+k_2}})
+= \phi_1(\os{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_{k_1}})
+\,\phi_2(\os{\VEC{x}_{k_1}}{}{\VEC{x}_{K_1+1}}{}{\VEC{x}_{k_1+k_2}})$
+for all $(\VEC{x}_0,\VEC{x}_1, \ldots,\VEC{x}_{k_1+k_2}) \in K$ and
+after extended linearly to $\displaystyle C^{k_1+k_2}(K;R)$.
+\end{defn}
+
+It is not hard to prove that the cup product is a bilinear map, that
+it is associative and that the identity element is the linear functional
+$\displaystyle \delta \in C^0(K;R)$ defined by
+$\delta(\os{\VEC{x}_i}{}{}{}{}) = 1$ for all vertices $\VEC{x}_i$ of $K$.
+We define the cup product of
+$\displaystyle [\phi_1]_K \in H^{k_1}(K;R)$ and
+$\displaystyle [\phi_2]_K \in H^{k_2}(K;R)$ as
+$\displaystyle [\phi_1]_K\cup[\phi_2]_K = [\phi_1 \cup \phi_2]_K$.
+
+We will not justify these definitions and deduce their properties.  We
+will prove later that simplicial homology and simplicial cohomology on
+the simplex $K$ are respectively isomorphic to singular homology and
+singular cohomology on $[K]$.  It is in the context of singular
+theory that we will prove that the cup product is well defined, and
+present other results about the cup product. There is effectively a
+lot more that can be said about the cup product.
+
+\subsection{Relation Between Simplicial Cohomology and
+de Rham Cohomology}  \label{ssectSCandCM}
+
+\begin{defn}  \label{defnSTriangleM}
+A triple $(S,K,h)$ is a {\bfseries smoothly triangulated
+manifold}\index{Smoothly Triangulated Manifold} if
+\begin{enumerate}
+\item $S$ is a manifold of class $\displaystyle C^\infty$,
+\item $K$ is a simplicial complex,
+\item $h:[K] \to S$ is a homeomorphism,
+\item there exist, for every
+$(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_p}) \in K$, an
+open subset $U_{[s]}$ of the $k$-dimensional affine space
+$\displaystyle A_{[s]} =
+\{\VEC{x}_{j_0} + \sum_{i=1}^p y_i (\VEC{x}_{j_i}-\VEC{x}_{j_0}) :
+y_i \in \RR \ \text{for} \ 1 \leq i \leq p \}$
+and a map $h_{[s]}:U_{[s]} \to S$ of class $\displaystyle C^\infty$
+such that $[s] \subset U_{[s]}$ and $h_{[s]}(\VEC{x}) = h(\VEC{x})$
+for all $\VEC{x} \in [s]$ (Figure~\ref{SimpHm2}), and
+\item $h_{[s]}(U_{[s]})$ is a submanifold of $S$ of class
+$\displaystyle C^\infty$.
+\end{enumerate}
+\end{defn}
+
+\pdfF{alg_top/simphm2}{Smoothly triangulated manifolds}{We consider
+the simplicial complex\\ $K = \{(\VEC{x}_0),(\VEC{x}_1),(\VEC{x}_2),
+(\VEC{x}_0,\VEC{x}_1),(\VEC{x}_0,\VEC{x}_2),(\VEC{x}_1,\VEC{x}_2)\}$
+and the circle $\displaystyle S^1$ inscribed in $[K]$.  The maps $h$
+is represented by the black arrows.  A possible open set
+$U_{[\VEC{x}_0,\VEC{x}_1]}$ and map $h_{[\VEC{x}_0,\VEC{x}_1]}$ is
+provided with $h_{[\VEC{x}_0,\VEC{x}_1]}$ on
+$U_{[\VEC{x}_0,\VEC{x}_1]} \setminus [\VEC{x}_0,\VEC{x}_1]$ 
+represented by the blue arrows.}{SimpHm2}
+
+\begin{defn} \label{defnjthBC}
+Let $K$ be a simplicial complex and $\VEC{x}_j$ for $0 \leq j \leq q$
+be the vertices of $K$.  The
+{\bfseries $\displaystyle \mathbf{j^{th}}$ barycentric
+coordinates}\index{Barycentric Coordinates!$j^{th}$ Barycentric Coordinates} of
+$\VEC{x} \in [K]$, denoted $b_j(\VEC{x})$, is defined by
+\[
+b_j(\VEC{x}) = \begin{cases}
+0 & \hspace{1.5em} \text{if} \ x \not\in \St(\VEC{x}_j) \\
+\begin{array}{l}
+\text{The $j^{th}$ barycentric} \\[-0.3em]
+\text{coordinate of} \ \VEC{x} \in (s)
+\end{array} & \quad
+\text{if}\ \VEC{x} \in (s) \subset \St(\VEC{x}_j)
+\end{cases}
+\]
+\end{defn}
+
+\begin{rmk}
+The $\displaystyle j^{th}$ barycentric coordinates given in
+Definition~\ref{defnjthBC} have several interesting properties.
+\begin{enumerate}
+\item  We have that $b_j:[K]\to \RR$ is continuous.  For instance, suppose
+that $K$ is the simplicial complex consisting of all the
+faces of $[\VEC{x}_2,\VEC{x}_3,\VEC{x}_5]$ and the open simplices
+$(\VEC{x}_0)$, $(\VEC{x}_1)$, $(\VEC{x}_0,\VEC{x}_1)$ and
+$(\VEC{x}_1,\VEC{x}_2)$ as represented in the following figure.
+\pdfbox{alg_top/simphm3}
+$\St(\VEC{x}_2)$ is represented by the continuous lines and the
+shaded area.  Given\\
+$\VEC{x} \in (\VEC{x}_2,\VEC{x}_3,\VEC{x}_4)$, we have that
+$\displaystyle \VEC{x} = \sum_{j=2}^4 a_j \VEC{x}_j$
+with $\displaystyle \sum_{j=2}^4 a_j = 1$.
+The function $b_2$ is continuous with respect to the $a_j$ in the open set
+$(\VEC{x}_2,\VEC{x}_3,\VEC{x}_4)$.  Therefore, if
+$\VEC{x}$ converges to $\tilde{\VEC{x}} \in [\VEC{x}_3,\VEC{x}_4]$, then
+$a_3$ and $a_4$ converge to $\tilde{a}_3$ and $\tilde{a}_4$
+respectively where
+$\displaystyle \tilde{\VEC{x}} = \sum_{j=3}^4 \tilde{a}_j \VEC{x}_j$
+with $\displaystyle \sum_{j=3}^4 \tilde{a}_j = 1$.
+Thus $a_3 + a_4 \to 1$ and so $b_2(\VEC{x}) = a_2$ converges to $0$.
+Hence $b_2$ is continuous along $[\VEC{x}_3,\VEC{x}_4]$.  Likewise,
+if $\VEC{x}$ converges to $\breve{\VEC{x}} \in [\VEC{x}_2,\VEC{x}_3]$, then
+$a_2$ and $a_3$ converge to $\breve{a}_2$ and $\breve{a}_3$
+respectively where
+$\displaystyle \breve{\VEC{x}} = \sum_{j=2}^3 \breve{a}_j \VEC{x}_j$
+with $\displaystyle \sum_{j=2}^3 \breve{a}_j = 1$.
+Thus $b_2(\VEC{x}) = a_2$ converges to $\breve{a}_2 = b_2(\breve{\VEC{x}})$.
+Hence $b_2$ is continuous along $[\VEC{x}_2,\VEC{x}_3]$.  Proceeding
+in a similar way, we can prove that $b_2$ is continuous on all of
+$[K]$.  Likewise, $b_1$ and $b_3$ are continuous on all of
+$[K]$.
+\item For all $\VEC{x} \in [K]$, we have that
+$\displaystyle \VEC{x} = \sum_{j=0}^q b_j(\VEC{x}) \VEC{x}_j$ with
+$b_j(\VEC{x}) \geq 0$ and $\displaystyle \sum_{j=0}^q b_j(\VEC{x}) = 1$.
+More precisely, since
+$\VEC{x} \in (\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_p}) \in K$
+for some $j_i \in \{0,1,2,\ldots,q\}$ and $0 \leq i \leq p$, we get
+that $\displaystyle \VEC{x} = \sum_{i=0}^p b_{j_i}(\VEC{x}) \VEC{x}_{j_i}$
+with $b_{j_i}(\VEC{x}) > 0$ and
+$\displaystyle \sum_{i=0}^p b_{j_i}(\VEC{x}) = 1$.  Moreover,
+$b_j(\VEC{x}) = 0$ if $j \not\in \{ j_0,j_1,\ldots,j_p\}$.
+\end{enumerate}
+\end{rmk}
+
+\begin{defn} \label{defnStarOS}
+Let $K$ be a simplicial complex and $(s)$ be an open simplex in $K$.
+The {\bfseries star}\index{Star} of $(s)$, denoted $\St\big((s)\big)$, is
+defined by
+$\displaystyle \St\big((s)\big)
+= \bigcup_{\substack{(t)\, \in K \text{\ such that}
+\\(s) \text{ is a face of } [t]}} (t)$.
+\end{defn}
+
+Recall that, by definition of a simplicial complex, if $(s) \in K$,
+then all the faces of $[s]$ are also in $K$; in particular,
+$(s) \subset \St\big((s)\big)$ because $(s)$ is a face of $[s]$.
+
+\begin{rmk}
+Below are some of the properties of the star of an open simplex as
+given in Definition~\ref{defnStarOS}.  Some these properties are easy
+to prove and proving them is left to the reader.
+\begin{enumerate}
+\item For a $0$-simplex $(\VEC{x}) \in K$,
+we have that $\St\big((\VEC{x})\big) = \St(\VEC{x})$, the star of the
+vertex $\VEC{x}$ of $K$ as given in Definition~\ref{defnStarV}.
+\item If $(s)$ is an open simplex of $K$, then $\St\big((s)\big)$ is
+an open set in $[K]$.  This follows from the fact that $\St\big((s)\big)$
+is the union of open simplices of $[K]$.
+\item If $(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_p}) \in K$
+where the $\VEC{x}_{j_i}$ for $0 \leq i \leq p$ are vertices of $K$, then
+$\VEC{x} \in \St\big((s)\big)$ if and only if
+$b_{j_i}(\VEC{x}) \neq 0$ for $0\leq i \leq p$.
+To verify this claim, it suffices to note that if
+$\VEC{x} \in \St\big((s)\big)$ then $\VEC{x} \in (t)$ such that $(s)$
+is a face of $[t]$.  Thus
+$(t) = (\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_q})$ with
+$q\geq p$ and $j_i \not\in \{j_0,j_1, \ldots, j_p\}$ for $p < i \leq q$.
+Hence $\displaystyle \VEC{x} = \sum_{i=0}^q b_{j_i}(\VEC{x}) \VEC{x}_{j_1}$
+with $b_{j_i}(\VEC{x}) > 0$ for $0 \leq i \leq q$
+and $\displaystyle \sum_{i=0}^q b_{j_i}(\VEC{x}) = 1$.  
+\item It follows from (3) that
+$\displaystyle [K]\setminus \St\big((s)\big) =
+\big\{ \VEC{x} \in K : b_{j_i}(\VEC{x}) = 0 \ \text{for some} \ i\in
+\{0,1,\ldots,p\} \big\}$.
+\item If $(s_1)$ and $(s_2)$ are two open $q$-simplices of a simplicial
+complex $K$, and $(s_1) \neq (s_2)$, then
+$[s_2] \subset [K]\setminus \St\big((s_1)\big)$.  This follows from
+the fact that all faces of a closed $q$-simplex, other than the open
+$q$-simplex itself, are open $j$-simplices with $j<q$.  So $(s_1)$
+cannot be a face of $[s_2]$.
+\end{enumerate}
+\end{rmk}
+
+Suppose that $(S,K,h)$ is a smoothly triangulated manifold.  We would
+like to find a relation between the $\displaystyle k^{th}$ cohomology
+module of $S$ defined in Definition~\ref{defnqdeRhamCM} and the
+$\displaystyle k^{th}$ cohomology group $\displaystyle H^k(K;\RR)$ of
+$K$.  For that, we will define a map
+$\displaystyle F_k : C^\infty\big(S,\Omega^k(S)\big) \to C^k(K,\RR)$
+such that the following diagram commutes.
+\[
+\xymatrix{
+C^\infty\big(S,\Omega^k(S)\big) \ar[r]^-{\df{}}\ar[d]_{F_k} &
+C^\infty\big(S,\Omega^{k+1}(S)\big) \ar[d]^{F_{k+1}} \\
+C^k(K;\RR) \ar[r]_-{\dfC_k} & C^{k+1}(K;\RR)
+}
+\]
+Suppose that $\omega$ is a differential $k$-form on $S$.  To define
+$\displaystyle F_k(\omega) \in C^k(K;\RR)$, it is enough to define
+$F_k(\omega)$ on the equivalence classes of oriented
+$k$-simplices of $K$ and use the linearity of $F_k(\omega)$ to extend
+its definition to all of $\displaystyle C_k(K;\RR)$.
+Given $\os{s}{}{}{}{} \in C_k(K;\RR)$ with
+$(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k}) \in K$, there
+exists an open subset $U_{[s]}$ and a smooth mapping $h_{[s]}:U_{[s]} \to S$
+that satisfy Definition~\ref{defnSTriangleM}.  We set
+\[
+  F_k(\omega)(\os{s}{}{}{}{}) = \int_{[s]} h_{[s]}^\ast(\omega) \ .
+\]
+We may consider that $[s]$ is a subset of the $k$-dimensional manifold
+$U_{[s]}$.  This manifold can be described by only one local chart;
+namely, $(W_{[s]},U_{[s]},\phi_{[s]})$ where
+\begin{align*}
+\phi_{[s]}:\RR^k &\to \{\VEC{x}_{j_0}
++ \sum_{i=1}^k y_i (\VEC{x}_{j_i}-\VEC{x}_{j_0}) :
+y_i \in \RR \ \text{for} \ 1 \leq i \leq k \} \\
+\VEC{y} & \mapsto \VEC{x}_{j_0} + \sum_{i=1}^k y_i (\VEC{x}_{j_i}-\VEC{x}_{j_0})
+\end{align*}
+and $\displaystyle W_{[s]} = \phi_{[s]}^{-1}(U_{[s]})$.
+Hence, the local representation of $\displaystyle h_{[s]}^\ast(\omega)$
+is given by $\displaystyle \phi_{[s]}^\ast(h_{[s]}^\ast(\omega)) =
+g_{[s]} \df{y_1}\wedge \df{y_2} \wedge \ldots \wedge \df{y_q}$ where
+$g_{[s]}:W_{[s]} \to \RR$ is of class $\displaystyle C^\infty$ and
+\[
+F_k(\omega)(\os{s}{}{}{}{}) = \int_{W_{[s]}} g_{[s]}
+\df{y_1}\wedge \df{y_2} \wedge \ldots \wedge \df{y_k} \ .
+\]
+
+\begin{prop}
+We have that $\displaystyle \dfC_k \circ F_k = F_{k+1} \circ \df{}$.
+\end{prop}
+
+\begin{proof}
+It suffices to use Stokes' theorem.  Given a differential $k$-form on
+$S$ and $\os{s}{}{}{}{} \in C_k(K,\RR)$, we have that
+\begin{align*}
+F_{k+1}(\df{\omega})(\os{s}{}{}{}{})
+&= \int_{[s]} h_{[s]}^\ast(\df{\omega})
+= \int_{[s]} \df{\left(h_{[s]}^\ast(\omega)\right)}
+= \int_{\partial [s]} h_{[s]}^\ast(\omega) \\
+&= F_k(\omega)(\partial_k \os{s}{}{}{}{})
+= \dfC_k(F_k(\omega))(\os{s}{}{}{}{}) \ .
+\end{align*}
+Stokes' theorem, Theorem~\ref{stokesStokes}, was used for the third
+equality.  Moreover, $\partial [s]$ must be interpreted according to
+Stokes' theorem. Hence the orientation on $\partial [s]$ is the
+induced orientation from the orientation on $[s]$.  It is in fact the
+orientation given by $\partial_k \os{s}{}{}{}{}$.
+\end{proof}
+
+The next theorem is the main result of this section.
+
+\begin{theorem}[De Rham's Theorem] \label{DeRhamThm}
+Let $(S,K,h)$ be a smoothly triangulated manifold and
+$\displaystyle \tilde{F}_k:H^k(S) \to H^k(K;\RR)$ be the map defined by
+$\displaystyle \tilde{F}_k([\omega])([c]) = [F_k(\omega)(c)]_K$ for the
+closed differential $k$-form $\omega$ on $S$ and $k$-chains $c$ in $Z_k(K;\RR)$.
+Then $\tilde{F}_k$ is an isomorphism for $0 \leq k \leq \dim(S)$.
+\end{theorem}
+
+The proof of this theorem is very long but it is not hard. We only
+sketch the proof of this famous theorem.  The reader can find the
+detailed proof in \cite{ST}.
+
+\begin{proof}[Proof (Sketch)]
+\stage{Claim 1} There exist linear maps
+$\displaystyle G_k: C^k(K;\RR) \to C^\infty\big(S,\Omega^k(S)\big)$
+for $0 \leq k \leq \dim(S)$ such that:
+\begin{enumerate}
+\item $\displaystyle \df{}\circ G_k = G_{k+1}\circ \dfC_k$ for
+$0 \leq k < \dim(S)$.
+\item $F_k \circ G_k = \Id$.
+\item If $\displaystyle \phi \in C^0(K,\RR)$ satisfies
+$\phi(\os{\VEC{x}}{}{}{}{}) = 1$
+for all $0$-simplices $(\VEC{x}) \in K$, then $G_0(\phi)$ is the
+differential $0$-form (i.e.\ a function on $S$) defined by
+$G_0(\phi)(\VEC{x}) = 1$ for all $\VEC{x} \in S$.
+\item If $\os{s}{}{}{}{}$ is an oriented $k$-simplex of $K$, then
+$G_k(\phi_{\osscript{s}{}{}{}{}})$ is null in an open set containing $[K]
+\setminus \St\big((s)\big)$, where $\phi_{\osscript{s}{}{}{}{}}$ is
+defined in (\ref{dfnBCkKR}).
+\end{enumerate}
+
+\stage{i} Suppose that $K$ is a simplicial complex of dimension $q$
+and that $\VEC{x}_0$, $\VEC{x}_1$, \ldots, $\VEC{x}_p$ are the
+vertices of $K$.  We define a partition of unity subordinated to the open
+cover $\big\{ \St(\VEC{x}_j) \big\}_{0\leq j \leq p}$
+of $[K]$.
+
+Let
+$A_j = \big\{ \VEC{x} \in [K] : b_j(\VEC{x}) \geq 1/(q+1) \big\}$
+and
+$B_j = \big\{ \VEC{x} \in [K] : b_j(\VEC{x}) \leq 1/(q+2) \big\}$
+for $0 \leq j \leq p$, where $b_j$ is the barycentric coordinate
+function defined in Definition~\ref{defnjthBC}.
+
+Since $A_j$ is a closed subset of the compact set $[K]$, we have
+that $A_j$ is compact for $0 \leq j \leq p$.
+
+We have that $[K]\setminus \St(\VEC{x}_j) \subset B_j$
+and $A_j \subset C_j = [K] \setminus B_j \subset \St(\VEC{x}_j)$
+for $0 \leq j \leq p$ as can be seen in the figure below.
+\pdfbox{alg_top/derham1}
+In the figure above, the dotted area represents $\St(\VEC{x}_j)$.
+The collection $\{ A_j\}_{0\leq j \leq p}$ is a closed cover of
+$[K]$.  Given $\VEC{x} \in [K]$, we have that $\VEC{x}$ is an element
+of an open $m$-simplex
+$(s) = (\VEC{x}_{j_1},\VEC{x}_{j_2}, \ldots, \VEC{x}_{j_m})$
+of $K$ with $m \leq q$.  By definition of the barycentric coordinates,
+we have that $b_{j_i}(\VEC{x}) > 0$ for $0\leq i \leq m$ and
+$\displaystyle \sum_{i=0}^m b_{j_i}(\VEC{x}) = 1$.  Therefore, we must
+have that $b_{j_i}(\VEC{x}) \geq 1/(m+1) \geq 1/(q+1)$ for some
+$0 \leq i \leq m$.  Thus $\VEC{x} \in A_{j_i}$.
+
+Given $0 \leq j \leq p$, there exists according to
+Proposition~\ref{topolProp2} an open set
+$\displaystyle V_j \subset \RR^n$ such that
+$\displaystyle  A_j \subset V_j \subset \overline{V}_j
+\subset \RR^n \setminus B_j$.
+Using partition of unity for instance, we can select a function
+$\displaystyle f_j \in C^\infty(\RR^n)$ such that
+$0 \leq f_j(\VEC{x}) \leq 1$ for all $\displaystyle \VEC{x} \in \RR^n$,
+$f_j(\VEC{x}) = 1$ for all $\VEC{x} \in A_j$ and $f_j(\VEC{x}) = 0$
+for all $\displaystyle \VEC{x} \not\in V_j$.
+It follows from the previous paragraph that, given any $\VEC{x} \in [K]$,
+there exists $0 \leq j \leq p$ such that $f_j(\VEC{x}) = 1$.
+Let $\displaystyle g = \sum_{j=0}^pf_j$ on $\displaystyle \RR^n$.  We
+have that $g(\VEC{x}) \geq 1$ for all $\VEC{x} \in [K]$.  Thus
+$g(\VEC{x}) \geq 1/2 > 0$ for all $\VEC{x}$ in an open set $W \supset [K]$. 
+Let $g_j = f_j/g$  on $W$ for $0 \leq j \leq p$.  Hence
+$\displaystyle g_j\in C^\infty(W)$ and
+$\displaystyle \sum_{j=0}^pg_j = 1$ on $[K]$.  Moreover,
+$\supp g_j\Big|_{[K]} \subset \supp f_j\Big|_{[K]}
+\subset C_j \subset \St(\VEC{x}_j)$ for $0 \leq j \leq p$.
+
+The collection $\{g_j\}_{0\leq j \leq p}$ is the partition of unity
+subordinated to the open cover\\
+$\big\{ \St(\VEC{x}_j) \big\}_{0\leq j \leq p}$
+of $[K]$ that we are looking for.
+
+\stage{ii} Since $G_k$ is linear, we only have to define $G_k$ for
+$\phi_{\osscript{s}{}{}{}{}}$ where $\os{s}{}{}{}{}$ is an
+oriented $k$-simplices of $K$.  Suppose that
+$\os{s}{}{}{}{}= \os{\VEC{x}_{j_0}}{}{\VEC{x}_{j_1}}{}{\VEC{x}_{j_k}}$.
+We set
+\[
+G_k(\phi_{\osscript{s}{}{}{}{}})
+= k! \sum_{i=0}^k (-i)^i g_{j_i} \df{g_{j_0}} \wedge \df{g_{j_1}}
+\wedge \ldots \wedge \widehat{\df{g_{j_i}}} \wedge \ldots \wedge \df{g_{j_k}}
+\ .
+\]
+Note that $G_k(\phi_{\osscript{s}{}{}{}{}})$ defines
+a differential $k$-form on $W \supset [K]$.  We can use the maps
+$h_{[s]]}$ provided by the smoothly triangulated manifold $(S,K,h)$ to
+transport $G_k(\phi_{\osscript{s}{}{}{}{}})$ to $S$ \footnote{In
+\cite{ST}, they simplify the writing of the proof by assuming that
+$[K] = S$.  In other words, they project $K$ on $S$ using the maps $h_s$.}. 
+
+The proof given in \cite{ST} that $G_k$ satisfies all four conditions
+listed above requires, among several results, Stokes' theorem on chains.
+
+\stage{Claim 2}
+If $\omega$ is a closed differential $k$-form on $S$ such that
+$\displaystyle F_k(\omega) = \dfC_k(\phi)$ for some
+$\displaystyle \phi \in C^{k-1}(K;R)$,
+then there exists a differential $(k-1)$-form $\rho$ on $S$ such that
+$F_{k-1}(\rho) = \phi$ and $\df{\rho} = \omega$.
+
+The proof of this claim is in two parts.
+
+\stage{First Part}
+Given an open $q$-simplex $(s) \in K$, let
+$\displaystyle B_{(s)}
+= \bigcup_{\substack{(t) \text{ an open face of }[s]\\\text{with } \dim (t) < q}}
+(t)$.
+
+We prove the following statements.
+\begin{enumerate}
+\item Assuming $q>0$, if $\omega$ is a closed differential $k$-form defined
+in an open neighbourhood of $B_{(s)}$ in $\displaystyle \RR^n$
+where $(s) \in K$ is an open $q$-simplex. then there exists a closed
+differential $k$-form $\rho$ defined in an open neighbourhood of $[s]$
+such that $\rho = \omega$ in the open neighbourhood of $B_{(s)}$.  If
+$q=k+1$, we must also require that
+$\displaystyle \int_{\partial [s]} \omega =0$.
+\item Assuming $q,k>0$, if $\omega$ is a closed differential $k$-form
+defined in an open neighbourhood of $[s]$ in $\displaystyle \RR^n$ where
+$(s) \in K$ is an open $q$-simplex, and $\rho$ is a differential $(k-1)$-form
+defined in an open neighbourhood of $B_{(s)}$ and such
+that $\df{\rho} = \omega$ in that neighbourhood of $B_{(s)}$, then
+there exists a differential $(k-1)$-form $\nu$ defined in an open
+neighbourhood of $[s]$ such that $\nu = \rho$ in an open neighbourhood
+of $B_{(s)}$ and $\df{\nu} = \omega$ in a neighbourhood of $[s]$.
+If $q=k$, we must also
+require that $\displaystyle \int_{\partial [s]} \rho = \int_{[s]} \omega$.
+\end{enumerate}
+
+Note that the two extra conditions in the two previous statement are
+required because we get from Stokes' theorem that
+\[
+\int_{\partial [s]} \omega = \int_{\partial [s]} \rho
+= \int_{[s]} \df{\rho} = \int_{[s]} 0 = 0
+\]
+if $\rho$ exists in the first statement and $q = k+1$, and
+\[
+\int_{[s]} \omega = \int_{[s]} \df{\nu}
+= \int_{\partial [s]} \nu = \int_{\partial [s]} \rho
+\]
+if $\nu$ exists in the second statement and $q=k$.
+
+The proof of the two statements above is an iterative proof.  We first
+prove that (1) is true for $k=0$.  Next, we prove that if (1) is true
+for $k=i$, then (2) is true for $k=i+1$.  Finally, we prove that
+if (2) is true for $k=i+1$, then (1) is true for $k=i+1$.  Hence,
+iterating from $i=0$ up to $i = \dim(S)$ shows that (1) and (2) are
+true for all values of $k$
+
+To prove (1) for $k=0$, we note that $\omega$ is a function on an open
+neighbourhood of $B_{(s)}$ such that $\displaystyle \pdydx{\omega}{x_i} = 0$ in
+this open neighbourhood for all $i$.  Thus $\omega$ is constant on the
+components of $B_{(s)}$.  If $q>1$, then $B_{(s)}$ is
+connected and so $\omega(\VEC{x}) = c$, a constant, for all
+$\VEC{x} \in B_{(s)}$.  Therefore, we may set $\rho = c$ in an opne
+neighbourhood of $[s]$.  If $q=1$, then
+$[s] = [\VEC{x}_{j_1},\VEC{x}_{j_2}]$ for some vertices 
+$\VEC{x}_{j_1}$ and $\VEC{x}_{j_2}$ of $K$, and
+$B_{(s)} = \{\VEC{x}_{j_1},\VEC{x}_{j_2}\}$.  But since $q = k+1$, we
+have that
+$\displaystyle 0 = \int_{\partial [s]} \omega = \omega(\VEC{x}_{j_1}) - 
+\omega(\VEC{x}_{j_0})$.  Thus $\omega(\VEC{x}_{j_1}) =
+\omega(\VEC{x}_{j_0}) = c$, a constant.  Therefore, we may again set
+$\rho =c$ in an open neighbourhood of $[s]$.
+
+To prove that (1) for $k=i$ implies (2) for $k=i+1$, we may assume that
+$\omega$ is a closed differential $k$-form in a connected open set
+$U \supset [s]$ because $[s]$ is connected.  It then follows from 
+Corollary~\ref{corHqg0e0} that $\omega = \df{\mu_1}$ for some
+differential $(k-1)$-form $\mu_1$ on $U$ \footnote{We are using the fact that
+$H^k(U) = H^k(\RR^n) = 0$ for $k>0$ because $U$ is diffeomorphic to
+$\displaystyle \RR^n$.}.  Since $\mu_1$ may not be equal to $\rho$ in a
+neighbourhood of $B_{(s)}$, we consider
+$\mu_2 = \mu_1 - \rho$.  We have that
+$\df{\mu_2} = \df{\mu_1} - \df{\rho} = \omega - \omega = 0$ in a
+neighbourhood of $B_{(s)}$ and, if $q = k$, we have from Stokes'
+theorem that
+\[
+\int_{\partial [s]} \mu_2
+= \int_{\partial [s]} \mu_1 - \int_{\partial [s]} \rho
+= \int_{[s]} \df{\mu_1} - \int_{\partial [s]} \rho
+= \int_{[s]} \omega - \int_{\partial [s]} \rho
+= 0
+\]
+by assumption.  Therefore, we may use (1) with $\mu_2$ to get a closed
+differential $k$-form $\mu_3$ defined in an open neighbourhood of
+$[s]$ such that $\mu_3 = \mu_2$ in a neighbourhood of $B_{(s)}$.
+Then $\nu = \mu_1 - \mu_3$ because $\nu = \rho$ and
+$\df{\nu} = \df{\mu_1} - \df{\mu_3} = \omega$ in a neighbourhood of 
+$B_{(s)}$.
+
+To prove that (2) for $k=i+1$ implies (1) for $k=i+1$ is a little bit
+trickier.  Suppose that
+$(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_q})$.  Let
+$(t) = = (\VEC{x}_{j_1},\ldots,\VEC{x}_{j_q})$ and
+$F_{(s)} = B_{(s)}\setminus (t)$.  Since $F_{(s)}$ is
+star-shaped, we may assume that the open neighbourhood of $F_{(s)}$
+where $\omega$ is defined is also star-shaped.  Hence, we may use
+Poincaré Lemma to get a differential $(k-1)$-form $\mu$ defined in
+this neighbourhood such that $\df{\mu} = \omega$.
+
+If $q>1$, we can show that (2) can be used with $\rho$ replaced by
+$\mu$ and $(s)$ by $(t)$ to get a differential $(k-1)$-form $\nu$
+defined in an open neighbourhood of $[t]$ such that
+$\nu = \mu$ in an open neighbourhood of $B_{(t)}$ and $\df{\nu} = \omega$
+in a neighbourhood of $[t]$.  Consider the differential $k$-form
+defined by
+\[
+\tau = \begin{cases}
+\mu & \quad \text{on the neighbourhood of}\ F_{(s)} \\
+\nu & \quad \text{on the neighbourhood of}\ [t]
+\end{cases}
+\]
+where the neighbourhoods may have to be shrunk a little if necessary.
+We have that $\df{\tau} = \omega$ in a neighbourhood of $B_{(s)}$.
+If $q=1$, we also have that there is a differential $k-1$-form $\tau$
+defined in $B_{(s)}$ such that $\df{\tau} = \omega$.  In this case, we
+use the fact that the neighbourhood of $B_{(s)}$ may be chosen to be
+the union of two disconnect open sets; one about each of the two
+vertices in $B_{(s)}$. 
+
+To complete the proof, we select a real valued function
+$\displaystyle f \in C^\infty(\RR^n)$ such that $f=1$ in an open
+neighbourhood of $B_{(s)}$ and $f=0$ outside the open neighbourhood
+where $\tau$ is defined.  Then $\rho = \df{(f \tau)}$ satisfies (1)
+because it is obviously exact and 
+\[
+\df{\rho} = \df{f} \wedge \tau + f \wedge \df{\tau} = \df{\tau} = \omega
+\]
+in the open neighbourhood where $f =1$.
+
+\stage{Second Part}
+The second part of the proof of Claim 2 used the second statement
+of the previous part to construct a sequence of differential $(k-1)$-forms
+$\rho_0$, $\rho_1$, $\rho_2$, \ldots , $\rho_{\dim(S)}$ such that
+$\rho_j$ is defined in an open neighbourhood of the $j$-skeleton
+$\displaystyle [K^j]$ of $K$,
+$\df{\rho_j} = \omega$ in this open neighbourhood of $\displaystyle [K^j]$,
+$\rho_j = \rho_{j-1}$ in an open neighbourhood of $\displaystyle [K^{j-1}]$
+for $0 < j \leq \dim(S)$, and $F_j(\rho_j) = \phi$ if $j = k-1$.
+We have that $\rho$ in Claim 2 is given by $\rho = \rho_{\dim(S)}$.
+
+The construction of the $\rho_j$ is done by induction on the order $j$
+of the skeletons of $K$.
+
+For $j=0$, the skeleton $\displaystyle K^0$ is a
+set of discrete points.  We may assume that the open neighbourhood of
+$\displaystyle [K^0]$ is the union of disjoint open balls $B_j$ with
+$\VEC{x}_j$ being the only vertex of $K$ in $B_j$.  Using Poincaré
+Lemma on each open ball, we get a differential $(k-1)$-form
+$\tilde{\rho}_0$ on the open neighbourhood of $\displaystyle [K^0]$ such that
+$\df{\tilde{\rho}_0} = \omega$.
+If $k-1 > 0$, we may take $\rho_0 = \tilde{\rho}_0$.
+If $k-1 = 0$, we have to make sure that
+$F_0(\rho_0) = \phi$ on $\displaystyle [K^0]$.
+For each vertex $\displaystyle \VEC{x}_j$ of $K$, set $\displaystyle
+a_j = \phi\big( (\VEC{x}_j)\big) - \int_{(\VEC{x}_j)}  \tilde{\rho}_0
+= \phi\big( (\VEC{x}_j)\big) - \tilde{\rho}_0(\VEC{x}_j)$.
+Then $\rho_0$ defined in the open neighbourhood of
+$\displaystyle [K^0]$ by $\rho_0\big|_{B_j} = \tilde{\rho}_0 + a_j$ for all $j$
+satisfies all the required conditions.  In particular,
+$\displaystyle F_0(\rho_0)\big((\VEC{x}_j)\big) = \int_{(\VEC{x}_j)}
+\big( \tilde{\rho}_0 + a_j \big) = \phi\big( (\VEC{x}_j)\big)$ for all
+$\VEC{x}_j$.
+
+We assume that we have constructed $\rho_{j-1}$ according to the
+requirements.
+
+We have that $\omega$ is a closed differential $k$-form defined in
+an open neighbourhood of a closed $j$-simplex $[s]$ and $\rho_{j-1}$ is a
+differential $(j-1)$-form defined in an open neighbourhood of
+$B_{(s)}$ such that $\df{\rho_{j-1}} = \omega$ in this open
+neighbourhood of $B_{(s)}$.  If $k = j$, then
+\[
+\int_{[s]} \omega
+= F_k(\omega)\big(\os{s}{}{}{}{}\big)
+= \dfC_k(\phi)\big(\os{s}{}{}{}{}\big)
+= \phi\big( \partial_k \os{s}{}{}{}{} \big)
+= F_{j-1}(\rho_{j-1})\big( \partial_k \os{s}{}{}{}{}\big)
+= \int_{\partial_k [s]} \rho_{j-1}
+\]
+where the second equality comes from the assumption in Claim 2 and the
+fourth equality from our hypothesis of induction.
+Hence the second statement of the first part can be used to get a
+differential $(k-1)$-form $\tilde{\rho}_{(s)}$ in an open neighbourhood
+$U_{(s)}$ of $[s]$ such that $\tilde{\rho}_{[s]} = \rho_{j-1}$ in an open
+neighbourhood of $B_{(s)}$ and $\df{\tilde{\rho}_{(s)}} = \omega$ in
+$U_{(s)}$.   We define $\tilde{\rho}_j$ in a neighbourhood
+of $[K^j]$ by $\tilde{\rho}_j\big|_{U_{(s)}} = \tilde{\rho}_{(s)}$ for
+all open $j$-simplices $(s)$ in $K$.   The differential $(k-1)$-form
+$\tilde{\rho}_j$ is well defined by because
+$\tilde{\rho}_{(s_1)} = \tilde{\rho}_{(s_2)} = \rho_{j-1}$ in an open
+neighbourhood of the intersection of $[s_1]$ and $[s_2]$ for all
+open $j$-simplices $(s_1)$ and $(s_2)$ in $K$.
+
+If $k-1 \neq j$, we may define $\rho_j$ in a neighbourhood
+of $[K^j]$ as $\rho_j = \tilde{\rho}_j$.
+
+If $k-1 = j$, we use a trick similar to the one that we have used in
+the case $j=0$ to ensure that $F_j(\rho_j) = \phi$ on $\displaystyle C^j(K;R)$.
+Let $\displaystyle \alpha_j = \phi - F_{k-1}(\tilde{\rho}_{k-1}) \in C^j(K;R)$.
+We define $\rho_j$ in a neighbourhood $U$ of $\displaystyle [K^j]$ as
+$\rho_j = \tilde{\rho}_j\big|_U + G_{k-1}(\alpha_j)\big|_U$.
+
+We have from Claim 1 that $G_q(\phi_{\osscript{t}{}{}{}{}}) = 0$
+in an open neighbourhood of $K \setminus \St\big( (t) \big)$ for all
+open $q$-simplices $(t)$ in $K$.  Thus
+$G_q(\phi_{\osscript{t}{}{}{}{}}) = 0$ in a neighbourhood of
+$\displaystyle [K^{q-1}]$ for all open $q$-simplices $(t)$ in $K$.
+Since all elements of $\displaystyle C^q(K;R)$ are linear combinations
+of elements of the form $\phi_{\osscript{t}{}{}{}{}}$ for $(t)$ an
+open $q$-simplex in $K$, we get that $G_q(\phi) = 0$ in a
+neighbourhood of $\displaystyle [K^{q-1}]$ for all
+$\displaystyle \phi \in C^q(K;R)$.  Thus, for $q=k-1 = j$, we
+get that
+\[
+\df{\rho_j} = \df{\tilde{\rho}_j} + \df{\big( G_{k-1}(\alpha_j)\big)}
+= \df{\tilde{\rho}_j} + G_k\big(\dfC_{k-1}(\alpha_j)\big)
+= \df{\tilde{\rho}_j} = \omega
+\]
+in a neighbourhood of $\displaystyle [K^{j}]$, and
+\[
+\rho_j = \tilde{\rho}_j + G_{k-1}(\alpha_j)
+= \tilde{\rho}_j = \rho_{j-1}
+\]
+in a neighbourhood of $\displaystyle [K^{j-1}]$.  Moreover,
+\[
+F_j(\rho_j)(\os{s}{}{}{}{})
+= F_j(\tilde{\rho}_j)(\os{s}{}{}{}{})
++ F_j\big( G_{k-1}(\alpha_j)(\os{s}{}{}{}{}) \big)
+= \phi(\os{s}{}{}{}{}) - \alpha_j(\os{s}{}{}{}{})
++ \alpha_j(\os{s}{}{}{}{})
+= \phi(\os{s}{}{}{}{})
+\]
+for all $j$-simplices $(\os{s}{}{}{}{})$, where we have use (2) of
+Claim 1 to get the second equality.
+
+\stage{Conclusion}
+It follows from (1) of Claim 1 that
+$\displaystyle G_k(Z^k(K;\RR)) \subset Z^k(S)$ where
+$\displaystyle Z^k(S)$ is the set of closed differential $k$-forms, and
+$\displaystyle G_k(B^k(K;\RR)) \subset B^k(S)$ where
+$\displaystyle B^k(S)$ is the set of exact differential $k$-forms.
+Thus $G_k$ defines a map, that we denote $\tilde{G}_k$, from
+$\displaystyle H^k(K;\RR)$ to $\displaystyle H^k(S)$.  Hence, it
+follows from (2) that $\tilde{G}_k$ is a right inverse for
+$\tilde{F}_k$ and so $\tilde{F}_k$ is onto.
+
+It follows from Claim 2 that, if $\displaystyle \omega \in Z^k(S)$ and
+$\displaystyle F_k(\omega) \in B^k(K;\RR)$, then
+$\displaystyle \omega \in B^k(S)$.  Since $F_k$ is a linear map, this
+proves that $\tilde{F}_k([\omega]) = [0]_K$ implies that $[\omega] = [0]$.
+Thus $F_k$ is one-to-one.  This completes the proof that $\tilde{F}_k$ is an
+isomorphism.
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End:

@@ -1,0 +1,18 @@
+\begin{picture}(0,0)%
+\includegraphics{riemann_geom/geodfig7.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(1918,2064)(483,-1468)
+\put(1891,-1321){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\displaystyle S^2$}%
+}}}
+\put(1666,434){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{u}$}%
+}}}
+\put(2386,-781){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$-\VEC{u}$}%
+}}}
+\put(2386,-466){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{p}$}%
+}}}
+\put(2386,-151){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{0}$}%
+}}}
+\put(946,-961){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\ell$}%
+}}}
+\end{picture}%

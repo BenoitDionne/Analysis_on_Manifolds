@@ -1,0 +1,28 @@
+\begin{picture}(0,0)%
+\includegraphics{alg_top/singhm2.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(3970,1174)(-864,-798)
+\put(2161,-286){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\alpha_j^{(2)}$}%
+}}}
+\put(2296,-691){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_j(\VEC{e}_0)$}%
+}}}
+\put(1351, 29){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\alpha_j^{(0)}$}%
+}}}
+\put(2116,209){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_j(\VEC{e}_1)$}%
+}}}
+\put(-179, 74){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\eta_{j,0,0} = \eta_{j,2,1}$}%
+}}}
+\put(836,-191){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_j(\VEC{e}_2)$}%
+}}}
+\put(146,-726){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\eta_{j,1,0} = \eta_{j,2,0}$}%
+}}}
+\put(-849,-526){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\eta_{j,0,1} = \eta_{j,1,1}$}%
+}}}
+\put( 91,-276){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$x_0$}%
+}}}
+\put(1193,-549){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\alpha_j^{(1)}$}%
+}}}
+\put(3091, 26){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\breve{\alpha}_j(\Delta_2)$}%
+}}}
+\end{picture}%

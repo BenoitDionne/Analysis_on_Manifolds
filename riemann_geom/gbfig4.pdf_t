@@ -1,0 +1,33 @@
+\begin{picture}(0,0)%
+\includegraphics{riemann_geom/gbfig4.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2505,1713)(211,-1300)
+\put(2386,254){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigma^{\osscript{s}{}{}{}{}}(t_1)$}%
+}}}}
+\put(2206,-196){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigma^{\osscript{s}{}{}{}{}}$}%
+}}}}
+\put(1486,-1231){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{\sigma}_1^{\osscript{s}{}{}{}{}}(t_2)$}%
+}}}}
+\put(1441,-916){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\nu_2^{\osscript{s}{}{}{}{}}$}%
+}}}}
+\put(991,119){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigmaU_1^{\osscript{s}{}{}{}{}}(t_1)$}%
+}}}}
+\put(586,-646){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigma^{\osscript{s}{}{}{}{}}(t_2)$}%
+}}}}
+\put(2701,-376){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigmaU_2^{\osscript{s}{}{}{}{}}(t_2)$}%
+}}}}
+\put(1621,-421){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\mu_2^{\osscript{s}{}{}{}{}}$}%
+}}}}
+\put(991,-1231){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\theta_2^{\osscript{s}{}{}{}{}}$}%
+}}}}
+\put(226,-1141){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigmaU_1^{\osscript{s}{}{}{}{}}(t_2)$}%
+}}}}
+\end{picture}%

@@ -1,0 +1,2597 @@
+\chapter{Differential Forms}
+
+\section{Multilinear Algebra}\label{stokesMLABRA}
+
+Before undertaking the study of differential forms and the integration
+of these forms, we need to introduce some concepts that are sometime
+covered in books on linear algebra.
+
+\begin{defn}
+Let $H$ be a vector space over $\RR$.  A map
+$\displaystyle \tau:H^k \to \RR$ is
+{\bfseries multilinear}\index{Multilinear Mapping} if
+\[
+\tau(\VEC{v}_1,\VEC{v}_2, \ldots, a \VEC{v}_i + b \tilde{\VEC{v}}_i,
+\ldots , \VEC{v}_k)
+= a \tau(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_i, \ldots , \VEC{v}_k)
++ b \tau(\VEC{v}_1,\VEC{v}_2, \ldots, \tilde{\VEC{v}}_i, \ldots , \VEC{v}_k)
+\]
+for all $a, b \in \RR$ and $0 \leq i \leq k$.
+A {\bfseries $\mathbf{k}$-tensor}\index{Tensor!$k$-Tensor} on $H$ is a
+multilinear map $\displaystyle \tau:H^k\to \RR$.  The set of all
+$k$-tensors on $V$ is denoted $\displaystyle \T^k(H)$.
+\end{defn}
+
+The space $\displaystyle \T^k(H)$ is a vector space over $\RR$ where
+the sum of vectors and the product by a scalar are defined by
+\[
+(a \tau_1+ b \tau_2)(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k) =
+a \tau_1(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k)
++ b \tau_2(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k)
+\]
+for all $\displaystyle \tau_1, \tau_2 \in \T^k(H)$ and all $a, b \in \RR$.
+It is also important to note that $\displaystyle \T^1(H) = H^\ast$,
+the dual space of $H$.
+
+\begin{defn}
+The {\bfseries product of two tensors}\index{Tensor!Product}
+$\displaystyle \tau_1 \in \T^{k_1}(H)$ and
+$\displaystyle \tau_2 \in \T^{k_2}(H)$ is the tensor
+$\displaystyle \tau_1\otimes \tau_2 \in \T^{k_1+k_2}(H)$ defined by
+\[
+(\tau_1\otimes \tau_2)(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_{k_1+k_2})
+= \tau_1(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_{k_1})
+\, \tau_1(\VEC{v}_{k_1+1},\VEC{v}_{k_1+2}, \ldots, \VEC{v}_{k_1+k_2})  \ .
+\]
+\end{defn}
+
+\begin{theorem} \label{stokesBT}
+Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of $H$
+and let $\displaystyle \B^\ast = \{ \phi_i \}_{i=1}^n$ be
+the dual basis associated to $\B$ \footnotemark.  Then the set
+$\displaystyle
+\MM = \{ \phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k} :
+1 \leq i_m \leq n , \ 1 \leq m \leq k\}$
+is a basis of $\displaystyle \T^k(H)$.
+\end{theorem}
+
+\footnotetext{Namely, $\phi_j(\VEC{v}_i) = \delta_{i,j}$
+for all $i$ and $j$, where $\delta_{i,j}$ is the Kronecker delta
+function.}
+
+\begin{proof}
+The proof is a standard proof in linear algebra.  We note that
+\begin{align}
+(\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k})
+( \VEC{v}_{j_1}, \VEC{v}_{j_2}, \ldots, \VEC{v}_{j_k})
+&= \prod_{m=1}^k \phi_{i_m}(\VEC{v}_{j_m})
+= \prod_{m=1}^k \delta_{i_m,j_m} \nonumber \\
+&= \begin{cases}
+1 & \quad \text{if} \ j_m = i_m \ \text{for} \ 1 \leq m \leq k \\
+0 & \quad \text{otherwise}  
+\end{cases} \label{stokesBTEq1}
+\end{align}
+
+\stage{i} We prove that any $\tau \in \T^k(H)$ can be expressed
+as a linear combination of elements in $\MM$.
+
+Given $\VEC{w}_j \in H$ for $1 \leq j \leq k$.  Since $\B$ is a basis
+of $H$, we may express each $\VEC{w}_j$ as
+$\displaystyle \VEC{w}_j = \sum_{m_j=1}^n a_{m_j,j} \VEC{v}_{m_j}$ for some
+$a_{m_j,j} \in \RR$.  We get from (\ref{stokesBTEq1}) that
+\begin{align*}
+&(\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k})
+(\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_k) \\
+&\ = \sum_{\substack{1 \leq m_j \leq n\\1\leq j \leq k}}
+a_{m_1,1} a_{m_2,2} \cdots a_{m_k,k}
+(\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k})
+(\VEC{v}_{m_1}, \VEC{v}_{m_2}, \ldots, \VEC{v}_{m_k})
+= a_{i_1,1} a_{i_2,2} \cdots a_{i_k,k} \ .
+\end{align*}
+Hence
+\begin{align*}
+\tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_k)
+&= \sum_{\substack{1 \leq i_m \leq n\\1\leq m \leq k}}
+a_{i_1,1} a_{i_2,2} \cdots a_{i_k,k}
+\tau (\VEC{v}_{i_1}, \VEC{v}_{i_2}, \ldots, \VEC{v}_{i_k}) \\
+&= \sum_{\substack{1 \leq i_m \leq n\\1\leq m \leq k}}
+\tau (\VEC{v}_{i_1}, \VEC{v}_{i_2}, \ldots, \VEC{v}_{i_k})
+(\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k})
+(\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_k) \ .
+\end{align*}
+Since this is true for all $\VEC{w}_i \in H$ with $1 \leq i \leq k$,
+we get that
+\[
+\tau
+= \sum_{\substack{1 \leq i_m \leq n\\1\leq m \leq k}}
+\tau (\VEC{v}_{i_1}, \VEC{v}_{i_2}, \ldots, \VEC{v}_{i_k})
+(\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k}) \ .
+\]
+
+\stage{ii} We prove that the elements of $\MM$ are linearly
+independent.  Suppose that
+\[
+\sum_{\substack{1 \leq i_m \leq n\\1\leq m \leq k}}
+a_{i_1,i_2,\ldots,i_k} \,
+\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k}
+= 0 \ .
+\]
+If we evaluate this expression at
+$(\VEC{v}_{m_1}, \VEC{v}_{m_2}, \ldots, \VEC{v}_{m_k})$ and use
+(\ref{stokesBTEq1}), we get $a_{m_1,m_2,\ldots,m_k}=0$
+for $1 \leq m_j \leq n$ and $1 \leq j \leq k$.
+\end{proof}
+
+\begin{defn}
+An {\bfseries inner product}\index{Tensor!Inner Product} on $H$ is a
+$2$-tensor $\displaystyle \tau \in \T^2(H)$ such that $\tau$ is
+{\bfseries symmetric}\index{Tensor!Symmetric} and
+{\bfseries positive definite}\index{Tensor!Positive Defined} \footnotemark.
+\end{defn}
+
+\footnotetext{The $2$-tensor $\tau$ is symmetric if
+$\tau(\VEC{v}_1,\VEC{v}_2) = \tau(\VEC{v}_2,\VEC{v}_1)$ for all
+$\VEC{v}_1$ and $\VEC{v}_2$ in $H$.  The $2$-tensor
+$\tau$ is positive definite if $\tau(\VEC{v},\VEC{v})>0$ for all
+$\VEC{v}\in H$ with $\VEC{v} \neq \VEC{0}$.}
+
+This definition of the inner product corresponds to the standard
+definition of inner product on a vector space.
+
+\begin{theorem} \label{thONBtau}
+Suppose that $\displaystyle \tau\in \T^2(H)$ is an inner product on a
+vector space $H$ of dimension $n$ over the real.  There exists a basis
+$\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ of $H$ such that
+$\tau(\VEC{v}_i,\VEC{v}_j) = \delta_{i,j}$ for all $i$ and $j$.
+\end{theorem}
+
+The theorem is proved exactly as it is done in linear algebra using
+Gram-Schmidt orthogonalization process with the inner product
+$\ps{\VEC{v}_1}{\VEC{v}_2} \equiv \tau(\VEC{v}_1,\VEC{v}_2)$ for
+$\VEC{v}_1,\VEC{v}_2 \in H$ and the norm
+$\|\VEC{v}\| \equiv \sqrt{\ps{\VEC{v}}{\VEC{v}}}$ for $\VEC{v} \in H$.
+
+\begin{defn}
+A basis $\B$ as in the statement of the Theorem~\ref{thONBtau} is
+called an {\bfseries orthonormal basis}\index{Tensor!Orthonormal Basis}
+with respect to the inner product $\tau$.
+\end{defn}
+
+Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of $H$, it
+is possible to choose an inner product on $H$ such that $\B$ is an
+orthonormal basis.  Let $\displaystyle \E = \{ \VEC{e}_i \}_{i=1}^n$
+be the canonical basis of $\displaystyle \RR^n$ and
+$\ps{}{}$ be the standard inner product on $\displaystyle \RR^n$
+defined by
+$\displaystyle \ps{\VEC{x}_1}{\VEC{x}_2} = \sum_{j=1}^n x_{j,1}x_{j,2}$
+for $\displaystyle \VEC{x}_i = \sum_{j=1}^n x_{j,i}\VEC{e}_j$ and
+$1 \leq i \leq 2$.
+Moreover, let $\displaystyle f:H \to \RR^n$ be the linear
+isomorphism defined by $f(\VEC{v}_i) = \VEC{e}_i$ for $1 \leq i \leq n$.
+We define the inner product $\displaystyle \tau \in \T^2(H)$ by
+\begin{align*}
+\tau(\VEC{w}_1,\VEC{w}_2) &= \ps{f(\VEC{w}_1)}{f(\VEC{w}_2)}
+= \ps{\sum_{j=1}^n w_{j,1}f(\VEC{v}_j)}{\sum_{j=1}^n w_{j,2}f(\VEC{v}_j)}
+= \ps{\sum_{j=1}^n w_{j,1}\VEC{e}_j}{\sum_{j=1}^n w_{j,2}\VEC{e}_j} \\
+&= \sum_{j=1}^n w_{j,1}w_{j,2}
+\end{align*}
+for $\displaystyle \VEC{w}_i = \sum_{j=1}^n w_{j,i}\VEC{v}_j$ and
+$1 \leq i \leq 2$.  The basis $\B$ is an orthogonal basis with respect
+to the inner product $\tau$.
+
+\begin{defn}
+A {\bfseries permutation}\index{Permuation} $\sigma$ on
+$J_k=\{1,2,\ldots,k\}$ is a one-to-one and onto
+function $\sigma:J_k \to J_k$.  A
+{\bfseries transposition}\index{Transposition} on $J_k$ is a permutation
+on $J_k$ that interchanges only two elements of $J_k$ and
+leaves the others fixed.
+\end{defn}
+
+The set of all permutation on $J_k$ forms a group with respect to
+the composition of functions that we denote $S_k$.  There is a famous
+result in algebra that says that any permutation on $J_k$ may be
+expressed as the composition of transpositions on $J_k$.  Moreover,
+there exists a function $\sgn$ acting on the permutations on $J_k$
+such that $\sgn(\sigma) = -1$ if $\sigma$ is a transposition on $J_k$
+and $\sgn(\sigma_1\circ \sigma_2) = \sgn(\sigma_1)\sgn(\sigma_2)$ for
+all permutations $\sigma_1$ and $\sigma_2$ on $J_k$.  In particular,
+for a permutation $\sigma$ on $J_k$, $\sgn(\sigma) = 1$ if and only if
+$\sigma$ is the composition of an even number of transpositions.
+Therefore $\sgn(\sigma) = -1$ if and only if $\sigma$ is the
+composition of an odd number of transpositions.  All these results
+are proved in standard books in (linear) algebra, for instance in
+\cite{La}.
+
+\begin{defn}
+A $k$-tensor $\displaystyle \tau \in \T^k(H)$ is called
+{\bfseries alternating}\index{Tensor!Alternating} if
+\[
+\tau(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k) =
+-\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots ,\VEC{v}_{\sigma(k)})
+\]
+for any transposition $\sigma$ on $J_k$.  The set of all alternating
+$k$-tensor on $H$ is denoted $\displaystyle \Omega^k(H)$.
+\end{defn}
+
+It is easy to verify that $\displaystyle \Omega^k(H)$ is a linear
+subspace of $\displaystyle \T^k(H)$.
+
+\begin{prop} \label{propAltDefn}
+Given $\tau \in \T^k(H)$, let
+\[
+\alt(\tau)(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k)
+= \frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)
+\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots ,\VEC{v}_{\sigma(k)})
+\]
+for $\VEC{v}_i \in H$ and $1\leq i \leq k$,
+where $S_k$ is the group of permutations on $J_k = \{1,2,\ldots,k\}$.
+Then $\displaystyle \alt:\T^k(H) \to \Omega^k(H)$.
+\end{prop}
+
+\begin{proof}
+Suppose that $\tau \in \T^k(H)$ and $\tilde{\sigma}$ is a
+fixed transposition on $J_k$.  We have that
+$\tilde{\sigma}^{-1} = \tilde{\sigma}$ and
+\begin{align*}
+\tilde{\sigma} : S_k & \to S_k \\
+\sigma &\mapsto \sigma \circ \tilde{\sigma}
+\end{align*}
+is one-to-one and onto.  Hence
+\begin{align*}
+&\alt(\tau)(\VEC{v}_{\tilde{\sigma}(1)}, \VEC{v}_{\tilde{\sigma}(2)},
+\ldots,\VEC{v}_{\tilde{\sigma}(k)})
+= \frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)
+\tau(\VEC{v}_{(\sigma\circ \tilde{\sigma})(1)},
+\VEC{v}_{(\sigma\circ\tilde{\sigma})(2)}, \ldots ,
+\VEC{v}_{(\sigma\circ\tilde{\sigma})(k)}) \\
+&\quad = \frac{1}{k!} \sum_{\sigma\circ\tilde{\sigma}\in S_k}
+\sgn(\sigma\circ\tilde{\sigma})
+\tau(\VEC{v}_{\sigma(1)},\VEC{v}_{\sigma(2)}, \ldots,\VEC{v}_{\sigma(k)}) \\
+&\quad = \frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)\sgn(\tilde{\sigma})
+\tau(\VEC{v}_{\sigma(1)},\VEC{v}_{\sigma(2)}, \ldots , \VEC{v}_{\sigma(k)})
+= -\frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)
+\tau(\VEC{v}_{\sigma(1)},\VEC{v}_{\sigma(2)}, \ldots , \VEC{v}_{\sigma(k)}) \\
+&\quad = - \alt(\tau)(\VEC{v}_1, \VEC{v}_2, \ldots,\VEC{v}_k)
+\end{align*}
+for all $\VEC{v}_i \in H$ and $1 \leq i \leq k$.
+\end{proof}
+
+\begin{prop} \label{propAltR}
+\begin{enumerate}
+\item If $\displaystyle \tau \in \Omega^k(H)$, then $\alt(\tau)=\tau$.
+\item If $\displaystyle \tau \in \T^k(H)$, then $\alt(\alt(\tau))=\alt(\tau)$.
+\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$ for $1 \leq i \leq 2$
+and $\alt(\tau_1) = 0$, then $\alt(\tau_1 \otimes \tau_2) =
+\alt(\tau_2 \otimes \tau_1) = 0$.
+\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$ for $1 \leq i \leq 3$,
+then $\alt(\alt(\tau_1\otimes \tau_2) \otimes \tau_3)
+= \alt(\tau_1\otimes \alt(\tau_2 \otimes \tau_3))
+= \alt(\tau_1\otimes \tau_2 \otimes \tau_3)$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\stage{1}  Since $\sigma \in S_k$ is the product of transpositions, we
+have that
+$\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)},\ldots, \VEC{v}_{\sigma(k)})
+= \sgn(\sigma) \tau(\VEC{v}_1, \VEC{v}_2,\ldots, \VEC{v}_k)$
+for all $\VEC{v}_i \in H$ and $1 \leq i \leq k$.
+Moreover, the number of different functions from $J_k$ to $J_k$ is $k!$.
+Namely, the number of elements of $S_k$, denoted $|S_k|$, is $k!$.
+Hence, for $\tau \in \Omega^k(H)$, we have that
+\begin{align*}
+&\alt(\tau)(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k)
+= \frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)
+\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots ,\VEC{v}_{\sigma(k)}) \\
+&\qquad
+= \left(\frac{1}{k!} \sum_{\sigma\in S_k}
+\underbrace{\sgn(\sigma) \sgn(\sigma)}_{=1}\right)
+\tau(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k)
+= \tau(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k)
+\end{align*}
+for all $\VEC{v}_i \in H$ and $1 \leq i \leq k$.
+
+\stage{2} This follows from (1) because
+$\displaystyle \alt(\tau) \in \Omega^k(H)$.
+
+\stage{3} Let $\tilde{S}_{k_1} \subset S_{k_1+k_2}$ be the set of all
+permutations $\tilde{\sigma}$ on $J_{k_1+k_2}$ such that
+$\tilde{\sigma}(i) = i$ for $k_1+1 \leq i \leq k_2$.  Namely,
+$\tilde{\sigma}$ permutes only the elements of the set $\{1,2,\ldots,k_1\}$.
+We have that $\tilde{S}_{k_1}$ is a subgroup of $S_{k_1+k_2}$.
+We choose a representative $\sigma_j \in S_{k_1+k_2}$ for each of the
+elements (i.e.\ equivalence classes) of the quotient group
+$S_{k_1+k_2}/\tilde{S}_{k_1}$.  We end up with a set
+of permutations $S = \{\sigma_j: 1 \leq j \leq J\}$.
+We have that $\displaystyle S_{k_1+k_2} = \bigcup_{1\leq j \le J}
+\{ \sigma_j \circ \tilde{\sigma} : \tilde{\sigma} \in \tilde{S}_{k_1} \}$
+and each element of $S_{k_1+k_2}$ has a unique representation of the form
+$\sigma_j \circ \tilde{\sigma}$ with $\tilde{\sigma} \in \tilde{S}_{k_1}$
+and $\sigma_j \in S$.  Hence
+\begin{align*}
+&\alt(\tau_1\otimes \tau_2)(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_{k_1+k_2})
+= \frac{1}{(k_1+k_2)!} \sum_{\sigma\in S_{k_1+k_2}} \sgn(\sigma)
+\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots,\VEC{v}_{\sigma(k_1+k_2)})
+\\
+&\quad = \frac{1}{(k_1+k_2)!} \sum_{j=1}^J
+\sum_{\tilde{\sigma}\in \tilde{S}_{k_1}} \sgn(\sigma_j\circ\tilde{\sigma})
+(\tau_1\otimes \tau_2)(\VEC{v}_{(\sigma_j\circ\tilde{\sigma})(1)},
+\VEC{v}_{(\sigma_j\circ\tilde{\sigma})(2)}, \ldots ,
+\VEC{v}_{(\sigma_j\circ\tilde{\sigma})(k_1+k_2)}) \\
+&\quad = \frac{1}{(k_1+k_2)!} \sum_{j=1}^J
+\sum_{\tilde{\sigma}\in \tilde{S}_{k_1}} \sgn(\sigma_j\circ\tilde{\sigma})
+\sgn(\sigma_j) (\tau_1\otimes \tau_2)
+(\VEC{v}_{\tilde{\sigma}(1)},\VEC{v}_{\tilde{\sigma}(2)}, \ldots ,
+\VEC{v}_{\tilde{\sigma}(k_1+k_2)}) \\
+&\quad = \frac{1}{(k_1+k_2)!} \sum_{j=1}^J
+\sum_{\tilde{\sigma}\in \tilde{S}_{k_1}} \sgn(\tilde{\sigma})
+(\tau_1 \otimes \tau_2)
+(\VEC{v}_{\tilde{\sigma}(1)},\VEC{v}_{\tilde{\sigma}(2)}, \ldots ,
+\VEC{v}_{\tilde{\sigma}(k_1+k_2)}) \\
+&\quad = \frac{k_1!}{(k_1+k_2)!} \sum_{j=1}^J
+\left( \frac{1}{k_1!}\sum_{\tilde{\sigma}\in \tilde{S}_{k_1}} \sgn(\tilde{\sigma})
+\tau_1(\VEC{v}_{\tilde{\sigma}(1)},\VEC{v}_{\tilde{\sigma}(2)}, \ldots,
+\VEC{v}_{\tilde{\sigma}(k_1)}) \right)
+\tau_2(\VEC{v}_{k_1+1},\VEC{v}_{k_1+2}, \ldots , \VEC{v}_{k_1+k_2}) \\
+&\quad = \frac{J\,k_1!}{(k_1+k_2)!}
+\alt(\tau_1)(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_{k_1})
+\tau_2(\VEC{v}_{k_1+1},\VEC{v}_{k_1+2}, \ldots , \VEC{v}_{k_1+k_2})
+= 0
+\end{align*}
+for all $\VEC{v}_i\in H$ and $1 \leq i \leq k_1+k_2$.
+The proof that $\displaystyle \alt(\tau_2 \otimes \tau_1) = 0$ is
+similar.  It suffices to use the subgroup
+$\breve{S}_{k_1} \subset S_{k_1+k_2}$ of all
+permutations $\breve{\sigma}$ on $J_{k_1+k_2}$ such that
+$\breve{\sigma}(i) = i$ for $1 \leq i \leq k_2$.
+
+\stage{4}
+It follows from (2) that
+$\alt(\alt(\tau_2 \otimes \tau_3) - \tau_2\otimes \tau_3) 
+= \alt(\tau_2\otimes \tau_3) - \alt(\tau_2\otimes \tau_3)  = 0$. 
+Hence, we get from (3) that
+\begin{align*}
+0 & =\alt\big( \tau_1 \otimes \big(\alt(\tau_2 \otimes \tau_3)
+- \tau_2\otimes \tau_3\big)\big)
+= \alt\big( \tau_1 \otimes \alt(\tau_2 \otimes \tau_3)
+- \tau_1 \otimes \tau_2\otimes \tau_3 \big) \\
+&= \alt( \tau_1 \otimes \alt(\tau_2 \otimes \tau_3))
+- \alt(\tau_1 \otimes \tau_2\otimes \tau_3 \big) \ .
+\end{align*}
+Similarly, we can prove that
+$\alt( \alt(\tau_1 \otimes \tau_2) \otimes \tau_3)
+- \alt(\tau_1 \otimes \tau_2\otimes \tau_3 \big) = 0$.
+\end{proof}
+
+\begin{defn} \label{defnWwedgeP}
+The {\bfseries wedge product}\index{Tensor!Wedge Product}
+$\tau_1 \wedge \tau_2$ of
+$\displaystyle \tau_1 \in \Omega^{k_1}(H)$ and
+$\displaystyle \tau_2\in \Omega^{k_2}(H)$ is the tensor
+$\displaystyle \tau_1\wedge \tau_2 \in \Omega^{k_1+k_2}(H)$ defined by
+\[
+\tau_1 \wedge \tau_2 = \frac{(k_1+k_2)!}{k_1! k_2!}
+\alt(\tau_1\otimes \tau_2) \ .
+\]
+\end{defn}
+
+Let $H_1$ and $H_2$ be two vector spaces over $\RR$.  Given a linear map
+$f:H_1\to H_2$, we can define a map
+$\displaystyle f^\ast: \T^k(H_2)\to \T^k(H_1)$ by
+\[
+(f^\ast(\tau))(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k) = 
+\tau(f(\VEC{v}_1),f(\VEC{v}_2), \ldots,f(\VEC{v}_k))
+\]
+for all $\displaystyle \tau \in \T^k(H_2)$ and $\VEC{v}_i \in H_1$ for
+$1 \leq i \leq k$.  We say that
+$\displaystyle f^\ast(\tau)$ is the {\bfseries pull-back}\index{Pull-Back}
+of $\tau$ by $f$.
+
+The wedge product satisfies many relations.  Some of them are listed in
+the next proposition.
+
+\begin{prop} \label{propWedgeR}
+\begin{enumerate}
+\item If $\tau_1,\tau_2 \in \Omega^{k_1}$
+and $\tau_3 \in \Omega^{k_2}(H)$, then
+$(\tau_1 + \tau_2)\wedge \tau_3 = \tau_1 \wedge \tau_3 + \tau_2
+\wedge \tau_3$.
+\item If $\tau_1\in \Omega^{k_1}(H)$ and
+$\tau_2,\tau_3 \in \Omega^{k_2}(H)$, then
+$\tau_1\wedge(\tau_2+ \tau_3) = \tau_1 \wedge \tau_2 + \tau_1
+\wedge \tau_3$.
+\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$
+for $1 \leq i \leq 2$ and $a \in \RR$, then
+$(a \tau_1) \wedge \tau_2 = \tau_1 \wedge (a\tau_2) = 
+a (\tau_1 \wedge \tau_2)$.
+\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$
+for $1 \leq i \leq 2$, then
+$\tau_1 \wedge \tau_2 = (-1)^{k_1 k_2} \tau_2 \wedge \tau_1$.
+\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$
+for $1 \leq i \leq 2$ and $f:H_1\to H_2$ is a linear map from the
+vector space $H_1$ to the vector space $H_2$, then 
+$f^\ast(\tau_1 \wedge \tau_2) = f^\ast\tau_1 \wedge f^\ast \tau_2$.
+\item If $\tau_i\in \Omega^{k_i}(H)$ for $1\leq i \leq 3$, then
+\[
+(\tau_1\wedge \tau_2) \wedge \tau_3 = \tau_1 \wedge ( \tau_2 \wedge \tau_3)
+= \frac{(k_1+k_2+k_3)!}{k_1! k_2! k_3!}
+\alt(\tau_1\otimes \tau_2 \otimes \tau_3) \ .
+\]
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+We leave the proof of (1), (2), (3) and (5) to the reader.
+
+\stage{4} Given $\sigma \in S_{k_1+k_2}$, we have that
+\begin{align*}
+&(\tau_1 \otimes \tau_2)(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots,
+\VEC{v}_{\sigma(k_1+k_2)}) \\
+&\qquad = \tau_1(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots,
+\VEC{v}_{\sigma(k_1)})\,
+\tau_2(\VEC{v}_{\sigma(k_1+1)}, \VEC{v}_{\sigma(k_1+2)}, \ldots,
+\VEC{v}_{\sigma(k_1+k_2)}) \\
+&\qquad = \tau_2(\VEC{v}_{\sigma(k_1+1)}, \VEC{v}_{\sigma(k_1+2)}, \ldots,
+\VEC{v}_{\sigma(k_1+k_2)})\,
+\tau_1(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots,
+\VEC{v}_{\sigma(k_1)}) \\
+&\qquad = \tau_2(\VEC{v}_{\tilde{\sigma}(1)}, \VEC{v}_{\tilde{\sigma}(2)},
+\ldots, \VEC{v}_{\tilde{\sigma}(k_2)})\,
+\tau_1(\VEC{v}_{\tilde{\sigma}(k_2+1)}, \VEC{v}_{\tilde{\sigma}(k_2+2)}, \ldots,
+\VEC{v}_{\tilde{\sigma}(k_2+k_1)}) \\
+&\qquad = (\tau_2 \otimes \tau_1)(\VEC{v}_{\tilde{\sigma}(1)},
+\VEC{v}_{\tilde{\sigma}(2)}, \ldots, \VEC{v}_{\tilde{\sigma}(k_1+k_2)}) \ ,
+\end{align*}
+where $\tilde{\sigma} \in S_{k_1+k_2}$ is defined by
+\[
+\tilde{\sigma}(i) = \begin{cases}
+\sigma(k_1+i) & \quad \text{if} \ 1 \leq i \leq k_2 \\
+\sigma(i-k_2) & \quad \text{if} \ k_2+1 \leq i \leq k_1 + k_2
+\end{cases}
+\]
+Note that $\sigma \mapsto \tilde{\sigma}$ for $\sigma \in S_{k_1+k_2}$
+defines a one-to-one and onto map from $S_{k_1+k_2}$ into itself.
+
+We need to determine the relation between $\sgn(\tilde{\sigma})$ and
+$\sgn(\sigma)$.  Let $\sigma_{i_1,i_2} \in S_{k_1+k_2}$ be the
+transposition such that $\sigma_{i_1,i_2}(i_1) = i_2$,
+$\sigma_{i_1,i_2}(i_2) = i_1$ and $\sigma_{i_1,i_2}(i) = i$ for $i
+\neq i_1,i_2$.
+
+Let $\tilde{\sigma}_0 = \sigma$ and
+$\tilde{\sigma}_j = \tilde{\sigma}_{j-1} \circ
+\sigma_{k_1-j+k_2,k_1-j+k_2+1}\circ \ldots
+\circ \sigma_{k_1-j+2,k_1-j+3}\circ \sigma_{k_1-j+1,k_1-j+2}$ for
+$1 \leq j \leq k_1$.  We have that
+\begin{align*}
+\sgn(\tilde{\sigma}_j) &= \sgn(\tilde{\sigma}_{j-1})\,
+\underbrace{\sgn(\sigma_{k_1-j+k_2,k_1-j+k_2+1}) \cdots
+\sgn(\sigma_{k_1-j+2,k_1-j+3}) \sgn(\sigma_{k_1-j+1,k_1-j+2})}_{k_2\text{ times}} \\
+&= (-1)^{k_2} \sgn(\tilde{\sigma}_{j-1})
+\end{align*}
+for $1 \leq j \leq k_1$.  By induction, it is easy to verify that
+$\displaystyle \sgn(\tilde{\sigma}_{k_1}) = (-1)^{k_1 k_2}
+\sgn(\tilde{\sigma}_0) = (-1)^{k_1 k_2} \sgn(\sigma)$.
+
+We claim that $\tilde{\sigma}_{k_1} = \tilde{\sigma}$.  We take a
+close look at $\tilde{\sigma}_j$.  For $1\leq i < k_1 - j +1$ or
+$k_1 -j +k_2 +1 < i \leq k_1+k_2$, we have that
+\begin{align*}
+i & \xrightarrow{\sigma_{k_1-j+1,k_1-j+2}}
+i \xrightarrow{\sigma_{k_1-j+2,k_1-j+3}}
+i \xrightarrow{\sigma_{k_1-j+3,k_1-j+4}}
+\ldots \\
+& \xrightarrow{\sigma_{k_1-j+k_2-1,k_1-j+k_2}}
+i \xrightarrow{\sigma_{k_1-j+k_2,k_1-j+k_2+1}}
+i \xrightarrow{\tilde{\sigma}_{j-1}} \tilde{\sigma}_{j-1}(i) \ .
+\end{align*}
+For $k_1 -j +1 < i \leq k_1-j+k_2+1$, say $i = k_1 -j+m +1$ with
+$1\leq m \leq k_2$, we have that
+\begin{align*}
+i & \xrightarrow{\sigma_{k_1-j+1,k_1-j+2}}
+i \xrightarrow{\sigma_{k_1-j+2,k_1-j+3}}
+i \xrightarrow{\sigma_{k_1-j+3,k_1-j+4}}
+\ldots \xrightarrow{\sigma_{k_1-j+m-1,k_1-j+m}}
+i \xrightarrow{\sigma_{k_1-j+m,k_1-j+m+1}} \\
+& i-1 \xrightarrow{\sigma_{k_1-j+m+1,k_1-j+m+2}}
+i-1 \xrightarrow{\sigma_{k_1-j+m+2,k_1-j+m+3}}
+\ldots \xrightarrow{\sigma_{k_1-j+k_2-1,k_1-j+k_2}} \\
+&i-1 \xrightarrow{\sigma_{k_1-j+k_2,k_1-j+k_2+1}}
+ i-1 \xrightarrow{\tilde{\sigma}_{j-1}} \tilde{\sigma}_{j-1}(i-1) \ .
+\end{align*}
+Finally, for $i = k_1-j+1$, we have that
+\begin{align*}
+i &\xrightarrow{\sigma_{k_1-j+1,k_1-j+2}}
+i+1 \xrightarrow{\sigma_{k_1-j+2,k_1-j+3}}
+i+2 \xrightarrow{\sigma_{k_1-j+3,k_1-j+4}}
+\ldots \xrightarrow{\sigma_{k_1-j+k_2-1,k_1-j+k_2}} \\
+&i+ k_2-1 \xrightarrow{\sigma_{k_1-j+k_2,k_1-j+k_2+1}}
+i+ k_2 \xrightarrow{\tilde{\sigma}_{j-1}} \tilde{\sigma}_{j-1}(i+k_2) \ .
+\end{align*}
+To summarize, we have shown that
+\[
+\tilde{\sigma}_j(i) = \begin{cases}
+\tilde{\sigma}_{j-1}(i) & \quad \text{if} \ 1 \leq i \leq k_1-j \\
+\tilde{\sigma}_{j-1}(i+1) & \quad \text{if} \ k_1-j+ 1 \leq i <
+k_1 -j + k_2 + 1 \\
+\tilde{\sigma}_{j-1}(i-k_2) & \quad \text{if} \ k_1-j+k_2+1 \leq
+i \leq  k_1 + k_2
+\end{cases}
+\]
+With this information, a simple proof by induction shows that
+\[
+\tilde{\sigma}_j(i) = \begin{cases}
+\sigma(i) & \quad \text{if} \ 1 \leq i \leq k_1-j \\
+\sigma(i+j) & \quad \text{if} \ k_1-j+1 \leq i \leq k_1 + k_2 -j \\
+\sigma(i - k_2) & \quad \text{if} \ k_1+k_2 -j +1 \leq i \leq  k_1 + k_2
+\end{cases}
+\]
+for $1 \leq j \leq k_1$.  In particular,
+$\tilde{\sigma}_{k_1} = \tilde{\sigma}$ as claimed.
+
+We therefore have that $\sgn(\sigma) = (-1)^{k_1 k_2}\sgn(\tilde{\sigma})$.
+Hence
+\begin{align*}
+&(\tau_1\wedge\tau_2)(\VEC{v}_1, \VEC{v}_, \ldots, \VEC{v}_{k_1+k_2})
+= \frac{1}{k_1!\,k_2!} \sum_{\sigma \in S_{k_1+k_2}}
+\sgn(\sigma) (\tau_1 \otimes \tau_2)
+(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots,
+\VEC{v}_{\sigma(k_1+k_2)}) \\
+&\qquad = \frac{1}{k_1!\,k_2!} \sum_{\tilde{\sigma} \in S_{k_1+k_2}}
+\sgn(\sigma) (\tau_2 \otimes \tau_1)
+(\VEC{v}_{\tilde{\sigma}(1)}, \VEC{v}_{\tilde{\sigma}(2)}, \ldots,
+\VEC{v}_{\tilde{\sigma}(k_1+k_2)}) \\
+&\qquad = (-1)^{k_1 k_2} \frac{1}{k_1!\,k_2!} \sum_{\tilde{\sigma} \in S_{k_1+k_2}}
+\sgn(\tilde{\sigma}) (\tau_2 \otimes \tau_1)
+(\VEC{v}_{\tilde{\sigma}(1)}, \VEC{v}_{\tilde{\sigma}(2)}, \ldots,
+\VEC{v}_{\tilde{\sigma}(k_1+k_2)}) \\
+&\qquad = (-1)^{k_1 k_2} (\tau_2\wedge \tau_1)(\VEC{v}_1, \VEC{v}_,
+\ldots, \VEC{v}_{k_1+k_2})                                        
+\end{align*}
+for all $\VEC{v}_i \in H$ and $1 \leq i \leq k_1 + k_2$.
+
+\stage{6} We have that
+\begin{align*}
+\tau_1 \wedge ( \tau_2 \wedge \tau_3)
+&= \frac{(k_1+k_2 +k_3)!}{k_1!\, (k_2+k_3)!} \alt(\tau_1 \otimes
+(\tau_2 \wedge \tau_3)) \\
+&= \frac{(k_1+k_2 +k_3)!}{k_1!\, (k_2+k_3)!} \alt\left(\tau_1 \otimes
+\left(\frac{(k_2+k_3)!}{k_2! \, k_3!} \alt(\tau_2 \otimes \tau_3\right)\right)
+\\
+&= \frac{(k_1+k_2 +k_3)!}{k_1!\, (k_2+k_3)!}\,
+\frac{(k_2+k_3)!}{k_2! \, k_3!} \alt\left(\tau_1 \otimes
+\left(\alt(\tau_2 \otimes \tau_3\right)\right) \\
+&= \frac{(k_1+k_2+k_3)!}{k_1! k_2! k_3!}
+\alt(\tau_1\otimes \tau_2 \otimes \tau_3) \ ,
+\end{align*}
+where we have used the definition of the wedge product to get the first
+two equality and (4) of Proposition~\ref{propAltR} to get the last
+equality.  The other relation in (6) is similarly proved.
+\end{proof}
+
+From (6) of the previous theorem, we have associativity of the wedge product.
+Hence, we may defined $\tau_1\wedge \tau_2 \wedge \tau_3$ as
+$(\tau_1\wedge \tau_2) \wedge \tau_3 = \tau_1 \wedge ( \tau_2 \wedge \tau_3)$
+for all $\displaystyle \tau_i \in \Omega^{k_i}(H)$ with $1\leq i \leq 3$.
+Inductively, we may define
+$\tau_1\wedge \tau_2 \wedge \ldots \wedge \tau_j$ for all
+$\displaystyle \tau_i\in \Omega^{k_i}(H)$ with $1\leq i \leq j$.
+
+\begin{cor} \label{corMwedgesR}
+$\displaystyle \tau_1\wedge \tau_2 \wedge \ldots \wedge \tau_j
+= \frac{(k_1+k_2+\ldots + k_j)!}{k_1! k_2! \cdots k_j!}
+\alt(\tau_1\otimes \tau_2 \otimes \ldots \otimes \tau_j)$ for
+$\tau_i \in \Omega^{k_i}(H)$ and $1\leq i \leq j$.
+\end{cor}
+
+The proof is left to the reader.
+
+\begin{prop} \label{propTssT}
+Given $\tau_i \in \Omega^1(H)$ for $1\leq i \leq k$, we have that
+\begin{equation} \label{wedgeIeq1}
+\tau_{\rho(1)} \wedge \tau_{\rho(2)} \wedge \ldots \wedge \tau_{\rho(k)}
+= \sgn(\rho)\, \tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_k
+\end{equation}
+for all $\rho \in S_k$, the group of permutations on
+$J_k = \{1,2,\ldots,k\}$.
+In particular, if $\tau_p = \tau_q$ for some $1 \leq p < q \leq k$, then
+$\tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_k = 0$.
+\end{prop}
+
+\begin{proof}
+We first note that the map from $S_k$ to itself defined by
+$\sigma \mapsto \sigma\circ\rho^{-1}$ for $\sigma \in S_k$ is one-to-one
+and onto.  Moreover, for all $1\leq m \leq k$, we have that
+$\tau_{\rho(m)}(\VEC{w}_{\sigma(m)})
+= \tau_p(\VEC{w}_{\sigma(\rho^{-1}(p))})$ for $p = \rho(m)$
+and $\VEC{w}_i \in H$ and $1 \leq i \leq k$.
+Hence, we get from Corollary~\ref{corMwedgesR} that
+\begin{align*}
+&(\tau_{\rho(1)}\wedge \tau_{\rho(2)} \wedge \ldots \wedge
+\tau_{\rho(k)}) (\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_k) \\
+&\qquad\qquad = k! \alt(\tau_{\rho(1)}\otimes \tau_{\rho(2)} \otimes \ldots
+\otimes \tau_{\rho(k)}) (\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_k) \\
+&\qquad\qquad = \sum_{\sigma\in S_k} \sgn(\sigma)\,
+\tau_{\rho(1)}(\VEC{w}_{\sigma(1)}) \tau_{\rho(2)}(\VEC{w}_{\sigma(2)})
+\cdots \tau_{\rho(k)}(\VEC{w}_{\sigma(k)}) \\
+&\qquad\qquad =\sum_{\sigma\in S_k} \sgn(\sigma)\,
+\tau_1(\VEC{w}_{(\sigma\circ\rho^{-1})(1)})
+\tau_2(\VEC{w}_{(\sigma\circ\rho^{-1})(2)})
+\cdots \tau_k(\VEC{w}_{(\sigma\circ\rho^{-1})(k)}) \\
+&\qquad\qquad =\sum_{\tilde{\sigma}\in S_k}
+\sgn\left(\tilde{\sigma}\circ \rho\right)\,
+\tau_1(\VEC{w}_{\tilde{\sigma}(1)})
+\tau_2(\VEC{w}_{\tilde{\sigma}(2)})
+\cdots \tau_k(\VEC{w}_{\tilde{\sigma}()}) \\
+% &\qquad\qquad =\sum_{\tilde{\sigma}\in S_k}
+% \sgn(\tilde{\sigma})\sgn(\rho)\,
+% \tau_1(\VEC{w}_{\tilde{\sigma}(1)})
+% \tau_2(\VEC{w}_{\tilde{\sigma}(2)})
+% \cdots \tau_k(\VEC{w}_{\tilde{\sigma}(k)}) \\
+&\qquad\qquad = \sgn(\rho) \, \sum_{\tilde{\sigma}\in S_k}
+\sgn(\tilde{\sigma})\,\tau_1(\VEC{w}_{\tilde{\sigma}(1)})
+\tau_2(\VEC{w}_{\tilde{\sigma}(2)})
+\cdots \tau_k(\VEC{w}_{\tilde{\sigma}(k)}) \\
+&\qquad\qquad = \sgn(\rho)\, k! \alt(\tau_1\otimes\tau_2\otimes\ldots
+\otimes \tau_k)(\VEC{w}_2, \VEC{w}_2, \ldots, \VEC{w}_k) \\
+&\qquad\qquad = \sgn(\rho)\, (\tau_1\wedge \tau_2\wedge \ldots
+\wedge \tau_k) (\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_k)
+\end{align*}
+for all $\VEC{w}_i \in H$ and $1 \leq i \leq k$.
+
+Suppose the $\tau_p = \tau_q$ for some $1 \leq p < q \leq k$.  As usual, let
+$\sigma_{p,q} \in S_k$ be the transposition of $p$ and $q$.
+Then
+\begin{align*}
+&\tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_k
+= \tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_q
+\wedge \ldots \wedge \tau_p \wedge \ldots \wedge \tau_k \\
+&= \tau_{\sigma_{p,q}(1)} \wedge \tau_{\sigma_{p,q}(2)}
+\wedge \ldots \wedge \tau_{\sigma_{p,q}(k)}
+= \sgn(\sigma_{p,q})\, \tau_1 \wedge \tau_2
+\wedge \ldots \wedge \tau_j
+= - \tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_j \ ,
+\end{align*}
+where the first equality comes from $\tau_p = \tau_q$.  Thus
+$\tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_j  = 0$.
+\end{proof}
+
+\begin{theorem}  \label{thOkbasis}
+As in Theorem~\ref{stokesBT}, let
+$\displaystyle \B^\ast = \{ \phi_i \}_{i=1}^n$ be
+the dual basis associated to a basis
+$\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ of $H$.
+The set $\displaystyle \NNN =
+\{ \phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k} :
+1 \leq i_1 < i_2 < \ldots < i_k \leq n \}$
+is a basis of $\displaystyle \Omega^k(H)$.  In particular, the dimension of
+$\displaystyle \Omega^k(H)$ is
+$\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}$.
+\end{theorem}
+
+\begin{proof}
+\stage{i} We first show that any $\tau \in \Omega^k(H)$ can be written
+as a linear combination of elements in $\NNN$.
+
+It follows from Theorem~\ref{stokesBT} that we may write $\tau$ as
+$\displaystyle \tau = \sum_{\substack{1 \leq i_j \leq n\\1\leq j \leq k}}
+a_{i_1,i_2,\ldots,i_k}
+\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k}$
+for some $a_{i_1,i_2,\ldots,i_k} \in \RR$.  Hence, using (1) of
+Proposition~\ref{propAltR}, Corollary~\ref{corMwedgesR} and
+Proposition~\ref{propTssT} (with $\tau_j = \phi_{i_j}$ for
+$1\leq j \leq k$), we get that
+\begin{align*}
+\tau = \alt(\tau) &= \sum_{\substack{1 \leq i_j \leq n\\1\leq j \leq k}}
+a_{i_1,i_2,\ldots,i_k}
+\alt(\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k}) \\
+&= k! \sum_{\substack{1 \leq i_j \leq n\\1\leq j \leq k}}
+a_{i_1,i_2,\ldots,i_k}
+(\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k}) \\
+&= \sum_{1\leq i_1 < i_2 < \ldots < i_k \leq n}
+\left( k! \sum_{\sigma \in S_k} a_{\sigma(i_1),\sigma(i_2),\ldots,\sigma(i_k)}
+\, \phi_{\sigma(i_1)} \wedge \phi_{\sigma(i_2)} \wedge \ldots \wedge
+\phi_{\sigma(i_k)} \right)\\
+&= \sum_{1\leq i_1 < i_2 < \ldots < i_k \leq n}
+\left( k! \sum_{\sigma \in S_k} \sgn(\sigma)\, a_{\sigma(i_1),\sigma(i_2),\ldots,
+\sigma(i_k)} \right) \,
+\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k}
+\end{align*}
+
+\stage{ii} The proof that the elements of $\NNN$ are linearly
+independent is similar to the proof that the elements of $\MM$ are
+linearly independent in Theorem~\ref{stokesBT}.
+We first note that
+\begin{align*}
+&(\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k})
+(\VEC{v}_{j_1}, \VEC{v}_{j_2}, \ldots, \VEC{v}_{j_k}) \\
+&\qquad = \sum_{\sigma \in S_k}
+\sgn(\sigma) \, \phi_{i_1}(\VEC{v}_{\sigma(j_1)}) \otimes
+\phi_{i_2}(\VEC{v}_{\sigma(j_2)}) \otimes \ldots \otimes
+\phi_{i_k}(\VEC{v}_{\sigma(j_k)}) \nonumber \\
+&\qquad = \begin{cases}
+\sgn(\sigma) & \quad \text{if} \
+\sigma(j_m) = i_m \ \text{for} \ 1\leq m \leq k \\
+0 & \quad \text{otherwise}
+\end{cases}
+\end{align*}
+for $1 \leq i_m,j_m \leq n$ and $1\leq m \leq k$.
+In particular, for $1\leq i_1 < i_2 < \ldots < i_k \leq n$ and
+$1\leq j_1 < j_2 < \ldots < j_k \leq n$, we get that
+\begin{align}
+(\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k})
+(\VEC{v}_{j_1}, \VEC{v}_{j_2}, \ldots, \VEC{v}_{j_k})
+= \begin{cases}
+1 & \quad \text{if} \ j_m = i_m \ \text{for} \ 1\leq m \leq k \\
+0 & \quad \text{otherwise}
+\end{cases}  \label{thOkbasisEq1}
+\end{align}
+
+Suppose that
+\[
+\sum_{1 \leq i_1 < i_2 < \ldots < i_k \leq n}
+a_{i_1,i_2,\ldots,i_k} \,
+\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k} = 0 \ .
+\]
+If we evaluate this expression at
+$(\VEC{v}_{m_1}, \VEC{v}_{m_2}, \ldots, \VEC{v}_{m_k})$
+with $1 \leq m_1 < m_2 < \ldots < m_k \leq n$ and use
+(\ref{thOkbasisEq1}), we get $a_{m_1,m_2,\ldots,m_k} =0$.
+
+\stage{iii}
+To determine the number of elements in the basis $\NNN$, we first note
+that there are $n (n-1) (n-2)\cdots (n-k+1) = n!/(n-k)!$ ways to select
+$k$ distinct $\phi_i$ from $\BB^\ast$.  However, for each set of indices
+$1 \leq i_1 < i_2 < \ldots < i_k\leq n$, all $k!$ combinations
+$\displaystyle \{ \phi_{i_{\sigma(j)}} \}_{j=1}^k$ for $\sigma \in S_k$
+are included in the previous count while only the ordering
+$i_1 < i_2 < \ldots <i_k$ matters for the basis $\NNN$.
+Therefore, the number of elements of $\NNN$ is
+$n!/((n-k)!k!)$.
+\end{proof}
+
+\begin{theorem} \label{stokesTBE}
+Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of the
+vector space $H$ over $\RR$.  If $\displaystyle \tau \in \Omega^n(H)$ and
+$\displaystyle \VEC{w}_i = \sum_{i=1}^n a_{j,i} \VEC{v}_j$
+for $1 \leq i \leq n$ are $n$ vectors in $H$, then
+\begin{equation}\label{stokesBE}
+\tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_n) = \det(A)
+\, \tau(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_n) \ ,
+\end{equation}
+where the matrix $A$ has entries $a_{j,i}$ for $1\leq i,j \leq n$.
+\end{theorem}
+
+\begin{proof}
+The crux of this proof is the basic result from linear algebra that
+all alternating multilinear maps
+\[
+\rho: \underbrace{\RR^n \times \RR^n \times \cdots \times
+\RR^n}_{n \text{ times}} \to \RR^n \ ,
+\]
+namely $\rho \in \Omega^n(\RR^n)$,
+are of the form $\rho(\VEC{x}_1,\VEC{x}_2, \ldots, \VEC{x}_n) = b\,
+\det \begin{pmatrix} \VEC{x}_1 & \VEC{x}_2 & \ldots & \VEC{x}_n \end{pmatrix}$
+for some $b \in \RR$.
+
+Consider the alternating multilinear map
+$\rho:\RR^n \times \ldots \times \RR^n \to \RR$ defined by
+\[
+\rho\left(\begin{pmatrix} a_{1,1} \\ a_{2,1} \\ \vdots \\ a_{n,1} \end{pmatrix},
+\begin{pmatrix} a_{1,2} \\ a_{2,2} \\ \vdots \\ a_{n,2} \end{pmatrix},
+\ldots,
+\begin{pmatrix} a_{1,n} \\ a_{2,n} \\ \vdots \\ a_{n,n} \end{pmatrix}
+\right)
+= \tau\left( \sum_{i=1}^n a_{i,1} \VEC{v}_i , \sum_{i=1}^n a_{i,2} \VEC{v}_i,
+\ldots, \sum_{i=1}^n a_{i,n} \VEC{v}_i \right) \ .
+\]
+Then, from our initial remark,
+\[
+\tau\left( \sum_{i=1}^n a_{i,1} \VEC{v}_i , \sum_{i=1}^n a_{i,2} \VEC{v}_i,
+\ldots, \sum_{i=1}^n a_{i,n} \VEC{v}_i \right)
+= b\, \det \begin{pmatrix} a_{1,1} & a_{1,2} & \ldots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \ldots & a_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n,1} & a_{n,2} & \ldots & a_{n,n} \end{pmatrix}
+\]
+for some $b\in \RR$.   With $a_{j,i} = \delta_{j,i}$, we get
+$\tau( \VEC{v}_1 , \VEC{v}_2, \ldots, \VEC{v}_n) = b\, \det \Id_n = b$.
+\end{proof}
+
+\begin{cor}
+Suppose that $\tau \in \Omega^k(H)$ and $\VEC{w}_i \in H$ for $1\leq i \leq n$.
+Then
+\begin{enumerate}
+\item $\tau(\VEC{w}_{\sigma(1)}, \VEC{w}_{\sigma(2)}, \ldots,
+\VEC{w}_{\sigma(n)})
+= \sgn(\sigma)\tau(\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_n)$ for all
+$\sigma \in S_n$, and
+\item $\tau(\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_n) = 0$ if
+$\VEC{w}_p = \VEC{w}_q$ for some $1\leq p < q \leq n$.
+\end{enumerate}
+\end{cor}
+
+\begin{proof}
+\stage{1} A permutation on $J_n =\{1,2,\ldots,n\}$ may be represented
+by a matrix with only one $1$ per row and column, and
+all the other entries being null.  For instance, the permutation 
+$\sigma \in S_4$ defined by $\sigma(1) = 2$, $\sigma(2) = 4$,
+$\sigma(3) = 3$ and $\sigma(4)=1$ is represented by the matrix
+$\displaystyle M_\sigma = \begin{pmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}$
+\footnote{The matrix representation of $\sigma$ may also be
+represented by the transpose of $M_\sigma$.  It all depends if the
+multiplication with a vector is from the left or the right.  We have
+chosen from the right.}.  The transposition
+$\sigma \in S_4$ defined by $\sigma(1) = 3$, $\sigma(2) = 2$,
+$\sigma(3) = 1$ and $\sigma(4)=4$ is represented by the matrix
+$\displaystyle M_\sigma = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$.
+We have that $\sgn(\sigma) = \det(M_\sigma)$ \footnote{The reader may
+wonder why we did not define the sign of a permutation using the
+determinant of its matrix representation.  But, by doing so, we will have
+created a vicious circle because the sign of permutations is used to
+define the determinant.}.  With this information, the proof of (1) is
+now a simple consequence of the previous theorem.
+
+Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of the
+vector space $H$ over $\RR$.  We may write
+$\displaystyle \VEC{w}_i = \sum_{i=1}^n a_{j,i} \VEC{v}_j$
+for $1 \leq i \leq n$ and some $a_{j,i} \in \RR$.
+Let $A$ be the matrix with entry in position $(j,i)$ given by
+$a_{j,i}$ for $1\leq i,j \leq n$.
+Since $\displaystyle \VEC{w}_{\sigma(i)} = \sum_{i=1}^n a_{j,\sigma(i)} \VEC{v}_j$
+for $1 \leq i \leq n$, we have that the matrix $\tilde{A}$ with entry
+in position $(j,i)$ given by $a_{j,\sigma(i)}$ is $\tilde{A} = A M_\sigma$.
+
+Hence, we get from Theorem~\ref{stokesTBE} that
+\begin{align*}
+\tau(\VEC{w}_{\sigma(1)}, \VEC{w}_{\sigma(2)}, \ldots, \VEC{w}_{\sigma(n)})
+&= \det(\tilde{A}) \, \tau(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_n)
+= \det(A) \det(M_\sigma)  \, \tau(\VEC{v}_1, \VEC{v}_2, \ldots,\VEC{v}_n) \\
+&= \sgn{\sigma} \det(A) \, \tau(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_n)
+= \sgn(\sigma) \tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_n) \ .
+\end{align*}
+
+\stage{2} If $\sigma = \sigma_{p,q}$ is the transposition of $p$ and
+$q$, we get form (1) that
+\begin{align*}
+\tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_n)
+&= \tau(\VEC{w}_{\sigma(1)}, \VEC{w}_{\sigma(2)}, \ldots, \VEC{w}_{\sigma(n)})
+= \sgn(\sigma) \tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_n) \\
+&= - \tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_n) \ ,
+\end{align*}
+where the first equality comes from $\VEC{w}_p = \VEC{w}_q$ and
+$\sigma(i) = i$ for $i \neq p, q$.
+\end{proof}
+
+\section{Orientation} \label{sectOrientRn}
+
+If $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ in
+Theorem~\ref{stokesTBE} is a basis of $H$, then $A$ is the matrix of
+change of bases from $\C$ to $\B$.  In particular, $\det(A) \neq 0$.
+Hence (\ref{stokesBE}) divides the bases of $H$ into two groups.  Two
+bases like $\B$ and $\C$ are in the same group if (\ref{stokesBE}) is
+satisfied with $\det(A)>0$.
+
+\begin{defn}
+We define an {\bfseries orientation}\index{Orientation} on a vector
+space $H$ by selecting one of the two groups of bases described above.
+\end{defn}
+
+If $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ is a basis
+belonging to the chosen group for the orientation on $H$, we denote this
+orientation by $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
+The order of the vector is fundamental.  The group of bases not
+belonging to the orientation
+$[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$ on $H$ is the opposite
+orientation and is denoted $-[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
+
+\begin{defn}
+The {\bfseries standard orientation}\index{Standard Orientation} on
+$\displaystyle \RR^n$ is given by
+$[\VEC{e}_1, \VEC{e}_2, \ldots, \VEC{e}_n]$ where
+$\displaystyle \E = \{ \VEC{e}_i \}_{i=1}^n$ is the canonical basis of
+$\displaystyle \RR^n$.
+\end{defn}
+
+If $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$
+and $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ are two orthonormal bases
+with respect to an inner product $\displaystyle \tau\in \T^2(H)$, then
+$A$ in Theorem~\ref{stokesTBE} is an orthogonal matrix, namely
+$\displaystyle A^\top A = \Id_n$.  This follows from
+\begin{align*}
+\delta_{i,j} &= \tau(\VEC{w}_i,\VEC{w}_j)
+= \tau\left(\sum_{k_1=1}^n a_{k_1,i} \VEC{v}_{k_1},
+\sum_{k_2=1}^n a_{k_2,j} \VEC{v}_{k_2}\right)
+= \sum_{k_1,k_2=1}^n a_{k_1,i} a_{k_2,j}
+\tau\left(\VEC{v}_{k_1}, \VEC{v}_{k_2}\right) \\
+&= \sum_{k_1,k_2=1}^n a_{k_1,i} a_{k_2,j} \delta_{k_1,k_2}
+= \sum_{k=1}^n a_{k,i} a_{k,j} \ .
+\end{align*}
+Hence, if $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$
+and $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ are two orthonormal bases
+with respect to the inner product $\displaystyle \tau \in \T^2(H)$,
+then $\det A = \pm 1$ in Theorem~\ref{stokesTBE}.
+
+Consider the orientation $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$
+associated to a given orthonormal basis
+$\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ on $H$ with respect to
+the inner product $\displaystyle \tau \in \T^2(H)$.
+Since $\displaystyle \Omega^n(H)$ is of dimension one, there exists a unique
+$\displaystyle \nu \in \Omega^n(H)$ such that
+$\displaystyle \nu(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_n) = 1$.
+It follows from the previous paragraph that
+$\displaystyle \nu(\VEC{w}_1,\VEC{w}_2, \ldots, \VEC{w}_n) = 1$ for all
+orthonormal basis $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ belonging to
+the orientation $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
+
+\begin{defn}
+Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be an orthonormal
+basis on $S$ with respect to the inner product
+$\displaystyle \tau \in \T^2(H)$.  The unique $\nu \in \Omega^n(H)$
+such that $\displaystyle \nu(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_n) = 1$
+is called the {\bfseries volume element}\index{Volume Element} on $H$
+determined by the inner product $\displaystyle \tau \in \T^2(H)$ and
+the orientation $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
+\end{defn}
+
+A particular case of volume element is given by 
+$\displaystyle \nu = \det \in \Omega^n(\RR^n)$ seen in the proof of
+Theorem~\ref{stokesTBE}.  We have that $\det$ is the volume element on
+$\displaystyle \RR^n$ determined by the standard inner product
+$\tau \equiv \ps{}{}$ on $\displaystyle \RR^n$
+and the orientation $[\VEC{e}_1, \VEC{e}_2, \ldots, \VEC{e}_n]$,
+where $\displaystyle \E = \{ \VEC{e}_i \}_{i=1}^n$ is the canonical basis of
+$\displaystyle \RR^n$.
+
+To conclude this section, we extend the classical cross product in
+$\displaystyle \RR^3$ to $\displaystyle \RR^n$ for $n>3$.
+Given $\VEC{w}_i \in \RR^n$ for $1\leq i \leq n-1$, let
+$\displaystyle g \in \Omega^1(\RR^n)$ be the linear functional defined by
+\[
+g(\VEC{v}) = \det
+\begin{pmatrix} \VEC{w}_1 & \VEC{w}_2 & \ldots & \VEC{w}_{n-1} & \VEC{v}
+\end{pmatrix}
+% = \det
+% \begin{pmatrix} \VEC{w}_1^\top \\ \VEC{w}_2^\top \\ \vdots \\
+% \VEC{w}_{n-1}^\top \\ \VEC{v}^\top \end{pmatrix}
+\]
+for $\displaystyle \VEC{v} \in \RR^n$.
+From the theory of representation of linear functionals on $\RR^n$,
+there exists a unique $\displaystyle \VEC{z}\in \RR^n$ such that 
+$g(\VEC{v})=\ps{\VEC{v}}{\VEC{z}}$ for all
+$\displaystyle \VEC{v}\in \RR^n$.
+
+\begin{defn}
+The {\bfseries cross product}\index{Cross Product}
+$\VEC{w}_1\times \VEC{w}_2 \times \ldots \times \VEC{w}_{n-1}$
+is the unique vector $\VEC{z}$ such that
+$\ps{\VEC{v}}{\VEC{z}} =
+\det \begin{pmatrix} \VEC{w}_1 & \VEC{w}_2 & \ldots & \VEC{w}_{n-1} & \VEC{v}
+\end{pmatrix}$ for all $\VEC{v} \in \RR^n$.
+\end{defn}
+
+We have by construction that $\VEC{z}$ is orthogonal to $\VEC{w}_i$ for
+$1\leq i \leq n-1$.  The cross product is a multilinear map.  The
+reader may be interested to prove that
+$\VEC{w}_{\sigma(1)}\times \VEC{w}_{\sigma(2)} \times \ldots \times
+\VEC{w}_{\sigma(n-1)} = \sgn(\sigma) \,
+\VEC{w}_1\times \VEC{w}_2 \times \ldots \times \VEC{w}_{n-1}$
+for $\sigma \in S_{n-1}$.
+
+\section{Tangent Spaces} \label{stokes_TSVS}
+
+\begin{defn}
+Let $\displaystyle V \subset \RR^n$ be an open set.  Given $\VEC{v} \in V$, the
+{\bfseries tangent space}\index{Tangent Space} of $V$ at $\VEC{v}$ is
+the set
+\[
+\TS_{\VEC{v}} V = \left\{ (\VEC{v},\VEC{x}) : \VEC{x} \in \RR^n \right\} \ .
+\]
+\end{defn}
+
+The tangent space $\TS_{\VEC{v}} V$ is given the structure of a vector
+space by setting
+\[
+a_1 (\VEC{v},\VEC{x}_1) + a_2 (\VEC{v},\VEC{x}_2)
+= (\VEC{v}, a_1\VEC{x}_1 + a_2\VEC{x}_2)
+\]
+for all $a_i \in \RR$ and $\VEC{x}_i \in \RR^n$.
+For each $\VEC{v} \in V$, we have that $\TS_{\VEC{v}}V$ is linearly
+isomorphic to $\RR^n$.  The canonical basis
+$\displaystyle \{ \VEC{e}_i \}_{i=1}^n$ of $\displaystyle \RR^n$ yields a
+{\bfseries canonical basis}\index{Canonical Basis}
+$\E$ on $\TS_{\VEC{v}} V$ defined by
+$\displaystyle \E = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n$.
+
+This definition of tangent space for an open subset of $\displaystyle \RR^n$ 
+may seem to be unnecessary and cumbersome but we will see later, when
+working on manifolds, that it is very useful.
+
+\begin{defn}
+Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+We define an inner product $\ps{}{}_{\VEC{v}}$ on $\TS_{\VEC{v}}V$ by
+\[
+\ps{ (\VEC{v},\VEC{x}_1) }{ (\VEC{v},\VEC{x}_2) }_{\VEC{v}}
+= \tau(\VEC{x}_1,\VEC{x}_2)
+\]
+for all $\displaystyle \VEC{x}_i\in \RR^n$, where 
+$\displaystyle \tau \in \T^2(\RR^n)$ is an inner product.
+\end{defn}
+
+The most frequent situation in this chapter is when $\tau$ is the
+standard inner product on $\displaystyle \RR^n$.
+
+The concept of tensors can be naturally extended to $\TS_{\VEC{v}}V$. 
+
+\begin{defn}
+Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+A $k$-tensors $\displaystyle \tau_{\VEC{v}} \in \T^k( \TS_{\VEC{v}} V)$
+is defined by
+\[
+\tau_{\VEC{v}}\big( (\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2), \ldots,
+(\VEC{v},\VEC{x}_k) \big) = \tau(\VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k)
+\]
+for all $\displaystyle \VEC{x}_i \in \RR^n$, where
+$\displaystyle \tau\in \T^k(\RR^n)$.  We say that
+$\tau_{\VEC{v}}$ is generated by $\tau$.
+\end{defn}
+
+The space $\displaystyle \T^k(\TS_{\VEC{v}}V)$ is a vector
+space over $\RR$.  If
+$\displaystyle \tau_{\VEC{v}}^{[1]}, \tau_{\VEC{v}}^{[2]} \in \T^k(\TS_{\VEC{v}}V)$
+are generated by $\displaystyle \tau^{[1]},\tau^{[2]} \in \T^k(\RR^n)$
+respectively, and $a, b \in \RR$, then
+$\displaystyle a \tau_{\VEC{v}}^{[1]}+ b \tau_{\VEC{v}}^{[2]}
+\in \T(\TS_{\VEC{v}}V)$
+is generated by $\displaystyle a \tau^{[1]} + b \tau^{[2]} \in \T(\RR^n)$.
+This follows from
+\begin{align*}
+&(a \tau_{\VEC{v}}^{[1]}+ b \tau_{\VEC{v}}^{[2]})\big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_k)\big) \\
+&\quad = a \tau_{\VEC{v}}^{[1]}\big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_k)\big)
++ b \tau_{\VEC{v}}^{[2]} \big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_k)\big) \\
+&\quad = a \tau^{[1]}\big(\VEC{x}_1,\VEC{x}_2, \ldots,\VEC{x}_k\big)
++ b \tau^{[2]} \big( \VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k\big)
+= (a \tau^{[1]} + b \tau^{[2]})
+\big( \VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k\big)
+\end{align*}
+for all $\VEC{x}_i \in \RR^n$ and $1 \leq i \leq k$.
+
+We can also extend the product of tensors to $\TS_{\VEC{v}}V$ as it
+follows.
+
+\begin{defn}
+Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+The {\bfseries product of two tensors}\index{Tensor!Product}
+$\displaystyle \tau_{\VEC{v}}^{[1]} \in \T^{k_1}(\TS_{\VEC{v}}V)$ and
+$\displaystyle \tau_{\VEC{v}}^{[2]} \in \T^{k_2}(\TS_{\VEC{v}}V)$ is the tensor
+$\displaystyle \tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]} \in
+\T^{k_1+k_2}(\TS_{\VEC{v}}V)$ defined by
+\begin{align*}
+&(\tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]}) \big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_{k+1+k_2})\big) \\
+&\quad = \tau_{\VEC{v}}^{[1]}
+\big((\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2),
+\ldots, (\VEC{v},\VEC{x}_{k_1}) \big)
+\, \tau_{\VEC{v}}^{[2]} \big( (\VEC{v},\VEC{x}_{k_1+1}),
+(\VEC{v},\VEC{x}_{k_1+2}), \ldots, (\VEC{v},\VEC{x}_{k_1+k_2}) \big)
+\end{align*}
+for all $\VEC{x}_i \in \RR^n$.
+\end{defn}
+
+If $\displaystyle \tau_{\VEC{v}}^{[i]} \in \T^{k_i}(\TS_{\VEC{v}}V)$
+is generated by $\displaystyle \tau^{[i]} \in \T^{k_1}(\RR^n)$
+for $1\leq i \leq 2$, then
+$\displaystyle \tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]} \in
+\T^{k_1+k_2}(\TS_{\VEC{v}}V)$
+is generated by
+$\displaystyle \tau^{[1]}\otimes \tau^{[2]} \in \T^{k_1+k_2}(\RR^n)$.
+This follows from
+\begin{align*}
+&(\tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]})\big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_{k+1+k_2})\big) \\
+&\quad = \tau_{\VEC{v}}^{[1]}\big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_k)\big)
+\, \tau_{\VEC{v}}^{[2]} \big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_k)\big) \\
+&\quad = \tau^{[1]}\big(\VEC{x}_1,\VEC{x}_2, \ldots,\VEC{x}_k\big)
+\, \tau^{[2]} \big( \VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k\big)
+= (\tau_1 \otimes \tau_2) \big( \VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k\big)
+\end{align*}
+for all $\VEC{x}_i \in \RR^n$.
+
+With our definition of tensors on $\TS_{\VEC{v}}V$, we may extend the
+wedge product of alternating tensors on $\TS_{\VEC{v}}V$.
+
+\begin{defn}
+Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+The {\bfseries wedge product of two alternating tensors}\index{Tensor!Product}
+$\displaystyle \tau_{\VEC{v}}^{[1]} \in \Omega^{k_1}(\TS_{\VEC{v}}V)$ and
+$\displaystyle \tau_{\VEC{v}}^{[2]} \in \Omega^{k_2}(\TS_{\VEC{v}}V)$
+is the alternating tensor
+$\displaystyle \tau_{\VEC{v}}^{[1]}\wedge \tau_{\VEC{v}}^{[2]} \in
+\Omega^{k_1+k_2}(\TS_{\VEC{v}}V)$ defined by
+\begin{align*}
+&(\tau_{\VEC{v}}^{[1]}\wedge \tau_{\VEC{v}}^{[2]}) \big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v}, \VEC{x}_{k+1+k_2})\big) \\
+&\quad = \frac{(k_1+k_2)!}{k_1! k_2!} \alt(\tau_{\VEC{v}}^{[1]}
+\otimes \tau_{\VEC{v}}^{[2]})
+\big((\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2), \ldots,
+ (\VEC{v},\VEC{x}_{k_1+k_2}) \big)
+\end{align*}
+for all $\VEC{x}_i \in \RR^n$.
+\end{defn}
+
+Suppose that
+$\displaystyle \tau_{\VEC{v}}^{[i]} \in \Omega^{k_i}(\TS_{\VEC{v}}V)$ is
+generated by $\tau^{[i]} \in \Omega^{k_i}(\RR^n)$ for $1\leq i \leq 2$.
+Then $\displaystyle \tau_{\VEC{v}}^{[1]} \wedge \tau_{\VEC{v}}^{[2]} \in
+\Omega^{k_1+k_2}(\TS_{\VEC{v}}V)$ is generated by
+$\displaystyle \tau^{[1]} \wedge \tau^{[2]} \in \Omega^{k_1+k_2}(\RR^n)$.
+This follows from
+\begin{align*}
+& (\tau_{\VEC{v}}^{[1]} \wedge \tau_{\VEC{v}}^{[2]})\big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v},\VEC{x}_{k_1+k_2}) \big) \\
+&\quad =\frac{(k_1+k_2)!}{k_1!\,k_2!}
+\alt(\tau_{\VEC{v}}^{[1]} \otimes \tau_{\VEC{v}}^{[2]})\big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v},\VEC{x}_{k_1+k_2}) \big) \\
+&\quad = \frac{1}{k_1!\,k_2!}
+\sum_{\sigma \in S_{k_1+k_2}} (\tau_{\VEC{v}}^{[1]} \otimes \tau_{\VEC{v}}^{[2]})
+\big((\VEC{v},\VEC{x}_{\sigma(1)}), (\VEC{v},\VEC{x}_{\sigma(2)}),
+\ldots, (\VEC{v},\VEC{x}_{\sigma(k_1+k_2)}) \big) \\
+&\quad = \frac{1}{k_1!\,k_2!}
+\sum_{\sigma \in S_{k_1+k_2}} \tau_{\VEC{v}}^{[1]}
+\big((\VEC{v},\VEC{x}_{\sigma(1)}), (\VEC{v},\VEC{x}_{\sigma(2)}),
+\ldots, (\VEC{v},\VEC{x}_{\sigma(k_1)}) \big) \\
+&\hspace{8em} \tau_{\VEC{v}}^{[2]} \big( (\VEC{v},\VEC{x}_{\sigma(k_1+1)}),
+(\VEC{v},\VEC{x}_{\sigma(k_1+2)}), \ldots,
+(\VEC{v},\VEC{x}_{\sigma(k_1+k_2)}) \big) \\
+&\quad = \frac{1}{k_1!\,k_2!}
+\sum_{\sigma \in S_{k_1+k_2}} \tau^{[1]}
+\big(\VEC{x}_{\sigma(1)}, \VEC{x}_{\sigma(2)}, \ldots,
+\VEC{x}_{\sigma(k_1)} \big)
+\, \tau^{[2]} \big( \VEC{x}_{\sigma(k_1+1)}, \VEC{x}_{\sigma(k_1+2)}, \ldots,
+\VEC{x}_{\sigma(k_1+k_2)} \big) \\
+&\quad
+= \frac{(k_1+k_2)!}{k_1!\,k_2!}
+\alt(\tau^{[1]} \otimes \tau^{[2]})\big(\VEC{x}_1, \VEC{x}_2,
+\ldots, \VEC{x}_{k_1+k_2}\big)
+= (\tau^{[1]} \wedge \tau^{[2]})\big(\VEC{x}_1, \VEC{x}_2,
+\ldots, \VEC{x}_{k_1+k_2}\big)
+\end{align*}
+for all $\VEC{x}_i \in \RR^n$.
+
+Suppose that $\displaystyle V\subset \RR^n$ and
+$\displaystyle W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\displaystyle C^1$ and
+$\VEC{v}\in V$, then $\diff f(\VEC{v})$ can be used to define the
+following linear map.
+\begin{align*}
+f_\ast: \TS_{\VEC{v}} V &\to \TS_{f(\VEC{v})} W \\
+(\VEC{v},\VEC{x}) &\mapsto \big(f(\VEC{v}) , \diff f(\VEC{v}) \VEC{x}\big)
+\end{align*}
+for each $\VEC{v} \in V$.  This linear map induces a map
+$\displaystyle f^\ast: \T^k(\TS_{f(\VEC{v})} W) \to \T^k(\TS_{\VEC{v}} V)$
+defined by
+\begin{align*}
+f^\ast(\tau_{f(\VEC{v})})\big((\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2), \ldots,
+(\VEC{v},\VEC{x}_k) \big)
+= \tau_{f(\VEC{v})}\big( f_\ast(\VEC{v},\VEC{x}_1), f_\ast(\VEC{v},\VEC{x}_2),
+\ldots, f_\ast(\VEC{v},\VEC{x}_k) \big) \ .
+\end{align*}
+for all $\displaystyle \VEC{x}_i \in \RR^n$.
+We say that $\displaystyle f^\ast(\tau_{f(\VEC{v})})$ is the
+{\bfseries pull-back}\index{Pull-Back} of $\tau_{f(\VEC{v})}$ by $f$.
+
+\begin{prop}  \label{propAsttauR}
+Suppose that $\displaystyle V\subset \RR^n$ and
+$\displaystyle W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\displaystyle C^1$ and
+$\VEC{v} \in V$, then
+\begin{enumerate}
+\item $\displaystyle f^\ast(\tau_{f(\VEC{v})}^{[1]} + \tau_{f(\VEC{v})}^{[2]})
+= f^\ast(\tau_{f(\VEC{v})}^{[1]}) + f^\ast(\tau_{f(\VEC{v})}^{[2]})$ for all
+$\tau_{f(\VEC{v})}^{[i]} \in \T^k(\TS_{f(\VEC{v})}W)$.
+\item $\displaystyle f^\ast( a\, \tau_{f(\VEC{v})}) =
+a f^\ast(\tau_{f(\VEC{v})})$
+for all $\tau_{f(\VEC{v})} \in \T^k(\TS_{f(\VEC{v})}W)$ and $a \in \RR$.
+\item $\displaystyle f^\ast( \tau_{f(\VEC{v})}^{[1]} \otimes
+\tau_{f(\VEC{v})}^{[2]})
+= f^\ast(\tau_{f(\VEC{v})}^{[1]}) \otimes f^\ast(\tau_{f(\VEC{v})}^{[2]})$ for
+all $\tau_{f(\VEC{v})}^{[i]} \in \T^{k_i}(\TS_{f(\VEC{v})} W)$.
+\item $\displaystyle f^\ast( \tau_{f(\VEC{v})}^{[1]}
+\wedge \tau_{f(\VEC{v})}^{[2]})
+= f^\ast(\tau_{f(\VEC{v})}^{[1]}) \wedge f^\ast(\tau_{f(\VEC{v})}^{[2]})$ for
+all $\tau_{f(\VEC{v})}^{[i]} \in \Omega^{k_i}(\TS_{f(\VEC{v})} W)$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+We prove (2) and (4) and leave the proof of (1) and (3) to the reader.
+
+\stage{2} For $\VEC{v} \in V$ fixed, we have that
+\begin{align*}
+&f^\ast(a\, \tau_{f(\VEC{v})})
+\big( (\VEC{v},\VEC{x}_1) , (\VEC{v},\VEC{x}_2) , \ldots,
+(\VEC{v},\VEC{x}_k)\big)
+= (a\, \tau_{f(\VEC{v})})
+\big( f_\ast(\VEC{v},\VEC{x}_1) , f_\ast(\VEC{v},\VEC{x}_2) , \ldots,
+f_\ast(\VEC{v},\VEC{x}_k)\big) \\
+&\quad = a\left( \tau_{f(\VEC{v})}\big( f_\ast(\VEC{v},\VEC{x}_1) ,
+f_\ast(\VEC{v},\VEC{x}_2) , \ldots, f_\ast(\VEC{v},\VEC{x}_k)\big) \right) \\
+&\quad = a \left( f^\ast(\tau_{f(\VEC{v})})
+\big( (\VEC{v},\VEC{x}_1) , (\VEC{v},\VEC{x}_2) , \ldots,
+(\VEC{v},\VEC{x}_k)\big) \right)
+\end{align*}
+for all $\VEC{x}_i \in \RR^n$.
+
+\stage{4} For $\VEC{v} \in V$ fixed, we have that
+\begin{align*}
+&f^\ast(\tau_{f(\VEC{v})}^{[1]} \wedge \tau_{f(\VEC{v})}^{[2]})
+\big( (\VEC{v},\VEC{x}_1) , (\VEC{v},\VEC{x}_2) , \ldots,
+(\VEC{v},\VEC{x}_{k_1+k_2})\big) \\
+&\quad = \big(\tau_{f(\VEC{v})}^{[1]}\wedge \tau_{f(\VEC{v})}^{[2]} \big)
+\big( f_\ast(\VEC{v},\VEC{x}_1) , f_\ast(\VEC{v},\VEC{x}_2) , \ldots,
+f_\ast(\VEC{v},\VEC{x}_{k_1+k_2})\big) \\
+&\quad = \frac{1}{k_1!\,k_2!} \sum_{\sigma \in S_{k_1+k_2}}
+\big( \tau_{f(\VEC{v})}^{[1]} \otimes \tau_{f(\VEC{v})}^{[2]} \big)
+\big( f_\ast(\VEC{v},\VEC{x}_{\sigma(1)}),
+f_\ast(\VEC{v},\VEC{x}_{\sigma(2)}), \ldots,
+f_\ast(\VEC{v},\VEC{x}_{\sigma(k_1+k_2)})\big) \\
+&\quad = \frac{1}{k_1!\,k_2!} \sum_{\sigma \in S_{k_1+k_2}}
+\tau_{f(\VEC{v})}^{[1]} \big( f_\ast(\VEC{v},\VEC{x}_{\sigma(1)}),
+f_\ast(\VEC{v},\VEC{x}_{\sigma(2)}), \ldots,
+f_\ast(\VEC{v},\VEC{x}_{\sigma(k_1)})\big) \\
+& \hspace{8em}
+\tau_{f(\VEC{v})}^{[2]}\big( f_\ast(\VEC{v},\VEC{x}_{\sigma(k_1+1)}),
+f_\ast(\VEC{v},\VEC{x}_{\sigma(k_1+2)}), \ldots,
+f_\ast(\VEC{v},\VEC{x}_{\sigma(k_1+k_2)})\big) \\
+&\quad = \frac{1}{k_1!\,k_2!} \sum_{\sigma \in S_{k_1+k_2}}
+f^\ast(\tau_{f(\VEC{v})}^{[1]})
+\big( (\VEC{v},\VEC{x}_{\sigma(1)}), (\VEC{v},\VEC{x}_{\sigma(2)}), \ldots,
+(\VEC{v},\VEC{x}_{\sigma(k_1)})\big) \\
+& \hspace{8em}
+f^\ast(\tau_{f(\VEC{v})}^{[2]}) \big( (\VEC{v},\VEC{x}_{\sigma(k_1+1)}),
+(\VEC{v},\VEC{x}_{\sigma(k_1+2)}), \ldots,
+(\VEC{v},\VEC{x}_{\sigma(k_1+k_2)})\big) \\
+&=\quad 
+\big( f^\ast(\tau_{f(\VEC{v})}^{[1]}) \wedge
+f^\ast(\tau_{f(\VEC{v})}^{[2]}) \big)\, \big( (\VEC{v},\VEC{x}_1),
+(\VEC{v},\VEC{x}_2), \ldots, (\VEC{v},\VEC{x}_{\sigma(k_1+k_2)})\big)
+\end{align*}
+for all $\VEC{x}_i \in \RR^n$.
+\end{proof}
+
+\section{Vector Fields}
+
+\begin{defn}
+A {\bfseries vector field}\index{Vector Field} on an open set
+$\displaystyle V \subset \RR^n$ is a map
+\begin{align*}
+F : V & \to \bigcup_{\VEC{v}\in V} \TS_{\VEC{v}} V \\
+ \VEC{v} & \mapsto (\VEC{v}, f(\VEC{v}) ) \in \TS_{\VEC{v}} V
+\end{align*}
+where $f:V \to \RR^n$.
+\end{defn}
+
+It is important to note that $F(\VEC{v}) \in \TS_{\VEC{v}} V$ for each
+$\VEC{v} \in V$.  We have that
+\[
+F(\VEC{v}) = \left(\VEC{v} , \sum_{i=1}^n f_i(\VEC{v}) \VEC{e}_i\right)
+= \sum_{i=1}^n f_i(\VEC{v}) (\VEC{v}, \VEC{e}_i)
+\]
+for all $\VEC{v} \in V$, where $f_i:V \to \RR$ for $1 \leq i \leq n$.
+We say that the vector field $F$ is of class
+$\displaystyle C^k$ if each function $f_i$ is of class
+$\displaystyle C^k$.
+
+The sum of vector fields, the product of a vector field by a real
+valued function on $V$, the inner product of vector fields and the cross
+product of vector fields are defined by the respective operation in
+$\TS_{\VEC{v}} V$ for every $\VEC{v} \in V$.  For instance, if
+$\displaystyle F,G:V \to \bigcup_{\VEC{v} \in V} \TS_{\VEC{v}} V$ are two
+vector fields, then $\ps{F}{G}$ is defined by
+$\ps{F}{G}(\VEC{v})
+= \ps{F(\VEC{v})}{G(\VEC{v})}_{\VEC{v}} = \tau(f(\VEC{v}),g(\VEC{v}))$
+for all $\VEC{v} \in V$, where $\displaystyle \tau \in \T^2(\RR^n)$ is
+an inner product.
+
+We have introduced this notation for vector fields because it will extend
+naturally to vector fields on manifolds as we will see later.
+
+\section{Differential Forms} \label{stokesDefDiffF}
+
+\begin{defn}
+Let $V$ be an open subset of $\displaystyle \RR^n$.  A
+{\bfseries differential $\mathbf{k}$-form}\index{Differential Form!$k$-Form}
+on $V$ is a map
+\begin{align*}
+\omega: V & \to \bigcup_{\VEC{v}\in V} \Omega^k\left( \TS_{\VEC{v}} V \right) \\
+\VEC{v} & \mapsto \omega(\VEC{v}) \in \Omega^k\left( \TS_{\VEC{v}} V \right)
+\end{align*}
+\end{defn}
+
+It is important to note that $\displaystyle \omega(\VEC{v}) \in
+\Omega^k(\TS_{\VEC{v}} V)$ for each $\VEC{v} \in V$.
+
+Let $\displaystyle \left\{\phi_i\right\}_{i=1}^n \subset (\RR^n)^\ast$
+be the dual basis associated to a basis
+$\displaystyle \left\{\VEC{u}_j\right\}_{j=1}^n$ of $\displaystyle \RR^n$.
+For each $i$, we define a differential $1$-form $\tilde{\phi}_i$ on
+$V$ by
+$\displaystyle \tilde{\phi}_i(\VEC{v})\big( (\VEC{v}, \VEC{x}) \big)
+= \phi_i(\VEC{x})$ for each $\VEC{v} \in V$ and all $\VEC{x} \in \RR^n$.
+For each $\VEC{v} \in V$, the set
+$\displaystyle \left\{\tilde{\phi}_i(\VEC{v})\right\}_{i=1}^n
+\subset (\TS_{\VEC{v}}V)^\ast = \Omega^1(\TS_{\VEC{v}}V)$ is the dual basis
+associated to the basis
+$\displaystyle \left\{ (\VEC{v}, \VEC{u}_j) \right\}_{j=1}^n$ of
+$\displaystyle \TS_{\VEC{v}} V$ because
+$\tilde{\phi}_i(\VEC{v})\big( (\VEC{v}, \VEC{u}_j) \big)
+= \phi_i(\VEC{u}_j) = \delta_{i,j}$
+for $1 \leq i,j \leq n$.
+It follows from Theorem~\ref{thOkbasis} that every differential
+$k$-form $\omega$ on $V$ can be expressed as
+\[
+\omega = \sum_{i_1< i_2< \ldots< i_k} \omega_{i_1,i_2,\ldots,i_k}
+\tilde{\phi}_{i_1} \wedge \tilde{\phi}_{i_2} \wedge \ldots \wedge
+\tilde{\phi}_{i_k} \ ,
+\]
+where $\displaystyle \omega_{i_1,i_2,\ldots,i_k}:V\to \RR$ for all indices.
+We say that the differential $k$-form is of class $\displaystyle C^m$
+if each $\displaystyle \omega_{i_1,i_2,\ldots,i_k}$ is of class
+$\displaystyle C^m$.
+
+The sum of differential $k$-forms, the product of a differential
+$k$-form by a real valued function on $V$ and the wedge product of a
+differential $k_1$-form with a differential $k_2$-form
+are defined by the respective operation on $\TS_{\VEC{v}} V$ for each
+$\VEC{v} \in V$.
+For instance, if $\omega_i$ is a differential $k_i$-form on $V$ for
+$1\leq i \leq 2$, then $\omega_1 \wedge \omega_2$ is the differential
+$(k_1+k_2)$-form on $V$ defined by $(\omega_1 \wedge \omega_2)(\VEC{v}) = 
+\omega_1(\VEC{v}) \wedge \omega_2(\VEC{v})$
+for all $\VEC{v} \in V$.
+
+If $f:V \to \RR$ is differentiable, then
+$\displaystyle \diff f (\VEC{v}) \in (\RR^n)^\ast$.
+As we have done with $\phi_i$ above, we may define the following
+differential $1$-form on $V$.
+
+\begin{defn} \label{defnd01}
+Given $f:V\to \RR$ is of class $\displaystyle C^1$, the differential $1$-form
+$\displaystyle \df{f} :V \to \bigcup_{\VEC{v}\in V}
+\Omega^1\left( \TS_{\VEC{v}} V \right)$ is defined by
+$\df{f}(\VEC{v}) \, \big((\VEC{v},\VEC{x})\big)
+= \diff f (\VEC{v}) \VEC{x}$
+for each $\VEC{v}\in V$ and all $\displaystyle \VEC{x} \in \RR^n$.
+\end{defn}
+
+If $\displaystyle \pi_i:\RR^n \to \RR$ is the projection defined by
+$\pi_i(\VEC{x}) = x_i$ for all $\displaystyle \VEC{x} \in \RR^n$, then
+the differential $1$-form $\df{\pi_i}$ is defined by
+$\displaystyle \df{\pi_i}(\VEC{v}) \big( (\VEC{v},\VEC{x}) \big) =
+\diff \pi_i (\VEC{v}) \VEC{x} = \pi_i(\VEC{x}) = x_i$
+for each $\VEC{v} \in V$ and all $\displaystyle \VEC{x} \in \RR^n$.
+Thus $\displaystyle \df{\pi_i}(\VEC{v}) \in \Omega^1(\TS_\VEC{v} V)$ 
+is generated by $\displaystyle \pi_i \in \Omega^1(\RR^n)$ for all
+$\VEC{v} \in V$.
+
+For each $\VEC{v} \in V$, the dual basis of the canonical basis
+$\displaystyle \E = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n \subset
+\TS_{\VEC{v}} V$ is
+$\displaystyle \left\{ \df{\pi_i}(\VEC{v}) \right\}_{i=1}^n \subset
+(\TS_{\VEC{v}}V)^\ast$.
+By tradition, the differential $1$-form $\df{\pi_i}$ is denoted
+$\df{x_i}$.  Hence, every differential $k$-form $\omega$ on $V$ can be
+expressed as
+\[
+\omega = \sum_{i_1< i_2< \ldots< i_k} \omega_{i_1,i_2,\ldots,i_k}
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \ ,
+\]
+where $\displaystyle \omega_{i_1,i_2,\ldots,i_k}:V\to \RR$ for all indices.
+
+It is important to note that
+\begin{equation} \label{dxPropr1}
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} = 0
+\end{equation}
+if there are two identical indices, and that
+\begin{equation} \label{dxPropr2}
+\df{x_{\sigma(i_1)}} \wedge \df{x_{\sigma(i_2)}} \wedge \ldots
+\wedge \df{x_{\sigma(i_k)}} = \sgn(\sigma) 
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}}
+\end{equation}
+for all permutations $\sigma \in S_k$.  These results follow from
+Proposition~\ref{propTssT}.  For instance,
+\begin{align*}
+&\big( \df{x_{\sigma(i_1)}} \wedge \df{x_{\sigma(i_2)}} \wedge \ldots
+\wedge \df{x_{\sigma(i_k)}} \big)(\VEC{v}) \, \big( (\VEC{v},\VEC{w}_1), 
+(\VEC{v},\VEC{w}_2), \ldots , (\VEC{v},\VEC{w}_k) \big) \\
+&\qquad = \big( \pi_{\sigma(i_1)} \wedge \pi_{\sigma(i_2)} \wedge \ldots
+\wedge \pi_{\sigma(i_k)} \big)\, \big( \VEC{w}_1, 
+\VEC{w}_2, \ldots , \VEC{w}_k \big) \\
+&\qquad =\sgn{\sigma} \big( \pi_{i_1} \wedge \pi_{i_2} \wedge \ldots
+\wedge \pi_{i_k} \big)\, \big( \VEC{w}_1, 
+\VEC{w}_2, \ldots , \VEC{w}_k \big) \\
+&\qquad = \sgn(\sigma)
+\big( \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_k}} \big)(\VEC{v}) \, \big( (\VEC{v},\VEC{w}_1), 
+(\VEC{v},\VEC{w}_2), \ldots , (\VEC{v},\VEC{w}_k) \big)
+\end{align*}
+for all $\VEC{v}\in V$ and $\displaystyle \VEC{w}_i \in \RR^n$,
+where we have used Proposition~\ref{propTssT} to obtain the second
+equality.
+
+\begin{theorem}  \label{thmdefn01}
+Suppose that $\displaystyle V\subset \RR^n$ is an open subset and
+$f:V \to \RR$ is of class $\displaystyle C^1$, then
+\[
+\df{f} = \sum_{j=1}^n \pdydx{f}{x_j} \df{x_j} \ .
+\]
+\end{theorem}
+
+\begin{proof}
+By definition, for every $\VEC{v} \in V$,
+\[
+\df{f}(\VEC{v})\big( (\VEC{v}, \VEC{x}) \big)
+= \diff f(\VEC{v}) \VEC{x}
+= \sum_{j=1}^n \pdydx{f}{x_j}(\VEC{v}) x_j
+= \sum_{j=1}^n \pdydx{f}{x_j}(\VEC{v})
+\df{x_j}(\VEC{v})\big( (\VEC{v}, \VEC{x}) \big)
+\]
+for all $\displaystyle \VEC{x} \in \RR^n$.
+\end{proof}
+
+Suppose that $\displaystyle V\subset \RR^n$ and
+$\displaystyle W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\displaystyle C^1$,
+we can extend $\displaystyle f^\ast$ to a map from
+differential $k$-forms on $W$ to differential $k$-forms on $V$ by
+$\displaystyle f^\ast(\omega)(\VEC{v}) = f^\ast(\omega(f(\VEC{v})))$ for
+every differential $k$-forms $\omega$ on $W$ and $\VEC{v} \in V$.
+We say that $\displaystyle f^\ast(\omega)$ is the
+{\bfseries pull-back}\index{Pull-Back} of the differential
+$k$-form $\omega$ by $f$.
+
+\begin{prop}  \label{propAstoR}
+Suppose that $\displaystyle V\subset \RR^n$ and
+$\displaystyle W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\displaystyle C^1$, then
+\begin{enumerate}
+\item $\displaystyle f^\ast(\df{x_i}) = \sum_{j=1}^n \pdydx{f_i}{x_j} \df{x_j}$
+for $1 \leq i \leq m$.
+\item $\displaystyle f^\ast(\omega_1 + \omega_2) = f^\ast(\omega_1) +
+f^\ast(\omega_2)$ for all differential $k$-forms $\omega_i$ on $W$.
+\item $\displaystyle f^\ast( g\, \omega) = ( g\circ f)f^\ast(\omega)$
+for all differential $k$-form $\omega$ on $W$ and functions
+$g:W\to \RR$ of class $\displaystyle C^1$.
+\item $\displaystyle f^\ast( \omega_1 \wedge \omega_2) = f^\ast(\omega_1)
+\wedge f^\ast(\omega_2)$ for all differential $k_1$-forms $\omega_1$
+and differential $k_2$-form $\omega_2$ on $W$
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\stage{1} For every $\VEC{v} \in V$, we have that
+\begin{align*}
+&f^\ast(\df{x_i})(\VEC{v})\big( (\VEC{v},\VEC{x}) \big)
+= \df{x_i}(f(\VEC{v}))\big( f_\ast(\VEC{v},\VEC{x}) \big)
+= \df{x_i}(f(\VEC{v}))\big( f(\VEC{v}) , \diff f(\VEC{v}) \VEC{x} \big)
+= \pi_i\big( \diff f(\VEC{v}) \VEC{x} \big) \\
+&\quad
+= \pi_i\left( \sum_{r=1}^m \left( \sum_{j=1}^n \pdydx{f_r}{x_j}(\VEC{v}) x_j
+\right) \VEC{e}_r \right)
+= \sum_{j=1}^n \pdydx{f_i}{x_j}(\VEC{v}) x_j
+= \sum_{j=1}^n \pdydx{f_i}{x_j}(\VEC{v})
+\df{x_j}(\VEC{v})\big( (\VEC{v},\VEC{x}) \big)
+\end{align*}
+for all $\displaystyle \VEC{x}\in \RR^n$.
+
+\stage{2} This proof is left to the reader.
+
+\stage{3} We have that
+\begin{align*}
+f^\ast(g\, \omega)(\VEC{v})
+&= f^\ast \big((g\, \omega)(f(\VEC{v}))\big)
+= f^\ast \big(g(f(\VEC{v})) \omega(f(\VEC{v}))\big)
+= g(f(\VEC{v})) f^\ast(\omega(f(\VEC{v}))) \\
+&= g(f(\VEC{v}))\, (f^\ast \omega)(\VEC{v})
+\end{align*}
+for all $\VEC{v} \in V$, where we have used (2) of
+Proposition~\ref{propAsttauR} for the third equality.
+
+\stage{4} We have that
+\begin{align*}
+f^\ast(\omega_1 \wedge \omega_2)(\VEC{v})
+&= f^\ast \big((\omega_1 \wedge \omega_2)(f(\VEC{v}))\big)
+= f^\ast \big(\omega_1(f(\VEC{v})) \wedge \omega_2(f(\VEC{v}))\big) \\
+&= f^\ast(\omega_1(f(\VEC{v}))) \wedge f^\ast(\omega_2(f(\VEC{v}))) 
+=(f^\ast\omega_1)(\VEC{v}) \wedge (f^\ast\omega_2)(\VEC{v}) 
+\end{align*}
+for all $\VEC{v} \in V$,  where we have used (4) of
+Proposition~\ref{propAsttauR} for the third equality.
+\end{proof}
+
+\begin{theorem} \label{stokesCofV}
+Suppose that $V$ and $W$ are two open subsets of $\displaystyle \RR^n$.
+Let $h:W\to \RR$ and $f:V \to W$ be functions of class
+$\displaystyle C^1$.  Then
+\[
+f^\ast\big( h \df{x_1} \wedge \df{x_2} \wedge \ldots \wedge \df{x_n} \big)
+= (h \circ f) (\det \diff f)
+\df{x_1} \wedge \df{x_2} \wedge \ldots \wedge \df{x_n} \ .
+\]
+\end{theorem}
+
+\begin{proof}
+We have from (3) of Proposition~\ref{propAstoR} that
+\begin{equation} \label{stokesCofVEq1}
+f^\ast( h \df{x_1} \wedge \df{x_2} \wedge \ldots \wedge \df{x_n} )
+= (h \circ f) f^\ast( \df{x_1} \wedge \df{x_2} \wedge \ldots
+\wedge \df{x_n}) \ .
+\end{equation}
+
+Let $Q = \diff f(\VEC{v})$; namely, the components $q_{i,j}$ of $Q$ for
+$1 \leq i, j \leq n$ are given by
+$\displaystyle q_{i,j} = \dydx{f_i}{x_j}(\VEC{v})$.
+Moreover, let
+$\displaystyle \E_{\VEC{v}} = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n$
+be the canonical basis of $\TS_{\VEC{v}}V$.
+Recall that $\displaystyle \df{x_i}(\VEC{v}) = \df{\pi_i}(\VEC{v}) \in
+\Omega^1(\TS_{\VEC{v}}V)$ for $1\leq i \leq n$
+is generated by the projection $\displaystyle \pi_i:\RR^n \to \RR$ defined by
+$\pi_i(\VEC{x}) = x_i$ for all $\displaystyle \VEC{x} \in \RR^n$.
+
+Given $\displaystyle \VEC{w}_k \in \RR^n$ for $1\leq k \leq n$, we may write
+$\displaystyle \VEC{w}_k = \sum_{j=1}^n a_{j,k} \VEC{e}_j$
+for $1 \leq k \leq n$ and some $a_{j,k} \in \RR$ where
+$\displaystyle \left\{ \VEC{e}_i \right\}_{i=1}^n$ is the canonical
+basis on $\displaystyle \RR^n$.  Let $A$ be the matrix with entries $a_{j,k}$.
+
+We get from Theorem~\ref{stokesTBE} that
+\begin{align*}
+&\big( f^\ast ( \df{x_1} \wedge \df{x_2} \wedge \ldots
+\wedge \df{x_n} ) \big)(\VEC{v}) \, \big( (\VEC{v},\VEC{w}_1), 
+(\VEC{v},\VEC{w}_2), \ldots , (\VEC{v},\VEC{w}_n) \big) \\
+&\quad = f^\ast\big( (\df{x_1} \wedge \df{x_2} \wedge \ldots
+\wedge \df{x_n}) (f(\VEC{v}))\big) \, \big( (\VEC{v},\VEC{w}_1), 
+(\VEC{v},\VEC{w}_2), \ldots , (\VEC{v},\VEC{w}_n) \big) \\
+&\quad = \big( (\df{x_1} \wedge \df{x_2} \wedge \ldots
+\wedge \df{x_n}) (f(\VEC{v}))\big) \, \big( f_\ast(\VEC{v},\VEC{w}_1), 
+f_\ast (\VEC{v},\VEC{w}_2), \ldots , f_\ast (\VEC{v},\VEC{w}_n) \big) \\
+&\quad = \big( (\df{x_1} \wedge \df{x_2} \wedge \ldots
+\wedge \df{x_n}) (f(\VEC{v}))\big) \\
+&\hspace{7em} \big( (f(\VEC{v}),\diff f(\VEC{v}) \VEC{w}_1), 
+(f(\VEC{v}),\diff f(\VEC{v}) \VEC{w}_2), \ldots ,
+(f(\VEC{v}),\diff f(\VEC{v}) \VEC{w}_n) \big) \\
+&\quad = ( \pi_1 \wedge \pi_2 \wedge \ldots
+\wedge \pi_n) \left( \sum_{j=1}^n a_{j,1} \diff f(\VEC{v}) \VEC{e}_j,
+\sum_{j=1}^n a_{j,2} \diff f(\VEC{v}) \VEC{e}_j, \ldots,
+\sum_{j=1}^n a_{j,n} \diff f(\VEC{v}) \VEC{e}_j \right) \\
+&\quad = \big( \pi_1 \wedge \pi_2 \wedge \ldots \wedge \pi_n\big)
+\left( \sum_{i=1}^n \left(\sum_{j=1}^n a_{j,1}
+q_{i,j}\right) \VEC{e}_i, \sum_{i=1}^n\left(\sum_{j=1}^n a_{j,2} q_{i,j}\right)
+\VEC{e}_i, \ldots, \right. \\
+&\hspace{15em} \left. \sum_{i=1}^n \left(\sum_{j=1}^n a_{j,n} q_{i,j}\right)
+\VEC{e}_i \right) \\
+&\quad = \det(Q A)\, \big( \pi_1 \wedge \pi_2 \wedge \ldots \wedge \pi_n\big)
+\, \big( \VEC{e}_1, \VEC{e}_2, \ldots , \VEC{e}_n \big) \\
+&\quad = \det(Q)\, \det(A)\,
+\big(\pi_1 \wedge \pi_2 \wedge \ldots \wedge \pi_n\big)
+\, \big( \VEC{e}_1, \VEC{e}_2, \ldots , \VEC{e}_n \big) \\
+&\quad = \det(Q)\,\big( \pi_1 \wedge \pi_2 \wedge \ldots \wedge \pi_n\big)
+\, \big( \sum_{j=1}^n a_{j,1} \VEC{e}_j, \sum_{j=1}^n a_{j,2} \VEC{e}_j, \ldots ,
+\sum_{j=1}^n a_{j,n} \VEC{e}_j \big) \\
+&\quad = \det(Q)\, \big( \pi_1 \wedge \pi_2 \wedge \ldots \wedge \pi_n\big)
+\, \big( \VEC{w}_1, \VEC{w}_2, \ldots , \VEC{w}_n \big) \\
+&\quad = \det(Q)\, \big( (\df{x_1} \wedge \df{x_2} \wedge \ldots \wedge
+\df{x_n})(\VEC{v}) \big) 
+\, \big( (\VEC{v},\VEC{w}_1), (\VEC{v},\VEC{w}_2), \ldots ,
+(\VEC{v},\VEC{w}_n)  \big)
+\end{align*}
+for all $\VEC{v} \in V$ and $\displaystyle \VEC{w}_i \in \RR^n$.
+Thus
+\[
+f^\ast( \df{x_1} \wedge \df{x_2} \wedge \ldots
+\wedge \df{x_n}) = (\det(\diff f))\, \df{x_1} \wedge \df{x_2} \wedge
+\ldots \wedge \df{x_n} \ . \qedhere
+\]
+\end{proof}
+
+We now define an operator $\df{}$ that will map differential $k$-forms
+to differential $(k+1)$-forms.  We have already defined this operator
+for function $f:V\to \RR$ in Definition~\ref{defnd01} and
+Theorem~\ref{thmdefn01}.
+
+\begin{defn}
+Suppose that
+\[
+\omega = \sum_{1\leq i_1<i_2< \ldots< i_k\leq n} \omega_{i_1,i_2,\ldots,i_k}
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}}
+\]
+is a differential $k$-form of class $\displaystyle C^1$ on an open set
+$\displaystyle V \subset \RR^n$.  We define a
+differential $k+1$-form $\df{\omega}$ on $V$ by
+\begin{align*}
+\df{\omega} &= \sum_{1\leq i_1 < i_2 < \ldots < i_k\leq n}
+\df{\omega_{i_1,i_2,\ldots,i_k}} \wedge
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \\
+&= \sum_{1\leq i_1< i_2 < \ldots < i_k} \sum_{j=1}^n
+\pdydx{\omega_{i_1,i_2,\ldots,i_k}}{x_j} \df{x_j} \wedge
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \ .
+\end{align*}
+\end{defn}
+
+\begin{theorem}\label{stokesDF}
+Suppose that $\displaystyle V\subset \RR^n$ and
+$\displaystyle W \subset \RR^m$ are two open subsets.
+\begin{enumerate}
+\item $\displaystyle \df{(\omega + \mu )} = \df{\omega} + \df{\mu}$
+for all differential $k$-forms $\omega$ and $\mu$ of class
+$\displaystyle C^1$ on $V$.
+\item $\displaystyle \df{(\omega \wedge \mu)} =
+\df{\omega}\wedge \mu + (-1)^p \omega \wedge \df{\mu}$
+for all differential $p$-forms $\omega$ and differential $q$-form
+$\mu$ of class $\displaystyle C^1$ on $V$.
+\item $\df[2]{\omega} \equiv \df{(\df{\omega})} = 0$
+for all differential $k$-forms $\omega$ of class
+$\displaystyle C^2$ on $V$.
+\item $f^\ast (\df{\omega}) = \df{f^\ast(\omega)}$ for all
+differential $k$-forms $\omega$ of class $\displaystyle C^1$ on $W$ and all
+functions $f:V\to W$ of class $\displaystyle C^1$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\stage{1} This proof is left to the reader.
+
+\stage{2} We have that
+$\displaystyle \omega = \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+\omega_{i_1,i_2,\ldots,i_p} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}}$ and \\
+$\displaystyle \mu = \sum_{1\leq j_1 <j_2 < \ldots < j_q \leq n}
+\mu_{j_1,j_2,\ldots,j_q} \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
+\wedge \df{x_{j_q}}$.  Hence
+\begin{align*}
+&\omega \wedge \mu = \sum_{\substack{1\leq i_1 <i_2 < \ldots < i_p \leq n\\
+1\leq j_1 <j_2 < \ldots < j_q \leq n}}
+\omega_{i_1,i_2,\ldots,i_p}\, \mu_{j_1,j_2,\ldots,j_q}  \\
+&\hspace{8em} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}} \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
+\wedge \df{x_{j_q}} \ .
+\end{align*}
+From the definition of the operator $\df{}$, we get that
+\begin{align*}
+\df{\omega} &= \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+\left( \sum_{m=1}^n \pdydx{\omega_{i_1,i_2,\ldots,i_p}}{x_m} \df{x_m}
+\right) \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}}
+\intertext{and}
+\df{\mu} &= \sum_{1\leq j_1 <j_2 < \ldots < j_q \leq n}
+\left(\sum_{m=1}^n \pdydx{\mu_{j_1,j_2,\ldots,j_q}}{x_m} \df{x_m} \right)
+\wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
+\wedge \df{x_{j_q}} \ .
+\end{align*}
+Using (1), we get that
+\begin{align*}
+&\df{(\omega \wedge \mu)}
+= \sum_{\substack{1\leq i_1 <i_2 < \ldots < i_p \leq n\\
+1\leq j_1 <j_2 < \ldots < j_q \leq n}}
+\df{\big(\omega_{i_1,i_2,\ldots,i_p} \mu_{j_1,j_2,\ldots,j_q} \\
+&\hspace{8em} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}} \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
+\wedge \df{x_{j_q}}\big)} \\
+&\quad = \sum_{\substack{1\leq i_1 <i_2 < \ldots < i_p \leq n\\
+1\leq j_1 <j_2 < \ldots < j_q \leq n}}
+\bigg( \sum_{m=1}^n \left(\pdydx{\omega_{i_1,i_2,\ldots,i_p}}{x_m}
+\mu_{j_1,j_2,\ldots,j_q} + \omega_{i_1,i_2,\ldots,i_p}
+\pdydx{\mu_{j_1,j_2,\ldots,j_q}}{x_m} \right) \\
+&\hspace{8em}
+\df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}} \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
+\wedge \df{x_{j_q}} \bigg) \\
+&\quad = \sum_{\substack{1\leq i_1 <i_2 < \ldots < i_p \leq n\\
+1\leq j_1 <j_2 < \ldots < j_q \leq n}}
+\left( \sum_{m=1}^n \pdydx{\omega_{i_1,i_2,\ldots,i_p}}{x_m}
+\df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}}\right) \\
+&\hspace{8em} \wedge \left( \mu_{j_1,j_2,\ldots,j_q}
+\df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots \wedge \df{x_{j_q}} \right) \\
+& \qquad\quad + (-1)^p \sum_{\substack{1\leq i_1 <i_2 < \ldots < i_p \leq n\\
+1\leq j_1 <j_2 < \ldots < j_q \leq n}} \left( \omega_{i_1,i_2,\ldots,i_p}
+\wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_p}} \right)
+\\
+&\hspace{8em} \wedge \left( \sum_{m=1}^n \pdydx{\mu_{j_1,j_2,\ldots,j_q}}{x_m}
+\df{x_m} \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
+\wedge \df{x_{j_q}}\right) \\
+&\quad = \df{\omega} \wedge \mu + (-1)^p \omega \wedge \df{\mu} \ ,
+\end{align*}
+where the factor of $(-1)^p$ comes from
+$\df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}} \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
+\wedge \df{x_{j_q}} = (-1)^p
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_p}} \wedge \df{x_m} \wedge \df{x_{j_1}} \wedge
+\df{x_{j_2}} \wedge \ldots \wedge \df{x_{j_q}}$
+according to (\ref{dxPropr2}).
+
+\stage{3} If
+$\displaystyle \omega = \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+\omega_{i_1,i_2,\ldots,i_k} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_k}}$, then
+\[
+\df{\omega} = \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+\sum_{j=1}^n \pdydx{\omega_{i_1,i_2,\ldots,i_k}}{x_j} \df{x_j}
+\wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_k}}
+\]
+and
+\begin{align*}
+\df{(\df{\omega})} &= \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+\sum_{m=1}^n \sum_{j=1}^n
+\pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_j}{x_m}{2}{}{}
+\df{x_m} \wedge \df{x_j} \wedge \df{x_{i_1}} \wedge
+\df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \\
+&=\sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+\left( \sum_{m=1}^n \sum_{j=1}^n
+\pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_j}{x_m}{2}{}{}
+\df{x_m} \wedge \df{x_j} \right) \wedge \df{x_{i_1}} \wedge
+  \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} = 0
+\end{align*}
+because
+$\displaystyle \pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_j}{x_m}{2}{}{}
+= \pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_m}{x_j}{2}{}{}$ for all $0
+\leq j, m \leq n$ since $\displaystyle \omega_{i_1,i_2,\ldots,i_k} \in C^2(V)$
+implies that
+\[
+\pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_j}{x_m}{2}{}{}
+\df{x_m} \wedge \df{x_j}
+= -\pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_m}{x_j}{2}{}{}
+\df{x_j} \wedge \df{x_m}
+\]
+for all $1 \leq j,m \leq n$ according to (\ref{dxPropr2}); in
+particular, both sides are null when $m=j$ according to (\ref{dxPropr1}).
+
+\stage{4} We prove this result using a proof by induction on the order
+of the differential form.  Using the chain rule, it is easy to verify
+that the result is true if $\omega$ is a $0$-form; namely, if
+$\omega:V \to \RR$ is a function of class $\displaystyle C^1$.
+Suppose that the result is true for all differential $k$-form.  If
+$\omega$ is a differential $(k+1)$-from, then we can write
+$\displaystyle \omega = \sum_{j=1}^n \mu_j \wedge \df{x_j}$ for some
+$k$-forms $\mu_j$.  From (1), (2) and (3) above, we get that
+\begin{align*}
+\df{\omega} &= \sum_{j=1}^n\df{(\mu_j \wedge \df{x_j})}
+= \sum_{j=1}^n\left(\df{\mu_j} \wedge \df{x_j} + (-i)^k\mu_j \wedge
+\df[2]{x_j}\right)
+= \sum_{j=1}^n\left(\df{\mu_j} \wedge \df{x_j}\right) \ .
+\end{align*}
+It follows from (2) and (4) of Proposition~\ref{propAstoR} that
+$\displaystyle f^\ast \df{\omega}
+= \sum_{j=1}^n\left(f^\ast \df{\mu_j} \wedge f^\ast \df{x_j}\right)$.
+Recall that $\df{x_j} = \df{\pi_j}$ where $\pi_j:\RR^n \to \RR$ is a
+projection.  Since $\pi_j$ is a $0$-form, we have that
+$\df{ (f^\ast \df{x_j})} = \df{ (f^\ast \df{\pi_j})}
+= \df{(\df{(f^\ast(\pi_j))})} = \df[2]{(\pi_j\circ f)}
+= \df[2]{ f_j} = 0$ for all $j$ because of (3).
+Hence
+\[
+\df{(f^\ast \mu_j \wedge f^\ast \df{x_j})}
+= \df{f^\ast \mu_j} \wedge f^\ast \df{x_j}
++ (-1)^k f^\ast \mu_j \wedge \df{(f^\ast \df{x_j})}
+= \df{f^\ast \mu_j} \wedge f^\ast \df{x_j} \ .
+\]
+Finally, using this relation and our hypothesis of induction, we get that
+\begin{align*}
+f^\ast \df{\omega}
+&= \sum_{j=1}^n\left(f^\ast \df{\mu_j} \wedge f^\ast \df{x_j}\right)
+= \sum_{j=1}^n\left(\df{f^\ast \mu_j} \wedge f^\ast \df{x_j}\right)
+= \sum_{j=1}^n\df{(f^\ast \mu_j \wedge f^\ast \dx{x_j})} \\
+&= \df{\left( \sum_{j=1}^nf^\ast \mu_j \wedge f^\ast \dx{x_j}\right)}
+= \df{\left(f^\ast \left( \sum_{j=1}^n\mu_j \wedge \dx{x_j}\right)\right)}
+= \df{(f^\ast \omega)} \ ,
+\end{align*}
+where we have used (1) above to get the fourth equality, and
+(2) and (4) of Proposition~\ref{propAstoR} to get the second to last
+equality.  This complete the proof by induction.
+\end{proof}
+
+From now on, we will assume that each differential form that we consider is
+of class $\displaystyle C^j$ for $j$ large enough to meet the
+requirements of the statement about this differential form.
+
+\begin{defn}
+A differential $k$-form $\omega$ on the open set
+$\displaystyle V \subset \RR^n$ is
+{\bfseries closed}\index{Differential Form!Closed}
+if $\df{\omega}=0$ on $V$.  A differential $k$-form $\omega$ on the open set
+$\displaystyle V \subset \RR^n$ is
+{\bfseries exact}\index{Differential Form!Exact}
+if there exists a differential $(k-1)$-form $\mu$ on $V$ such that
+$\df{\mu} = \omega$.
+\end{defn}
+
+It follows from item (3) of Theorem~\ref{stokesDF} that exact
+differential $k$-forms are closed.
+
+\begin{egg}
+Are closed differential $k$-forms exact?    \label{CnotEpart1}
+The following example is from \cite{S} though it is a classical
+example that can be found in almost all textbooks on differential
+geometry.
+
+In general, the answer is negative.  Consider the differential $1$-form
+\[
+\omega = \frac{-x_2}{x_1^2+x_2^2} \df{x_1} + \frac{x_1}{x_1^2+x_2^2} \df{x_2}
+\]
+defined on $\displaystyle V= \RR^2 \setminus \{ \VEC{0}\}$ (see
+warning below).
+
+We have that
+\begin{align*}
+\df{\omega} &= \left( \frac{2x_1 x_2}{(x_1^2+x_2^2)^2} \df{x_1}
++ \frac{x_2^2-x_1^2}{(x_1^2+x_2^2)^2} \df{x_2} \right) \wedge \df{x_1} \\
+&\qquad \qquad + \left( \frac{x_2^2-x_1^2}{(x_1^2+x_2^2)^2} \df{x_1}
+- \frac{2x_1 x_2}{(x_1^2+x_2^2)^2} \df{x_2} \right) \wedge \df{x_2} \\
+&= \frac{x_2^2-x_1^2}{(x_1^2+x_2^2)^2} \df{x_2} \wedge \df{x_1}
++ \frac{x_2^2-x_1^2}{(x_1^2+x_2^2)^2} \df{x_1} \wedge \df{x_2} \\
+&= -\frac{x_2^2-x_1^2}{(x_1^2+x_2^2)^2} \df{x_1} \wedge \df{x_2}
++ \frac{x_2^2-x_1^2}{(x_1^2+x_2^2)^2} \df{x_1} \wedge \df{x_2}
+= 0 \ .
+\end{align*}
+However, there does not exist any function $\mu$ on $V$ such that
+$\df{\mu} = \omega$.  To prove this statement, let
+$\displaystyle W = \RR^2\setminus \{(x_1,0) : x_1 \geq 0 \}$ and
+consider the function $\theta: W \to \RR$ defined by
+\[
+\theta(\VEC{x}) =
+\begin{cases}
+\arctan(x_2/x_1) & \quad \text{if} \ x_1,x_2 >0 \\
+\pi/2 & \quad \text{if} \ x_1=0,\ x_2 >0 \\
+\pi + \arctan(x_2/x_1) & \quad \text{if} \ x_1 <0 \\
+3\pi/2 & \quad \text{if} \ x_1=0,\ x_2 <0 \\
+2\pi + \arctan(x_2/x_1) & \quad \text{if} \ x_1>0, \ x_2 <0
+\end{cases}
+\]
+\pdfbox{diff_forms/notExact}
+The image of $\theta$ is $]0,2\pi[$.  We have that $\df{\theta}=\omega$ on
+$W$.  If there was a function $\mu:V\to \RR$ such that
+$\df{\mu} = \omega$ on $V$, then we would have that
+$\displaystyle \pdydx{\mu}{x_1} = \pdydx{\theta}{x_1} =
+\frac{-x_2}{x_1^2+x_2^2}$ and
+$\displaystyle \pdydx{\mu}{x_2} = \pdydx{\theta}{x_2} =
+\frac{x_1}{x_1^2+x_2^2}$ on $W$.  Thus $\mu = \theta + C$ on $W$ for some
+constant $C$.  However, at $\VEC{x}_0 = (x_1,0)$ with $x_1>0$, we have
+that $\mu(\VEC{x}) = \theta(\VEC{x}) + C \to C$ as $\VEC{x}\to \VEC{x}_0$
+with $x_2>0$ and $\mu(\VEC{x}) = \theta(\VEC{x}) +C \to 2\pi + C$ as
+$\VEC{x}\to \VEC{x}_0$ with $x_2<0$.  This is a contradiction that $\mu$ is
+continuous at $\VEC{x}_0 \in V$.  Thus $\omega$ cannot be exact on
+$V$.
+
+We provide another proof that $\omega$ cannot be exact in $V$ in
+Example~\ref{CnotEpart2} later.
+\end{egg}
+
+\begin{rmk}[Warning]
+The expression             \label{rmkWarning1}
+\[
+\omega = \frac{-x_2}{x_1^2+x_2^2} \df{x_1} + \frac{x_1}{x_1^2+x_2^2} \df{x_2}
+\]
+is an abbreviation for $\omega = f_1 \df{x_1} + f_2 \df{x_2}$ where
+$f_1: \RR^2 \setminus \{\VEC{0}\} \to \RR$ is the function defined
+by $f_1(\VEC{x}) = -x_2/(x_1^2 + x_2^2)$ and
+$f_2: \RR^2 \setminus \{\VEC{0}\} \to \RR$ is the function defined
+by $f_2(\VEC{x}) = x_1/(x_1^2 + x_2^2)$.  To introduce the variable
+$\VEC{x}$ and be rigorously correct, we should have written instead
+\[
+\omega(\VEC{x}) = \frac{-x_2}{x_1^2+x_2^2} \df{x_1}(\VEC{x}) +
+\frac{x_1}{x_1^2+x_2^2} \df{x_2}(\VEC{x})
+\]
+but that would have been a uglier expression.
+We will regularly use this type of abbreviation from now on.
+\end{rmk}
+
+Suppose that $\displaystyle \omega = \sum_{i=1}^n \omega_i \df{x_i}$ is a
+closed differential $1$-form on $\displaystyle \RR^n$.  Let
+\begin{equation}  \label{introPLEq0}
+\mu(\VEC{x}) = \sum_{j=1}^n \int_0^1 \omega_j(t \VEC{x}) x_j \dx{t}
+\end{equation}
+for $1\leq j \leq n$ and $\displaystyle \VEC{x} \in \RR^n$.
+Then
+\begin{equation} \label{introPLEq1}
+\pdydx{\mu}{x_i}(\VEC{x}) =
+\sum_{\substack{j=1\\i\neq j}}^n \int_0^1
+\left( t x_j \pdydx{\omega_j}{x_i}(t \VEC{x}) \right) \dx{t} 
++ \int_0^1 \left( t x_i \pdydx{\omega_i}{x_i}(t \VEC{x})
++ \omega_i(t\VEC{x}) \right) \dx{t} \ .
+\end{equation}
+Since $\omega$ is a closed differential form, we get that
+$\displaystyle
+\df{\omega} = \sum_{i=1}^n \sum_{j=1}^n \pdydx{\omega_i}{x_j} \df{x_j}
+\wedge \df{x_i} = 0$.
+Therefore, with $\displaystyle (\VEC{x},\VEC{y}) \in \TS_{\VEC{x}} \RR^n$ 
+where $y_i = 0$ for $i\neq p,q$ and $y_i = 1$ for $i=p,q$, we get from
+$\df{\omega}(\VEC{x})(\VEC{x},\VEC{y}) = 0$ that
+$\displaystyle \pdydx{\omega_p}{x_q}(\VEC{x}) 
+= \pdydx{\omega_q}{x_p}(\VEC{x})$ for $1 \leq p < q \leq n$.
+Thus (\ref{introPLEq1}) yields
+\begin{align*}
+\pdydx{\mu}{x_i}(\VEC{x}) &= \sum_{\substack{j=1\\i\neq j}}^n \int_0^1
+\left( t x_j \pdydx{\omega_i}{x_j}(t \VEC{x}) \right) \dx{t} 
++ \int_0^1 \left( t x_i \pdydx{\omega_i}{x_i}(t \VEC{x})
++ \omega_i(t\VEC{x}) \right) \dx{t} \\
+&= \int_0^1 \left( \sum_{j=1}^n  t x_j \pdydx{\omega_i}{x_j}(t \VEC{x}) 
++ \omega_i(t\VEC{x}) \right) \dx{t}
+= \int_0^1 \dfdx{\left( t \omega_i(t\VEC{x}) \right)}{t} \dx{t}
+= \omega_i(\VEC{x})
+\end{align*}
+for $\displaystyle \VEC{x} \in \RR^n$.  Hence
+$\df{\mu} = \omega$.  This method to find a differential $0$-form
+$\mu$ such that $\df{\mu} = \omega$ works because the line
+from $\VEC{0}$ to any $\displaystyle \VEC{x} \in \RR^n$ is
+included in the domain of $\omega$.  This is required in the
+definition of $\mu$ in (\ref{introPLEq0}).  To expend this method, we
+consider domains with a similar property.
+
+\begin{defn} \label{defnStarShaped}
+A set $\displaystyle V \subset \RR^n$ is
+{\bfseries star-shaped}\index{Star-Shaped} if there exists a point
+$\VEC{y} \in V$ such that the line segment
+$\{ \VEC{y} + t(\VEC{x}-\VEC{y}) : 0\leq 0 \leq 1\} \subset V$ for all
+$\VEC{x} \in V$.
+\end{defn}
+
+If $\omega$ is a closed differential $1$-form defined on a star-shaped
+domain $V$, the integral formula in (\ref{introPLEq0}) (with
+appropriate shifting) can be used to find $\mu:V\to \RR$ such that
+$\df{\mu} = \omega$.  A general form of this integral formula is used
+to prove the following theorem.
+
+\begin{theorem}[Poincaré Lemma]\label{closedexact}
+If $\displaystyle V\subset \RR^n$ is an open set which is star-shaped
+and $\omega$ is a closed differential $k$-form on $V$ with $k>0$, then
+$\omega$ is exact on $V$.
+\end{theorem}
+
+\begin{proof}
+Without loss of generality, we may assume that $\VEC{0}\in V$ and every point
+$\VEC{x} \in V$ can be joined by a straight line in $V$ to the origin.
+If it is not, we consider $\tilde{V} = V - \{\VEC{y}\}
+= \{ \VEC{x} - \VEC{y}: \VEC{x} \in V \}$ and
+$\tilde{\omega}(\VEC{x}) = \omega(\VEC{x}+\VEC{y})$ for
+$\VEC{x} \in \tilde{V}$ where $\VEC{y}$ is the "centre" of the
+star-shaped set described in Definition~\ref{defnStarShaped}.
+
+For every positive integer $k$, we prove the existence of a function
+$L$ mappings differential $k$-forms on $V$ to differential
+$(k-1)$-forms on $V$ such that $L(0)=0$ and
+\begin{equation} \label{stokesEXCL}
+\tau = [L,\df{}] \tau \equiv L(\df{\tau}) + \df{L(\tau)}
+\end{equation}
+for all differential $k$-forms $\tau$ on $V$ \footnote{The
+expression $[L,\df{}]$ is called a bracket of $L$ and $\df{}$.
+Expressions of that form are frequent in differential geometry and, in
+fact, in many other fields of mathematics.}.
+Assuming that $L$ exists,
+(\ref{stokesEXCL}) with $\tau = \omega$ yields $\omega = \df{L(\omega)}$
+because $\df{\omega} = 0$.  Thus $\omega$ is exact.
+
+Suppose that
+\[
+\tau = \sum_{1\leq i_i < i_2 < \ldots < i_k\leq n} \tau_{i_1,i_2,\ldots,i_k}
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \ .
+\]
+Let $\displaystyle g_{i_1,i_2,\ldots,i_k,j}: V \to \RR$ for
+$1\leq i_1<i_2<\ldots<i_k\leq n$ and $1\leq j \leq k$
+be the functions defined by
+\[
+g_{i_1,i_2,\ldots,i_k,j}(\VEC{x}) =
+(-1)^{j-1} x_{i_j} \int_0^1 t^{k-1} \tau_{i_1,i_2,\ldots,i_k}(t\VEC{x}) \dx{t}
+\]
+for $\VEC{x} \in V$.  We define $L(\tau)$ by
+\begin{align*}
+L(\tau) &= \sum_{1\leq i_1<i_2<\ldots<i_k\leq n} \bigg(
+\sum_{j=1}^k \bigg( g_{i_1,i_2,\ldots,i_k,j}
+ \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge
+\widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}}
+\bigg) \bigg)
+\end{align*}
+where the hat over a $\df{x_{i_j}}$ indicates that this
+factor has been removed from the wedge product.  The integral is well
+defined because $t\VEC{x} \in V$ for $0\leq t \leq 1$.
+For the clarity of the proof, it is probably better to use the
+abbreviation mentioned in Remark~\ref{rmkWarning1} and simply write
+\begin{align*}
+L(\tau) &= \sum_{1\leq i_1<i_2<\ldots<i_k\leq n} \bigg(
+\sum_{j=1}^k \bigg( (-1)^{j-1} x_{i_j} \left( \int_0^1 t^{k-1}
+\tau_{i_1,i_2,\ldots,i_k}(t\VEC{x}) \dx{t} \right) \\
+&\hspace{10em} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge
+\widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}}
+\bigg) \bigg) \ .
+\end{align*}
+We have
+\begin{align}
+\df{L(\tau)} &= \df{\big(L(\tau)\big)} \nonumber \\
+&= \sum_{i_1<i_2<\ldots<i_k} \bigg( \sum_{j=1}^k \bigg( (-1)^{j-1} 
+\sum_{m=1}^n \bigg( \pdfdx{ \left( x_{i_j} \int_0^1 t^{k-1}
+\tau_{i_1,i_2,\ldots,i_k}(t\VEC{x}) \dx{t} \right)}{x_m}
+\nonumber \\
+&\hspace{8em} \df{x_m}\wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}} \bigg)
+\bigg) \bigg) \nonumber \\
+&= \sum_{i_1<i_2<\ldots<i_k} \bigg( \sum_{j=1}^k \bigg( (-1)^{j-1} 
+\left( \int_0^1 t^{k-1} \tau_{i_1,i_2,\ldots,i_k}(t\VEC{x}) \dx{t} \right)
+\nonumber \\
+&\hspace{8em} 
+\df{x_{i_j}} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}} \bigg) \bigg)
+\nonumber \\
+&\qquad + \sum_{i_1<i_2<\ldots<i_k} \bigg( \sum_{j=1}^k \bigg( (-1)^{j-1} 
+x_{i_j} \sum_{m=1}^n \bigg( \left(\int_0^1 t^k
+\pdydx{\tau_{i_1,i_2,\ldots,i_k}}{x_m}(t\VEC{x}) \dx{t} \right)
+\nonumber \\
+&\hspace{8em}
+\df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge
+\widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}} \bigg) \bigg) \bigg)
+\nonumber \\
+&= \sum_{i_1<i_2<\ldots<i_k} \bigg(
+\left( \int_0^1 k t^{k-1} \tau_{i_1,i_2,\ldots,i_k}(t\VEC{x}) \dx{t} \right)
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \bigg)
+\nonumber \\
+&\qquad + \sum_{i_1<i_2<\ldots<i_k} \bigg( \sum_{j=1}^k \bigg( (-1)^{j-1} 
+x_{i_j} \sum_{m=1}^n \bigg( \left( \int_0^1 t^k
+\pdydx{\tau_{i_1,i_2,\ldots,i_k}}{x_m}(t\VEC{x}) \dx{t} \right)
+\nonumber \\
+&\hspace{8em}
+\df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge
+\widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}} \bigg) \bigg) \bigg)
+\ , \label{stokesEq1}
+\end{align}
+where we have used
+$\df{x_{i_j}} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}}
+= (-1)^{j-1} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_j}} \wedge \ldots \wedge \df{x_{i_k}}$ to get the last
+equality.
+
+Moreover, if we apply $L$ to the differential $(k+1)$-form 
+\[
+\df{\tau} = \sum_{i_i < i_2 < \ldots < i_k}
+\sum_{m=1}^n \pdydx{\tau_{i_1,i_2,\ldots,i_k}}{x_m}
+\df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \df{x_{i_k}} \ ,
+\]
+we get
+\begin{align}
+L(\df{\tau}) &= \sum_{i_1<i_2<\ldots<i_k} \left(
+\sum_{m=1}^n \left( x_m \int_0^1 t^{k}
+\pdydx{\tau_{i_1,i_2,\ldots,i_k}}{x_m}(t\VEC{x}) \dx{t} \right)
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}}
+\right) \nonumber \\
+&\qquad +
+\sum_{i_1<i_2<\ldots<i_k} \bigg(
+\sum_{j=1}^k \bigg( (-1)^j x_{i_j}
+\sum_{m=1}^n  \bigg( \left( \int_0^1 t^{k}
+\pdydx{\tau_{i_1,i_2,\ldots,i_k}}{x_m} (t\VEC{x}) \dx{t} \right)
+\nonumber \\
+&\hspace{8em}
+\df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+\wedge \widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}}
+\bigg) \bigg) \bigg) \label{stokesEq2} \ .
+\end{align}
+Adding (\ref{stokesEq1}) and (\ref{stokesEq2}) gives
+\begin{align*}
+\df{L(\tau)} + L(\df{\tau}) &=  \sum_{i_1<i_2<\ldots<i_k} \bigg(
+\int_0^1 k t^{k-1} \tau_{i_1,i_2,\ldots,i_k}(t\VEC{x}) \dx{t} \\
+&\qquad \qquad + \sum_{m=1}^n x_m \int_0^1 t^{k}
+\pdydx{\tau_{i_1,i_2,\ldots,i_k}}{x_m}(t\VEC{x}) \dx{t} \bigg)
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \\
+&=  \sum_{i_1<i_2<\ldots<i_k} \bigg(
+\int_0^1 \dfdx{ \left( t^k \tau_{i_1,i_2,\ldots,i_k}(t\VEC{x}) \right)}{t}
+\dx{t} \bigg)
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \\
+&=  \sum_{i_1<i_2<\ldots<i_k}
+\tau_{i_1,i_2,\ldots,i_k}(\VEC{x})
+\df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}}
+= \tau(\VEC{x}) \ .  \qedhere
+\end{align*}
+\end{proof}
+
+\begin{rmk}
+The previous theorem can be generalized to domains $V$ that are
+{\bfseries (smoothly) contractible to a point}\index{Contractible to a
+Point}; namely, there exist a point $\VEC{y} \in V$ and a continuous
+differentiable map $H:V \times [0,1] \to V$ such that
+$H(\VEC{x},1) = \VEC{x}$ and $H(\VEC{x},0) = \VEC{y}$ for all
+$\VEC{x} \in V$.  A star-shaped set $V$ as given in
+Definition~\ref{defnStarShaped} is contractible to the point $\VEC{y} \in V$.
+It suffices to use the map $\displaystyle H:V \times [0,1] \to V$
+defined by $H(\VEC{x},t) = \VEC{y} + t (\VEC{x} - \VEC{y})$
+for $\VEC{x} \in V$ and $t \in [0,1]$.
+
+The proof of the generalized version of Theorem~\ref{closedexact} is
+given in Section~\ref{sectPrelCohom}.
+\end{rmk}
+
+\section{Domains of Integration and their Boundary} \label{stokesBDRS}
+
+Before stating the general form of the fundamental theorem of calculus, we
+have to introduce the domains of integration that will be considered.
+
+\begin{defn}
+A {\bfseries singular $\mathbf{m}$-cube}\index{Singular $m$-Cube}
+in $\displaystyle \RR^n$ is a continuous function
+$\displaystyle \sigma :I_m \to \RR^n$, where $I_m$ is the unit cube
+$\displaystyle I_m = \{(x_1,x_2,\ldots,x_m): 0 \leq x_j\leq 1
+\text{ for } 1\leq j \leq m \}\subset \RR^m$.  For $m=0$, we define
+$\displaystyle \RR^m$ and $I_m$ as $\{0\}$.
+\end{defn}
+
+A singular $0$-cube is simply a map
+$\displaystyle \sigma: \{0\} \to \RR^n$.
+The image of a singular $0$-cube $\sigma$ is a point in
+$\displaystyle \RR^n$.  A
+singular $1$-cube is a map $\displaystyle \sigma: [0,1] \to \RR^n$;
+namely, a {\bfseries curve}\index{Curve} in $\displaystyle \RR^n$.
+
+\begin{defn}
+The {\bfseries standard $\mathbf{m}$-cube}\index{Standard $m$-Cube}
+is the function $\displaystyle \stc_m : I_m \to \RR^m$ defined by
+$\stc_m(\VEC{x}) = \VEC{x}$ for all $\VEC{x} \in I_m$.
+\end{defn}
+
+\begin{defn}
+An {\bfseries $\mathbf{m}$-chain}\index{$m$-Chain} in $\displaystyle \RR^n$
+is an expression of the form
+$\displaystyle \sum_{j=1}^J a_j \sigma_j$, where $a_j \in \ZZ$ and
+$\sigma_j$ is a singular $m$-cube in $\displaystyle \RR^n$ for
+$1 \leq j \leq J$ with $J$ a positive integer.
+\end{defn}
+
+A singular $m$-cube $\sigma$ can be seen as the $m$-chain $1 \sigma$.
+The addition of $m$-chain is defined by
+\[
+\sum_{j=1}^J a_j \sigma_j + \sum_{j=1}^J b_j \sigma_j
+= \sum_{j=1}^J (a_j + b_j) \sigma_j \ .
+\]
+We have only added the coefficients associated to the same singular
+$m$-cubes.  When adding $m$-chains, we may assume that they are sums
+over the same singular $m$-cubes by adding terms of the form
+$0 \sigma_j$ if necessary.  The multiplication of an $m$-chain by an
+integer $c$ is defined by
+\[
+c \sum_{j=1}^J a_j \sigma_j = \sum_{j=1}^J (c a_j) \sigma_j \ .
+\]
+
+We use the standard $m$-cube
+$\stc_m$ to define the singular $(m-1)$-cubes
+$\stc_{m,j,i} : I_{m-1} \to \RR^m$ for $1\leq j \leq m$ and
+$i=0$ or $i=1$ by $\stc_{m,j,i}(\VEC{x}) = \stc_m\big(
+\begin{pmatrix} x_1 & x_2 & \ldots & x_{j-1} & i & x_j & \ldots & x_{m-1}
+\end{pmatrix}^\top\big)$ for all $\VEC{x} \in I_{m-1}$.
+
+\begin{defn}
+For $1\leq j \leq m$ and $0 \leq i \leq 1$, the singular $(m-1)$-cube
+$\stc_{m,j,i}$ is called the
+{\bfseries $\mathbf{(j,i)}$ face}\index{$(j,i)$ Face} of
+the standard $m$-cube $\stc_m$.
+The {\bfseries boundary}\index{Boundary} of the
+standard $m$-cube $\stc_m$, denoted $\partial \stc_m$, is defined by
+the $(m-1)$-chain
+\[
+\partial \stc_m = \sum_{j=1}^m (-1)^{j-1}
+\left( \stc_{m,j,1} - \stc_{m,j,0} \right) \ .
+\]
+\end{defn}
+
+We have drawn the boundary of the standard $m$-cube for $m=1$
+and $m=2$ in Figure~\ref{StdCube}.  In particular,
+$\stc_{1,1,1}:\{0\} \to \RR^n$ is defined by $\stc_{1,1,1}(0) = \stc_1(1)$
+and $\stc_{1,1,0}:\{0\} \to \RR^n$ is defined by
+$\stc_{1,1,0}(0) = \stc_1(0)$.
+
+\pdfF{diff_forms/stdmcube}{Some examples of boundaries of standard $m$-cubes}
+{We have drawn a standard $m$-cube with its boundary for $m=1$ on the left 
+and $m=2$ on the right.  We have that
+$\partial \stc_1 = \stc_{1,1,1} - \stc_{1,1,0}$ and
+$\partial \stc_2 = \stc_{2,1,1} - \stc_{2,1,0}
++ \stc_{2,2,0} - \stc_{2,2,1}$.  We have added the sign of the 
+faces to the standard $m$-cube.}{StdCube}
+
+The $(j,i)$ face of a general singular $m$-cube $\sigma$ is defined by
+$\sigma_{j,i} = \sigma \circ i_{m,j,i}$ for $1\leq j \leq m$ and
+$i =0$ or $i=1$.
+
+\begin{defn}     \label{defnBryCube}
+Let $\sigma$ be a singular $m$-cube.  The
+{\bfseries boundary}\index{Boundary} of $\sigma$, 
+denoted $\partial \sigma$, is defined by the $(m-1)$-chain 
+\[
+\partial \sigma = \sum_{j=1}^m (-1)^{j-1} \left( \sigma_{j,1} - \sigma_{j,0}
+\right) \ .
+\]
+Let $\sigma$ be a $m$-chain given by
+$\displaystyle \sigma = \sum_{j=1}^J a_j \sigma_j$.
+The {\bfseries boundary}\index{Boundary} of $\sigma$, also denote
+$\partial \sigma$, is defined by the $(m-1)$-chain
+$\displaystyle \partial \sigma = \sum_{j=1}^J a_j \partial \sigma_j$.
+\end{defn}
+
+We have drawn the boundary of a singular $2$-cube in Figure~\ref{SingCube}.
+
+\pdfF{diff_forms/singmcube}{A singular $2$-cube in $\RR^3$}
+{We have drawn a singular $2$-cube in $\RR^3$ with its boundary
+We have that $\partial \sigma_2 = \sigma_{1,1} - \sigma_{1,0}
++ \sigma_{2,0} - \sigma_{2,1}$.  We have added the sign of the 
+faces to the singular $2$-cube.}{SingCube}
+
+\begin{theorem}
+if $\sigma$ is a $m$-chain, then $\partial(\partial \sigma) = 0$
+where $0$ denotes the empty $(m-2)$-chain.
+\end{theorem}
+
+\begin{proof}
+Since the boundary of $m$-chain is the sum of the boundary of the
+$m$-cubes that are parts of the chain, it is enough to proof that
+$\partial(\partial \sigma) = 0$ for a $m$-cube $\sigma$.
+
+Since $\displaystyle 
+\partial \sigma = \sum_{j=1}^m (-1)^{j-1} \left( \sigma_{j,1} - \sigma_{j,0}
+\right)$, we get that
+\begin{align*}
+\partial (\partial \sigma)
+&= \sum_{j=1}^m (-1)^{j-1} \left(
+\sum_{i=1}^{m-1} (-1)^{i-1} \left( (\sigma_{j,1})_{i,1}
+- (\sigma_{j,1})_{i,0} \right)
+- \sum_{i=1}^{m-1} (-1)^{i-1} \left( (\sigma_{j,0})_{i,1} 
+- (\sigma_{j,0})_{i,0} \right) \right) \\
+&= \sum_{j=1}^m \sum_{i=1}^{m-1} (-1)^{j+i-2}
+\big( (\sigma_{j,1})_{i,1} - (\sigma_{j,1})_{i,0}
+- (\sigma_{j,0})_{i,1}  + (\sigma_{j,0})_{i,0} \big) \\
+&= \sum_{j=1}^m \sum_{i=1}^{m-1} \sum_{s_1,s_2=0}^1 (-1)^{j+i+s_1+s_2}
+(\sigma_{j,s_2})_{i,s_1} \ .
+\end{align*}
+If $1 \leq i < j \leq m$, then
+\begin{align}
+(\sigma_{j,s_2})_{i,s_1} (\VEC{y})
+&= \sigma_{j,s_2} \big( \begin{pmatrix} y_1 & y_2 & \ldots & y_{i-1} & s_1 &
+y_i & \ldots & y_{m-2} \end{pmatrix}^\top \big) \nonumber \\
+&= \left(\begin{array}{cccccccccccc}
+y_1 & y_2 & \ldots & y_{i-1} & s_1 & y_i & \ldots
+& y_{j-2} & s_2 & y_{j-1} & \ldots & y_{m-2} \end{array}\right)^\top
+\nonumber \\
+&= \sigma_{i,s_1} \big( \begin{pmatrix} y_1 & y_2 & \ldots & y_{j-2} & s_2 &
+y_{j-1} & \ldots & y_{m-2} \end{pmatrix}^\top \big)
+= (\sigma_{i,s_1})_{j-1,s_2} (\VEC{y})   \label{bdbdE1e}
+\end{align}
+for all $\VEC{y} \in I_{m-2}$.  If $i = j-1$, the section
+$y_i\ \ldots\ y_{j-2}$ is removed from the second row of (\ref{bdbdE1e}).
+The terms of the form $(\sigma_{j,s_2})_{i,s_1} (\VEC{y})$ with $j=i$ are
+included in (\ref{bdbdE1e}) because, when $i = k$ and $j= k+1$ for
+$1\leq k < m$, we get $(\sigma_{k,s_2})_{k,s_1} (\VEC{y})$
+for $1\leq k <m$ on the right side of (\ref{bdbdE1e}).
+Similarly, the terms of the form $(\sigma_{j,s_2})_{i,s_1} (\VEC{y})$
+with $1 \leq j<i<m$ are also included in (\ref{bdbdE1e})
+because we have $1 \leq i \leq j-1 < m$ on the right side of
+(\ref{bdbdE1e}).
+
+Since the coefficient of $(\sigma_{j,s_2})_{i,s_1} (\VEC{y})$ is
+$\displaystyle (-1)^{j+i+s_1+s_2}$ and the coefficient of
+$(\sigma_{i,s_1})_{j-1,s_2} (\VEC{y})$ is
+$\displaystyle (-1)^{j-1+i+s_1+s_2}$, they have opposite signs and thus
+cancel each other.  Therefore $\partial (\partial \sigma) = 0$.
+\end{proof}
+
+\begin{rmk}
+It is worth emphasizing the difference between the topological
+boundary of a cube and the boundary of a $m$-cube.  For instance, the
+topological boundary of the cube
+$I_3 = \{ (x_1,x_2,x_3) : 0 \leq x_j \leq 1 \text{ for } 1\leq j \leq 3 \}$
+is the set
+\begin{align*}
+\partial I_3 &=
+\bigcup_{m=0}^1 \Big( \{ (m,x_2,x_3) : 0 \leq x_j \leq 1 \
+\text{for}\ j=2,3 \}
+\cup \{ (x_1,m,x_3) : 0 \leq x_j \leq 1\ \text{for}\  j=1,3 \} \\
+&\hspace{10em} \cup \{ (x_1,x_2,m) : 0 \leq x_j \leq 1 \ \text{for} \
+j=1,2 \} \Big)
+\end{align*}
+and the topological boundary of $\partial I_3$ is
+$\partial (\partial I_3) = \partial I_3$.  The issue about boundary
+will get even more confusing when we will consider manifolds later.
+The boundary of the manifold $I_3$ is still $\partial I_3$ defined
+above and denoted $\partial I_3$.  However, the boundary of
+$\partial I_3$ as a manifold, still denoted $\partial (\partial I_3)$,
+is the empty set $\emptyset$.  As a manifold, $\partial I_3$ does not have a
+boundary.  Therefore, the reader should be very careful of not mixing
+all these definitions of boundary.  The context should determine which
+definition of boundary is used.  It is unfortunate that by tradition
+we use the same symbol $\partial$ for all definitions of boundary.
+\end{rmk}
+
+\section{Integration on Chains} \label{sectFTC}
+
+We begin with the definition of the integral of a differential
+$k$-forms on an $k$-chain.  From now on all differential $k$-forms
+$\omega$ on an open set $\displaystyle V\subset \RR^n$ and all
+singular $k$-cubes $\sigma: I_k \to V$ are assumed to be of class
+$\displaystyle C^j$ for $j$ as sufficiently large.  Recall that
+$\sigma:I_k \to V$ of class $\displaystyle C^j$ means that there
+exist an open set $U \supset I_k$ and a function
+$\tilde{\sigma}:U \to \RR^n$ of class $\displaystyle C^j$ such that
+$\tilde{\sigma}\big|_{I_k} = \sigma$.
+
+\begin{defn} \label{defStcInt}
+Let $k$ be a positive integer and
+$\omega = f \df{x_1}\wedge \df{x_2}\wedge \ldots \wedge \df{x_k}$
+be a differential $k$-form on $\displaystyle \RR^k$.  The
+{\bfseries integral of $\omega$}\index{Integral of a Differential Form}
+on $I_k$ is defined by
+$\displaystyle \int_{I_k} \omega = \int_{I_k} f(\VEC{x}) \dx{\VEC{x}}$.
+Let $\omega$ be a differential $k$-form defined on an open set
+$\displaystyle V \subset \RR^n$ and
+$\sigma$ be a singular $k$-cube with image in $V$.  The
+{\bfseries integral of $\omega$ on $\sigma$}\index{Integral of a
+Differential Form} is defined by 
+$\displaystyle \int_{\sigma} \omega = \int_{I_k} \sigma^\ast(\omega)$.
+\end{defn}
+
+Obviously, the previous definition include the case where
+$\omega = f \df{x_1}\wedge \df{x_2}\wedge \ldots \wedge \df{x_k}$ is a
+differential $k$-form on $\displaystyle \RR^k$ and $\sigma$ is the standard
+$k$-cube $\stc_m$.  We then have that
+$\displaystyle \int_{\stc_k} \omega = \int_{I_k} \stc_k^\ast(\omega)
+= \int_{I_k} \omega = \int_{I_k} f(\VEC{x}) \dx{\VEC{x}}$.
+
+\begin{defn}
+Let $\omega$ be a $0$-form on an open set
+$\displaystyle V \subset \RR^n$ and $\sigma$ is a singular $0$-cube
+with image in $V$.  Namely, $\omega:V \to \RR$ and $\sigma(0) \in V$.
+The {\bfseries integral of $\omega$ on $\sigma$}\index{Integral
+of a Differential Form} is defined by
+$\displaystyle \int_{\sigma} \omega = \omega(\sigma(0))$.
+\end{defn}
+
+\begin{defn}
+Let $\omega$ be a differential $k$-form on an open set
+$\displaystyle V \subset \RR^n$ and
+$\displaystyle \sigma = \sum_{j=1}^J a_j \sigma_j$
+be a $k$-chain in $V$; namely, the image of each singular $k$-cube
+$\sigma_j$ is in $V$.  The {\bfseries integral of $\omega$ on
+$\sigma$}\index{Integral of a Differential Form} is defined by
+$\displaystyle \int_{\sigma} \omega = \sum_{j=1}^J a_j \int_{\sigma_j} \omega
+= \sum_{j=1}^J a_j \int_{I_k} \sigma_j^\ast(\omega)$.
+\end{defn}
+
+\begin{egg}
+We give a second proof that the differential $1$-form      \label{CnotEpart2}
+\[
+\omega = \frac{-x_2}{x_1^2+x_2^2} \df{x_1} + \frac{x_1}{x_1^2+x_2^2} \df{x_2}
+\]
+defined on $\displaystyle V= \RR^2 \setminus \{ \VEC{0}\}$ and introduced
+in Example~\ref{CnotEpart1} cannot be exact.
+
+Suppose that $\omega = \df{f}$ where $f:V \to \RR$ is a differentiable
+function on $V$.  Let $\sigma$ be the singular $1$-cube defined by
+$\sigma(\theta) = \big(\cos(2\pi \theta),\sin(2\pi \theta)\big)$ for
+$\theta \in [0,1]$.  It follows that
+\begin{align*}
+\int_{\sigma} \omega &= \int_{\sigma} \df{f} = \int_{[0,1]} \sigma^\ast(\df{f})
+= \int_{[0,1]} \df{(\sigma^\ast(f))} = \int_{[0,1]} \df{(f(\sigma))} \\
+&= \int_{[0,1]} \dfdx{\big( f(\sigma(\theta)) \big)}{\theta} \dx{\theta}
+= f(\sigma(1)) - f(\sigma(0)) = 0
+\end{align*}
+because $\sigma(0) = \sigma(2\pi) = (1,0)$.
+However, if we compute directly the integral $\int_\sigma \omega$, we get
+that
+\[
+\int_{\sigma} \omega = \int_{[0,1]} \sigma^\ast(\omega)
+= 2\pi \int_{[0,1]} \dx{\theta} = 2\pi \neq 0 \ .
+\]
+Therefore, we cannot have that $\omega = \df{f}$ with $f:V \to \RR$.
+\end{egg}
+
+The next theorem is often called the {\bfseries fundamental
+theorem of calculus}\index{Fundamental Theorem of Calculus}
+in higher dimension.  In fact, the classical
+fundamental theorem of calculus is the case $m=1$ and $\omega = \stc_1$
+in the next theorem.
+
+Before stating and proving the next theorem, it is going to be useful
+to evaluate $\displaystyle \stc_{k,j,s}^\ast \df{x_i}$ for
+$1 \leq i , j \leq k$ and $s=0$ or $s=1$.
+Recall that $\df{x_i} = \df{\pi_i}$.  Hence
+\begin{align*}
+\big(\stc_{k,j,s}^\ast \df{x_i}\big)(\VEC{w})\big( (\VEC{w},\VEC{y}) \big)
+& = \big(\stc_{k,j,s}^\ast \df{\pi_i}\big)(\VEC{w})\big( (\VEC{w},\VEC{y}) \big)
+= \big(\df{(\pi_i\circ \stc_{k.j,s})}\big)(\VEC{w})\big( (\VEC{w},\VEC{y}) \big)
+\\
+&= \big(\diff( \pi_i \circ \stc_{k,j,s})(\VEC{w})\big)(\VEC{y}) \\
+&= \big( \pi_i \circ \stc_{k,j,0}\big)(\VEC{y})
+= \pi_i (\stc_{k,j,0} (\VEC{y}))
+= \begin{cases}
+y_i & \quad \text{if} \ i < j \\
+0 & \quad \text{if} \ i = j \\
+y_{i-1} & \quad \text{if} \ i > j
+\end{cases}
+\end{align*}
+for all $\VEC{w} \in I_{k-1}$ and $\displaystyle \VEC{y} \in \RR^{k-1}$.
+Therefore,
+\[
+\stc_{k,j,s}^\ast \df{x_i} = \begin{cases}
+\df{y_i} & \quad \text{if} \ i < j \\
+0 & \quad \text{if} \ i = j \\
+\df{y_{i-1}} & \quad \text{if} \ i > j
+\end{cases}
+\]
+A more computational but lest intuitive approach to get the previous
+relation would have been to use (1) of Proposition~\ref{propAstoR}.
+We will use the computational approach in the future but it is wise to
+also keep in mind the intuitive approach above.
+
+As a consequence of this, we have that
+\begin{align*}
+\stc_{k,j,s}^\ast\left(
+\df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge
+\df{x_k} \right)
+& = \stc_{k,j,s}^\ast \df{x_1} \wedge \ldots \wedge
+\widehat{\stc_{k,j,s}^\ast \df{x_i}}
+\wedge \ldots \wedge \stc_{k,j,s}^\ast \df{x_k} \\
+&=  \begin{cases}
+0 & \quad \text{if} \ i \neq j \\
+\df{y_1} \wedge \df{y_2} \wedge \ldots \wedge \df{y_{k-1}} &
+\quad \text{if} \ i=j
+\end{cases}
+\end{align*}
+where, as we stated before, the hat over $\df{x_i}$ for
+$1\leq i \leq k$ means that this differential $1$-form has been
+removed from the wedge product.
+
+\begin{theorem}[Stokes] \label{stokesStokes}
+Suppose that $\omega$ is a differential $(k-1)$-form on an open set
+$\displaystyle V \subset \RR^n$ and
+that $\sigma$ is an $k$-chain in $V$ with $\displaystyle k \in \NNp$.  Then
+\[
+\int_\sigma \df{\omega} = \int_{\partial \sigma} \omega \ .
+\]
+\end{theorem}
+
+\begin{proof}
+\stage{i} We first prove the theorem for $\sigma = \stc_k$ and
+$\omega$ a differential $(k-1)$-form on $\displaystyle \RR^k$.  We have that
+$\omega$ is the sum of terms of the form
+\begin{equation} \label{stokesFTC1}
+f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge
+\df{x_k} \ ,
+\end{equation}
+By linearity of the integral, it suffices to prove the theorem for
+(\ref{stokesFTC1}).
+
+Since $\displaystyle
+\partial \stc_k = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{j+s} \stc_{k,j,s}$
+and
+\begin{align*}
+& \int_{I_{k-1}} \stc_{k,j,s}^\ast
+\left( f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge
+\df{x_k} \right) \\
+&\qquad = \begin{cases}
+0 & \quad \text{if} \ i \neq j \\
+\displaystyle
+\int_{I_{k-1}} f\circ \stc_{k,j,s} \, \df{y_1} \wedge \df{y_2} \wedge
+\ldots \wedge \df{y_{k-1}} &
+\quad \text{if} \ i = j
+\end{cases} \\
+& \qquad =
+\begin{cases}
+0 & \quad \text{if} \ i \neq j \\
+\displaystyle \int_{I_{k-1}} f(y_1,\ldots, y_{i-1}, s, y_i, \ldots, y_{k-1})
+\df{y_1}\df{y_2}\ldots \df{y_{k-1}} & \quad \text{if} \ i=j
+\end{cases}
+\end{align*}
+for $s=0$ or $s=1$, we get that
+\begin{align}
+& \int_{\partial \stc_k} f \df{x_1} \wedge \ldots \wedge
+\widehat{\df{x_i}} \wedge \ldots \wedge \df{x_k} =
+\sum_{j=1}^k \sum_{s=0}^1 (-1)^{j+s} 
+\int_{\stc_{k,j,s}} f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge
+\ldots \wedge \df{x_k} \nonumber \\
+&\quad = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{j+s} \int_{I_{k-1}} \stc_{k,j,s}^\ast
+\left( f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge
+\df{x_k} \right) \nonumber \\
+&\quad = \sum_{s=0}^1 (-1)^{i+s}
+\int_{I_{k-1}} f(y_1,\ldots, y_{i-1}, s, y_i, \ldots, y_{k-1})
+\df{y_1}\df{y_2}\ldots \df{y_{k-1}} \ . \label{stokesFTC2}
+\end{align}
+
+Moreover
+\begin{align*}
+& \int_{\stc_k} \df{\left(f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}}
+\wedge \ldots \wedge \df{x_k}\right)}
+= \int_{\stc_k} \df{f}\wedge \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}}
+\wedge \ldots \wedge \df{x_k} \\
+&= \int_{\stc_k} \sum_{j=1}^k \pdydx{f}{x_j} \df{x_j}\wedge \df{x_1} \wedge
+\ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge \df{x_k} \\
+&= (-1)^{i-1} \int_{\stc_k} \pdydx{f}{x_i} \df{x_1} \wedge \df{x_2} \wedge
+\ldots \wedge \df{x_k}
+= (-1)^{i-1} \int_{I_k} \pdydx{f}{x_i}(\VEC{x}) \df{\VEC{x}} \ .
+\end{align*}
+It follows from Fubini's theorem and from the classical fundamental theorem
+of calculus in one dimension that
+\begin{align}
+& \int_{\stc_k} \df{\left(f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}}
+\wedge \ldots \wedge \df{x_k}\right)} \nonumber \\
+&\quad = (-1)^{i-1} \int_0^1 \ldots \int_0^1 \left( \int_0^1
+\pdydx{f}{x_i}(x_1, x_2, \ldots, x_k) \df{x_i}\right)
+\df{x_1} \ldots \widehat{\df{x_i}}\ldots \df{x_k} \nonumber \\
+&\quad = (-1)^{i-1} \int_0^1 \ldots \int_0^1
+f(x_1, \ldots, x_{i-1}, x_i, x_{i+1} ,\ldots, x_k)\bigg|_{x_i=0}^{x_i=1}
+\dx{x_1} \ldots \widehat{\dx{x_i}}\ldots \dx{x_k} \nonumber \\
+&\quad =\sum_{s=0}^1 (-1)^{i+s}
+\int_{I_{k-1}} f(y_1,\ldots, y_{i-1}, s, y_i, \ldots, y_{k-1})
+\dx{y_1}\dx{y_2}\ldots \dx{y_{k-1}}  \ . \label{stokesFTC3}
+\end{align}
+If we combine (\ref{stokesFTC2}) and (\ref{stokesFTC3}), then we get that
+\[
+\int_{\partial \stc_k} f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge
+\ldots \wedge \df{x_k} =
+\int_{\stc_k} \df{\left(f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}}
+\wedge \ldots \wedge \df{x_k}\right)} \ .
+\]
+Hence,
+\[
+\int_{\partial \stc_k} \omega = \int_{\stc_k} \df{\omega}
+\]
+for all differential $(k-1)$-forms $\omega$ on $\displaystyle \RR^k$.
+
+\subQ{ii}
+Suppose that $\sigma$ is a general singular $k$-cube in an open set
+$\displaystyle V \subset \RR^n$ and that $\omega$ is a differential
+$(k-1)$-form on $V$.  Since
+\[
+\partial \sigma = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \sigma_{j,s}
+= \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \sigma \circ \stc_{k,j,s} \ ,
+\]
+we have that
+\begin{align*}
+\int_{\partial \sigma} \omega
+&= \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \int_{\sigma_{j,s}} \omega
+= \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \int_{I_{k-1}}
+\sigma_{j,s}^\ast(\omega) \\
+& = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \int_{I_{k-1}}
+(\sigma \circ \stc_{k,j,s})^\ast(\omega)
+= \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \int_{I_{k-1}}
+\stc_{k,j,s}^\ast(\sigma^\ast(\omega)) \\
+& = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \int_{\stc_{k,j,s}}
+\sigma^\ast(\omega)
+= \int_{\partial \stc_k} \sigma^\ast(\omega) \ .
+\end{align*}
+It follows from (i) applied to $\displaystyle \sigma^\ast(\omega)$ and
+(4) of Proposition~\ref{propAstoR} that
+\[
+\int_{\sigma} \df{\omega} = \int_{I_k} \sigma^\ast(\df{\omega})
+= \int_{I_k} \df{(\sigma^\ast(\omega))}
+= \int_{\stc_k} \df{(\sigma^\ast(\omega))}
+= \int_{\partial \stc_k} \sigma^\ast(\omega)
+= \int_{\partial \sigma} \omega \ .
+\]
+
+\subQ{iii}
+Finally, if $\sigma = \displaystyle \sum_{j=1}^J a_j \sigma_j$ is a $k$-chain
+in an open set $\displaystyle V \subset \RR^n$ and $\omega$ is a
+differential $(k-1)$-form in $V$, then
+\[
+\int_{\mu} \df{\omega} = \sum_{j=1}^J a_j \int_{\sigma_j} \df{\omega}
+= \sum_{j=1}^J a_j \int_{\partial \sigma_j} \omega
+= \int_{\partial \sigma} \omega \ .  \qedhere
+\]
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "notes"
+%%% End: 

@@ -1,0 +1,12 @@
+\begin{picture}(0,0)%
+\includegraphics{alg_top/derham1.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(1737,1284)(169,-973)
+\put(1846,-556){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{x}_j$}%
+}}}
+\put(1891,-151){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$A_j$}%
+}}}
+\put(991,119){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$B_j$}%
+}}}
+\end{picture}%

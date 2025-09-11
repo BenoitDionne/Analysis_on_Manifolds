@@ -1,0 +1,44 @@
+\begin{picture}(0,0)%
+\includegraphics{alg_top/singBSO.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(4080,2903)(-1049,-1813)
+\put(1126,-241){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$J_{1,\VEC{b}_{(2)}}(J_{0,F^1_2(\VEC{b}_{(1)})}(F_2^1\circ F_1^0))$}%
+}}}
+\put(2386,209){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{b}_{(1)}$}%
+}}}
+\put(2431,929){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$J_{0,\VEC{b}_{(1)}}(F_1^1)$}%
+}}}
+\put(3016,614){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$J_{0,\VEC{b}_{(1)}}(F_1^0)$}%
+}}}
+\put(1130,228){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_1$}%
+}}}
+\put(219,235){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_0$}%
+}}}
+\put(541,209){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\Delta_1$}%
+}}}
+\put(1936,235){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_0$}%
+}}}
+\put(2828,231){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_1$}%
+}}}
+\put(225,-755){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_2$}%
+}}}
+\put(225,-1736){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_0$}%
+}}}
+\put(1114,-1737){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_1$}%
+}}}
+\put(1848,-1744){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_0$}%
+}}}
+\put(2745,-1744){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_1$}%
+}}}
+\put(1840,-754){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{e}_2$}%
+}}}
+\put(3001,-1175){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{b}_{(2)}$}%
+}}}
+\put(1846,-511){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$J_{1,\VEC{b}_{(2)}}(J_{0,F^0_2(\VEC{b}_{(1)})}(F_2^0\circ F_1^1))$}%
+}}}
+\put(-1034,-511){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$J_{1,\VEC{b}_{(2)}}(J_{0,F^2_2(\VEC{b}_{(1)})}(F_2^2\circ F_1^1))$}%
+}}}
+\put(292,-1504){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\Delta_2$}%
+}}}
+\end{picture}%

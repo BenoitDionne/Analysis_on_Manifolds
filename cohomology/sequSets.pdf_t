@@ -1,0 +1,20 @@
+\begin{picture}(0,0)%
+\includegraphics{cohomology/sequSets.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+\begin{picture}(3000,1458)(637,-1168)
+\put(2566, 74){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$S$}%
+}}}
+\put(3121,-281){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{b}$}%
+}}}
+\put(941,-376){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$\VEC{a}$}%
+}}}
+\put(1981,-1096){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$U_{\tau_2}$}%
+}}}
+\put(3241,-1096){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$U_{\tau_M} = U_{\alpha_j}$}%
+}}}
+\put(766,-1096){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$U_{\tau_0}$}%
+}}}
+\put(1486,-1096){\makebox(0,0)[lb]{\smash{\fontsize{12}{14.4}\usefont{T1}{ptm}{m}{n}{\color[rgb]{0,0,0}$U_{\tau_1}$}%
+}}}
+\end{picture}%

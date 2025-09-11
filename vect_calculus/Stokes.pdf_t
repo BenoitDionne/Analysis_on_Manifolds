@@ -1,0 +1,29 @@
+\begin{picture}(0,0)%
+\includegraphics{vect_calculus/Stokes.pdf}%
+\end{picture}%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6616,1936)(-764,-1463)
+\put(1690,-958){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{t}(\VEC{u})$}%
+}}}}
+\put(1219,-718){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{u}$}%
+}}}}
+\put(518,-1141){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\VEC{n}(\VEC{u})$}%
+}}}}
+\put(1041,-1399){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{\VEC{n}}(\VEC{u})$}%
+}}}}
+\put(3826,-236){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}where $\VEC{u} = \rho(\VEC{w})$}%
+}}}}
+\put(4126,-1111){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}by $\sigma:[a,b]\to \RR^3$}}}}
+\put(4126,-886){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\partial S$ is parametrized}}}}
+\put(2776,314){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\displaystyle \VEC{n}(\VEC{u}) = \VEC{n}(\rho(\VEC{w}))$}}}}
+\put(3276, 49){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\displaystyle = \big(\|\rho_{w_1} \times \rho_{w_2}\|^{-1}\, \rho_{w_1} \times \rho_{w_2} \big)(\VEC{w})$}}}}
+\put(-749,239){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$S$ is parameterized}}}}
+\put(-749, 14){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}by $\rho:W\to \RR^3$}}}}
+\end{picture}%

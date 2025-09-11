@@ -1,0 +1,19 @@
+\begin{picture}(0,0)%
+\includegraphics{mult_integrals/peano.pdf}%
+\end{picture}%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6327,1506)(-14,-1255)
+\put(  1,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigma_1:[0,1]\to[0,1]\times[0,1]$}%
+}}}}
+\put(2326,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigma_2:[0,1]\to[0,1]\times[0,1]$}%
+}}}}
+\put(4651,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\sigma_3:[0,1]\to[0,1]\times[0,1]$}%
+}}}}
+\end{picture}%
