@@ -34,6 +34,15 @@
 \usepackage[breakable]{tcolorbox}
 \tcbuselibrary{skins}
 
+\newcommand{\dfn}{Definition}
+\newcommand{\prp}{Proposition}
+\newcommand{\thm}{Theorem}
+\newcommand{\crl}{Corollary}
+\newcommand{\lmm}{Lemma}
+\newcommand{\alg}{Algorithm}
+\newcommand{\cod}{Code}
+\newcommand{\qst}{Question(s)}
+
 \newcounter{focus}[section]
 \renewcommand\thefocus{\thesection.\arabic{focus}}
 \newcommand{\focuscolor}{violet}
@@ -57,15 +66,6 @@
     \ifthenelse{\equal{TTT}{#1}}{}{\ ({\bfseries #1})}]%
     \renewcommand{\labelitemi}{\textbullet}%
   }{\end{tcolorbox}}
-
-\newcommand{\dfn}{Definition}
-\newcommand{\prp}{Proposition}
-\newcommand{\thm}{Theorem}
-\newcommand{\crl}{Corollary}
-\newcommand{\lmm}{Lemma}
-\newcommand{\alg}{Algorithm}
-\newcommand{\cod}{Code}
-\newcommand{\qst}{Question(s)}
 
 \newenvironment{defn}[1][TTT]{%
 \ifthenelse{\equal{TTT}{#1}}{\begin{focus}{\dfn}}{\begin{focus}[#1]{\dfn}}%
@@ -553,20 +553,19 @@
 
   \noindent \copyright\ \UOauthor, \UOyear\ (\UO)
   
-  \noindent Adapted version from the notes for the courses MAT3320,
-  MAT4130, MAT5133, and graduate courses in partial differential
-  equations given at the University of Ottawa.
+  \noindent Introduction to the analysis on manifolds / modern
+  differential geometry for an advanced undergraduate or graduate course.
 
   \noindent This document is available on the following sites.\\
   uO Research: \\ % http://hdl.handle.net/10393/45600 \\
-  GitHub: https://github.com/BenoitDionne/PDE
+  GitHub: https://github.com/BenoitDionne/Analysis\_on\_Manifolds
 
   \vspace*{1cm}
   
   \noindent \includegraphics[width=\UOopenopt]{\UOopenloc}
 
-  \noindent Unless otherwise stated, this book is made available under
-  the terms of the license
+  \noindent Unless otherwise stated, these lecture notes are made
+  available under the terms of the license
   \href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en}{Creative Commons Attribution - Non Commercial-Share Alike 4.0 International} (CC BY-NC-SA 4.0)
 
   \vfill
