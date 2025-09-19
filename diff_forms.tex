@@ -100,7 +100,7 @@ a_{i_1,1} a_{i_2,2} \cdots a_{i_k,k}
 (\VEC{w}_1, \VEC{w}_2, \ldots, \VEC{w}_k) \ .
 \end{align*}
 Since this is true for all $\VEC{w}_i \in H$ with $1 \leq i \leq k$,
-we get that
+we get
 \[
 \tau
 = \sum_{\substack{1 \leq i_m \leq n\\1\leq m \leq k}}
@@ -279,7 +279,7 @@ $\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)},\ldots, \VEC{v}_{\sigma(k)})
 for all $\VEC{v}_i \in H$ and $1 \leq i \leq k$.
 Moreover, the number of different functions from $J_k$ to $J_k$ is $k!$.
 Namely, the number of elements of $S_k$, denoted $|S_k|$, is $k!$.
-Hence, for $\tau \in \Omega^k(H)$, we have that
+Hence, for $\tau \in \Omega^k(H)$, we have
 \begin{align*}
 &\alt(\tau)(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k)
 = \frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)
@@ -424,7 +424,7 @@ $f^\ast(\tau_1 \wedge \tau_2) = f^\ast\tau_1 \wedge f^\ast \tau_2$.
 \begin{proof}
 We leave the proof of (1), (2), (3) and (5) to the reader.
 
-\stage{4} Given $\sigma \in S_{k_1+k_2}$, we have that
+\stage{4} Given $\sigma \in S_{k_1+k_2}$, we have
 \begin{align*}
 &(\tau_1 \otimes \tau_2)(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots,
 \VEC{v}_{\sigma(k_1+k_2)}) \\
@@ -463,7 +463,7 @@ Let $\tilde{\sigma}_0 = \sigma$ and
 $\tilde{\sigma}_j = \tilde{\sigma}_{j-1} \circ
 \sigma_{k_1-j+k_2,k_1-j+k_2+1}\circ \ldots
 \circ \sigma_{k_1-j+2,k_1-j+3}\circ \sigma_{k_1-j+1,k_1-j+2}$ for
-$1 \leq j \leq k_1$.  We have that
+$1 \leq j \leq k_1$.  We have
 \begin{align*}
 \sgn(\tilde{\sigma}_j) &= \sgn(\tilde{\sigma}_{j-1})\,
 \underbrace{\sgn(\sigma_{k_1-j+k_2,k_1-j+k_2+1}) \cdots
@@ -476,7 +476,7 @@ $\displaystyle \sgn(\tilde{\sigma}_{k_1}) = (-1)^{k_1 k_2}
 
 We claim that $\tilde{\sigma}_{k_1} = \tilde{\sigma}$.  We take a
 close look at $\tilde{\sigma}_j$.  For $1\leq i < k_1 - j +1$ or
-$k_1 -j +k_2 +1 < i \leq k_1+k_2$, we have that
+$k_1 -j +k_2 +1 < i \leq k_1+k_2$, we have
 \begin{align*}
 i & \xrightarrow{\sigma_{k_1-j+1,k_1-j+2}}
 i \xrightarrow{\sigma_{k_1-j+2,k_1-j+3}}
@@ -487,7 +487,7 @@ i \xrightarrow{\sigma_{k_1-j+k_2,k_1-j+k_2+1}}
 i \xrightarrow{\tilde{\sigma}_{j-1}} \tilde{\sigma}_{j-1}(i) \ .
 \end{align*}
 For $k_1 -j +1 < i \leq k_1-j+k_2+1$, say $i = k_1 -j+m +1$ with
-$1\leq m \leq k_2$, we have that
+$1\leq m \leq k_2$, we have
 \begin{align*}
 i & \xrightarrow{\sigma_{k_1-j+1,k_1-j+2}}
 i \xrightarrow{\sigma_{k_1-j+2,k_1-j+3}}
@@ -500,7 +500,7 @@ i-1 \xrightarrow{\sigma_{k_1-j+m+2,k_1-j+m+3}}
 &i-1 \xrightarrow{\sigma_{k_1-j+k_2,k_1-j+k_2+1}}
  i-1 \xrightarrow{\tilde{\sigma}_{j-1}} \tilde{\sigma}_{j-1}(i-1) \ .
 \end{align*}
-Finally, for $i = k_1-j+1$, we have that
+Finally, for $i = k_1-j+1$, we have
 \begin{align*}
 i &\xrightarrow{\sigma_{k_1-j+1,k_1-j+2}}
 i+1 \xrightarrow{\sigma_{k_1-j+2,k_1-j+3}}
@@ -551,7 +551,7 @@ Hence
 \end{align*}
 for all $\VEC{v}_i \in H$ and $1 \leq i \leq k_1 + k_2$.
 
-\stage{6} We have that
+\stage{6} We have
 \begin{align*}
 \tau_1 \wedge ( \tau_2 \wedge \tau_3)
 &= \frac{(k_1+k_2 +k_3)!}{k_1!\, (k_2+k_3)!} \alt(\tau_1 \otimes
@@ -588,7 +588,7 @@ $\tau_i \in \Omega^{k_i}(H)$ and $1\leq i \leq j$.
 The proof is left to the reader.
 
 \begin{prop} \label{propTssT}
-Given $\tau_i \in \Omega^1(H)$ for $1\leq i \leq k$, we have that
+Given $\tau_i \in \Omega^1(H)$ for $1\leq i \leq k$, we have
 \begin{equation} \label{wedgeIeq1}
 \tau_{\rho(1)} \wedge \tau_{\rho(2)} \wedge \ldots \wedge \tau_{\rho(k)}
 = \sgn(\rho)\, \tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_k
@@ -681,7 +681,7 @@ a_{i_1,i_2,\ldots,i_k}
 for some $a_{i_1,i_2,\ldots,i_k} \in \RR$.  Hence, using (1) of
 Proposition~\ref{propAltR}, Corollary~\ref{corMwedgesR} and
 Proposition~\ref{propTssT} (with $\tau_j = \phi_{i_j}$ for
-$1\leq j \leq k$), we get that
+$1\leq j \leq k$), we get
 \begin{align*}
 \tau = \alt(\tau) &= \sum_{\substack{1 \leq i_j \leq n\\1\leq j \leq k}}
 a_{i_1,i_2,\ldots,i_k}
@@ -696,7 +696,7 @@ a_{i_1,i_2,\ldots,i_k}
 &= \sum_{1\leq i_1 < i_2 < \ldots < i_k \leq n}
 \left( k! \sum_{\sigma \in S_k} \sgn(\sigma)\, a_{\sigma(i_1),\sigma(i_2),\ldots,
 \sigma(i_k)} \right) \,
-\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k}
+\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k} \ .
 \end{align*}
 
 \stage{ii} The proof that the elements of $\NNN$ are linearly
@@ -718,7 +718,7 @@ We first note that
 \end{align*}
 for $1 \leq i_m,j_m \leq n$ and $1\leq m \leq k$.
 In particular, for $1\leq i_1 < i_2 < \ldots < i_k \leq n$ and
-$1\leq j_1 < j_2 < \ldots < j_k \leq n$, we get that
+$1\leq j_1 < j_2 < \ldots < j_k \leq n$, we get
 \begin{align}
 (\phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k})
 (\VEC{v}_{j_1}, \VEC{v}_{j_2}, \ldots, \VEC{v}_{j_k})
@@ -1214,7 +1214,7 @@ all $\tau_{f(\VEC{v})}^{[i]} \in \Omega^{k_i}(\TS_{f(\VEC{v})} W)$.
 \begin{proof}
 We prove (2) and (4) and leave the proof of (1) and (3) to the reader.
 
-\stage{2} For $\VEC{v} \in V$ fixed, we have that
+\stage{2} For $\VEC{v} \in V$ fixed, we have
 \begin{align*}
 &f^\ast(a\, \tau_{f(\VEC{v})})
 \big( (\VEC{v},\VEC{x}_1) , (\VEC{v},\VEC{x}_2) , \ldots,
@@ -1230,7 +1230,7 @@ f_\ast(\VEC{v},\VEC{x}_2) , \ldots, f_\ast(\VEC{v},\VEC{x}_k)\big) \right) \\
 \end{align*}
 for all $\VEC{x}_i \in \RR^n$.
 
-\stage{4} For $\VEC{v} \in V$ fixed, we have that
+\stage{4} For $\VEC{v} \in V$ fixed, we have
 \begin{align*}
 &f^\ast(\tau_{f(\VEC{v})}^{[1]} \wedge \tau_{f(\VEC{v})}^{[2]})
 \big( (\VEC{v},\VEC{x}_1) , (\VEC{v},\VEC{x}_2) , \ldots,
@@ -1280,7 +1280,7 @@ where $f:V \to \RR^n$.
 \end{defn}
 
 It is important to note that $F(\VEC{v}) \in \TS_{\VEC{v}} V$ for each
-$\VEC{v} \in V$.  We have that
+$\VEC{v} \in V$.  We have
 \[
 F(\VEC{v}) = \left(\VEC{v} , \sum_{i=1}^n f_i(\VEC{v}) \VEC{e}_i\right)
 = \sum_{i=1}^n f_i(\VEC{v}) (\VEC{v}, \VEC{e}_i)
@@ -1477,7 +1477,7 @@ and differential $k_2$-form $\omega_2$ on $W$
 \end{prop}
 
 \begin{proof}
-\stage{1} For every $\VEC{v} \in V$, we have that
+\stage{1} For every $\VEC{v} \in V$, we have
 \begin{align*}
 &f^\ast(\df{x_i})(\VEC{v})\big( (\VEC{v},\VEC{x}) \big)
 = \df{x_i}(f(\VEC{v}))\big( f_\ast(\VEC{v},\VEC{x}) \big)
@@ -1494,7 +1494,7 @@ for all $\displaystyle \VEC{x}\in \RR^n$.
 
 \stage{2} This proof is left to the reader.
 
-\stage{3} We have that
+\stage{3} We have
 \begin{align*}
 f^\ast(g\, \omega)(\VEC{v})
 &= f^\ast \big((g\, \omega)(f(\VEC{v}))\big)
@@ -1505,7 +1505,7 @@ f^\ast(g\, \omega)(\VEC{v})
 for all $\VEC{v} \in V$, where we have used (2) of
 Proposition~\ref{propAsttauR} for the third equality.
 
-\stage{4} We have that
+\stage{4} We have
 \begin{align*}
 f^\ast(\omega_1 \wedge \omega_2)(\VEC{v})
 &= f^\ast \big((\omega_1 \wedge \omega_2)(f(\VEC{v}))\big)
@@ -1665,7 +1665,7 @@ $\displaystyle \mu = \sum_{1\leq j_1 <j_2 < \ldots < j_q \leq n}
 \wedge \df{x_{i_p}} \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
 \wedge \df{x_{j_q}} \ .
 \end{align*}
-From the definition of the operator $\df{}$, we get that
+From the definition of the operator $\df{}$, we get
 \begin{align*}
 \df{\omega} &= \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
 \left( \sum_{m=1}^n \pdydx{\omega_{i_1,i_2,\ldots,i_p}}{x_m} \df{x_m}
@@ -1677,7 +1677,7 @@ From the definition of the operator $\df{}$, we get that
 \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
 \wedge \df{x_{j_q}} \ .
 \end{align*}
-Using (1), we get that
+Using (1), we get
 \begin{align*}
 &\df{(\omega \wedge \mu)}
 = \sum_{\substack{1\leq i_1 <i_2 < \ldots < i_p \leq n\\
@@ -1764,7 +1764,7 @@ $\omega:V \to \RR$ is a function of class $\displaystyle C^1$.
 Suppose that the result is true for all differential $k$-form.  If
 $\omega$ is a differential $(k+1)$-from, then we can write
 $\displaystyle \omega = \sum_{j=1}^n \mu_j \wedge \df{x_j}$ for some
-$k$-forms $\mu_j$.  From (1), (2) and (3) above, we get that
+$k$-forms $\mu_j$.  From (1), (2) and (3) above, we get
 \begin{align*}
 \df{\omega} &= \sum_{j=1}^n\df{(\mu_j \wedge \df{x_j})}
 = \sum_{j=1}^n\left(\df{\mu_j} \wedge \df{x_j} + (-i)^k\mu_j \wedge
@@ -1786,7 +1786,7 @@ Hence
 + (-1)^k f^\ast \mu_j \wedge \df{(f^\ast \df{x_j})}
 = \df{f^\ast \mu_j} \wedge f^\ast \df{x_j} \ .
 \]
-Finally, using this relation and our hypothesis of induction, we get that
+Finally, using this relation and our hypothesis of induction, we get
 \begin{align*}
 f^\ast \df{\omega}
 &= \sum_{j=1}^n\left(f^\ast \df{\mu_j} \wedge f^\ast \df{x_j}\right)
@@ -1832,7 +1832,7 @@ In general, the answer is negative.  Consider the differential $1$-form
 defined on $\displaystyle V= \RR^2 \setminus \{ \VEC{0}\}$ (see
 warning below).
 
-We have that
+We have
 \begin{align*}
 \df{\omega} &= \left( \frac{2x_1 x_2}{(x_1^2+x_2^2)^2} \df{x_1}
 + \frac{x_2^2-x_1^2}{(x_1^2+x_2^2)^2} \df{x_2} \right) \wedge \df{x_1} \\
@@ -2242,7 +2242,7 @@ $\partial(\partial \sigma) = 0$ for a $m$-cube $\sigma$.
 
 Since $\displaystyle 
 \partial \sigma = \sum_{j=1}^m (-1)^{j-1} \left( \sigma_{j,1} - \sigma_{j,0}
-\right)$, we get that
+\right)$, we get
 \begin{align*}
 \partial (\partial \sigma)
 &= \sum_{j=1}^m (-1)^{j-1} \left(
@@ -2388,7 +2388,6 @@ $\theta \in [0,1]$.  It follows that
 \end{align*}
 because $\sigma(0) = \sigma(2\pi) = (1,0)$.
 However, if we compute directly the integral $\int_\sigma \omega$, we get
-that
 \[
 \int_{\sigma} \omega = \int_{[0,1]} \sigma^\ast(\omega)
 = 2\pi \int_{[0,1]} \dx{\theta} = 2\pi \neq 0 \ .
@@ -2434,7 +2433,7 @@ relation would have been to use (1) of Proposition~\ref{propAstoR}.
 We will use the computational approach in the future but it is wise to
 also keep in mind the intuitive approach above.
 
-As a consequence of this, we have that
+As a consequence of this, we have
 \begin{align*}
 \stc_{k,j,s}^\ast\left(
 \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge
@@ -2493,7 +2492,7 @@ and
 \df{y_1}\df{y_2}\ldots \df{y_{k-1}} & \quad \text{if} \ i=j
 \end{cases}
 \end{align*}
-for $s=0$ or $s=1$, we get that
+for $s=0$ or $s=1$, we get
 \begin{align}
 & \int_{\partial \stc_k} f \df{x_1} \wedge \ldots \wedge
 \widehat{\df{x_i}} \wedge \ldots \wedge \df{x_k} =
@@ -2535,7 +2534,7 @@ f(x_1, \ldots, x_{i-1}, x_i, x_{i+1} ,\ldots, x_k)\bigg|_{x_i=0}^{x_i=1}
 \int_{I_{k-1}} f(y_1,\ldots, y_{i-1}, s, y_i, \ldots, y_{k-1})
 \dx{y_1}\dx{y_2}\ldots \dx{y_{k-1}}  \ . \label{stokesFTC3}
 \end{align}
-If we combine (\ref{stokesFTC2}) and (\ref{stokesFTC3}), then we get that
+If we combine (\ref{stokesFTC2}) and (\ref{stokesFTC3}), then we get
 \[
 \int_{\partial \stc_k} f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge
 \ldots \wedge \df{x_k} =
@@ -2556,7 +2555,7 @@ $(k-1)$-form on $V$.  Since
 \partial \sigma = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \sigma_{j,s}
 = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \sigma \circ \stc_{k,j,s} \ ,
 \]
-we have that
+we have
 \begin{align*}
 \int_{\partial \sigma} \omega
 &= \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \int_{\sigma_{j,s}} \omega

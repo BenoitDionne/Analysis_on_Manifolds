@@ -204,7 +204,7 @@ replaced by $(]a,b[,C\setminus \{\VEC{a},\VEC{b}\},\sigma)$.
 See Remark~\ref{rmkLCRn}.
 
 The formula in (\ref{classicLineIntFunct}) is nothing else than
-$\int_S f \, \nu$.  We have that
+$\int_S f \, \nu$.  We have
 \[
 \int_{C\setminus\{\VEC{a},\VEC{b}\}} f\,\nu
 = \int_{]a,b[}  \sigma^\ast(f\, \nu)
@@ -273,7 +273,6 @@ $\displaystyle \int_{\tilde{\sigma}} \df{f} = \int_{\partial
 
 Since
 $\displaystyle \df{f} = \sum_{i=1}^n \pdydx{f}{x_i} \df{x_i}$, we have
-that
 \begin{align*}
 \int_C \graD f \cdot \VEC{t} \dx{s}
 &=\int_{[a,b]} \big(\graD f(\sigma(v))\big) \cdot \sigma'(v) \dx{v}
@@ -287,7 +286,7 @@ that
 Moreover, since
 $\partial \tilde{\sigma} = \tilde{\sigma}_{1,1} - \tilde{\sigma}_{1,0}$
 where $\tilde{\sigma}_{1,1}(0) = \sigma(b)$ and
-$\tilde{\sigma}_{1,0}(0) = \sigma(a)$, we have that
+$\tilde{\sigma}_{1,0}(0) = \sigma(a)$, we have
 \[
 \int_{\partial \tilde{\sigma}} f = 
 \int_{\tilde{\sigma}_{1,1}} f - \int_{\tilde{\sigma}_{1,0}} f
@@ -578,7 +577,7 @@ in (\ref{NIflessINfEq1}).
 
 \begin{proof}[Proof (of Theorem~\ref{arclength})]
 \stage{i} Let $P= \{t_0,t_1,t_2, \ldots, t_N\}$ be a partition of
-$[a,b]$.  From the previous lemma, we have that
+$[a,b]$.  From the previous lemma, we have
 \[
 \| \sigma(t_i) - \sigma(t_{i-1}) \|
 = \left\| \int_{t_{i-1}}^{t_i} \sigma'(t) \dx{t} \right\|
@@ -743,7 +742,7 @@ where $(W,U,\phi)$ is replaced by $(W,S,\rho)$.  See Remark~\ref{rmkLCRn}.
 
 As we did in Remark~\ref{rmkVolElem1D}, we can show that
 (\ref{classicSurfIntFunct}) is nothing else than
-$\int_S f \, \nu$.  We have that
+$\int_S f \, \nu$.  We have
 \begin{align*}
 \int_S f\,\nu &= \int_W \rho^\ast (f\, \nu)
 = \int_W f(\rho(\VEC{w})) (\rho^\ast \nu)
@@ -862,7 +861,7 @@ $\displaystyle (w_1,w_2) \in W \subset \RR^2$, then
 To prove this claim, we note that in this case a parametric
 representation for $S$ is given by 
 $\rho(w_1,w_2)= w_1\VEC{e}_1 + w_2\VEC{e}_2 + g(w_1,w_2)\VEC{e}_3$ for
-$(w_1,w_2)$ in $W$.  We have that
+$(w_1,w_2)$ in $W$.  We have
 \[
 \pdydx{\rho}{w_1}(\VEC{w}) \times \pdydx{\rho}{w_2}(\VEC{w})
 = \left( -\pdydx{g}{w_1}(\VEC{w}), -\pdydx{g}{w_2}(\VEC{w}) , 1 \right)
@@ -889,12 +888,12 @@ the normal\\ $\VEC{n}(w_1,w_2,g(w_1,w_2))$ associated to the orientation
 on $S$ and $\epsilon = -1$ otherwise.  This is a special case of
 (\ref{classicSurfInt}) with the parametric representation for $S$ given by
 $\rho(w_1,w_2)= w_1\VEC{e}_1 + w_2\VEC{e}_2 + g(w_1,w_2)\VEC{e}_3$ for
-$(w_1,w_2)$ in $W$.  In particular, we have that
+$(w_1,w_2)$ in $W$.  In particular, we have
 \[
 \VEC{n}(\rho(\VEC{w})) =
 \epsilon \left\|\left(-\pdydx{g}{w_1}(\VEC{w}),
 -\pdydx{g}{w_2}(\VEC{w}),1\right) \right\|^{-1} 
-\left(-\pdydx{g}{w_1}(\VEC{w}), -\pdydx{g}{w_2}(\VEC{w}), 1\right) \ .
+\left(-\pdydx{g}{w_1}(\VEC{w}), -\pdydx{g}{w_2}(\VEC{w}), 1\right)
 \]
 and
 \[
@@ -1041,7 +1040,7 @@ the integral.
 
 \begin{proof}
 This is a special case of Stokes' theorem, Theorem~\ref{TheStokesTh},
-with $\omega = F_1 \df{x_1} + F_2 \df{x_2} + F_3 \df{x_3}$.  We get that
+with $\omega = F_1 \df{x_1} + F_2 \df{x_2} + F_3 \df{x_3}$.  We get
 \begin{equation} \label{classStokesEq1}
   \int_{\partial S} \omega = \int_S \df{\omega} \ .
 \end{equation}
@@ -1342,7 +1341,7 @@ orientation on $S$.  Hence
 \left\| \pdydx{\rho}{w_1} \times \pdydx{\rho}{w_2}\right\|
 \dx{w_1}\dx{w_2} = 3\, \dx{w_1}\dx{w_2} \ .
 \]
-We finally have that
+We finally have
 \[
 \int_S \curL F \cdot \VEC{n} \dx{A} =
 3 \int_0^{\pi/2} \int_0^2
@@ -1433,7 +1432,7 @@ to the statement of the divergence theorem, Theorem~\ref{StandardDivTh}.}{div}
 \begin{proof}
 This is a special case of Stokes' theorem, Theorem~\ref{TheStokesTh},
 with $\omega = F_1 \df{x_2}\wedge\df{x_3} + F_2 \df{x_3}\wedge\df{x_1}
-+ F_3 \df{x_1}\wedge\df{x_2}$.  We have that
++ F_3 \df{x_1}\wedge\df{x_2}$.  We have
 \[
   \int_{\partial S} \omega = \int_S \df{\omega} \ ,
 \]
@@ -1676,7 +1675,7 @@ and points in the direction of increasing $w$.  From a mechanical point of
 view, $\sigma'$ is the (directional) velocity of a particle
 traveling along the curve.
 
-We have that
+We have
 \[
 \VEC{t}(\VEC{u}) = \VEC{t}(\sigma(w))
 = \|\sigma'(w)\|^{-1} \sigma'(w)
@@ -1896,7 +1895,7 @@ is orthogonal to $\VEC{t}(\sigma(w))$.
 Since
 $\displaystyle \dfdx{\VEC{B}(\sigma(w))}{w}$ is orthogonal to both
 $\VEC{t}(\sigma(w))$ and $\VEC{B}(\sigma(w))$ for all $w \in ]a,b[$,
-we get that
+we get
 \[
 \dfdx{\VEC{B}(\sigma(w))}{w} = -\tau(\sigma(w))
 \,\|\sigma'(w)\|\, \VEC{N}(\sigma(w))
@@ -2141,7 +2140,7 @@ Thus
 \dydx{\VEC{v}_3}{t}(t,\VEC{x}) \right) \ .
 \end{align*}
 If we evaluate this expression at $t=0$ and use (\ref{diff_geom_DD2}),
-we get that
+then we get
 \begin{align*}
 \dydx{V}{t}(0,\VEC{x}) &=
 \left(\epsilon \diff F(\VEC{x}) \VEC{e}_1 \right)
@@ -2167,8 +2166,7 @@ we get that
 + \pdydx{F_3}{x_3}(\VEC{y}) \right) = \epsilon^3 \diV F(\VEC{y}) \ .
 \end{align*}
 Since the volume $V(0,\VEC{y})$ of $P_0$ is obviously
-$\displaystyle \epsilon^3$,
-we get (\ref{diff_geom_DD3}).
+$\displaystyle \epsilon^3$, we get (\ref{diff_geom_DD3}).
 
 If $\diV F = 0$, then it
 follows from (\ref{diff_geom_DD3}) that the volume of a region
@@ -2282,7 +2280,7 @@ a flow.}{diff_geom_CURL}
 The vector $\VEC{v} = \VEC{w} \times \VEC{r}$ is perpendicular to the plan
 containing the vectors $\VEC{r}$ and $\VEC{w}$, and points in the
 direction of the rotation (counterclockwise in Figure~\ref{diff_geom_CURL}).
-Since $\VEC{w} = (0,0,\omega)$, we have that
+Since $\VEC{w} = (0,0,\omega)$, we have
 \[
 \VEC{v} = \VEC{w} \times \VEC{r} 
 = \VEC{w} \times (\VEC{x} - P(\VEC{x}))
@@ -2330,17 +2328,17 @@ $\VEC{t}(\VEC{u})$ is the unit tangent vector to $\partial S_r$ at
 $\VEC{u} \in \partial S_r$ which is consistent with the
 orientation on $\partial S_r$ that is induced from the orientation on
 $S_r$.  According to the Mean Value Theorem for Integrals
-(Question~\ref{MeanValueTHInt}), we have that
+(Question~\ref{MeanValueTHInt}), we have
 \[
  \frac{1}{\pi r^2} \iint_{S_r} \curL F \cdot \VEC{n} \dx{S}
 = \curL F(\VEC{x}_r) \cdot \VEC{n}
 \]
-pour some $\VEC{u}_r \in S_r$.  Thus
+for some $\VEC{u}_r \in S_r$.  Thus
 \[
   \curL F(\VEC{u}_r) \cdot \VEC{n}  = \frac{1}{\pi r^2}
   \int_{C_r} F\cdot \VEC{t} \dx{s} \ .
 \]
-Since $\displaystyle \lim_{r\to 0}\VEC{u}_r = \VEC{y}$, we get that
+Since $\displaystyle \lim_{r\to 0}\VEC{u}_r = \VEC{y}$, we get
 \[
 \curL F(\VEC{y}) \cdot \VEC{n}
 = \lim_{r\to 0} \curL F(\VEC{u}_r) \cdot \VEC{n}
@@ -2456,7 +2454,7 @@ $g(t) = (a\sin(t), b\cos(t))$.    The arc length of $C$ is
 
 \subQ{b} The curve $C$ is shown in the following figure.
 \pdfbox{vect_calculus/question29}
-We have that
+We have
 \[
   x^2 +y^2 -2y = 0 \Rightarrow x^2 + (y-1)^2 = 1 \ .
 \]
@@ -2516,7 +2514,7 @@ $F(x,y,z) = (x-y,x+y)$.
 
 \begin{sol}
 \subQ{a} We select the parametric representation of $C$ given by
-$g(t) = (t,t,t)$ for $0 \leq t \leq 1$.  We have that
+$g(t) = (t,t,t)$ for $0 \leq t \leq 1$.  We have
 \[
 \int_C F \cdot \dx{\VEC{s}}
 = \int_C F \cdot g'(t) \dx{t}
@@ -2525,7 +2523,7 @@ $g(t) = (t,t,t)$ for $0 \leq t \leq 1$.  We have that
 \]
 
 \subQ{b} We use the parametric representation of $C$ given by
-$\displaystyle g(t) = (t,t^2,t^3)$ for $0 \leq t \leq 1$.  We have that
+$\displaystyle g(t) = (t,t^2,t^3)$ for $0 \leq t \leq 1$.  We have
 \begin{align*}
 \int_C F \cdot \dx{\VEC{s}}
 &= \int_C F \cdot g'(t) \dx{t}
@@ -2540,7 +2538,7 @@ $\displaystyle g(t) = (t,t^2,t^3)$ for $0 \leq t \leq 1$.  We have that
   g(t) = (\cos(2\pi-t), \sin(2\pi-t)) = (cos(t) , -\sin(t))
 \]
 for $0 \leq t \leq 2\pi$.  The parametric representation is clockwise
-as required by the orientation on the curve $C$.  We have that
+as required by the orientation on the curve $C$.  We have
 \begin{align*}
 \int_C F \cdot \dx{\VEC{s}}
 &= \int_C F \cdot g'(t) \dx{t}
@@ -2566,7 +2564,7 @@ $\displaystyle \omega = y^2 \df{x} - 2 x\df{y}$.
 
 \begin{sol}
 \subQ{a} The curve $C$ is the singular $1$-cube given by
-$\displaystyle \sigma(t) = (t,t^2)$ for $0 \leq t \leq 1$.  We have that
+$\displaystyle \sigma(t) = (t,t^2)$ for $0 \leq t \leq 1$.  We have
 \begin{align*}
 \int_\sigma \omega &= \int_{[0,1]} \sigma^\ast(\omega) 
 = \int_0^1 \left( te^{-t^2} +2 t \sin(\pi t) \right)\dx{t} \\
@@ -2577,7 +2575,7 @@ $\displaystyle \sigma(t) = (t,t^2)$ for $0 \leq t \leq 1$.  We have that
 
 \subQ{b} The curve $C$ is the singular $1$-cube given by
 $\sigma(t) = (\cos(2\pi t),\sin(2\pi t),2 \pi t)$ for
-$0 \leq t \leq 1$.  We have that
+$0 \leq t \leq 1$.  We have
 \begin{align*}
 \int_\sigma \omega &= \int_{[0,1]} \sigma^\ast(\omega) 
 = 2\pi \int_0^1 \left( -\sin^2(2\pi t) + t \cos(2\pi t)
@@ -2705,7 +2703,7 @@ a^2 \sin(\phi)$.  Thus
 \subI{Second representation}
 The parametric representation is given by the Cartesian coordinates
 $\displaystyle g(x,y) = (x, y, \sqrt{a^2-x^2-y^2})$ for
-$\displaystyle x^2+y^2\leq a$.  We have that
+$\displaystyle x^2+y^2\leq a$.  We have
 \begin{align*}
 \dx{S} &= \sqrt{ \left(\pdydx{z}{x}\right)^2 +
   \left(\pdydx{z}{y}\right)^2 + 1} \ \dx{y}\dx{x} \\
@@ -2785,7 +2783,7 @@ the unit sphere centred at the origin.
 \end{question}
 
 \begin{sol}
-We have that
+We have
 \[
 \int_S (x^2 + y^2 - 2z^2) \dx{S}
 = \int_S x^2 \dx{S} + \int_S y^2 \dx{S} -2 \int_S z^2 \dx{S} \ .
@@ -2920,7 +2918,7 @@ A parametric representation of the part of the paraboloid is given by
 \phi_2(\theta,r) = (r\cos(\theta),r\sin(\theta),r^2)
 \]
 for $0\leq \theta \leq 2\pi$ and $0 \leq r \leq \sqrt{3}$.
-We have that
+We have
 \[
 \left\| \pdydx{\phi_1}{\theta} \times \pdydx{\phi_1}{\phi} \right\|
 % &=
@@ -2941,7 +2939,7 @@ and
 % -r\sin(\theta) & r\cos(\theta) & 0 \\
 % \cos(\theta) & \sin(\theta) & 2r \end{pmatrix} \right\| \\
 = \left\| \big( 2r^2 \cos(\theta), 2r^2\sin(\theta), -r\big) \right\|
-= r \sqrt{4r^2+1}
+= r \sqrt{4r^2+1} \ .
 \]
 Hence, the area is
 \begin{align*}
@@ -3002,7 +3000,7 @@ $\displaystyle \pdydx{g}{\theta} =
 (b +a \cos(\phi)) \cos(\theta) \\
 0 
 \end{pmatrix}$,
-we get that
+we get
 \[
 \left\| \pdydx{g}{\phi} \times \pdydx{g}{\theta} \right\|
 = \left\| \begin{pmatrix} -a (b+a\cos(\phi) )\cos(\theta)\cos(\phi) \\
@@ -3260,7 +3258,7 @@ required orientation on $S$.  Thus
  = 2 \ .
 \end{align*}
 
-\subQ{d} We have that
+\subQ{d} We have
 \[
   \iint_S F \cdot \dx{\VEC{S}} = \iint_S F \cdot \VEC{n} \dx{S}
 = \iint_{S_1} F \cdot \VEC{n} \dx{S} + \iint_{S_2} F \cdot \VEC{n} \dx{S}
@@ -3296,7 +3294,7 @@ $\displaystyle z^2+z-20 = (z+5)(z-4)=0$.  Since
 $\displaystyle z = x^2+y^2$ is non negative, we get $z=4$.  Thus the
 intersection is the circle $\displaystyle x^2+y^2=4$ with $z=4$.
 
-We have that
+We have
 \[
   \iint_S F \cdot \dx{\VEC{S}} = \iint_S F \cdot \VEC{n} \dx{S}
 = \iint_{S_1} F \cdot \VEC{n} \dx{S} + \iint_{S_2} F \cdot \VEC{n} \dx{S} \ ,
@@ -3329,7 +3327,7 @@ and
 \left(-2\sqrt{5} \sin(\theta) \sin(\phi), 2\sqrt{5} \cos(\theta)\sin(\phi),
   0 \right) \ ,
 \]
-we get that
+we get
 \[
 \pdydx{g_1}{\phi} \times \pdydx{g_1}{\theta}
 =\left( 20 \cos(\theta)\sin^2(\phi), 20 \sin(\theta)\sin^2(\phi), 
@@ -3405,13 +3403,14 @@ integral is
 
 \stage{ii} Suppose that $D$ is the region enclosed by $C$.  Note that
 $C$ is a closed curve like a circle.  To justify this claim, consider
-$t^3 -t = t(t^2-1)$.  We have that $x=t^2-1$ decreases from $0$ to
-$-1$ with $y =t^3-t>0$ when $t$ goes from $-1$ to $0$, and $x=t^2-1$
-increases from $-1$ to $0$ with $y =t^3-t<0$ when $t$ goes from $0$ to
+$\displaystyle t^3 -t = t(t^2-1)$.  We have that $\displaystyle x=t^2-1$
+decreases from $0$ to $-1$ with $\displaystyle y =t^3-t>0$ when $t$
+goes from $-1$ to $0$, and $\displaystyle x=t^2-1$ increases from $-1$
+to $0$ with $\displaystyle y =t^3-t<0$ when $t$ goes from $0$ to 
 $1$.
 
 We select the orientation on $C$ such that $D$ is to the left when
-travelling along $C$.  Using Green's Theorem, we get that
+travelling along $C$.  Using Green's Theorem, we get
 \[
 \epsilon \int_C F \cdot \dx{\VEC{s}} =
 \iint_D \left( \pdydx{F_2}{x} - \pdydx{F_1}{y} \right) \dx{x}\dx{y}
@@ -3666,7 +3665,7 @@ $\displaystyle = \iiint_R 2x \dx{V} = 0$.
 \subQ{b} A sketch of the region $R$ and additional details about this
 region can be found in the solution of Question~\ref{surfQuestionA} (e).
 We use the information in that question to answer the present question.
-According to the divergence theorem, we have that
+According to the divergence theorem, we have
 \[
 \iint_S F \cdot \dx{\VEC{S}} = \iiint_R \diV F \, \dx{V}
 = \iiint_R 3 \dx{V} \ ,
@@ -3677,7 +3676,7 @@ $0\leq r \leq 2$, $0 \leq \theta \leq 2\pi$ and
 $r^2 \leq z \leq \sqrt{20 - r^2}$.  Since
 $\displaystyle
 \left|\frac{\partial(x,y,z)}{\partial(r,\theta,z)}\right| = r$,
-we get that
+we get
 \begin{align*}
 &\iiint_R 3 \dx{V}
 = 3\int_0^{2\pi} \int_0^2 \int_{r^2}^{\sqrt{20-r^2}} r \dx{z}\dx{r}\dx{\theta}
@@ -3688,7 +3687,7 @@ we get that
 = 8\pi(10\sqrt{5} - 19) \ .
 \end{align*}
 
-\subQ{c} According to the divergence theorem, we have that
+\subQ{c} According to the divergence theorem, we have
 \begin{align*}
 \iint_S F \cdot \dx{\VEC{S}} &= \iiint_R \diV F \, \dx{V}
 = \iiint_R (2x+2y+2z) \dx{V} \\
@@ -3698,7 +3697,7 @@ we get that
 = 3 (b-a)^2 x^2\bigg|_{x=a}^b = 3 (b-a)^2(b^2-a^2) \ .
 \end{align*}
 
-\subQ{d} According to the divergence theorem, we have that
+\subQ{d} According to the divergence theorem, we have
 \[
 \iint_S F \cdot \dx{\VEC{S}} = \iiint_R \diV F \, \dx{V}
 = \iiint_R \left(\frac{1}{a^2} + \frac{1}{b^2} +\frac{1}{c^2}\right) \dx{V}
@@ -3712,7 +3711,7 @@ we first reduce it to an integral over a sphere of radius $1$ centred
 at the origin.  We use the change of variables $x=au$, $y=bv$ and $z=cw$ for
 $\displaystyle u^2 + v^2 + w^2 \leq 1$.  Since
 $\displaystyle \left|\frac{\partial(x,y,z)}{\partial(u,v,w)}\right| = abc$,
-we get that
+we get
 \[
 \iiint_R \dx{V} = abc \iint_{x^2+y^2+z^2\leq 1} \dx{V}
 = \frac{4\pi}{3} \, abc \ ,
@@ -3726,7 +3725,7 @@ of radius $r$.  Thus
 +\frac{1}{c^2}\right) \ .
 \]
 
-\subQ{e} According to the divergence theorem, we have that
+\subQ{e} According to the divergence theorem, we have
 \begin{align*}
 \iint_S F \cdot \dx{\VEC{S}} &= \iiint_R \diV F \, \dx{V}
 = \iiint_R 2z \dx{V}
@@ -3750,7 +3749,7 @@ without the divergence theorem.
 representation of $S$ given by
 $g(\phi,\theta)= (a \cos(\theta)\sin(\phi), a \sin(\theta)\sin(\phi),
  a \cos(\phi))$ for $0\leq \theta \leq 2\pi$ and
-$0\leq \phi \leq \pi$.  We have that
+$0\leq \phi \leq \pi$.  We have
 \[
   \pdydx{g}{\phi} \times \pdydx{g}{\theta}
 = \big(a^2 \cos(\theta)\sin^2(\phi), a^2 \sin(\theta)\sin^2(\phi),
@@ -3772,7 +3771,7 @@ a^2\cos(\phi)\sin(\phi) \big) \dx{\phi} \dx{\theta} \\
 = 4 \pi a^5 \ .
 \end{align*}
 
-\stage{ii} According to the divergence theorem, we have that
+\stage{ii} According to the divergence theorem, we have
 \[
 \iint_S F \cdot \dx{\VEC{S}} = \iiint_R \diV F \, \dx{V}
 = \iiint_R 5(x^2+y^2+z^2) \dx{V}
@@ -3783,7 +3782,7 @@ $x= r \cos(\theta)\sin(\phi)$, $y= r\sin(\theta)\sin(\phi)$ and
 $z= r \cos(\phi)$ for $0 \leq r \leq a$, $0\leq \theta \leq 2\pi$ and
 $0\leq \phi \leq \pi$.  Since
 $\displaystyle \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
-  = r^2 \sin(\phi)$, we get that
+  = r^2 \sin(\phi)$, we get
 \begin{align*}
 \iiint_R 5(x^2+y^2+z^2) \dx{V}
 &= \int_0^{2\pi} \int_0^\pi \int_0^a 5r^4 \sin(\phi)
@@ -3817,7 +3816,7 @@ $\displaystyle g(\theta,\phi, r) =
 \big( r \cos(\theta)\sin(\phi) ,r \sin(\theta)\sin(\phi) ,r \cos(\phi)\big)$
 for $1\leq r \leq 3$, $0\leq \theta \leq 2\pi$ and $0\leq \phi \leq \pi/2$.
 Since $\displaystyle |\det \diff g(\theta,\phi,r)| = r^2 \sin(\phi)$,
-we get that
+we get
 \begin{align*}
 &\iiint_R \diV F \dx{x}\dx{y}\dx{z} \\
 &\qquad = \int_0^{2\pi} \int_0^{\pi/2} \int_1^3 \left(
@@ -3870,7 +3869,7 @@ Since
 \sin(\theta) & r\cos(\theta) & 0 \end{pmatrix} \right|
 = | -r | = r \ ,
 \]
-we get that
+we get
 \[
 \iiint_R \diV F = \int_0^{2\pi} \int_{-1}^1 \int_1^2 
 r^3 \dx{r} \dx{y} \dx{\theta}
@@ -3936,7 +3935,7 @@ The parametric representation for $S$ that we use is given by
 \[
   g(r,\theta) = (r\cos(\theta), r\sin(\theta), b + m r\sin(\theta))
 \]
-for $0 \leq r \leq 2$ and $0 \leq \theta \leq 2\pi$.  We have that
+for $0 \leq r \leq 2$ and $0 \leq \theta \leq 2\pi$.  We have
 \[
   \pdydx{g}{r} \times \pdydx{g}{\theta}
 = \det \begin{pmatrix}
@@ -3991,7 +3990,7 @@ g(r,\theta) = \left( \frac{a r}{\sqrt{2}} \cos(\theta),
 \frac{a}{2} + \frac{a r}{2}\sin(\theta),
 \frac{a}{2} - \frac{a r}{2}\sin(\theta) \right)
 \]
-for $0 \leq r \leq 1$ and $0 \leq \theta \leq 2\pi$.  We have that
+for $0 \leq r \leq 1$ and $0 \leq \theta \leq 2\pi$.  We have
 \[
 \pdydx{g}{r} \times \pdydx{g}{\theta}
 = \det \begin{pmatrix}
@@ -4062,7 +4061,7 @@ $\displaystyle D = \{ (x,y,0) : x^2 + y^2 \leq a^2 \}$ and the
 orientation on $D$ is the orientation given by the unit vector $\VEC{e}_3$.
 A parametric representation of $D$ is given by
 $g(r,\theta) = (r\cos(\theta), r\sin(\theta),0)$ for $0\leq r \leq a$
-and $0 \leq \theta \leq 2\pi$.  We have that
+and $0 \leq \theta \leq 2\pi$.  We have
 \[
 \pdydx{g}{r} \times \pdydx{g}{\theta}
 = \det \begin{pmatrix}
@@ -4083,7 +4082,7 @@ y & x - 2 x^3 z & xy^3
 \end{pmatrix}
 =\big( 3xy^2 + 2 x^3, - y^3 ,- 6 x^2 z \big)\ ,
 \]
-we get that
+we get
 \begin{align*}
 \iint_D \curL F \cdot \dx{\VEC{S}}
 &= \int_0^{2\pi} \int_0^a 
@@ -4142,7 +4141,7 @@ $\displaystyle D = \left\{ (x,y,0) : \frac{x^2}{4} + \frac{y^2}{9}
 \leq 1 \right\}$ with the orientation given by the unit vector $\VEC{e}_3$.
 A parametric representation of $D$ is given by
 $g(r,\theta) = (2r\cos(\theta), 3r\sin(\theta),0)$ for $0\leq r \leq 1$
-and $0 \leq \theta \leq 2\pi$.  We have that
+and $0 \leq \theta \leq 2\pi$.  We have
 \[
 \pdydx{g}{r} \times \pdydx{g}{\theta}
 = \det \begin{pmatrix}
@@ -4163,7 +4162,7 @@ on $D$.  Since
 \end{pmatrix}
 = (z,-2 x, 4x^2) \ ,
 \]
-we get that
+we get
 \begin{align*}
 \iint_D \curL F \cdot \dx{\VEC{S}}
 &= \int_0^{2\pi} \int_0^1 
@@ -4188,7 +4187,7 @@ counterclockwise for $a,b \in \RR$ arbitrary but fixed.\\
 \end{question}
 
 \begin{sol}
-\subQ{a} We have that
+\subQ{a} We have
 \[
 \curL F = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
@@ -4250,7 +4249,7 @@ The parametric representations are consistent with these orientations.
 Since
 $\sigma_1'(\theta) = \big(-3\sin(\theta), 3\cos(\theta), 0 \big)$ and
 $\sigma_2'(\theta) = \big(\sqrt{5} \cos(\theta), -\sqrt{5}
-\sin(\theta), 0 \big)$, we get that
+\sin(\theta), 0 \big)$, we get
 \begin{align*}
 \iint_R \curL F \cdot \dx{\VEC{S}} &= \int_{C_1} F\cdot \dx{\VEC{s}}
 + \int_{C_2} F \cdot \dx{\VEC{s}} \\
@@ -4295,7 +4294,7 @@ for $0\leq \theta \leq 2\pi$ and $0\leq r \leq 3$.  We have that
 = \det \begin{pmatrix} \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
 \cos(\theta) & \sin(\theta) & 0 \\
 -r\sin(\theta) & r\cos(\theta) & 0
-\end{pmatrix} = (0,0,r) \ .
+\end{pmatrix} = (0,0,r)
 \]
 points in the direction of $z$ positive.
 This is the direction of the normal that we need on $V$ to get
@@ -4353,7 +4352,7 @@ the negative side of the $y$ axis.  The parametric representations are
 consistent with these orientations.
 Since $\sigma_1'(\theta) = \big(-\sin(\theta), 0,-\cos(\theta)\big)$
 and $\sigma_3'(\theta) = \big(-3\sin(\theta), 0, 3\cos(\theta) \big)$,
-we get that
+we get
 \begin{align*}
 &\int_R \curL F \cdot \dx{\VEC{S}} = \int_{C_3} F\cdot \dx{\VEC{s}}
 + \int_{C_1} F \cdot \dx{\VEC{s}} \\
@@ -4404,11 +4403,11 @@ xy^3z & \sin(xyz) & xyz
 \end{pmatrix} \\
 &= \big( xz - xy\cos(xyz) , -(yz - xy^3), yz\cos(xyz) - 3x^2y^2 z\big) \ ,
 \end{align*}
-we get that
+we get
 \[
 \int_{B_\rho} \curL F \cdot \dx{\VEC{S}} =
 \int_0^{2\pi} \int_0^\rho \left(\rho r\cos(\theta) -
-\rho^3r\sin(\theta)\right)r\dx{r}\dx{\theta} = 0 \ .
+\rho^3r\sin(\theta)\right)r\dx{r}\dx{\theta} = 0
 \]
 for $\rho=1$ and $\rho=3$.  It follows from (\ref{supp3equ})
 that $\displaystyle \int_{\partial R} F \cdot \dx{\VEC{s}} = 0$.
@@ -4467,7 +4466,7 @@ S_r = \begin{cases}
 The orientation on $\partial S_r$ is counterclockwise.
 \pdfbox{vect_calculus/question40}
 
-\subQ{a} Using Green's Theorem, we get that
+\subQ{a} Using Green's Theorem, we get
 \[
 \int_{C_r} F \cdot \dx{\VEC{s}} - \int_{C_1} F \cdot \dx{\VEC{s}}
 = \epsilon \int_{\partial S_r} F \cdot \dx{\VEC{s}}  
@@ -4650,7 +4649,7 @@ $\displaystyle F=f \graD g = \left( f\pdydx{g}{x} , f \pdydx{g}{y} \right)$ in
 If we interchange $f$ and $g$ in (\ref{equA}) and subtract from the original
 (\ref{equA}), we get (\ref{equB}).
 
-\subQ{c} We have that
+\subQ{c} We have
 \[
 \graD g(x,y) = \left( \pdydx{g}{x}(x,y), \pdydx{g}{y}(x,y) \right)
 = \left( \frac{2x}{x^2+y^2} , \frac{2y}{x^2+y^2} \right) \ .
@@ -4679,7 +4678,7 @@ Note that the orientation on $C_{r_1}$ is not consistent with the
 orientation on $\partial S$ if $r_1 < r_2$ while it is
 the orientation on $C_{r_2}$ that is not consistent with the
 orientation on $\partial S$ if $r_2 < r_1$.  This justifies the equality
-above.  However, for $(x,y) \in C(r_1)$, we have that
+above.  However, for $(x,y) \in C(r_1)$, we have
 \[
 \graD g(x,y) = \frac{2}{x^2+y^2} (x,y) = \frac{2}{\sqrt{x^2+y^2}} \VEC{n}
 = \frac{2}{r_1} \VEC{n}
@@ -4771,7 +4770,7 @@ Definition~\ref{manifdbOrient}.
 \end{question}
 
 \begin{sol}
-\subQ{a} From the divergence theorem, we have that
+\subQ{a} From the divergence theorem, we have
 \[
 \iint_{\partial R} \pdydx{f}{\VEC{n}} \dx{S}
 = \iint_{\partial R} \graD f \cdot \VEC{n} \dx{S}
@@ -4780,7 +4779,7 @@ Definition~\ref{manifdbOrient}.
 = \iiint_R \graD^2 f \dx{V} \ .
 \]
 
-\subQ{b} We have that
+\subQ{b} We have
 \begin{align*}
 &\iint_{\partial R} f \pdydx{f}{\VEC{n}} \dx{S}
 = \iint_{\partial R} f \left( \graD f \cdot \VEC{n} \right) \dx{S}
@@ -4817,7 +4816,7 @@ $R$ and the orientation on $\partial R$ is given by $\VEC{n}$.
 \end{question}
 
 \begin{sol}
-\subQ{a} We have that
+\subQ{a} We have
 \[
 \graD g(\VEC{x})
 = \sum_{i=1}^3 \pdfdx{(x_1^2 + x_2^2 + x_3^2)^{-1/2}}{x_i}\, \VEC{e}_i
@@ -4836,7 +4835,7 @@ and
 \end{align*}
 for $\VEC{x} \neq \VEC{0}$.
 
-\subQ{b} We have that
+\subQ{b} We have
 \begin{align*}
 \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
 &= \iint_{\partial B_r(\VEC{0})} \graD g \cdot \VEC{n} \dx{S}
@@ -4957,7 +4956,7 @@ the resulting equation from the previous equation, we get
 Let $R = \overline{B_{r_1}(\VEC{0}) \setminus B_{r_2}(\VEC{0})}$.
 From the second Green's formula with $f$ and
 $\displaystyle g(\VEC{x}) = \frac{1}{\|\VEC{x}\|}$ for $\VEC{x} \in R$,
-we get that
+we get
 \[
 \iint_{\partial R} \left( f \graD g - g \graD f\right) \cdot \dx{\VEC{S}}  
 = \iiint_R \left( f \graD^2 g - g \graD^2 f\right) \dx{V}
@@ -4979,7 +4978,7 @@ normal to $\partial B_r(\VEC{0})$ that points outside $B_r(\VEC{0})$.
 To get (\ref{GreenMVa}), we note that the orientation on
 $\partial B_{r_2}(\VEC{0})$ is not consistent with the orientation on
 $\partial R$.  Using (a) of Question~\ref{introGreenFunct},
-we get that
+we get
 \begin{align*}
 \iint_{\partial B_{r_1}(\VEC{0})} f \graD g \cdot \dx{\VEC{S}}
 &= \iint_{\partial B_{r_1}(\VEC{0})} f(\VEC{x})
@@ -4989,7 +4988,7 @@ we get that
 \left( \frac{1}{\|\VEC{x}\|^2} \right) \, f(\VEC{x}) \dx{S}
 = - \frac{1}{r_1^2} \iint_{\partial B_{r_1}(\VEC{0})} f \dx{S} \ .
 \end{align*}
-Using the divergence theorem, we get that
+Using the divergence theorem, we get
 \begin{align*}
 \iint_{\partial B_{r_1}(\VEC{0})} g \graD f \cdot \dx{\VEC{S}}
 &= \iint_{\partial B_{r_1}(\VEC{0})}
@@ -5004,7 +5003,7 @@ last equality.  Thus
 \left( f \graD g - g \graD f\right) \cdot \dx{\VEC{S}}  
 = - \frac{1}{r_1^2} \iint_{\partial B_{r_1}(\VEC{0})} f \dx{S} \ .
 \]
-Similarly, we get that
+Similarly, we get
 $\displaystyle \iint_{\partial B_{r_2}(\VEC{0})} f \graD g \cdot \dx{\VEC{S}}
 = - \frac{1}{r_2^2} \iint_{\partial B_{r_2}(\VEC{0})} f \dx{S}$
 and
@@ -5104,7 +5103,7 @@ $\displaystyle \graD f \times \graD g \longleftrightarrow \df{f}
 $\curL( f \graD g) = \graD f \times \graD g$.
 The second method is much shorter than the first one.
 
-To answer the question, we use Stokes' theorem to get that
+To answer the question, we use Stokes' theorem to get
 \[
 \int_{\partial S} f \graD g \cdot \dx{\VEC{s}}
 = \iint_S \curL( f \graD g) \cdot \dx{\VEC{S}}
@@ -5137,7 +5136,7 @@ $\partial S_r$ is given the positive orientation consistent with the
 orientation on $S_r$.
 \pdfbox{vect_calculus/question39}
 
-\stage{i} Using Stokes' theorem, we have that
+\stage{i} Using Stokes' theorem, we have
 \[
 \int_{C_r} F \cdot \dx{\VEC{s}} - \int_{C_1} F \cdot \dx{\VEC{s}}
 = \epsilon \int_{\partial S_r} F \cdot \dx{\VEC{s}}  
@@ -5258,7 +5257,7 @@ $\displaystyle \dydx{\phi}{z} = 0$.  Thus $\phi(z) = C$, a
 constant.  We find that $\displaystyle
 f(x,y,z) = x^2y + \frac{x^3}{3} - \frac{y^3}{3} + C$.
 
-\subQ{c} We have that
+\subQ{c} We have
 \[
 \curL F(x,y,z) = \det
 \begin{pmatrix}
@@ -5311,7 +5310,7 @@ Thus $\displaystyle \dydx{\phi}{z} = 0$ and $\phi(z) = C$, a
 constant.  We find that $\displaystyle
 f(x,y,z) = xyz + \cos(xy) + \sin(yz) + C$.
 
-\subQ{e} We have that
+\subQ{e} We have
 \[
 \curL F(x,y,z) = \det
 \begin{pmatrix}

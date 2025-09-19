@@ -677,7 +677,7 @@ V_1 \cap S = \left\{ \phi(\VEC{z}) :
 = \left\{ g\left( \begin{pmatrix} \VEC{z} \\ \VEC{0} \end{pmatrix} \right) :
 \begin{pmatrix} \VEC{z} \\ \VEC{0} \end{pmatrix} \in V_2 \right\} \ ,
 \]
-we get that
+we get
 \[
 h(V_1 \cap S) = g^{-1}(V_1 \cap S) =
 g^{-1} \left( \left\{ g\left( \begin{pmatrix} \VEC{z} \\
@@ -757,7 +757,7 @@ $\displaystyle f:W_{\VEC{v}} \to \RR^n$ defined by
 $\displaystyle
 f(\VEC{x}) = \begin{pmatrix} x_1 & x_2 & \ldots & x_k & g(h(\VEC{x}))
 \end{pmatrix}^\top$ for $\VEC{x} \in W_{\VEC{v}}$.
-If $\displaystyle \VEC{u} = h^{-1}(\VEC{v})$, we have that
+If $\displaystyle \VEC{u} = h^{-1}(\VEC{v})$, then we have
 \[
 \diff f (\VEC{u}) =
 \begin{pmatrix}
@@ -1127,7 +1127,7 @@ orientation preserving.
 Suppose that $(W_i,U_i,\phi_i)$ for $i=1,2$ are two orientation
 preserving local charts of a $k$-dimensional manifold $S$.  If
 $\VEC{u} \in U_1 \cap U_2$ and $\VEC{u} = \phi_i(\VEC{w}_i)$ for
-$\VEC{w}_i \in W_i$, we have that
+$\VEC{w}_i \in W_i$, then we have
 \begin{align*}
 &[(\phi_1)_\ast(\VEC{w}_1,\VEC{e}_1), (\phi_1)_\ast(\VEC{w}_1,\VEC{e}_2),
 \ldots, (\phi_1)_\ast(\VEC{w}_1,\VEC{e}_k)] \\
@@ -1545,7 +1545,7 @@ Since $\displaystyle
 (g\circ \phi)(\VEC{w}) = \pi_j(\phi^{-1}(\phi(\VEC{w}))) \psi(\phi(\VEC{w}))
 = w_j$ for all
 $\displaystyle \VEC{w} \in \phi^{-1}(S\cap B) \subset W$, an open neighbourhood
-of $\displaystyle \phi^{-1}(\VEC{u})$, we get that
+of $\displaystyle \phi^{-1}(\VEC{u})$, we get
 \begin{equation} \label{tsdloEq1}
 q(g) = \sum_{i=1}^k y_i \pdfdx{(g\circ \phi)}{w_i}(\phi^{-1}(\VEC{u})) = y_j
 \ .
@@ -1565,7 +1565,7 @@ q(g) = \sum_{i=1}^k y_{1,i}
 for all $\displaystyle g \in C^\infty(S)$ is the local representation 
 of $q$ with respect to the local chart $(W,U,\phi)$.  If
 we work on the open subset $U = U_1 \cap U_2$ of $S$ containing
-$\VEC{u}$, we have that
+$\VEC{u}$, then we have
 \begin{align*}
 q(g) & = \sum_{i=1}^k y_{1,i}
 \pdfdx{(g\circ \phi_1)}{w_i}\Big|_{\VEC{w}=\phi_1^{-1}(\VEC{u})}
@@ -1759,7 +1759,7 @@ $F$ is of class $\displaystyle C^j$ on $S$ if, for each local chart
 $(W,U,\phi)$, the function $\tilde{f}_i :W \to \RR$ are of class
 $\displaystyle C^j$.
 
-For all $\displaystyle g \in C^\infty(S)$, we have that
+For all $\displaystyle g \in C^\infty(S)$, we have
 \[
 F(\VEC{u})(g) = \tilde{F}(\phi^{-1}(\VEC{u}))(g\circ \phi)
 =\sum_{i=1}^k \tilde{f}_i(\phi^{-1}(\VEC{u}))
@@ -1879,7 +1879,7 @@ $f^\ast(\omega_1 \wedge \omega_2) = f^\ast(\omega_1) \wedge f^\ast(\omega_2)$.
 \end{prop}
 
 \begin{proof}
-We have that
+We have
 \begin{align*}
 &f^\ast(\omega_1 \wedge\omega_2)(\VEC{u})\big( (\VEC{u},\VEC{x}_1),
 \ldots, (\VEC{u},\VEC{x}_{p_1+p_2}) \big) \\
@@ -2034,7 +2034,7 @@ Without loss of generality, we may assume that $f(U_1) \subset U_2$.
 We have by definition of the derivative of a differential form given
 in Theorem~\ref{manifdOOd} that
 $\displaystyle \df{(\phi_1^\ast(f^\ast(\omega)))}
-= \phi_1^\ast(\df{(f^\ast(\omega))})$ on $W_1$.  Moreover, we have that
+= \phi_1^\ast(\df{(f^\ast(\omega))})$ on $W_1$.  Moreover, we have
 \begin{align*}
 \df{(\phi_1^\ast(f^\ast(\omega)))} &= \df{((f\circ \phi_1)^\ast(\omega))}
 = \df{\big((\phi_2^{-1} \circ f\circ \phi_1)^\ast(\phi_2^\ast(\omega))\big)} \\
@@ -2115,7 +2115,7 @@ $\df{g}(\VEC{u})\big(F(\VEC{u})\big)$ for all $\VEC{u} \in S$.
 
 Suppose that $(W,U,\phi)$ is a local chart of $S$.
 If we work on the local chart $(W,U,\phi)$ and assume that
-$\VEC{u} = \phi(\VEC{w})$ for $\VEC{w} \in W$, we get that
+$\VEC{u} = \phi(\VEC{w})$ for $\VEC{w} \in W$, then we get
 \begin{align*}
 \df{g}(\VEC{u})\big(F(\VEC{u})\big)
 &= \df{g}(\phi(\VEC{w}))\big(\phi_\ast(\tilde{F}(\VEC{w})\big)
@@ -2507,7 +2507,7 @@ $\displaystyle \phi^\ast \left(\omega\big|_{U\cap \partial S}\right)
 = \phi^\ast(\omega)\big|_{W\cap \partial H_k}$ on
 $W \cap \partial H_k$.
 
-Since $\phi$ is orientation preserving, we have that
+Since $\phi$ is orientation preserving, we have
 \begin{align*}
 \mu_{\VEC{u}} &=
 [ \phi_\ast(\VEC{w},-\VEC{e}_k) ,\phi_\ast(\VEC{w},\VEC{e}_1),
@@ -2521,7 +2521,7 @@ such that $\VEC{u} = \phi(\VEC{w})$.  Therefore, the induce
 orientation on $\partial S$ differs from the orientation provided by
 the standard orientation on $H_k$ by a factor of $\displaystyle (-1)^k$.
 The two orientations match when $k$ is even and are of opposite signs
-when $k$ is odd.  See also Remark~\ref{rmkHkOrient}.  Thus, we have that
+when $k$ is odd.  See also Remark~\ref{rmkHkOrient}.  Thus, we have
 \[
 \int_{\partial S} \omega = \int_{U \cap \partial S} \omega  
 = (-1)^k \int_{W \cap \partial H_k} \phi^\ast(\omega)
@@ -2531,7 +2531,7 @@ when $k$ is odd.  See also Remark~\ref{rmkHkOrient}.  Thus, we have that
 
 Since $\displaystyle \partial \sigma =
 \sum_{m=1}^M \left( \sum_{i=1}^k (-1)^i \big( (\sigma_m)_{i,0} 
-- (\sigma_m)_{i,1}\big) \right)$, we get that
+- (\sigma_m)_{i,1}\big) \right)$, we get
 \begin{align*}
 \int_{\partial S} \omega
 &= \sum_{\sigma_m(I_k) \cap \partial H_k\neq \emptyset}
@@ -3015,7 +3015,7 @@ Since they both have compact support, there exists a finite set
 $\displaystyle J \subset \NNp$ such that
 $\supp \phi_j \cap \supp g_1 = \emptyset$ and 
 $\supp \phi_j \cap \supp g_2 = \emptyset$ for $j \not\in J$.
-Using (\ref{functCcSEq1omg}), we get that
+Using (\ref{functCcSEq1omg}), we get
 \begin{align*}
 |\eta(g_1) - \eta(g_2)| &=
 \bigg| \eta\left(\sum_{j\in J} \psi_j (g_1-g_2)\right) \bigg| \\
@@ -3183,7 +3183,7 @@ as $m \to \infty$ and $|g_m(\VEC{x})| \leq \Chi_V(\VEC{x})$ for all $m>0$.
 Note that $\supp g_m \subset K \subset \bigcup_{j\in J} U_{\alpha_j}$
 for all $m$.
 
-Using the Lebesgue dominated convergence theorem, we get that
+Using the Lebesgue dominated convergence theorem, we get
 \begin{align*}
 \eta_{|\omega|}(V) &= \int_S \Chi_V \dx{\eta_{|\omega|}}
 = \lim_{m\to \infty} \int_S g_m \dx{\eta_{|\omega|}} \\
@@ -3416,7 +3416,7 @@ We may therefore use Proposition~\ref{propStokesTh} to obtain
 
 \stage{i} If $\eta_{\omega}$ is the measure associated to $\omega$
 given in Theorem~\ref{functCcSomg} with $S_r$ instead of $S$, then we
-get that
+get
 \begin{align}
 \left| \int_{S_r} \omega_j - \int_{S_r} \omega \right|
 &= \left| \int_{S_r}g_j \dx{\eta_{\omega}} - \int_{S_r} \dx{\eta_{\omega}} \right|
@@ -3469,7 +3469,7 @@ similar to proof given in (i).
 
 If $\eta_{\df{\omega}}$ is the measure associated to $\df{\omega}$
 given in Theorem~\ref{functCcSomg} with $S$, then we
-get that
+get
 \begin{align}
 \left| \int_S g_j \df{\omega} - \int_S \df{\omega} \right|
 &= \left| \int_{S_r}g_j \dx{\eta_{\df{\omega}}}
@@ -3718,7 +3718,7 @@ Finally, we prove that item (iv) is satisfied.  We note that
 Let $\displaystyle M = \max_{1\leq i \leq n}\, \sup_{\VEC{x} \in \RR^n}
 \left|\pdydx{\psi}{x_i}(\VEC{x})\right|$.  We have that $M < \infty$
 because $\displaystyle \pdydx{\psi}{x_i}(\VEC{x}) = 0$ for
-$\|\VEC{x}\| \leq 1/2$ or $\|\VEC{x}\|\geq 1$.  We get that
+$\|\VEC{x}\| \leq 1/2$ or $\|\VEC{x}\|\geq 1$.  We get
 \[
 \left|\pdfdx{ \psi\left(p\left(\VEC{x} - (2p)^{-1}\VEC{z}\right)\right)}{x_i}
 \right| = p \left|\pdydx{\psi}{x_i}\left(p\left(\VEC{x} - (2p)^{-1}
@@ -3804,7 +3804,7 @@ We may assume that
 \wedge \ldots \wedge \df{x_n} \ ,
 \]
 where $f_s:G \to \RR$ for $1\leq s \leq n$ are continuous.
-We also have that
+We also have
 \[
   \df{g_p} = \sum_{s=1}^n \pdydx{g_p}{x_s} \df{x_s}
 \]
@@ -4183,7 +4183,7 @@ that from the previous example.  It follows that
 \]
 for all $(\VEC{u}, \VEC{x})$ in $\TS_{\VEC{u}} C$ and
 $\displaystyle \VEC{q} \in \RR^3$.
-With $\VEC{q} = \VEC{e}_i$ for $1\leq i \leq 3$, we get that
+With $\VEC{q} = \VEC{e}_i$ for $1\leq i \leq 3$, we get
 \[
 t_i(\VEC{u}) \dx{s}(\VEC{u})(\VEC{u},\VEC{x})
 = \ps{\VEC{e}_i}{\VEC{x}} = x_i
@@ -4281,7 +4281,7 @@ $[(\VEC{u},\VEC{v}_1),(\VEC{u},\VEC{v}_2)]=\mu_{\VEC{u}}$; namely,
 such that
 $[\VEC{n}_{\VEC{u}},(\VEC{u},\VEC{v}_1),(\VEC{u},\VEC{v}_2)]
 = [(\VEC{u},\VEC{e}_1),(\VEC{u},\VEC{e}_2),(\VEC{u},\VEC{e}_3)]$.
-By definition of the cross product, we also have that
+By definition of the cross product, we also have
 \[
 \nu(\VEC{u})\big((\VEC{u},\VEC{x}_1),(\VEC{u},\VEC{x}_2)\big)
 = \ps{\VEC{x}_1 \times \VEC{x}_2}{\VEC{n}(\VEC{u})}
@@ -4291,7 +4291,7 @@ where $\ps{}{}$ is the standard inner product on $\displaystyle \RR^3$.
 
 To prove that $\nu$ is a continuous differential $2$-form on $S$, 
 we consider an orientation preserving local chart $(W,U,\phi)$ of $S$. 
-Since $\phi$ is orientation preserving, we have that
+Since $\phi$ is orientation preserving, we have
 \[
 \left[ \left( \phi(\VEC{w}), \diff \phi(\VEC{w})\, \VEC{e}_1 \right) ,
   \left( \phi(\VEC{w}), \diff \phi(\VEC{w})\, \VEC{e}_2\right) )\right]
@@ -4379,7 +4379,7 @@ n_1 \dx{A} = \df{x_2}\wedge\df{x_3} \ ,
 
 \begin{proof}
 For all $(\VEC{u}, \VEC{v}_1)$ and $(\VEC{u}, \VEC{v}_2)$ in
-$\TS_{\VEC{u}} S$, we have that
+$\TS_{\VEC{u}} S$, we have
 \begin{align*}
 &\dx{A}(\VEC{u})\big((\VEC{u}, \VEC{v}_1),(\VEC{u}, \VEC{v}_2)\big)
 = \det \begin{pmatrix} \VEC{v}_1 & \VEC{v}_2 & \VEC{n}(\VEC{u})
@@ -4626,7 +4626,7 @@ when each $(\VEC{u},\VEC{y}_j)$ is one of $\displaystyle (\VEC{u},\VEC{v}_i)$
 for $1 \leq i \leq n-1$.  If two $(\VEC{u},\VEC{y}_j)$ are equal
 to the same $(\VEC{u},\VEC{v}_i)$, then both sides of (\ref{RiOEq1})
 are null.  Therefore, we may assume that the $(\VEC{u},\VEC{y}_j)$ are
-distinct.  We have that
+distinct.  We have
 \[
 (\diff \rho(\VEC{u})) \VEC{v}_j
 = \begin{pmatrix}
@@ -4673,7 +4673,7 @@ Moreover
 because $\VEC{u}$ is orthogonal to $\VEC{v}_j$ for $1\leq j \leq n-1$.
 Therefore $\displaystyle (\diff \rho(\VEC{u})) \VEC{v}_j
 = \|\VEC{u}\|^{-1} \VEC{v}_j$ for $1\leq j \leq n-1$.
-Hence, for any permutation $\sigma \in S_{n-1}$, we have that
+Hence, for any permutation $\sigma \in S_{n-1}$, we have
 \begin{align*}
 & \rho^\ast(\nu)(\VEC{u})\big((\VEC{u},\VEC{v}_{\sigma(1)}),
 \ldots,(\VEC{u},\VEC{v}_{\sigma(n-1)})\big)
@@ -4778,7 +4778,7 @@ the retraction previously defined and
 $\displaystyle N: \RR^n \setminus \{\VEC{0}\} \to ]0,\infty[$ is defined
 by $N(\VEC{x}) = \|\VEC{x}\|$ for
 $\displaystyle \VEC{x} \in \RR^n \setminus \{\VEC{0}\}$.  Using the
-previous proposition, we have that
+previous proposition, we have
 \begin{align*}
 &h^\ast\left(\pi_S^\ast(\nu) \wedge \pi_I^\ast(\df{r})\right)(\VEC{x})
 = (\pi_S\circ h)^\ast(\nu)(\VEC{x}) \wedge (\pi_I\circ h)^\ast(\df{r})(\VEC{x})

@@ -126,7 +126,7 @@ and $\displaystyle \sum_{i=0}^\infty V(V_i) < \epsilon$.
 Since $K$ is compact, there exists a finite subcover
 $\displaystyle \{V_{i_j}\}_{0\leq j \leq N}$ such that
 $\displaystyle K \subset \bigcup_{j=0}^N V_{i_j}$.  We obviously
-have that
+have
 $\displaystyle \sum_{j=0}^N V(V_{i_j}) \leq \sum_{i=0}^\infty V(V_i) <
 \epsilon$.  Since $\epsilon$ is arbitrary, this shows that $K$ has zero
 content.
@@ -255,14 +255,14 @@ $B_\delta(\VEC{x}) \cap R \subset R \setminus Z_\epsilon$ to
 prove that $R \setminus Z_\epsilon$ is open.
 
 Given $\VEC{y} \in B_\delta(\VEC{x}) \cap R$, choose
-$\delta_y < \delta - \|\VEC{x} - \VEC{y}\|$.  We have that
+$\delta_y < \delta - \|\VEC{x} - \VEC{y}\|$.  We have
 $B_{\delta_y}(\VEC{y}) \subset B_\delta(\VEC{x})$.  Therefore,
 \[
   M(\VEC{y},f,\delta_y) - m(\VEC{y},f,\delta_y) <
   M(\VEC{x},f,\delta) - m(\VEC{x},f,\delta) < \epsilon \ .
 \]
 Since $M(\VEC{y},f,\delta_y) - m(\VEC{y},f,\delta_y) \geq 0$ decreases
-as $\delta_y$ decreases, we have that
+as $\delta_y$ decreases, we have
 $o(\VEC{y},f) < \epsilon$.  Thus $\VEC{y} \in R \setminus Z_\epsilon$.
 \end{proof}
 
@@ -329,7 +329,7 @@ $\VEC{x} \in R$.
 $R$ and therefore Riemann integrable on $R$.  Suppose that
 $Z \neq \emptyset$.
 
-Given $\epsilon >0$, we have that $Z_{\epsilon/(2V(R))} \subset Z$.
+Given $\epsilon >0$, we have $Z_{\epsilon/(2V(R))} \subset Z$.
 We may assume that $\epsilon$ is small enough to have
 $Z_{\epsilon/(2V(R))} \neq \emptyset$ because $Z \neq \emptyset$.  Since
 $Z_{\epsilon/(2V(R))}$ is closed
@@ -361,7 +361,7 @@ $\displaystyle M_{k_1,k_2,\ldots,k_n}
 = \sup \{ f(\VEC{x}) : \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \}$ and
 $\displaystyle m_{k_1,k_2,\ldots,k_n}
 = \inf \{ f(\VEC{x}) : \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \}$.
-We have that $M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n} < 2M$
+We have $M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n} < 2M$
 for every subrectangle $R_{k_1,k_2,\ldots,k_n}$ of the partition $P$. 
 Hence
 \begin{equation}\label{zeroEqu1}
@@ -440,7 +440,7 @@ V(\tilde{R}_{j_1,j_2,\ldots,j_n}) \\
 Since $\epsilon$ is arbitrary, it follows from the version of 
 Theorem~\ref{intCauchyCR} in $\displaystyle \RR^n$ that $f$ is integrable.
 
-\stage{$\Leftarrow$} We have that
+\stage{$\Leftarrow$} We have
 \[
   Z = \bigcup_{m=1}^\infty Z_{1/m} \ .
 \]
@@ -455,7 +455,7 @@ partition $P$ such that
 $\displaystyle R_{k_1,k_2,\ldots,k_n}^\circ \cap Z_{1/n} \neq \emptyset$.
 For each $R_{k_1,k_2,\ldots,k_n} \in S_1$, there is at least one
 point of $Z_{1/m}$ which is in the interior of $R_{k_1,k_2,\ldots,k_n}$.
-Therefore, we get that
+Therefore, we get
 $\displaystyle  M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n} \geq 1/m$
 for each $R_{k_1,k_2,\ldots,k_n} \in S_1$ \footnote{The condition
 $\displaystyle R_{k_1,k_2,\ldots,k_n} \cap Z_{1/m} \neq \emptyset$ is
@@ -475,7 +475,7 @@ Since
 V(R_{k_1,k_2,\ldots,k_n}) \\
 &\leq \U_P(f) - \LL_P(f) < \frac{\epsilon}{2m} \ ,
 \end{align*}
-we get that 
+we get
 \begin{equation}\label{multintzeroA}
   \sum_{R_{k_1,k_2,\ldots,k_n}\in S_1} V(R_{k_1,k_2,\ldots,k_n})
 < \frac{\epsilon}{2} \ .
@@ -565,7 +565,7 @@ collection of closed rectangles such that
 $\displaystyle Z \subset \bigcup_{i=0}^N R_i$ and
 $\displaystyle \sum_{i=0}^N V(R_i) < \epsilon$, then
 $\displaystyle \overline{Z} \subset \bigcup_{i=0}^N R_i$ and we still
-have that $\displaystyle \sum_{i=0}^N V(R_i) < \epsilon$.}.
+have $\displaystyle \sum_{i=0}^N V(R_i) < \epsilon$.}.
 Hence $\overline{Z}$ has measure zero.  It then follows from
 Theorem~\ref{Rexists} that $\Chi_Z h$ is integrable on $R$.
 
@@ -576,7 +576,7 @@ $\displaystyle Z \subset \bigcup_{i=0}^N R_i$ and
 $\displaystyle \sum_{i=0}^N V(R_i) < \frac{\epsilon}{M-m}$.
 
 Choose a partition $P$ of $R$ such that the vertices of all the
-rectangles $R_i$ are included in $P$.  We then have that
+rectangles $R_i$ are included in $P$.  We then have
 $\displaystyle M_{k_1,k_2,\ldots,k_n} = \sup \{ \Chi_Z(\VEC{x}) h(\VEC{x}) :
  \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \} =0$ and
 $\displaystyle m_{k_1,k_2,\ldots,k_n} = \inf \{ \Chi_Z(\VEC{x}) h(\VEC{x}) :
@@ -640,7 +640,7 @@ Since $Z$ has measure zero, there exists a finite collection of
 open rectangles $\displaystyle \{ R_i\}_{0 \leq i \leq N}$ such that
 $\displaystyle Z \subset \bigcup_{i=0}^N R_i$ and
 $\displaystyle \sum_{i=0}^N V(R_i) < \delta$.
-We have that
+We have
 \[
 m_{k_1,k_2,\ldots,k_n} = \inf \{ \Chi_Z(\VEC{x})h^+(\VEC{x}) :
  \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \} = 0
@@ -683,8 +683,8 @@ zero content.  Then $\displaystyle \int_R f = \int_R g$.
 \end{cor}
 
 \begin{proof}
-Let $h=f-g$, we have that $h = \Chi_Z h$.  From the previous
-proposition, we get that
+Let $h=f-g$.  We have $h = \Chi_Z h$.  From the previous
+proposition, we get
 \[
 \int_R f - \int_R g = \int_R(f-g) = \int_R h = \int_R \Chi_Z h = 0 \ . \qedhere
 \]
@@ -885,7 +885,7 @@ then it follows from (\ref{fub2v2}) that
 \U_P(f) \geq \sum_{i=1}^N M_i (p_{i,1}-p_{i-1,1}) = \U_{P_1}(H) \ .
 \end{equation}
 
-\stage{iii} We have that
+\stage{iii} We have
 \begin{equation}\label{fub7}
 \LL_P(f) \leq \LL_{P_1}(h) \leq \U_{P_1}(h) \leq \U_{P_1}(H) \leq \U_P(f) \ .
 \end{equation}
@@ -908,12 +908,12 @@ $R$.  Thus $\LL(f) \leq \LL(h)$.  Similarly, we get from (\ref{fub7})
 that $\U(h) \leq \U_{P_1}(h) \leq \U_P(f)$ for all partitions $P$ of $R$.
 Thus $\U(h) \leq \U(f)$.  We have shown that
 $\LL(f) \leq \LL(h) \leq \U(h) \leq \U(f)$.  Since $f$ is integrable on
-$R$, we have that $\displaystyle \LL(f) = \U(f) = \int_R f$.  Hence
+$R$, we have $\displaystyle \LL(f) = \U(f) = \int_R f$.  Hence
 \[
 \int_{I_1} h(x_1) \dx{x_1} = \LL(h) = \U(h) = \LL(f) = \U(f) = \int_R f \ .
 \]
 
-\stage{iv} Similarly to (iii), we have that
+\stage{iv} Similarly to (iii), we have
 \begin{equation}\label{fub7v2}
 \LL_P(f) \leq \LL_{P_1}(h) \leq \LL_{P_1}(H) \leq \U_{P_1}(H) \leq \U_P(f) \ .
 \end{equation}
@@ -937,7 +937,7 @@ $R$.  Thus $\U(f) \geq \U(H)$.  Similarly, we get from (\ref{fub7v2})
 that $\LL(H) \geq \LL_{P_1}(H) \geq \LL_P(f)$ for all partitions $P$ of $R$.
 Thus $\LL(H) \geq \LL(f)$.  We have shown that
 $\LL(f) \leq \LL(H) \leq \U(H) \leq \U(f)$.  Since $f$ is integrable on
-$R$, we have that $\displaystyle \LL(f) = \U(f) = \int_R f$.  Hence
+$R$, we have $\displaystyle \LL(f) = \U(f) = \int_R f$.  Hence
 \[
 \int_{I_1} H(x_1) \dx{x_1} = \LL(H) = \U(H) = \LL(f) = \U(f) = \int_R f \ .
 \qedhere
@@ -1003,7 +1003,7 @@ As usual, let $R_{i,j} = [p_{i-1,1},p_{i,1}]\times [p_{j-1,2},p_{j,2}]$ for
 $1\leq i \leq N_1$ and $1\leq j \leq N_2$,
 $m_{i,j} = \inf \{ f(x_1,x_2) : (x_1,x_2) \in R_{i,j}\}$
 and $M_{i,j} = \sup \{ f(x_1,x_2) : (x_1,x_2) \in R_{i,j}\}$.
-We have that $M_{i,j} - m_{i,j} \leq 1$ for all $i$ and $j$.
+We have $M_{i,j} - m_{i,j} \leq 1$ for all $i$ and $j$.
 Moreover, $M_{i,j} - m_{i,j} \leq 1/q \leq 1/q_0$ if
 $a_k \not\in [p_{i-1},p_i]$ for all $k$.  Hence
 \begin{align}
@@ -1018,7 +1018,7 @@ where the first sum is over all subrectangles $R_{i,j}$ such that
 $a_k \not\in [x_{i-1,1},x_{i,1}]$ for all $k$, and the second sum is over all
 subrectangles $R_{i,j}$ such that $a_k \in [x_{i-1,1},x_{i,1}]$ for some $k$.
 
-We have that
+We have
 $\displaystyle \sum\nolimits' \frac{1}{q_0} (p_{i,1}-p_{i-1,1})(p_{j,2}-p_{j-1,2})
 < \frac{\epsilon}{2}$ because
 $\displaystyle \frac{1}{q_0} < \frac{\epsilon}{2}$ and
@@ -1029,7 +1029,7 @@ $\displaystyle \frac{1}{q_0} < \frac{\epsilon}{2}$ and
 \]
 the area of the rectangle $S$.  Moreover, since there are at most
 $q_0(q_0+1)/2$ intervals $[p_{i-1,1},p_{i,1}]$ containing some $a_k$,
-we also have that
+we also have
 \begin{align*}
 \sum\nolimits'' (p_{i,1}-p_{i-1,1})(p_{j,2}-p_{j-1,2}) &\leq
 \frac{q_0(q_0+1)}{2} \max_{1\leq i \leq N_1} (p_{i,1} - p_{i-1,1})
@@ -1066,7 +1066,7 @@ cannot define a Riemann integrable function on $[0,1]$.
 
 \stage{iii} We cannot use (1) above to define an iterated integral for
 $\displaystyle \int_S f$.  However, Fubini's Theorem can be used.
-We have that
+We have
 \[
 h(x_1) =
 \begin{cases}
@@ -1092,7 +1092,7 @@ Let
 I_{i,j,k} = \left[ \frac{j-1}{2^i}, \frac{j}{2^i}\right] \times
 \left[ \frac{k-1}{2^i}, \frac{k}{2^i}\right]
 \]
-for $\displaystyle 0 <j,k \leq 2^i$.  For each $i>0$, we have that
+for $\displaystyle 0 <j,k \leq 2^i$.  For each $i>0$, we have
 $\displaystyle S = \bigcup_{0<j,k\leq 2^i} I_{i,j,k}$.
 For $i=1$, the set $S$ is the union of four squares; namely,
 \[
@@ -1133,8 +1133,8 @@ However $x_2 \mapsto \chi_Q(x_1,x_2)$ is Riemann integrable on $I$ for all
 $x_1\in I$ because $\Chi_Q(x_1,x_2) = 0$ for all $x_2\in I$ but at
 most one point.  Since
 $\displaystyle \int_I \chi_Q(x_1,x_2) \dx{x_2} = 0$ for all $x_1\in I$, we get
-that $\displaystyle \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_2} \right)
-\dx{x_1}= 0$.  Similarly, we get that
+$\displaystyle \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_2} \right)
+\dx{x_1}= 0$.  Similarly, we get
 $\displaystyle \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_1} \right)
 \dx{x_2}= 0$.
 \end{enumerate}
@@ -1157,7 +1157,7 @@ $\displaystyle \VEC{x} \in V$ and all $\displaystyle j \in \NNp$.
 $W_{\VEC{x}} \subset V$ of $\VEC{x}$ such that
 $\displaystyle \phi_j\big|_{W_\VEC{x}} = 0$ for all but a finite
 number of $\phi_j$.
-\item For each $\VEC{x} \in W$, we have that
+\item For each $\VEC{x} \in W$, we have
 $\displaystyle \sum_{j \in \NNp} \phi_j(\VEC{x}) = 1$.  This sum
 is finite according to (2).
 \item For each $\displaystyle j \in \NNp$, we have that
@@ -1193,7 +1193,7 @@ e^{-1/(r_{\VEC{x}_k,2}^2 - \|\VEC{x} - \VEC{x}_k\|^2)}
 \end{cases}
 \end{align*}
 for $\displaystyle \VEC{x} \in \RR^n$.
-We have that $\displaystyle \psi_k \in C^\infty(\RR^n)$,
+We have $\displaystyle \psi_k \in C^\infty(\RR^n)$,
 $0 \leq \psi_k(\VEC{x}) \leq 1$ for all $\displaystyle \VEC{x} \in \RR^n$,
 $\psi_k(\VEC{x}) = 1$ for all $\VEC{x} \in B_{r_{\VEC{x}_k,1}}(\VEC{x}_k)$,
 and
@@ -1205,7 +1205,7 @@ $\displaystyle \phi_{j+1} = \psi_{j+1}\prod_{k=1}^j(1-\psi_k)$
 for $1 <j < M$.
 
 \begin{enumerate}
-\item We have that
+\item We have
 $0 \leq \phi_j(\VEC{x}) \leq 1$ for all
 $\displaystyle \VEC{x} \in \RR^n$ and $1 \leq j \leq M$ because
 $\phi_j$ is the product of functions whose image is in $[0,1]$.
@@ -1221,7 +1221,7 @@ for all $\VEC{x} \in W$, we first prove by induction that
 \end{equation}
 for $1 \leq m \leq M$.  We obviously have that (\ref{thPofUEq1}) is
 true for $m=1$.  Assume that (\ref{thPofUEq1}) is true for $m<M$.
-Using the hypothesis of induction, we get that
+Using the hypothesis of induction, we get
 \begin{align*}
 \sum_{j=1}^{m+1} \phi_j &= \sum_{j=1}^m \phi_j + \phi_{m+1}
 = 1 - \prod_{j=1}^m(1-\psi_j) + \psi_{m+1}\prod_{j=1}^m(1-\psi_j) \\
@@ -1241,7 +1241,7 @@ for all $\VEC{x} \in W$.
 \item Since $\supp \phi_j \subset \supp \psi_j \subset
 \overline{B_{r_{\VEC{x}_j,2}}(\VEC{x}_j)}$, we have that
 $\supp \phi_j$ is a compact set because it is closed and bounded.
-We also have that $\supp \phi_j \subset U_{\alpha_j}$.
+We also have $\supp \phi_j \subset U_{\alpha_j}$.
 \end{enumerate}
 All the conclusions of the theorem are satisfied by the collection
 $\displaystyle \{\phi_j\}_{1 \leq j \leq M}$.
@@ -1315,7 +1315,7 @@ $\displaystyle \VEC{x} \in V$, $j \geq 1$ and $1 \leq k \leq N_j$.
 $W_{\VEC{x}} \subset V$ of $\VEC{x} \in W$
 such that $\rho_{k,j}\big|_{W_\VEC{x}} = 0$ for all but a finite
 number of the $\rho_{k,j}$.  More precisely, given
-$\VEC{x} \in W$, we have that $\VEC{x} \in V_j$ for some $j$.
+$\VEC{x} \in W$, we have $\VEC{x} \in V_j$ for some $j$.
 Since $\rho_{k,q}(\VEC{y}) = 0$ for all
 $\VEC{y} \in W_{j+1}^\circ \setminus W_{j-2}$ if $q<j-2$ and $q>j+1$,
 it suffices to choose an open neighbourhood
@@ -1621,7 +1621,7 @@ unity subordinate to $\displaystyle \{U_{\alpha}\}_{\alpha\in A}$.
 Since $W$ is bounded, $W$ is contained in a closed and bounded rectangle $K$.
 Since $f$ is Riemann integrable, $f$ is bounded and thus
 $M = \sup \{ f(\VEC{x}) : \VEC{x} \in W \} < \infty$.  For every finite subset
-$\displaystyle Q \subset \NNp$, we have that
+$\displaystyle Q \subset \NNp$, we have
 \[
 \sum_{j \in Q} \rint_W \phi_j |f| \leq
 M \sum_{j \in Q} \rint_W \phi_j = M \rint_W \sum_{j\in Q} \phi_j \leq
@@ -1665,7 +1665,7 @@ to find $K$, we use a partition $P$ of a rectangle $R$ containing $W$
 such that $\displaystyle \LL(\Chi_W) - \LL_P(\Chi_W) < \epsilon/M$.  Note that
 $\Chi_W$ is integrable because $W$ is a Jordan measurable set and so
 the set of points $\partial W$ where $\Chi_W$ is discontinuous has
-measure zero.   We have that
+measure zero.   We have
 \[
   \LL_P(\Chi_W) = \sum_{R_{k_1,k_2,\ldots,k_n} \subset W}
   V(R_{k_1,k_2,\ldots,k_n})
@@ -1704,7 +1704,7 @@ $\phi_j$ such that $\displaystyle \phi_j\big|_K \neq 0$.
 Let $\displaystyle Q\subset \NNp$ be the set of
 indices $\displaystyle j \in \NNp$ such that
 $\phi_j\big|_K \neq 0$.  Then, for any finite set
-$\displaystyle G \subset \NNp$ such that $Q\subset G$, we have that
+$\displaystyle G \subset \NNp$ such that $Q\subset G$, we have
 \begin{align*}
 &\left| \rint_W f  - \sum_{j\in G} \rint_W \phi_j f  \right|
 = \left| \rint_W f \left( 1 - \sum_{j \in G} \phi_j \right) \right|
@@ -1725,12 +1725,12 @@ for all $\VEC{x}\in K$ because the other $\phi_j$ are null on
 $K$.  In particular, this last inequality implies that
 $\displaystyle 1 - \sum_{j\in Q} \phi_j(\VEC{x})$ may be
 non zero only if $\VEC{x} \in W\setminus K$.  Since
-$\displaystyle G\subset \NNp$ with $Q \subset G$ is arbitrary, we get that
+$\displaystyle G\subset \NNp$ with $Q \subset G$ is arbitrary, we get
 \[
 \left| \rint_W f  - \sum_{j \in \NNp} \rint_W \phi_j f  \right|
 \leq \epsilon \ .
 \]
-Since $\epsilon$ is arbitrary, we get that
+Since $\epsilon$ is arbitrary, we get
 \[
 \rint_W f  = \sum_{j \in \NNp} \rint_W \phi_j f  = \int_W f \ .
 \qedhere
@@ -1830,7 +1830,7 @@ Thus $R_i \subset Q_{j+1}^\circ$ for all $i$.
 \pdfbox{mult_integrals/measurefC1}
 Using the Mean Value Theorem for functions from
 $\displaystyle \RR^n$ to $\displaystyle \RR^n$ (Theorem 9.19 in \cite{R}),
-we have that
+we find that
 $\| f(\VEC{x}) - f(\VEC{y}) \| \leq M \|\VEC{x} - \VEC{y} \|$
 for all $\VEC{x}, \VEC{y} \in R_i$ and all $i$.  It follows that
 \[
@@ -1839,7 +1839,7 @@ for all $\VEC{x}, \VEC{y} \in R_i$ and all $i$.  It follows that
 for all $i$.  Thus, each $\displaystyle f(R_i)$ is a subset of a
 square $\displaystyle S_i \subset \RR^n$ with edges of length
 $\sqrt{n}\, M d_i$.  The volume of $S_i$ is
-$\displaystyle V(S_i) = n^{n/2} M^n d_i^n$.  We have that
+$\displaystyle V(S_i) = n^{n/2} M^n d_i^n$.  We have
 \[
 f(Z) \subset f\left(\bigcup_{i=1}^\infty R_i\right)
 = \bigcup_{i=1}^\infty f(R_i) \subset \bigcup_{i=1}^\infty S_i
@@ -1948,7 +1948,7 @@ $f:g(W) \to [0,\infty[$ with compact support.
 
 Given a Riemann integrable function $h: g(W) \to \RR$ with compact support, let
 $\displaystyle h^+ = (h + |h|)/2$ and $\displaystyle h^- = (|h|-h)/2$.
-We have that $\displaystyle h = h^+ - h^-$
+We have $\displaystyle h = h^+ - h^-$
 with $\displaystyle h^+(\VEC{x}) \geq 0$ and
 $\displaystyle h^-(\VEC{x}) \geq 0$ for all
 $\VEC{x} \in g(W)$.  Moreover, since $h:g(W)\to \RR$ and
@@ -2015,7 +2015,7 @@ $\displaystyle m_{k_1,k_2,\ldots,k_n}
 Note that $m_{k_1,k_2,\ldots,k_n} = 0$ if
 $R_{k_1,k_2,\ldots,k_n} \cap (R \setminus \supp f) \neq \emptyset$.
 
-We have that
+We have
 \begin{align}
 \LL_P(f) &= \sum_{R_{k_1,k_2,\ldots,k_n} \subset g(W)}
 m_{k_1,k_2,\ldots,k_n} V(R_{k_1,k_2,\ldots,k_n}) \nonumber \\
@@ -2078,7 +2078,7 @@ $k_1$, $k_2$,\ldots, $k_n$.  Therefore
 $R_{k_1,k_2,\ldots,k_n} \subset g(W)$ for all indices
 such that $R_{k_1,k_2,\ldots,k_n} \cap K \neq \emptyset$.
 
-We have that
+We have
 \begin{align}
 \U_P (f) &= \sum_{R_{k_1,k_2,\ldots,k_n} \cap \supp f \neq \emptyset}
 M_{k_1,k_2,\ldots,k_n} V(R_{k_1,k_2,\ldots,k_n}) \nonumber \\
@@ -2104,7 +2104,7 @@ $\displaystyle f \leq \sum_{R_{k_1,k_2,\ldots,k_n} \cap \supp f \neq \emptyset}
 M_{k_1,k_2,\ldots,k_n} \Chi_{R_{k_1,k_2,\ldots,k_n}}$.
 
 Since (\ref{cov15}) is true for all fine enough partition $P$ of $R$,
-we get that
+we get
 \[
 \rint_{g(W)} f  = \U(f) \geq \rint_{W} (f \circ g) |\det\diff g| \ .
 \]
@@ -2358,7 +2358,7 @@ Q_1:W & \to \RR^k \\
 & \tilde{g}_{k-1}(\VEC{x}) & x_k
 \end{pmatrix}^\top
 \end{align*}
-We have that
+We have
 \begin{equation} \label{cov20}
 \diff Q_1(\VEC{x}) =
 \begin{pmatrix}
@@ -2372,7 +2372,7 @@ We have that
 0 & 0 & \ldots & 1
 \end{pmatrix} \ .
 \end{equation}
-In particular, we have that 
+In particular, we have
 \begin{equation} \label{cov20Eq1}
 \diff Q_1(\VEC{a}) =
 \begin{pmatrix}
@@ -2396,7 +2396,7 @@ Q_2:Q_1(U_1) & \to \RR^k \\
 x_1 & x_2 & \ldots & x_{k-1} & \tilde{g}_k(Q_1^{-1}(\VEC{x}))
 \end{pmatrix}^\top
 \end{align*}
-We have that
+We have
 \begin{equation} \label{cov35}
 \diff Q_2(\VEC{x}) =
 \begin{pmatrix}
@@ -2409,7 +2409,7 @@ We have that
 \displaystyle \pdfdx{(\tilde{g}_k \circ Q_1^{-1})}{x_k}(\VEC{x})
 \end{pmatrix} .
 \end{equation}
-Using the Inverse Function Theorem for $Q_1$, we get that
+Using the Inverse Function Theorem for $Q_1$, we get
 \[
 \diff (\tilde{g}_k \circ Q_1^{-1}) (Q_1(\VEC{a})) = \diff \tilde{g}_k(\VEC{a})
 \diff Q_1^{-1}(Q_1(\VEC{a})) = \diff \tilde{g}_k(\VEC{a})
@@ -2455,7 +2455,7 @@ Suppose that $R = R_1 \times [a,b]$ where
 $\displaystyle R_1 \subset \RR^{k-1}$ is a closed
 rectangle such that $R_1\times [a,b] \subset Q_1(U_1)$.
 
-From Fubini's Theorem, we get that
+From Fubini's Theorem, we get
 \[
 \rint_R  = \rint_{[a,b]} \left(
 \rint_{R_1}  \dx{\VEC{y}}\right) \dx{x_k} \ .
@@ -2484,7 +2484,7 @@ for all $\displaystyle (\VEC{y},x_k)\in U_1$ follows
 from (\ref{cov20}) and $\det \diff Q_1(\VEC{x}) \neq 0$ for all
 for all $\VEC{x} \in U_1$.  Therefore $Q_{1,x_k}$ satisfies
 Proposition~\ref{cov8} in dimension $k-1$ for all $x_k \in [a,b]$.
-Hence, by our hypothesis of induction, we have that
+Hence, by our hypothesis of induction, we have
 \[
 \rint_{R_1} \dx{\VEC{y}}
 = \rint_{Q_{1,x_k}^{-1}(R_1)} \left|\det \diff_{\VEC{y}}
@@ -2534,7 +2534,7 @@ Suppose that $R = R_1 \times [a,b]$ where
 $\displaystyle R_1 \subset \RR^{k-1}$ is a closed
 rectangle such that $R_1\times [a,b] \subset Q_2(U_2)$.
 
-From Fubini's Theorem, we have that
+From Fubini's Theorem, we have
 \[
 \rint_R = \rint_{R_1} \left(
 \rint_{[a,b]} \dx{x_k} \right) \dx{\VEC{y}} \ .
@@ -2557,7 +2557,7 @@ for all $x_k \in [a,b]$ follows from (\ref{cov35}) and
 $\det \diff Q_2(\VEC{x}) \neq 0$ for all $\VEC{x} \in U_2$.
 Therefore $Q_{2,\VEC{y}}$ satisfies
 Proposition~\ref{cov8} in dimension $1$ for all $\VEC{y} \in R_1$.
-Hence, by our hypothesis of induction, we have that
+Hence, by our hypothesis of induction, we have
 \[
 \rint_{[a,b]} \dx{x_k}
 = \rint_{Q_{2,\VEC{y}}^{-1}([a,b])} \left| \det \diff_{x_k} Q_{2,\VEC{y}}(x_k)
@@ -2568,7 +2568,7 @@ Hence, by our hypothesis of induction, we have that
 for all $\VEC{y} \in R_1$ because
 $\displaystyle \det \diff Q_2 (\VEC{y},x_k) =
 \diff_{x_k} Q_{2,\VEC{y}}(x_k)$ for all $(\VEC{y},x_k) \in U_2$
-according to (\ref{cov35}).  Hence,
+according to (\ref{cov35}).  Hence
 \[
 \rint_R h  = \rint_{R_1} \left(
 \rint_{Q_{2,\VEC{y}}^{-1}([a,b])} 
@@ -2619,7 +2619,7 @@ We may also apply (iii.b) to $h$ to get
 \rint_{U_2} (h \circ Q_2) |\det \diff Q_2|
 = \rint_{Q_2(U_2)} h = \rint_{Q_2(Q_1(U_1))} h = \rint_{\tilde{g}(U_1)} h \ .
 \]
-Combining the last two equations, we get that
+Combining the last two equations, we get
 \begin{equation} \label{covXEq1}
 \rint_{U_1} (h\circ \tilde{g})\, |\det \tilde{g}| = \rint_{\tilde{g}(U_1)} h \ .
 \end{equation}
@@ -2833,7 +2833,7 @@ Mean Value Theorem for $1 \leq j \leq n$.  Hence
 = \left( \sum_{i=1}^n |g_i(\VEC{y}) - g_i(\VEC{x})|^2 \right)^{1/2}
 \leq \epsilon \|\VEC{y} -\VEC{x}\|
 \end{equation}
-for all $\VEC{y} \in R_{k_1,k_2,\ldots,k_n}$.  We get that
+for all $\VEC{y} \in R_{k_1,k_2,\ldots,k_n}$.  We get
 \begin{equation}  \label{sardEq1}
 \left\| (\diff f(\VEC{x})) (\VEC{y} - \VEC{x}) - (f(\VEC{y}) -
 f(\VEC{x})) \right\| = \left\| g(\VEC{y}) - g(\VEC{x}) \right\|
@@ -2857,7 +2857,7 @@ compact set $R$ for $1\leq i, j \leq n$, they all reach their maximum
 on $R$.  Thus, there exists $M>0$ such that
 $\displaystyle \left| \pdydx{f_i}{x_j}(\VEC{z})\right| \leq M$ for all
 $\VEC{z} \in R$ and $1\leq i, j \leq n$.  Proceeding as we did for
-(\ref{sardEq2}) and (\ref{sardEq3}) with $f$ instead of $g$, we get that
+(\ref{sardEq2}) and (\ref{sardEq3}) with $f$ instead of $g$, we get
 $|f_i(\VEC{x}) - f_i(\VEC{y})| \leq M\sqrt{n}\, \|\VEC{x} - \VEC{y}\|$ and
 $\displaystyle \|f(\VEC{x})- f(\VEC{y})\| \leq M n \|\VEC{x} - \VEC{y}\|
 \leq (M n^{3/2} L)/N$ for all $\VEC{y} \in R$.
@@ -3036,7 +3036,7 @@ and
 \]
 It follows from (\ref{airunderf}) that
 $\displaystyle \left| A(S) - \int_a^b f(x)\dx{x} \right| < \epsilon$.
-Since $\epsilon$ is arbitrary, we get that
+Since $\epsilon$ is arbitrary, we get
 $\displaystyle A(S) = \int_a^b f(x)\dx{x}$.
 \end{sol}
 
@@ -3094,7 +3094,7 @@ to prove.  For each rectangle $R_{i,j} \subset S$, we construct a rectangle
 $\displaystyle \breve{R}_{i,j} \subset R_{i,j}^\circ \subset S^\circ$ by
 shrinking the rectangle $R_{i,j}$ by a factor of
 $\sqrt{1-\delta}$ in both directions.
-We have that $A(\breve{R}_{i,j}) = (1-\delta) A(R_{i,j})$ and
+We have $A(\breve{R}_{i,j}) = (1-\delta) A(R_{i,j})$ and
 $\breve{m}_{i,j}= \inf \{ \Chi_{S^\circ}(x,y) : (x,y) \in \breve{R}_{i,j}\}
 = m_{i,j}(S) = 1$ for all $R_{i,j} \subset S$.
 
@@ -3115,12 +3115,12 @@ only one of the $\tilde{R}_{r,s}$.  Therefore,
 \end{align*}
 Since this relation is true for all refinements
 $\{\tilde{P},\tilde{Q}\}$ of the partitions $\{P,Q\}$ containing the
-$\breve{R}_{i,j}$, we get that
+$\breve{R}_{i,j}$, we get
 \[
   \LL(\Chi_{S^\circ}) \geq \left( 1 - \frac{\epsilon}{ \LL(\Chi_S)}\right)
 \LL_{\{P.Q\}}(\Chi_S) \ .
 \]
-Since this relation is true for all partitions $\{P,Q\}$ of $R$, we get that
+Since this relation is true for all partitions $\{P,Q\}$ of $R$, we get
 \[
   \LL(\Chi_{S^\circ}) \geq \left( 1 - \frac{\epsilon}{ \LL(\Chi_S)}\right)
 \LL(\Chi_S) = \LL(\Chi_S) - \epsilon \ .
@@ -3162,7 +3162,7 @@ usual, we assume that $P=\{p_i: 0 \leq i \leq N\}$ and
 $Q=\{q_j:0 \leq j \leq M\}$, and let
 $R_{i,j} = \{(x,y) : p_{i-1}\leq x \leq p_i\ \text{and}
 \ q_{j-1} \leq y \leq q_j\}$ for $0 < i \leq N$ and $0 < j \leq M$.
-We have that
+We have
 \[
 M_{i,j}(V) = \sup \{ \Chi_V(x,y) : (x,y) \in R_{i,j} \}
 = \begin{cases}
@@ -3191,7 +3191,7 @@ Hence
 \end{align*}
 where the first equality is a consequence of the result of
 Question~\ref{outerarea}.  Since this is true for all
-partitions $\{P,Q\}$ of $R$, we get that
+partitions $\{P,Q\}$ of $R$, we get
 $\displaystyle \U(\Chi_S) \leq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
 
 \stage{ii} We now prove that
@@ -3219,11 +3219,11 @@ Then
 where the first equality is again a consequence of the result of
 Question~\ref{outerarea}.
 Since this is true for any refinement $\{P,Q\}$ of
-$\{\tilde{P},\tilde{Q}\}$, we get that
+$\{\tilde{P},\tilde{Q}\}$, we get
 $\displaystyle \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) - \epsilon +
 \U(\Chi_{\partial S})$.
 Since this last inequality is true for all $\epsilon >0$, we finally
-get that
+get
 $\displaystyle \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
 \end{sol}
 
@@ -3249,7 +3249,7 @@ $m$ and $M$ are real number because $f$ is continuous on the compact set
 $S$.  In fact, $m=f(\VEC{x}_1)$ and $M=f(\VEC{x}_2)$ for some $\VEC{x}_1$ and
 $\VEC{x}_2$ in $S$.
 
-Since $m \leq f(\VEC{x}) \leq M$ for all $\VEC{x} \in S$, we get that
+Since $m \leq f(\VEC{x}) \leq M$ for all $\VEC{x} \in S$, we get
 \[
 m \int_S g(\VEC{x}) \dx{\VEC{x}} \leq 
 \int_S g(\VEC{x})f(\VEC{x}) \dx{\VEC{x}} \leq
@@ -3329,7 +3329,7 @@ bounded on $S$.  For instance,
 $\displaystyle f(z/2,z) = 1/z^2 \to \infty$ as $z \to 0$
 and $\displaystyle f(z,z/2) = -1/z^2 \to -\infty$ as $z \to 0$.
 
-\subQ{b} For $y \in ]0,1[$ fixed, we have that
+\subQ{b} For $y \in ]0,1[$ fixed, we have
 \[
 f_y(x) = f(x,y) =
 \begin{cases}
@@ -3338,9 +3338,9 @@ y^{-2} & \quad \text{if}\ 0 < x < y < 1 \\
 0 & \quad \text{if}\ x = 0, y\ \text{or}\ 1
 \end{cases}
 \]
-$f_y$ is integrable because it is a bounded function and the set of
-points where $f_y$ is discontinuous is $\{0, y,1\}$ which is a set of
-zero content.  We have that
+The function $f_y$ is integrable because it is a bounded function and
+the set of points where $f_y$ is discontinuous is $\{0, y,1\}$ which
+is a set of zero content.  We have
 \begin{align*}
 \int_0^1 f(x,y) \dx{x} &= \int_0^1 f_y(x) \dx{x}
 = \int_0^y f_y(x) \dx{x} + \int_y^1 f_y(x) \dx{x} 
@@ -3353,7 +3353,7 @@ For $y = 0$ or $y = 1$, we have that
 $f_y(x) = f(x,y) = 0$ for $0 \leq x \leq 1$.
 Hence $f_y$ is integrable and $\displaystyle \int_0^1 f_y(x) \dx{x} = 0$.
 
-\subQ{c} For $x \in ]0,1[$ fixed, we have that
+\subQ{c} For $x \in ]0,1[$ fixed, we have
 \[
 f_x(y) = f(x,y) =
 \begin{cases}
@@ -3362,9 +3362,9 @@ y^{-2} & \quad \text{if}\ 0 < x < y < 1 \\
 0 & \quad \text{if}\ y = 0, x\ \text{or}\ 1
 \end{cases}
 \]
-$f_x$ is integrable because it is a bounded function and the set of
-points where $f_x$ is discontinuous is the set $\{0, x,1\}$ of zero
-content. We have that
+The function $f_x$ is integrable because it is a bounded function and
+the set of points where $f_x$ is discontinuous is the set $\{0, x,1\}$
+of zero content. We have
 \begin{align*}
 \int_0^1 f(x,y) \dx{y} &= \int_0^1 f_x(y) \dx{y}
 = \int_0^x f_x(y) \dx{y} + \int_x^1 f_x(y) \dx{y} 
@@ -3380,7 +3380,7 @@ Hence $f_x$ is integrable and $\displaystyle \int_0^1 f_x(y) \dx{y} = 0$.
 \subQ{d}
 Let $\displaystyle g(x) = \int_0^1 f_x(y) \dx{y}$ for $0 \leq x \leq 1$
 and $\displaystyle h(y) = \int_0^1 f_y(x) \dx{x}$ for $0 \leq y \leq 1$.
-We have that
+We have
 \[
 g(x) = \begin{cases}
 -1 & \quad \text{if} \ 0 < x <1 \\
@@ -3486,7 +3486,7 @@ y^2 = 2y \Rightarrow y(y-2) = 0 \Rightarrow y=0\ \text{or}\ y= 2 \ .
 We find the two intersection points $(0,0)$ and $(4,2)$.  We have
 drawn the region below.
 \pdfbox{mult_integrals/question1}
-We have that
+We have
 $\displaystyle I = \int_0^4 \int_{x/2}^{\sqrt{x}} (x^2 - \sqrt{y})\dx{y}\dx{x}
   = \int_0^2 \int_{y^2}^{2y} (x^2 - \sqrt{y}) \dx{x} \dx{y}$.
 We evaluate the second integral.
@@ -3735,7 +3735,7 @@ by the limits of integration?  Justify your answer.
 \begin{sol}
 The region delimited by the limits of integration is shown below.
 \pdfbox{mult_integrals/question13}
-We have that
+We have
 \begin{align*}
 \int_1^3 \int_1^{\sqrt{x^2-1}} f(x,y)\dx{y}\dx{x}
 &= \int_0^{\sqrt{2}} \int_1^{\sqrt{x^2+1}} f(x,y) \dx{y}\dx{x} +
@@ -3860,7 +3860,7 @@ to use polar coordinates to compute this integral.
 Let $x = r \cos(\theta)$ and $y= r\sin(\theta)$ for $0 \leq r \leq 2$
 and $0 \leq \theta \leq \pi$.  Since
 $\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
-we get that
+we get
 \begin{align*}
 I &= \int_0^2 \int_0^\pi \left(r\cos(\theta) + 3 r^3
 \sin^3(\theta)\right) r \dx{\theta} \dx{r} \\
@@ -3934,7 +3934,7 @@ independent eigenvectors $\VEC{v}_1$ and $\VEC{v}_2$ associated to
 $\lambda_1 = \lambda_2$.  We may select them (using Gram-Schmidt
 orthogonalization) such that they are orthonormal.
 Hence, with
-$R = \begin{pmatrix} \VEC{v}_1 & \VEC{v}_2\end{pmatrix}$, we have that
+$R = \begin{pmatrix} \VEC{v}_1 & \VEC{v}_2\end{pmatrix}$, we have
 $\displaystyle R^\top A R = \begin{pmatrix} \lambda_1 & 0 \\ 0 &
 \lambda_2 \end{pmatrix}$.
 
@@ -3946,7 +3946,7 @@ $\displaystyle \VEC{v}_2 =
 eigenvectors of $A$ associated to the eigenvalues $\lambda_1=3/2$ and
 $\lambda_2=1/2$ of $A$.  Thus, with
 $\displaystyle R = \begin{pmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\
-1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix}$, we get that
+1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix}$, we get
 $\displaystyle R^\top A R = \begin{pmatrix} 3/2 & 0 \\ 0 & 1/2 \end{pmatrix}$.
 Note that $\displaystyle R = \begin{pmatrix}
 \cos(\theta) & -\sin(\theta) \\ \sin(\theta) &
@@ -3980,7 +3980,7 @@ To determine the domain $D$ of $g$, we note that
 \end{align*}
 Hence $g$ maps
 $\displaystyle D = \left\{ (u,v) : \frac{3u^2}{2} + \frac{v^2}{2} \leq 1
-\right\}$ onto $S$.  We get that
+\right\}$ onto $S$.  We get
 \[
 \iint_S e^{-(x^2+xy+y^2)} = \iint_D e^{-(3u^2/2) - (v^2/2)} \ .
 \]
@@ -4365,7 +4365,7 @@ $\dx{z}\dx{y}\dx{x}$, $\dx{y}\dx{z}\dx{x}$ and $\dx{x}\dx{y}\dx{z}$.
 \begin{sol}
 The solid $S$ is represented in the following figure.
 \pdfbox{mult_integrals/question14}  
-We have that
+We have
 \begin{align*}
 \iiint_S f &=
 \int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
@@ -4412,7 +4412,7 @@ limits of integration is shown in the following figure.
 \pdfbox{mult_integrals/question16}
 $S$ is the solid in the quadrant $x,y,z \geq 0$ which is enclosed by
 the planes $x=0$, $y=0$ and $z=y$, and the surface
-$\displaystyle x=1-y^2$.  We have that
+$\displaystyle x=1-y^2$.  We have
 \[
 \iiint_S f =
 \int_0^1 \int_0^{\sqrt{1-x}} \int_0^y f(x,y,z) \dx{z} \dx{y} \dx{x}
@@ -4423,7 +4423,7 @@ f(x,y,z) \dx{y} \dx{z} \dx{x} \ .
 \subQ{b}
 The domain of integration is represented in the following figure.
 \pdfbox{mult_integrals/supp5}
-We have that
+We have
 \begin{align*}
 \displaystyle \int_0^2 \int_0^{1-x/2} \int_0^{x/2} f(x,y,z)\dx{z}\dx{y}\dx{x}
 &= \displaystyle \int_0^1 \int_{2z}^2 \int_0^{1-x/2} f(x,y,z)\dx{y}\dx{x}\dx{z}
@@ -4435,7 +4435,7 @@ f(x,y,z)\dx{x}\dx{y}\dx{z} \ .
 \subQ{f}
 The domain of integration is represented in the following figure.
 \pdfbox{mult_integrals/finalA}
-We have that
+We have
 \begin{align*}
 \int_{0}^{4} \int_{\sqrt{x}}^{2} \int_{0}^{2-y} f(x,y,z) \dx{z} \dx{y}\dx{x}
 &= \int_{0}^{2} \int_0^{2-y} \int_{0}^{y^2} f(x,y,z) \dx{x} \dx{z}\dx{y} \\
@@ -4446,13 +4446,13 @@ f(x,y,z) \dx{y}\dx{x}\dx{z} \ .
 \subQ{g}
 The domain of integration is represented in the figure below.
 \pdfbox{mult_integrals/supp2}
-We have that
+We have
 \[
 \int_0^2 \int_1^{2-x/2} \int_x^2 f(x,y,z)\dx{z}\dx{y}\dx{x}
 = \int_0^2 \int_0^z \int_1^{2-x/2} f(x,y,z) \dx{y}\dx{x}\dx{z} \ .
 \]
 The projection on the $y,z$ plane of the line of intersection of the planes
-$z=x$ and $y=2 - x/2$ is the line given by $z = 4 -2y$.  Hence, we get that
+$z=x$ and $y=2 - x/2$ is the line given by $z = 4 -2y$.  Hence, we get
 \begin{align*}
 & \int_0^2 \int_1^{2-x/2} \int_x^2 f(x,y,z)\dx{z}\dx{y}\dx{x}
 = \int_0^2 \int_1^{2-z/2} \int_0^z f(x,y,z) \dx{x}\dx{y}\dx{z} \\
@@ -4943,7 +4943,7 @@ spherical coordinates.
 The solid $S$ is represented in the following figure.
 \pdfbox{mult_integrals/midterm_2}
 On the intersection of the sphere $\displaystyle x^2+y^2+z^2=12$ and the cone
-$\displaystyle 3z^2 = x^2 + y^2$ where $z \geq 0$, we have that
+$\displaystyle 3z^2 = x^2 + y^2$ where $z \geq 0$, we have
 \[
 3z^2 = x^2 + y^2 = 12 - z^2 \Rightarrow 
 4z^2 = 12 \Rightarrow z= \pm \sqrt{3} \ .
@@ -4986,7 +4986,7 @@ The solid $S$ is represented in the following figure.
 \pdfbox{mult_integrals/extra2}
 On the intersection of the sphere $\displaystyle x^2+y^2+z^2=5$ and
 the paraboloid $\displaystyle 4z = x^2 + y^2$ where $z \geq 0$, we
-have that
+have
 \[
 4z = x^2 + y^2 = 5 - z^2 \Rightarrow  z^5+ 4z- 5= (z+5)(z-1) = 0
 \Rightarrow z= -5\ \text{or}\ z = 1 \ .
@@ -5104,7 +5104,7 @@ in our formal definition of improper integrals.
 Since
 $\displaystyle \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
   = r^2 \sin(\phi)$,
-we get that
+we get
 \begin{align*}
 &\iiint_{\RR^3} \frac{1}{1+x^2+y^2+z^2}
 = \lim_{q\to \infty} \int_0^q \int_0^\pi \int_0^{2\pi} 
@@ -5128,7 +5128,7 @@ We have that $\displaystyle S(q) = B_q(\VEC{0}) \cap \{ (x,y): x,y \geq 0\}
 \subset \RR^2$ in our formal definition of improper integrals.
 Since
 $\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
-we get that
+we get
 \begin{align*}
 \iint_{x,y>0} \frac{1}{(1+x^2+y^2)^3}
 &= \lim_{q\to \infty} \int_0^q  \int_0^{\pi/2} \frac{r}{(1+r^2)^3}
@@ -5149,7 +5149,7 @@ $q\to 0$.  We have that $\displaystyle S(q) = B_1(\VEC{0}) \setminus
 B_q(\VEC{0}) \subset \RR^3$ in our formal definition of improper
 integrals.  Since
 $\displaystyle \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
-= r^2 \sin(\phi)$, we get that
+= r^2 \sin(\phi)$, we get
 \begin{align*}
 &\iiint_{x^2+y^2+z^2<1} \frac{z^2}{(x^2+y^2+z^2)^{3/2}}
 = \lim_{q\to 0^+} \int_q^1 \int_0^\pi \int_0^{2\pi} r\cos^2(\phi)\sin(\phi)
@@ -5172,7 +5172,7 @@ We have that $\displaystyle S(q) = B_q(\VEC{0}) \cap \{(x,y): x \geq 0\}
 \subset \RR^2$ in our formal definition of improper integrals.
 Since
 $\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
-we get that
+we get
 \begin{align*}
 \iint_{x>0} x e^{-x^2-y^2}
 &= \lim_{q\to\infty} \int_0^q \int_{-\pi/2}^{\pi/2}
@@ -5197,7 +5197,7 @@ We have that $\displaystyle S(q) = B_1(\VEC{0}) \setminus
 B_q(\VEC{0}) \subset \RR^2$ in our formal definition of improper
 integrals.  Since
 $\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
-we get that
+we get
 \begin{align*}
 &\iint_{x^2+y^2<1} \frac{x^2}{(x^2+y^2)^2}
 = \lim_{q\to 0^+} \int_q^1 \int_0^{2\pi} \frac{1}{r} \cos^2(\theta)

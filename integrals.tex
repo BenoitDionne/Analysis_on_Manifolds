@@ -100,7 +100,7 @@ It follows from Corollary~\ref{defint1} that $\LL(f) \leq \U(f)$.  To
 prove this claim, it suffices to note that, given a partition $Q$ of
 $[a,b]$, we have that $\LL_P(f) \leq \U_Q(f)$ for all partition $P$ of
 $[a,b]$ implies that $\LL(f) \leq \U_Q(f)$.  Since $Q$ is an arbitrary
-partition of $[a,b]$, we get that $\LL(f) \leq \U(f)$.
+partition of $[a,b]$, we get $\LL(f) \leq \U(f)$.
 
 \begin{defn}
 Consider a bounded function $f:[a,b]\to \RR$.
@@ -123,7 +123,7 @@ of $[a,b]$ such that $\U_P(f) - \LL_P(f) < \epsilon$.
 \begin{proof}
 \stage{$\mathbf{\Leftarrow}$}
 Since $\displaystyle \LL_P(f) \leq \LL(f) \leq \U(f) \leq \U_p(f)$ for all
-partition $P$ of $[a,b]$, we have that
+partition $P$ of $[a,b]$, we have
 $\displaystyle \U(f) - \LL(f) < \epsilon$
 for all $\epsilon > 0$.  Therefore $\U(f) = \LL(f)$ and $f$ is
 integrable.
@@ -131,7 +131,7 @@ integrable.
 \stage{$\mathbf{\Rightarrow}$}
 Choose two partitions $Q$ and $R$ of $[a,b]$ such that
 $\LL(f) - \LL_Q(f) < \epsilon/2$ and
-$\U_R(f) - \U(f) < \epsilon/2$.  Since $f$ is integrable, we have that
+$\U_R(f) - \U(f) < \epsilon/2$.  Since $f$ is integrable, we have
 $\U(f) = \LL(f)$.  Therefore $\U_R(f) - \LL_Q(f) < \epsilon$.  If we
 use the partition $P = Q \cup R$, a refinement of both $Q$ and $R$, we
 get $\U_P(f) - \LL_P(f) \leq \U_R(f) - \LL_Q(f) < \epsilon$ because
@@ -147,7 +147,7 @@ $[a,b]$.
 \begin{proof}
 Suppose that $f$ is a decreasing function.  We consider the partition
 $\displaystyle P_N = \{ p_i = a + i(b-a)/N : 0 \leq i \leq N \}$
-of $[a,b]$.  Since $f$ is decreasing, we have that
+of $[a,b]$.  Since $f$ is decreasing, we have
 $\displaystyle m_i = \inf \{f(x) : x \in [p_{i-1},p_i]\} = f(p_i)$
 and
 $\displaystyle M_i = \sup \{f(x) : x \in [p_{i-1},p_i]\} = f(p_{i-1})$
@@ -186,7 +186,7 @@ Since the partition $P$ is arbitrary,
 \U(f) \leq \inf \{ \U_P(g) : P \text{ is a partition of } [a,b]\}
 = \U(g) \ .
 \]
-Since $f:[a,b]\to \RR$ and $g:[a,b]\to \RR$ are integrable, we get that
+Since $f:[a,b]\to \RR$ and $g:[a,b]\to \RR$ are integrable, we get
 \[
 \int_a^b f(x) \dx{x} = \U(g) \leq \U(g) = \int_a^b g(x) \dx{x} \ .
 \qedhere
@@ -506,7 +506,7 @@ Let $C = \sup \{ |f(x)| ; a\leq x \leq b \}$ and
 $\delta = \epsilon/(8 N_Q C)$.
 Suppose that $\displaystyle P = \{ p_i : 0 \leq i \leq N_P\}$ is a
 partition of $[a,b]$ such that $p_i-p_{i-1} < \delta$ for all $i$.
-From the previous lemma and (\ref{DarbouxEq2}), we have that
+From the previous lemma and (\ref{DarbouxEq2}), we have
 \[
 \int_a^b f(x)\dx{x} \leq
 \U_P(f) < \U_{P\cup Q}(f) + 2 N_Q C\delta
@@ -569,7 +569,7 @@ $\phi(\tilde{p}_i)-\phi(\tilde{p}_{i-1})
 Choose $u_i \in [p_{i-1},p_i]$ for $0 \leq i \leq N$.
 Since $\phi:[\alpha,\beta]\to [a,b]$ is strictly increasing and onto,
 there exists (a unique) $w_i \in [\tilde{p}_{i-1},\tilde{p}_i]$ such that
-$u_i = \phi(w_i)$ for each $i$.  We have that
+$u_i = \phi(w_i)$ for each $i$.  We have
 \begin{equation}\label{intCompA}
 \sum_{i=1}^N f(u_i)(p_i-p_{i-1}) =
 \sum_{i=1}^N f(\phi(w_i)) \left( \phi(\tilde{p}_i)-\phi(\tilde{p}_{i-1})\right)
@@ -605,7 +605,7 @@ It follows from (\ref{intCompA}) and (\ref{intCompB}) that
 = \U_{\tilde{P}} ((f\circ \phi)\phi') + \epsilon C \ .
 \end{align*}
 Since this inequality is true for all $u_i\in [p_{i-1},p_i]$, we
-get that
+get
 \begin{equation} \label{intCompC}
 \U_{P}(f) = \sum_{i=1}^N M_i(p_i-p_{i-1})
 \leq \U_{\tilde{P}} ((f\circ \phi)\phi') + \epsilon C \ .
@@ -618,7 +618,7 @@ It also follows from (\ref{intCompA}) and (\ref{intCompB}) that
 \leq \sum_{i=1}^N M_i(p_i-p_{i-1}) = \U_P(f) \ .
 \]
 Since this inequality is true for all $w_i\in [\tilde{p}_{i-1},\tilde{p}_i]$, we
-get that
+get
 \begin{equation} \label{intCompD}
 \U_{\tilde{P}} ((f\circ \phi)\phi') - \epsilon C 
 = \sum_{i=1}^N \breve{M}_i (\tilde{p}_i-\tilde{p}_{i-1}) - \epsilon C
@@ -647,7 +647,7 @@ It follows from (\ref{intCompA}) and (\ref{intCompB}) that
 = \LL_{\tilde{P}} ((f\circ \phi)\phi') - \epsilon C \ .
 \end{align*}
 Since this inequality is true for all $u_i\in [p_{i-1},p_i]$, we
-get that
+get
 \begin{equation} \label{intCompCm}
 \LL_{P}(f) = \sum_{i=1}^N m_i(p_i-p_{i-1})
 \geq \LL_{\tilde{P}} ((f\circ \phi)\phi') - \epsilon C \ .
@@ -660,7 +660,7 @@ It also follows from (\ref{intCompA}) and (\ref{intCompB}) that
 \geq \sum_{i=1}^N m_i(p_i-p_{i-1}) = \LL_P(f) \ .
 \]
 Since this inequality is true for all $w_i\in [\tilde{p}_{i-1},\tilde{p}_i]$, we
-get that
+get
 \begin{equation} \label{intCompDm}
 \LL_{\tilde{P}} ((f\circ \phi)\phi') + \epsilon C 
 = \sum_{i=1}^N \breve{m}_i (\tilde{p}_i-\tilde{p}_{i-1}) + \epsilon C
@@ -709,14 +709,14 @@ and from (\ref{intCompEm}) that
   - \LL ((f\circ \phi)\phi') \right| 
   \leq \epsilon (C+2) \ .
 \end{align*}
-Since $\epsilon$ is arbitrary, we finally get that
+Since $\epsilon$ is arbitrary, we finally get
 $\displaystyle \U(f) = \U ((f\circ \phi)\phi')$ and
 $\displaystyle \LL(f) = \LL ((f\circ \phi)\phi')$.
 
 Thus, $f$ is integrable (i.e.\ $\displaystyle \U(f)=\LL(f)$) if and only if
 $(f\circ \phi)\phi'$ is integrable (i.e.\
 $\displaystyle \U ((f\circ \phi)\phi')= \LL ((f\circ \phi)\phi')$),
-and if they are integrable, then we have that
+and if they are integrable, then we have
 \[
 \int_a^b f(x) \dx{x} = \LL(f) = \U(f)
 = \U ((f\circ \phi)\phi')= \LL ((f\circ \phi)\phi') =
@@ -731,7 +731,7 @@ that $\phi'(x)<0$ for all $x\in [\alpha,\beta]$ and such that $\phi'$ is
 integrable on $[\alpha, \beta]$.
 
 Consider $\tilde{f}(x) = f(-x)$ for $x \in [-\phi(\alpha),-\phi(\beta)]$ and
-$\tilde{\phi}(x) = -\phi(x)$ for $x \in [\alpha,\beta]$.  We have that
+$\tilde{\phi}(x) = -\phi(x)$ for $x \in [\alpha,\beta]$.  We have
 $\tilde{\phi}'(x) = -\phi'(x) > 0$ for all $x \in [\alpha,\beta]$.  We
 may use Theorem~\ref{thCVin1D} to get
 \[
@@ -743,7 +743,7 @@ We leave it to the reader to verify that $\displaystyle
 \int_{\tilde{\phi}(\alpha)}^{\tilde{\phi}(\beta)} \tilde{f}
 = \int_{-\phi(\alpha)}^{-\phi(\beta)} \tilde{f}
 = \int_{\phi(\beta)}^{\phi(\alpha)} f$ using the definition of the Riemann
-integral.  We finally get that
+integral.  We finally get
 \[
 \int_{\phi(\beta)}^{\phi(\alpha)} f
 = - \int_{\alpha}^{\beta} (f \circ \phi) \phi' \ .
@@ -852,7 +852,7 @@ Suppose that $D \subset \RR$ is a compact set, $f:D \to \RR$ is a
 continuous function,
 $\displaystyle \{f_k\}_{k=0}^\infty$ is a sequence of continuous
 real valued functions on $D$ such that
-that $f_{k+1}(x) \leq f_k(x)$ for all $x \in D$ and all $k\geq 0$
+$f_{k+1}(x) \leq f_k(x)$ for all $x \in D$ and all $k\geq 0$
 (or $f_{k+1}(x) \geq f_k(x)$ for all $x \in D$ and all $k\geq 0$), and
 $\displaystyle \lim_{k\to \infty}f_k(x) = f(x)$ for
 all $x \in D$.  Then $f_k \to f$ uniformly on $D$ as $k \to \infty$.
@@ -862,7 +862,7 @@ all $x \in D$.  Then $f_k \to f$ uniformly on $D$ as $k \to \infty$.
 \stage{i} We first consider the case where
 $\displaystyle \{f_k\}_{k=0}^\infty$ is a sequence of continuous
 real valued functions on $D$ such that
-that $f_{k+1}(x) \leq f_k(x)$ for all $x \in D$ and
+$f_{k+1}(x) \leq f_k(x)$ for all $x \in D$ and
 all $k \geq 0$, and $\displaystyle \lim_{k\to \infty}f_k(x) = 0$
 for all $x \in D$.
 
@@ -882,7 +882,7 @@ finite subcover $\displaystyle
 of $D$.
 
 Let $\displaystyle K = \max_{1\leq j \leq J} K_{x_j}$.
-Given $x \in D$, we have that $\displaystyle x \in
+Given $x \in D$, we have $\displaystyle x \in
 ]x_j - \delta_{K_{x_j},x_j} ,x_j + \delta_{K_{x_j},x_j}[$
 for some $0 \leq j \leq J$.  Hence
 $\displaystyle \big|f_{K_{x_j}}(x) - f_{K_{x_j}}(x_j)\big| < \epsilon/2$.
@@ -895,7 +895,7 @@ Hence
 < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
 \]
 for all $k \geq K$.
-Since $x \in D$ is arbitrary, we have that
+Since $x \in D$ is arbitrary, we have
 $0 \leq f_k(x) < \epsilon$ for all $x \in D$ and $k \geq K$.  This
 proves that $f_k \to 0$ uniformly on $D$ as $k \to \infty$. 
 
@@ -916,7 +916,7 @@ By definition of the lower Riemann integral, there exists a partition
 $P = \{p_i : 0 \leq i \leq N\}$ of $[a,b]$ such that
 $\LL(f) - \LL_P(f) < \epsilon/2$.  If
 $\displaystyle m_i = \inf\{ f(x) : x\in [p_{i-1},p_i] \}$ for
-$1 \leq i \leq N$, we have that
+$1 \leq i \leq N$, then we have
 \[
 \LL_P(f) = \sum_{i=1}^N m_i (p_i - p_{i-1})  = \int_a^b h \ ,
 \]
@@ -962,7 +962,7 @@ We now prove that
 \begin{equation} \label{LLfito0Eq1}
 0 \leq \LL(f_k) \leq \epsilon \left(1 - \frac{1}{2^k}\right) + \int_a^b h_k
 \end{equation}
-for all $k$.  Hence, if we let $k$ converges to $\infty$, we get that
+for all $k$.  Hence, if we let $k$ converges to $\infty$, then we get
 $\displaystyle 0 \leq \lim_{k\to \infty} \LL(f_k) \leq \epsilon$.
 Since $\epsilon$ is arbitrary, this will prove that
 $\displaystyle \lim_{k\to \infty} \LL(f_k) = 0$.
@@ -970,7 +970,7 @@ $\displaystyle \lim_{k\to \infty} \LL(f_k) = 0$.
 Let $\displaystyle H_{i,k} = \max_{ i\leq j \leq k} g_j$ for
 $0 \leq i \leq k$.  For $0 \leq i \leq k$, we have that
 $H_{i,k}:[a,b]\to \RR$ is a continuous function because the $g_j$ are
-continuous functions.  Moreover, for $0 \leq j < k$, we have that
+continuous functions.  Moreover, for $0 \leq j < k$, we have
 \begin{align*}
 0 \leq g_k(x) & = g_j(x) + (g_k(x) - g_j(x))
 \leq g_j(x) + (H_{j,k}(x) - g_j(x)) \\
@@ -985,14 +985,14 @@ $0 \leq i \leq k$.  Hence
 for all $x \in [a,b]$ and $k \geq 0$.
 Since
 $\displaystyle H_{i,k}(x) \leq \max_{i\leq j \leq k} f_j(x) \leq f_i(x)$
-for all $x \in [a,b]$ and $0 \leq i < k$, we have that
+for all $x \in [a,b]$ and $0 \leq i < k$, we have
 $\LL_P(H_{i,k}) \leq \LL_P(f_i)$ for all partitions $P$ of $[a,b]$
 and $0 \leq i < k$.  Thus
 \[
 \LL(f_i) \geq \LL(H_{i,k})
 = \int_a^b H_{i,k} = \int_a^b (H_{i,k} - g_i) + \int_a^b g_i
 \]
-for $0 \leq i < k$.  We get that
+for $0 \leq i < k$.  We get
 \[
 \int_a^b (H_{i,k} - g_i) \leq \LL(f_i) -  \int_a^b g_i < \frac{\epsilon}{2^{i+1}}
 \]
@@ -1012,7 +1012,7 @@ Finally, we get (\ref{LLfito0Eq1}) from
 \end{proof}
 
 \begin{proof}[Proof (of Theorem~\ref{thBCT})]
-Let $g_k = |f_k - f|$ for $k \geq 1$.  We have that
+Let $g_k = |f_k - f|$ for $k \geq 1$.  We have
 $0 \leq g_k \leq 2C$ for all $k \geq 0$ and
 $\displaystyle \lim_{k\to \infty} g_k(x) = 0$ for all $x \in[a,b]$.
 
@@ -1028,7 +1028,7 @@ $\displaystyle \lim_{k\to \infty}f_k(x) = f(x)$ for all $x\in[a,b]$.
 It follows from Lemma~\ref{lemmaBCT2} that
 $\displaystyle \lim_{k\to \infty} \LL(h_k) = 0$.
 
-Since $g_k \leq h_k$ for all $k \geq 0$, we have that
+Since $g_k \leq h_k$ for all $k \geq 0$, we have
 $0 \leq \displaystyle \int_a^b g_k = \LL(g_k) \leq \LL(h_k) \to 0$
 as $k \to \infty$.
 
@@ -1062,7 +1062,7 @@ Prove that $f$ is not Riemann integrable on any interval.
 
 \begin{sol}
 Given any interval $[a,b]$ and any partition
-$P=\{p_i : 0 \leq i \leq N\}$ of $[a,b]$, we have that
+$P=\{p_i : 0 \leq i \leq N\}$ of $[a,b]$, we have
 $m_i = \inf \{ f(x) : p_{i-1} \leq x \leq p_i \} = 0$
 and $M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \} = 1$ for all $i$
 because $[p_{i-1},p_i]$ contains rational and irrational numbers.
@@ -1179,7 +1179,7 @@ $\U_P(f) - \LL_p(f) < \epsilon$ since $f : [a,b] \to \RR$ is
 integrable.  Let
 $m_i = \inf\{ f(x) : p_{i-1} \leq x \leq p_i\}$ and
 $M_i = \sup\{ f(x) : p_{i-1} \leq x \leq p_i\}$.
-We have that
+We have
 \[
 \LL_P(f)= \sum_{i=1}^N m_i(p_i-p_{i-1}) \quad \text{and} \quad 
 \U_P(f) = \sum_{i=1}^N M_i(p_i-p_{i-1}) \ .
@@ -1225,7 +1225,7 @@ Given $\epsilon >0$, let $P=\{p_i :0 \leq i \leq N\}$ be a partition
 of the interval $[a,b]$ such that $\U_P(f) - \LL_p(f) < \epsilon$
 and $Q = \{ q_i : q_i = p_i-c \ \text{for} \ 0 \leq i \leq N\}$ be the
 partition of $[a-c,b-c]$ associated to $P$ as defined in (i).
-We have that
+We have
 \[
 \LL_P(f) \leq  \int_a^b f(x) \dx{x} \leq \U_P(f)
 \]
@@ -1352,7 +1352,7 @@ $0\leq J_1 < J_2 \leq N$.
 
 Let $M_i = \sup \{f(x) : r_{i-1} \leq x \leq r_i\}$ and
 $m_i = \inf \{f(x) : r_{i-1} \leq x \leq r_i\}$ for $1 \leq i \leq N$.
-We then have that
+We then have
 \begin{align*}
 \U_Q(f) - \LL_Q(f)
 &= \sum_{j=J_1+1}^{J_2} M_i \left(r_j - r_{j-1}\right) 
@@ -1378,7 +1378,7 @@ that there exists $\xi(x,y)$ between $x$ and $y$
 such that $g(x)-g(y) = g'(\xi(x,y)) (x-y)$.  Since $g'$
 is continuous on the compact set $[m,M]$, we have that $g'$ is bounded
 on $[m,M]$.  Choose $K>0$ such that $|g'(x)| <K$ for all $x\in [m,M]$.
-We get that
+We get
 \[
 |g(x) - g(y)| = |g'(\xi(x,y))|\,|x-y| < K|x - y|
 \]
@@ -1396,7 +1396,7 @@ $M_i = \sup\{f(x):p_{i-1}\leq x \leq p_i\}$.  Since
 | (g\circ f)(x) - (g\circ f)(y) | = | g(f(x)) - g(f(y)) |
 < K | f(x) - f(y) | \leq K(M_i - m_i)
 \]
-for all $x$ and $y$ in $[p_{i-1}, p_i]$, we get that
+for all $x$ and $y$ in $[p_{i-1}, p_i]$, we get
 $\tilde{M}_i - \tilde{m}_i < K(M_i - m_i)$ where
 $\tilde{m}_i = \inf\{(g\circ f)(x) : p_{i-1}\leq x \leq p_i \}$ and
 $\tilde{M}_i = \sup\{(g\circ f)(x): p_{i-1}\leq x \leq p_i \}$.
@@ -1521,20 +1521,20 @@ Since
 m_i = \inf\{ f(x) : x\in [p_{i-1},p_i] \} \leq f(y_i) \leq
 M_i = \sup\{ f(x) : x\in [p_{i-1},p_i] \}
 \]
-for $1 \leq i \leq N$, we get that
+for $1 \leq i \leq N$, we get
 \begin{align*}
 \LL_P(f) &= \sum_{i=1}^N m_i(p_i - p_{i-1})
 \leq F(b) - F(a) = \sum_{i=1}^N f(y_i)(p_i - p_{i-1}) \\
 & \leq \sum_{i=1}^N M_i(p_i - p_{i-1}) = \U_P(f) \ .
 \end{align*}
-We also have that $\displaystyle \LL_P(f) \leq \int_a^b f(x) \dx{x}
+We also have $\displaystyle \LL_P(f) \leq \int_a^b f(x) \dx{x}
 \leq \U_P(f)$.  Thus, both $\displaystyle \int_a^b f(x) \dx{x}$ and
 $F(b)-F(a)$ are in the interval $[\LL_P(f),\U_P(f)]$ of length smaller
 than $\epsilon$.  Therefore
 \[
 \left| \int_a^b f(x) \dx{x} - (F(b) - F(a)) \right| < \epsilon \ .
 \]
-Since this is true for all $\epsilon >0$, we get that
+Since this is true for all $\epsilon >0$, we get
 $\displaystyle \int_a^b f(x) \dx{x} = F(b) - F(a)$.
 \end{sol}
 
@@ -1704,8 +1704,9 @@ for some $c \in [a,b]$.  This is (\ref{GMVTI}) for the case $g(b)=0$.
 
 \stage{ii} In the general case (including $g(b)=0$), let
 $h(x) = g(x) - g(b)$.   We have that $h$ is an increasing continuous
-differentiable function because $g$ is such a function.  Moreover, $h(b)=0$.  We may
-apply part (i) to conclude that there exist $c\in[a,b]$ such that
+differentiable function because $g$ is such a function.  Moreover,
+$h(b)=0$.  We may apply part (i) to conclude that there exist
+$c\in[a,b]$ such that
 \begin{align*}
 &\int_a^b f(x) h(x) \dx{x} = h(a) \int_a^c f(x)\dx{x} \\
 &\qquad \Rightarrow
@@ -1747,7 +1748,7 @@ continuous, $x_0 < b$ and there exists $\delta >0$ such that
 $x_0+\delta \leq b$ and $p(x) > 0$ for $x \in ]x_0,x_0+\delta]$.
 
 Let $\displaystyle P(x) = c \int_a^x p(t) \dx{t}$ for $x\in[a,b]$.  We
-have that $p(x)\leq P(x)$ for all $x$ by hypothesis.  If $x_0>a$, we
+have $p(x)\leq P(x)$ for all $x$ by hypothesis.  If $x_0>a$, we
 have $P(x)=0$ for $x\in[a,x_0[$ because $p(x)=0$ for $x \in [a,x_0[$
 by definition of $x_0$.  We have $P(x)>0$ for $x \in ]x_0,b]$ because
 $p(x)>0$ for $x_0<x<x_0+\delta$ and $p(x)\geq 0$ for all $x \in
@@ -1771,7 +1772,7 @@ Thus
 0 \leq p(x) \leq P(x) \leq \lim_{x_1\to x_0^+} P(x_1) e^{c(x-x_1)}
 = P(x_0) e^{c(x-x_0)} = 0 \ .
 \]
-We have that $p(x) = 0$ for all $x >x_0$.  This contradict our hypothesis
+We have $p(x) = 0$ for all $x >x_0$.  This contradict our hypothesis
 that $p(x) \neq 0$ for some $x \in [a,b]$.
 
 \subI{Note} This result is a particular case of Gronwall's Lemma that
@@ -1791,12 +1792,12 @@ If $M=0$, then there is nothing to prove.  We assume that $M>0$.  Since
 \[
 \int_a^b f^n(x) \dx{x} \leq \int_a^b M^n \dx{x} = M^n (b-a) \ ,
 \]
-we get that
+we get
 \[
 \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \leq M (b-a)^{1/n}
 \]
 for all $n>0$.  Since $\displaystyle (b-a)^{1/n} \to 1$ as $n\to \infty$,
-we get that
+we get
 \[
 \lim_{n\to \infty} \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \leq M \ .
 \]
@@ -1806,7 +1807,7 @@ $J = \{ x \in [a,b] : f(x) > M-\epsilon \}$.  Since
 $f$ is continuous, $\displaystyle J = f^{-1}(]M-\epsilon, \infty[)$ is
 an open subset of $[a,b]$.  Thus $J$ contain an 
 open interval $I$.  The interval $I$ is obviously measurable.  Let 
-$\delta >0$ be the length of $I$. We have that
+$\delta >0$ be the length of $I$. We have
 \[
 \int_a^b f^n(x) \dx{x} \geq \int_I f^n(x) \dx{x} \geq
 \int_I (M-\epsilon)^n \dx{x} = (M-\epsilon)^n \delta \ .
@@ -1815,7 +1816,7 @@ Hence
 \[
 \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \geq (M-\epsilon) \delta^{1/n} \ .
 \]
-Since $\displaystyle \delta^n \to 1$ as $n\to \infty$, we get that
+Since $\displaystyle \delta^n \to 1$ as $n\to \infty$, we get
 \[
 \lim_{n\to \infty} \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \geq
 (M-\epsilon) \ .
@@ -1922,7 +1923,7 @@ f_n(x) =
 \]
 The functions $f_n:[0,1]\to \RR$ are integrable because there are
 continuous on $[0,1]$ except at a finite number of points.  However,
-we have that
+we have
 \[
 f(x) = \lim_{n\to \infty} f_n(x) =
 \begin{cases}
@@ -1935,7 +1936,7 @@ which is not integrable on $[0,1]$.
 \subI{Second example}
 Let $\displaystyle f_n(x) = \frac{nx}{1+nx^2}$ for $0\leq x \leq 1$.
 For each $n \geq 0$, the function $f_n$ is integrable on $[0,1]$
-because it is continuous on $[0,1]$.  We have that
+because it is continuous on $[0,1]$.  We have
 \[
 \lim_{n\to \infty} f_n(x) = \lim_{n\to \infty} \frac{nx}{1+nx^2}
 = \lim_{n\to \infty} \frac{x}{(1/n)+x^2} = \frac{1}{x}
@@ -1964,7 +1965,7 @@ There is obviously the trivial solution $f(x)=0$ for all $x \in [0,1]$.
 Suppose that there exists $x\in [0,1]$ such that $f(x) \neq 0$.
 
 Let $c = \inf \{ x \in [0,1] : f(x) \neq 0 \}$.  Since $f$ is
-continuous and $f(x) = 0$ for $x < c$, we get that
+continuous and $f(x) = 0$ for $x < c$, we get
 $\displaystyle f(c)=\lim_{x\to c^-}f(x) = 0$.  Therefore
 $0 \leq c <1$.  Do not forget that $f(0)=0$ because of (\ref{probl1}).
 
@@ -1973,7 +1974,7 @@ Suppose that $f(x) = 0$ for some $x \in ]c,1]$.  Since $f$ is continuous
 and $f$ is not trivially null on $]c,1]$, there exists an interval
 $[a,b] \subset [c,1]$ such that $f(a) = f(b) = 0$ and either
 $f(x) > 0$ for all $a < x < b$ or $f(x) < 0$ for all $a < x < b$.  We
-then have that
+then have
 \[
 0 = (f(b))^2 = \underbrace{\int_0^a f(t) \dx{t}}_{= (f(a))^2 = 0}
 + \underbrace{\int_a^b f(t) \dx{t}}_{\neq 0} \ ,
@@ -1984,7 +1985,7 @@ This is a contradiction.  Thus $f(x) \neq 0$ for all $x \in ]c,1]$;
 namely, either $f(x) >0$ for all $x \in ]c,1]$ or $f(x) < 0$ for all
 $x \in ]c,1]$.  Since
 $\displaystyle \int_0^x f(t) \dx{t} = (f(x))^2 \geq 0$, we must
-therefore have that $f(x)>0$ for all $x \in ]c,1]$.
+therefore have $f(x)>0$ for all $x \in ]c,1]$.
 
 \stage{ii}
 Since $f$ is continuous, it follows from the Fundamental Theorem of Calculus
@@ -2002,8 +2003,8 @@ all $x>c$ because $f(x) \neq 0$ for all $x>c$.  We find that $f(x) = x/2
 differentiable at $x=c$ because $f(x)=0$ for $x\leq c$.  Therefore we must
 have $c=0$.
 
-If we substitute $f(x) = x/2 +C$ in (\ref{probl1}) and integrate, we
-get that
+If we substitute $f(x) = x/2 +C$ in (\ref{probl1}) and integrate, then
+we get
 \[
 \left( \frac{x}{2}+C\right)^2 = \frac{x^2}{4} + Cx \ .
 \]
@@ -2026,7 +2027,7 @@ follows from the Fundamental Theorem of Calculus that $L'(x) = 1/x$
 for $x>0$.  Hence $L$ is of class $\displaystyle C^1$ on $]0,\infty[$.
 
 Let $\displaystyle G(x) = L(xy) = \int_1^{xy}\frac{1}{t} \dx{t}$ for
-$y>0$ arbitrary but fixed.  Using the chain rule, we get that
+$y>0$ arbitrary but fixed.  Using the chain rule, we get
 \[
 G'(x) = \Big( \dfdx{\Big( \int_1^u \frac{1}{t} \dx{t} \Big)\Big|_{u=xy}}{u}
 \Big)\,  \dfdx{(xy)}{x} = \Big( L'(u)\Big|_{u=xy}\Big)\, y
@@ -2037,7 +2038,7 @@ for $x >0$.  Thus
 \[
 G(x)-G(1) = \int_1^x G'(t) \dx{t} = \int_1^x \frac{1}{t}\dx{t} = L(x)
 \]
-for $x >0$.  Since $G(1)=L(y)$ and $G(x) = L(xy)$, we get that
+for $x >0$.  Since $G(1)=L(y)$ and $G(x) = L(xy)$, we get
 $\displaystyle L(xy) = L(x) + L(y)$ for $x,y >0$.
 \end{sol}
 
@@ -2058,7 +2059,7 @@ that $F(x) = G(x)$ for all $x\in [0,1]$.  Therefore
   f(x) = F'(x) = G'(x) = - f(x)
 \]
 for all $x\in ]0,1[$.  Hence $f(x) = 0$ for all $x\in]0,1[$.  Since
-$f$ is continuous on $[0,1]$, we get that $f(x) = 0$ for $x\in[0,1]$.
+$f$ is continuous on $[0,1]$, we get $f(x) = 0$ for $x\in[0,1]$.
 \end{sol}
 
 \begin{question}
@@ -2109,7 +2110,7 @@ where the first sum is over all sub-intervals $[r_{i-1},r_i]$ such that
 $a_k \not\in [r_{i-1},r_i]$ for all $k$, and the second sum is over all
 sub-intervals $[r_{i-1},r_i]$ such that $a_k \in [r_{i-1},r_i]$ for some $k$.
 
-We have that $\displaystyle \sum\nolimits' \frac{1}{q_0} (r_i-r_{i-1})<
+We have $\displaystyle \sum\nolimits' \frac{1}{q_0} (r_i-r_{i-1})<
 \frac{\epsilon}{2}$ because $1/q_0 < \epsilon/2$ and
 $\displaystyle \sum_{i=0}^N (r_i-r_{i-1}) = 1$; the length of the interval
 $[0,1]$.
@@ -2126,7 +2127,7 @@ $[r_{i-1},r_i]$ containing some $a_k$.  Thus
 Therefore $\U_R(f) - \LL_R(f) < \epsilon$.  Since $\epsilon$ is
 arbitrary, it follows from Theorem~\ref{intCauchyCR} that $f$ is
 integrable on $[0,1]$.  Since $\LL_R(f) = 0$ for all partition $R$ of
-$[0,1]$, we get that $\displaystyle \int_0^1 f = \LL(f) = 0$.
+$[0,1]$, we get $\displaystyle \int_0^1 f = \LL(f) = 0$.
 \end{sol}
 
 \begin{question}
@@ -2190,7 +2191,7 @@ The proof that
 \begin{equation} \label{fkM}
 \left| f_k(x) \right| \leq \frac{M}{k!} \, x^k
 \end{equation}
-for $k\geq 0$ is by induction on $k$.   For $k=0$, we have that
+for $k\geq 0$ is by induction on $k$.   For $k=0$, we have
 $|f_0(x)| = |f(x)|\leq M$ for all $x \in [0,1]$ by definition of $M$.
 Hence (\ref{fkM}) is true for $k=0$.  Suppose that (\ref{fkM}) is
 true for $k \geq 0$.  Then
@@ -2242,16 +2243,17 @@ $x \in ]a,b[$ is
 \[
   f(y) = f(x) + f'(x) (y -x) + \frac{f''(\xi)}{2} (y-x)^2 ,
 \]
-where $\xi = \xi(x)$ is between $x$ and $y$.  If $y=a$, then we get that
+where $\xi = \xi(x)$ is between $x$ and $y$.  If $y=a$, then we get
 \[
   f(a) = f(x) + f'(x) (a -x) + \frac{f''(\xi)}{2} (a-x)^2
   \leq f(x) + f'(x) (a -x)
 \]
 because $f''(\xi) \leq 0$ for $\xi \in [a,b]$.  If we integrate
-$f(a) \leq f(x) + f'(x) (a -x)$ from $a$ to $b$ on both sides, we get that
+$f(a) \leq f(x) + f'(x) (a -x)$ from $a$ to $b$ on both sides, then we
+get
 \begin{equation}\label{intconc}
 \int_a^b f(a) \dx{x} \leq \int_a^b f(x) \dx{x} +
-\int_a^b f'(x) (a -x) \dx{x}
+\int_a^b f'(x) (a -x) \dx{x} \ .
 \end{equation}
 Thus
 \[
@@ -2261,7 +2263,7 @@ f(a) ( b - a)
 \]
 where we have used integration by parts to compute the second integral
 on the right hand side in (\ref{intconc}).  If we isolate
-$\displaystyle \int_a^b f(x) \dx{x}$, then we get that
+$\displaystyle \int_a^b f(x) \dx{x}$, then we get
 \[
   \int_a^b f(x) \dx{x} \geq \frac{f(a) + f(b)}{2} (b-a ) \ .
 \]
@@ -2276,13 +2278,13 @@ f(x) = f\left(\frac{a+b}{2}\right)
 \]
 where $\displaystyle \xi = \xi((a+b)/2)$ is between
 $x$ and $\displaystyle (a+b)/2$.  Since $f''(\xi) \leq 0$ for
-$\xi\in [a,b]$, we have that
+$\xi\in [a,b]$, we have
 \[
 f(x) \leq f\left(\frac{a+b}{2}\right)
 + f'\left(\frac{a+b}{2}\right) \left( x - \frac{a+b}{2}\right)
 \]
 for $x\in [a,b]$.  If we integrate from $a$ to $b$ on
-both sides of this inequality, we get that
+both sides of this inequality, then we get
 \[
 \int_a^b f(x) \dx{x} \leq f\left(\frac{a+b}{2}\right) \int_a^b \dx{x}
 + f'\left(\frac{a+b}{2}\right)
@@ -2380,13 +2382,13 @@ $\displaystyle f_y(x) = x^3e^{-x^2/y}/y^2$ for all $x$ when $y>0$.
 We have that $\displaystyle f_x$ is continuously differentiable
 on $\RR \setminus \{0\}$ for all $x$ fixed because $f_x(y) = 0$ for
 all $y <0$ and $\displaystyle f_x(y) = x^3e^{-x^2/y}/y^2$ for all $y>0$.
-The only issue is at the origin.  We first not that $f_x$ is
+The only issue is at the origin.  We first note that $f_x$ is
 continuous at the origin because
 $\displaystyle \lim_{y \to 0^-} f_x(y) = 0$ and
 $\displaystyle \lim_{y \to 0^+} f_x(y)
 = \lim_{y \to 0^+} \frac{x^3}{y^2}\,e^{-x^2/y} = 0$ \footnote{One may
 use l'Hospital Rule to compute this limit.}.
-We also have that $\displaystyle \dydx{f_x}{y}(0) = 0$ because
+We also have $\displaystyle \dydx{f_x}{y}(0) = 0$ because
 $\displaystyle \lim_{y\to 0^-} \frac{f_x(y)-f_x(0)}{y} = 0$
 and
 $\displaystyle \lim_{y\to 0^+} \frac{f_x(y)-f_x(0)}{y}
@@ -2483,7 +2485,7 @@ Since
 F(x) = \int_a^{h(x)} f(x,y)\dx{y} + \int_{g(x)}^a f(x,y)\dx{y}
 = \int_a^{h(x)} f(x,y)\dx{y} - \int_a^{g(x)} f(x,y)\dx{y} \ ,
 \]
-we get that
+we get
 \begin{align*}
 F'(x) &= f(x,h(x)) h'(x) + \int_a^{h(x)}\pdydx{f}{x}(x,y) \dx{y}
 - f(x,g(x)) g'(x) - \int_a^{g(x)}\pdydx{f}{x}(x,y) \dx{y} \\
@@ -2570,7 +2572,7 @@ we define the integral of $f$ on $[0,1]$ as
 We have that $f$ is Riemann integrable on $[a,1]$ for all $a >0$.
 
 We review below some of the results about improper integrals that we
-assume that the reader know.  They will be useful for the questions below.
+assume are known to the readers.  They will be useful for the questions below.
 \begin{enumerate}
 \item $\displaystyle \int_1^\infty \frac{1}{x^p} \dx{x}$ converges for $p>1$
 and diverges for $p\leq 1$.
@@ -2616,7 +2618,7 @@ diverge.
 
 \begin{sol}
 \subQ{a}
-We have that $\displaystyle x^{1/3} (x^2+2x)^{1/2} = x^{5/6} (x+2)^{1/2} \geq
+We have $\displaystyle x^{1/3} (x^2+2x)^{1/2} = x^{5/6} (x+2)^{1/2} \geq
 x^{5/6} \sqrt{2}$ for $0\leq x \leq 1$.  Thus
 $\displaystyle \frac{1}{x^{1/3} (x^2+2x)^{1/2}} \leq \frac{1}{x^{5/6} \sqrt{2}}$
 for $0 < x \leq 1$.
@@ -2630,7 +2632,7 @@ $\displaystyle \int_0^1 \frac{1}{x^{1/3} (x^2+2x)^{1/2}}\dx{x}$ converges.
 = \lim_{q\to 1^-}\int_0^q \frac{x^2}{\sqrt{(1-x^2)(1+x^2)}} \dx{x} \ .
 \]
 With the substitution $\displaystyle u=1-x^2$ for $0\leq x < 1$, we
-get that
+get
 \[
 \lim_{q\to 1^-} \int_0^q \frac{x^2}{\sqrt{1-x^4}} \dx{x}
 = \lim_{q\to 1^-} \frac{-1}{2}\int_1^{\sqrt{1-q}}
@@ -2721,7 +2723,7 @@ $\displaystyle \lim_{q\to \infty} q^2 e^{-q^2} = 0$.  Hence
 \]
 converges as $q \to \infty$.
 
-\subQ{g} We have that
+\subQ{g} We have
 \[
 \left| \frac{\sin(4x)}{x^2 -x -2}\right|
 \leq \frac{1}{x^2 -x -2} = \frac{1}{(x-2)(x+1)}
@@ -2738,7 +2740,7 @@ we get from the comparison theorem that
 $\displaystyle \int_3^\infty \frac{\sin(4x)}{x^2 -x -2}\dx{x}$
 converges absolutely, and so converges.
 
-\subQ{h} Since $\displaystyle \tan(u) > u$ for $0< u <1$, we get that
+\subQ{h} Since $\displaystyle \tan(u) > u$ for $0< u <1$, we get
 $\displaystyle \tan\left(\frac{1}{x}\right) > \frac{1}{x}$ for
 $1\leq x<\infty$.  Since $\displaystyle \int_1^\infty \frac{1}{x} \dx{x}$
 diverges, we get from the comparison test that
@@ -2789,7 +2791,7 @@ Hence, for $\displaystyle q> M+ 1/2^M$, we have
 \[
 1 \geq F(q) \geq F(M + 1/2^M) = \sum_{n=1}^M \frac{1}{2^n} > 1-\epsilon \ .
 \]
-Since $\epsilon$ is arbitrary, we get that
+Since $\epsilon$ is arbitrary, we get
 $\displaystyle \lim_{q\to \infty} F(q) = \sup_{q\geq 0} F(q) = 1$.
 
 \subQ{c} Consider the function
@@ -2814,10 +2816,10 @@ G(q) \leq \sum_{n=1}^{\intpt{q}} \frac{n}{n2^n} =
 for all $q$, where $\intpt{q}$ is the integer part of $q$.  Since $G$ is
 monotonically increasing and bounded, we have that
 $\displaystyle \lim_{q\to \infty} G(q) = \sup_{q\geq 0} G(q)$
-exists.  We also have that $G(q) = F(q)$ for all positive integer $q$.  Thus
+exists.  We also have $G(q) = F(q)$ for all positive integer $q$.  Thus
 $\displaystyle \lim_{\substack{q\to \infty\\ q \in \NNp}} G(q) =
 \lim_{\substack{q\to \infty\\ q\in \NNp}} F(q) = 1$.
-Since $\displaystyle \lim_{q\to \infty} G(q)$ exists, we have that
+Since $\displaystyle \lim_{q\to \infty} G(q)$ exists, we have
 $\displaystyle \lim_{q\to \infty} G(q) = 1$.
 \end{sol}
 
@@ -2830,7 +2832,7 @@ $\displaystyle \int_1^\infty \frac{\sin(x)}{x} \dx{x}$ converges
 
 \begin{sol}
 We first prove that $\displaystyle \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
-diverges.  We have that
+diverges.  We have
 \begin{align*}
 \int_{n\pi}^{(n+1)\pi} \frac{|\sin(x)|}{x} \dx{x}
 & \geq \int_{n\pi}^{(n+1)\pi} \frac{|\sin(x)|}{(n+1)\pi} \dx{x}
@@ -2954,11 +2956,11 @@ called the {\bfseries integral test}\index{Integral Test}.
 \stage{$\Rightarrow$}
 Suppose that $\displaystyle \int_1^\infty f(x)\dx{x}$ converges.  Let
 $\displaystyle M = \int_1^\infty f(x)\dx{x} < \infty$.  Since
-$f(x) \geq 0$ for all $x\geq 1$, we have that
+$f(x) \geq 0$ for all $x\geq 1$, we have
 \[
   M = \int_1^\infty f(x) \dx{x} \geq \int_1^N f(x) \dx{x}
 \]
-for all $N>0$.  Since $f$ is monotonically decreasing, we have that
+for all $N>0$.  Since $f$ is monotonically decreasing, we have
 \[
 M \geq \int_1^N f(x) \dx{x} = \sum_{n=1}^{N-1} \int_n^{n+1} f(x) \dx{x}
 \geq \sum_{n=1}^{N-1} \int_n^{n+1} f(n+1) \dx{x}
@@ -2975,11 +2977,11 @@ Let $\displaystyle M = \sum_{n=1}^\infty f(n) < \infty$.
 We have that $\displaystyle F(q) = \int_1^q f(x) \dx{x}$ for $q \geq 1$
 is a non-decreasing, non-negative function because $f(x)\geq 0$ for all
 $x \geq 1$.   Given $q \geq 1$, choose $\displaystyle N \in \NNp$ such that
-$N\geq q$.  Since $f(x) \geq 0$ for all $x \geq 1$, we have that
+$N\geq q$.  Since $f(x) \geq 0$ for all $x \geq 1$, we have
 \[
 F(q) = \int_1^q f(x) \dx{x} \leq \int_1^N f(x) \dx{x} \ .
 \]
-Moreover, since $f$ is monotonically decreasing, we have that
+Moreover, since $f$ is monotonically decreasing, we have
 \begin{align*}
 F(q) &\leq \int_1^N f(x) \dx{x} = \sum_{n=1}^{N-1} \int_n^{n+1} f(x) \dx{x} \\
  & \leq \sum_{n=1}^{N-1} \int_n^{n+1} f(n) \dx{x}
