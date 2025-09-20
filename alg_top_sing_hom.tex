@@ -113,7 +113,7 @@ L\left(2\left( \frac{1}{2}\VEC{x}_1+ \frac{1}{2}\VEC{x}_2\right)\right)
 = (f(\VEC{x}_1) - \tilde{\VEC{x}}) + (f(\VEC{x}_2) - \tilde{\VEC{x}})
 = L(\VEC{x}_1) + L(\VEC{x}_2)
 \end{align*}
-for all $\VEC{x}_1,\VEC{x}_2 \in \RR^n$, where we have used
+for all $\displaystyle \VEC{x}_1,\VEC{x}_2 \in \RR^n$, where we have used
 (\ref{singHEq1}) to get the second equality.
 \end{proof}
 
@@ -125,7 +125,8 @@ Moreover, we have that $\displaystyle f\left(\sum_{j=0}^n a_j \VEC{v}_j\right)
 = \sum_{j=0}^n a_j f(\VEC{v}_j)$ if $\displaystyle \sum_{j=0}^n a_j = 1$
 for $a_j \in \RR$.
 
-For $k>0$ and $0 \leq j \leq k$, let $F_k^j:\Delta_{k-1} \to \Delta_k$ be the
+For $k>0$ and $0 \leq j \leq k$, let
+$\displaystyle F_k^j:\Delta_{k-1} \to \Delta_k$ be the
 affine function defined by
 \[
 F_k^j(\VEC{e}_i) = \begin{cases}
@@ -270,8 +271,9 @@ $\sigma(\VEC{x}) = x$ for all $\VEC{x} \in \Delta_k$.  Hence
 \sigma^{(0)} & \quad \text{if} \ k \ \text{is even}
 \end{cases}
 \]
-because $\sigma^{(j)}: \Delta_{k-1} \to X$ is the constant function
-defined by $\sigma^{(j)}(\VEC{x}) = x$ for all $\VEC{x} \in \Delta_{k-1}$
+because $\displaystyle \sigma^{(j)}: \Delta_{k-1} \to X$ is the
+constant function defined by
+$\displaystyle \sigma^{(j)}(\VEC{x}) = x$ for all $\VEC{x} \in \Delta_{k-1}$
 for $0 \leq j \leq k$.
 
 It follows that
@@ -1282,9 +1284,9 @@ the distinct faces of $\Delta_{k+1}$.
 Let $\displaystyle K_{i,j} = F^i_{k+1}(\Delta_k) \cap F^j_{k+1}(\Delta_k)$ for
 $0 \leq j < i \leq k+1$.  As we mentioned before, we have proved in
 the context of the proof of Proposition~\ref{propdkmqdk0} that
-$F_{k+1}^i \circ F_k^j = F_{k+1}^j \circ F_k^{i-1}$
+$\displaystyle F_{k+1}^i \circ F_k^j = F_{k+1}^j \circ F_k^{i-1}$
 for $0 \leq j < i \leq k+1$.  Thus
-$K_{i,j} = (F^i_{k+1}\circ F^j_k)(\Delta_{k-1})
+$\displaystyle K_{i,j} = (F^i_{k+1}\circ F^j_k)(\Delta_{k-1})
 = (F_{k+1}^j \circ F_k^{i-1})(\Delta_{k-1})$ for
 $0 \leq j < i \leq k+1$.  Since $i > j \geq 0$, we get from the
 definition of $D_{k-1}$ that
@@ -1780,7 +1782,8 @@ singular homology differ only at the level of $S_0(X;R)$.
 
 We take a short pause in our study of singular homology to present the
 relation between the concept of fundamental groups introduced in
-Section~\ref{sectFundGr} and the singular $1^{st}$ homology module.
+Section~\ref{sectFundGr} and the singular
+$\displaystyle 1^{st}$ homology module.
 
 \begin{theorem}
 Let $X$ be a topological space and $x_0 \in X$.  There exists a
@@ -2075,7 +2078,7 @@ $\pi_1(X,x_0)/G$.  Let $[\gamma]_G$ and $[\beta_j]_G$
 denote the equivalence classes of $[\gamma]$ and $[\beta_j]$ 
 in $\pi_1(X,x_0)/G$.  We note that $\pi_1(X,x_0)/G$ is a commutative
 group because
-$\big(\sigma_1 \sigma_2\big) \big(\sigma_2 \sigma_1\big)^{-1}
+$\displaystyle \big(\sigma_1 \sigma_2\big) \big(\sigma_2 \sigma_1\big)^{-1}
 = \big(\sigma_1\sigma_2\big) \big(\sigma_1^{-1} \sigma_2^{-1}\big) \in G$
 for any loops $\sigma_1,\sigma_2$ in $X$ at $x_0$.
 Thus
@@ -3550,7 +3553,8 @@ We may use the tools that we have introduced     \label{eggHkSq}
 so far to compute $\displaystyle H_k(S^n)$ for $k,n>0$.
 
 \stage{i}
-Let $B^n = \overline{B_1(\VEC{0})} \subset \RR^n$.  So $\partial B^n = S^{n-1}$.
+Let $\displaystyle B^n = \overline{B_1(\VEC{0})} \subset \RR^n$.
+So $\displaystyle \partial B^n = S^{n-1}$.
 We get from Proposition~\ref{propConnectingH} that
 \begin{equation} \label{eggHkSn}
 \xymatrix@C+2.5ex{
@@ -3573,7 +3577,8 @@ H_{k-1}(S^{n-1};R) \ar[r]^-{H_{k-1}(\iota)} & 0
 }
 \]
 Since $\KE(C_k) = \IMG(H_k(\Id_{B^n})) = \{[0]_{B^n,S^{n-1}}\}$
-and $\IMG(C_k) = \KE(H_{k-1}(\iota)) = H_{k-1}(S^{n-1};R)$, we find that $C_k$ is
+and $\displaystyle \IMG(C_k) = \KE(H_{k-1}(\iota)) = H_{k-1}(S^{n-1};R)$,
+we find that $C_k$ is
 a isomorphism between $\displaystyle H_k(B^n,S^{n-1};R)$ and
 $\displaystyle H_{k-1}(S^{n-1};R)$.
 
@@ -4333,7 +4338,8 @@ definitions.
 \begin{defn}
 Let $R$ be an integral domain.  A
 {\bfseries cochain complex}\index{Cochain Complex} is a sequence
-$\displaystyle \C = \{ (C^k,\dfC_k) \}_{k\in \ZZ}$ where the sets $C^k$ are
+$\displaystyle \C = \{ (C^k,\dfC_k) \}_{k\in \ZZ}$ where the sets
+$\displaystyle C^k$ are
 $R$-modules and the maps $\dfC_k:C_k \to C_{k+1}$ are homomorphism
 such that $\dfC_{k+1} \circ \dfC_k = 0$ for $k \in \ZZ$.
 \end{defn}
@@ -4475,7 +4481,7 @@ module}\index{Cohomology Module!Relative $k^{th}$ Cohomology Module}
 of $X \mod A$ is the
 quotient space $\displaystyle H^k(X,A;R) = \KE(\overline{\dfC}_k)/
 \IMG(\overline{\dfC}_{k-1})$.
-The equivalence class of $H^k(X,A;R)$ associated to
+The equivalence class of $\displaystyle H^k(X,A;R)$ associated to
 $\phi \in \KE(\overline{\dfC}_k)$ is denoted $[\phi]_{X,A}$.
 \end{defn}
 
@@ -4496,11 +4502,11 @@ yields the short exact sequence
 }
 \]
 where $\displaystyle S_k(\iota)^\ast : S^k(X;R) \to S^k(A;R)$ is defined by
-$\big(S_k(\iota)^\ast(\phi)\big)(c) = \phi\big(S_k(\iota)(c)\big)$
+$\displaystyle \big(S_k(\iota)^\ast(\phi)\big)(c) = \phi\big(S_k(\iota)(c)\big)$
 for all $c \in S_k(A;R)$ and $\displaystyle \phi \in S^k(X;R)$, and
 $\displaystyle \pi_k^\ast : \big(S_k(X;R)/S_k(A;R)\big)^\ast
 \to S^k(X;R)$ is defined by
-$\big(\pi_k^\ast(\phi)\big)(c) = \phi(\relC[X,A]{c})$ for all
+$\displaystyle \big(\pi_k^\ast(\phi)\big)(c) = \phi(\relC[X,A]{c})$ for all
 $c \in S_k(X;R)$ and $\displaystyle \phi \in (S_k(X;R)/S_k(A;R))^\ast$.
 \end{prop}
 
