@@ -254,7 +254,7 @@ Note that the open $0$-simplex $(\VEC{b}_{(t)})$ is associated to a
 $0$-simplex $(t)$ is $(t)$ itself.}{SimpCpx4}
 
 It follows from the definition of $\displaystyle K^{[1]}$ that
-$\dim K^{[1]} = \dim K$.
+$\displaystyle \dim K^{[1]} = \dim K$.
 
 \begin{defn} \label{defnBarySubd}
 Let $K$ be a simplicial complex in $\displaystyle \RR^n$.
@@ -799,7 +799,7 @@ K = \{ (\VEC{x}_0), (\VEC{x}_1),
 \stage{a} It follows from Proposition~\ref{propK0KZ} that
 $\displaystyle H_0(K^1;\ZZ) \cong \ZZ$.
 
-\stage{b} We have that
+\stage{b} We have
 \begin{align*}
 C_1(K^1;\ZZ) &= \left\{ a_{(\VEC{x}_0,\VEC{x}_1)}
 \os{\VEC{x}_0}{}{}{}{\VEC{x}_1}
@@ -844,7 +844,7 @@ $\displaystyle H_1(K^1;\ZZ) = Z_1(K^1;\ZZ) / B_1(K^1;\ZZ) \cong \ZZ$.
 \stage{c} It follows from Proposition~\ref{propK0KZ} that
 $H_0(K;\ZZ) \cong \ZZ$. 
 
-\stage{d} As before, we have that
+\stage{d} As before, we have
 \[
 Z_1(K;\ZZ)
 = \left\{ a \left( \os{\VEC{x}_0}{}{}{}{\VEC{x}_1}
@@ -852,7 +852,7 @@ Z_1(K;\ZZ)
 - \os{\VEC{x}_0}{}{}{}{\VEC{x}_2} \right) : a \in \ZZ \right\}
 \cong \ZZ \ .
 \]
-We have that
+We have
 \[
 C_2(K;\ZZ) = \left\{ a \os{\VEC{x}_0}{\VEC{x}_2}{}{}{\VEC{x}_3}
 : a \in \ZZ \right\} \cong \ZZ \ .
@@ -863,7 +863,7 @@ Since
 = a \left(\os{\VEC{x}_1}{}{}{}{\VEC{x}_2} - \os{\VEC{x}_0}{}{}{}{\VEC{x}_2}
 + \os{\VEC{x}_0}{}{}{}{\VEC{x}_1} \right)
 \end{equation}
-for $a \in \ZZ$, we get that
+for $a \in \ZZ$, we get
 \[
 B_1(K;\ZZ) = \left\{
 a \left(\os{\VEC{x}_1}{}{}{}{\VEC{x}_2} - \os{\VEC{x}_0}{}{}{}{\VEC{x}_2}
@@ -917,12 +917,12 @@ Let $C_{-1}(K;\RR) = \{ 0 \}$.
 Since $\partial_0(\os{\VEC{x}_j}{}{}{}{}) = 0$ for all vertices $\VEC{x}_j$
 of $K$, we may also set $B_{-1}(K;\RR) = \{ 0 \}$.  Since
 $\partial_i: C_i(K,\RR) \to C_{i-1}(K;\RR)$ is a linear operator for
-$0 \leq i \leq \dim(K)$, we have that
+$0 \leq i \leq \dim(K)$, we have
 \[
 \alpha_i = \dim(C_i(K;\RR)) = \dim(\KE(\partial_i)) + \dim(\IMG(\partial_i))
 = \dim(Z_i(K;\RR)) + \dim(B_{i-1}(K;\RR))
 \]
-for $0\leq i \leq \dim(K)$.  We also have that
+for $0\leq i \leq \dim(K)$.  We also have
 \[
 \beta_i = \dim(H_i(K;\RR)) = \dim\left(Z_i(K;\RR)/B_i(K;\RR)\right)
 = \dim(Z_i(K;\RR)) - \dim(B_i(K;\RR))
@@ -983,7 +983,7 @@ and $\displaystyle H_k^\sharp(X;R)$.
 Let $K$ be a simplicial complex and $R$ be an integral domain.
 The quotient $\displaystyle H_k^\sharp(K;R) =
 Z_k^\sharp(X;R) / B_k^\sharp(X;R)$ is called the
-{\bfseries reduced (simplicial) $\mathbf{k^{th}}$ homology
+{\bfseries reduced (simplicial) $\displaystyle \mathbf{k^{th}}$ homology
 module}\index{Homology Module!Reduced (Simplicial) $k^{th}$ Homology Module}
 of $X$.
 \end{defn}
@@ -1236,7 +1236,7 @@ Subsection~\ref{ssectRCsingT} in the context of singular theory.
 Let $L$ be a simplicial subcomplex of a simplicial complex $K$, and $R$
 be an integral domain.  The adjoint of the boundary operator 
 $\overline{\partial}_k : C_k(K,L;R) \to C_{k-1}(K,L;R)$ is the operator
-$\overline{\dfC}_{k-1} : \big(C_{k-1}(K,L;R)\big)^\ast
+$\displaystyle \overline{\dfC}_{k-1} : \big(C_{k-1}(K,L;R)\big)^\ast
 \to \big(C_k(K,L;R)\big)^\ast$ defined
 \begin{equation} \label{relsimplCoOpEq1}
 \big(\overline{\dfC}_{k-1}(\phi)\big)([c])
@@ -1494,7 +1494,7 @@ We have that $\displaystyle \dfC_k \circ F_k = F_{k+1} \circ \df{}$.
 
 \begin{proof}
 It suffices to use Stokes' theorem.  Given a differential $k$-form on
-$S$ and $\os{s}{}{}{}{} \in C_k(K,\RR)$, we have that
+$S$ and $\os{s}{}{}{}{} \in C_k(K,\RR)$, we have
 \begin{align*}
 F_{k+1}(\df{\omega})(\os{s}{}{}{}{})
 &= \int_{[s]} h_{[s]}^\ast(\df{\omega})
@@ -1816,7 +1816,8 @@ differential $(k-1)$-form $\tilde{\rho}_{(s)}$ in an open neighbourhood
 $U_{(s)}$ of $[s]$ such that $\tilde{\rho}_{[s]} = \rho_{j-1}$ in an open
 neighbourhood of $B_{(s)}$ and $\df{\tilde{\rho}_{(s)}} = \omega$ in
 $U_{(s)}$.   We define $\tilde{\rho}_j$ in a neighbourhood
-of $[K^j]$ by $\tilde{\rho}_j\big|_{U_{(s)}} = \tilde{\rho}_{(s)}$ for
+of $\displaystyle [K^j]$ by
+$\tilde{\rho}_j\big|_{U_{(s)}} = \tilde{\rho}_{(s)}$ for
 all open $j$-simplices $(s)$ in $K$.   The differential $(k-1)$-form
 $\tilde{\rho}_j$ is well defined by because
 $\tilde{\rho}_{(s_1)} = \tilde{\rho}_{(s_2)} = \rho_{j-1}$ in an open
@@ -1824,7 +1825,7 @@ neighbourhood of the intersection of $[s_1]$ and $[s_2]$ for all
 open $j$-simplices $(s_1)$ and $(s_2)$ in $K$.
 
 If $k-1 \neq j$, we may define $\rho_j$ in a neighbourhood
-of $[K^j]$ as $\rho_j = \tilde{\rho}_j$.
+of $\displaystyle [K^j]$ as $\rho_j = \tilde{\rho}_j$.
 
 If $k-1 = j$, we use a trick similar to the one that we have used in
 the case $j=0$ to ensure that $F_j(\rho_j) = \phi$ on $\displaystyle C^j(K;R)$.

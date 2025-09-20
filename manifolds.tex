@@ -42,8 +42,8 @@ $H_k^\circ$.  The set of all boundary points of $H_k$ is the
 is denoted $\partial H_k$.
 \end{defn}
 
-The interior $H_k^\circ$ is open in the induced topology because
-$H_k^\circ = \left\{ \VEC{x}\in \RR^k : x_k>0\right\} \cap H_k$.
+The interior $\displaystyle H_k^\circ$ is open in the induced topology because
+$\displaystyle H_k^\circ = \left\{ \VEC{x}\in \RR^k : x_k>0\right\} \cap H_k$.
 The definition of interior and boundary points of $H_k$ correspond to
 the topological definition of interior and boundary points.  This
 correspondence will be broken for manifolds as we will see shortly.
@@ -197,14 +197,15 @@ are two local charts such that $U_{i_1} \cap U_{i_2} \neq \emptyset$, then
 \phi_{i_2}^{-1} \circ \phi_{i_1}: M_1 = \phi_{i_1}^{-1}(U_{i_1} \cap U_{i_2})
 \rightarrow M_2 = \phi_{i_2}^{-1}(U_{i_1} \cap U_{i_2})
 \end{equation}
-is a $C^j$-diffeomorphism (Figure~\ref{MANIFOLD2}).
+is a $\displaystyle C^j$-diffeomorphism (Figure~\ref{MANIFOLD2}).
 \end{enumerate}
 \end{defn}
 
 For $j>0$, the condition that
-$\phi_{i_2}^{-1} \circ \phi_{i_1}: M_1 \rightarrow M_2$
-be a $C^j$-diffeomorphism for all indices $i_1,i_2 \in I$ implies that
-$\diff \phi_i(\VEC{w})$ is of rank $k$ for all $\VEC{w} \in W_i$ and
+$\displaystyle \phi_{i_2}^{-1} \circ \phi_{i_1}: M_1 \rightarrow M_2$
+be a $\displaystyle C^j$-diffeomorphism for all indices $i_1,i_2 \in I$
+implies that $\diff \phi_i(\VEC{w})$ is of rank $k$ for all
+$\VEC{w} \in W_i$ and
 all $i \in I$.  We will come back on this subject in
 Subsection~\ref{manifRRn}.
 
@@ -347,7 +348,8 @@ by the single local chart
 = \Big(w_1,w_2-2,\sqrt{4-w_1^2-(w_2-2)^2}\,\Big) \right) \ .
 \]
 However, this is not a local chart according to our definition.  The set
-$\{ (w_1,w_2) : w_1^2+(w_2-2)^2 \leq 4\}$ is not an open subset of $H_2$.
+$\displaystyle \{ (w_1,w_2) : w_1^2+(w_2-2)^2 \leq 4\}$ is not an open
+subset of $H_2$.
 Moreover, $\phi$ is not differentiable at $(w_1,w_2)$ with
 $\displaystyle w_1^2 + (w_2-2)^2 = 4$; the map $\phi$ cannot be
 extended to a differentiable function in an open neighbourhood of
@@ -641,7 +643,7 @@ $\displaystyle g: W \times \RR^{n-k} \to \RR^n$ be the function
 defined by
 $\displaystyle g\left( \begin{pmatrix} \VEC{z} \\ \VEC{y} \end{pmatrix} \right)
 = \phi(\VEC{z}) + \begin{pmatrix} \VEC{0} \\ \VEC{y} \end{pmatrix}$
-for $\VEC{z} \in W$ and $\VEC{y} \in \RR^{n-k}$.
+for $\VEC{z} \in W$ and $\displaystyle \VEC{y} \in \RR^{n-k}$.
 Since
 $\displaystyle \det \left( \diff g\left(
 \begin{pmatrix} \VEC{w} \\ \VEC{0} \end{pmatrix} \right) \right)
@@ -662,7 +664,8 @@ D = \left\{ \VEC{z} \in W
 \right\}
 \]
 is an open subset of $W$ because the induced topology on
-$\displaystyle \RR^k \subset \RR^n$ is the usual topology on $\RR^k$.
+$\displaystyle \RR^k \subset \RR^n$ is the usual topology on
+$\displaystyle \RR^k$.
 Since $\phi:W \to V\cap S$ is a homeomorphism, we
 have that $\phi(D)$ is an open subset of $V\cap S$.  Hence, there
 exists an open set $\displaystyle U \subset \RR^n$ such that
@@ -734,7 +737,7 @@ $g(\VEC{v}) = \VEC{0}$.  We get an open set
 $\displaystyle W_{\VEC{v}} \subset \RR^n$, an open neighbourhood
 $U_{\VEC{v}} \subset V$ of $\VEC{v}$, and a diffeomorphism
 $h:W_{\VEC{v}} \to U_{\VEC{v}}$ such that
-$g(h(\VEC{x})) = (x_{n-k+1} \ x_{n-k+2} \ \ldots \  x_n)^\top$ for
+$\displaystyle g(h(\VEC{x})) = (x_{n-k+1} \ x_{n-k+2} \ \ldots \  x_n)^\top$ for
 $\VEC{x} \in W_{\VEC{v}}$.
 
 Permuting the coordinates in $V$ if necessary, we may assume that
@@ -1019,7 +1022,7 @@ We note that $(\phi_i)_\ast: \TS_{\VEC{w}_i} W_i
 \to \TS_{\VEC{u}_i} S_i$ is a linear isomorphism because
 $\diff \phi_i(\VEC{w}_i)$ is of rank $k_i$.  Thus
 $\diff \phi_i(\VEC{w}_i)$ is a linear isomorphism between $\RR^{k_i}$
-and a substance of dimension $k_i$ in $\RR^n$.
+and a substance of dimension $k_i$ in $\displaystyle \RR^n$.
 
 \begin{defn}
 Suppose that $S$ is a $k$-dimensional manifold of class $\displaystyle C^1$.
@@ -1229,7 +1232,7 @@ and let $\VEC{w} \in \partial W \cap H_k$ be the vector such that
 $\VEC{u} = \phi(\VEC{w})$.  Since
 $\phi_\ast:\TS_{\VEC{w}} W \to \TS_{\VEC{u}} S$ is a linear isomorphism, there
 exists a unique $(\VEC{w},\VEC{q}) \in \TS_{\VEC{w}} W$ such that
-$\VEC{q}\in \RR^k \setminus H_k$ and
+$\displaystyle \VEC{q}\in \RR^k \setminus H_k$ and
 $\phi_\ast(\VEC{w},\VEC{q})$ is one of $(\VEC{u}, \VEC{x}_1)$ or
 $(\VEC{u},\VEC{x}_2)$.
 
@@ -1349,7 +1352,7 @@ $\displaystyle \mu_{\VEC{u}} =
 (\VEC{u},\VEC{x}_{\VEC{u},n-1})]$
 is the selected orientation on $\TS_{\VEC{u}} S$ for $\VEC{u} \in S$.
 The {\bfseries outward unit normal}\index{Outward Unit Normal} to $S$ at
-$\VEC{u} \in S$ is the unit vector $\VEC{n}_{\VEC{u}} =
+$\VEC{u} \in S$ is the unit vector $\displaystyle \VEC{n}_{\VEC{u}} =
 (\VEC{u},\VEC{n}(\VEC{u})) \in \TS_{\VEC{u}} \RR^n \cong \RR^n$
 such that
 $\displaystyle
@@ -1479,12 +1482,12 @@ $\phi(\VEC{w}) = \VEC{u}$ and $(\diff \phi(\VEC{w}))(\VEC{y}) = \VEC{x}$.
 Hence $\displaystyle (\psi \circ (\phi_\ast)^{-1})(\VEC{u},\VEC{x})
 = \psi(\VEC{w},\VEC{y}) = [\rho_{\VEC{w},\VEC{y}}]_{\VEC{w}}$.
 Thus
-$(\tilde{\phi}\circ \psi \circ(\phi_\ast)^{-1})(\VEC{u},\VEC{x})
+$\displaystyle (\tilde{\phi}\circ \psi \circ(\phi_\ast)^{-1})(\VEC{u},\VEC{x})
 = \tilde{\phi}([\rho_{\VEC{w},\VEC{y}}]_{\VEC{w}})
 = [(\phi\circ\rho_{\VEC{w},\VEC{y}})]_{\VEC{u}}$ because
-$(\phi \circ \rho_{\VEC{w},\VEC{y}})(0)
+$\displaystyle (\phi \circ \rho_{\VEC{w},\VEC{y}})(0)
 = \phi(\rho_{\VEC{w},\VEC{y}}(0)) = \phi(\VEC{w}) = \VEC{u}$.  We also
-have that $(\phi \circ \rho_{\VEC{w},\VEC{y}})'(0)
+have that $\displaystyle (\phi \circ \rho_{\VEC{w},\VEC{y}})'(0)
 = (\diff \phi(\VEC{w}))(\VEC{y}) = \VEC{x}$.
 
 In the previous discussion, we have assumed that $\VEC{u} \in \Int S$.
@@ -1540,7 +1543,7 @@ g(\VEC{u}) = \begin{cases}
 for $1 \leq j \leq k$ fixed, then $\displaystyle g \in C^\infty(S)$.
 The projection $\displaystyle \pi_j:\RR^k \to \RR$ defined by
 $\pi_j(\VEC{w}) = w_j$ is used to obtain the
-$\displaystyle j^{th}$ component of $\phi^{-1}$.
+$\displaystyle j^{th}$ component of $\displaystyle \phi^{-1}$.
 Since $\displaystyle
 (g\circ \phi)(\VEC{w}) = \pi_j(\phi^{-1}(\phi(\VEC{w}))) \psi(\phi(\VEC{w}))
 = w_j$ for all
@@ -1553,11 +1556,11 @@ q(g) = \sum_{i=1}^k y_i \pdfdx{(g\circ \phi)}{w_i}(\phi^{-1}(\VEC{u})) = y_j
 Thus $y_j$ is uniquely determinate by the value of $q(g)$.
 
 \subI{Dependence on the local chart}
-The existence of the vector $\VEC{y} \in \RR^k$ is independent of the
-local chart used.  Suppose that
+The existence of the vector $\displaystyle \VEC{y} \in \RR^k$ is
+independent of the local chart used.  Suppose that
 $(W_m,U_m,\phi_m)$ for $m=1,2$ are two local
 charts of $S$ and $\VEC{u} \in U_1 \cap U_2$.  Moreover, suppose that
-there exists $\VEC{y}_1 \in \RR^k$ such that 
+there exists $\displaystyle \VEC{y}_1 \in \RR^k$ such that 
 \[
 q(g) = \sum_{i=1}^k y_{1,i}
 \pdfdx{(g\circ \phi_1)}{w_i}\Big|_{\VEC{w}=\phi_1^{-1}(\VEC{u})}
@@ -1590,7 +1593,7 @@ for all $\displaystyle g \in C^\infty(S)$ if and only if
 \end{equation}
 The projection $\displaystyle \pi_j:\RR^k \to \RR$ defined by
 $\pi_j(\VEC{w}) = w_j$ was used to obtain the
-$\displaystyle j^{th}$ component of $\phi_2^{-1} \circ \phi_1$.
+$\displaystyle j^{th}$ component of $\displaystyle \phi_2^{-1} \circ \phi_1$.
 This relation (\ref{TSv2Eq2}) is exactly
 the relation provided by $\displaystyle \phi_2^{-1} \circ \phi_1$ 
 in Proposition~\ref{manifCTS}.
@@ -1622,7 +1625,7 @@ for all $\lambda \in \RR$.
 Let $(W,U,\phi)$ be a local chart of $S$ about $\VEC{u} \in S$.
 Suppose that $\displaystyle g_1,g_2 \in C^\infty(S)$ and that
 $q \in \breve{\TS}_{\VEC{u}} S$ is given by (\ref{TSv2Eq1}).
-Since $g_1 g_2 \in C^\infty(S)$, we may compute
+Since $\displaystyle g_1 g_2 \in C^\infty(S)$, we may compute
 \begin{align*}
 q(g_1g_2) &= \sum_{i=1}^k y_i
 \pdfdx{\big((g_1\circ \phi)(g_2\circ \phi)\big)}{w_i}
@@ -1673,7 +1676,7 @@ manifold $\displaystyle S \subset \RR^n$ of class $\displaystyle C^1$
 is a map
 $\displaystyle F : S \to \TS\, S = \bigcup_{\VEC{u}\in S} \TS_{\VEC{u}} S$
 defined by $F(\VEC{u}) = (\VEC{u}, f(\VEC{u})) \in \TS_{\VEC{u}} S$
-for all $\VEC{u} \in S$ where $f:S \to \RR^n$.
+for all $\VEC{u} \in S$ where $\displaystyle f:S \to \RR^n$.
 \end{defn}
 
 Let $(W,U,\phi)$ be a local chart of $S$.  There exists a unique
@@ -1735,7 +1738,7 @@ Suppose that $g:S_1 \to S_2$ is a diffeomorphism
 between two $k$-dimensional manifolds of class $\displaystyle C^1$.  The
 {\bfseries pull-back}\index{Pull-Back} of a vector field
 $F:S_2 \to \TS\,S_2$ is the vector field on $S_1$ defined by
-$g^\ast(F)(\VEC{u}) = (g^{-1})_\ast(F(g(\VEC{u})))$ for all
+$\displaystyle g^\ast(F)(\VEC{u}) = (g^{-1})_\ast(F(g(\VEC{u})))$ for all
 $\VEC{u} \in S_1$.
 
 For the readers who would like to learn more about vector fields and
@@ -1785,7 +1788,7 @@ $S$ of class $\displaystyle C^1$.  It is important to note that
 $\displaystyle \omega(\VEC{u}) \in \Omega^p\left( \TS_{\VEC{u}} S \right)$
 for each $\VEC{u} \in S$; namely, for each $\VEC{u} \in S$,
 $\omega(\VEC{u})$ is an alternating $p$-tensor on the k-dimensional
-subspace $\TS_{\VEC{u}} S$ of $\TS_{\VEC{u}} \RR^n \cong \RR^n$.
+subspace $\TS_{\VEC{u}} S$ of $\displaystyle \TS_{\VEC{u}} \RR^n \cong \RR^n$.
 
 If $(W,U,\phi)$ is a local chart of $S$, then
 $\displaystyle \phi^\ast (\omega)$ is a differential $p$-form on $W$
@@ -2025,7 +2028,7 @@ Suppose that $S_1$ and $S_2$ are two manifolds of
 class $\displaystyle C^1$ and that $f:S_1 \to S_2$ is a function of
 class $\displaystyle C^1$.
 If $\omega$ be a $p$-form of class $\displaystyle C^1$ on $S_2$.
-then $f^\ast (\df{\omega}) = \df{(f^\ast(\omega))}$.
+then $\displaystyle f^\ast (\df{\omega}) = \df{(f^\ast(\omega))}$.
 \end{prop}
 
 \begin{proof}
@@ -2082,9 +2085,11 @@ in $\displaystyle \RR^n$, it is also frequent in the literature to use
 this notation to talk about $\omega\big|_S$. 
 Recall that $\df{x_i}$ for $1\leq i \leq n$ are differential
 $1$-form on $\RR^n$ defined by $\df{x_i}(\VEC{u}) \big( (\VEC{u},\VEC{x}) \big)
-= \pi_i(\VEC{x}) = x_i$ for all $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}}\RR^n$,
-$\VEC{u} \in \RR^n$ and $1\leq i \leq n$.  Since $\TS_{\VEC{u}} S$ is
-a linear subspace of $\TS_{\VEC{u}} \RR^n$ for all $\VEC{u} \in S$, we
+= \pi_i(\VEC{x}) = x_i$ for all
+$\displaystyle (\VEC{u},\VEC{x}) \in \TS_{\VEC{u}}\RR^n$,
+$\displaystyle \VEC{u} \in \RR^n$ and $1\leq i \leq n$.
+Since $\TS_{\VEC{u}} S$ is a linear subspace of
+$\displaystyle \TS_{\VEC{u}} \RR^n$ for all $\VEC{u} \in S$, we 
 have that $\displaystyle \df{x_i}\big|_S$ is a differential $1$-form
 on $S$ where $\df{x_i}(\VEC{u})\big( (\VEC{u},\VEC{x}) \big)
 = \pi_i(\VEC{x}) = x_i$ for all $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S$,
@@ -2217,9 +2222,10 @@ that $\omega$ is a differential $k$-form on $S$ with
 $\supp \omega \subset U_1 \cap U_2$, then
 $\displaystyle \int_S \omega = \int_{W_1} \phi_1^\ast(\omega) 
 = \int_{W_2} \phi_2^\ast(\omega)$.  To be more precise,
-let $\tilde{W}_i = \phi_i^{-1}(U_1 \cap U_2)$ for $1=1,2$ and
-$g = \phi_2^{-1}\circ \phi_1$.  Then $g$ is an orientation preserving
-diffeomorphism between $\tilde{W}_1$ and $\tilde{W}_2$.  Hence
+let $\displaystyle \tilde{W}_i = \phi_i^{-1}(U_1 \cap U_2)$ for $1=1,2$ and
+$\displaystyle g = \phi_2^{-1}\circ \phi_1$.  Then $g$ is an
+orientation preserving diffeomorphism between $\tilde{W}_1$ and
+$\tilde{W}_2$.  Hence
 \[
 \int_{W_2} \phi_2^\ast(\omega) = \int_{\tilde{W}_2} \phi_2^\ast(\omega) 
 = \int_{\tilde{W}_1} g^\ast(\phi_2^\ast(\omega))
@@ -2493,13 +2499,14 @@ $\displaystyle \int_{\partial S} \omega = \int_{\partial \sigma}
 \end{lemma}
 
 \begin{proof}
-Since $\supp \phi^\ast (\omega)$ is a compact subset of $W$,
+Since $\displaystyle \supp \phi^\ast (\omega)$ is a compact subset of $W$,
 we may effectively apply Lemma~\ref{stokesLem1} to get the finite
 collection $\displaystyle \left\{ \sigma_m \right\}_{1 \leq m \leq M}$.
 
 We have that
 $\displaystyle \sigma = \sum_{m=1}^M \sigma_m$ is a $k$-chain in $W$
-whose image contains the support of $\phi^\ast(\omega)$ and such that the
+whose image contains the support of
+$\displaystyle \phi^\ast(\omega)$ and such that the
 image of the $(k-1)$-chain
 $\displaystyle \sum_{\sigma_m(I_k) \cap \partial H_k\neq \emptyset}
 (\sigma_m)_{k,0}$ contains the support of the differential $(k-1)$-form
@@ -2755,7 +2762,8 @@ without boundary and $\omega$ be a continuous differential $k$-form on $S$.
 $C_c(S)$, the space of continuous functions on $S$ with compact
 supports, such that, if $(W,U,\phi)$ is an orientation preserving
 local chart of $S$ and
-$\phi^\ast \omega = f \df{w_1}\wedge \df{w_2} \wedge \ldots \wedge \df{w_k}$
+$\displaystyle \phi^\ast \omega
+= f \df{w_1}\wedge \df{w_2} \wedge \ldots \wedge \df{w_k}$
 is the local representation of $\omega$ on $W$, then
 $\displaystyle \eta(g) = \int_W g(\phi(\VEC{w})) \, f(\VEC{w})
 \dx{\VEC{w}}$ for all $g \in C_c(S)$ with support in $U$.
@@ -2785,7 +2793,8 @@ be an atlas of orientation preserving local charts for $S$ and
 $\displaystyle \{\psi_j\}_{j\in \NNp}$ be a partition of unity subordinate 
 to the atlas $\A$.  Suppose that $\alpha_j \in A$ is an index such that
 $\supp \psi_j \subset V_{\alpha_j}$ for $\displaystyle j \in \NNp$.
-We also assume that $\phi_\alpha^\ast \omega = f_\alpha \df{w_1}\wedge
+We also assume that
+$\displaystyle \phi_\alpha^\ast \omega = f_\alpha \df{w_1}\wedge
 \df{w_2} \wedge \ldots \wedge \df{w_k}$ on $W_\alpha$ for all $\alpha \in A$
 where $f_\alpha:W_\alpha \to \RR$ is continuous.
 
@@ -2932,7 +2941,8 @@ without boundary and $\omega$ be a continuous differential $k$-form on $S$.
 \item There exists a unique positive linear functional $\eta$ on
 $C_c(S)$  \footnotemark\ such that, if $(W,U,\phi)$ is an orientation preserving
 local chart of $S$ and
-$\phi^\ast \omega = f \df{w_1}\wedge \df{w_2} \wedge \ldots \wedge \df{w_k}$
+$\displaystyle \phi^\ast \omega
+= f \df{w_1}\wedge \df{w_2} \wedge \ldots \wedge \df{w_k}$
 is the local representation of $\omega$ on $W$, then
 $\displaystyle \eta(g) = \int_W g(\phi(\VEC{w}))\, |f(\VEC{w})|
 \dx{\VEC{w}}$ for all $g \in C_c(S)$ with support in $U$.
@@ -2954,7 +2964,8 @@ be an atlas of orientation preserving local charts for $S$ and
 $\displaystyle \{\psi_j\}_{j\in \NNp}$ be a partition of unity subordinate 
 to the atlas $\A$.  Suppose that $\alpha_j \in A$ is an index such that
 $\supp \psi_j \subset V_{\alpha_j}$ for $\displaystyle j \in \NNp$.
-We also assume that $\phi_\alpha^\ast \omega = f_\alpha \df{w_1}\wedge
+We also assume that
+$\displaystyle \phi_\alpha^\ast \omega = f_\alpha \df{w_1}\wedge
 \df{w_2} \wedge \ldots \wedge \df{w_k}$ on $W_\alpha$ for all $\alpha \in A$
 where $f_\alpha:W_\alpha \to \RR$ is continuous.
 
@@ -3047,7 +3058,8 @@ is an atlas of orientation preserving local charts for $S$,
   subordinate to the atlas $\A$,
 \item $\alpha_j \in A$ is an index such that
 $\supp \psi_j \subset V_{\alpha_j}$ for $\displaystyle j \in \NNp$, and
-\item $\phi_\alpha^\ast \omega = f_\alpha \df{w_1}\wedge \df{w_2} \wedge
+\item $\displaystyle \phi_\alpha^\ast \omega
+= f_\alpha \df{w_1}\wedge \df{w_2} \wedge
 \ldots \wedge \df{w_k}$ on $W_\alpha$ for all $\alpha \in A$ where
 $f_\alpha:W_\alpha \to \RR$ is continuous.
 \end{itemize}
@@ -3103,8 +3115,8 @@ $g_m(\VEC{x}) = 0$ for all $\VEC{x} \in S \cap B_{m+1}(\VEC{u})$
 \footnote{Recall that $B_m(\VEC{u})$ is the open ball of radius $m$
 centred at $\VEC{u}$.}.
 This is a classical result.  In fact, given a compact set $K$ and an open set
-$V \supset K$ in $\RR^n$, we can use a partition of unity for instance
-to proof that there exists a function $g$ of class
+$\displaystyle V \supset K$ in $\RR^n$, we can use a partition of
+unity for instance to proof that there exists a function $g$ of class
 $\displaystyle C^\infty$ with compact support such that
 $0\leq g(\VEC{x}) \leq 1$ for all $\VEC{x}$, $g(\VEC{x}) = 1$ for all
 $\VEC{x} \in K$ and $g(\VEC{x}) = 0$ for $\VEC{x} \not\in V$.  We
@@ -3546,7 +3558,7 @@ The next proposition is use to reduce the problem of determining if a
 set is negligible to a local problem.
 
 \begin{prop}  \label{propCrit1}
-Let $S$ be a oriented $k$-dimensional manifold of class $C^1$.  If
+Let $S$ be a oriented $k$-dimensional manifold of class $\displaystyle C^1$.  If
 $R_1$ and $R_2$ are negligible in $S$, then $R_1 \cup R_2$ is
 negligible in $S$.
 \end{prop}
@@ -3571,7 +3583,7 @@ $g_{2,j}\df{g_{1,j}} \wedge \omega$ respectively.
 \end{proof}
 
 \begin{prop} \label{propCrit2}
-Let $S$ be a oriented $n$-dimensional manifold of class $C^1$.
+Let $S$ be a oriented $n$-dimensional manifold of class $\displaystyle C^1$.
 A compact set $R$ is negligible in $S$ if $R$ is a singular $q$-cube
 with $q \leq n-2$.
 \end{prop}
@@ -3600,7 +3612,7 @@ Proposition~\ref{propCrit1} that $S_s= R_1 \cup R_2$ is negligible in $S$.
 
 \begin{proof}[Proof (of Proposition~\ref{propCrit2})]
 \stage{a} Suppose that $R = \sigma(I_q)$.
-We split $I_q$ into $p^q$ cubes of the form
+We split $I_q$ into $\displaystyle p^q$ cubes of the form
 \[
 I_{i_1,i_2,\ldots,i_q}
 = \left[ \frac{i_1-1}{p}, \frac{i_1}{p} \right]
@@ -3616,7 +3628,7 @@ $\displaystyle
 \| \sigma(\VEC{x}) - \sigma(\VEC{y})\| \leq \frac{C_0 \sqrt{q}}{p}$ for
 all $\VEC{x},\VEC{y} \in I_{i_1,i_2,\ldots,i_q}$.  Thus
 $\sigma(I_{i_1,i_2,\ldots,i_q})$ is a subset of a closed cube
-$\tilde{I}_{i_1,i_2,\ldots,i_q} \subset \RR^n$ of
+$\displaystyle \tilde{I}_{i_1,i_2,\ldots,i_q} \subset \RR^n$ of
 volume $\displaystyle \left(\frac{C_0 \sqrt{q}}{p}\right)^n$ and
 $\displaystyle R = \sigma(I_q) \subset
 \bigcup_{\substack{1 \leq i_j \leq p\\1\leq j \leq q}}
@@ -3695,7 +3707,8 @@ $\displaystyle \|\VEC{x} - (2p)^{-1}\VEC{z}\|
 \geq \|\VEC{x} - \VEC{y}\| - \|\VEC{y} - (2p)^{-1}\VEC{z}\|$ for all
 $\VEC{y} \in R$ implies that $\displaystyle \|\VEC{x} - (2p)^{-1}\VEC{z}\|
 \geq 2/p - 1/p = 1/p$ because there is at least one $\VEC{y} \in R$
-with $\|\VEC{y} - (2p)^{-1}\VEC{z}\| \leq 1/p$ since $\VEC{z} \in R_p$.
+with $\displaystyle \|\VEC{y} - (2p)^{-1}\VEC{z}\| \leq 1/p$ since
+$\VEC{z} \in R_p$.
 Hence $\displaystyle \| p\left(\VEC{x} - (2p)^{-1} \VEC{z}\right) \| \geq 1$
 for all $\VEC{z} \in R_p$.
 It follows from the definition of $\psi$ that
@@ -3737,7 +3750,7 @@ $\displaystyle \VEC{z} \in \ZZ^n$ and $1 \leq i \leq n$.  Hence
 (2p)^{-1}\VEC{z}\right)\right)}{x_i}\right| 
 \leq p M
 \end{align*}
-for all $\VEC{x} \in \RR^n$ and all $\VEC{z} \in R_p$
+for all $\displaystyle \VEC{x} \in \RR^n$ and all $\VEC{z} \in R_p$
 because $0 \leq \psi(\VEC{y}) \leq 1$ for all $\displaystyle \VEC{y} \in \RR^n$.
 
 Moreover, the number of terms in the sum in
@@ -3770,7 +3783,7 @@ because they may not be elements of $R_p$.
 
 It follows from (\ref{propCrit2Eq1}) that
 $\displaystyle \left|\pdydx{g_p}{x_i}(\VEC{x})\right| \leq C_1 p$ for
-all $\VEC{x} \in \RR^n$ where $C_1 = 9^n M$.
+all $\VEC{x} \in \RR^n$ where $\displaystyle C_1 = 9^n M$.
 
 \stage{c} We show that $G_p$ can be covered by closed cubes whose total
 volume is at most $\displaystyle \frac{(4 + C_0 \sqrt{q})^n}{p^2}$.
@@ -3845,7 +3858,7 @@ as $p \to \infty$.
 The first step is to expand the definition of local charts.
 
 \begin{defn}
-Let $W$ be an open subset of $\RR^{k-1}$ and $f:W \to \RR$ be a
+Let $W$ be an open subset of $\displaystyle \RR^{k-1}$ and $f:W \to \RR$ be a
 continuous function.  A point
 $\VEC{p} \in G_{f,W} = \{(\VEC{x},f(\VEC{x})) : \VEC{x} \in W \}$
 is a {\bfseries regular point}\index{Regular Point} if there exists an
@@ -3856,8 +3869,9 @@ The points in $S_{f,W} \equiv G_{f,W} \setminus R_{f,W}$ are called
 
 The function $f$ is said to be
 {\bfseries piecewise smooth}\index{Piecewise Smooth}
-if $f^{-1}(S_{f,W}) \subset \RR^{k-1}$ is a set of measure zero and,
-for each compact set $K \subset W$, there exists a constant $L$ such that
+if $\displaystyle f^{-1}(S_{f,W}) \subset \RR^{k-1}$ is a set of
+measure zero and, for each compact set $K \subset W$, there exists a
+constant $L$ such that
 $|f(\VEC{x}_1) - f(\VEC{x}_2)| \leq L \|\VEC{x}_1 - \VEC{x}_2\|$ for
 all $\VEC{x}_1,\VEC{x}_2 \in K$.
 \end{defn}
@@ -3870,7 +3884,8 @@ Definition~\ref{manifold_charts} or defined by the following three
 objects:
 \begin{enumerate}
 \item an open subset $U$ of $S$,
-\item an open subset $W = W_1 \times W_2 \subset \RR^{k-1} \times \RR$
+\item an open subset
+$\displaystyle W = W_1 \times W_2 \subset \RR^{k-1} \times \RR$
 with a piecewise smooth function $f:W_1 \to W_2$, and
 \item a homeomorphism $\phi:W\rightarrow U$
 \end{enumerate}
@@ -3905,7 +3920,7 @@ Boundary] \label{GenStokesThV2}
 Let $S$ be a closed and oriented $k$-dimensional manifold with
 piecewise smooth boundary.  Let $\omega$ be a differential
 $(k-1)$-form of class $\displaystyle C^1$ defined in an open set of
-$\RR^n$ containing $\overline{S}$.  Then
+$\displaystyle \RR^n$ containing $\overline{S}$.  Then
 $\displaystyle \int_S \df{\omega} = \int_{\partial S} \omega$.
 \end{theorem}
 
@@ -3913,7 +3928,7 @@ $\displaystyle \int_S \df{\omega} = \int_{\partial S} \omega$.
 The proof of the theorem used arguments similar to those introduced in
 the proofs of Theorem~\ref{GenStokesTh} and Proposition~\ref{propCrit2}.
 
-Since $S$ is closed in $\RR^n$, we have that 
+Since $S$ is closed in $\displaystyle \RR^n$, we have that 
 $\overline{S} \setminus \Int S = \partial S$.
 
 Using an atlas for $S$ and a partition of unity subordinate to this
@@ -4111,9 +4126,9 @@ for $\VEC{u} = \phi(w)$ with $w \in W$.  Hence
 \label{tunEq1}
 \end{align}
 for all $(w,y) \in \TS_w W \cong \RR$ and $w \in W$.  Thus
-$\phi^\ast(\nu)$ is continuous on $W$.  Note that $\phi'(w) \neq \VEC{0}$
-for all $w \in W$ since $\phi'(w)$ is a rank one by definition of
-local charts.
+$\displaystyle \phi^\ast(\nu)$ is continuous on $W$.  Note that
+$\phi'(w) \neq \VEC{0}$ for all $w \in W$ since $\phi'(w)$ is a rank
+one by definition of local charts.
 
 Therefore, by uniqueness of the volume element, $\dx{s} = \nu$.
 It also follows from (\ref{tunEq1}) that
@@ -4169,8 +4184,7 @@ $\VEC{x} = \epsilon \|\VEC{x}\|\, \VEC{t}(\VEC{u})$ for all vector
 $(\VEC{u}, \VEC{x}) \in \TS_{\VEC{u}} C$ (vectors tangent to the curve $C$ at
 $\VEC{u}$) where $\epsilon = 1$ if $\VEC{x}$ points in the same direction
 than $\VEC{t}(\VEC{u})$ and $\epsilon = -1$ otherwise.  Hence, 
-$\displaystyle 
-\dx{s}(\VEC{u}) (\VEC{u}, \VEC{x})
+$\displaystyle \dx{s}(\VEC{u}) (\VEC{u}, \VEC{x})
 = \ps{ \epsilon \|\VEC{x}\|\,\VEC{t}(\VEC{u})}{\VEC{t}(\VEC{u})}
 = \epsilon \|\VEC{x}\|$
 for all $(\VEC{u}, \VEC{x})$ in $\TS_{\VEC{u}} C$. We already knew
@@ -4345,7 +4359,7 @@ for $i =1,2$ and some $b_{i,j} \in \RR$.  Hence
 \df{w_1} \wedge \df{w_2}\right) (\VEC{w}) \big( (\VEC{w} , \VEC{y}_1),
 (\VEC{w}, \VEC{y}_2) \big) \ . \label{vunEq1}
 \end{align}
-Thus $\phi^\ast(\nu)$ is continuous on $W$.
+Thus $\displaystyle \phi^\ast(\nu)$ is continuous on $W$.
 
 Therefore, by uniqueness of the volume element, $\dx{A} = \nu$.
 It also follows from (\ref{vunEq1}) that

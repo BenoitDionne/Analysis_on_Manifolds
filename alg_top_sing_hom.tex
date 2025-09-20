@@ -93,7 +93,7 @@ Let $\tilde{\VEC{x}} = f(\VEC{0})$ and
 $L(\VEC{x}) = f(\VEC{x}) - \tilde{\VEC{x}}$ for
 $\displaystyle \VEC{x} \in \RR^n$.  It
 suffices to prove that $\displaystyle L:\RR^n \to \RR^m$ is a linear
-map.  We have that
+map.  We have
 \begin{align}
 L(a\VEC{x}) &= f(a\VEC{x}) - \tilde{\VEC{x}}
 = f(a \VEC{x} +(1-a)\,\VEC{0}) - \tilde{\VEC{x}}
@@ -140,7 +140,7 @@ Let $X$ be a topological space and $R$ be an integral domain.
 Given a singular $k$-simplex $\sigma:\Delta_k \to X$ in $X$ with
 $k>0$.  The {\bfseries $\mathbf{j}$-face}\index{$j$-face} of
 $\sigma$ is the singular $(k-1)$-simplex defined by
-$\sigma^{(j)} = \sigma \circ F_k^j:\Delta_{k-1} \to X$.
+$\displaystyle \sigma^{(j)} = \sigma \circ F_k^j:\Delta_{k-1} \to X$.
 The {\bfseries boundary}\index{Boundary} of $\sigma$ is defined by
 $\displaystyle \partial_k (\sigma) = \sum_{j=0}^k (-1)^j \sigma^{(j)}$.
 
@@ -161,7 +161,8 @@ $\partial_{k-1} \circ \partial_k = 0$ for all $k\in \ZZ$.
 The result is obviously true for $k \leq 1$.  Thus, we may assume that
 $k>1$.
 
-\stage{i} We first note that $F_k^i \circ F_{k-1}^j = F_k^j \circ F_{k-1}^{i-1}$
+\stage{i} We first note that
+$\displaystyle F_k^i \circ F_{k-1}^j = F_k^j \circ F_{k-1}^{i-1}$
 for $0 \leq j < i \leq k$.  To prove this
 statement, it suffices to prove it for all $\VEC{e}_q$ for
 $1 \leq q \leq k-1$ because we are working with affine functions.  We
@@ -199,7 +200,8 @@ F_k^j(F_{k-1}^{i-1}(\VEC{e}_q)) =
 \VEC{e}_{q+2} & \quad \text{if} \ i-1 \leq q  
 \end{cases}
 \]
-Thus $F_k^i(F_{k-1}^j(\VEC{e}_q)) = F_k^j(F_{k-1}^{i-1}(\VEC{e}_q))$.
+Thus $\displaystyle F_k^i(F_{k-1}^j(\VEC{e}_q))
+= F_k^j(F_{k-1}^{i-1}(\VEC{e}_q))$.
 
 \stage{ii} By linearity, it is enough to proof
 $\partial_{k-1} \circ \partial_k = 0$ for singular $k$-simplices.
@@ -248,7 +250,7 @@ $\partial_{k+1} \tilde{c} = c$.
 The set of all $k$-boundaries in $S_k(X;R)$ is a $R$-module denoted
 $B_k(X;R)$.
 
-The {\bfseries singular $\mathbf{k^{th}}$ homology
+The {\bfseries singular $\displaystyle \mathbf{k^{th}}$ homology
 module}\index{Homology Module!Singular $k^{th}$ Homology Module} of
 $X$ is the $R$-module defined as
 $H_k(X;R) = Z_k(X;R) / B_k(X;R)$.
@@ -335,7 +337,8 @@ $\epsilon(c_1) - \epsilon(c_2) = \epsilon(c_1-c_2) = \epsilon(\partial_1 c)$.
 To prove that $\epsilon(\partial_1 c) = 0$, it suffices to prove that
 $\epsilon(\partial_1 \sigma) = 0$ for any singular $1$-simplex in $X$.
 We effectively have that
-$\epsilon(\partial_1 \sigma) = \epsilon(\sigma \circ F^0_1 - \sigma \circ F^1_1)
+$\displaystyle \epsilon(\partial_1 \sigma)
+= \epsilon(\sigma \circ F^0_1 - \sigma \circ F^1_1)
 = \epsilon(e_{\sigma(\VEC{e}_1)} - e_{\sigma(\VEC{e}_0)}) = 1 - 1 = 0$.
 
 We may therefore define a map $\tilde{\epsilon}: H_0(X;R) \to R$ as it follows.
@@ -530,7 +533,7 @@ We first show that $k$ is well defined.  Suppose that $\tilde{y} \in Y$
 is such that $g(\tilde{y}) = z$.  Then
 $g(y - \tilde{y}) = g(y) - g(\tilde{y}) = 0$.  So
 $y - \tilde{y} \in \KE(g) = \IMG(f)$.  Thus there exists $x\in X$ such
-that $f(x) = y - \tilde{y}$.  We get that
+that $f(x) = y - \tilde{y}$.  We get
 \begin{align*}
 \big(y - f(h(y))\big) - \big(\tilde{y} - f(h(\tilde{y}))\big)
 &= y - \tilde{y} - f(h(y - \tilde{y})) \\
@@ -632,7 +635,7 @@ Then
 & Z \ar@/^/[l]^-{\tilde{k}}\ar[r] & 0 }
 \]
 is exact in both direction.  Let
-$f = \Phi^{-1}\circ \tilde{f}$, $g = \tilde{g} \circ \Phi$ and
+$\displaystyle f = \Phi^{-1}\circ \tilde{f}$, $g = \tilde{g} \circ \Phi$ and
 $h = \tilde{h} \circ \Phi$.  We get that
 \[
 \xymatrix{ 0 \ar[r] & X \ar[r]^{f} & Y \ar[r]^{g} & Z \ar[r] & 0 }
@@ -802,7 +805,7 @@ g_k\big( b - \tilde{b} - \partial_{k+1}^{\BB}(\breve{b})\big)
 Since $\displaystyle
 b - \tilde{b} - \partial_{k+1}^{\BB}(\breve{b}) \in \KE(g_k) = \IMG(f_k)$,
 there exists $\breve{a} \in A_k$ such that
-$f_k(\breve{a}) = b - \tilde{b} - \partial_{k+1}^{\BB}(\breve{b})$.
+$\displaystyle f_k(\breve{a}) = b - \tilde{b} - \partial_{k+1}^{\BB}(\breve{b})$.
 Moreover, since
 \begin{align*}
 f_{k-1}( \partial_k^{\A}(\breve{a})) 
@@ -812,8 +815,8 @@ f_{k-1}( \partial_k^{\A}(\breve{a}))
 &=  f_{k-1}(a) - f_{k-1}(\tilde{a}) = f_{k-1}(a - \tilde{a})
 \end{align*}
 and $f_{k-1}$ is one-to-one, we get that
-$a - \tilde{a} = \partial_k^{\A}(\breve{a})$ with $\breve{a} \in A_k$.
-Therefore $[a]=[\tilde{a}]$.
+$\displaystyle a - \tilde{a} = \partial_k^{\A}(\breve{a})$ with
+$\breve{a} \in A_k$.  Therefore $[a]=[\tilde{a}]$.
 
 To prove that $\tilde{\partial}_k$ is an homomorphism, suppose that
 $[c], [\tilde{c}] \in H_k(\C)$.  We have by definition of
@@ -825,7 +828,7 @@ $\displaystyle f_{k-1}(\tilde{a}) = \partial_k^{\BB}(\tilde{b})$
 with $g_k(\tilde{b}) = \tilde{c}$ for some $\tilde{b} \in B_k$.
 Since
 $\displaystyle f_{k-1}(a + \tilde{a}) = \partial_k^{\BB}(b + \tilde{b})$ 
-with $g_k(b+ \breve{b}) = c + \breve{c}$, we get that
+with $g_k(b+ \breve{b}) = c + \breve{c}$, we get
 \[
 \tilde{\partial}_k([c]+[\tilde{c}])
 = \tilde{\partial}_k([c+\tilde{c}]) = [ a + \tilde{a}]
@@ -843,9 +846,9 @@ $\IMG(H_k(\F)) \subset \KE(H_k(\GG))$.
 
 Suppose that $[b] \in \KE(H_k(\GG))$.  We therefore have that
 $H_k(\GG)([b]) = [g_k(b)] = [0]$.  Thus
-$g_k(b) = \partial_{k+1}^{\C}(c)$ for some $c \in C_{k+1}$.
+$\displaystyle g_k(b) = \partial_{k+1}^{\C}(c)$ for some $c \in C_{k+1}$.
 Since $g_{k+1}$ is onto, there exists $\tilde{b} \in B_{k+1}$ such
-that $g_{k+1}(\tilde{b}) = c$.  We get that
+that $g_{k+1}(\tilde{b}) = c$.  We get
 \[
 g_k(b - \partial_{k+1}^{\BB}(\tilde{b}))
 = g_k(b) - \partial_{k+1}^{\C}(g_{k+1}(\tilde{b}))
@@ -863,7 +866,8 @@ f_{k-1}(\partial_k^{\A}(a)) = \partial_k^{\BB}(f_k(a))
 and $f_{k-1}$ being one-to-one implies that
 $\displaystyle \partial_k^{\A}(a) = 0$.  Thus $[a] \in H_k(\A)$.
 Moreover,\\
-$H_k(\F)([a]) = [f_k(a)] = [b - \partial_{k+1}^{\BB}(\tilde{b})] = [b]$.
+$\displaystyle H_k(\F)([a]) = [f_k(a)]
+= [b - \partial_{k+1}^{\BB}(\tilde{b})] = [b]$.
 Thus $[b] \in \IMG(H_k(\F)$.  This proves that
 $\KE(H_k(\GG)) \subset \IMG(H_k(\F))$.
 
@@ -872,16 +876,16 @@ Given $[c] \in H_k(\C)$, we have that $\tilde{\partial}_k([c]) = [a]$ where
 $\displaystyle f_{k-1}(a) = \partial_k^{\BB}(b)$ with $g_k(b) = c$ for
 some $b \in B_k$.
 
-If $[c] \in \IMG(H_k(\GG))$, then $[c] = H_k(\GG)([b])
-= [g_k(b)]$ for some $[b] \in H_k(\BB)$.  In particular, $b \in Z_k(\BB)$.
+If $[c] \in \IMG(H_k(\GG))$, then $[c] = H_k(\GG)([b]) = [g_k(b)]$
+for some $[b] \in H_k(\BB)$.  In particular, $b \in Z_k(\BB)$.
 Thus $\displaystyle f_{k-1}(a) = \partial_k^{\BB}(b) = 0$ implies that
 $a=0$ because $f_{k-1}$ is one-to-one.  Thus $\tilde{\partial}_k([c]) = [0]$;
 namely, $[c] \in \KE(\tilde{\partial}_k)$.  We have proved that
 $\IMG(H_k(\GG) \subset \KE(\tilde{\partial}_k)$.
 
 Suppose that $[c] \in \KE(\tilde{\partial}_k)$.
-Then $a = \partial_k^{\A}(\tilde{a})$ for some $\tilde{a} \in A_k$.
-We have that $b - f_k(\tilde{a}) \in Z_k(\BB)$ because
+Then $\displaystyle a = \partial_k^{\A}(\tilde{a})$ for some
+$\tilde{a} \in A_k$.  We have that $b - f_k(\tilde{a}) \in Z_k(\BB)$ because
 \[
 \partial_k^{\BB}(b - f_k(\tilde{a}))
 = \partial_k^{\BB}(b) - f_{k-1}(\partial_k^{\A}(\tilde{a}))
@@ -904,7 +908,8 @@ Thus $[a] \in \KE(H_{k-1}(\F))$.  Hence
 $\IMG(\tilde{\partial}_k) \subset \KE(H_{k-1}(\F))$.
 
 Suppose that $[a] \in \KE(H_{k-1}(\F))$.  Since $H_{k-1}(\F)([a])
-= [f_{k-1}(a)] = [0]$, we get that $f_{k-1}(a) = \partial_k^{\BB}(b)$
+= [f_{k-1}(a)] = [0]$, we get that
+$\displaystyle f_{k-1}(a) = \partial_k^{\BB}(b)$
 for some $b \in B_k$.  Let $c = g_k(b)$.  We have that $c \in Z_k(C)$
 because
 \[
@@ -1036,7 +1041,7 @@ $H_k(\F) : H_k(\C) \to H_k(\tilde{\C})$ is an isomorphism.
 \begin{proof}
 The result is obvious for $k \neq 0$ because
 $\displaystyle H_k(\C^\sharp) = H_k(\C)$ and 
-$H_k(\tilde{\C}^\sharp) = H_k(\tilde{\C})$ for $k\neq 0$.
+$\displaystyle H_k(\tilde{\C}^\sharp) = H_k(\tilde{\C})$ for $k\neq 0$.
 
 For $k=0$, we have the following commutative diagram
 \begin{equation} \label{CsCtfauHsHEq1}
@@ -1059,7 +1064,7 @@ $C_0 = \KE(\epsilon) \oplus \IMG(g)$ and
 $\tilde{C}_0 = \KE(\tilde{\epsilon}) \oplus \IMG(\tilde{g})$.
 
 Since $C_0 = \KE(\partial_0)$ because we assume that $C_{-1} = \{0\}$,
-we have that
+we have
 \[
 H_0(\C) = C_0/\IMG(\partial_1) = \big(\KE(\epsilon) \oplus
 \IMG(g)\big) / \IMG(\partial_1)
@@ -1070,7 +1075,7 @@ $\KE(\epsilon) \cap \IMG(g) = \{0\}$.  More precisely, we have that
 $\IMG(g) / \IMG(\partial_1) \cong \IMG(g)$.
 
 Similarly, since $\tilde{C}_0 = \KE(\tilde{\partial}_0)$ because we assume
-that $\tilde{C}_{-1} = \{0\}$, we have that
+that $\tilde{C}_{-1} = \{0\}$, we have
 \[
 H_0(\tilde{\C}) = \tilde{C}_0/\IMG(\tilde{\partial}_1)
 = \big(\KE(\tilde{\epsilon}) \oplus \IMG(\tilde{g})\big)
@@ -1083,7 +1088,7 @@ $\KE(\tilde{\epsilon}) \cap \IMG(\tilde{g}) = \{0\}$.  Again,
 we have that
 $\IMG(\tilde{g}) / \IMG(\tilde{\partial}_1) \cong \IMG(\tilde{g})$.
 
-Using the notation of the reduced chain complexes, we get that
+Using the notation of the reduced chain complexes, we get
 \begin{equation} \label{HFHCHCtEq1}
 H_0(\C) \cong \big(\KE(\partial_0^\sharp) / \IMG(\partial_1^\sharp)\big)
 \oplus \IMG(g) = H_0(\C^\sharp) \oplus \IMG(g)
@@ -1133,10 +1138,10 @@ closed unit ball centred at the origin.
 
 \begin{rmkList} \label{rmkSasph}
 \begin{enumerate}
-\item Convex subsets $X \subset \RR^n$ are aspherical.  Suppose that
-$\displaystyle f: S^k \to X$ is a continuous map.
+\item Convex subsets $\displaystyle X \subset \RR^n$ are aspherical.
+Suppose that $\displaystyle f: S^k \to X$ is a continuous map.
 Choose $y \in X$.  Since
-$\overline{B_1(\VEC{0})} \cong \big(S^k \times [0,1]\big) /
+$\displaystyle \overline{B_1(\VEC{0})} \cong \big(S^k \times [0,1]\big) /
 \big(S^k \times \{0\}\big)$, we define
 $F: \overline{B_1(\VEC{0})} \to X$ as it follows.
 $F([x,t]) = (1-t)y +tf(x)$ for all $[x,t] \in \overline{B_1(\VEC{0})}$.
@@ -1195,7 +1200,7 @@ Suppose that $\sigma \in Z_k(S;R)$.  It follows from (\ref{pHkDI0Eq1}) that
 We have that $\sigma \in B_k(S;R)$ for $k>0$.  Thus $[\sigma] = 0$.
 Since $\sigma \in Z_k(S;R)$ is arbitrary, we get that
 $\displaystyle H_k^\sharp(S;R) = H_k(S;R) = 0$ for $k>0$.
-If $k=0$, we have that
+If $k=0$, then we have
 \begin{equation} \label{pHkDI0Eq2}
 \sigma - \eta(\epsilon(\sigma))
 = \partial_1(D_0(\sigma)) \ .
@@ -1208,9 +1213,9 @@ $\sigma \in \KE(\epsilon)$.
 It follows from (\ref{pHkDI0Eq2}) that
 $\sigma = \partial_1(D_0(\sigma))$.  Thus
 $\displaystyle \sigma \in \IMG(\partial_1) = B_0^\sharp(S;R)$.
-Hence $[\sigma] = 0 \in H_0^\sharp(S;R)$.
+Hence $\displaystyle [\sigma] = 0 \in H_0^\sharp(S;R)$.
 Since $\sigma \in \KE(\epsilon)$ is arbitrary, we get that
-$H_0^\sharp(S;R) = 0$.
+$\displaystyle H_0^\sharp(S;R) = 0$.
 
 \stage{II}  We prove that there is a chain homotopy
 $\D = \{D_k\}_{k\in \ZZ}$ between the chain maps $\F$ and
@@ -1238,21 +1243,25 @@ may extend $D_0$ by linearity to $S_0(X;R)$.
 
 \stage{II.ii} Given a singular $1$-simplex $\sigma$ in $X$, we define
 $\beta_\sigma:\dot{\Delta}_2 \to X$ such that
-$\beta_\sigma\circ F^0_2 = \sigma$ and $\beta_\sigma \circ F^i_2 =
+$\displaystyle \beta_\sigma\circ F^0_2 = \sigma$ and
+$\displaystyle \beta_\sigma \circ F^i_2 =
 D_0(\sigma\circ F^{i-1}_1)$ for $i =1,2$.
 To prove that $\beta_\sigma$ is continuous on $\dot{\Delta}_2$, we
 have to prove that $\beta_\sigma$ is continuous on the intersection of
 the distinct faces of $\Delta_2$.  Let
-$K_{i,j} = F^i_2(\Delta_1) \cap F^j_2(\Delta_1)$ for
+$\displaystyle K_{i,j} = F^i_2(\Delta_1) \cap F^j_2(\Delta_1)$ for
 $0 \leq j < i \leq 2$.
 
 We have proved in the context of the proof of
-Proposition~\ref{propdkmqdk0} that $F_2^i \circ F_1^j = F_2^j \circ F_1^{i-1}$
-for $0 \leq j < i \leq 2$.  Thus $K_{i,j} = (F^i_2\circ F^j_1)(\Delta_0)
+Proposition~\ref{propdkmqdk0} that
+$\displaystyle F_2^i \circ F_1^j = F_2^j \circ F_1^{i-1}$
+for $0 \leq j < i \leq 2$.  Thus
+$\displaystyle K_{i,j} = (F^i_2\circ F^j_1)(\Delta_0)
 = (F_2^j \circ F_1^{i-1})(\Delta_0)$ for $0 \leq j < i \leq 2$.
-Hence $K_{0,1} = \{\VEC{e}_2\} = \{(F^1_2\circ F^0_1)(\VEC{e}_0) \}$,
-$K_{0,2} = \{\VEC{e}_1\} = \{ (F^2_2\circ F^0_1)(\VEC{e}_0) \}$ and
-$K_{1,2} = \{\VEC{e}_0\} = \{ (F_2^2 \circ F_1^1)(\VEC{e}_0) \}$.
+Hence
+$\displaystyle K_{0,1} = \{\VEC{e}_2\} = \{(F^1_2\circ F^0_1)(\VEC{e}_0) \}$,
+$\displaystyle K_{0,2} = \{\VEC{e}_1\} = \{ (F^2_2\circ F^0_1)(\VEC{e}_0) \}$ and
+$\displaystyle K_{1,2} = \{\VEC{e}_0\} = \{ (F_2^2 \circ F_1^1)(\VEC{e}_0) \}$.
 Since the intersection of the faces is only one point, we obviously
 have that $\beta_\sigma$ is continuous on $\dot{\Delta}_1$.
 Therefore, the map $\beta_\sigma$ can be extended to $\Delta_2$ because $X$ is
@@ -1263,13 +1272,14 @@ may extend $D_1$ by linearity to $S_1(X;R)$.
 \stage{II.iii} We assume that $D_{k-1} : S_{k-1}(X;R) \to S_k(X;R)$ has
 been defined.  Given a singular $k$-simplex $\sigma$ in $X$, 
 we define $\beta_\sigma:\dot{\Delta}_{k+1} \to X$ such that
-$\beta_\sigma\circ F^0_{k+1} = \sigma$ and $\beta_\sigma \circ F^i_{k+1} =
+$\displaystyle \beta_\sigma\circ F^0_{k+1} = \sigma$ and
+$\displaystyle \beta_\sigma \circ F^i_{k+1} =
 D_{k-1}(\sigma\circ F^{i-1}_k)$ for $1 \leq i \leq k+1$.
 To prove that $\beta_\sigma$ is continuous on $\dot{\Delta}_{k+1}$, we
 have to prove that $\beta_\sigma$ is continuous on the intersection of
 the distinct faces of $\Delta_{k+1}$.
 
-Let $K_{i,j} = F^i_{k+1}(\Delta_k) \cap F^j_{k+1}(\Delta_k)$ for
+Let $\displaystyle K_{i,j} = F^i_{k+1}(\Delta_k) \cap F^j_{k+1}(\Delta_k)$ for
 $0 \leq j < i \leq k+1$.  As we mentioned before, we have proved in
 the context of the proof of Proposition~\ref{propdkmqdk0} that
 $F_{k+1}^i \circ F_k^j = F_{k+1}^j \circ F_k^{i-1}$
@@ -1289,7 +1299,7 @@ D_{k-2}(\sigma \circ F_k^{i-1} \circ F^{j-1}_{k-1}) & \quad \text{if}
 \end{cases}  \label{pHkDI0Eq3}
 \end{align}
 To get the last equality, wee use the fact that
-$D_{k-1}(\sigma \circ F_k^{i-1})\Big|_{\dot{\Delta}_k}
+$\displaystyle D_{k-1}(\sigma \circ F_k^{i-1})\Big|_{\dot{\Delta}_k}
 = \beta_{\sigma\circ F_k^{i-1}}:\dot{\Delta}_k \to X$ for the
 definition of $D_{k-1}$.
 
@@ -1309,11 +1319,12 @@ D_{k-2}(\sigma \circ F_k^{j-1} \circ F^{i-2}_{k-1}) & \quad \text{if}
 \end{cases}  \label{pHkDI0Eq4}
 \end{align}
 To get the last equality, we again use the fact that
-$D_{k-1}(\sigma \circ F_k^{i-1})\Big|_{\dot{\Delta}_k}
+$\displaystyle D_{k-1}(\sigma \circ F_k^{i-1})\Big|_{\dot{\Delta}_k}
 = \beta_{\sigma\circ F_k^{i-1}}:\dot{\Delta}_k \to X$ for the
 definition of $D_{k-1}$.
 
-Since $F_k^{i-1} \circ F_{k-1}^{j-1} = F_k^{j-1} \circ F_{k-1}^{i-2}$
+Since $\displaystyle F_k^{i-1} \circ F_{k-1}^{j-1}
+= F_k^{j-1} \circ F_{k-1}^{i-2}$
 for $1 \leq j < i \leq k+1$, we get from (\ref{pHkDI0Eq3}) and
 (\ref{pHkDI0Eq4}) that
 $\displaystyle \beta_\sigma \circ F^i_{k+1} \circ F^j_k
@@ -1344,7 +1355,7 @@ D_0(\sigma) \circ F^1_1 = \sigma - (\eta \circ \epsilon)(\sigma)
 for all singular $0$-simplices in $X$.  By linearity,
 (\ref{pHkDI0Eq5}) is true on $S_0(X;R)$.
 
-For $k>0$, we have that
+For $k>0$, we have
 \begin{align*}
 &\partial_{k+1} (D_k(\sigma)) + D_{k-1}(\partial_k(\sigma))
 = \sum_{i=0}^{k+1} (-1)^i D_k(\sigma) \circ F^i_{k+1}
@@ -1448,7 +1459,7 @@ Moreover, because of the linearity, it is enough to verify the three
 properties of $P_0$ for arbitrary singular simplices in $X$.
 
 Suppose that $\sigma$ is an arbitrary singular $0$-simplex in $X$.
-Since $\tilde{D}_{-1} = 0$, we have that
+Since $\tilde{D}_{-1} = 0$, we have
 \[
 (\partial_1 \circ \tilde{D}_0)(\sigma)
 + (\tilde{D}_{-1} \circ \partial_0)(\sigma)
@@ -1688,7 +1699,7 @@ of the chain complex $\C$ with augmentation
 \]
 where $J \subset \NN$ is a finite set, $a_j \in R$ and $\sigma_j$ is a
 singular $0$-simplex for $j \in J$.  According to the definition of a
-reduced chain complex, Definition~\ref{defnRedCC}, we have that
+reduced chain complex, Definition~\ref{defnRedCC}, we have
 \[
 S_k^\sharp(X;R) = \begin{cases}
 R & \quad \text{if} \ k = -1 \\
@@ -1716,7 +1727,7 @@ In fact $\displaystyle H_k^\sharp(X;R) \cong H_k(X;R)$ for $k\neq 0$.
 Only $\displaystyle H_0^\sharp(X;R)$ and $\displaystyle H_0(X;R)$ may
 be different.  For instance, we saw that in Example~\ref{eggHk1} that
 $H_0(X,R) = R$ if $X = \{x\}$.  However, we have that
-$H_0^\sharp(X,R) = 0$ if $X = \{x\}$.  In general, we have the
+$\displaystyle H_0^\sharp(X,R) = 0$ if $X = \{x\}$.  In general, we have the
 following result.
 
 \begin{prop} \label{propHkEquHskpR}
@@ -1811,7 +1822,7 @@ for $0\leq s \leq 1$.  However, this is not an issue because
 $H(0,s) = x_0$ for $0 \leq s \leq 1$.  We also have that $\breve{\beta}$
 is continuous.
 
-We have that
+We have
 \begin{equation} \label{thpi1equH1Eq1}
 \partial_2 \breve{\beta} = \beta \circ F^0_2
 - \breve{\beta} \circ F^1_2 + \breve{\beta} \circ F^2_2
@@ -1885,7 +1896,7 @@ $\displaystyle \VEC{x} = \VEC{y}_s$ with $0 \leq s \leq 1$.  The
 following figure illustrates the singular $2$-simplex $\breve{\beta}$.
 \pdfbox{alg_top/singhm1}
 
-We have that
+We have
 \begin{equation} \label{thpi1equH1Eq2}
 \partial \breve{\beta} = \breve{\beta} \circ F^0_2 - \breve{\beta} \circ F^1_2
 + \breve{\beta} \circ F^2_2
@@ -1943,24 +1954,24 @@ $1 \leq j \leq J$.  Hence
 \end{equation}
 Since $X$ is path-connected, we can choose for each $\breve{\alpha}_j$ in
 the summation above, a path $\eta_{j,1}$ in $X$ from $x_0$ to
-$(\breve{\alpha}_j \circ F^0_1)(\VEC{e}_0) = \breve{\alpha}_j(\VEC{e}_1)$ and
-a path $\eta_{j,0}$ in $X$ from $x_0$ to
-$(\breve{\alpha}_j \circ F^1_1)(\VEC{e}_0) = \breve{\alpha}_j(\VEC{e}_0)$
-that satisfy the following conditions:
+$\displaystyle (\breve{\alpha}_j \circ F^0_1)(\VEC{e}_0) =
+\breve{\alpha}_j(\VEC{e}_1)$ and a path $\eta_{j,0}$ in $X$ from $x_0$ to
+$\displaystyle (\breve{\alpha}_j \circ F^1_1)(\VEC{e}_0) =
+\breve{\alpha}_j(\VEC{e}_0)$ that satisfy the following conditions:
 \begin{enumerate}
-\item If $(\breve{\alpha}_{j_1} \circ F^0_1)(\VEC{e}_0) =
+\item If $\displaystyle (\breve{\alpha}_{j_1} \circ F^0_1)(\VEC{e}_0) =
 (\breve{\alpha}_{j_2} \circ F^0_1)(\VEC{e}_0)$ for some $j_1 \neq j_2$,
 then $\eta_{j_1,1} = \eta_{j_2,1}$.
-\item If $(\breve{\alpha}_{j_1} \circ F^0_1)(\VEC{e}_0) =
+\item If $\displaystyle (\breve{\alpha}_{j_1} \circ F^0_1)(\VEC{e}_0) =
 (\breve{\alpha}_{j_2} \circ F^1_1)(\VEC{e}_0)$ for some $j_1 \neq j_2$,
 then $\eta_{j_1,1} = \eta_{j_2,0}$.
-\item If $(\breve{\alpha}_{j_1} \circ F^1_1)(\VEC{e}_0) =
+\item If $\displaystyle (\breve{\alpha}_{j_1} \circ F^1_1)(\VEC{e}_0) =
 (\breve{\alpha}_{j_2} \circ F^1_1)(\VEC{e}_0)$ for some $j_1 \neq j_2$,
 then $\eta_{j_1,0} = \eta_{j_2,0}$.
-\item If $(\breve{\alpha}_j \circ F^1_1)(\VEC{e}_0) = x_0$,
+\item If $\displaystyle (\breve{\alpha}_j \circ F^1_1)(\VEC{e}_0) = x_0$,
 then $\eta_{j_1,0} = e_{x_0}$ where $e_{x_0}(t) = x_0$ for
 $0 \leq t \leq 1$.
-\item If $(\breve{\alpha}_j \circ F^0_1)(\VEC{e}_0) = x_0$,
+\item If $\displaystyle (\breve{\alpha}_j \circ F^0_1)(\VEC{e}_0) = x_0$,
 then $\eta_{j_1,1} = e_{x_0}$.
 \end{enumerate}
 \pdfbox{alg_top/singhm4}
@@ -2027,7 +2038,7 @@ $\displaystyle \gamma = \prod_{j=1}^J \beta_j^{a_j}$.  It follows from
 \stage{iv}  All elements in the commutator subgroup $G$ of $\pi_1(X.x_0)$
 are of the form $\displaystyle \alpha \beta \alpha^{-1}\beta^{-1}$
 where $\alpha$ and $\beta$ are two loops in $X$ at $x_0$.  For
-these elements, we have that
+these elements, we have
 \[
 \Chi\big([\alpha \beta \alpha^{-1}\beta^{-1}]\big)
 = \Chi\big([\alpha]\, [\beta]\,[\alpha^{-1}]\,[\beta^{-1}]\big)
@@ -2110,9 +2121,9 @@ We choose the paths $\eta_{j,k,i}$ for
 $0\leq i \leq 1$, $0 \leq k \leq 2$ and $1\leq j \leq J$ as we have
 done in (iii); namely,
 $\eta_{j,k,1}$ is a path in $X$ from $x_0$ to
-$(\breve{\alpha}_j^{(k)} \circ F^0_1)(\VEC{e}_0)$ and
+$\displaystyle (\breve{\alpha}_j^{(k)} \circ F^0_1)(\VEC{e}_0)$ and
 $\eta_{j,k,0}$ is a path in $X$ from $x_0$ to
-$(\breve{\alpha}_j^{(k)} \circ F^1_1)(\VEC{e}_0)$
+$\displaystyle (\breve{\alpha}_j^{(k)} \circ F^1_1)(\VEC{e}_0)$
 for $0 \leq k \leq 2$ and $1\leq j \leq J$.  Moreover, paths
 $\eta_{j_1,k_1,i_1}$ and $\eta_{j_2,k_2,i_2}$ that end at the same
 point are the same path, and paths $\eta_{j,k,i}$ that end at $x_0$
@@ -2151,7 +2162,7 @@ Let
 $\displaystyle \beta_{j,k} = \eta_{j,k,0}\,\alpha_j^{(k)} \eta_{j,k,1}^{-1}$
 for $0 \leq k \leq 2$ and $1 \leq j \leq J$, and
 $\displaystyle \beta_j = \beta_{j,0}\beta_{j,1}^{-1}\beta_{j,2}$ for
-$1 \leq j \leq J$.  We have that
+$1 \leq j \leq J$.  We have
 \begin{align}
 \beta_j &= \beta_{j,0}\beta_{j,1}^{-1}\beta_{j,2}
 = \big(\eta_{j,0,0} \alpha_j^{(0)} \eta_{j,0,1}^{-1}\big)
@@ -2244,8 +2255,9 @@ $\overline{\partial}_{k-1}\overline{\partial}_k = 0$.
 
 \begin{defn}
 Let $A$ be a subset of a topological space $X$ and $R$ be an integral
-domain.  The {\bfseries relative (singular) $\mathbf{k^{th}}$ homology
-module}\index{Homology Module!Relative (Singular) $k^{th}$ Homology Module} of
+domain.  The {\bfseries relative (singular)
+$\displaystyle \mathbf{k^{th}}$ homology module}\index{Homology
+Module!Relative (Singular) $k^{th}$ Homology Module} of
 $X \mod A$ is the $R$-module defined as
 $H_k(X,A;R) = \KE\big(\overline{\partial}_k\big) /
 \IMG\big(\overline{\partial}_{k+1}\big)$.  The equivalence class in
@@ -2290,7 +2302,7 @@ domain.  Then $H_k(X,A;R) \cong Z_k(X,A;R) / B_k(X,A;R)$.
 \end{prop}
 
 \begin{proof}
-We have that
+We have
 \begin{align*}
 \KE\big(\overline{\partial}_k\big)
 &= \big\{ \relC[X,A]{c} : \overline{\partial}_k(\relC[X,A]{c}) 
@@ -2668,7 +2680,7 @@ $\displaystyle H_0(X;R) \cong R$ according to
 Propositions~\ref{propH0XR}.
 Therefore, since $\displaystyle \IMG(H_0(\iota)) =
 \KE(H_0(\Id_X)) = H_0(X;R) \cong R$, we get that
-that $\displaystyle \KE(H_0(\iota)) = \{[0]_A\}$.
+$\displaystyle \KE(H_0(\iota)) = \{[0]_A\}$.
 It follows that $\IMG(C_1) = \KE(H_0(\iota)) = \{[0]_A\}$.
 Hence, we get that
 \[
@@ -2693,7 +2705,8 @@ $R$ is an integral domain.  Then the sequence.
 }
 \]
 is an exact sequence for $k \geq 0$.
-In particular, $H_k^\sharp(X;R) \cong H_k^\sharp(X,A;R)$ for $k \geq 0$.
+In particular, $\displaystyle H_k^\sharp(X;R) \cong H_k^\sharp(X,A;R)$
+for $k \geq 0$.
 \end{prop}
 
 \begin{proof}
@@ -2711,8 +2724,8 @@ for reduced homology) that
 }
 \]
 is exact for all $k$.  Hence $\KE(H_k(\Id_X)) = \IMG(H_k(\iota)) = \{[0]_X\}$
-and $\IMG(H_k(\Id_X)) = \KE(C_k) = H_k^\sharp(X,A;R)$ for all $k$.
-Thus $H_k^\sharp(X;R) \cong H_k^\sharp(X,A;R)$.
+and $\displaystyle \IMG(H_k(\Id_X)) = \KE(C_k) = H_k^\sharp(X,A;R)$ for all $k$.
+Thus $\displaystyle H_k^\sharp(X;R) \cong H_k^\sharp(X,A;R)$.
 \end{proof}
 
 \subsection{Excision} \label{subsectExcis}
@@ -2738,12 +2751,12 @@ excisions.
 
 \begin{theorem}[Excision] \label{thmExcis}
 Let $A$ be a subset of a topological space $X$, $U$ be a subset of $A$
-and $R$ be an integral domain.  If $\overline{U} \subset A^\circ$,
+and $R$ be an integral domain.  If $\displaystyle \overline{U} \subset A^\circ$,
 then $U$ can be excised from $(X,A)$.
 \end{theorem}
 
 Recall that $\overline{U}$ denotes the closure of the set $U$ and
-$A^\circ$ denotes the interior of the set $A$.
+$\displaystyle A^\circ$ denotes the interior of the set $A$.
 
 It is interesting to note that the proof of Theorem~\ref{thmExcis}
 requires a singular version of the theory of simplicial approximation
@@ -2996,7 +3009,7 @@ $c \in S_k(X;R)$ and $k>0$.
 $\Sd_{k-1}(\partial_k(\delta)) = \partial_k(\Sd_k(\delta))$
 is true for affine functions $\delta:\Delta_k \to \Delta_k$.
 
-For $k=1$, we have that
+For $k=1$, we have
 \begin{align*}
 \partial_1(\Sd_1(\delta))
 &= \partial_1\big(J_{0,\delta(\VEC{b}_{(1)})}(\Sd_0(\partial_1(\delta)))\big)
@@ -3119,7 +3132,7 @@ $c \in S_k(X;R)$ and $k>0$.
 $\partial_{k+1}(T_k(\delta)) +T_{k-1}(\partial_k(\delta)) = \delta -
 \Sd_k(\delta)$ is true for affine functions $\delta:\Delta_k \to \Delta_k$.
 
-For $k=1$, we have that
+For $k=1$, we have
 \begin{align*}
 &\partial_2(T_1(\delta))
 = \partial_2\left( J_{1,\delta(\VEC{b}_{(k)})}\big(\delta - \Sd_1(\delta)
@@ -3511,14 +3524,15 @@ statement of the theorem.  Therefore $\overline{U} \not\subset A^\circ$.
 We have to use the previous proposition with
 $\displaystyle V = \{ \VEC{x} \in S^n : x_{n+1} \leq -\epsilon \}$ and
 $0 \leq \epsilon < 1$ (Figure~\ref{Excision2}).  We have from
-Theorem~\ref{thmExcis} that $V$ can be excised from $(S^n,S^n_-)$ because
+Theorem~\ref{thmExcis} that $V$ can be excised from
+$\displaystyle (S^n,S^n_-)$ because
 $\displaystyle \overline{V} \subset (S^n_-)^\circ$.  Moreover,
 $\displaystyle (S^n_+,S^{n-1})
 = \big(S^n \setminus (S^n_-)^\circ, S^n_- \setminus (S^n_-)^\circ\big)$
 is a deformation retract of
 $\displaystyle (S^n \setminus V,S^n_- \setminus V)$.
-A possible function $r: S^n \setminus V \to S^n_+$ for the deformation
-retract is represented by the arrows along the great circles in
+A possible function $\displaystyle r: S^n \setminus V \to S^n_+$ for
+the deformation retract is represented by the arrows along the great circles in
 Figure~\ref{Excision2}.  Only the $\displaystyle \VEC{x} \in (S_-^n)^\circ$ are
 moving along the great circles toward $\displaystyle S^{n-1}$.
 \end{egg}
@@ -3618,11 +3632,11 @@ $k>1$ and $n>0$, $\displaystyle H_1(B^n,S^{n-1};R) = 0$ for
 $n>1$ and $\displaystyle H_1(B^1,S^0;R) \cong R$.
 
 \stage{ii}
-The projection $\pi:\RR^{n+1} \to \RR^n$ defined by
+The projection $\displaystyle \pi:\RR^{n+1} \to \RR^n$ defined by
 $\pi(\VEC{x}) = (x_1,x_2,\ldots,x_n)$ for
 $\displaystyle \VEC{x} \in \RR^{n+1}$ and $n>0$ provides a homeomorphism
 $\displaystyle \pi:(S^n_+,S^{n-1}) \to (B^n,S^{n-1})$.  Hence
-$H_k(S^n_+,S^{n-1};R) \cong H_k(B^n,S^{n-1};R)$ for $n>0$.
+$\displaystyle H_k(S^n_+,S^{n-1};R) \cong H_k(B^n,S^{n-1};R)$ for $n>0$.
 
 Moreover, we get from Example~\ref{eggSpnSmn} that
 $\displaystyle H_k(S^n_+,S^{n-1};R) \cong H_k(S^n,S^n_-;R)$ for $n>0$.
@@ -4078,7 +4092,7 @@ Mayer-Vietoris sequence
 \]
 because $X_1 \cap X_2 = \{(s_0,t_0)\}$.
 All the previous theory is also valid for reduced homology.
-Since $H_k^\sharp(\{(s_0,t_0)\};R) = 0$ for
+Since $\displaystyle H_k^\sharp(\{(s_0,t_0)\};R) = 0$ for
 all $k \geq 0$, we get the exact sequence
 \[
 \xymatrix{
@@ -4089,9 +4103,9 @@ all $k \geq 0$, we get the exact sequence
 Thus $\displaystyle H_k^\sharp(X_1 \cup X_2;R) \cong
 H_k^\sharp(X_2;R) \oplus H_k^\sharp(X_1;R)$.
 
-Suppose that $S$ and $T$ are two subsets of $\RR^n$ that are homeomorphic to
-$\displaystyle S^1$ and intersect at a single point $\VEC{x}_0$ that
-we may assume to be associated to $(s_0,t_0)$.
+Suppose that $S$ and $T$ are two subsets of $\displaystyle \RR^n$ that
+are homeomorphic to $\displaystyle S^1$ and intersect at a single
+point $\VEC{x}_0$ that we may assume to be associated to $(s_0,t_0)$.
 The set $G_2 = X_1 \cup X_2$ is represented in Figure~\ref{Flower}.
 We get from the previous discussion that
 $\displaystyle H_k^\sharp(G_2;R) \cong
@@ -4136,7 +4150,7 @@ nowhere null vector field on $\displaystyle S^{k-1}$ if $k$ is odd.
 The ``obvious'' but non-trivial Jordan-Brouwer separation theorem can be
 proved using singular homology.  Let
 $\displaystyle s_{n-1} \subset S^n$ be a set homeomorphic to
-$S^{n-1}$.  The Jordan-Brouwer separation theorem states that
+$\displaystyle S^{n-1}$.  The Jordan-Brouwer separation theorem states that
 $\displaystyle S^n \setminus s_{n-1}$ is the union of two components
 having $s_{n-1}$ as boundary.  In particular, suppose that
 $\displaystyle \sigma:[0,1] \to \RR^2$ is a closed path such that
@@ -4147,13 +4161,14 @@ $\displaystyle \RR^2$ through stereographic projection
 $\displaystyle \RR^2$ into two components whose boundary is
 $\sigma([0,1])$ because $\sigma([0,1])$ lifts to a closed path $s_1$ on
 $\displaystyle S^2$.  In fact, the result is also true 
-for a curve $\sigma:]0,1[ \to \RR^2$ that does not intersect itself
-and such that $\sigma(t) \to \infty$ as $t\to 0$ and $t\to 1$ because
-this curve can also be lifted to a closed path on $\displaystyle S^2$.
+for a curve $\displaystyle \sigma:]0,1[ \to \RR^2$ that does not
+intersect itself and such that $\sigma(t) \to \infty$ as $t\to 0$ and
+$t\to 1$ because this curve can also be lifted to a closed path on
+$\displaystyle S^2$.
 
 \pdfF{alg_top/stereo}{Jordan-Brouwer separation theorem}{
-The stereographic projection of $\displaystyle S^2$ on $\displaystyle
-\RR^2$.}{Stereo}
+The stereographic projection of $\displaystyle S^2$ on
+$\displaystyle \RR^2$.}{Stereo}
 
 \section{Singular Cohomology} \label{sectSingCohom}
 
@@ -4204,8 +4219,8 @@ S^{k-1}(X,R)\}$.
 The {\bfseries $\displaystyle \mathbf{k^{th}}$ cohomology
 module}\index{Cohomology Module!$k^{th}$ Cohomology Module}
 of $X$ is the quotient space $\displaystyle H^k(X;R) = Z^k(X;R) / B^k(X;R)$.
-The equivalence class of $H^k(X;R)$ associated to $\phi \in Z^k(X;R)$ is
-denoted $[\phi]_X$.
+The equivalence class of $\displaystyle H^k(X;R)$ associated to
+$\displaystyle \phi \in Z^k(X;R)$ is denoted $[\phi]_X$.
 \end{defn}
 
 \begin{rmk}
@@ -4305,8 +4320,9 @@ Given $f:X\to Y$, we define an homomorphism.
 $\displaystyle H^k(f):H^k(Y;R) \to H^k(X;R)$ by
 $\displaystyle H^k(f)([\phi]_Y) = [S^k(f)(\phi)]_X$ for all
 $\displaystyle [\phi]_Y \in H^k(Y;R)$.  This map is well defined because
-$\displaystyle S^k(f)$ maps $Z^k(Y;R)$ to $Z^k(X;R)$ and
-$B^k(Z;R)$ to $B^k(X;R)$.
+$\displaystyle S^k(f)$ maps $\displaystyle Z^k(Y;R)$ to
+$\displaystyle Z^k(X;R)$ and
+$\displaystyle B^k(Z;R)$ to $\displaystyle B^k(X;R)$.
 
 \subsection{Cochain Complexes}
 
@@ -4317,47 +4333,52 @@ definitions.
 \begin{defn}
 Let $R$ be an integral domain.  A
 {\bfseries cochain complex}\index{Cochain Complex} is a sequence
-$\C = \{ (C^k,\dfC_k) \}_{k\in \ZZ}$ where the sets $C^k$ are
+$\displaystyle \C = \{ (C^k,\dfC_k) \}_{k\in \ZZ}$ where the sets $C^k$ are
 $R$-modules and the maps $\dfC_k:C_k \to C_{k+1}$ are homomorphism
 such that $\dfC_{k+1} \circ \dfC_k = 0$ for $k \in \ZZ$.
 \end{defn}
 
 \begin{defn}
 A {\bfseries cochain map}\index{Cochain Map} between two chain complexes
-given by $\C = \{(C^k,\dfC_k)\}_{k\in \ZZ}$ and
-$\tilde{\C} = \{ (\tilde{C}^k,\tilde{\dfC}_k)\}_{k\in \ZZ}$
+given by $\displaystyle \C = \{(C^k,\dfC_k)\}_{k\in \ZZ}$ and
+$\displaystyle \tilde{\C} = \{ (\tilde{C}^k,\tilde{\dfC}_k)\}_{k\in \ZZ}$
 is a sequence $\F = \{f_k\}_{k\in \ZZ}$ where the maps
-$f_k:C^k \to \tilde{C}^k$ are homomorphism such that
+$\displaystyle f_k:C^k \to \tilde{C}^k$ are homomorphism such that
 $\tilde{\dfC}_k \circ f_k = f_{k+1} \circ \dfC_k$ for $k \in \ZZ$.
 \end{defn}
 
 \begin{defn}
-Consider a cochain complex given by $\C = \{(C^k,\dfC_k)\}_{k\in \ZZ}$.
+Consider a cochain complex given by
+$\displaystyle \C = \{(C^k,\dfC_k)\}_{k\in \ZZ}$.
 A {\bfseries $\mathbf{k}$-cocycle}\index{$k$-Cocycle}
-in $\C$ is an element $c \in C^k$ such that $\dfC_k(c) = 0$.
-The set of all $k$-cocycles in $C^k$ is a $R$-module denoted $Z^k(\C)$.
+in $\C$ is an element $\displaystyle c \in C^k$ such that $\dfC_k(c) = 0$.
+The set of all $k$-cocycles in $\displaystyle C^k$ is a $R$-module
+denoted $\displaystyle Z^k(\C)$.
 
 A {\bfseries $\mathbf{k}$-coboundary}\index{$k$-Coboundary}
-in $\C$ is an element $c \in C^k$ with the property that there exists an
-element $\tilde{c} \in C^{k-1}$ such that $\dfC_{k-1}(\tilde{c}) = c$.
-The set of all $k$-coboundaries in $C^k$ is a $R$-module denoted
-$B^k(\C)$.
+in $\C$ is an element $\displaystyle c \in C^k$ with the property that
+there exists an element $\displaystyle \tilde{c} \in C^{k-1}$ such that
+$\dfC_{k-1}(\tilde{c}) = c$.
+The set of all $k$-coboundaries in $\displaystyle C^k$ is a $R$-module denoted
+$\displaystyle B^k(\C)$.
 
-The {\bfseries singular $\mathbf{k^{th}}$ cohomology
+The {\bfseries singular $\displaystyle \mathbf{k^{th}}$ cohomology
 module}\index{Cohomology Module!Singular $k^{th}$ Cohomology Module}
 of $\C$ is the $R$-module
-defined as $H^k(\C) = Z^k(\C) / B^k(\C)$.  The equivalence class of
-$H^k(\C)$ associated to $c \in Z^k(\C)$ is denoted $[c]$.
+defined as $\displaystyle H^k(\C) = Z^k(\C) / B^k(\C)$.  The
+equivalence class of $\displaystyle H^k(\C)$ associated to
+$\displaystyle c \in Z^k(\C)$ is denoted $[c]$.
 \end{defn}
 
 It follows from the definition that a cochain map
 $\F = \{f_k\}_{k\in\ZZ}$ between two chain complexes
-$\C = \{(C^k,\dfC_k)\}_{k\in \ZZ}$ and
-$\tilde{\C} = \{ (\tilde{C}^k,\tilde{\dfC}_k)\}_{k\in \ZZ}$
+$\displaystyle \C = \{(C^k,\dfC_k)\}_{k\in \ZZ}$ and
+$\displaystyle \tilde{\C} = \{ (\tilde{C}^k,\tilde{\dfC}_k)\}_{k\in \ZZ}$
 sends $k$-cocycles in $\C$ to $k$-cocycles in $\tilde{\C}$, and
 $k$-coboundaries in $\C$ to $k$-coboundaries in $\tilde{\C}$.
-Hence, we may define $H^k(\F): H^k(\C) \to H^k(\tilde{\C})$ by
-$H^k(\F)([c]) = [f_k(c)]$ for all $c \in Z^k(\C)$.
+Hence, we may define $\displaystyle H^k(\F): H^k(\C) \to H^k(\tilde{\C})$ by
+$\displaystyle H^k(\F)([c]) = [f_k(c)]$ for all
+$\displaystyle c \in Z^k(\C)$.
 
 We can know state the version of the Zig-Zag lemma for cohomology.
 
@@ -4660,7 +4681,7 @@ $\displaystyle S^\ast(f)(\phi) = \sum_{j\in \NN} a_j S^j(f)(\phi_j)$.
 We may use $\displaystyle S^\ast(f)$ to define
 $\displaystyle H^\ast(f):H^\ast(Y;R) \to H^\ast(X;R)$.  Namely, we set
 $\displaystyle H^\ast(f)([\phi]_Y) = [ S^\ast(f)(\phi)]_X$ for all
-$[\phi]_Y \in H^\ast(Y;R)$.
+$\displaystyle [\phi]_Y \in H^\ast(Y;R)$.
 
 We define the cup product of
 $\displaystyle [\phi_1]_X,[\phi_2]_X \in H^\ast(X;R)$ as
@@ -4668,7 +4689,8 @@ $\displaystyle [\phi_1]_X\cup[\phi_2]_X = [\phi_1 \cup \phi_2]_X$.  To prove
 that this cup product is well defined, it suffices to consider
 $\displaystyle [\phi_i]_X \in H^{k_i}(X;R)$ with $k_i\in \NN$ for
 $i =1,2$.  Suppose that $\phi_i = \psi_i + \dfC_k(\tau_i)$ for some
-$\psi_i \in Z^{k_i}(X;R)$ and $\tau_i \in S^{k_i-1}(S;R)$ for
+$\displaystyle \psi_i \in Z^{k_i}(X;R)$ and
+$\displaystyle \tau_i \in S^{k_i-1}(S;R)$ for
 $i =1,2$.  It follows from (\ref{partial1U2}) that
 \begin{align*}
 \big(\psi_1 + \dfC_{k_1}(\tau_1)\big) \cup \phi_2
@@ -4686,7 +4708,7 @@ because $\displaystyle \phi_2 \in Z^{k_2}(X;R)$.  Similarly,
 &= \psi_1 \cup \psi_2 + (-1)^{k_2}\dfC_{k_1+k_1}(\psi_1 \cup \tau_2)
 \end{align*}
 because $\displaystyle \psi_1 \in Z^{k_1}(X;R)$.  Hence, by
-transitivity, we have that
+transitivity, we have
 \[
 [\phi_1 \cup \phi_2]_X
 = \big[\big(\psi_1 + \dfC_{k_1}(\tau_1)\big) \cup \phi_2\big]_X
@@ -4718,41 +4740,44 @@ $\displaystyle q^{th}$ (de Rham) Cohomology Module of $S$ defined in
 Definition~\ref{defnqdeRhamCM}.
 
 We define a linear map $\displaystyle \JJ : H^q(S) \to H^q(S;\RR)$
-for $q \in \NN$ as it follows.  Given $[\omega] \in H^q(S)$, we set
+for $q \in \NN$ as it follows.  Given
+$\displaystyle [\omega] \in H^q(S)$, we set
 \begin{equation} \label{defnCalJ}
   \JJ([\omega])([c]_S) = \int_c \omega
 \end{equation}
 for all $\displaystyle [c]_S \in H_q(S;\RR)$.  This map is well defined
 because it is independent of the representative of the equivalence
 class $[c]_S \in H_q(S;\RR)$ and the representative of the equivalent
-class $[\omega] \in H^q(S)$ used to define the integral.
+class $\displaystyle [\omega] \in H^q(S)$ used to define the integral.
 Suppose that $\tilde{c} \hsim c$.
 Then $\tilde{c} = c + \partial_{q+1}b$ for some
-$b \in S_{q+1}(S;\RR)$.  Using Stokes' theorem for chains, we get that
+$b \in S_{q+1}(S;\RR)$.  Using Stokes' theorem for chains, we get
 \[
 \int_{\tilde{c}} \omega = \int_c \omega + \int_{\partial_{q-1} b} \omega
 = \int_c \omega + \int_b \df{\omega} = \int_c \omega
 \]
-because $\df{\omega} = 0$ since $[\omega] \in H^q(S)$.  
+because $\df{\omega} = 0$ since $\displaystyle [\omega] \in H^q(S)$.
 Suppose that $\tilde{\omega} \sim \omega$.  Then $\tilde{\omega} =
 \omega + \df{\eta}$ for some differential $(q-1)$-form $\eta$ on $S$.
-Again, using Stokes' theorem for chains, we get that
+Again, using Stokes' theorem for chains, we get
 \[
 \int_c \tilde{\omega} = \int_c \omega + \int_c \df{\eta}
 = \int_c \omega + \int_{\partial_q c} \eta = \int_c \omega
 \]
 because $\partial_q c = 0$ since $[c]_S \in H_q(S;\RR)$.  
-It is easy to verify that $\JJ(\omega) \in H^q(S;\RR)$.
+It is easy to verify that $\displaystyle \JJ(\omega) \in H^q(S;\RR)$.
 
 There is a version of Proposition~\ref{propMayVistCoHom} for
 cohomology on manifolds.
 Suppose that $S$ is a $k$-dimensional smooth manifold.
-To reformulate our definition of the cohomology module $H^q(S)$ given
+To reformulate our definition of the cohomology module
+$\displaystyle H^q(S)$ given
 in Definition~\ref{defnqdeRhamCM} of Chapter~\ref{chaptCohom}, we set
-$Z^k(\Omega^{\,q}(S),\df{}) = \{ \omega \in \Omega^{\,q}(S)
+$\displaystyle Z^k(\Omega^{\,q}(S),\df{}) = \{ \omega \in \Omega^{\,q}(S)
 :\df{\omega} = 0 \}$ and
-$B^k(\Omega^{\,q}(S),\df{}) = \{ \df{\omega}
-: \omega \in \Omega^{\,{q-1}}(S) \}$.  Then $H^q(S) = Z^q(S) / B^q(S)$.
+$\displaystyle B^k(\Omega^{\,q}(S),\df{}) = \{ \df{\omega}
+: \omega \in \Omega^{\,{q-1}}(S) \}$.  Then
+$\displaystyle H^q(S) = Z^q(S) / B^q(S)$.
 
 \begin{prop}[Mayer-Vietoris] \label{propMayVistdeR}
 Suppose that $S$ is a $k$-dimensional smooth manifold and that
@@ -4767,11 +4792,11 @@ the sequence
 }
 \]
 is an exact sequence where
-$\tilde{F}_q^\ast([\omega]) = ([\omega\big|_U],[\omega\big|_V])$,
-$\tilde{G}_q([\omega_1],[\omega_2]) = [\omega_1\big|_{U\cap V}]
+$\displaystyle \tilde{F}_q^\ast([\omega]) = ([\omega\big|_U],[\omega\big|_V])$,
+$\displaystyle \tilde{G}_q([\omega_1],[\omega_2]) = [\omega_1\big|_{U\cap V}]
 - [\omega_2\big|_{U\cap V}]$ and
-$\tilde{H}_q^\ast: H^q(U \cap V) \to H^{q+1}(S)$ is defined in proof
-below.
+$\displaystyle \tilde{H}_q^\ast: H^q(U \cap V) \to H^{q+1}(S)$ is
+defined in proof below.
 \end{prop}
 
 \begin{proof}
@@ -4788,11 +4813,13 @@ $\displaystyle \eta \in \Omega^{\,q}(S)$, and
 $\GG = \{\tilde{g}_k\}_{k\in\ZZ}$ be the cochain map between $\BB$ and $\C$
 defined by
 $\tilde{g}_k(\eta_1,\eta_2) = \eta_1\big|_{U\cap V}-\eta_2\big|_{U\cap V}$
-for all $\eta_1 \in \Omega^{\,q}(U_1)$ and $\eta_2 \in \Omega^{\,q}(U_2)$.
+for all $\displaystyle \eta_1 \in \Omega^{\,q}(U_1)$ and
+$\displaystyle \eta_2 \in \Omega^{\,q}(U_2)$.
 Note that the differential operator $\df{}$ is defined on
-$\Omega^{\,q}(U) \oplus \Omega^{\,q}(V)$
+$\displaystyle \Omega^{\,q}(U) \oplus \Omega^{\,q}(V)$
 by $\df{(\eta_1,\eta_2)} = (\df(\eta_1),\df(\eta_2))$ for all
-$\eta_1 \in \Omega^{\,q}(U_1)$ and $\eta_2 \in \Omega^{\,q}(U_2)$.
+$\displaystyle \eta_1 \in \Omega^{\,q}(U_1)$ and
+$\displaystyle \eta_2 \in \Omega^{\,q}(U_2)$.
 
 Our goal is to prove that the sequence
 \[
@@ -4807,12 +4834,13 @@ is an exact sequence.  The conclusion of the proposition will then
 follow from the Zig-Zag lemma, Lemma~\ref{lemZigZagCohom}.
 
 It follows from the Zig-Zag lemma that
-$\tilde{H}_q^\ast:H^q(U \cap V) \to H^{q+1}(S)$ is defined by
-$\tilde{H}_q^\ast([\gamma]) = [\alpha]$ where
-$\alpha \in Z^{q+1}(S)$ is such that
+$\displaystyle \tilde{H}_q^\ast:H^q(U \cap V) \to H^{q+1}(S)$ is defined by
+$\displaystyle \tilde{H}_q^\ast([\gamma]) = [\alpha]$ where
+$\displaystyle \alpha \in Z^{q+1}(S)$ is such that
 $\tilde{f}_{k+1}(\alpha) = (\alpha\big|_U, \alpha\big|_V) =
 (\df{\beta_1}, \df{\beta_2})$
-for $\beta_1 \in Z^q(U)$ and $\beta_2 \in Z^q(V)$ with
+for $\displaystyle \beta_1 \in Z^q(U)$ and
+$\displaystyle \beta_2 \in Z^q(V)$ with
 $\tilde{g}_k(\beta_1,\beta_2) = \beta_1\big|_{U\cap V} - \beta_2\big|_{U\cap V}
 = \gamma$.
 
@@ -4845,8 +4873,8 @@ $\KE(\tilde{g}_k) \subset \IMG(\tilde{f}_q)$.
 
 \stage{iii} We now prove that $\tilde{g}_q$ is onto.
 Given $\displaystyle \eta \in \Omega^{\,q}(B)$, we need to find
-$\eta_1 \in \Omega^{\,q}(U)$ and
-$\eta_2 \in \Omega^{\,q}(V)$ such that
+$\displaystyle \eta_1 \in \Omega^{\,q}(U)$ and
+$\displaystyle \eta_2 \in \Omega^{\,q}(V)$ such that
 $\tilde{g}_q(\eta_1,\eta_2) = \eta_1\big|_B - \eta_2\big|_B = \eta$.
 
 Since $\{U,V\}$ is an open cover of $S$, we may use Theorem~\ref{cov1}
@@ -4873,7 +4901,8 @@ Let
 Since $U \cap \supp \phi_2 \subset U \cap V$ and
 $V \cap \supp \phi_1 \subset V \cap U$ where $\eta$ is defined,
 we get that $\eta_1$ and $\eta_2$ are well defined,
-$\eta_1 \in \Omega^{\,q}(U)$ and $\eta_2 \in \Omega^{\,q}(V)$.
+$\displaystyle \eta_1 \in \Omega^{\,q}(U)$ and
+$\displaystyle \eta_2 \in \Omega^{\,q}(V)$.
 We also have that
 $\tilde{g}_k(\eta_1,\eta_2) = \eta_1\big|_B - \eta_2\big|_B
 = \phi_2 \eta + \phi_1\eta =(\phi_2+\phi_1)\eta = \eta$ on $B$.
@@ -4986,13 +5015,15 @@ In particular, we have that $a = \partial_k(b_1) = \partial_k(b_2)$
 with $\partial_k(b_1)(\Delta_k) \subset U \cap V$ and
 $\partial_k(b_2)(\Delta_k) \subset U \cap V$. 
 
-If we now refer to the definition of $\tilde{H}_{q-1}^\ast$ given in
+If we now refer to the definition of
+$\displaystyle \tilde{H}_{q-1}^\ast$ given in
 the proof of Proposition~\ref{propMayVistHom}, we have that
-$[\eta] = \tilde{H}_{q-1}^\ast([\omega])$ is given by
-$\eta \in Z^{q+1}(S)$ is such that
+$\displaystyle [\eta] = \tilde{H}_{q-1}^\ast([\omega])$ is given by
+$\displaystyle \eta \in Z^{q+1}(S)$ is such that
 $\tilde{f}_{k+1}(\eta) = (\eta\big|_U, \eta\big|_V) =
 (\df{\beta_1}, \df{\beta_2})$
-for $\beta_1 \in Z^q(U)$ and $\beta_2 \in Z^q(V)$ with
+for $\displaystyle \beta_1 \in Z^q(U)$ and
+$\displaystyle \beta_2 \in Z^q(V)$ with
 $\tilde{g}_k(\beta_1,\beta_2) = \beta_1\big|_{U\cap V} - \beta_2\big|_{U\cap V}
 = \omega$.  In particular, we have that
 $\eta\big|_U = \df{\beta_1}$ and $\eta\big|_V = \df{\beta_2}$.
@@ -5000,7 +5031,8 @@ $\eta\big|_U = \df{\beta_1}$ and $\eta\big|_V = \df{\beta_2}$.
 Since $\partial_q(b_1) + \partial_q(b_2) = \partial_q(c) = 0$ because
 $c \in Z_q(S;\RR)$ and $\df{\beta_1}\big|_{U\cap V}
 - \df{\beta_2}\big|_{U\cap V} = \df{\omega} = 0$
-because $\omega \in Z^{q-1}(U\cap V)$, we get from Stokes' theorem that
+because $\displaystyle \omega \in Z^{q-1}(U\cap V)$, we get from
+Stokes' theorem that
 \begin{align*}
 \int_a \omega = \int_{\partial_k(b_1)} \omega
 &= \int_{\partial_k(b_1)} (\beta_1 - \beta_2)
@@ -5112,7 +5144,7 @@ diagram is exact.
 It follows from Propositions~\ref{propFqJcomm} and \ref{propHqJcomm}
 that this diagram is commutative.  Since the first, second, fourth
 and fifth maps $\JJ$ are isomorphism by assumption, we get from
-the Five Lemma that $\JJ: H^k(U) \to H^k(U;R)$ is also an
+the Five Lemma that $\displaystyle \JJ: H^k(U) \to H^k(U;R)$ is also an
 isomorphism.
 
 \stage{Claim 4} If $\displaystyle U = \bigcup_{j=1}^J U_j$
@@ -5161,7 +5193,7 @@ and $J_a$ is a positive integer greater or equal to $a$.
 To prove this statement, we prove that, if
 $\displaystyle \VEC{u} \not\in \bigcup_{j=1}^{J_a} \overline{U}_{i_j}$, then
 $d(\VEC{u}) > 1$.  Since $\phi_j(\VEC{u}) = 0$ for $1 \leq j \leq j_a$
-because $\VEC{u} \not\in U_{i_j} \supset \supp \phi_j$  for $1 \leq j \leq j_a$,
+because $\VEC{u} \not\in U_{i_j} \supset \supp \phi_j$ for $1 \leq j \leq j_a$,
 we get that
 $\displaystyle g(\VEC{u}) = \sum_{j=1}^\infty j \phi_j(\VEC{u})
 = \sum_{j=J_a+1}^\infty j \phi_j(\VEC{u})

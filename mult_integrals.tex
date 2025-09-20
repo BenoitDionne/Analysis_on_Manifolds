@@ -184,7 +184,7 @@ have the same properties than the lower and upper Riemann sums for
 functions of one variable.
 
 \begin{defn}
-Let $R \subset \RR^n$ be a rectangle as defined above and 
+Let $\displaystyle R \subset \RR^n$ be a rectangle as defined above and 
 $f:R \to \RR$ be a bounded function.  The 
 {\bfseries lower Riemann integral}\index{Lower Riemann Integral} of
 $f$ on $R$ is defined as
@@ -596,8 +596,8 @@ for all $i$.  Hence
 \end{align*}
 Note that the last equality comes from the fact that
 $\displaystyle R_{k_1,k_2,\ldots,k_n} \cap R_i \neq \emptyset$ implies
-that $R_{k_1,k_2,\ldots,k_n}^\circ \subset R_i$ because that $R_i$ are
-open.  Hence
+that $\displaystyle R_{k_1,k_2,\ldots,k_n}^\circ \subset R_i$ because
+that $R_i$ are open.  Hence
 \[
 \bigcup_{\substack{R_{k_1,k_2,\ldots,k_n} \cap R_i \neq \emptyset\\
 \text{for some } 0 \leq i \leq N}} R_{k_1,k_2,\ldots,k_n}^\circ
@@ -631,7 +631,7 @@ It suffices to prove that $\displaystyle \int_Z h^+$ and
 $\displaystyle \int_Z h^-$ are null.
 
 To prove that $\displaystyle \int_Z h^+$ is null, we prove that
-$\LL_P(\Chi_Z h^+) = 0$ for all partitions $P$ of $R$.
+$\displaystyle \LL_P(\Chi_Z h^+) = 0$ for all partitions $P$ of $R$.
 Let $P$ be a partition of $R$ and let
 $\displaystyle \delta = \min_{\substack{0<k_i\leq N_i\\1 \leq i \leq n}}
 V(R_{k_1,k_2,\ldots,k_n})$.  We have that $\delta >0$ because there
@@ -654,8 +654,8 @@ since
 V\left(\bigcup_{i=1}^\infty R_i\right)
 \leq \sum_{i=1}^\infty V(R_i) < \delta \leq V(R_{k_1,k_2,\ldots,k_n}) \ .
 \]
-Thus $\LL_P(\Chi_Z h^+ ) = 0$.  The proof that
-$\LL_P(\Chi_Z h^-) = 0$ for all partitions $P$ of $R$ is similar.
+Thus $\displaystyle \LL_P(\Chi_Z h^+ ) = 0$.  The proof that
+$\displaystyle \LL_P(\Chi_Z h^-) = 0$ for all partitions $P$ of $R$ is similar.
 \end{proof}
 
 \begin{rmk}
@@ -1247,7 +1247,8 @@ All the conclusions of the theorem are satisfied by the collection
 $\displaystyle \{\phi_j\}_{1 \leq j \leq M}$.
 
 \stage{ii} Suppose that $\displaystyle W = \bigcup_{j=0}^\infty W_j$
-where each $W_j$ is compact and $W_j \subset W_{j+1}^\circ$ for all $j$.
+where each $W_j$ is compact and
+$\displaystyle W_j \subset W_{j+1}^\circ$ for all $j$.
 We also assume that $W_0 = \emptyset$ to simplify the discussion.
 Let $V_1 = W_1$ and
 $\displaystyle V_j = W_j \setminus W_{j-1}^\circ$ for $j \geq 2$.
@@ -1262,7 +1263,7 @@ $\displaystyle \sum_{k=1}^{N_1} \psi_{k,1}(\VEC{x}) = 1$ for all
 $\VEC{x} \in V_1$, and $\supp \psi_{k,1}$ is a compact set with
 $\supp \psi_{k,1} \subset U_{\alpha_{k,1}}$ for some $\alpha_{k,1} \in A$.
 
-For $j \geq 2$, let $U_{\alpha,j} = U_\alpha \cap
+For $j \geq 2$, let $\displaystyle U_{\alpha,j} = U_\alpha \cap
 \left(W_{j+1}^\circ\setminus W_{j-2}\right)$ for all $\alpha \in A$.
 Since $V_j$ is a compact set and
 $\displaystyle \{U_{\alpha,j}\}_{\alpha\in A}$ is an open cover of $V_j$,
@@ -1281,7 +1282,7 @@ Let $\displaystyle \psi(\VEC{x})
 = \sum_{j=1}^\infty \sum_{k=1}^{N_j} \psi_{k,j}(\VEC{x})$ for
 $\displaystyle \VEC{x} \in \RR^n$.  We first note that the sum is
 finite for each $\VEC{x}$ because $\psi_{k,j}(\VEC{x}) = 0$ if
-$\VEC{x} \not\in W_{j+1}^\circ\setminus W_{j-2}$ by construction.
+$\displaystyle \VEC{x} \not\in W_{j+1}^\circ\setminus W_{j-2}$ by construction.
 Moreover, if $\VEC{x} \in W$, then $\VEC{x} \in V_q$ for some $q \geq 1$
 because $\displaystyle \VEC{x} \in W = \bigcup_{j=1}^\infty V_j$.  Hence
 \[
@@ -1317,9 +1318,9 @@ such that $\rho_{k,j}\big|_{W_\VEC{x}} = 0$ for all but a finite
 number of the $\rho_{k,j}$.  More precisely, given
 $\VEC{x} \in W$, we have $\VEC{x} \in V_j$ for some $j$.
 Since $\rho_{k,q}(\VEC{y}) = 0$ for all
-$\VEC{y} \in W_{j+1}^\circ \setminus W_{j-2}$ if $q<j-2$ and $q>j+1$,
-it suffices to choose an open neighbourhood
-$W_{\VEC{x}} \subset W_{j+1}^\circ \setminus W_{j-2}$ of $\VEC{x}$.
+$\displaystyle \VEC{y} \in W_{j+1}^\circ \setminus W_{j-2}$
+if $q<j-2$ and $q>j+1$, it suffices to choose an open neighbourhood
+$\displaystyle W_{\VEC{x}} \subset W_{j+1}^\circ \setminus W_{j-2}$ of $\VEC{x}$.
 \item We also have by construction that
 $\displaystyle \sum_{j=1}^\infty \sum_{k=1}^{N_j}
 \rho_{k,j}(\VEC{x}) = 1$ for all $\VEC{x} \in W$.
@@ -1918,9 +1919,8 @@ As we say in (i), since $g :W \to g(W)$ is one-to-one and onto $g(W)$,
 $g$ is continuously differentiable and
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$, we get from the
 Inverse Function Theorem that $g$ is an open mapping.  Moreover, we
-also get that
-$\diff g^{-1}(\VEC{y})$ exists for all $\VEC{y} \in g(W)$.  In particular,
-$\displaystyle \diff g^{-1}(\VEC{y})
+also get that $\displaystyle \diff g^{-1}(\VEC{y})$ exists for all
+$\VEC{y} \in g(W)$.  In particular, $\displaystyle \diff g^{-1}(\VEC{y})
 = (\diff g)^{-1}(g^{-1}(\VEC{y}))$ for all $\VEC{y} \in g(W)$ according
 to the Inverse Function Theorem.  Thus $g:W \to g(W)$ is a diffeomorphism.
 
@@ -2233,8 +2233,8 @@ $\displaystyle T: T^{-1}(h(W)) \to \RR^n$ is a
 one-to-one and continuously differentiable function such that
 $\det \diff T(\VEC{x}) = \det T \neq 0$ for all $\VEC{x} \in W$, we
 get from Lemma~\ref{cov27} that
-$(f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a Riemann integrable
-function with compact support.
+$\displaystyle (f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a
+Riemann integrable function with compact support.
 Note that $\displaystyle T^{-1}(h(W)) \subset \RR^n$ is an open set
 and recall that $\diff T(\VEC{x}) = T$ for all $\VEC{x}$ because $T$
 is a linear map.
@@ -2244,7 +2244,7 @@ from Lemma~\ref{cov16} that
 \rint_{h(W)} f = \rint_{T^{-1}(h(W))} (f \circ T) |\det T| \ .
 \end{equation}
 
-Since $(f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a Riemann
+Since $\displaystyle (f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a Riemann
 integrable function with compact support
 and $\displaystyle g = T^{-1}\circ h: W \to \RR^n$ is a
 one-to-one and continuously differentiable function such that
@@ -2506,11 +2506,11 @@ $\displaystyle Q_1:U_1 \to \RR^k$ is a one-to-one and continuously
 differentiable function with $\det \diff Q_1 (\VEC{x}) \neq 0$ for all
 $\VEC{x} \in U_1$, we have that $Q_1 : U_1 \to Q(U_1)$ is a
 diffeomorphism.  It follows from Lemma~\ref{lemC1Meas0} that
-$Q_1^{-1}(R)$ is Jordan measurable because
+$\displaystyle Q_1^{-1}(R)$ is Jordan measurable because
 $\displaystyle \partial Q_1^{-1}(R) = Q_1^{-1}(\partial R)$ is of
 measure zero since $\partial R$ is of measure zero.  We also have that
-$Q_1^{-1}(R)$ is bounded because $R$ is a compact set and thus
-$Q_1^{-1}(R)$ is a compact set in $\displaystyle \RR^k$.
+$\displaystyle Q_1^{-1}(R)$ is bounded because $R$ is a compact set and thus
+$\displaystyle Q_1^{-1}(R)$ is a compact set in $\displaystyle \RR^k$.
 The Fubini's Theorem is applied to the function
 $\displaystyle \Chi_{Q_1^{-1}(R)} |\det \diff Q_1|$ on a rectangle
 containing $\displaystyle {Q_1^{-1}(R)}$.
@@ -2581,8 +2581,8 @@ needs some clarifications.  Since
 $\displaystyle Q_2:U_2 \to \RR^k$ is a one-to-one and continuously
 differentiable function with $\det \diff Q_2 (\VEC{x}) \neq 0$ for all
 $\VEC{x} \in U_2$, we have that $Q_2: U_2 \to Q(U_2)$ is a diffeomorphism.
-It follows as in (iii.a) that $Q_2^{-1}(R)$ is a bounded and Jordan
-measurable set.  The Fubini's Theorem is applied to the function
+It follows as in (iii.a) that $\displaystyle Q_2^{-1}(R)$ is a bounded
+and Jordan measurable set.  The Fubini's Theorem is applied to the function
 $\displaystyle \Chi_{Q_2^{-1}(R)} |\det \diff Q_2|$ on a rectangle
 containing $\displaystyle {Q_2^{-1}(R)}$.
 
@@ -2592,7 +2592,7 @@ We consider the Riemann integrable function $h:\tilde{g}(U_1) \to \RR$
 with compact support in $\tilde{g}(U_1)$ defined by $h = f \circ T$
 where $f:g(U_1) = (T \circ \tilde{g})(U_1) \to \RR$ is a
 Riemann integrable functions with compact support in $g(U_1)$.
-Recall that $\tilde{g} = Q_2\circ Q_1 = T^{-1} \circ g$ on $U_1$.
+Recall that $\displaystyle \tilde{g} = Q_2\circ Q_1 = T^{-1} \circ g$ on $U_1$.
 
 We get from Lemma~\ref{cov27} that
 $(h \circ \tilde{g}) |\det \diff \tilde{g}|:U_1 \to \RR$ is a Riemann
@@ -2880,8 +2880,9 @@ The volume of $C$ is
 \end{align*}
 where we have used the fact that the ``area'' of the cross section
 perpendicular to the axis of the cylinder is the volume of a sphere of 
-radius $(M n^{3/2} L)/N$ in the subspace $S$ of dimension $n-1$.  The
-volume of a sphere of radius $r$ in $\displaystyle \RR^m$ is
+radius $\displaystyle (M n^{3/2} L)/N$ in the subspace $S$ of
+dimension $n-1$.  The volume of a sphere of radius $r$ in
+$\displaystyle \RR^m$ is
 $\displaystyle (2 \pi^{m/2} r^m)/(m \Gamma(m/2))$ \footnote{
 Integrating $\displaystyle e^{-\pi \|\VEC{x}\|_2^2}$ over
 $\displaystyle \RR^m$ using spherical coordinates (i.e.\ coordinates of the
@@ -2909,7 +2910,7 @@ $\displaystyle V \subset \RR^n$ is the countable union of closed rectangles.
 We present two methods.  The first one is quick and simple but lack
 the constructive approach which is often really useful.
 
-\stage{$\mathbf{1^{st}}$ Method}
+\stage{$\displaystyle \mathbf{1^{st}}$ Method}
 For each $\VEC{x} \in U$, choose a closed rectangle
 $R_{\VEC{x}}=[a_1(\VEC{x}),b_1(\VEC{x})]\times[a_2(\VEC{x}),b_2(\VEC{x})]
 \times\cdots\times[a_n(\VEC{x}),b_n(\VEC{x})] \subset U$
@@ -2917,11 +2918,11 @@ such that $\VEC{x} \in R_{\VEC{x}}$ and
 $a_j(\VEC{x}),b_j(\VEC{x}) \in \QQ$ for $1\leq j \leq n$.  Then
 $\displaystyle U = \bigcup_{\VEC{x}\in V} R_{\VEC{x}}$.  Surprisingly,
 the number of rectangles is countable because\\
-$\{ (a_1(\VEC{x}),b_1(\VEC{x}),a_2(\VEC{x}),b_2(\VEC{x}),\ldots,
+$\displaystyle \{ (a_1(\VEC{x}),b_1(\VEC{x}),a_2(\VEC{x}),b_2(\VEC{x}),\ldots,
 a_n(\VEC{x}),b_n(\VEC{x})) : \VEC{x} \in U \} \subset \QQ^{2n}$
 and a subset of a countable set is a countable set.
 
-\stage{$\mathbf{2^{nd}}$ Method}
+\stage{$\displaystyle \mathbf{2^{nd}}$ Method}
 Let $U_j = \{ \VEC{x} \in U : \|\VEC{x}\| < j \ \text{and} \
 \dist{\VEC{x}}{\partial U} > 1/j \}$ for $j>0$ and
 $V_0 = \emptyset$.   Note that many of the sets $U_j$ may be empty but
@@ -3067,8 +3068,8 @@ m_{i,j}(V) = \inf \{ \Chi_V(x,y) : (x,y) \in R_{i,j}\}
 \end{cases}
 \]
 for $0 < i \leq N$ and $0 < j \leq M$.
-We have that $m_{i,j}(S^\circ) \leq m_{i,j}(S)$ for $0 < i \leq N$ and
-$0 < j \leq M$.
+We have that $\displaystyle m_{i,j}(S^\circ) \leq m_{i,j}(S)$ for
+$0 < i \leq N$ and $0 < j \leq M$.
 Hence
 \begin{align*}
 \LL_{\{P,Q\}}(\Chi_{S^\circ})
@@ -3310,8 +3311,7 @@ y^{-2} & \quad \text{if } 0 < x < y < 1 \\
 0 & \quad \text{otherwise}
 \end{cases}
 \]
-Let $S$ be the square $S = [0,1]\times[0,1]$.
-
+Let $S$ be the square $S = [0,1]\times[0,1]$.\\
 \subQ{a} Prove that $f$ is not integrable on $S$.\\
 \subQ{b} Prove that $x \to f(x,y)$ is integrable on $[0,1]$ for all
 $y \in [0,1]$ and compute the integral.\\
@@ -3502,8 +3502,7 @@ I &= \int_0^2 \left( \frac{x^3}{3} - x \sqrt{y}\right)\bigg|_{y^2}^{2y} \dx{x}
 
 \begin{question}
 Express the following double integrals $\displaystyle \iint_S f$
-in terms of iterated integrals in two different ways.
-
+in terms of iterated integrals in two different ways.\\
 \subQ{a} $S$ is the region enclosed by $\displaystyle y=x^{1/3}$ and
 $\displaystyle y=x^2$ for $y\geq 0$.\\
 \subQ{b} $S$ is the triangle with vertices at $(0,0)$, $(-1,1)$ and
@@ -3548,8 +3547,7 @@ Hence
 
 \begin{question}
 Express the following double integrals $\displaystyle \iint_S f$
-in terms of iterated integrals in two different ways.
-
+in terms of iterated integrals in two different ways.\\
 \subQ{a} $S$ is the region enclosed by $\displaystyle y=x^3$ and
 $y=4x$ for $y\leq 0$.\\
 \subQ{b} $S$ is the triangle with vertices at $(0,0)$, $(2,2)$ and
@@ -3613,8 +3611,7 @@ for $y\leq 10$.
 
 \begin{question}
 Evaluate the integral $\displaystyle \iint_S f$ in each of the
-following cases.
-
+following cases.\\
 \subQ{a} $\displaystyle f(x,y) = ye^{2x}$ and $S$ is the region
 enclosed by $y=x$, $y=1$, $y=3$ and the $y$ axis.\\
 \subQ{b} $\displaystyle f(x,y) = \cos(y^3+1)$ and $S$ is the region enclosed by
@@ -3873,7 +3870,8 @@ I &= \int_0^2 \int_0^\pi \left(r\cos(\theta) + 3 r^3
 &= 0 + 3 \int_0^2 r^4 \left(\frac{4}{3} \right) \dx{r}
 = 4 \, \frac{r^5}{5}\bigg|_0^2 = \frac{128}{5} \ ,
 \end{align*}
-where the famous trigonometric identity $\sin^2(\theta) = 1 - \cos^2(\theta)$
+where the famous trigonometric identity
+$\displaystyle \sin^2(\theta) = 1 - \cos^2(\theta)$
 has been used to get the second equality above.
 \end{sol}
 
@@ -4379,8 +4377,7 @@ f(x,y,z) \dx{y} \dx{z} \dx{x} \\
 
 \begin{question}
 For each of the following integrals, sketch its domain of integration 
-and express the iterated integral in the requested orders.
-
+and express the iterated integral in the requested orders.\\
 \subQ{a}
 $\displaystyle \int_0^1 \int_0^{1-y^2}\int_0^y f(x,y,z) \dx{z}\dx{x}\dx{y}$
 in the orders $\dx{z}\dx{y}\dx{x}$ and $\dx{y}\dx{z}\dx{x}$.\\
@@ -4656,7 +4653,7 @@ We have drawn the half-cone $S$ in the figure below.
 We use the cylindrical coordinates
 $x=r\cos(\theta)$, $y=r\sin(\theta)$ and $z=z$ for
 $-\pi/2 \leq \theta \leq \pi/2$, $0 \leq r \leq 1$ and
-$r = \sqrt{x^2+y^2} \leq z \leq 1$.  We have that
+$\displaystyle r = \sqrt{x^2+y^2} \leq z \leq 1$.  We have that
 $\displaystyle
 \left|\frac{\partial(x,y,z)}{\partial(r,\theta,z)}\right| = r $.
 The mass is
@@ -4804,8 +4801,7 @@ V = \frac{32\pi}{3} - \frac{4 (8-3\sqrt{3})\pi}{3} = 4 \sqrt{3}\, \pi$.
 
 \begin{question}
 Find the volume $V$ of the solid $R$ enclosed between the upper part of
-the sphere $\displaystyle x^2+y^2+z^2=25$ and the plane $z=4$.
-
+the sphere $\displaystyle x^2+y^2+z^2=25$ and the plane $z=4$.\\
 \subQ{a} Setup but do not compute the integral in Cartesian coordinates.\\
 \subQ{b} Setup but do not compute the integral in cylindrical coordinates.\\
 \subQ{c} Setup but do not compute the integral in polar coordinates.\\
@@ -4888,7 +4884,8 @@ We have drawn the region $R$ in the figure below.
 \pdfbox{mult_integrals/question21}
 Because of the cylinder, we are first inclined to use the cylindrical
 coordinates $x = 1 + r\cos(\theta)$, $y=r\sin(\theta)$ and $z=z$ for
-$0 \leq z \leq 2 - \sqrt{x^2+y^2} = 2 - \sqrt{r^2 + 2r \cos(\theta) +  1}$,
+$\displaystyle 0 \leq z \leq 2 - \sqrt{x^2+y^2}
+= 2 - \sqrt{r^2 + 2r \cos(\theta) +  1}$,
 $0 \leq r \leq 1$ and $0 \leq \theta \leq 2 \pi$.  Unfortunately, the
 reader may verify that this leads to a difficult integral to compute.
 
