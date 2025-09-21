@@ -200,7 +200,7 @@ of $f$ on $R$ is defined as
 
 \begin{defn}
 Let $\displaystyle R \subset \RR^n$ be a rectangle as defined above and
-$f:R\to \RR$ be a bounded function.  If $\U(f) = \LL(f)$, we say that
+$f:R\to \RR$ be a bounded function.  If $\U(f) = \LL(f)$, then we say that
 {\bfseries $\mathbf{f}$ is (Riemann) integrable}\index{Riemann Integrable}
 on the rectangle $R$.  The
 {\bfseries Riemann integral of $\mathbf{f}$}\index{Riemann
@@ -1167,7 +1167,7 @@ $\supp \phi_j \subset U_\alpha$ for some $\alpha \in A$.
 \end{theorem}
 
 \begin{proof}
-\stage{i} If $W$ is compact, there exists a finite subcover 
+\stage{i} If $W$ is compact, then there exists a finite subcover 
 $\displaystyle \{U_{\alpha_i}: 1 \leq i \leq N\}$ of $W$.
 For each $\VEC{x} \in W$, there exist $0 < r_{\VEC{x},1} < r_{\VEC{x},2}$
 such that
@@ -1343,7 +1343,7 @@ $\displaystyle W = \bigcup_{j=j}^\infty W_j$ where
 $\displaystyle W_j = \{\VEC{x} : \dist{\VEC{x}}{\RR^n \setminus W}
 \geq 1/j\} \cap \{\VEC{x} : \|\VEC{x}\| \leq j\}$.  The sets $W_j$ are
 compact and $\displaystyle W_j \subset W_{j+1}^\circ$ for all $j\geq
-1$.  We may therefore used (ii).  If $W$ is not open, we use (ii) with
+1$.  We may therefore used (ii).  If $W$ is not open, then we use (ii) with
 the open set $\displaystyle \bigcup_{\alpha \in A} U_\alpha\supset W$
 instead of $W$.
 \end{proof}
@@ -1747,7 +1747,7 @@ Let $\displaystyle W\subset \RR^n$ be an open set, and
 $\displaystyle g:W\to \RR^n$ be a
 one-to-one and continuously differentiable function such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$.  If
-$f:g(W)\to \RR$ is integrable then
+$f:g(W)\to \RR$ is integrable, then
 \begin{equation}\label{cov25}
 \int_{g(W)} f  = \int_W (f \circ g)\, |\det \diff g| \ .
 \end{equation}
@@ -1910,7 +1910,7 @@ $\displaystyle \VEC{x} \in W \setminus g^{-1}(K)$.
 
 \stage{iii} $(f \circ g)\, |\det \diff g|: W \to \RR$ is continuous
 except possibly on a set of measure zero.  In fact, if $Z \subset K$ is the
-set of measure zero where $f$ is discontinuous, we show that
+set of measure zero where $f$ is discontinuous, then we show that
 $\displaystyle g^{-1}(Z) \subset g^{-1}(K) \subset W$ is the set of
 measure zero where $(f \circ g)\, |\det \diff g|: W \to \RR$ is
 discontinuous.
@@ -2291,7 +2291,7 @@ We proceed by induction on the dimension $n$.
 
 We may assume that $W$ is connected.
 If $W$ is not connected and so is the union of non-intersecting
-open intervals, we may use the linearity of the integral to reduce the
+open intervals, then we may use the linearity of the integral to reduce the
 integral on $W$ to a sum of integrals on intervals.
 
 We have from Lemma~\ref{cov27} that $(f\circ g) g'$ is Riemann
@@ -3045,8 +3045,8 @@ $\displaystyle A(S) = \int_a^b f(x)\dx{x}$.
 Let $S$ be a bounded subset of $\displaystyle \RR^2$.   \label{innerarea}
 Prove that $S$ and $\displaystyle S^\circ$ have the same inner area;
 namely, show that $\LL(\Chi_S) = \LL(\Chi_{S^\circ})$.
-Note that we do not require $S$ to be Jordan measurable.  If it was, the
-question would be easy to answer because
+Note that we do not require $S$ to be Jordan measurable.  If it was,
+then the question would be easy to answer because
 $\displaystyle S \setminus S^\circ \subset \partial S$ would be a
 subset of the closed set of measure zero $\partial S$ and we will be
 able to use Remark~\ref{rmkC0meas}.
@@ -3306,8 +3306,8 @@ Consider the function
 \[
 f(x,y) =
 \begin{cases}
-y^{-2} & \quad \text{if } 0 < x < y < 1 \\
--x^{-2} & \quad \text{if } 0 < y < x < 1 \\
+y^{-2} & \quad \text{if}\ 0 < x < y < 1 \\
+-x^{-2} & \quad \text{if}\ 0 < y < x < 1 \\
 0 & \quad \text{otherwise}
 \end{cases}
 \]
@@ -3417,7 +3417,7 @@ The most common double integrals are illustrated below.
 The reader should have not problem to generalize this presentation to
 multiple integrals in higher dimensions.  If the domain of integration
 is $R = \left\{ (x,y) : a\leq x \leq b\ \text{and}\ g_1(x) \leq y \leq
-g_2(x) \right\}$ (Figure~\ref{VOLUME3}), it follows from Fubini's
+g_2(x) \right\}$ (Figure~\ref{VOLUME3}), then it follows from Fubini's
 theorem on a rectangle containing $R$ that
 \[
 \iint_R f = \int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y) \dx{y} \dx{x} \ .
@@ -3924,10 +3924,10 @@ Let $\displaystyle A = \begin{pmatrix} 1 & 1/2 \\ 1/2 & 1 \end{pmatrix}$.
 Since $A$ is symmetric, it has only real eigenvalues and an orthogonal matrix
 may be used to diagonalize $A$.  More precisely, suppose that
 $\lambda_1$ and $\lambda_2$ are the eigenvalues of $A$.
-If $\lambda_1 \neq \lambda_2$ and $\VEC{v}_1$ and $\VEC{v}_2$ are
+If $\lambda_1 \neq \lambda_2$, and $\VEC{v}_1$ and $\VEC{v}_2$ are
 eigenvectors of norm $1$ associated to $\lambda_1$ and $\lambda_2$
 respectively, then $\VEC{v}_1$ and $\VEC{v}_2$ are orthonormal.
-If $\lambda_1 = \lambda_2$, we can always find two linearly
+If $\lambda_1 = \lambda_2$, then we can always find two linearly
 independent eigenvectors $\VEC{v}_1$ and $\VEC{v}_2$ associated to
 $\lambda_1 = \lambda_2$.  We may select them (using Gram-Schmidt
 orthogonalization) such that they are orthonormal.
@@ -4164,7 +4164,7 @@ for some function $f:S \to \RR$ where
 $\displaystyle (x^2+y^2)^3 = f(g(x,y))\, \left|\det \diff g(x,y)\right|$
 and $g:R \to S$ is our change of variables.  Let $u = xy$ and
 $\displaystyle v=x^2 - y^2$.  If we try to express $x$ and $y$ in
-terms of $u$ and $v$, we get ugly formulae.  Therefore, we proceed
+terms of $u$ and $v$, then we get ugly formulae.  Therefore, we proceed
 slightly differently than usual.  Let
 $\displaystyle \begin{pmatrix} u \\ v \end{pmatrix} = g(x,y)
 = \begin{pmatrix} xy \\ x^2 - y^2 \end{pmatrix}$
@@ -4220,14 +4220,14 @@ Thus
 \end{align*}
 
 \stage{Second method}
-If we do not want to introduce an improper integral, we have to
+If we do not want to introduce an improper integral, then we have to
 slightly modify the previous change of variables.
 
 We still set $u = x +y$ for $1 \leq u \leq 4$.
 Instead of using $y = v x$ for $0 < v < \infty$ as we did before,
 we use $\displaystyle y = \left(\frac{v}{1-v}\right)x$ for $0 < 0 < 1$.
 This substitution yields $y=0$ when $v=0$ and approaches $x=0$ when
-$\displaystyle v \to 1^-$.  If we solve for $v$, we get
+$\displaystyle v \to 1^-$.  If we solve for $v$, then we get
 $\displaystyle v = \frac{y}{x+y}$.  Thus, the change of variables that
 we use is $x=u-uv$ and $y=uv$ for $1 \leq u \leq 4$ and $0 < v < 1$.
 We have to ignore $v=0$ to ensure that the change of variables is injective.
@@ -5078,7 +5078,7 @@ integrals in higher dimensions.
 
 \begin{question}
 Determine if the following improper integrals converge or
-diverge.  If they converge, compute their value.
+diverge.  If they converge, then compute their value.
 \begin{center}
 \begin{tabular}{*{1}{l@{\hspace{0.5em}}l@{\hspace{3em}}}l@{\hspace{0.5em}}l}
 \subQ{a} & $\displaystyle \iiint_{\RR^3} \frac{1}{1+x^2+y^2+z^2}$  &

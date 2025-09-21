@@ -118,7 +118,7 @@ a_{i_1,i_2,\ldots,i_k} \,
 \]
 If we evaluate this expression at
 $(\VEC{v}_{m_1}, \VEC{v}_{m_2}, \ldots, \VEC{v}_{m_k})$ and use
-(\ref{stokesBTEq1}), we get $a_{m_1,m_2,\ldots,m_k}=0$
+(\ref{stokesBTEq1}), then we get $a_{m_1,m_2,\ldots,m_k}=0$
 for $1 \leq m_j \leq n$ and $1 \leq j \leq k$.
 \end{proof}
 
@@ -739,7 +739,7 @@ a_{i_1,i_2,\ldots,i_k} \,
 If we evaluate this expression at
 $(\VEC{v}_{m_1}, \VEC{v}_{m_2}, \ldots, \VEC{v}_{m_k})$
 with $1 \leq m_1 < m_2 < \ldots < m_k \leq n$ and use
-(\ref{thOkbasisEq1}), we get $a_{m_1,m_2,\ldots,m_k} =0$.
+(\ref{thOkbasisEq1}), then we get $a_{m_1,m_2,\ldots,m_k} =0$.
 
 \stage{iii}
 To determine the number of elements in the basis $\NNN$, we first note
@@ -858,7 +858,7 @@ Hence, we get from Theorem~\ref{stokesTBE} that
 \end{align*}
 
 \stage{2} If $\sigma = \sigma_{p,q}$ is the transposition of $p$ and
-$q$, we get form (1) that
+$q$, then we get form (1) that
 \begin{align*}
 \tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_n)
 &= \tau(\VEC{w}_{\sigma(1)}, \VEC{w}_{\sigma(2)}, \ldots, \VEC{w}_{\sigma(n)})
@@ -884,7 +884,7 @@ space $H$ by selecting one of the two groups of bases described above.
 \end{defn}
 
 If $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ is a basis
-belonging to the chosen group for the orientation on $H$, we denote this
+belonging to the chosen group for the orientation on $H$, then we denote this
 orientation by $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
 The order of the vector is fundamental.  The group of bases not
 belonging to the orientation
@@ -1456,7 +1456,7 @@ for all $\displaystyle \VEC{x} \in \RR^n$.
 Suppose that $\displaystyle V\subset \RR^n$ and
 $\displaystyle W \subset \RR^m$ are two open sets.
 If $f:V \to W$ is a function of class $\displaystyle C^1$,
-we can extend $\displaystyle f^\ast$ to a map from
+then we can extend $\displaystyle f^\ast$ to a map from
 differential $k$-forms on $W$ to differential $k$-forms on $V$ by
 $\displaystyle f^\ast(\omega)(\VEC{v}) = f^\ast(\omega(f(\VEC{v})))$ for
 every differential $k$-forms $\omega$ on $W$ and $\VEC{v} \in V$.
@@ -1954,7 +1954,7 @@ $\VEC{x} \in V$.
 \end{defn}
 
 If $\omega$ is a closed differential $1$-form defined on a star-shaped
-domain $V$, the integral formula in (\ref{introPLEq0}) (with
+domain $V$, then the integral formula in (\ref{introPLEq0}) (with
 appropriate shifting) can be used to find $\mu:V\to \RR$ such that
 $\df{\mu} = \omega$.  A general form of this integral formula is used
 to prove the following theorem.
@@ -1968,7 +1968,7 @@ $\omega$ is exact on $V$.
 \begin{proof}
 Without loss of generality, we may assume that $\VEC{0}\in V$ and every point
 $\VEC{x} \in V$ can be joined by a straight line in $V$ to the origin.
-If it is not, we consider $\tilde{V} = V - \{\VEC{y}\}
+If it is not, then we consider $\tilde{V} = V - \{\VEC{y}\}
 = \{ \VEC{x} - \VEC{y}: \VEC{x} \in V \}$ and
 $\tilde{\omega}(\VEC{x}) = \omega(\VEC{x}+\VEC{y})$ for
 $\VEC{x} \in \tilde{V}$ where $\VEC{y}$ is the "centre" of the
@@ -2073,7 +2073,7 @@ Moreover, if we apply $L$ to the differential $(k+1)$-form
 \df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
 \wedge \df{x_{i_k}} \ ,
 \]
-we get
+then we get
 \begin{align}
 L(\df{\tau}) &= \sum_{i_1<i_2<\ldots<i_k} \left(
 \sum_{m=1}^n \left( x_m \int_0^1 t^{k}
@@ -2277,7 +2277,7 @@ y_1 & y_2 & \ldots & y_{i-1} & s_1 & y_i & \ldots
 y_{j-1} & \ldots & y_{m-2} \end{pmatrix}^\top \big)
 = (\sigma_{i,s_1})_{j-1,s_2} (\VEC{y})   \label{bdbdE1e}
 \end{align}
-for all $\VEC{y} \in I_{m-2}$.  If $i = j-1$, the section
+for all $\VEC{y} \in I_{m-2}$.  If $i = j-1$, then the section
 $y_i\ \ldots\ y_{j-2}$ is removed from the second row of (\ref{bdbdE1e}).
 The terms of the form $(\sigma_{j,s_2})_{i,s_1} (\VEC{y})$ with $j=i$ are
 included in (\ref{bdbdE1e}) because, when $i = k$ and $j= k+1$ for
@@ -2395,7 +2395,8 @@ $\theta \in [0,1]$.  It follows that
 = f(\sigma(1)) - f(\sigma(0)) = 0
 \end{align*}
 because $\sigma(0) = \sigma(2\pi) = (1,0)$.
-However, if we compute directly the integral $\int_\sigma \omega$, we get
+However, if we compute directly the integral $\int_\sigma \omega$,
+then we get
 \[
 \int_{\sigma} \omega = \int_{[0,1]} \sigma^\ast(\omega)
 = 2\pi \int_{[0,1]} \dx{\theta} = 2\pi \neq 0 \ .

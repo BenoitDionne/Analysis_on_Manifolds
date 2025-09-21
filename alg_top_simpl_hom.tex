@@ -215,7 +215,7 @@ simplicial complex illustrated in (c) and vice-versa.}{SimpCpx3}
 A {\bfseries partial order}\index{Partial order} on a simplicial
 complex $K$ is defined as follows.  Given $(s_1)$ and $(s_2)$ in $K$,
 we write that $(s_1) \leq (s_2)$ if $(s_1)$ is an open face of
-$[s_2]$.  If in addition $(s_1) \neq (s_2)$, we write that
+$[s_2]$.  If in addition $(s_1) \neq (s_2)$, then we write that
 $(s_1) < (s_2)$.
 \end{defn}
 
@@ -583,7 +583,7 @@ $\displaystyle m\in \NNp$, then we get a sequence of barycentric
 subdivisions of $M$ such that $\mesh K_m \to 0$ as
 $m \to \infty$.  If we apply Theorem~\ref{thESAf} to
 $f:[K] \to [L_j] = [L]$ using the collection of subdivisions
-$\{K_m\}_{m\in \NNp}$ of $K$, we find that there exists $m > 0$ and
+$\{K_m\}_{m\in \NNp}$ of $K$, then we find that there exists $m > 0$ and
 a simplicial approximation $\phi:[K_m]\to [L_j]$ of $f$.
 As remarked after Proposition~\ref{propNfmg}, we then have that
 $\|f - \phi\|_{[K]} \leq \mesh L_j < \epsilon$.
@@ -1643,7 +1643,7 @@ in an open neighbourhood of $B_{(s)}$ in $\displaystyle \RR^n$
 where $(s) \in K$ is an open $q$-simplex. then there exists a closed
 differential $k$-form $\rho$ defined in an open neighbourhood of $[s]$
 such that $\rho = \omega$ in the open neighbourhood of $B_{(s)}$.  If
-$q=k+1$, we must also require that
+$q=k+1$, then we must also require that
 $\displaystyle \int_{\partial [s]} \omega =0$.
 \item Assuming $q,k>0$, if $\omega$ is a closed differential $k$-form
 defined in an open neighbourhood of $[s]$ in $\displaystyle \RR^n$ where
@@ -1653,7 +1653,7 @@ that $\df{\rho} = \omega$ in that neighbourhood of $B_{(s)}$, then
 there exists a differential $(k-1)$-form $\nu$ defined in an open
 neighbourhood of $[s]$ such that $\nu = \rho$ in an open neighbourhood
 of $B_{(s)}$ and $\df{\nu} = \omega$ in a neighbourhood of $[s]$.
-If $q=k$, we must also
+If $q=k$, then we must also
 require that $\displaystyle \int_{\partial [s]} \rho = \int_{[s]} \omega$.
 \end{enumerate}
 
@@ -1729,7 +1729,7 @@ where $\omega$ is defined is also star-shaped.  Hence, we may use
 Poincaré Lemma to get a differential $(k-1)$-form $\mu$ defined in
 this neighbourhood such that $\df{\mu} = \omega$.
 
-If $q>1$, we can show that (2) can be used with $\rho$ replaced by
+If $q>1$, then we can show that (2) can be used with $\rho$ replaced by
 $\mu$ and $(s)$ by $(t)$ to get a differential $(k-1)$-form $\nu$
 defined in an open neighbourhood of $[t]$ such that
 $\nu = \mu$ in an open neighbourhood of $B_{(t)}$ and $\df{\nu} = \omega$
@@ -1743,7 +1743,7 @@ defined by
 \]
 where the neighbourhoods may have to be shrunk a little if necessary.
 We have that $\df{\tau} = \omega$ in a neighbourhood of $B_{(s)}$.
-If $q=1$, we also have that there is a differential $k-1$-form $\tau$
+If $q=1$, then we also have that there is a differential $k-1$-form $\tau$
 defined in $B_{(s)}$ such that $\df{\tau} = \omega$.  In this case, we
 use the fact that the neighbourhood of $B_{(s)}$ may be chosen to be
 the union of two disconnect open sets; one about each of the two
@@ -1780,8 +1780,8 @@ $\VEC{x}_j$ being the only vertex of $K$ in $B_j$.  Using Poincaré
 Lemma on each open ball, we get a differential $(k-1)$-form
 $\tilde{\rho}_0$ on the open neighbourhood of $\displaystyle [K^0]$ such that
 $\df{\tilde{\rho}_0} = \omega$.
-If $k-1 > 0$, we may take $\rho_0 = \tilde{\rho}_0$.
-If $k-1 = 0$, we have to make sure that
+If $k-1 > 0$, then we may take $\rho_0 = \tilde{\rho}_0$.
+If $k-1 = 0$, then we have to make sure that
 $F_0(\rho_0) = \phi$ on $\displaystyle [K^0]$.
 For each vertex $\displaystyle \VEC{x}_j$ of $K$, set $\displaystyle
 a_j = \phi\big( (\VEC{x}_j)\big) - \int_{(\VEC{x}_j)}  \tilde{\rho}_0
@@ -1824,10 +1824,10 @@ $\tilde{\rho}_{(s_1)} = \tilde{\rho}_{(s_2)} = \rho_{j-1}$ in an open
 neighbourhood of the intersection of $[s_1]$ and $[s_2]$ for all
 open $j$-simplices $(s_1)$ and $(s_2)$ in $K$.
 
-If $k-1 \neq j$, we may define $\rho_j$ in a neighbourhood
+If $k-1 \neq j$, then we may define $\rho_j$ in a neighbourhood
 of $\displaystyle [K^j]$ as $\rho_j = \tilde{\rho}_j$.
 
-If $k-1 = j$, we use a trick similar to the one that we have used in
+If $k-1 = j$, then we use a trick similar to the one that we have used in
 the case $j=0$ to ensure that $F_j(\rho_j) = \phi$ on $\displaystyle C^j(K;R)$.
 Let $\displaystyle \alpha_j = \phi - F_{k-1}(\tilde{\rho}_{k-1}) \in C^j(K;R)$.
 We define $\rho_j$ in a neighbourhood $U$ of $\displaystyle [K^j]$ as

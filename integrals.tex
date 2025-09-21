@@ -104,7 +104,7 @@ partition of $[a,b]$, we get $\LL(f) \leq \U(f)$.
 
 \begin{defn}
 Consider a bounded function $f:[a,b]\to \RR$.
-If $\U(f) = \LL(f)$, we say that
+If $\U(f) = \LL(f)$, then we say that
 {\bfseries $\mathbf{f}$ is (Riemann) integrable}\index{Riemann Integrable}
 on the interval $[a,b]$ and the
 {\bfseries integral of $\mathbf{f}$}\index{Integral of a Function} on
@@ -133,8 +133,8 @@ Choose two partitions $Q$ and $R$ of $[a,b]$ such that
 $\LL(f) - \LL_Q(f) < \epsilon/2$ and
 $\U_R(f) - \U(f) < \epsilon/2$.  Since $f$ is integrable, we have
 $\U(f) = \LL(f)$.  Therefore $\U_R(f) - \LL_Q(f) < \epsilon$.  If we
-use the partition $P = Q \cup R$, a refinement of both $Q$ and $R$, we
-get $\U_P(f) - \LL_P(f) \leq \U_R(f) - \LL_Q(f) < \epsilon$ because
+use the partition $P = Q \cup R$, a refinement of both $Q$ and $R$,
+then we get $\U_P(f) - \LL_P(f) \leq \U_R(f) - \LL_Q(f) < \epsilon$ because
 $\LL_Q(f) \leq \LL_R(f) \leq \U_R(f) \leq U_P(f)$ according to
 Proposition~\ref{propRef}.
 \end{proof}
@@ -352,8 +352,8 @@ The only points where $\Chi_S$ is discontinuous are the points on
 $\partial S$.
 
 \begin{defn}
-If $\displaystyle S \subset \RR$ is a Jordan measurable set and
-$f:S\to \RR$.  We define the
+Given a Jordan measurable set $S \subset \RR$ and a function
+$f:S\to \RR$, we define the
 {\bfseries integral of $f$ on $S$}\index{Integral of a Function}, denoted
 $\displaystyle \int_S f$ or $\displaystyle \int_S f(x)\dx{x}$, as the
 integral $\displaystyle \int_a^b \Chi_S f$ for $[a,b] \supset S$
@@ -575,7 +575,7 @@ $u_i = \phi(w_i)$ for each $i$.  We have
 \sum_{i=1}^N f(\phi(w_i)) \left( \phi(\tilde{p}_i)-\phi(\tilde{p}_{i-1})\right)
 = \sum_{i=1}^N f(\phi(w_i)) \phi'(z_i) (\tilde{p}_i-\tilde{p}_{i-1}) \ .
 \end{equation}
-If $\displaystyle C = \sup \{|f(x)| : a \leq x \leq b \}$, we get from
+If $\displaystyle C = \sup \{|f(x)| : a \leq x \leq b \}$, then we get from
 (\ref{intCompZ}) that
 \begin{align}
 &\left| \sum_{i=1}^N f(\phi(w_i)) \phi'(w_i) (\tilde{p}_i-\tilde{p}_{i-1})
@@ -1445,8 +1445,8 @@ $\displaystyle \{x_n : n \geq 0\}$ has content zero.
 
 \begin{question}
 Suppose that $f:[a,b]\to \RR$ is integrable      \label{QContIntpos}
-and $f(x)\geq 0$ for all $x\in [a,b]$.   If there exists $x_0 \in
-[a,b]$ where $f$ is continuous at $x_0$ and $f(x_0)>0$, then
+and $f(x)\geq 0$ for all $x\in [a,b]$.   If there exists $x_0 \in [a,b]$
+where $f$ is continuous at $x_0$ and $f(x_0)>0$, then
 $\displaystyle \int_a^b f(x) \dx{x} > 0$.
 \end{question}
 
@@ -1555,7 +1555,7 @@ $[a,b]$ implies that $\displaystyle h^2$ is integrable on $[a,b]$.
 \begin{sol}
 \stage{i} We first prove that $\displaystyle h^2$ is integrable on $[a,b]$ if
 $h:[a,b]\to\RR$ is integrable on $[a,b]$.   If $h:[a,b]\to\RR$ is
-integrable. then $h$ is bounded on $[a,b]$ by definition of the
+integrable, then $h$ is bounded on $[a,b]$ by definition of the
 Riemann integral.  Let $C>0$ be a constant such that $|h(x)|<C$ for
 all $x\in [a,b]$.
 
@@ -1653,13 +1653,14 @@ Hence, since $g$ is continuous, we have
 \geq \int_{c-\delta/2}^{c+\delta/2} \frac{f^2(c)}{4} \dx{x}
 = \frac{f^2(c)\delta}{4} \ .
 \]
-This is a contradiction that $f(c)>0$.  If $f(c)<0$, the previous reasoning
-applied to $-f(x)$ shows that $-f(c)>0$ is not possible.  Thus $f(c)=0$.
+This is a contradiction that $f(c)>0$.  If $f(c)<0$, then the previous
+reasoning applied to $-f(x)$ shows that $-f(c)>0$ is not possible.
+Thus $f(c)=0$.
 
 The cases $c=a$ or $c=b$ are handled in a similar fashion.
 
-If $f$ is continuous on $[a.b]$, the previous discussion can be applied to
-every $x\in[a,b]$ to show that $f(x)=0$.
+If $f$ is continuous on $[a.b]$, then the previous discussion can be
+applied to every $x\in[a,b]$ to show that $f(x)=0$.
 \end{sol}
 
 \begin{question}
@@ -1749,7 +1750,7 @@ continuous, $x_0 < b$ and there exists $\delta >0$ such that
 $x_0+\delta \leq b$ and $p(x) > 0$ for $x \in ]x_0,x_0+\delta]$.
 
 Let $\displaystyle P(x) = c \int_a^x p(t) \dx{t}$ for $x\in[a,b]$.  We
-have $p(x)\leq P(x)$ for all $x$ by hypothesis.  If $x_0>a$, we
+have $p(x)\leq P(x)$ for all $x$ by hypothesis.  If $x_0>a$, then we
 have $P(x)=0$ for $x\in[a,x_0[$ because $p(x)=0$ for $x \in [a,x_0[$
 by definition of $x_0$.  We have $P(x)>0$ for $x \in ]x_0,b]$ because
 $p(x)>0$ for $x_0<x<x_0+\delta$ and $p(x)\geq 0$ for all $x \in
@@ -1998,7 +1999,7 @@ $\displaystyle f(x) = \left( \int_0^x f(t) \dx{t} \right)^{1/2}
 that $f$ is differentiable.
 
 If we differentiate with respect to $x$ both sides of the equality
-(\ref{probl1}), we get $2 f(x)f'(x) = f(x)$.  Thus $f'(x) = 1/2$ for
+(\ref{probl1}), then we get $2 f(x)f'(x) = f(x)$.  Thus $f'(x) = 1/2$ for
 all $x>c$ because $f(x) \neq 0$ for all $x>c$.  We find that $f(x) = x/2
 +C$ for $x>c$ where $C$ is a constant.  If $c>0$, then $f$ is not
 differentiable at $x=c$ because $f(x)=0$ for $x\leq c$.  Therefore we must

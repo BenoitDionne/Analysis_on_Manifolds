@@ -2,7 +2,7 @@
 
 Intuitively, if $\displaystyle V \subset \RR^3$ is a small enough open
 neighbourhood of a point $\VEC{x}$ on a nice surface $S$ in
-$\displaystyle \RR^3$, the set $V \cap S$ looks like a piece of
+$\displaystyle \RR^3$, then the set $V \cap S$ looks like a piece of
 $\displaystyle \RR^2$.  How can we give a meaningful sense to this
 last sentence?  The answer to this question comes from the
 introduction of a local system of coordinates at each point of $S$.
@@ -267,9 +267,9 @@ such that $\displaystyle \phi^{-1}(\VEC{u}) \in \partial H_k$.
 The set of all boundary points of $S$ is the
 {\bfseries boundary}\index{Boundary} of $S$.
 The boundary of the manifold $S$ is denoted $\partial S$.
-If $\partial S = \emptyset$, we say that we have a
+If $\partial S = \emptyset$, then we say that we have a
 {\bfseries manifold without boundary}\index{Manifold!Manifold Without Boundary}.
-If $\partial S \neq \emptyset$, we say that we have a
+If $\partial S \neq \emptyset$, then we say that we have a
 {\bfseries manifold with boundary}\index{Manifold!Manifold With Boundary}.
 \end{defn}
 
@@ -407,7 +407,7 @@ Hence, for $t>0$ small enough, we get from (\ref{manifold_prop1}) that
 0 \leq \left(\pi_k \circ \diff \phi(\tilde{\VEC{w}})\right) (\VEC{x})
 + \frac{1}{t} \left(\pi_k \circ g\right)(t\VEC{x}) \ .
 \]
-If we let $t$ converges to $0$, we get
+If we let $t$ converges to $0$, then we get
 $\displaystyle 0 \leq
 \left(\pi_k \circ \diff \phi(\tilde{\VEC{w}})\right) (\VEC{x})$
 because
@@ -422,7 +422,7 @@ as $t \to 0$.  Similarly, for $t<0$ closed to $0$, we get from
 0 \geq \left(\pi_k \circ \diff \phi(\tilde{\VEC{w}})\right) (\VEC{x})
 + \frac{1}{t} \left(\pi_k \circ g\right)(t\VEC{x}) \ .
 \]
-Again, if we let $t$ converges to $0$, we get
+Again, if we let $t$ converges to $0$, then we get
 $\displaystyle 0 \geq
 \left(\pi_k \circ \diff \phi(\tilde{\VEC{w}})\right) (\VEC{x})$.
 
@@ -516,7 +516,7 @@ $(W_j, U_j, \phi_j)$ are two local charts of $S$ such that
 $U_i \cap U_j \neq \emptyset$.
 
 If $\displaystyle \{ (W_i,U_i,\phi_i) \}_{i\in I}$ is a maximal atlas
-for $S$ then
+for $S$, then
 \[
 \left\{ \left(W_i\cap H_k^\circ, U_i \cap \Int S,
 \phi_i\big|_{W_i\cap H_k^\circ}) \right) : i\in I \right\}
@@ -842,11 +842,11 @@ By Proposition~\ref{manifWEX}, $\diff \phi (\VEC{w})$ is well defined
 even if $\VEC{w} \in \partial W$.
 
 If $S$ is a $k$-dimensional manifold with boundary of class
-$\displaystyle C^1$, we have that
+$\displaystyle C^1$, then we have that
 $\TS_{\VEC{u}} \partial S$ is a $(k-1)$ dimensional subspace of
 $\TS_{\VEC{u}} S$.  In fact, if $(W,U,\phi)$ is a local chart
 with $\VEC{u} \in U \cap \partial S$ and
-$\VEC{w} = \phi(\VEC{u}) \in W \cap \partial H_k$, It follows from the
+$\VEC{w} = \phi(\VEC{u}) \in W \cap \partial H_k$, then it follows from the
 proof of Theorem~\ref{manifBSM} that
 $\TS_{\VEC{u}} \partial S
 = \phi_{\ast} \big(\TS_{\VEC{w}} (W \cap \partial H_k)\big)$
@@ -1035,7 +1035,7 @@ for all $(\VEC{u},\VEC{x}) \in \TS S$ is the
 {\bfseries tangent bundle projection}\index{Tangent Bundle Projection} of $S$.
 \end{defn}
 
-If $S$ is a $k$-dimensional manifold, we can give a structure of
+If $S$ is a $k$-dimensional manifold, then we can give a structure of
 $2k$-dimensional manifold to $\TS S$.  Suppose that $(W,U,\phi)$ is a local
 chart of $S$.  Let
 $\displaystyle \tilde{W} = W \times \RR^k$ and
@@ -1075,7 +1075,7 @@ a basis of the subspace $\displaystyle \diff \phi(\VEC{w})(\RR^k)$.
 Let $S$ be a $k$-dimensional manifold of class $\displaystyle C^1$.
 Suppose that we assign an orientation $\mu_{\VEC{u}}$ on each $\TS_{\VEC{u}} S$
 for each $\VEC{u} \in S$.  Such choice of orientations is
-{\bfseries consistent}\index{Consistent Orientation} if for every
+{\bfseries consistent}\index{Consistent Orientation} if, for every
 local chart $(W,U,\phi)$ of $S$, and for every $\VEC{w}_1$ and
 $\VEC{w}_2$ in $W$, we have
 \[
@@ -1120,7 +1120,7 @@ for one (and so all \footnotemark) $\VEC{w} \in W$.
 \footnotetext{Because the choice of orientation is consistent.}
 
 If a local chart $(W,U,\phi)$ of a $k$-dimensional manifold $S$
-without boundary is not orientation preserving, we can easily produce
+without boundary is not orientation preserving, then we can easily produce
 a local chart which will be orientation preserving.  Choose a linear map
 $\displaystyle T:\RR^k \to \RR^k$ with
 $\det(T) = -1$ (e.g.\ a permutation of two coordinates), then
@@ -2081,7 +2081,7 @@ we may write a differential $p$-form $\omega$ on $\displaystyle \RR^n$ as
 \end{equation}
 where $\displaystyle \omega_{i_1,i_2,\ldots,i_p}:\RR^n\to \RR$ for all
 indices.  If $S$ is a $k$-dimensional manifold of class $\displaystyle C^1$
-in $\displaystyle \RR^n$, it is also frequent in the literature to use
+in $\displaystyle \RR^n$, then it is also frequent in the literature to use
 this notation to talk about $\omega\big|_S$. 
 Recall that $\df{x_i}$ for $1\leq i \leq n$ are differential
 $1$-form on $\RR^n$ defined by $\df{x_i}(\VEC{u}) \big( (\VEC{u},\VEC{x}) \big)
@@ -2194,7 +2194,8 @@ and $\displaystyle g^{-1}:V \to W$ is continuous, we have that
 $\displaystyle \supp g^\ast(\omega) = g^{-1}(\supp \omega)$ is a
 compact set.
 
-If $\omega = f \df{x_1}\wedge\df{x_2}\wedge\ldots\wedge\df{x_k}$, we have
+If $\omega = f \df{x_1}\wedge\df{x_2}\wedge\ldots\wedge\df{x_k}$, then
+we have
 \begin{align*}
 \int_{W} g^\ast(\omega)
 &= \int_{W} (f\circ g) (\det \diff g)
@@ -2597,7 +2598,7 @@ Let $\omega_i = \psi_i \omega$ for $1 \leq i \leq I$.  Then
 There are two cases to consider.
 
 \subQ{i} If $(\supp \omega_i) \cap \partial U_{\alpha_i} = \emptyset$
-(topological neighbourhood of $U_{\alpha_i}$), there
+(topological neighbourhood of $U_{\alpha_i}$), then there
 exists a finite number of orientation preserving singular $k$-cubes
 satisfying (3(a)) of Lemma~\ref{stokesLem1} with $U$ and $W$ replaced
 by $U_{\alpha_i}$ and $W_{\alpha_i}$ respectively, and
@@ -2618,7 +2619,7 @@ $\displaystyle \int_{\partial S} \omega_i = 0$.  Thus
 $\displaystyle \int_S \df{\omega_i} = \int_{\partial S} \omega_i$.
 
 \subQ{ii} If $(\supp \omega_i) \cap \partial U_{\alpha_i} \neq \emptyset$,
-We may use Lemma~\ref{stokesLem2} with $U$ and $W$ replaced
+then wee may use Lemma~\ref{stokesLem2} with $U$ and $W$ replaced
 by $U_{\alpha_i}$ and $W_{\alpha_i}$ respectively, and
 $\displaystyle \upsilon = \phi_i^\ast(\omega_i)$, to conclude that
 $\displaystyle
@@ -3379,7 +3380,7 @@ manifolds $M_m$, then we write $\displaystyle \int_{S_r} \omega
 \end{rmk}
 
 \begin{egg}
-If we consider our cone $C$     \label{coneEgg2}
+We consider our cone $C$     \label{coneEgg2}
 in Example~\ref{coneEgg1} and assume that $\omega$ is a differential
 $(k-1)$-form with compact support defined in an open set containing the cone
 $C$.  Our new version of Stokes' theorem states that
@@ -3546,7 +3547,7 @@ the same name for the two measures.}.
 
 \stage{iv} If we let $j \to \infty$ in (\ref{GenStokesThEq1}) and use
 (\ref{GenStokesThEq3}), (\ref{GenStokesThEq5}) and
-(\ref{GenStokesThEq6}), we get (\ref{GenStokesThEq0}).
+(\ref{GenStokesThEq6}), then we get (\ref{GenStokesThEq0}).
 \end{proof}
 
 This generalized version of Stokes' theorem was not too hard to prove
@@ -4208,8 +4209,8 @@ This yields (\ref{manifCXYZeq2}).
 \end{proof}
 
 \begin{rmk}
-If we use the local chart introduced in Example~\ref{eggVolElem1D}, we
-can also prove (\ref{manifCXYZeq2}).  Recall that
+If we use the local chart introduced in Example~\ref{eggVolElem1D},
+then we can also prove (\ref{manifCXYZeq2}).  Recall that
 $\displaystyle \VEC{t}(\VEC{u}) = \|\phi'(w)\|^{-1} \phi'(w)$
 for $\VEC{u} \in U$ and $w\in W$ such that $\phi(w) = \VEC{u}$.
 

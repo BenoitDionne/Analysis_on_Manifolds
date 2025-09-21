@@ -484,7 +484,7 @@ as $h \to 0$ because $F$ is continuous on $V$.
 \end{proof}
 
 The converse to the previous proposition is true.
-If $F = \graD f$ in $V$, it follows from the fundamental theorem for line
+If $F = \graD f$ in $V$, then it follows from the fundamental theorem for line
 integral that
 $\int_C F \cdot \VEC{t} \dx{s} = \int_C \graD f \cdot \VEC{t} \dx{s} =
 f(\sigma(b)) - f(\sigma(a)) = 0$ for all closed curves
@@ -521,7 +521,7 @@ L = \sup \{ L_P(\sigma) : P \text{ is a partition of } [a,b] \} \ .
 
 The value of $L$ is independent of the chosen parametric
 representation of $C$ because only the points on $C$ are used to 
-define $L$ in (\ref{ALNALa}).  If $L < \infty$, we say that the
+define $L$ in (\ref{ALNALa}).  If $L < \infty$, then we say that the
 curve $C$ is {\bfseries rectifiable}\index{Curve!Rectifiable}.
 
 Since we assume that our parametric representations are continuously
@@ -764,7 +764,7 @@ is continuously differentiable and $\diff \rho(\VEC{w})$ has rank $2$
 for all $\VEC{w} \in W$, we may continuously assign to each point
 $\VEC{u}$ of $C$ a unit normal vector $\VEC{n}(\VEC{u})$.
 
-If $S$ is a surface in $\RR^3$, there is a close link between the
+If $S$ is a surface in $\RR^3$, then there is a close link between the
 selected orientation on $S$ and the outward unit normal to $S$
 at each point of $S$.  As we have seen in Remark~\ref{rmkOUNinRR3},
 if $\displaystyle \mu_{\VEC{u}} =
@@ -931,7 +931,7 @@ $\rho(\VEC{a}_i)$, $\rho(\VEC{b}_i)$ and $\rho(\VEC{c}_i)$ where
 $\VEC{a}_i$, $\VEC{b}_i$ and $\VEC{c}_i$ are the vertices of $R_i$.
 We approximate the area of
 $\displaystyle \rho(R_i) \subset \RR^3$ by $A_i$.   If the
-triangles $R_i$ are very small, the area of $\rho(R)$ should be
+triangles $R_i$ are very small, then the area of $\rho(R)$ should be
 approximately equal to the sum of the $A_i$ over all the triangles
 $R_i$ that compose $R$, should not it?  Unfortunately, this is not
 always the case.   H. A. Schwarz (see \cite{Ra} and \cite{S}) gave an
@@ -946,7 +946,7 @@ subject.
 
 Thus, there is no chance that we could use a formula like (\ref{ALNALa})
 to define the area of a surface.  If $S$ is a surface as defined at the
-beginning of this section, the tradition is to define the
+beginning of this section, then the tradition is to define the
 {\bfseries area of the surface}\index{Area of a Surface} $S$ as
 \[
 A = \iint_S \dx{S}= \iint_W \left\|\pdydx{\rho}{w_1} \times
@@ -1104,7 +1104,7 @@ The classical Stokes' theorem becomes
 \end{equation}
 \pdfbox{vect_calculus/Green}
 If we develop both sides of (\ref{diff_geom_sg3}) and assume that
-$F_3= 0$ on $S$, we get
+$F_3= 0$ on $S$, then we get
 \begin{equation} \label{diff_geom_green}
 \oint_C F_1 \dx{x_1} + F_2 \dx{x_2}
 = \int_S \left(\pdydx{F_2}{x_1} - \pdydx{F_1}{x_2}\right) \dx{x_1}
@@ -1491,8 +1491,8 @@ $\displaystyle
 \left(\frac{\pi}{4},0\right) = \begin{pmatrix} 2 & 0 & 2 \end{pmatrix}^\top$.
 This is a vector pointing outside $V$ as required by the
 orientation on $S_1$.  Thus, our choice of orientation is
-consistent with the orientation on $S_1$.  If it has not been the case, we
-could have changed the parametric representation by inverting the
+consistent with the orientation on $S_1$.  If it has not been the
+case, then we could have changed the parametric representation by inverting the
 coordinate names $w_1$ and $w_2$ for instance to obtain a representation
 consistent with the orientation on $S_1$.
 We have that
@@ -1747,7 +1747,7 @@ $\kappa(\VEC{u})$ of $C$ at $\VEC{u}$ is the Euclidean norm of
 $\VEC{k}(\VEC{u})$.  For $\kappa(\VEC{u}) \neq 0$, the ratio
 $1/\kappa(\VEC{u})$ is called the
 {\bfseries radius of curvature}\index{Curve!Radius of Curvature}.  If
-$\kappa(\VEC{u})=0$ for all $\VEC{u} \in C$, we have that $C$ is a
+$\kappa(\VEC{u})=0$ for all $\VEC{u} \in C$, then we have that $C$ is a
 straight line.
 
 Since $\sigma'(w)$ and $\sigma'(w) \times \sigma''(w)$ are orthogonal,
@@ -2074,7 +2074,8 @@ along the flow is given by
 \left( s_1 \VEC{e}_1 + s_2 \VEC{e}_2 + s_3 \VEC{e}_3\right) \\
 & \qquad + O(s_1^2+s_2^2+s_3^2) \ .
 \end{align*}
-If $\epsilon$ is really small, the image of the box $P_0$ along the flow is
+If $\epsilon$ is really small, then the image of the box $P_0$ along
+the flow is
 \[
 \phi(t, P_0) \approx
 P_t = \left\{ \phi(t,\VEC{x}) + \diff_{\VEC{x}} \phi(t,\VEC{x})
@@ -4489,7 +4490,7 @@ described in (b).  Since the origin is an interior point of the
 region enclosed by the curve $C$, there exists $\epsilon >0$ such
 that $C_\epsilon$ is included in the interior of the region enclosed
 by the curve $C$.  See the figure above.  If $S$ is the region
-enclosed by $C$ and the circle $C_\epsilon$, we get from Green's
+enclosed by $C$ and the circle $C_\epsilon$, then we get from Green's
 Theorem that
 \[
 \int_C F \cdot \dx{\VEC{s}} - \int_{C_\epsilon} F \cdot \dx{\VEC{s}}
@@ -4503,7 +4504,7 @@ orientation on $\partial S$.  Thus $\displaystyle
 
 \subQ{c} If we use the parametric representation
 $\sigma(\theta) = \big(r \cos(\theta), r\sin(\theta)\big)$ for
-$0 \leq \theta < 2\pi$, we find that
+$0 \leq \theta < 2\pi$, then we find that
 \[
 \int_{C_r} F_0 \cdot \dx{\VEC{s}}
 = \int_0^{2\pi} \left( \frac{-\sin(\theta)}{r}, \frac{\cos(\theta)}{r} \right)
@@ -4647,7 +4648,7 @@ $\displaystyle F=f \graD g = \left( f\pdydx{g}{x} , f \pdydx{g}{y} \right)$ in
 = \iint_s \left(\graD f \cdot \graD g + f \graD^2 g \right) \dx{A} \ .
 \end{align*}
 If we interchange $f$ and $g$ in (\ref{equA}) and subtract from the original
-(\ref{equA}), we get (\ref{equB}).
+(\ref{equA}), then we get (\ref{equB}).
 
 \subQ{c} We have
 \[
@@ -4877,7 +4878,7 @@ This is possible because $\VEC{0}$ is in the interior of $R$.
 Let $R_\epsilon = R \setminus B_\epsilon(\VEC{0})$.
 
 If we use (a) of Question~\ref{divCons} and (a) of the present
-question, we get that
+question, then we get
 $\displaystyle \iint_{\partial R_\epsilon} \pdydx{g}{\VEC{n}} \dx{S}
 = \iiint_{R_\epsilon} \graD^2 g \dx{V} = 0$
 where the orientation on $\partial R$ is given by the
@@ -4949,7 +4950,7 @@ $F = f \graD g$.
 = \iiint_R \left( \graD f \cdot \graD g + f \graD^2 g\right) \dx{V} \ .
 \end{align*}
 If we interchange $f$ and $g$ in the previous equation and subtract
-the resulting equation from the previous equation, we get
+the resulting equation from the previous equation, then we get
 (\ref{GreenFormNo2}).
 
 \subQ{b}  Without lost of generality, we may assume that $r_1 > r_2$.
@@ -5160,7 +5161,7 @@ enclosed by the curve $C$ in the $x,z$ plane, there exists
 $\epsilon >0$ such that $C_\epsilon$ is included in the interior of
 the region enclosed by the curve $C$ in the $x,z$ plane.  See 
 the figure above.  If $S$ is the region in the $x,z$ plane enclosed 
-by $C$ and the circle $C_\epsilon$, we get from Stokes' theorem that
+by $C$ and the circle $C_\epsilon$, then we get from Stokes' theorem that
 \[
 \int_C F \cdot \dx{\VEC{s}} - \int_{C_\epsilon} F \cdot \dx{\VEC{s}}
 = \int_{\partial S} F \cdot \dx{\VEC{s}}  
@@ -5178,8 +5179,7 @@ $\displaystyle \int_C F \cdot \dx{\VEC{s}}
 \begin{question}
 For each of the vector fields $F$ below, determine if it is conservative and
 if there exists a function $f$ such that $F = \graD f$.  If it is possible,
-find a function $f$.
-
+find a function $f$.\\
 \subQ{a} $\displaystyle F(x,y,z) = \big( yz^2, xz^2, 2xyz \big)$.\\
 \subQ{b} $\displaystyle F(x,y,z) = \big(2xy + x^2, x^2 - y^2, 0)$.\\
 \subQ{c} $\displaystyle F(x,y,z) = \big(3y^2 + 5x^4, x^5 + 6xy, 0 \big)$.\\
@@ -5212,12 +5212,12 @@ function $f$ must satisfy the relations
 \end{equation}
 From the first equation in (\ref{finalB}), we get that
 $\displaystyle f(x,y,z) = xyz^2 + \phi(y,z)$.  If we substitute this
-expression for $f$ in the second equation in (\ref{finalB}), we get that
+expression for $f$ in the second equation in (\ref{finalB}), then we get that
 $\displaystyle xz^2 + \pdydx{\phi}{y} = xz^2$.  Thus
 $\displaystyle \pdydx{\phi}{y} = 0$ and we conclude that $\phi$ is only a
 function of $z$.  If we substitute
 $\displaystyle f(x,y,z) = xyz^2 + \phi(z)$ in the
-last equation in (\ref{finalB}), we get that
+last equation in (\ref{finalB}), then we get that
 $\displaystyle 2xyz + \dydx{\phi}{z} = 2xyz$.  Thus
 $\displaystyle \dydx{\phi}{z} = 0$ and $\phi(z) = C$, a
 constant.  We find that $\displaystyle f(x,y,z) = xyz^2 + C$.
@@ -5246,13 +5246,13 @@ function $f$ must satisfy the relations
 From the first equation in (\ref{consQ4}), we get that
 $\displaystyle f(x,y,z) = x^2y + \frac{x^3}{3} + \phi(y,z)$.  If we
 substitute this expression for $f$ in the second equation in
-(\ref{consQ4}), we get that
+(\ref{consQ4}), then we get that
 $\displaystyle x^2 + \pdydx{\phi}{y} = x^2 - y^2$.  Thus
 $\displaystyle \pdydx{\phi}{y} = -y^2$ and we conclude that
 $\displaystyle \phi(y,z) = - \frac{y^3}{3} + \phi(z)$.  If we
 substitute
 $\displaystyle f(x,y,z) = x^2y + \frac{x^3}{3} - \frac{y^3}{3} + \phi(z)$
-in the last equation in (\ref{consQ4}), we get that
+in the last equation in (\ref{consQ4}), then we get that
 $\displaystyle \dydx{\phi}{z} = 0$.  Thus $\phi(z) = C$, a
 constant.  We find that $\displaystyle
 f(x,y,z) = x^2y + \frac{x^3}{3} - \frac{y^3}{3} + C$.
@@ -5298,13 +5298,13 @@ function $f$ must satisfy the relations
 From the first equation in (\ref{consQ3}), we get that
 $\displaystyle f(x,y,z) = xyz + \cos(xy) + \phi(y,z)$.  If we
 substitute this expression for $f$ in the second equation in
-(\ref{consQ3}), we get that
+(\ref{consQ3}), then we get that
 $\displaystyle xz -x \sin(xy) + \pdydx{\phi}{y} = xz - x\sin(xy) + z
 \cos(yz)$.   Thus $\displaystyle \pdydx{\phi}{y} = z\cos(yz)$ and we
 conclude that $\displaystyle \phi(y,z) = \sin(yz) + \phi(z)$.  If we
 substitute
 $\displaystyle f(x,y,z) = xyz + \cos(xy) + \sin(yz) + \phi(z)$
-in the last equation in (\ref{consQ3}), we get that
+in the last equation in (\ref{consQ3}), then we get that
 $\displaystyle xy + y\cos(yz) + \dydx{\phi}{z} = xy + y \cos(yz)$.
 Thus $\displaystyle \dydx{\phi}{z} = 0$ and $\phi(z) = C$, a
 constant.  We find that $\displaystyle
@@ -5331,8 +5331,7 @@ and hence $\curL F = \curL( \graD f) = \VEC{0}$ on $\displaystyle \RR^3$.
 \begin{question}
 For each of the vector fields $F$ defined on $\RR^3$ below, determine
 if it is conservative and if there exists a vector field $G$ such that
-$F = \curL G$.  If it is possible, find a vector field $G$.
-
+$F = \curL G$.  If it is possible, find a vector field $G$.\\
 \subQ{a} $\displaystyle F(x,y,z)
 = \big(3y^2z -3xz^2, x^2y, z^3 -x^2z\big)$.\\
 \subQ{b} $\displaystyle F(x,y,z) = \big(0,2yz+z, z\big)$.\\
@@ -5373,7 +5372,7 @@ z^3 + \pdydx{\phi}{x} - x^2z - \pdydx{\psi}{y}
 \Rightarrow \pdydx{\phi}{x}(x,y) - \pdydx{\psi}{y}(x,y) = 0 \ .
 \]
 If we choose $\phi(x,y) = 0$ and $\psi(x,y) = 0$ for all $(x,y)$,
-we get that\\
+then we get that\\
 $\displaystyle
 G(x,y,z) = \Big(x^2yz, -\frac{3}{2}y^2z^2 +xz^3, 0 \Big)$.
 
@@ -5419,7 +5418,7 @@ with
 \Rightarrow \pdydx{\phi}{x}(x,y) - \pdydx{\psi}{y}(x,y) = 4 y^2 \ .
 \end{align*}
 If we choose $\displaystyle \phi(x,y) = 4xy^2$ and $\psi(x,y) = 0$
-for all $(x,y)$, we get that
+for all $(x,y)$, then we get that
 $\displaystyle G(x,y,z) = \Big(yz - 3x^2yz), -x^3z - \frac{yz^2}{2} + 4xy^2,
 0 \Big)$.
 
@@ -5452,8 +5451,7 @@ with
 \Rightarrow \pdydx{\phi}{x}(x,y) - \pdydx{\psi}{y}(x,y) = x \ .
 \]
 If we choose $\displaystyle \phi(x,y) = \frac{x^2}{2}$ and
-$\psi(x,y) = 0$ for all $(x,y)$, 
-we get that
+$\psi(x,y) = 0$ for all $(x,y)$, then we get that
 $\displaystyle G(x,y,z) = \Big( \frac{xz^2}{2} ,-xyz - \frac{z^2}{2}
 + \frac{x^2}{2} , 0 \Big)$.
 
@@ -5491,7 +5489,7 @@ with
 &\Rightarrow \pdydx{\psi}{z}(x,z) - \pdydx{\phi}{x}(x,z) = 2z \ .
 \end{align*}
 If we choose $\displaystyle \psi(x,z) = z^2$ and
-$\phi(x,z) = 0$ for all $(x,z)$, we get that
+$\phi(x,z) = 0$ for all $(x,z)$, then we get that
 $\displaystyle G(x,y,z) = \Big( -yz + yz e^{-x^2z^2} +z^2 , 0,
 xy e^{-x^2z^2} - 6 xy \Big)$.
 \end{sol}
@@ -5538,13 +5536,13 @@ We only have to find $f$.  The function $f$ must satisfy the relations
 \end{equation}
 From the first equation in (\ref{finalA}), we get that
 $\displaystyle f(x,y,z) = e^x \sin(y) + \phi(y,z)$.  If we substitute
-this expression for $f$ in the second equation in (\ref{finalA}), we
-get that
+this expression for $f$ in the second equation in (\ref{finalA}), then
+we get that
 $\displaystyle e^x \cos(y) + \pdydx{\phi}{y} = e^x \cos(y)$.  Thus
 $\displaystyle \pdydx{\phi}{y} = 0$ and we conclude that $\phi$ is only a
 function of $z$.  If we substitute
 $\displaystyle f(x,y,z) = e^x \sin(y) + \phi(z)$ in the
-last equation in (\ref{finalA}), we get that
+last equation in (\ref{finalA}), then we get that
 $\displaystyle \dydx{\phi}{z} = z^2$.  Thus
 $\displaystyle \phi(z) = \frac{z^3}{3}$.  We may ignore the constant
 of integration because we are going to evaluate $f$ between two points
