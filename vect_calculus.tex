@@ -220,18 +220,18 @@ Let $\displaystyle F:V \rightarrow \RR^n$ be a continuous
 {\bfseries vector fields}\index{Vector Field}; namely, a continuous
 vector valued function from $V$ to $\displaystyle \RR^n$.
 The {\bfseries line integral}\index{Vector Field!Line Integral} of a
-vector field $F:V \to \RR^n$ along a curve $C$ is defined by
+vector field $\displaystyle F:V \to \RR^n$ along a curve $C$ is defined by
 \begin{equation}\label{classicLineIntVectF}
   \int_C F \cdot \dx{\VEC{s}} \equiv \int_C F \cdot \VEC{t} \dx{s}
 = \int_a^b F(\sigma(w)) \cdot \sigma'(w) \dx{w}
 \end{equation}
 if this integral exists, where $\VEC{t}(\VEC{u})$ is a tangent unit
 vector to the curve $C$ at the point $\VEC{u} \in C$ and
-$\sigma:[a,b] \to \RR^n$ is a parametric representation of $C$, both
-of them consistent with the selected orientation on $C$.  The integral
-is independent of the parametric representation of $C$ used as long as
-this parametric representation is consistent with the orientation on
-$C$.  We write
+$\displaystyle \sigma:[a,b] \to \RR^n$ is a parametric representation
+of $C$, both of them consistent with the selected orientation on $C$.
+The integral is independent of the parametric representation of $C$
+used as long as this parametric representation is consistent with the
+orientation on $C$.  We write
 \begin{equation}\label{classiclineds}
 \dx{\VEC{s}} = \VEC{t} \dx{s} = \sigma'(w)\dx{w} \ .
 \end{equation}
@@ -249,9 +249,9 @@ $\displaystyle \omega = \sum_{j=1}^n F_j \df{x_j}$.
 \end{rmk}
 
 \begin{theorem}[Fundamental Theorem for Line Integral]
-Let $V$ be an open subset of $\RR^n$.  Suppose that $C \subset V$ is
-a curve with a parametric representation $\sigma: [a,b] \to V$
-consistent with its orientation.
+Let $V$ be an open subset of $\displaystyle \RR^n$.  Suppose that
+$C \subset V$ is a curve with a parametric representation
+$\sigma: [a,b] \to V$ consistent with its orientation.
 If $\displaystyle f \in C^1(V)$, then
 \[
 \int_C \graD f \cdot \VEC{t} \dx{s} = f(\sigma(b)) - f(\sigma(a)) \ ,
@@ -265,7 +265,7 @@ consistent with the selected orientation on $C$.
 The Fundamental Theorem for Line Integral is just a special case
 of Theorem~\ref{stokesStokes}, Stokes' theorem, with the differential
 $0$-form $\omega$ replaced by $f$ and the singular $1$-cube $\sigma$
-replaced by $\tilde{\sigma}:[0,1]\to \RR^n$ defined by
+replaced by $\displaystyle \tilde{\sigma}:[0,1]\to \RR^n$ defined by
 $\tilde{\sigma}(w) = \sigma(a + w(b-a))$ for $0 \leq w \leq 1$.  We
 get that
 $\displaystyle \int_{\tilde{\sigma}} \df{f} = \int_{\partial
@@ -324,7 +324,7 @@ There are a couple of interesting consequences to the fundamental
 theorem of line integral.
 
 \begin{prop}\label{DGoint}
-Let $V$ be an open subset of $\RR^n$
+Let $V$ be an open subset of $\displaystyle \RR^n$
 and $\displaystyle F:V \rightarrow \RR^n$ be a continuous vector field.
 The integral $\displaystyle \int_C F \cdot \VEC{t} \dx{s}$ is
 independent of the curve $C \subset V$ joining two points
@@ -436,10 +436,11 @@ $F = \graD f$ for some real valued function $f$ defined on $V$.
 We have that $V$ is the union of open connected components \footnote{The
 readers may consult an introductory textbook in topology (e.g.\
 \cite{MU}) if they are not familiar with the concept of connected and
-path-connected subsets.  In $\RR^n$, connected and path-connected
+path-connected subsets.  In $\displaystyle \RR^n$, connected and path-connected
 open subsets are the same.  It is not true in all general topological
-spaces and it is not even true for close subsets of $\RR^n$.  For the
-present context, it suffices to know that $W \subset \RR^n$ is
+spaces and it is not even true for close subsets of
+$\displaystyle \RR^n$.  For the
+present context, it suffices to know that $\displaystyle W \subset \RR^n$ is
 connected if for each $\VEC{a}, \VEC{b} \in W$ there exists a curve
 from $\VEC{a}$ to $\VEC{b}$.}.  Let $U$ be an open connected component
 of $V$.
@@ -566,7 +567,8 @@ Given any unit vector $\displaystyle \VEC{v} \in \RR^n$, we get
 = \int_a^b \| f(t) \| \dx{t} \ ,
 \end{split}
 \end{equation}
-where we have used Schwarz inequality in $\RR^n$ for the second inequality.
+where we have used Schwarz inequality in $\displaystyle \RR^n$ for the
+second inequality.
 We may assume that $\displaystyle \int_a^b f(t) \dx{t} \neq \VEC{0}$
 since the result is trivial in that case.  We get the conclusion of
 the lemma by using the unit vector
@@ -596,7 +598,7 @@ $\displaystyle L \leq \int_a^b \| \sigma'(t) \| \dx{t}$.
 \stage{ii} Given $\epsilon > 0$, choose $\delta > 0$ such that
 $\|\sigma'(t) - \sigma'(s) \| < \epsilon$ for
 $|t-s| < \delta$.  This is possible because
-$\sigma':[a,b]\to \RR^n$ is continuous on the compact set
+$\displaystyle \sigma':[a,b]\to \RR^n$ is continuous on the compact set
 $[a,b]$.  Therefore, it is uniformly continuous on $[a,b]$.
 
 Let $P= \{t_0,t_1,t_2, \ldots, t_N\}$ be a partition of
@@ -672,7 +674,8 @@ $a\leq t \leq b$, then the arc length function $s:[a,b] \to [0,L]$ is a
 continuously differentiable and strictly increasing function.  Thus
 $\displaystyle s^{-1}:[0,L] \to [a,b]$ exists and is a continuously
 differentiable function.  If we set
-$\breve{\sigma}(t) = \sigma(s^{-1}(t))$ for $0 \leq t \leq L$, then
+$\displaystyle \breve{\sigma}(t) = \sigma(s^{-1}(t))$ for
+$0 \leq t \leq L$, then
 the curve $C$ is parameterized by arc length with
 the parametric representation $\breve{\sigma}$ because
 \[
@@ -764,8 +767,8 @@ is continuously differentiable and $\diff \rho(\VEC{w})$ has rank $2$
 for all $\VEC{w} \in W$, we may continuously assign to each point
 $\VEC{u}$ of $C$ a unit normal vector $\VEC{n}(\VEC{u})$.
 
-If $S$ is a surface in $\RR^3$, then there is a close link between the
-selected orientation on $S$ and the outward unit normal to $S$
+If $S$ is a surface in $\displaystyle \RR^3$, then there is a close
+link between the selected orientation on $S$ and the outward unit normal to $S$
 at each point of $S$.  As we have seen in Remark~\ref{rmkOUNinRR3},
 if $\displaystyle \mu_{\VEC{u}} =
 [(\VEC{u},\VEC{v}_{\VEC{u},1}), (\VEC{u},\VEC{v}_{\VEC{u},2}) ]$
@@ -1705,13 +1708,13 @@ sufficiently differentiable parametric representation of $C$
 consistent with the orientation on $C$.
 
 \begin{lemma} \label{UnitOrhtog}
-Suppose that $g:]a,b[ \to \RR^n$ is a differentiable vector valued
+Suppose that $\displaystyle g:]a,b[ \to \RR^n$ is a differentiable vector valued
 function such that $\|g(w)\| = c$, a constant, for all $w \in ]a,b[$.
 Then $g'(w)$ is orthogonal to $g(w)$ for all $w \in ]a,b[$.
 \end{lemma}
 
 \begin{proof}
-If we derive both sides of $g(w) \cdot g(w) = c^2$ with respect to
+If we derive both sides of $\displaystyle g(w) \cdot g(w) = c^2$ with respect to
 $w$, then we get $2 g'(w) \cdot g(w) = 0$ for all $w \in ]a,b[$.
 Therefore $g'(w)$ is orthogonal to $g(w)$ for all $w \in ]a,b[$.
 \end{proof}
@@ -1765,7 +1768,7 @@ We will generalize the definition of curvature vector and curvature in
 Sections~\ref{sectRiemannCurv} and \ref{sectGeodesic} later.
 
 \begin{rmk}
-Why did we introduce this extra factor $\|\sigma'(w)\|^{-1}$ in
+Why did we introduce this extra factor $\displaystyle \|\sigma'(w)\|^{-1}$ in
 (\ref{curvatureEq1})?  It does not even transform $\VEC{k}(\VEC{u})$
 to a unit vector.
 
@@ -2046,7 +2049,8 @@ which is tangent to the vector field $F$ at all points of the curve because
 $\sigma'(t) = F(\sigma(t))$ for all $t \in I_{\VEC{y}}$.
 
 Because $F$ is of class $\displaystyle C^1$, there exist an open
-neighbourhood $I \subset \RR$ of $0$ and an open subset $U$ of $\RR^3$
+neighbourhood $I \subset \RR$ of $0$ and an open subset $U$ of
+$\displaystyle \RR^3$
 such that we may define a continuously differentiable map
 $\displaystyle \phi: I \times U \to \RR^3$
 by $\phi(t,\VEC{x}) = \sigma(t)$ for $t \in I$ and $\VEC{x} \in U$ where
@@ -4567,9 +4571,10 @@ outside of $S$, and $\partial S$ is positively oriented with respect to $S$.\\
 \int_{\partial S} \left(f \graD g - g \graD f\right) \cdot \VEC{n} \dx{s} &=
 \iint_S \left( f \graD^2 g - g \graD^2 f \right) \dx{A} \label{equB}
 \end{align}
-where $f:\RR^2\to \RR$ and $g:\RR^2\to \RR$ are two twice continuously
+where $\displaystyle f:\RR^2\to \RR$ and
+$\displaystyle g:\RR^2\to \RR$ are two twice continuously
 differentiable functions.\\
-Note that $\graD^2 f = \diV(\graD f)$ is the {\bfseries
+Note that $\displaystyle \graD^2 f = \diV(\graD f)$ is the {\bfseries
 Laplacian}\index{Laplacien} of $f$ and is more often denoted $\Delta f$.\\
 \subQ{c} Let $\displaystyle g(x,y) = \ln(x^2+y^2)$.  Verify that
 $\displaystyle \graD g = \frac{2}{x^2+y^2}\, (x,y)$ and
@@ -4871,7 +4876,8 @@ $\displaystyle  \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
 The formula in (a) of Question~\ref{divCons} cannot be used
 because $g$ is not defined at the origin (and cannot be continuously
 extended to $\displaystyle \RR^3$) and thus it is certainly not
-of class $C^2$ in any open set containing $B_r(\VEC{0})$ as required.
+of class $\displaystyle C^2$ in any open set containing $B_r(\VEC{0})$
+as required.
 
 \subQ{d} Choose $\epsilon >0$ such that $B_\epsilon(\VEC{0}) \subset R$.
 This is possible because $\VEC{0}$ is in the interior of $R$.
@@ -5028,7 +5034,7 @@ $\displaystyle \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f
 \dx{S} = f(\VEC{a}_r)$ for some $\VEC{a}_r \in \partial B_r(\VEC{0})$.
 Note that $\displaystyle \iint_{\partial B_r(\VEC{0})} f \dx{S} = 4\pi r^2$
 is the area of the sphere of radius $r$.  Since $f$ is 
-continuous and $\VEC{a}_r \to \VEC{0}$ as $r \to 0^+$, we get that
+continuous and $\VEC{a}_r \to \VEC{0}$ as $\displaystyle r \to 0^+$, we get that
 $\displaystyle
 C = \lim_{r\to 0^+} \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f \dx{S}
 = \lim_{r\to 0^+} f(\VEC{a}_r) = f(\VEC{0})$.
@@ -5329,9 +5335,10 @@ and hence $\curL F = \curL( \graD f) = \VEC{0}$ on $\displaystyle \RR^3$.
 \end{sol}
 
 \begin{question}
-For each of the vector fields $F$ defined on $\RR^3$ below, determine
-if it is conservative and if there exists a vector field $G$ such that
-$F = \curL G$.  If it is possible, find a vector field $G$.\\
+For each of the vector fields $F$ defined on $\displaystyle \RR^3$
+below, determine if it is conservative and if there exists a vector
+field $G$ such that $F = \curL G$.  If it is possible, find a vector
+field $G$.\\
 \subQ{a} $\displaystyle F(x,y,z)
 = \big(3y^2z -3xz^2, x^2y, z^3 -x^2z\big)$.\\
 \subQ{b} $\displaystyle F(x,y,z) = \big(0,2yz+z, z\big)$.\\
