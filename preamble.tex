@@ -515,10 +515,10 @@
 \newcommand{\titlePage}{
   \thispagestyle{empty}
   \begin{titlepage}
-    \newsavebox{\glass}
-    \savebox{\glass}{\includegraphics[width=7in]{images/cover_glass}}
-    \newsavebox{\stairs}
-    \savebox{\stairs}{\includegraphics[width=2.5in]{images/cover_stairs}}
+    \newsavebox{\biblio}
+    \savebox{\biblio}{\includegraphics[width=7in]{images/cover_biblio}}
+    \newsavebox{\building}
+    \savebox{\building}{\includegraphics[width=2.5in]{images/cover_building}}
     \begin{inctext}[paper=current, target=mytarget]
       \begin{tikzpicture}
         \coordinate (A) at (0,0);
@@ -527,10 +527,10 @@
         \coordinate (C) at ([xshift=0.5in,yshift=0.5in]A);
         \coordinate (D) at ([xshift=-0.5in,yshift=-0.5in]B);
         \draw[rounded corners=0.25in,very thick,black] (C) rectangle (D);
-        \node[inner sep=0pt,above right] (glass) at (0.75in,2.5in) {\usebox{\glass}};
-        \fill[lime!4,path fading=south] (0.75in,4.9in) rectangle (7.80in,5.74in);
-        \node[inner sep=0pt,below right] (stairs) at (0.75in,10in) {\usebox{\stairs}};
-        \fill[lime!4,path fading=north] (0.75in,6.15in) rectangle (3.3in,7in);
+        \node[inner sep=0pt,above right] (biblio) at (0.75in,2.5in) {\usebox{\biblio}};
+        \fill[lime!4,path fading=south] (0.75in,4.9in) rectangle (7.80in,6in);
+        \node[inner sep=0pt,below right] (stairs) at (0.75in,10in) {\usebox{\building}};
+        \fill[lime!4,path fading=north] (0.75in,6.05in) rectangle (3.3in,6.8in);
         \fill[lime!4,path fading=west] (2.8in,6in) rectangle (3.26in,10in);
         \node[text width=10cm,align=flush center,font=\Huge\bfseries] at (5.5in,8in) {\UOtitle};
         \node[inner sep=0pt,above right] (UOlogo) at (1in,1in) {\includegraphics[width=\UOlogoCLopt]{\UOlogoCLloc}};
@@ -571,8 +571,10 @@
   \vfill
 
   \noindent Cover Page:\\
-  Rainbow, South of France, photo by Louise Oegema.\\
-  Ancient Theatre of Epidaurus, Greece, photo by Jean Dionne.
+  Casa Mil\`a (popularly known as La Pedrera) by the architect Antoni
+  Gaudi, Barcelona, photo by Louise Oegema.\\ 
+  Facade of the Roman library of Celsus in Ephenus, Anatolia (Asia
+  Minor) in the Izmir province, photo by Jean Dionne.
 
   \cleardoublepage
 }
