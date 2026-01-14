@@ -63,12 +63,12 @@ computations frequently associated with this subject.
 \subsection*{Metric and Topological Spaces}
 
 The {\bfseries $\mathbf{k}$-norm}\index{Norm!$k$-Norm} of
-$\displaystyle \VEC{x} \in \RR^n$ is defined by
+$\DS \VEC{x} \in \RR^n$ is defined by
 \[
 \|\VEC{x}\|_k =
 \begin{cases}
-\displaystyle \left(\sum_{i=1}^n |x_i|^k\right)^{1/k} & \quad \text{if}\ k > 0 \\
-\displaystyle \max_{1\leq i \leq n} |x_i| & \quad \text{if} \ k = \infty
+\DS \left(\sum_{i=1}^n |x_i|^k\right)^{1/k} & \quad \text{if}\ k > 0 \\
+\DS \max_{1\leq i \leq n} |x_i| & \quad \text{if} \ k = \infty
 \end{cases}
 \]
 We adopt the convention that $\|\cdot\|$ and $\|\cdot\|_2$ will denote
@@ -76,19 +76,19 @@ the {\bfseries $\mathbf{2}$-norm}\index{Norm!$2$-Norm} or
 {\bfseries Euclidean norm}\index{Norm!Euclidean Norm}.
 
 The {\bfseries diameter}\index{Diameter} of a set
-$\displaystyle W \subset \RR^n$ is the number 
+$\DS W \subset \RR^n$ is the number 
 $\diam Q = \inf \{ \|\VEC{x} - \VEC{y}\| : \VEC{x}, \VEC{y} \in W \}$.
 
 The {\bfseries distance}\index{Distance} between two sets
-$\displaystyle V, W \subset \RR^n$ is the number
+$\DS V, W \subset \RR^n$ is the number
 $\dist{V}{W} = \inf \{ \|\VEC{x} - \VEC{y}\| : \VEC{x} \in V \
 \text{and} \ \VEC{y} \in W \}$.  The distance between a point
-$\displaystyle \VEC{x} \in \RR^n$ and a set
-$\displaystyle W \subset \RR^n$ is defined as
+$\DS \VEC{x} \in \RR^n$ and a set
+$\DS W \subset \RR^n$ is defined as
 $\dist{\VEC{x}}{W} = \dist{\{\VEC{x}\}}{W}$.
 
 The {\bfseries open ball}\index{Open Ball} of radius $r$ centred at
-$\displaystyle \VEC{y} \in \RR^n$ is denoted $\displaystyle B_r(\VEC{y})$;
+$\DS \VEC{y} \in \RR^n$ is denoted $\DS B_r(\VEC{y})$;
 namely,
 \[
 B_r(\VEC{y}) = \left\{ \VEC{x} \in \RR^n :
@@ -96,44 +96,44 @@ B_r(\VEC{y}) = \left\{ \VEC{x} \in \RR^n :
 \]
 We will also use this notation to denote open balls in other metric spaces.
 
-Let $W$ be a subset in $\displaystyle \RR^n$.  The
+Let $W$ be a subset in $\DS \RR^n$.  The
 {\bfseries closure}\index{Closure of a Set} of $W$, denoted
-$\displaystyle \overline{W}$, is the smallest closed set containing
-$W$.  We have $\displaystyle \overline{W} =
+$\DS \overline{W}$, is the smallest closed set containing
+$W$.  We have $\DS \overline{W} =
 \bigcap_{\substack{W\subset V\\V\text{ closed}}} V$.
 One of the must important case in these lecture notes is the closure of a
-rectangle $\displaystyle R = \prod_{i=1}^n I_i$ where the $I_i$ are
+rectangle $\DS R = \prod_{i=1}^n I_i$ where the $I_i$ are
 bounded intervals.  We have
-$\displaystyle \overline{R} = \prod_{i=1}^n \overline{I}_i$ where
+$\DS \overline{R} = \prod_{i=1}^n \overline{I}_i$ where
 $\overline{I}_i$ is the closed interval obtained from the interval $I_i$ by
 adding the end points.
 
-Let $W$ be a set in $\displaystyle \RR^n$.  The
+Let $W$ be a set in $\DS \RR^n$.  The
 {\bfseries interior}\index{Interior of a Set} of $W$, denoted
-$\displaystyle W^\circ$, is the largest open subset of $W$.  We have
-$\displaystyle W^\circ = \bigcup_{\substack{V\subset W\\V\text{ open}}} V$.
+$\DS W^\circ$, is the largest open subset of $W$.  We have
+$\DS W^\circ = \bigcup_{\substack{V\subset W\\V\text{ open}}} V$.
 One of the must important case in these lecture notes is the interior of a
-rectangle $\displaystyle R = \prod_{i=1}^n I_i$ where the $I_i$ are
+rectangle $\DS R = \prod_{i=1}^n I_i$ where the $I_i$ are
 bounded intervals.  We have
-$\displaystyle R^\circ = \prod_{i=1}^n I_i^\circ$ where
-$\displaystyle I_i^\circ$ is the open interval obtained from the
+$\DS R^\circ = \prod_{i=1}^n I_i^\circ$ where
+$\DS I_i^\circ$ is the open interval obtained from the
 interval $I_i$ by removing the end points.
 
 The definitions of the interior and closure of a set
-$\displaystyle W \subset V \subset \RR^n$ relative to the set $V$ are
-identical to the previous definitions except that $\displaystyle \RR^n$
+$\DS W \subset V \subset \RR^n$ relative to the set $V$ are
+identical to the previous definitions except that $\DS \RR^n$
 is replaced by $V$ where $V$ has the induced topology from
-$\displaystyle \RR^n$.
+$\DS \RR^n$.
 
-Let $W$ be a set in $\displaystyle \RR^n$.  The
+Let $W$ be a set in $\DS \RR^n$.  The
 {\bfseries boundary}\index{Boundary of a Set} of $W$, denoted
-$\displaystyle \partial W$, is the set of all points
-$\displaystyle \VEC{x} \in \RR^n$ such that
+$\DS \partial W$, is the set of all points
+$\DS \VEC{x} \in \RR^n$ such that
 $B_r(\VEC{x}) \cap W \neq \emptyset$
-and $\displaystyle B_r(\VEC{x}) \cap (\RR^n \setminus W) \neq \emptyset$
+and $\DS B_r(\VEC{x}) \cap (\RR^n \setminus W) \neq \emptyset$
 for all $r>0$.
 One of the must important case in these lecture notes is the boundary of a
-rectangle $\displaystyle R = \prod_{i=1}^n I_i$ where $I_i= [a_i,b_i]$,
+rectangle $\DS R = \prod_{i=1}^n I_i$ where $I_i= [a_i,b_i]$,
 $[a_,b_i[$, $]a_i,b_i]$ or $]a_i,b_i[$ for all $i$.  We have
 \begin{align*}
 \partial R &= \bigcup_{i=1}^n \Big( \big(
@@ -150,86 +150,86 @@ $n=3$ to verify its accuracy.
 
 \subsection*{Function Spaces}
 
-A function $\displaystyle f:[a,b] \to \RR^n$ is
+A function $\DS f:[a,b] \to \RR^n$ is
 {\bfseries piecewise continuous}\index{Piecewise Continuous Function}
 if $f$ is continuous at all but a finite number of points in $[a,b]$
 and, at a point $c \in [a,b]$ where $f$ is not continuous, we have
-$\displaystyle \lim_{x\to c^-}f(x)$ and 
-$\displaystyle \lim_{x\to c^+}f(x)$ exist.
+$\DS \lim_{x\to c^-}f(x)$ and 
+$\DS \lim_{x\to c^+}f(x)$ exist.
 
-Similarly, given $m \in \NN$, a function $\displaystyle f:[a,b] \to \RR^n$ is
-{\bfseries piecewise $\displaystyle \mathbf{C^m}$ continuously
+Similarly, given $m \in \NN$, a function $\DS f:[a,b] \to \RR^n$ is
+{\bfseries piecewise $\DS \mathbf{C^m}$ continuously
 differentiable}\index{Piecewise $C^m$ Continuous
 Differentiable Function} if $f$ is $m$-time differentiable at all but
 a finite number of points in $[a,b]$ and, at a point $c \in [a,b]$
 where $f$ is not $m$-time differentiable, we have
-$\displaystyle \lim_{x\to c^-}f^{(j)}(x)$ and
-$\displaystyle \lim_{x\to c^+}f^{(j)}(x)$ exist for $0 \leq j \leq m$.
-Obviously, $f$ is piecewise $\displaystyle C^0$ continuously
+$\DS \lim_{x\to c^-}f^{(j)}(x)$ and
+$\DS \lim_{x\to c^+}f^{(j)}(x)$ exist for $0 \leq j \leq m$.
+Obviously, $f$ is piecewise $\DS C^0$ continuously
 differentiable is another way to say that $f$ is
 piecewise continuously differentiable.
 
-Let $V$ be a subset of $\displaystyle \RR^n$ and $f:V \to \RR$.  The
+Let $V$ be a subset of $\DS \RR^n$ and $f:V \to \RR$.  The
 {\bfseries supremum norm}\index{Norm!Supremum Norm of a Function}
 of $f$ on $V$ is defined by
-$\displaystyle \|f\|_{\infty,V} = \sup_{\VEC{x}\in V} |f(\VEC{x})|$.
+$\DS \|f\|_{\infty,V} = \sup_{\VEC{x}\in V} |f(\VEC{x})|$.
 We will simply write $\|f\|_\infty$ when the set $V$ is clear from the
 context.
 
-Let $V$ be a subset of $\displaystyle \RR^n$.
+Let $V$ be a subset of $\DS \RR^n$.
 The {\bfseries support}\index{Support of a Function} of a function
 $f:V \to \RR$ is the set
-$\displaystyle \supp f = \overline{ \{\VEC{x} \in V : f(\VEC{x}) \neq 0 \}}$.
+$\DS \supp f = \overline{ \{\VEC{x} \in V : f(\VEC{x}) \neq 0 \}}$.
 
-Let $V$ be an open subset of $\displaystyle \RR^n$ and $f:V \to \RR$
+Let $V$ be an open subset of $\DS \RR^n$ and $f:V \to \RR$
 be a sufficiently differentiable function, we define the
 {\bfseries differential operator
-$\displaystyle \mathbf{\diff^{\alpha}}$}\index{Differential Operator} for
-$\displaystyle \alpha \in \NN^n$ by
+$\DS \mathbf{\diff^{\alpha}}$}\index{Differential Operator} for
+$\DS \alpha \in \NN^n$ by
 \[
 \diff^\alpha f\left(\VEC{x}\right)
 = \frac{\partial^{|\alpha|} f}{\partial x_1^{\alpha_1}
 \partial x_2^{\alpha_2} \ldots \partial x_n^{\alpha_n}}\left(\VEC{x}\right)
 \]
-for $\VEC{x} \in V$, where $\displaystyle |\alpha| = \sum_{j=1}^n \alpha_j$.
+for $\VEC{x} \in V$, where $\DS |\alpha| = \sum_{j=1}^n \alpha_j$.
 
-Let $V$ be an open subset of $\displaystyle \RR^n$.  For $m \in \NN$,
-$\displaystyle C^m(V)$ is the space of all
+Let $V$ be an open subset of $\DS \RR^n$.  For $m \in \NN$,
+$\DS C^m(V)$ is the space of all
 function $f:V \to \RR$ such that all
-$\displaystyle \diff^{\alpha}f:V \to \RR$ exists and is
-continuous for all $\displaystyle \alpha \in \NN^n$ with
-$|\alpha| \leq m$.  Likewise, $\displaystyle C^\infty(V)$ is the space
+$\DS \diff^{\alpha}f:V \to \RR$ exists and is
+continuous for all $\DS \alpha \in \NN^n$ with
+$|\alpha| \leq m$.  Likewise, $\DS C^\infty(V)$ is the space
 of all function $f:V \to \RR$ such that all
-$\displaystyle \diff^{\alpha}f:V \to \RR$ exists and is
-continuous for all $\displaystyle \alpha \in \NN^n$.
+$\DS \diff^{\alpha}f:V \to \RR$ exists and is
+continuous for all $\DS \alpha \in \NN^n$.
 
-For $m\in \NN$, we say that $\displaystyle f \in C^m(\overline{V})$
+For $m\in \NN$, we say that $\DS f \in C^m(\overline{V})$
 if $f \in C(\overline{V})$, and there exist and open set
-$W \supset \overline{V}$ and a function $\displaystyle F\in C^m(W)$
+$W \supset \overline{V}$ and a function $\DS F\in C^m(W)$
 such that $F = f$ on $V$.  Likewise, we say that
-$\displaystyle f \in C^\infty(\overline{V})$ if $f \in C(\overline{V})$,
+$\DS f \in C^\infty(\overline{V})$ if $f \in C(\overline{V})$,
 and there exist and open set $W \supset \overline{V}$ and a function
-$\displaystyle F\in C^\infty(W)$ such that $F = f$ on $V$.
+$\DS F\in C^\infty(W)$ such that $F = f$ on $V$.
 
-Let $\displaystyle f:\RR^n \rightarrow \RR^m$ and
-$\displaystyle g:\RR^n \rightarrow \RR$ be two functions.  We write
+Let $\DS f:\RR^n \rightarrow \RR^m$ and
+$\DS g:\RR^n \rightarrow \RR$ be two functions.  We write
 $f\left(\VEC{x}\right) = O\left(g\left(\VEC{x}\right)\right)$ near
 the origin if there exists a positive constant $K$ such that
-$\displaystyle \left\| f\left(\VEC{x}\right) \right\| <
+$\DS \left\| f\left(\VEC{x}\right) \right\| <
 K \left| g\left(\VEC{x}\right) \right|$
 for $\VEC{x}$ in a neighbourhood of the origin.
 
 \begin{focus*}{Note}
 In these lecture notes, $\NN = \{0,1,2,3, \ldots\}$ and
-$\displaystyle \NNp = \{1,2,3,\ldots \}$.
+$\DS \NNp = \{1,2,3,\ldots \}$.
 \end{focus*}
 
 \begin{focus*}{Note}
 By tradition,  $C(V)$ means the space of
 continuous real valued functions on $V$.  Namely,
-$\displaystyle C(V) = C^0(V)$.  If we really want to talk about the
+$\DS C(V) = C^0(V)$.  If we really want to talk about the
 space of continuously differentiable real valued functions on $V$,
-then we will write $\displaystyle C^1(V)$.
+then we will write $\DS C^1(V)$.
 \end{focus*}
 
 %%% Local Variables: 

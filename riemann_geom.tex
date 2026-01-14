@@ -19,10 +19,10 @@ background.
 
 \begin{defn}
 A {\bfseries Riemannian manifold}\index{Riemannian Manifold} is a
-manifold $S$ of class $\displaystyle C^\infty$ for which
+manifold $S$ of class $\DS C^\infty$ for which
 there exists a map
-$\displaystyle \tau: S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$
-of class $\displaystyle C^\infty$ such that
+$\DS \tau: S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$
+of class $\DS C^\infty$ such that
 $\ps{}{}_{\VEC{u}} = \tau(\VEC{u})$ is an inner product
 on $\TS_{\VEC{u}}S$ (See Definition~\ref{defnCmInnerP}).  The map
 $\tau$ is called a {\bfseries Riemannian metric}\index{Riemannian Metric}
@@ -33,22 +33,22 @@ The map $\tau$ in the previous definition is said to be smooth.
 An equivalent way to define smoothness is as it follows.
 We say that $\tau$ is smooth if the map defined by 
 $\VEC{u} \mapsto \ps{F_1(\VEC{u})}{F_2(\VEC{u})}_{\VEC{u}}$ for $\VEC{u} \in S$
-is of class $\displaystyle C^\infty$ for all smooth vector fields
+is of class $\DS C^\infty$ for all smooth vector fields
 $F_1$ and $F_2$ on $S$.
 
 It follows from Proposition~\ref{propEIPonS} that it is always
-possible to define a Riemannian metric on a manifold of $\displaystyle \RR^n$.
+possible to define a Riemannian metric on a manifold of $\DS \RR^n$.
 If $M$ is a submanifold of a Riemannian manifold $S$, then $M$
 inherits a Riemannian metric by restricting
-$\displaystyle \tau: S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$
+$\DS \tau: S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$
 to $M$.
 
 \begin{defn} \label{defnIsomS1S2}
 Let $S_1$ and $S_2$ be two Riemannian manifolds.  An
 {\bfseries isometry}\index{Isometry} between $S_1$ and $S_2$ is an
 isomorphism $f:S_1\to S_2$ such that $f$ and
-$\displaystyle f^{-1}:S_2 \to S_1$ are of class
-$\displaystyle C^\infty$, and
+$\DS f^{-1}:S_2 \to S_1$ are of class
+$\DS C^\infty$, and
 $\ps{f_\ast(\VEC{u},\VEC{x}_1)}{f_\ast(\VEC{u},\VEC{x}_2)}_{f(\VEC{u})}
 = \ps{(\VEC{u},\VEC{x}_1)}{(\VEC{u},\VEC{x}_2)}_{\VEC{u}}$
 for all $(\VEC{u},\VEC{x}_1), (\VEC{u},\VEC{x}_2) \in \TS_{\VEC{u}} S_1$
@@ -61,30 +61,30 @@ Moreover, $S$ equipped with one of these Riemannian metric may not
 be isometric to $S$ equipped with another Riemannian metric. 
 
 For instance, the torus $\torus{2}$ seen as a submanifold of
-$\displaystyle \RR^3$
-inherits the Riemannian metric of $\displaystyle \RR^3$.  Namely,
+$\DS \RR^3$
+inherits the Riemannian metric of $\DS \RR^3$.  Namely,
 $\ps{ (\VEC{u},\VEC{x}_1)}{(\VEC{u},\VEC{x}_2)}_{\VEC{u}}
 = \ps{\VEC{x}_1}{\VEC{x}_2}$ for all
 $(\VEC{u},\VEC{x}_1),(\VEC{u},\VEC{x}_2) \in \TS_{\VEC{u}} \torus{2}$ and
 $\VEC{u} \in \torus{2}$ where the second inner product is the standard inner
-product in $\displaystyle \RR^3$.
+product in $\DS \RR^3$.
 
-We also have that $\displaystyle \torus{2} \cong S^1 \times S^1 \subset \RR^4$.
+We also have that $\DS \torus{2} \cong S^1 \times S^1 \subset \RR^4$.
 Thus we may define a Riemannian metric on $\torus{2}$ based on the
-Riemannian metric on $\displaystyle S^1$.  If
-$\displaystyle \tau^\circ:S^1 \to
+Riemannian metric on $\DS S^1$.  If
+$\DS \tau^\circ:S^1 \to
 \bigcup_{\VEC{u} \in S^1} \T^2(\TS_{\VEC{u}} S^1)$
-is a Riemannian metric on $\displaystyle S^1$ and
-$\displaystyle \ps{}{}^\circ_{\VEC{u}} = \tau^\circ(\VEC{u})$ for all
-$\displaystyle \VEC{u} \in S^1$, then we can define the
+is a Riemannian metric on $\DS S^1$ and
+$\DS \ps{}{}^\circ_{\VEC{u}} = \tau^\circ(\VEC{u})$ for all
+$\DS \VEC{u} \in S^1$, then we can define the
 Riemannian metric
-$\displaystyle \tau :S^1 \times S^1 \to
+$\DS \tau :S^1 \times S^1 \to
 \bigcup_{(\VEC{u}_1,\VEC{u}_2) \in S^1 \times S^1}
 \T^2\big(\TS_{(\VEC{u}_1,\VEC{u}_2)}\, (S^1 \times S^1)\big)$
-on $\displaystyle \torus{2} \cong S^1 \times S^1$ as it follows.
+on $\DS \torus{2} \cong S^1 \times S^1$ as it follows.
 We set
 $\tau(\VEC{u}_1,\VEC{u}_2) = \ps{}{}_{(\VEC{u}_1,\VEC{u}_2)}$
-for all $\displaystyle (\VEC{u}_1,\VEC{u}_2) \in S^1 \times S^1$ where
+for all $\DS (\VEC{u}_1,\VEC{u}_2) \in S^1 \times S^1$ where
 \begin{align*}
 & \ps{\big((\VEC{u}_1,\VEC{u}_2),(\VEC{x}_{1,1},\VEC{x}_{2,1})\big)}
 {\big((\VEC{u}_1,\VEC{u}_2),
@@ -93,11 +93,11 @@ for all $\displaystyle (\VEC{u}_1,\VEC{u}_2) \in S^1 \times S^1$ where
 = \ps{(\VEC{u}_1,\VEC{x}_{1,1})}{(\VEC{u}_1,\VEC{x}_{1,2})}_{\VEC{u}_1}^\circ
 + \ps{(\VEC{u}_2,\VEC{x}_{2,1})}{(\VEC{u}_2,\VEC{y}_{2,2})}_{\VEC{u}_2}^\circ
 \end{align*}
-for $\displaystyle (\VEC{u}_i,\VEC{x}_{i,j}) \in \TS_{\VEC{u}_i} S^1$
+for $\DS (\VEC{u}_i,\VEC{x}_{i,j}) \in \TS_{\VEC{u}_i} S^1$
 with $1 \leq i,j \leq 2$.  These two metrics are not equivalent because
-$\displaystyle S^1 \times S^1$ with its Riemannian metric cannot be
-imbedded as a submanifold of $\displaystyle \RR^3$.  The proof is
-based on the fact that the ``curvature'' of $\displaystyle S^1 \times S^1$
+$\DS S^1 \times S^1$ with its Riemannian metric cannot be
+imbedded as a submanifold of $\DS \RR^3$.  The proof is
+based on the fact that the ``curvature'' of $\DS S^1 \times S^1$
 is everywhere null.  Consult \cite{ST} for more information.
 \end{egg}
 
@@ -112,13 +112,13 @@ the pain.
 
 Let $S$ be a $2$-dimension Riemannian manifold with a
 Riemannian metric\\
-$\displaystyle \tau:S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$.
+$\DS \tau:S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$.
 As usual, we let $\ps{}{}_{\VEC{u}} = \tau(\VEC{u})$ and
-$\displaystyle \|\cdot\|_{\VEC{u}} = \ps{}{}_{\VEC{u}}^{1/2}$.
+$\DS \|\cdot\|_{\VEC{u}} = \ps{}{}_{\VEC{u}}^{1/2}$.
 
 For $\VEC{u} \in S$, we define the action of the group of rotations
-$\displaystyle S^1$ on $\TS_{\VEC{u}}S$ as it follows.  Given
-$\displaystyle \eta = e^{i\theta} \in S^1 = \{ z \in \CC : |z|=1 \}$ and
+$\DS S^1$ on $\TS_{\VEC{u}}S$ as it follows.  Given
+$\DS \eta = e^{i\theta} \in S^1 = \{ z \in \CC : |z|=1 \}$ and
 $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S$, we set
 $\eta(\VEC{u},\VEC{x}) = (\VEC{u},\theta.\VEC{x})$ where
 $\theta.\VEC{x}$ is the rotation by $\theta$ radians about the origin 
@@ -132,18 +132,18 @@ We first prove that the function
 \end{align*}
 is a smooth function.  We have seen that if $(W,U,\phi)$ is a local
 chart of $S$, then $(\tilde{W},\tilde{U}, \tilde{\phi})$ is a local
-chart of $\TS S$ where $\displaystyle \tilde{W} = \TS\, W = W \times \RR^2$,
-$\displaystyle \tilde{U} = \TS\, U = \bigcup_{\VEC{u} \in U} \TS_{\VEC{u}} S$,
+chart of $\TS S$ where $\DS \tilde{W} = \TS\, W = W \times \RR^2$,
+$\DS \tilde{U} = \TS\, U = \bigcup_{\VEC{u} \in U} \TS_{\VEC{u}} S$,
 and $\tilde{\phi}:\tilde{W} \to \tilde{U}$ is defined by
 $\tilde{\phi}(\VEC{w}, \VEC{y}) = \phi_\ast(\VEC{w}, \VEC{y})
 = \big(\phi(\VEC{w}),\diff \phi(\VEC{w}) \VEC{y} \big)$
 for all $(\VEC{w},\VEC{y}) \in \tilde{W}$.
-We consider a local chart of $\displaystyle \TS S \times S^1$ 
+We consider a local chart of $\DS \TS S \times S^1$ 
 of the form
 $\big(\tilde{W} \times I,\tilde{U} \times C,(\tilde{\phi},\psi)\big)$
 where $I \subset \RR$ is an open interval of length less than $2 \pi$,
-the function $\displaystyle \psi:\RR \to S^1$ is defined by
-$\displaystyle \psi(\theta) = e^{i \theta}$ for $\theta \in \RR$,
+the function $\DS \psi:\RR \to S^1$ is defined by
+$\DS \psi(\theta) = e^{i \theta}$ for $\theta \in \RR$,
 and $C = \psi(I)$.
 The condition that $I$ be of length less than $2 \pi$ is to ensure
 that $\tilde{\psi}$ is one-to-one.
@@ -155,7 +155,7 @@ $\mu_{\phi(\VEC{w})} = [(\phi(\VEC{w}),\diff \phi(\VEC{w}) \VEC{e}_1),
 (\phi(\VEC{w}),\diff \phi(\VEC{w}) \VEC{e}_2)]$ while the
 orientation on $\TS_{\VEC{w}} W$ is given by
 $\mu_{\VEC{w}} = [(\VEC{w},\VEC{e}_1),(\VEC{w},\VEC{e}_2)]$.
-Do not forget that $\displaystyle \diff \phi(\VEC{w}) : \RR^2 \to \RR^3$
+Do not forget that $\DS \diff \phi(\VEC{w}) : \RR^2 \to \RR^3$
 is of rank $2$ for all $\VEC{w} \in W$.
 
 We use Gram-Schmidt orthogonalization and change of bases to
@@ -175,11 +175,11 @@ Let $\A = \{(\phi(\VEC{w}),\diff \phi(\VEC{w}) \VEC{e}_1)
 , (\phi(\VEC{w}),\diff \phi(\VEC{w}) \VEC{e}_2)\}$
 and $\B = \{ (\phi(\VEC{w}), \VEC{q}_1(\VEC{w})),
 (\phi(\VEC{w}), \VEC{q}_2(\VEC{w}) )\}$ where
-$\displaystyle \VEC{q}_i(\VEC{w}) = \|\VEC{p}_i(\VEC{w})\|_{\phi(\VEC{w})}^{-1}
+$\DS \VEC{q}_i(\VEC{w}) = \|\VEC{p}_i(\VEC{w})\|_{\phi(\VEC{w})}^{-1}
 \VEC{q}_i(\VEC{w})$
 for $i=1,2$.  We have that $\B$ is orthonormal basis
 for $\TS_{\phi(\VEC{w})}S$.
-If $\displaystyle Q(\VEC{w}) = [\Id]_{\B}^{\A}$ is the matrix of
+If $\DS Q(\VEC{w}) = [\Id]_{\B}^{\A}$ is the matrix of
 change of bases from $\A$ to $\B$, then
 \begin{equation}  \label{smRootEq}
 [\theta.(\diff \phi(\VEC{w}) \VEC{y})]_{\A}
@@ -187,7 +187,7 @@ change of bases from $\A$ to $\B$, then
 \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{pmatrix}
 Q(\VEC{w}) \underbrace{ [\diff \phi(\VEC{w}) \VEC{y}]_{\A}}_{=\VEC{y}}
 \end{equation}
-for $\displaystyle \VEC{y} \in \RR^2$.
+for $\DS \VEC{y} \in \RR^2$.
 Hence, the local representation $\tilde{\Phi}$ of $\Phi$
 satisfies
 \[
@@ -201,7 +201,7 @@ Since the right hand side in (\ref{smRootEq}) is a smooth function,
 we deduce that $\Phi$ is a smooth function.
 
 Now that we have dealt with the smoothness of $\Phi$, we should focus
-on the geometric aspect of the action of $\displaystyle \eta \in S^1$ on
+on the geometric aspect of the action of $\DS \eta \in S^1$ on
 $\TS_{\VEC{u}} S$ for all $\VEC{u}$.  This is the essential element
 for the rest of this chapter.  Suppose that
 $\B = \{ (\VEC{u},\VEC{v}_1), (\VEC{u},\VEC{v}_2)\}$ is an
@@ -209,7 +209,7 @@ oriented and orthonormal basis of $\TS_{\VEC{u}}S$.
 Every element $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S$ can be
 expressed as $(\VEC{u},\VEC{x})
 =(\VEC{u}, a_1 \VEC{v}_1 + a_2\VEC{v}_2)$ for $a_1,a_2 \in \RR$.
-Then $\displaystyle [\VEC{x}]_\B = \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}$.
+Then $\DS [\VEC{x}]_\B = \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}$.
 As we saw above, a rotation by $\theta \in \RR$ of $[\VEC{x}]_\B$ is
 represented in the basis $\B$ by
 \begin{equation} \label{txBeq1}
@@ -225,15 +225,15 @@ $\theta.\VEC{x} = (a_1 \cos(\theta) - a_ 2\sin(\theta)) \VEC{v}_1
 + (a_1 \sin(\theta) + a_2 \cos(\theta)) \VEC{v}_2$.
 
 The norm on $\TS_{\VEC{u}} S$ is defined by
-$\displaystyle \| (\VEC{u},\VEC{x})\|_{\VEC{u}} = \left(
+$\DS \| (\VEC{u},\VEC{x})\|_{\VEC{u}} = \left(
 \ps{(\VEC{u},\VEC{x})}{(\VEC{u},\VEC{x})}_{\VEC{u}}\right)^{1/2}$
 for all $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S$.
 Since $\{ (\VEC{u},\VEC{v}_1), (\VEC{u},\VEC{v}_2)\}$ is an
 orthonormal basis, we have that
-$\displaystyle \| (\VEC{u},\VEC{x})\|_{\VEC{u}}
+$\DS \| (\VEC{u},\VEC{x})\|_{\VEC{u}}
 = \| (\VEC{u},a_1 \VEC{v}_1 + a_2 \VEC{v}_2)\|_{\VEC{u}} =
 \sqrt{a_1^2 + a_2^2}$.   We also have that
-$\displaystyle \| (\VEC{u},\theta.\VEC{x})\|_{\VEC{u}} = \sqrt{a_1^2 + a_2^2}$.
+$\DS \| (\VEC{u},\theta.\VEC{x})\|_{\VEC{u}} = \sqrt{a_1^2 + a_2^2}$.
 In particular, if\\
 $\| (\VEC{u},\VEC{x})\|_{\VEC{u}}=1$, then
 $\| (\VEC{u},\theta.\VEC{x})\|_{\VEC{u}} = 1$.
@@ -246,9 +246,9 @@ find that
 R'(\theta) = (\VEC{u},(\pi/2 + \theta).\VEC{x}) =
 \upsilon (\eta(\VEC{u},\VEC{x}))
 \end{equation}
-where $\displaystyle \upsilon = e^{i\pi/2} = i$.  Note that this
+where $\DS \upsilon = e^{i\pi/2} = i$.  Note that this
 relation can easily be deduced if we express (\ref{txBeq1}) in
-$\displaystyle \CC \cong \RR^2$.
+$\DS \CC \cong \RR^2$.
 
 \subsection{The Tangent Bundle $\TS(\TS\,S)$} \label{subsectTTS}
 
@@ -256,8 +256,8 @@ Let $S$ be a $2$-dimensional Riemannian manifold.
 Recall that $\TS S$ is a $4$-dimensional manifold.  In particular, if
 $(W,U,\phi)$ is a local chart of $S$, then
 $(\tilde{W},\tilde{U}, \tilde{\phi})$ is a local chart of $\TS\, S$ where
-$\displaystyle \tilde{W} = W \times \RR^2$,
-$\displaystyle \tilde{U} = \TS\, U = \bigcup_{\VEC{u} \in U} \TS_{\VEC{u}} S$,
+$\DS \tilde{W} = W \times \RR^2$,
+$\DS \tilde{U} = \TS\, U = \bigcup_{\VEC{u} \in U} \TS_{\VEC{u}} S$,
 and $\tilde{\phi}:\tilde{W} \to \tilde{U}$ is defined by
 $\tilde{\phi}(\VEC{w}, \VEC{y}) = \phi_\ast(\VEC{w}, \VEC{y})
 = \big(\phi(\VEC{w}),\diff \phi(\VEC{w}) \VEC{y} \big)$
@@ -266,8 +266,8 @@ for all $(\VEC{w},\VEC{y}) \in \tilde{W}$.
 Using the procedure used to obtain the local chart
 $(\tilde{W},\tilde{U},\tilde{\phi})$ above, we find that a local chart
 of $\TS (\TS\,S)$ is given by $(\breve{W},\breve{U}, \breve{\phi})$ where
-$\displaystyle \breve{W} = (W \times \RR^2) \times (\RR^2 \times \RR^2)$,
-$\displaystyle \breve{U} = \TS\, \tilde{U}
+$\DS \breve{W} = (W \times \RR^2) \times (\RR^2 \times \RR^2)$,
+$\DS \breve{U} = \TS\, \tilde{U}
 = \bigcup_{(\VEC{u},\VEC{x}) \in \tilde{U}} \TS_{(\VEC{u},\VEC{x})} (\TS\,S)$, and
 $\breve{\phi}:\breve{W} \to \breve{U}$ is defined by
 \begin{align*}
@@ -299,7 +299,7 @@ $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S$.  This is obviously a smooth
 map since the representation of $\pi_S$ with respect to a local charts
 $(W,U,\phi)$ and $(\tilde{W},\tilde{U},\tilde{\phi})$ defined above is
 $\pi(\VEC{w},\VEC{y}) = \VEC{w}$ for all
-$\displaystyle (\VEC{w},\VEC{y}) \in W \times \RR^2$.
+$\DS (\VEC{w},\VEC{y}) \in W \times \RR^2$.
 
 \begin{lemma}  \label{lemmaPsast}
 We have that $(\pi_S)_\ast: \TS (\TS\, S) \to \TS S$ is given by
@@ -318,9 +318,9 @@ $\breve{\phi}\big((\VEC{w}, \VEC{y}),(\VEC{r},\VEC{s})\big) =
 \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big) \in \breve{U}$
 with $\VEC{u} = \phi(\VEC{w})$ and $\VEC{p} = \diff \phi(\VEC{w}) \VEC{r}$.
 
-If $\displaystyle \pi:W \times \RR^2 \to \RR^2$ is the projection
+If $\DS \pi:W \times \RR^2 \to \RR^2$ is the projection
 defined by $\pi(\VEC{w},\VEC{y}) = \VEC{w}$ for all
-$\displaystyle (\VEC{w},\VEC{y}) \in W \times \RR^2$, then
+$\DS (\VEC{w},\VEC{y}) \in W \times \RR^2$, then
 $\pi_\ast \big( (\VEC{w},\VEC{y}),(\VEC{r},\VEC{s})\big)
 = \big( \pi(\VEC{w},\VEC{y}), \diff \pi(\VEC{w})
 (\VEC{r},\VEC{s})\big)
@@ -329,7 +329,7 @@ $\pi_\ast \big( (\VEC{w},\VEC{y}),(\VEC{r},\VEC{s})\big)
 for all $((\VEC{w},\VEC{y}), (\VEC{r},\VEC{s})) \in \breve{W}$.
 
 Since $\phi \circ \pi = \pi_S \circ \tilde{\phi}$ on $W$, we get that
-$\displaystyle
+$\DS
 \tilde{\phi} \circ \pi_\ast = \phi_\ast \circ \pi_\ast
 =(\pi_S)_\ast \circ \tilde{\phi}_\ast
 =(\pi_S)_\ast \circ \breve{\phi}$ on $\tilde{W} = \TS\, W$.
@@ -359,7 +359,7 @@ Moreover, if $S_1$ and $S_2$ are oriented and $f$ preserves the
 orientation, then
 \begin{enumerate} \addtocounter{enumi}{2}
 \item $\eta \circ \tilde{f} = \tilde{f} \circ \eta$ for all
-$\displaystyle \eta \in S^1$ acting on $\TS\, S_1$ and $\TS\, S_2$.
+$\DS \eta \in S^1$ acting on $\TS\, S_1$ and $\TS\, S_2$.
 \end{enumerate}
 \end{prop}
 
@@ -401,7 +401,7 @@ Since $\pi_{S_2} \circ \tilde{f} = f \circ \pi_{S_1}$, we get
 $\eta\big(\tilde{f}(\VEC{u},\VEC{x})\big)
 = \tilde{f}\big(\eta(\VEC{u},\VEC{x})\big)$
 for all $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S_1$ and
-$\displaystyle \eta \in S^1$.
+$\DS \eta \in S^1$.
 
 Since
 \[
@@ -417,7 +417,7 @@ But we also assume that $f$ is orientation preserving, thus
 $\tilde{f}\big(\eta(\VEC{u},\VEC{x})\big)
 = \eta\big(\tilde{f}(\VEC{u},\VEC{x})\big)$ 
 for all $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S_1$ and
-$\displaystyle \eta \in S^1$.
+$\DS \eta \in S^1$.
 \end{proof}
 
 \begin{prop} \label{propfisoRot}
@@ -425,21 +425,21 @@ Let $S$ be a $2$-dimensional oriented and Riemannian
 manifold, and $f:S\to S$ be an orientation preserving isometry
 such that $f(\VEC{u}) = \VEC{u}$ for some $\VEC{u} \in S$, then
 $f_\ast: \TS_{\VEC{u}} S \to \TS_{\VEC{u}} S$ is a simple rotation by
-an angle $\displaystyle \eta \in S^1$.
+an angle $\DS \eta \in S^1$.
 \end{prop}
 
 \begin{proof}
 Choose $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S$.  Since $f_\ast$ preserve
 the length, we have that
 $\|f_\ast(\VEC{u},\VEC{x})\|_{\VEC{u}} = \|(\VEC{u},\VEC{x})\|_{\VEC{u}}$.
-Let $\displaystyle \eta \in S^1$ be the angle
+Let $\DS \eta \in S^1$ be the angle
 such that $f_\ast(\VEC{u},\VEC{x}) = \eta(\VEC{u}, \VEC{x})$.
 
 Given $(\VEC{u},\VEC{y}) \in \TS_{\VEC{u}} S$, we have that
 $(\VEC{u},\VEC{y}) = a (\VEC{u},\tilde{\VEC{y}})
 = (\VEC{u}, a\tilde{\VEC{y}})$ where $a \in \RR$ and
 $\|(\VEC{u},\tilde{\VEC{y}})\|_{\VEC{u}} = \|(\VEC{u},\VEC{x})\|_{\VEC{u}}$.
-There exists $\displaystyle \mu \in S^1$ such that
+There exists $\DS \mu \in S^1$ such that
 $(\VEC{u},\tilde{\VEC{y}}) = \mu(\VEC{u},\VEC{x})$.  Hence, it follows from
 the third item of Proposition~\ref{proTSprpts} that
 \begin{align*}
@@ -464,7 +464,7 @@ We begin with a definition.
 \begin{defn}
 Let $S$ be a $2$-dimensional Riemannian manifold.  The
 {\bfseries circle bundle}\index{Circle Bundle} is the set defined
-by $\displaystyle S_c = \bigcup_{\VEC{u} \in S} S_c(\VEC{u})$, where
+by $\DS S_c = \bigcup_{\VEC{u} \in S} S_c(\VEC{u})$, where
 $S_c(\VEC{u}) = \big\{ (\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S :
 \ps{(\VEC{u},\VEC{x})}{(\VEC{u},\VEC{x})}_{\VEC{u}} = 1 \}$ for all
 $\VEC{u} \in S$.
@@ -472,22 +472,22 @@ $\VEC{u} \in S$.
 
 For each $\VEC{u} \in S$ fixed, the set $S_c(\VEC{u})$ is the unit circle in
 $\TS_{\VEC{u}} S$ centred at the origin.  Therefore, given
-$\displaystyle \eta = e^{i\theta} \in S^1$,  we have that
+$\DS \eta = e^{i\theta} \in S^1$,  we have that
 $\eta : S_c \to S_c$.  This defines a smooth mapping.
 
 \begin{prop}
 If $S$ be a $2$-dimensional Riemannian manifold, then
-$S_c$ is a $3$-dimensional manifold of class $\displaystyle C^\infty$
+$S_c$ is a $3$-dimensional manifold of class $\DS C^\infty$
 \end{prop}
 
 \begin{proof}
 We could prove this proposition by explicitly providing smooth local
 charts as we will do later.  Instead, we consider the map
-$\displaystyle g:\TS S \to \RR$ defined by
+$\DS g:\TS S \to \RR$ defined by
 $g\big((\VEC{u},\VEC{x})\big)
 = \ps{(\VEC{u},\VEC{x})}{(\VEC{u},\VEC{x})}_{\VEC{u}}$ for all
 $(\VEC{u},\VEC{x}) \in \TS_{\VEC{x}} S$ and $\VEC{u} \in S$ and prove
-that $\displaystyle S_c = g^{-1}(\{1\})$ is a smooth manifold.
+that $\DS S_c = g^{-1}(\{1\})$ is a smooth manifold.
 
 Suppose that $(W,U,\phi)$ is a local chart of the manifold $S$.  The local
 representation of $g$ is given by
@@ -497,27 +497,27 @@ representation of $g$ is given by
 = \ps{(\phi(\VEC{w}),\diff \phi(\VEC{w})\, \VEC{y})}
 {(\phi(\VEC{w}),\diff \phi(\VEC{w})\, \VEC{y})}_{\phi(\VEC{w})}
 \]
-for all $\displaystyle
+for all $\DS
 (\VEC{w},\VEC{y}) \in W \times \RR^2 \subset \RR^2 \times \RR^2$.
 Since
-$\displaystyle \diff_{\VEC{w},\VEC{y}} \phi^\ast(g)(\VEC{w},\VEC{y})$
+$\DS \diff_{\VEC{w},\VEC{y}} \phi^\ast(g)(\VEC{w},\VEC{y})$
 is of rank $1$ for all
-$\displaystyle (\VEC{w},\VEC{y}) \in W \times \RR^2$ such that
-$\displaystyle \phi^\ast(g)(\VEC{w},\VEC{y}) = 1$, We get from
+$\DS (\VEC{w},\VEC{y}) \in W \times \RR^2$ such that
+$\DS \phi^\ast(g)(\VEC{w},\VEC{y}) = 1$, We get from
 Theorem~\ref{thmIFTmanif} that
-$\displaystyle (\phi^\ast(g))^{-1}(\{1\})$ is a
-$3$-dimensional manifold in $\displaystyle W \times \RR^2$.
+$\DS (\phi^\ast(g))^{-1}(\{1\})$ is a
+$3$-dimensional manifold in $\DS W \times \RR^2$.
 
 If $(\tilde{W},\tilde{U},\tilde{\phi})$ is a local
-chart of $\displaystyle (\phi^\ast(g))^{-1}(\{1\}) \subset W \times \RR^2$,
+chart of $\DS (\phi^\ast(g))^{-1}(\{1\}) \subset W \times \RR^2$,
 then $(\tilde{W},\phi_\ast(\tilde{U}), \phi_\ast \circ \tilde{\phi})$ is
-local chart of $\displaystyle S_c = g^{-1}(\{1\})$.
+local chart of $\DS S_c = g^{-1}(\{1\})$.
 \end{proof}
 
 Let $S$ be a $2$-dimensional Riemannian manifold.  We first define
 local charts of $S_c$.  Let $(W,U,\phi)$ be a local chart of $S$.  We
 define the smooth function
-$\displaystyle E:W \to \bigcup_{\VEC{w} \in W} \diff \phi(\VEC{w}) (\RR^2)$
+$\DS E:W \to \bigcup_{\VEC{w} \in W} \diff \phi(\VEC{w}) (\RR^2)$
 by
 \[
 E(\VEC{w}) = \| \diff \phi(\VEC{w})
@@ -533,7 +533,7 @@ length less than $2\pi$, $\tilde{\phi}$ is defined by
 \tilde{\phi}(\VEC{w},\theta) = \big(\phi(\VEC{w}), \theta.E(\VEC{w}) \big)
 \]
 for $(\VEC{w},\theta) \in \tilde{W}$,
-and $\displaystyle \tilde{U} = \tilde{\phi}(\tilde{W})
+and $\DS \tilde{U} = \tilde{\phi}(\tilde{W})
 \subset \bigcup_{\VEC{u} \in U} S_c(\VEC{u})$.
 The condition that $I$ be of length less than $2 \pi$ is to ensure
 that $\tilde{\phi}$ is one-to-one.  The proof of the smoothness of the
@@ -542,12 +542,12 @@ the function $\Phi$ in Subsection~\ref{subsectGrRot}.
 
 \begin{rmk}
 We have that                  \label{rmkUS1eScU}
-$\displaystyle S_c(U) = \bigcup_{\VEC{u} \in U} S_c(\VEC{u})
+$\DS S_c(U) = \bigcup_{\VEC{u} \in U} S_c(\VEC{u})
 \cong W \times S^1$.  To prove this statement,
-we define the mapping $\displaystyle g:W \times S^1 \to S_c(U)$ by
+we define the mapping $\DS g:W \times S^1 \to S_c(U)$ by
 $g(\VEC{w}, \eta) = \eta\big(\phi(\VEC{w}),E(\VEC{w})\big)$
-for $\VEC{w} \in W$ and $\displaystyle \eta \in S^1$.
-The map $g$ is an isomorphism between $\displaystyle W\times S^1$ and
+for $\VEC{w} \in W$ and $\DS \eta \in S^1$.
+The map $g$ is an isomorphism between $\DS W\times S^1$ and
 $S_c(U)$.
 
 Since $\phi:W \to U$ is an isomorphism, we have that
@@ -555,22 +555,22 @@ Since $\phi:W \to U$ is an isomorphism, we have that
 G(\VEC{u},\eta) = g(\phi^{-1}(\VEC{u}), \eta)
 = \eta\big(\VEC{u},E(\phi^{-1}(\VEC{u}))\big)
 \]
-for $\VEC{u} \in U$ and $\displaystyle \eta \in S^1$
-defines an isomorphism between $\displaystyle U \times S^1$ and $S_c(U)$.
+for $\VEC{u} \in U$ and $\DS \eta \in S^1$
+defines an isomorphism between $\DS U \times S^1$ and $S_c(U)$.
 
-However, it is generally false that $\displaystyle S_c \cong S \times S^1$.
-For instance, we cannot have $\displaystyle S_c \cong S \times S^1$
-for $\displaystyle S = S^2$ because the isomorphism implies the
+However, it is generally false that $\DS S_c \cong S \times S^1$.
+For instance, we cannot have $\DS S_c \cong S \times S^1$
+for $\DS S = S^2$ because the isomorphism implies the
 existence of a non-null vector field on $S$ and we know from
 Proposition~\ref{propNNVFodd} that this is not possible on
-$\displaystyle S^2$.
+$\DS S^2$.
 \end{rmk}
 
 Since $S_c$ is a manifold, then $\TS \, S_c$ is well define.
 Using the procedure to obtain local charts of the previous subsection,
 a local chart of $\TS S_c$ is given by
 $(\breve{W},\breve{U},\breve{\phi})$ where
-$\displaystyle \breve{W} = (W \times I) \times (\RR^2 \times \RR)$
+$\DS \breve{W} = (W \times I) \times (\RR^2 \times \RR)$
 with $I \subset \RR$ an open interval of length less than
 $2\pi$, $\breve{U} = \tilde{\phi}_\ast(\breve{W})$, and
 $\breve{\phi} = \tilde{\phi}_\ast$.  In particular, we have
@@ -616,7 +616,7 @@ H(\VEC{u},\VEC{x}) &= \tilde{\phi}_\ast\big((\VEC{w},\theta),(\VEC{0},1)\big)
 \Big)\Big)
 \end{split}
 \end{equation}
-where $\displaystyle \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u})) = E(\VEC{w})$.
+where $\DS \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u})) = E(\VEC{w})$.
 
 \begin{rmk}
 Using the local charts    \label{rmkHeptheta}
@@ -625,7 +625,7 @@ and the interpretation of the tangent space of $S_c$ has a space of
 differential linear operators on $S_c$ given in
 Subsection~\ref{secTSasDiffop}, we observe that
 $H(\VEC{u},\VEC{x})$ is represented locally as
-$\displaystyle \pdydx{}{\theta}\Big|_{(\VEC{w},\theta)}$
+$\DS \pdydx{}{\theta}\Big|_{(\VEC{w},\theta)}$
 where $(\VEC{u},\VEC{x}) = \tilde{\phi}(\VEC{w},\theta)$.
 \end{rmk}
 
@@ -638,7 +638,7 @@ Suppose that $(\VEC{u},\VEC{x}) = \tilde{\phi}(\VEC{w},\psi)$
 for $(\VEC{w},\psi) \in \tilde{W} = W \times I$.
 Let $\rho_i:]-a,a[ \to W$ for $i =1,2$ be two curves such that
 $\rho_1(0) = \rho_2(0) = \VEC{w}$, and
-$\displaystyle \rho_1'(0), \rho_2'(0) \in \RR^2$ are linearly
+$\DS \rho_1'(0), \rho_2'(0) \in \RR^2$ are linearly
 independent.  Consider the curves
 $\sigma_i:]-a,a[ \to W\times I$ for $i =1,2$ defined by
 $\sigma_i(t) = (\rho_i(t),\psi)$ for $-a < t < a$.
@@ -654,11 +654,11 @@ and
 \VEC{q}_i\Big) \Big) \\
 &= \big((\VEC{u},\VEC{x}), (\diff \phi(\VEC{w}) \rho_i'(0),\VEC{q}_i)\big)
 \end{align*}
-for some $\displaystyle \VEC{q}_i \in \RR^n$ \footnote{We do not need
+for some $\DS \VEC{q}_i \in \RR^n$ \footnote{We do not need
 to know the complete expression for the $\VEC{q}_i$.}.
 Hence $(\tilde{\sigma}_1)_\ast(0,1),(\tilde{\sigma}_2)_\ast(0,1) \in
 \TS_{(\VEC{u},\VEC{x})} S_c$ are linearly independent because
-$\displaystyle \diff \phi(\VEC{w}) \rho_1'(0), \diff \phi(\VEC{w})
+$\DS \diff \phi(\VEC{w}) \rho_1'(0), \diff \phi(\VEC{w})
 \rho_2'(0) \in \RR^n$ are linearly independent since $\diff \phi(\VEC{w})$
 is of rank $2$.
 
@@ -689,13 +689,13 @@ $(\pi_S)_\ast:\TS_{(\VEC{u},\VEC{x})} S_c \to \TS_{\VEC{u}} S$
 is onto.  This follows from\\
 $(\pi_S)_\ast\big( (\tilde{\sigma}_i)_\ast(0,1) \big)
 = \big(\VEC{u},\diff \phi(\VEC{w}) \rho_i'(0) \big)$ for
-$i =1,2$ because $\displaystyle \rho_1'(0)$ and
+$i =1,2$ because $\DS \rho_1'(0)$ and
 $\rho_2'(0)$ are linearly independent.  It is also interesting to note
-that the vector $\displaystyle
+that the vector $\DS
 \dfdx{(\nu.E(\VEC{w})\big)}{\nu}\Big|_{\nu = \psi} \in \RR^n$
 is of norm $1$ because it is the derivative of the parametric
 representation $\theta \mapsto \theta.E(\VEC{w})$ of a unit circle in
-$\displaystyle \RR^n$ centred at the origin where $\theta$ represents
+$\DS \RR^n$ centred at the origin where $\theta$ represents
 the arc length.
 \end{rmk}
 
@@ -721,10 +721,10 @@ tangent spaces.
 Let $S$ be a $2$-dimensional Riemannian manifold.
 \begin{enumerate}
 \item $\eta_\ast (H(\VEC{u},\VEC{x})) = H(\eta(\VEC{u},\VEC{x}))$
-for all $(\VEC{u},\VEC{x}) \in S_c$ and $\displaystyle \eta \in S^1$.
+for all $(\VEC{u},\VEC{x}) \in S_c$ and $\DS \eta \in S^1$.
 \item $\eta_\ast$ is invertible and
-$\displaystyle (\eta_\ast)^{-1} = (\eta^{-1})_\ast$
-for all $\displaystyle \eta \in S^1$.
+$\DS (\eta_\ast)^{-1} = (\eta^{-1})_\ast$
+for all $\DS \eta \in S^1$.
 \end{enumerate}
 \end{prop}
 
@@ -733,7 +733,7 @@ for all $\displaystyle \eta \in S^1$.
 $(\breve{W},\breve{U}, \breve{\phi})$ be the previously defined local charts
 of $S$, $S_c$ and $\TS S_c$ respectively.
 
-Suppose that $\displaystyle \eta = e^{i\mu}$ for $\mu \in \RR$.
+Suppose that $\DS \eta = e^{i\mu}$ for $\mu \in \RR$.
 Since $\eta : S_c \to S_c$, we get that $\eta_\ast : \TS\, S_c \to \TS\, S_c$.  
 
 Given $(\VEC{u},\VEC{x}) \in \tilde{U} \subset S_c$, we have
@@ -774,17 +774,17 @@ because $\tilde{\phi}(\eta(\VEC{w},\theta)) =
 \eta(\tilde{\phi}(\VEC{w},\theta)) = \eta(\VEC{u},\VEC{x})$.
 
 \stage{2} Since $\eta : S_c \to S_c$ and
-$\displaystyle \eta^{-1}:S_c \to  S_c$, we
+$\DS \eta^{-1}:S_c \to  S_c$, we
 have that $\eta_\ast: \TS\,S_c \to \TS\,S_c$ and
-$\displaystyle (\eta^{-1})_\ast: \TS\,S_c \to \TS\,S_c$.  Moreover, since
-$\displaystyle \eta \circ \eta^{-1} = \Id_{S_c}$ and
-$\displaystyle \eta^{-1} \circ \eta = \Id_{S_c}$, we have that
-$\displaystyle \eta_\ast \circ (\eta^{-1})_\ast = (\eta \circ \eta^{-1})_\ast
+$\DS (\eta^{-1})_\ast: \TS\,S_c \to \TS\,S_c$.  Moreover, since
+$\DS \eta \circ \eta^{-1} = \Id_{S_c}$ and
+$\DS \eta^{-1} \circ \eta = \Id_{S_c}$, we have that
+$\DS \eta_\ast \circ (\eta^{-1})_\ast = (\eta \circ \eta^{-1})_\ast
 = (\Id_{S_c})_\ast = \Id_{\TS\,S_c}$ and
-$\displaystyle (\eta^{-1})_\ast \circ \eta_\ast = (\eta^{-1} \circ \eta)_\ast
+$\DS (\eta^{-1})_\ast \circ \eta_\ast = (\eta^{-1} \circ \eta)_\ast
 = (\Id_{S_c})_\ast = \Id_{\TS\,S_c}$.  Thus
 $\eta_\ast$ is invertible and
-$\displaystyle (\eta_\ast)^{-1} = (\eta^{-1})_\ast$.
+$\DS (\eta_\ast)^{-1} = (\eta^{-1})_\ast$.
 \end{proof}
 
 \begin{rmk}
@@ -793,7 +793,7 @@ $(W,U,\phi)$, $(\tilde{W},\tilde{U},\tilde{\phi})$ and
 $(\breve{W},\breve{U}, \breve{\phi})$ are the previously defined local
 charts of $S$, $S_c$ and $\TS S_c$
 respectively.  Moreover, suppose that
-$\displaystyle \eta = e^{i\mu}$ for $\mu \in \RR$.
+$\DS \eta = e^{i\mu}$ for $\mu \in \RR$.
 
 If $\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big)
 = \breve{\phi}\big((\VEC{w},\theta),(\VEC{r},t)\big)
@@ -865,10 +865,10 @@ $\tilde{f}_\ast \circ (\tilde{\phi}_1)_\ast
 Since $f$ is an orientation preserving isometry, we have
 that $\tilde{f} = f_\ast$ preserves the angle and direction of
 rotation between vectors.  To be more precise, let
-$\displaystyle \nu \in S^1$ be the angle
+$\DS \nu \in S^1$ be the angle
 such that $\tilde{f}\big(\VEC{u},\tilde{E}(\VEC{u})\big)
 = \nu\big(f(\VEC{u}), \tilde{E}(f(\VEC{u}))\big)$
-where $\displaystyle \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
+where $\DS \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
 $\VEC{u} \in U_1$.  Then, we get from 
 the third item of Proposition~\ref{proTSprpts} that
 \[
@@ -876,8 +876,8 @@ the third item of Proposition~\ref{proTSprpts} that
 = \mu \big(\tilde{f}(\VEC{u},\tilde{E}(\VEC{u}))\big)
 = \mu \big(\nu \big(f(\VEC{u}),\tilde{E}(f(\VEC{u})) \big)\big)
 \]
-for all $\displaystyle \mu \in S^1$.
-If $\displaystyle \nu = e^{i \alpha}$ and $\displaystyle \mu = e^{i \beta}$,
+for all $\DS \mu \in S^1$.
+If $\DS \nu = e^{i \alpha}$ and $\DS \mu = e^{i \beta}$,
 then the previous statement yields
 \begin{align*}
 \tilde{f}\big(\tilde{\phi}_1(\VEC{w},\beta)\big)
@@ -890,7 +890,7 @@ then the previous statement yields
 for all $\beta \in \RR$.  Thus
 $\tilde{g}(\VEC{w},\beta) = (g(\VEC{w}), \alpha + \beta)$ for all
 $(\VEC{w},\beta) \in \tilde{W}$.
-Hence $\displaystyle \pdydx{\tilde{g}}{\beta}(\VEC{w},\beta) = (\VEC{0},1)$
+Hence $\DS \pdydx{\tilde{g}}{\beta}(\VEC{w},\beta) = (\VEC{0},1)$
 for all $\beta \in \RR$.
 It then follows from (\ref{HpisAstEq}) that
 \begin{align*}
@@ -915,7 +915,7 @@ $\tilde{f}(\VEC{u},\VEC{x}) = \tilde{\phi}_2(\tilde{g}(\VEC{w},\theta))$.
 \section{Parallel Translation and Connection}
 
 We have a clear idea of what translation of a vector in
-$\displaystyle \RR^n$ implies.  The direction of the vector does
+$\DS \RR^n$ implies.  The direction of the vector does
 not change and the length of the vector does not change.  The goal is
 to generalize this concept of translation to the context of a
 manifold.  It is unlikely that the spacial direction of a tangent
@@ -927,7 +927,7 @@ Moreover, we should also try to preserve the angle between two tangent
 vectors at a point of $S$ when they are translated along $S$. 
 
 Throughout this section, $S$ will be a $2$-dimensional Riemannian
-manifold in $\displaystyle \RR^n$.
+manifold in $\DS \RR^n$.
 
 Suppose that $(\VEC{u},\VEC{x}) \in S_c(\VEC{u})$ and that
 $\sigma:[a,b] \to S$ is a smooth curve such that
@@ -939,12 +939,12 @@ $\tilde{\sigma}_{(\VEC{u},\VEC{x})}:[a,b] \to S_c$
 \item $\pi_S \circ \tilde{\sigma}_{(\VEC{u},\VEC{x})} = \sigma$ on $[a,b]$, and
 \item $\tilde{\sigma}_{\eta(\VEC{u},\VEC{x})}(t)
 = \eta(\tilde{\sigma}_{(\VEC{u},\VEC{x})}(t))$ for $t \in [a,b]$ and
-$\displaystyle \eta \in S^1$ (Figure~\ref{ParTranslTwo}).
+$\DS \eta \in S^1$ (Figure~\ref{ParTranslTwo}).
 \end{enumerate}
 
 The third condition means
 that the map $(\VEC{u},\VEC{x}) \mapsto \tilde{\sigma}_{(\VEC{u},\VEC{x})}(t)$
-commutes with the action of $\displaystyle S^1$ on $S_c$.
+commutes with the action of $\DS S^1$ on $S_c$.
 Note that $(\tilde{\sigma}_{(\VEC{u},\VEC{x})})_\ast(t,1) \in
 \TS_{\tilde{\sigma}_{(\VEC{u},\VEC{x})}(t)} S_c$ and it follows from
 (2) that
@@ -983,7 +983,7 @@ $\tilde{\sigma}_{(\VEC{u},\VEC{x})}(t) \in S_c(\sigma(t))$.
 \pdfF{riemann_geom/partransl2}{Angle under parallel translation}{This
 is a schematic representation of parallel translation that aims to
 illustrate the effect of the translation on the angle between two
-vectors in $S_c$.  In the figure $\displaystyle \eta = e^{i\theta} \in S^1$.
+vectors in $S_c$.  In the figure $\DS \eta = e^{i\theta} \in S^1$.
 As in the previous figure, elements of the form
 $\tilde{\sigma}_{(\VEC{u},\VEC{x})}(t) \in S_c(\sigma(t))$ are represented by
 points on the unit circle $C \subset \TS_{\sigma(t)} S$ (in blue) 
@@ -996,7 +996,7 @@ statement, we need a little lemma.
 
 \begin{lemma}
 Given $(\VEC{u},\VEC{x}) \in S_c(\VEC{u})$, the space
-$\displaystyle P_{(\VEC{u},\VEC{x})}
+$\DS P_{(\VEC{u},\VEC{x})}
 = ((\pi_S)_\ast)^{-1}\big(\{(\VEC{u},\VEC{0})\}\big) \cap
 \TS_{(\VEC{u},\VEC{x})} S_c$
 is a $1$ dimensional subspace of $\TS_{(\VEC{u},\VEC{x})} S_c$.
@@ -1005,7 +1005,7 @@ is a $1$ dimensional subspace of $\TS_{(\VEC{u},\VEC{x})} S_c$.
 \begin{proof}
 We assume that $(\VEC{u},\VEC{x}) = \eta(\VEC{u},\tilde{E}(\VEC{u}))
 = (\VEC{u}, \theta.\tilde{E}(\VEC{u}))$ for some
-$\displaystyle \eta = e^{i\theta} \in S^1$.
+$\DS \eta = e^{i\theta} \in S^1$.
 
 Consider the vector field $H$ on $S_c$ defined in (\ref{defnHonSc}).
 We have that $H(\VEC{u},\VEC{x}) \in \TS_{\VEC{u},\VEC{x}} S_c$,
@@ -1028,7 +1028,7 @@ $(\tilde{\sigma}_3)_\ast(0,1) = H(\tilde{\sigma}_3(0))
 = H(\VEC{u},\VEC{x})$.
 
 Therefore
-$\displaystyle P_{(\VEC{u},\VEC{x})}$ is the $1$-dimensional subspace of
+$\DS P_{(\VEC{u},\VEC{x})}$ is the $1$-dimensional subspace of
 $\TS_{(\VEC{u},\VEC{x})} S_c$ given by
 \begin{equation} \label{defnPux}
 P_{(\VEC{u},\VEC{x})} = \{ t H(\VEC{u},\VEC{x}) : t \in \RR \}
@@ -1041,10 +1041,10 @@ P_{(\VEC{u},\VEC{x})} = \{ t H(\VEC{u},\VEC{x}) : t \in \RR \}
 
 \pdfF{riemann_geom/partransl3}{Schematic representation of connection}
 {This is a schematic representation of a connection.  We have
-projected the subspaces $\displaystyle \TS_{\VEC{u}}S$,
-$\displaystyle M_{(\VEC{u},\VEC{x})}$ and
-$P_{(\VEC{u},\VEC{x})}$ into $\displaystyle \RR^n$.  We also have
-projected $H(\VEC{u},\VEC{x})$ into $\displaystyle \RR^n$.  Normally,
+projected the subspaces $\DS \TS_{\VEC{u}}S$,
+$\DS M_{(\VEC{u},\VEC{x})}$ and
+$P_{(\VEC{u},\VEC{x})}$ into $\DS \RR^n$.  We also have
+projected $H(\VEC{u},\VEC{x})$ into $\DS \RR^n$.  Normally,
 they all live in different spaces.  We have added the potential direction
 $\big(\tilde{\sigma}_{(\VEC{u},\VEC{x})}\big)_\ast(a,1)
 \in M_{(\VEC{u},\VEC{x})}$
@@ -1080,17 +1080,17 @@ $(\tilde{\sigma}_{(\VEC{u},\VEC{x})})_\ast(t,1)$.
 \begin{defn}  \label{defnConnection}
 Let $S$ be a $2$-dimensional Riemannian manifold. A
 {\bfseries connection}\index{Connection} on $S_c$ is a collection
-$\displaystyle \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c}$
+$\DS \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c}$
 such that
 \begin{enumerate}
 \item $M_{(\VEC{u},\VEC{x})}$ is a $2$-dimensional subspace of
 $\TS_{(\VEC{u},\VEC{x})} S_c$ for all $(\VEC{u},\VEC{x}) \in S_c$,
-\item $\displaystyle \TS_{(\VEC{u},\VEC{x})} S_c = M_{(\VEC{u},\VEC{x})} \oplus
+\item $\DS \TS_{(\VEC{u},\VEC{x})} S_c = M_{(\VEC{u},\VEC{x})} \oplus
 P_{(\VEC{u},\VEC{x})}$ for all $(\VEC{u},\VEC{x}) \in S_c$
 (Figure~\ref{ParTranslThree}),
 \item $\eta_\ast (M_{(\VEC{u},\VEC{x})})
 = M_{\eta(\VEC{u},\VEC{x})}$ for all $(\VEC{u},\VEC{x}) \in S_c$
-and $\displaystyle \eta \in S^1$ (Figure~\ref{ParTranslFour}), and
+and $\DS \eta \in S^1$ (Figure~\ref{ParTranslFour}), and
 \item $S_c$ can be covered by open sets $\tilde{U} \subset S_c$ such that
 there exist two smooth vector fields $F,G :\tilde{U} \to \TS S_c$ with
 the property that $\{ F(\VEC{u},\VEC{x}), G(\VEC{u},\VEC{x}) \}$ is a basis of
@@ -1099,32 +1099,32 @@ $M_{(\VEC{u},\VEC{x})}$ for all $(\VEC{u},\VEC{x}) \in \tilde{U}$.
 \end{defn}
 
 In the previous definition, we emphasize that
-$\eta :S_c \to S_c$ for all fixed $\displaystyle \eta \in S^1$.
+$\eta :S_c \to S_c$ for all fixed $\DS \eta \in S^1$.
 Thus $\eta_\ast: \TS S_c \to \TS S_c$.
 
 \pdfF{riemann_geom/partransl4}{Schematic representation of the
 rotation of $\TS_{(\VEC{u},\VEC{x})} S_c$}{Given $(\VEC{u},\VEC{x})
 \in S_c$, we give a schematic representation of the
 rotation of $H(\VEC{u},\VEC{x})$ and $M_{(\VEC{u},\VEC{x})}$
-by an angle $\displaystyle \eta \in S^1$.}{ParTranslFour}
+by an angle $\DS \eta \in S^1$.}{ParTranslFour}
 
 \begin{egg}
 It is not hard to define a connection locally on $S_c$.  \label{eggConnPAp1}
 
 Suppose that $(W,U,\phi)$ is local chart of $S$.  Consider the map
-$\displaystyle G:U\times S^1 \to S_c(U)$ defined by
+$\DS G:U\times S^1 \to S_c(U)$ defined by
 $G(\VEC{u},\eta) = \eta\big(\VEC{u}, \tilde{E}(\VEC{u}) \big)
 = \big(\VEC{u} , \theta.\tilde{E}(\VEC{u}) \big)$
 for $(\VEC{u},\theta) \in U \times \RR$ and
-$\displaystyle \eta = e^{i\theta}$, where
-$\displaystyle \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
+$\DS \eta = e^{i\theta}$, where
+$\DS \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
 $\VEC{u} \in U$.  This is the famous map that we have used to prove that
-$\displaystyle S_c(U) \cong U \times S^1$ in Remark~\ref{rmkUS1eScU}.
+$\DS S_c(U) \cong U \times S^1$ in Remark~\ref{rmkUS1eScU}.
 
 For $\eta$ fixed, we have that
 $(G_\eta)_\ast: \TS_{\VEC{u}} S \to
 \TS_{\eta(\VEC{u}, \tilde{E}(\VEC{u}))} S_c$.
-Let $\displaystyle \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}
+Let $\DS \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}
 = (G_\eta)_\ast\big(\TS_{\VEC{u}}S\big)$.
 Since $(\pi_S)_\ast\circ (G_\eta)_\ast
 = (\pi_S \circ G_\eta)_\ast = (\Id_S)_\ast$, we get that
@@ -1136,21 +1136,21 @@ $(\pi_S)_\ast\big(H(\eta(\VEC{u},\tilde{E}(\VEC{u})))\big)
 Thus
 $(\pi_S)_\ast:\check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))} \to \TS_{\VEC{u}} S$
 is a (linear) isomorphism and so
-$\displaystyle \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}$ is of dimension $2$.
+$\DS \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}$ is of dimension $2$.
 It follows that
 $\TS_{\eta(\VEC{u},\tilde{E}(\VEC{u}))} = \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}
 \oplus P_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}$.
 
 We have that
-$\displaystyle \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}
+$\DS \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}
 = \eta_\ast \big(\check{M}_{(\VEC{u},\tilde{E}(\VEC{u}))}\big)$
-for $\displaystyle \eta \in S^1$ because $G_\eta = \eta \circ G_1$
+for $\DS \eta \in S^1$ because $G_\eta = \eta \circ G_1$
 We may define
-$\displaystyle \check{\MM}_c
+$\DS \check{\MM}_c
 = \{ \check{M}_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c(U)}$
 because every $(\VEC{u},\VEC{x}) \in S_c(U)$ is of the form
 $\eta\big(\VEC{u},\tilde{E}(\VEC{u})\big)$ for some
-$\displaystyle \eta \in S^1$.
+$\DS \eta \in S^1$.
 
 The existence of two smooth vector fields $P,Q :S_c(U) \to \TS S_c$ with
 the property that $\{ P(\VEC{u},\VEC{x}), Q(\VEC{u},\VEC{x}) \}$ is a basis of
@@ -1170,7 +1170,7 @@ $P\big( \eta(\VEC{u},\tilde{E}(\VEC{u}))\big)
 and
 $Q\big(\eta(\VEC{u},\tilde{E}(\VEC{u}))\big)
 = (G_\eta)_\ast(\tilde{Q}(\VEC{u}))$
-for $\VEC{u} \in U$ and $\displaystyle \eta \in S^1$.
+for $\VEC{u} \in U$ and $\DS \eta \in S^1$.
 \end{egg}
 
 The following concept is fundamental in the proof of existence of
@@ -1178,7 +1178,7 @@ connections.
 
 \begin{prop} \label{thmConn1form}
 Let $S$ be a $2$-dimensional Riemannian manifold and
-$\MM_c = \displaystyle \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x})
+$\MM_c = \DS \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x})
 \in S_c} \}$
 be a connection on $S_c$.  There exists a smooth differential $1$-form $\rho$
 on $S_c$ such that
@@ -1198,7 +1198,7 @@ associated to the connection $\MM_c$.
 \end{prop}
 
 \begin{proof}
-Every element $\displaystyle \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big)
+Every element $\DS \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big)
 \in \TS_{(\VEC{u},\VEC{x})} S_c$ can be expressed in an unique way as
 \[
 \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big)
@@ -1223,7 +1223,7 @@ fields $F,G :\tilde{U} \to \TS S_c$ with the property that \\
 $\{ F(\VEC{v},\VEC{x}), G(\VEC{u},\VEC{x}) \}$ is a basis of
 $M_{(\VEC{u},\VEC{x})}$ for all $(\VEC{u},\VEC{x}) \in \tilde{U}$.
 Since
-$\displaystyle \TS_{(\VEC{u},\VEC{x})} S_c = M_{(\VEC{u},\VEC{x})} \oplus
+$\DS \TS_{(\VEC{u},\VEC{x})} S_c = M_{(\VEC{u},\VEC{x})} \oplus
 P_{(\VEC{u},\VEC{x})}$ for all $(\VEC{u},\VEC{x}) \in \tilde{U}$, we have that
 $\{ F(\VEC{v},\VEC{x}), G(\VEC{u},\VEC{x}) , H(\VEC{u},\VEC{x})\}$ is
 a basis of $\TS_{(\VEC{u},\VEC{x})} S_c$ for all
@@ -1244,7 +1244,7 @@ get
 = \rho(\VEC{u},\VEC{x})\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big)
 \]
 for all $(\VEC{u},\VEC{x}) \in \tilde{U}$ and
-$\displaystyle \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big) \in
+$\DS \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big) \in
 \TS_{(\VEC{u},\VEC{x})} \tilde{U}$.  Thus $\rho = \tilde{H}$ on $\tilde{U}$.
 Since $\tilde{U}$ is arbitrary, this proves that $\rho$ is a smooth
 differential $1$-form on $S_c$.
@@ -1255,33 +1255,33 @@ According to the previous proposition,      \label{eggConnPAp2}
 the connection $1$-form $\check{\rho}$
 on $S_c(U)$ satisfies (\ref{defnConnRho}) with $\rho$ replaced by
 $\check{\rho}$ and $(\VEC{u},\VEC{x}) = \eta.(\VEC{u},\tilde{E}(\VEC{u}))$ 
-for $\displaystyle \eta \in S^1$, where
-$\displaystyle \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
+for $\DS \eta \in S^1$, where
+$\DS \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
 $\VEC{u} \in U$.
 
 We consider
-$\displaystyle S^1 \cong \{ e^{i\theta} \in \CC : \theta \in \RR \}$.
+$\DS S^1 \cong \{ e^{i\theta} \in \CC : \theta \in \RR \}$.
 We have that
-$\displaystyle \TS_{\eta} S^1 = \{ (\eta, t\, i \eta) : t \in \RR \}$
-for all $\displaystyle \eta = e^{i\theta} \in S^1$.
+$\DS \TS_{\eta} S^1 = \{ (\eta, t\, i \eta) : t \in \RR \}$
+for all $\DS \eta = e^{i\theta} \in S^1$.
 We define a differential $1$-form $\omega$ on
-$\displaystyle S^1$ by $\omega(\eta)(\eta, t\, i\eta) = t$
-for all $\displaystyle \eta \in S^1$ and $t \in \RR$.
+$\DS S^1$ by $\omega(\eta)(\eta, t\, i\eta) = t$
+for all $\DS \eta \in S^1$ and $t \in \RR$.
 
 We now prove that the connection $1$-form $\check{\rho}$ associated to
 $\check{\MM}_c$ is given by
-$\displaystyle \check{\rho} = (G^{-1})^\ast(\pi_2^\ast(\omega))$ where
-$\displaystyle \pi_2: U \times S^1 \to S^1$ is the
+$\DS \check{\rho} = (G^{-1})^\ast(\pi_2^\ast(\omega))$ where
+$\DS \pi_2: U \times S^1 \to S^1$ is the
 projection defined by $\pi_2(\VEC{u},\eta) = \eta$ for all
-$\displaystyle (\VEC{u},\eta) \in U \times S^1$, and $G$ is the
+$\DS (\VEC{u},\eta) \in U \times S^1$, and $G$ is the
 function defined in Remark~\ref{rmkUS1eScU}.
-Since $\displaystyle G:U \times S^1 \to S_c(U)$ is an isomorphism, we
-have that $\displaystyle G_\ast:\TS\,(U\times S^1) \to \TS\, S_c(U)$ is an
+Since $\DS G:U \times S^1 \to S_c(U)$ is an isomorphism, we
+have that $\DS G_\ast:\TS\,(U\times S^1) \to \TS\, S_c(U)$ is an
 isomorphism.  Therefore, given
 $\big(\eta(\VEC{u},\tilde{E}(\VEC{u})),(\VEC{p},\VEC{q})\big)
 \in \TS_{\eta(\VEC{u}, \tilde{E}(\VEC{u}))} S_c$ with
-$\displaystyle \eta = e^{i\theta}$, there exists
-$\displaystyle \big((\VEC{u},\eta),(\VEC{r},t\, i\eta)\big)
+$\DS \eta = e^{i\theta}$, there exists
+$\DS \big((\VEC{u},\eta),(\VEC{r},t\, i\eta)\big)
 \in \TS_{(\VEC{u},\eta)}(U\times S^1)$  such that
 \begin{align*}
 \big(\eta(\VEC{u},\tilde{E}(\VEC{u})),(\VEC{p},\VEC{q})\big)
@@ -1295,9 +1295,9 @@ $\displaystyle \big((\VEC{u},\eta),(\VEC{r},t\, i\eta)\big)
 + t H(\eta(\VEC{u},\tilde{E}(\VEC{u})))
 \end{align*}
 where the second to last equality comes form the fact 
-that $\displaystyle \pdfdx{G_{\VEC{u}}(\eta)}{\eta}
+that $\DS \pdfdx{G_{\VEC{u}}(\eta)}{\eta}
 = \pdfdx{G(\VEC{u},\eta)}{\eta}$ for $\VEC{u}$ constant is defined
-with the help of the local coordinate $\displaystyle \eta = e^{i\theta}$ as
+with the help of the local coordinate $\DS \eta = e^{i\theta}$ as
 \[
 \pdfdx{G(\VEC{u},\eta)}{\eta} =
 \pdfdx{G(\VEC{u},e^{i\theta})}{\theta}
@@ -1322,7 +1322,7 @@ Hence
 We leave it to the reader to verify
 that $(\pi_2)_\ast\big( (\VEC{u}, \eta),(\VEC{r},t\, i\eta)\big) =
 (\eta,t\, i\eta)$ for all\\
-$\displaystyle \big((\VEC{u}, \eta),(\VEC{r},t\, i \eta)\big) \in
+$\DS \big((\VEC{u}, \eta),(\VEC{r},t\, i \eta)\big) \in
 \TS_{(\VEC{u},\eta)} (U \times S^1)$.
 Since $(G_\eta)_\ast(\VEC{u},\VEC{r}) \in
 \check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))}$, we get
@@ -1344,16 +1344,16 @@ $\big(\eta(\VEC{u},\tilde{E}(\VEC{u})),(\VEC{p},\VEC{q})\big)
 \in \TS\, S_c(U)$ as required in (\ref{defnConnRho}).
 
 Note that $\df{\check{\rho}} = 0$ because
-$\displaystyle \df{(G^{-1})^\ast(\pi_2^\ast(\omega))}
+$\DS \df{(G^{-1})^\ast(\pi_2^\ast(\omega))}
 = (G^{-1})^\ast(\pi_2^\ast(\df{\omega}))$
 according to Proposition~\ref{manifSDFitem4} and
 $\df{\omega} = 0$ since there is no non-trivial differential
 $2$-form on a $1$-dimensional manifold; in the present case, on
-$\displaystyle S^1$.
+$\DS S^1$.
 \end{egg}
 
 If $\rho$ is the connection $1$-form associated to a connection
-$\displaystyle \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x})}$,
+$\DS \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x})}$,
 then we get from the previous proposition that $\rho(\VEC{u},\VEC{x})$
 is null on $M_{(\VEC{u},\VEC{x})}$ for all $(\VEC{u},\VEC{x})\in S_c$.
 Moreover, $\rho(\VEC{u},\VEC{x}) \big( H(\VEC{u},\VEC{x}) \big) = 1$.
@@ -1361,19 +1361,19 @@ We can also prove the following lemma.
 
 \begin{prop} \label{proERequR}
 Let $S$ be a $2$-dimensional Riemannian manifold and
-$\MM_c = \displaystyle \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x})\in S_c} \}$
+$\MM_c = \DS \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x})\in S_c} \}$
 be a connection on $S_c$ where $\rho$ is the connection $1$-form
 associated to $\MM_c$.  Then
-$\displaystyle \eta^\ast(\rho)(\VEC{u},\VEC{x}) = \rho(\VEC{u},\VEC{x})$
-for all $\displaystyle \eta\in S^1$ and $(\VEC{u},\VEC{x})\in S_c$.
+$\DS \eta^\ast(\rho)(\VEC{u},\VEC{x}) = \rho(\VEC{u},\VEC{x})$
+for all $\DS \eta\in S^1$ and $(\VEC{u},\VEC{x})\in S_c$.
 \end{prop}
 
 \begin{proof}
 It follows from Proposition~\ref{proEtaPrtps} that
 $\eta_\ast\big( H(\VEC{u},\VEC{x}) \big) = H(\eta(\VEC{u},\VEC{x}))$
-for all $\displaystyle \eta \in S^1$.
+for all $\DS \eta \in S^1$.
 Hence, since every element of $\TS\, S_c$ can be expressed as
-$\displaystyle \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big)
+$\DS \big((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})\big)
 = \lambda H(\VEC{u},\VEC{x})
 + \big( (\VEC{u},\VEC{x}), (\tilde{\VEC{p}},\tilde{\VEC{q}})\big)$
 with $\lambda =
@@ -1413,11 +1413,11 @@ There is kind of a converse to Theorem~\ref{thmConn1form}.
 Let $S$ be a $2$-dimensional Riemannian manifold.  Suppose that $\rho$
 is a smooth differential $1$-form on $S_c$ such that 
 $\rho(\VEC{u},\VEC{x})( H(\VEC{u},\VEC{x}) ) = 1$ for all
-$(\VEC{u},\VEC{x}) \in S_c$ and $\displaystyle \eta^\ast(\rho) = \rho$ for all
-$\displaystyle \eta \in S^1$.  Them
-$\displaystyle \MM_c = \{ M_{(\VEC{u},\VEC{x})}
+$(\VEC{u},\VEC{x}) \in S_c$ and $\DS \eta^\ast(\rho) = \rho$ for all
+$\DS \eta \in S^1$.  Them
+$\DS \MM_c = \{ M_{(\VEC{u},\VEC{x})}
 \}_{(\VEC{u},\VEC{x})\in S_c}$ with
-$\displaystyle M_{(\VEC{u},\VEC{x})} = (\rho(\VEC{u},\VEC{x}))^{-1}
+$\DS M_{(\VEC{u},\VEC{x})} = (\rho(\VEC{u},\VEC{x}))^{-1}
 \big(\big\{\big((\VEC{u},\VEC{x}), (\VEC{0},\VEC{0})\big)\big\}\big)$
 for all $(\VEC{u},\VEC{x}) \in S_c$ is a connection on $S_c$ with the 
 property that its connection $1$-form is $\rho$.
@@ -1436,7 +1436,7 @@ M_{(\VEC{u},\VEC{x})} =
 \]
 is a $2$-dimensional subspace of $\TS_{(\VEC{u},\VEC{x})} S_c$
 satisfying (1) and (2) of Definition~\ref{defnConnection}.
-Since $\displaystyle \eta^\ast(\rho) = \rho$, we get
+Since $\DS \eta^\ast(\rho) = \rho$, we get
 \[
 \rho(\eta(\VEC{u},\VEC{x}))
 \big(\eta_\ast\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big)\big)
@@ -1453,22 +1453,22 @@ To prove (4) of Definition~\ref{defnConnection}, we use the fact that
 $\rho$ is a smooth differential $1$-form on $S_c$.  Suppose that 
 $(\tilde{W},\tilde{U},\tilde{\phi})$ is a local chart of $S_c$ as in
 Subsection~\ref{subsectTSc}.  The local representation of $\rho$ is
-given by $\displaystyle \tilde{\phi}^\ast(\rho)$.
+given by $\DS \tilde{\phi}^\ast(\rho)$.
 It suffices to construct two smooth vector fields
-$\displaystyle \tilde{F},\tilde{G} : \tilde{W} \to \tilde{W} \times \RR^3$
+$\DS \tilde{F},\tilde{G} : \tilde{W} \to \tilde{W} \times \RR^3$
 such that
-$\displaystyle
+$\DS
 \tilde{\phi}^\ast(\rho)(\tilde{\VEC{w}})(\tilde{F}(\tilde{\VEC{w}}))
 = \tilde{\phi}^\ast(\rho)(\tilde{\VEC{w}})(\tilde{G}(\tilde{\VEC{w}})) = 0$
-and $\displaystyle \tilde{F}(\tilde{\VEC{w}}), \tilde{G}(\tilde{\VEC{w}})
+and $\DS \tilde{F}(\tilde{\VEC{w}}), \tilde{G}(\tilde{\VEC{w}})
 \in \TS_{\tilde{\VEC{w}}} \tilde{W} = \{\tilde{\VEC{w}}\}\times \RR^3$
 are linearly independent for all $\tilde{\VEC{w}} \in \tilde{W}$.
 The vectors fields
-$\displaystyle F = \tilde{\phi}_\ast \circ \tilde{F} \circ \tilde{\phi}^{-1}$
-and $\displaystyle G
+$\DS F = \tilde{\phi}_\ast \circ \tilde{F} \circ \tilde{\phi}^{-1}$
+and $\DS G
 = \tilde{\phi}_\ast \circ \tilde{G} \circ \tilde{\phi}^{-1}$ on
 $\tilde{U}$ will then satisfy (4) of Definition~\ref{defnConnection}.
-Note that the kernel of $\displaystyle \tilde{\phi}^\ast(\rho)$ is of
+Note that the kernel of $\DS \tilde{\phi}^\ast(\rho)$ is of
 dimension $2$ for each $\tilde{\VEC{w}} \in \tilde{W}$ because
 $M_{\tilde{\phi}(\tilde{\VEC{w}})}$ is a subspace of dimension $2$.
 
@@ -1503,7 +1503,7 @@ Thus $\rho$ is a connection $1$-form associated to $\MM_c$.
 
 We need a couple of preliminary results to prove that, given a
 connection\\
-$\displaystyle \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c}$
+$\DS \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c}$
 with an associate connection $1$-form, there exists a unique lift
 $\tilde{\sigma}_{(\VEC{u},\VEC{x})}:[a,b] \to S_c$ such that
 $(\tilde{\sigma}_{(\VEC{u},\VEC{x})})_\ast(t,1) \in
@@ -1512,10 +1512,10 @@ M_{\tilde{\sigma}_{(\VEC{u},\VEC{x})}(t)}$ for all $t \in [a,b]$.
 \begin{prop} \label{prorPiAom}
 Let $S$ be a $2$-dimensional Riemannian manifold.
 Suppose that $\xi$ is a differential $1$-from on $S_c$ such that
-$\displaystyle \xi(\VEC{u},\VEC{x})\big(H(\VEC{u},\VEC{x})\big) = 0$
-for all $(\VEC{u},\VEC{x}) \in S_c$ and $\displaystyle \eta^\ast(\xi) = \xi$
-for all $\displaystyle \eta \in S^1$.
-Then $\displaystyle \xi = \pi_S^\ast(\omega)$ for
+$\DS \xi(\VEC{u},\VEC{x})\big(H(\VEC{u},\VEC{x})\big) = 0$
+for all $(\VEC{u},\VEC{x}) \in S_c$ and $\DS \eta^\ast(\xi) = \xi$
+for all $\DS \eta \in S^1$.
+Then $\DS \xi = \pi_S^\ast(\omega)$ for
 some smooth differential $1$-form $\omega$ on $S$.
 \end{prop}
 
@@ -1556,10 +1556,10 @@ $(\VEC{u},\VEC{p}) \in S_c$.   Any other element of $S_c$ of
 the form $(\VEC{u},\VEC{z}) \in S_c$ is given by
 $(\VEC{u},\VEC{z}) = \eta(\VEC{u},\VEC{p})
 = (\VEC{u}, \theta.\VEC{p})$ for some
-$\displaystyle \eta = e^{i\theta} \in S^1$.
+$\DS \eta = e^{i\theta} \in S^1$.
 It follows from (2) of Proposition~\ref{proEtaPrtps} that
-$\eta_\ast$ is invertible and $\displaystyle (\eta_\ast)^{-1} = (\eta^{-1})_\ast$
-for all $\displaystyle \eta \in S^1$.  Hence, given
+$\eta_\ast$ is invertible and $\DS (\eta_\ast)^{-1} = (\eta^{-1})_\ast$
+for all $\DS \eta \in S^1$.  Hence, given
 $\big((\VEC{u},\VEC{z}),(\VEC{x},\VEC{q})\big) \in
 \TS_{(\VEC{u},\VEC{z})} S_c$, there
 exists $\big((\VEC{u},\VEC{p}),(\VEC{x},\tilde{\VEC{q}})\big) 
@@ -1578,7 +1578,7 @@ Remark~\ref{rmkEtaProps}). Hence
 = \omega(\VEC{u})(\VEC{u},\VEC{x}) \ ,
 \end{align*}
 where the second to last equality comes from the hypothesis that
-$\displaystyle \eta^\ast(\xi) = \xi$ and
+$\DS \eta^\ast(\xi) = \xi$ and
 the last equality comes from the independence of the definition of
 $\omega$ on $\tilde{\VEC{q}}$ proved in the previous paragraph.
 
@@ -1601,18 +1601,18 @@ The local representation of $\omega$ on $W$ is given by
 \VEC{y}\big)
 = \phi^\ast(\omega)(\VEC{w})(\VEC{w},\VEC{y}) \ ,
 \end{align*}
-where we may assume that $\displaystyle \psi,t \in S^1$ are constant.
-Thus $\displaystyle \phi^\ast(\omega)$ is a smooth differential form on
+where we may assume that $\DS \psi,t \in S^1$ are constant.
+Thus $\DS \phi^\ast(\omega)$ is a smooth differential form on
 $W$ because it is the composition of smooth functions.
 Note that if
 $(\VEC{u},\VEC{x}) = \phi_\ast(\VEC{w}, \VEC{y}) \in \TS_{\VEC{u}} S$,
 the equation above states that
-$\displaystyle \omega(\VEC{u})(\VEC{u},\VEC{x})
+$\DS \omega(\VEC{u})(\VEC{u},\VEC{x})
 = \xi(\VEC{u},\VEC{p})
 \big( (\VEC{u},\VEC{p}),( \VEC{x}, \VEC{q})\big)$
 with
 $\tilde{x} = \psi.\tilde{E}(\VEC{u})$ and
-$\displaystyle \VEC{q} = \diff_{\VEC{w},\psi} (\psi.E(\VEC{w}))
+$\DS \VEC{q} = \diff_{\VEC{w},\psi} (\psi.E(\VEC{w}))
 \begin{pmatrix} \VEC{y} \\ t\end{pmatrix}$.
 
 By construction, we have
@@ -1630,70 +1630,70 @@ for all $\big((\VEC{u},\VEC{p}), (\VEC{x},\VEC{q})\big) \in
 \end{proof}
 
 \begin{cor}  \label{cor2rho2do}
-Suppose that $\displaystyle \MM_c^{[i]} = \{ M^{[i]}_{(\VEC{u},\VEC{x})}
+Suppose that $\DS \MM_c^{[i]} = \{ M^{[i]}_{(\VEC{u},\VEC{x})}
 \}_{(\VEC{u},\VEC{x})\in S_c}$ for $i =1,2$ are 
-two connections on $S_c$ and $\displaystyle \rho^{[i]}$ is a connection
-$1$-form associated to $\displaystyle \MM_c^{[i]}$ for $i = 1,2$.
-Then $\displaystyle \rho^{[1]}-\rho^{[2]} = \pi_S^\ast(\omega)$ for
+two connections on $S_c$ and $\DS \rho^{[i]}$ is a connection
+$1$-form associated to $\DS \MM_c^{[i]}$ for $i = 1,2$.
+Then $\DS \rho^{[1]}-\rho^{[2]} = \pi_S^\ast(\omega)$ for
 some smooth differential $1$-form $\omega$ on $S$.
 \end{cor}
 
 \begin{proof}
 It follows from Theorem~\ref{thmConn1form} and
 Proposition~\ref{proERequR} that
-$\displaystyle \rho^{[i]}(\VEC{u},\VEC{x})\big(H(\VEC{u},\VEC{x})\big) =1$
+$\DS \rho^{[i]}(\VEC{u},\VEC{x})\big(H(\VEC{u},\VEC{x})\big) =1$
 for all $(\VEC{u},\VEC{x}) \in S_c$ and 
-$\displaystyle \eta^\ast\big(\rho^{[i]}\big)= \rho^{[i]}$ for all
-$\displaystyle \eta \in S^1$ and $i =1,2$.  Hence, if we
-set $\displaystyle \xi = \rho^{[1]} - \rho^{[2]}$, then we get that
-$\displaystyle \xi(\VEC{u},\VEC{x})\big(H(\VEC{u},\VEC{x})\big) = 0$
-for all $(\VEC{u},\VEC{x}) \in S_c$ and $\displaystyle \eta^\ast(\xi) = \xi$
-for all $\displaystyle \eta \in S^1$.  The conclusion of the corollary 
+$\DS \eta^\ast\big(\rho^{[i]}\big)= \rho^{[i]}$ for all
+$\DS \eta \in S^1$ and $i =1,2$.  Hence, if we
+set $\DS \xi = \rho^{[1]} - \rho^{[2]}$, then we get that
+$\DS \xi(\VEC{u},\VEC{x})\big(H(\VEC{u},\VEC{x})\big) = 0$
+for all $(\VEC{u},\VEC{x}) \in S_c$ and $\DS \eta^\ast(\xi) = \xi$
+for all $\DS \eta \in S^1$.  The conclusion of the corollary 
 follows from Proposition~\ref{prorPiAom}.
 \end{proof}
 
 \begin{prop}  \label{proUnHorLift}
 Let $S$ be a $2$-dimensional Riemannian manifold and
-$\MM_c = \displaystyle \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c} \}$
+$\MM_c = \DS \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c} \}$
 be a connection on $S_c$ where $\rho$ is a connection $1$-form
 associated to $\MM_c$.
 Suppose that
 \begin{enumerate}
-\item $\displaystyle \sigma:[a,b] \to S$ is a smooth curve,
-\item $\displaystyle \tilde{\sigma}^{[i]}:[a,b] \to S_c$ is smooth
-curves such that $\displaystyle \pi_S \circ \tilde{\sigma}^{[i]} = \sigma$
+\item $\DS \sigma:[a,b] \to S$ is a smooth curve,
+\item $\DS \tilde{\sigma}^{[i]}:[a,b] \to S_c$ is smooth
+curves such that $\DS \pi_S \circ \tilde{\sigma}^{[i]} = \sigma$
 for $i =1,2$, and
-\item $\displaystyle \rho\big(\tilde{\sigma}^{[1]}(t))\big)
+\item $\DS \rho\big(\tilde{\sigma}^{[1]}(t))\big)
 \big( (\tilde{\sigma}^{[1]})_\ast(t,1) \big) = 0$
 for $a \leq t \leq b$.
 \end{enumerate}
 Then there exists a smooth function $\theta:[a,b] \to \RR$ such that
-$\displaystyle \tilde{\sigma}^{[2]}(t) = \eta_t(\tilde{\sigma}^{[1]}(t))$ with
-$\displaystyle \eta_t = e^{i\theta(t)} \in S^1$ and
-$\displaystyle \rho\big(\tilde{\sigma}^{[2]}(t))\big)
+$\DS \tilde{\sigma}^{[2]}(t) = \eta_t(\tilde{\sigma}^{[1]}(t))$ with
+$\DS \eta_t = e^{i\theta(t)} \in S^1$ and
+$\DS \rho\big(\tilde{\sigma}^{[2]}(t))\big)
 \big( (\tilde{\sigma}^{[2]})_\ast(t,1) \big) = \theta'(t)$
 for $a \leq t \leq b$.
 
 Moreover, if
-$\displaystyle \tilde{\sigma}^{[1]}(a) = \tilde{\sigma}^{[2]}(a)$, then
+$\DS \tilde{\sigma}^{[1]}(a) = \tilde{\sigma}^{[2]}(a)$, then
 we can choose $\theta$ such that $\theta(a) = 0$.
 \end{prop}
 
 \begin{proof}
-\stage{i} Since $\displaystyle \pi_S(\tilde{\sigma}^{[i]}(t)) = \sigma(t)$ for
+\stage{i} Since $\DS \pi_S(\tilde{\sigma}^{[i]}(t)) = \sigma(t)$ for
 $a \leq t \leq b$ and $i =1,2$, we have that
-$\displaystyle \tilde{\sigma}^{[i]}(t) \in \TS_{\sigma(t)} S_c$ for
+$\DS \tilde{\sigma}^{[i]}(t) \in \TS_{\sigma(t)} S_c$ for
 $a \leq t \leq b$ and $i =1,2$.  Thus, for each $t \in [a,b]$,
-there exists $\displaystyle \eta_t \in S^1$ such that
-$\displaystyle \tilde{\sigma}^{[2]}(t) = \eta_t(\tilde{\sigma}^{[1]}(t))$.
-Since $\displaystyle \tilde{\sigma}^{[i]}$ for $i =1,2$ are
-smooth functions, we have that $\displaystyle \eta:[a,b] \to S^1$
+there exists $\DS \eta_t \in S^1$ such that
+$\DS \tilde{\sigma}^{[2]}(t) = \eta_t(\tilde{\sigma}^{[1]}(t))$.
+Since $\DS \tilde{\sigma}^{[i]}$ for $i =1,2$ are
+smooth functions, we have that $\DS \eta:[a,b] \to S^1$
 defined by
 $\eta(t)= \eta_t$ for $a \leq t \leq b$ is also smooth.
 
 Let $\theta:[a,b] \to \RR$ be a function such that
-$\displaystyle e^{i \theta(t)} = \eta(t)$.  Since $\eta$ is smooth and
-$[a,b]$ is connected, we get that $\displaystyle \eta([a,b]) \subset S^1$ is
+$\DS e^{i \theta(t)} = \eta(t)$.  Since $\eta$ is smooth and
+$[a,b]$ is connected, we get that $\DS \eta([a,b]) \subset S^1$ is
 connected.  We may therefore assume that $\theta([a,b])$ is connected
 and $\theta:[a,b] \to \RR$ is smooth \footnote{For $t$ in a small
 enough neighbourhood $V$ of $t_0 \in [a,b]$, we have that
@@ -1702,10 +1702,10 @@ for $t\in V$.  We have used a branch of the logarithm function.
 Since $\log$ is locally smooth and $\eta$ is smooth, we have that
 $\theta$ is locally smooth.  Since $t_0 \in [a,b]$ is arbitrary, we
 may concluded that $\theta:[a,b] \to \RR$ is smooth.}.  We have that
-$\displaystyle (\RR,e^{i\theta})$ is a covering of $\displaystyle S^1$
+$\DS (\RR,e^{i\theta})$ is a covering of $\DS S^1$
 (Figure~\ref{FundGr2}).
 
-If $\displaystyle \tilde{\sigma}^{[1]}(a) = \tilde{\sigma}^{[2]}(a)$,
+If $\DS \tilde{\sigma}^{[1]}(a) = \tilde{\sigma}^{[2]}(a)$,
 then we may take $\theta(a) = 0$.  In that case, $\theta$ is uniquely
 defined because $\theta([a,b])$ is connected. 
 
@@ -1716,12 +1716,12 @@ chart of $S_c$ as defined in Subsection~\ref{subsectTSc}.
 
 Let $\mu:[c,d] \to W$ be the local representation of $\sigma$ where
 $[c,d] \subset [a,b]$; namely, $\sigma = \phi \circ \mu$ on $[c,d]$.
-Let $\displaystyle \mu^{[i]}:[c,d] \to \tilde{W}$ be the local
-representation of $\displaystyle \tilde{\sigma}^{[i]}$ for $i =1,2$;
-namely, $\displaystyle \tilde{\sigma}^{[i]} = \tilde{\phi} \circ \mu^{[i]}$  on
+Let $\DS \mu^{[i]}:[c,d] \to \tilde{W}$ be the local
+representation of $\DS \tilde{\sigma}^{[i]}$ for $i =1,2$;
+namely, $\DS \tilde{\sigma}^{[i]} = \tilde{\phi} \circ \mu^{[i]}$  on
 $[c,d]$ for $i =1,2$.  We have for $i=1,2$ that
-$\displaystyle \mu^{[i]}(t) = (\mu(t), \psi^{[i]}(t))$ for some
-$\displaystyle \psi^{[i]}(t) \in \RR$.
+$\DS \mu^{[i]}(t) = (\mu(t), \psi^{[i]}(t))$ for some
+$\DS \psi^{[i]}(t) \in \RR$.
 Moreover,
 \[
 \tilde{\sigma}^{[2]}(t) = \eta_t\big(\tilde{\sigma}^{[1]}(t)\big)
@@ -1729,7 +1729,7 @@ Moreover,
 = \big(\phi(\mu(t)), (\theta(t) + \psi^{[1]}(t)).E(\mu(t))\big)
 \]
 for $c \leq t \leq d$.  Thus
-$\displaystyle \psi^{[2]}(t) = \theta(t) + \psi^{[1]}(t)$ 
+$\DS \psi^{[2]}(t) = \theta(t) + \psi^{[1]}(t)$ 
 for $c \leq t \leq d$.
 
 We have
@@ -1779,7 +1779,7 @@ and
 as we explain below.
 
 For $s$ fixed, we have that
-$\displaystyle (\eta_s)_\ast \left( \tilde{\sigma}^{[1]}_\ast(t,1) \right)
+$\DS (\eta_s)_\ast \left( \tilde{\sigma}^{[1]}_\ast(t,1) \right)
 =\left( \eta_s(\tilde{\sigma}^{[1]})\right)_\ast(t,1)$.
 Moreover, since
 \[
@@ -1798,7 +1798,7 @@ we get
 (\theta(s) + \psi^{[1]}(t)).\tilde{E}(\sigma(t))\right),
 \diff_{\VEC{w},\nu}
 \tilde{\phi}(\VEC{w},\nu)\Big|_{(\VEC{w},\nu) = (\mu(t), \theta(s) + \psi^{[1]}(t))}
-\begin{pmatrix} \mu'(t) \\ \displaystyle \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
+\begin{pmatrix} \mu'(t) \\ \DS \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
 \right) \ .
 \end{align*}
 Hence, at $t=s$, we get
@@ -1807,12 +1807,12 @@ Hence, at $t=s$, we get
 &= \left(\left(\sigma(t), \psi^{[2]}(t)).\tilde{E}(\sigma(t))\right),
 \diff_{\VEC{w},\nu}
 \tilde{\phi}(\VEC{w},\nu)\Big|_{(\VEC{w},\nu) = \mu^{[2]}(t)}
-\begin{pmatrix} \mu'(t) \\ \displaystyle \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
+\begin{pmatrix} \mu'(t) \\ \DS \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
 \right) \\
 &= \left( \tilde{\sigma}^{[2]}(t),
 \diff_{\VEC{w},\nu}
 \tilde{\phi}(\VEC{w},\nu)\Big|_{(\VEC{w},\nu) = \mu^{[2]}(t)}
-\begin{pmatrix} \mu'(t) \\ \displaystyle \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
+\begin{pmatrix} \mu'(t) \\ \DS \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
 \right) \ .
 \end{align*}
 It follows that
@@ -1822,7 +1822,7 @@ It follows that
 &\qquad= \rho(\tilde{\sigma}^{[2]}(t))\left( \tilde{\sigma}^{[2]}(t),
 \diff_{\VEC{w},\nu}\tilde{\phi}(\VEC{w},\nu)
 \big|_{(\VEC{w},\nu)=\mu^{[2]}(t)}
-\begin{pmatrix} \mu'(t) \\ \displaystyle \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
+\begin{pmatrix} \mu'(t) \\ \DS \dydx{\psi^{[1]}}{t}(t) \end{pmatrix}
 \right) \\
 &\qquad= \rho(\tilde{\sigma}^{[2]}(t))\left(
 (\eta_t)_\ast \left( \tilde{\sigma}^{[1]}_\ast(t,1) \right)\right)
@@ -1840,13 +1840,13 @@ lemma.
 
 \begin{prop} \label{propHLexists}
 Let $S$ be a $2$-dimensional Riemannian manifold.  Moreover, let
-$\MM_c = \displaystyle \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c} \}$
+$\MM_c = \DS \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c} \}$
 be a connection on $S_c$ where $\rho$ is a connection $1$-form
 associated to $\MM_c$.
-Suppose that $\displaystyle \sigma:[a,b] \to S$ a piecewise
-$\displaystyle C^\infty$ curve \footnotemark\ and that
+Suppose that $\DS \sigma:[a,b] \to S$ a piecewise
+$\DS C^\infty$ curve \footnotemark\ and that
 $(\sigma(a),\VEC{x}) \in S_c$.
-Then there exists a unique piecewise $\displaystyle C^\infty$
+Then there exists a unique piecewise $\DS C^\infty$
 curve $\tilde{\sigma}:[a,b] \to S_c$ such that
 \begin{enumerate}
 \item $\tilde{\sigma}(a) = (\sigma(a),\VEC{x})$,
@@ -1861,11 +1861,11 @@ The curve $\tilde{\sigma}$ is called the
 through $(\sigma(a),\VEC{x})$.
 \end{prop}
 
-\footnotetext{Recall that a piecewise $\displaystyle C^\infty$ function 
-$\displaystyle f:[a,b] \to \RR^n$ is a continuous function which is of class
-$\displaystyle C^\infty$ on all the closed intervals delimited by the
+\footnotetext{Recall that a piecewise $\DS C^\infty$ function 
+$\DS f:[a,b] \to \RR^n$ is a continuous function which is of class
+$\DS C^\infty$ on all the closed intervals delimited by the
 finite number of points in $[a,b]$ where it is not
-$\displaystyle C^\infty$.}
+$\DS C^\infty$.}
 
 \begin{rmk}
 It follows from Proposition~\ref{thmConn1form} that
@@ -1882,7 +1882,7 @@ condition listed before the Definition~\ref{defnLiftId} is satisfied.
 \begin{proof}
 It is enough to prove the proposition for a smooth curve
 $\sigma:[a,b]\to S_c$ because we can then use the result on each smooth
-sections of a piecewise $\displaystyle C^\infty$ curve using the
+sections of a piecewise $\DS C^\infty$ curve using the
 end point of the horizontal lift of a smooth subsection as the
 starting point on $S_c$ of the horizontal lift of the next smooth
 subsection.
@@ -1892,19 +1892,19 @@ $\sigma(a) \in U$.  We prove that there exists a unique horizontal lift
 of $\sigma$ on $U$.
 
 We have seen in Remark~\ref{rmkUS1eScU} that
-$\displaystyle G: U \times S^1 \to S_c(U) = \bigcup_{\VEC{u} \in U} S_c(\VEC{u})$
+$\DS G: U \times S^1 \to S_c(U) = \bigcup_{\VEC{u} \in U} S_c(\VEC{u})$
 defined by
 $G(\VEC{u},\eta) = \big(\VEC{u},\theta.\tilde{E}(\VEC{u})\big)$
-for $\VEC{u} \in U$ and $\displaystyle \eta = e^{i\theta} \in S^1$
+for $\VEC{u} \in U$ and $\DS \eta = e^{i\theta} \in S^1$
 is an isomorphism, where
-$\displaystyle \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
+$\DS \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
 $\VEC{u} \in U$.
 Let $G_1(\VEC{u}) = G(\VEC{u},1) = (\VEC{u}, 0.\tilde{E}(\VEC{u}))
 = (\VEC{u}, \tilde{E}(\VEC{u}))$ for $\VEC{u} \in U$.  The map
 $G_1:U \to S_c(U)$ is smooth.
 
 We consider the connection
-$\displaystyle \check{\MM}_c
+$\DS \check{\MM}_c
 = \{ \check{M}_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c(U)}$
 on $S_c(U)$ with its associated connection $1$-from $\check{\rho}$
 defined in Examples~\ref{eggConnPAp1} and \ref{eggConnPAp2}.
@@ -1917,7 +1917,7 @@ We have that $\check{\sigma}(a) = G_1(\sigma(a))$ and
 $\pi_S(\check{\sigma}(t)) = \sigma(t)$ for $a \leq t \leq c$.
 Moreover, since
 $\check{M}_{\eta(\VEC{u},\tilde{E}(\VEC{u}))} =(G_\eta)_\ast(\TS_{\VEC{u}}S)$
-for $\VEC{u} \in U$ and $\displaystyle \eta \in S^1$ by definition, we
+for $\VEC{u} \in U$ and $\DS \eta \in S^1$ by definition, we
 get that $\check{\sigma}_\ast(t,1) = (G_1)_\ast(\sigma_\ast(t,1)) \in 
 \check{M}_{\tilde{\sigma}(t)}$ for $a \leq t \leq c$
 because $\sigma_\ast(t,1) \in \TS_{\sigma(t)} S$.
@@ -1958,9 +1958,9 @@ smallest of $c$ and $\check{c}$, we may assume that $c = \check{c}$.
 It follows from Proposition~\ref{proUnHorLift} that there exists
 $\zeta:[a,c] \to \RR$ with $\zeta(a) = 0$ such that 
 $\check{\nu}(t) = \eta_t(\check{\sigma}(t))$ with
-$\displaystyle \eta_t = e^{i\zeta(t)}$
+$\DS \eta_t = e^{i\zeta(t)}$
 and
-$\displaystyle \check{\rho}\big(\check{\nu}(t))\big)
+$\DS \check{\rho}\big(\check{\nu}(t))\big)
 \big(\check{\nu}_\ast(t,1) \big) = \zeta'(t)$
 for $a \leq t \leq c$.
 Since $\check{\nu}$ is a horizontal lift of $\sigma$, we have that
@@ -1970,14 +1970,14 @@ $\check{\nu}(t) = \check{\sigma}(t)$ for $a \leq t \leq c$.
 
 \stage{ii} According to Corollary~\ref{cor2rho2do}, there exists a
 differential $1$-form $\omega$ on $U$ such that
-$\displaystyle \check{\rho} - \rho = \pi_S^\ast{(\omega)}$.  Choose a curve
+$\DS \check{\rho} - \rho = \pi_S^\ast{(\omega)}$.  Choose a curve
 $\tilde{\sigma}:[a,c]\to S_c(U)$ such that
 $\pi_S(\tilde{\sigma}(t)) = \sigma(t)$ for $a \leq t \leq c$.
 It follows from Proposition~\ref{proUnHorLift} that there exists
 a smooth function $\xi:[a,c] \to \RR$ such that
-$\displaystyle \tilde{\sigma}(t) = \eta_t(\check{\sigma}(t))$ with
-$\displaystyle \eta_t = e^{i\xi(t)} \in S^1$ and
-$\displaystyle \check{\rho}\big(\tilde{\sigma}(t))\big)
+$\DS \tilde{\sigma}(t) = \eta_t(\check{\sigma}(t))$ with
+$\DS \eta_t = e^{i\xi(t)} \in S^1$ and
+$\DS \check{\rho}\big(\tilde{\sigma}(t))\big)
 \big( \tilde{\sigma}_\ast(t,1) \big) = \xi'(t)$
 for $a \leq t \leq c$.
 
@@ -2009,7 +2009,7 @@ of $\sigma$ if and only if
 $\xi'(t) = \omega(\sigma(t))\big(\sigma_\ast(t,1)\big)$
 for $a \leq t \leq c$.  Namely, $\tilde{\sigma}$ is a horizontal
 lift of $\sigma$ if and only if 
-$\displaystyle \xi(t) = \int_a^t \omega(\sigma(s))\big(\sigma_\ast(s,1)\big)
+$\DS \xi(t) = \int_a^t \omega(\sigma(s))\big(\sigma_\ast(s,1)\big)
 \dx{s} + \xi_0$ for $a \leq t \leq c$ and $\xi_0 \in \RR$.
 Hence, each horizontal lift $\tilde{\sigma}$ of $\sigma$ is of the
 form $\tilde{\sigma} = \eta_{t,\xi_0}(\check{\sigma}(t))$ for
@@ -2044,7 +2044,7 @@ lift $\hat{\sigma}:[t_f - \epsilon,t_f + \epsilon] \to S_c(U)$
 of $\sigma$ such that $\hat{\sigma}(t_f) = (\sigma(t_f), \VEC{y})$
 for $(\sigma(t_f),\VEC{y}) \in S_c$ arbitrary but fixed.
 
-There exists $\displaystyle \eta \in S^1$ such that 
+There exists $\DS \eta \in S^1$ such that 
 $\tilde{\sigma}(t_f - \epsilon) = \eta(\hat{\sigma}(t_f - \epsilon))$.
 Using Proposition~\ref{proERequR}, it is easy to verify that 
 $\eta \circ \tilde{\sigma}$ is a horizontal lift; namely, that (1), (2)
@@ -2094,7 +2094,7 @@ and
 \end{align*}
 for all $\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big) \in
 \TS_{(\VEC{u},\VEC{x})} S_c$ where
-$\displaystyle \upsilon = e^{i \pi/2} = i \in S^1$.
+$\DS \upsilon = e^{i \pi/2} = i \in S^1$.
 \end{defn}
 
 Recall from Lemma~\ref{lemmaPsast} that
@@ -2104,26 +2104,26 @@ for all $((\VEC{u},\VEC{x}), (\VEC{p},\VEC{q})) \in
 Using local charts, it is also easy to prove that
 $\omega_1$ and $\omega_2$ are smooth because we assume that $S$ is a
 smooth manifold and
-the inner product $\ps{}{}_{\VEC{u}}$ on $\displaystyle \TS_{\VEC{u}} S$
+the inner product $\ps{}{}_{\VEC{u}}$ on $\DS \TS_{\VEC{u}} S$
 is given by a smooth mapping
-$\displaystyle \tau : S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$.
+$\DS \tau : S \to \bigcup_{\VEC{u}\in S} \T^2(\TS_{\VEC{u}} S)$.
 We will give another proof of this fact later on.
 
 \begin{prop}
 Let $S$ be an oriented $2$-dimensional Riemannian manifold.  Suppose
-that $\displaystyle \MM_c
+that $\DS \MM_c
 = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c}$
 is a connection on $S_c$ and that $\rho$ is a connection $1$-form
 associated to $\MM_c$.  Then
 $\{\rho(\VEC{u},\VEC{x}),\omega_1(\VEC{u},\VEC{x}),\omega_2(\VEC{u},\VEC{x})\}$
-is a basis of $\displaystyle \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right)$
+is a basis of $\DS \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right)$
 for all $(\VEC{u},\VEC{x}) \in S_c$.
 \end{prop}
 
 \begin{proof}
-Since $\displaystyle \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right)$
+Since $\DS \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right)$
 is the dual space of $\TS_{(\VEC{u},\VEC{x})} S_c$, we have that
-$\displaystyle \dim \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right) = 3$.
+$\DS \dim \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right) = 3$.
 It therefore suffices to prove that $\rho(\VEC{u},\VEC{x})$,
 $\omega_1(\VEC{u},\VEC{x})$ and $\omega_2(\VEC{u},\VEC{x})$
 are linearly independent.  To prove that, it suffices to verify that
@@ -2160,13 +2160,13 @@ $\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big)$ is non-null.
 
 \begin{prop} \label{propEtaOmegai}
 Let $S$ be an oriented $2$-dimensional Riemannian manifold.  Given
-$\displaystyle \eta = e^{i\theta} \in S^1$, we have that
-$\displaystyle
+$\DS \eta = e^{i\theta} \in S^1$, we have that
+$\DS
 \eta^\ast(\omega_1) = \cos(\theta)\,\omega_1 + \sin(\theta)\,\omega_2$
-and $\displaystyle
+and $\DS
 \eta^\ast(\omega_2)= -\sin(\theta)\,\omega_1 + \cos(\theta)\,\omega_2$.
 Moreover,
-$\displaystyle \eta^\ast(\omega_1 \wedge \omega_2) = \omega_1 \wedge \omega_2$.
+$\DS \eta^\ast(\omega_1 \wedge \omega_2) = \omega_1 \wedge \omega_2$.
 \end{prop}
 
 \begin{proof}
@@ -2240,7 +2240,7 @@ obtain
 \begin{prop}
 Let $S$ be an oriented $2$-dimensional Riemannian manifold.  There
 exists a differential $2$-form $\omega$ on $S$ such that
-$\displaystyle \omega_1 \wedge \omega_2 = (\pi_S)^\ast(\omega)$.
+$\DS \omega_1 \wedge \omega_2 = (\pi_S)^\ast(\omega)$.
 \end{prop}
 
 \begin{proof}[Proof (Sketch)]
@@ -2261,7 +2261,7 @@ for some $\VEC{q}$.  If we substitute this expression in the definition of
 $\omega_i$, then we get
 $\omega_i(\VEC{u},\VEC{x}) \big( H(\VEC{u},\VEC{x})\big) = 0$ for
 $i=1,2$.  Moreover, we have from the previous proposition that
-$\displaystyle \eta^\ast(\omega_1 \wedge \omega_2) = \omega_1 \wedge \omega_2$.
+$\DS \eta^\ast(\omega_1 \wedge \omega_2) = \omega_1 \wedge \omega_2$.
 
 The differential $2$-form $\omega$ on $S$ is defined as follows.
 Choose $(\VEC{u},\VEC{p}) \in S_c$ arbitrary but fixed.
@@ -2283,14 +2283,14 @@ $\big((\VEC{u},\VEC{p}),(\VEC{x}_1,\VEC{q}_1)\big),
 \TS_{(\VEC{u},\VEC{p})} S_c$.
 
 We also have by construction that
-$\displaystyle (\pi_S)^\ast(\omega) = \omega_1 \wedge \omega_2$.
+$\DS (\pi_S)^\ast(\omega) = \omega_1 \wedge \omega_2$.
 \end{proof}
 
 \begin{defn}
 Let $S$ be an oriented $2$-dimensional Riemannian manifold.
 The {\bfseries volume element}\index{Volume Element} on $S$, denoted
 $\dx{V}$, is the differential $2$-form on $S$ such that
-$\displaystyle (\pi_S)^\ast(\dx{V}) = \omega_1 \wedge \omega_2$.
+$\DS (\pi_S)^\ast(\dx{V}) = \omega_1 \wedge \omega_2$.
 \end{defn}
 
 To repeat the warning we have already given in Section~\ref{manifVolume},
@@ -2303,13 +2303,13 @@ $(\tilde{W},\tilde{U},\tilde{\phi})$ be a local
 chart of $S_c$ as defined in Subsection~\ref{subsectTSc}.
 let $g:U \to S_c(U)$ be the function defined by
 $g(\VEC{u}) = (\VEC{u}, \tilde{E}(\VEC{u}))$ for $\VEC{u} \in U$ where
-$\displaystyle \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
+$\DS \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$ for all
 $\VEC{u} \in U$.
 The maps $g:U \to S_c(U)$ and $\upsilon\circ g:U \to S_c(U)$ are
 smooth functions because their local representations are given by
-$\displaystyle (\tilde{\phi}^{-1} \circ g \circ \phi)(\VEC{w}) =
+$\DS (\tilde{\phi}^{-1} \circ g \circ \phi)(\VEC{w}) =
 (\VEC{w},0)$ and
-$\displaystyle (\tilde{\phi}^{-1} \circ (\upsilon\circ g) \circ \phi)
+$\DS (\tilde{\phi}^{-1} \circ (\upsilon\circ g) \circ \phi)
 (\VEC{w}) = (\VEC{w},\pi/2)$ for all $\VEC{w} \in W$ respectively.
 
 Note that $\{ g(\VEC{u}), \upsilon(g(\VEC{u})) \}$ is a basis of
@@ -2335,10 +2335,10 @@ g^\ast(\omega_1)(\VEC{u})\big(\VEC{u},\VEC{x}\big)
 \end{align*}
 where the fourth equality comes from $\pi_S \circ g = \Id_U$.
 Similarly,
-$\displaystyle g^\ast(\omega_2)(\VEC{u})\big(\VEC{u},\VEC{x}\big)
+$\DS g^\ast(\omega_2)(\VEC{u})\big(\VEC{u},\VEC{x}\big)
 = \tilde{\omega}_2(\VEC{u},\VEC{x})$
 for all $(\VEC{u},\VEC{x}) \in \TS_{\VEC{u}} S$.  Thus
-$\displaystyle \tilde{\omega}_i = g^\ast(\omega_i)$ for $i=1,2$.
+$\DS \tilde{\omega}_i = g^\ast(\omega_i)$ for $i=1,2$.
 It follows that
 \begin{align}
 \tilde{\omega}_1 \wedge \tilde{\omega}_2
@@ -2354,7 +2354,7 @@ on $\TS_{\VEC{u}}S$ for $\VEC{u} \in S$, then
 above is identical to the definition of volume elements given in
 Definition~\ref{defnVolElemD1} of Section~\ref{manifVolume}.
 
-Let $\displaystyle \rho_i = (\pi_S)^\ast(\tilde{\omega}_i)$ for
+Let $\DS \rho_i = (\pi_S)^\ast(\tilde{\omega}_i)$ for
 $i=1,2$.  The $\rho_i$ are smooth differential $1$-form on $S_c(U)$
 because the $\tilde{\omega}_i$ are smooth differential $1$-form on $U$.
 We first need to deduce some relations between the $\rho_i$ and
@@ -2404,7 +2404,7 @@ coefficients of $g(\VEC{u})$ and $\upsilon(g(\VEC{u}))$, we get
 that $\rho_i(g(\VEC{u})) = \omega_i(g(\VEC{u}))$ on
 $\TS_{g(\VEC{u})} S_c$ for $i=1,2$.
 
-Moreover, given $\displaystyle \eta = e^{i\theta} \in S^1$, we have
+Moreover, given $\DS \eta = e^{i\theta} \in S^1$, we have
 \[
 \eta^\ast(\rho_i) = \eta^\ast(\pi_S)^\ast(\tilde{\omega}_i)
 = (\pi_S \circ \eta)^\ast(\tilde{\omega}_i)
@@ -2437,19 +2437,19 @@ for $i =1,2$.  Using Proposition~\ref{propEtaOmegai}, we get
 for all $\big( g(\VEC{u}) , (\VEC{p},\VEC{q})\big) \in
 \TS_{g(\VEC{u})} S_c$.
 
-Let $\displaystyle \tilde{\eta}:S_c \to S^1$ be the function defined by
+Let $\DS \tilde{\eta}:S_c \to S^1$ be the function defined by
 $\tilde{\eta}(\VEC{u},\VEC{x}) = \eta$ if
 $(\VEC{u},\VEC{x}) = \eta(g(\VEC{u}))$.  Using local coordinates, it
 is easy to proof that the function
-$\displaystyle \tilde{\eta}: S_c \to S^1$ is a smooth function.
+$\DS \tilde{\eta}: S_c \to S^1$ is a smooth function.
 Let $\tilde{\theta}:S_c \to \RR$ be the function defined by
 $\tilde{\theta}(\VEC{u},\VEC{x}) = \theta$ where
-$\displaystyle \tilde{\eta}(\VEC{u},\VEC{x}) = e^{i\theta}$ with
+$\DS \tilde{\eta}(\VEC{u},\VEC{x}) = e^{i\theta}$ with
 $0 \leq \theta < 2\pi$.  Namely, $\theta$ is the argument of
 $\tilde{\eta}(\VEC{u},\VEC{x})$ modulo $2\pi$.
 
 Since all elements of $S_c(\VEC{u})$ are of the
-form $\eta(g(\VEC{u}))$ for some $\displaystyle \eta \in S^1$ and all
+form $\eta(g(\VEC{u}))$ for some $\DS \eta \in S^1$ and all
 elements of $\TS_{\eta(g(\VEC{u}))} S_c$ are of the form
 $\eta_\ast\big( g(\VEC{u}) , (\VEC{p},\VEC{q})\big)$
 for some $\big( g(\VEC{u}) , (\VEC{p},\VEC{q})\big) \in \TS_{g(\VEC{u})}$,
@@ -2475,11 +2475,11 @@ are smooth differential $1$-form on $S_c(U)$.  This is true for
 all local charts of $S$ and $S_c$.
 
 Let $S$ be a smooth $2$-dimensional manifold and
-$\displaystyle \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c}$
+$\DS \MM_c = \{ M_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c}$
 be a connection on $S_c$ where $\rho$ is a connection $1$-form
 associated to $\MM_c$.
 Since $\{\rho, \omega_1,\omega_2\}$ is a basis of
-$\displaystyle \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right)$
+$\DS \Omega^1\left(\TS_{(\VEC{u},\VEC{x})} S_c\right)$
 for all $(\VEC{u},\VEC{x}) \in S_c$, we have that all the differential
 $2$-forms on $S_c$ can be expressed uniquely as a linear combination
 of $\rho\wedge \omega_1$, $\rho\wedge \omega_2$ and
@@ -2494,7 +2494,7 @@ structural formulae.
 \subsection{First (Cartan) Structural Equation}
 
 Let $(W,U,\phi)$ be a local charts of $S$.  Since
-$\displaystyle \df{\rho_i} = \df{\big((\pi_S)^\ast(\tilde{\omega}_i)\big)}
+$\DS \df{\rho_i} = \df{\big((\pi_S)^\ast(\tilde{\omega}_i)\big)}
 = (\pi_S)^\ast(\df{\tilde{\omega}_i})$ and
 $\df{\tilde{\omega}_i} = A_i \dx{V}$
 for some smooth function $A_i:U \to \RR$ because $\df{\tilde{\omega}_i}$ is a
@@ -2533,11 +2533,11 @@ $\tilde{\theta}(\VEC{u},\VEC{x})$ to simply $\tilde{\theta}$.
 Using the local chart
 $(\tilde{W},\tilde{U},\tilde{\phi})$ of $S_c$ introduced in
 Subsection~\ref{subsectTSc}, we get
-$\displaystyle \tilde{\phi}^\ast(\tilde{\theta}) : W \times I \to \RR$
+$\DS \tilde{\phi}^\ast(\tilde{\theta}) : W \times I \to \RR$
 is defined by
-$\displaystyle \tilde{\phi}^\ast(\tilde{\theta})(\VEC{w},\theta) = \theta$.
+$\DS \tilde{\phi}^\ast(\tilde{\theta})(\VEC{w},\theta) = \theta$.
 Hence
-$\displaystyle \df{\big(\tilde{\phi}^\ast(\tilde{\theta})\big)}
+$\DS \df{\big(\tilde{\phi}^\ast(\tilde{\theta})\big)}
 (\VEC{w},\theta)\big((\VEC{w},\theta),(\VEC{r},t)\big) = t$ 
 for all $\big((\VEC{w},\theta),(\VEC{r},t)\big) \in
 \TS_{(\VEC{w},\theta)} (W\times I) = (W\times I) \times (\RR \times \RR)$.
@@ -2547,9 +2547,9 @@ $\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big) =
 \TS_{(\VEC{u},\VEC{x})} S_c$.  Using the function $G$ defined in
 Example~\ref{eggConnPAp1} and the differential $1$-forms
 $\omega$ and $\check{\rho}$ defined in Example~\ref{eggConnPAp2}, we get that
-$\displaystyle (G^{-1}\circ \tilde{\phi})(\VEC{w},\theta) = (\VEC{u}, \eta)$
-for $\displaystyle \eta = e^{i\theta}$ and
-$\displaystyle (G^{-1} \circ \tilde{\phi})_\ast
+$\DS (G^{-1}\circ \tilde{\phi})(\VEC{w},\theta) = (\VEC{u}, \eta)$
+for $\DS \eta = e^{i\theta}$ and
+$\DS (G^{-1} \circ \tilde{\phi})_\ast
 \big((\VEC{w},\theta),(\VEC{r},t)\big) = 
 \big((\VEC{u},\eta),(\VEC{r},t\, i \eta)\big)$.  Hence
 \begin{align*}
@@ -2609,9 +2609,9 @@ $A_2$ and $\tilde{\theta}$ are smooth.
 
 According to Corollary~\ref{cor2rho2do}, there exists a differential
 $1$-form $\omega$ on $U$ such that
-$\displaystyle \check{\rho} - \rho = \pi_S^\ast(\omega)$.  Since
+$\DS \check{\rho} - \rho = \pi_S^\ast(\omega)$.  Since
 $\{ \tilde{\omega}_1(\VEC{u}), \tilde{\omega}_2(\VEC{u}) \}$ is
-a basis of $\displaystyle \Omega^1\big(\TS_{\VEC{u}} S\big)$
+a basis of $\DS \Omega^1\big(\TS_{\VEC{u}} S\big)$
 for all $\VEC{u} \in U$, we have that
 $\omega = a_1 \tilde{\omega}_1 + a_2 \tilde{\omega}_2$ for some smooth
 functions $a_1,a_2 : U \to \RR$.  Hence
@@ -2623,7 +2623,7 @@ functions $a_1,a_2 : U \to \RR$.  Hence
 \]
 on $S_c(U)$.  Since
 $\{ \omega_1(\VEC{u},\VEC{x}), \omega_2(\VEC{u},\VEC{x}) \}$ is also a
-basis of $\displaystyle \Omega^1\big(\TS_{(\VEC{u},\VEC{x})} S_c\big)$
+basis of $\DS \Omega^1\big(\TS_{(\VEC{u},\VEC{x})} S_c\big)$
 for all $(\VEC{u},\VEC{x}) \in S_c(U)$, we can write
 \begin{equation} \label{FirstStructEq4}
 \check{\rho} - \rho = b_1 \omega_1 + b_2 \omega_2
@@ -2734,13 +2734,13 @@ Thus $\tilde{d}_1 = - c_1$ and $\tilde{d}_2 = -c_2$.  Hence $\eta_3 = \eta_2$.
 
 Let $(W,U,\phi)$ be a local charts of $S$.
 As in the proof of Proposition~\ref{propHLexists},
-we consider the connection $\displaystyle \check{\MM}_c
+we consider the connection $\DS \check{\MM}_c
 = \{ \check{M}_{(\VEC{u},\VEC{x})}\}_{(\VEC{u},\VEC{x}) \in S_c(U)}$
 on $S_c(U)$ with its associated connection $1$-from $\check{\rho}$
 defined in Examples~\ref{eggConnPAp1} and \ref{eggConnPAp2}.
 According to Corollary~\ref{cor2rho2do}, there exists a
 differential $1$-form $\omega$ on $U$ such that
-$\displaystyle \check{\rho} - \rho = (\pi_S)^\ast(\omega)$.
+$\DS \check{\rho} - \rho = (\pi_S)^\ast(\omega)$.
 
 Since $\df{\check{\rho}} = 0$ as we have seen at the end of
 Example~\ref{eggConnPAp2}, we have
@@ -2775,49 +2775,49 @@ $1$-form $\rho$.
 
 \begin{egg}
 Suppose that $S$ is an open subset of     \label{eggEuclk0}
-$\displaystyle \RR^2$ with the
+$\DS \RR^2$ with the
 standard Euclidean norm and orientation.  This is an oriented
 $2$-dimensional Riemannian manifold with the Riemann metric given by
 $\ps{(\VEC{u},\VEC{x})}{(\VEC{u},\VEC{y})}_{\VEC{u}} = \ps{\VEC{x}}{\VEC{y}}$
 for all
-$\displaystyle (\VEC{u},\VEC{x}),(\VEC{u},\VEC{y})
+$\DS (\VEC{u},\VEC{x}),(\VEC{u},\VEC{y})
 \in \TS_{\VEC{u}} S \cong S \times \RR^2$,
 where the last inner product is the standard inner product in
-$\displaystyle \RR^3$.
+$\DS \RR^3$.
 
 We use the construction given in Examples~\ref{eggConnPAp1} and
 \ref{eggConnPAp2}.  Note that the local construction presented in
 these examples can be use globally in the present example.  Namely, we
 can use the trivial local chart $(W,U,\phi)$ with
-$\displaystyle W = U = S$ and $\phi=\Id$.
+$\DS W = U = S$ and $\phi=\Id$.
 
-The map $\displaystyle G:U \times S^1 \to S_c(U)$ in
+The map $\DS G:U \times S^1 \to S_c(U)$ in
 Example~\ref{eggConnPAp1} is now defined by
 $G(\VEC{u},\eta) = \eta(\VEC{u}, \VEC{e}_1) = (\VEC{u}, \theta.\VEC{e}_1)$
-where $\displaystyle \eta = e^{i\theta} \in S^1$.  We then get a
+where $\DS \eta = e^{i\theta} \in S^1$.  We then get a
 connection on $S_c$ defined by\\
-$\displaystyle \check{\MM}_c = \{
+$\DS \check{\MM}_c = \{
 \check{M}_{\eta(\VEC{u},\VEC{e}_1)} \}_{\eta \in S^1, \VEC{u} \in S}$
 where
-$\displaystyle \check{M}_{\eta(\VEC{u},\VEC{e}_1)} = (G_\eta)_\ast(\TS_{\VEC{u}} S)
+$\DS \check{M}_{\eta(\VEC{u},\VEC{e}_1)} = (G_\eta)_\ast(\TS_{\VEC{u}} S)
 = \{ \big( \eta(\VEC{u},\VEC{e}_1), (\VEC{p},\VEC{0}) \big) : \VEC{p}
-\in \RR^2 \}$ for all $\displaystyle \eta \in S^1$ and $\VEC{u} \in S$.
+\in \RR^2 \}$ for all $\DS \eta \in S^1$ and $\VEC{u} \in S$.
 
 We have shown in Example~\ref{eggConnPAp2} that the connection $1$-form
 associated to $\check{\MM}_c$ is
-$\displaystyle \check{\rho} = (G^{-1})^\ast(\pi_2^\ast(\omega))$ where
-$\omega$ is the differential $1$-form on $\displaystyle S^1$ defined by
+$\DS \check{\rho} = (G^{-1})^\ast(\pi_2^\ast(\omega))$ where
+$\omega$ is the differential $1$-form on $\DS S^1$ defined by
 $\omega(\eta)(\eta,t \, i\eta) = t$ for all
-$\displaystyle \eta \in S^1$ and $t\in \RR$.
-Note that $\displaystyle \TS_\eta S^1 = \{ (\eta,t\, i \eta) : t \in \RR \}$.
+$\DS \eta \in S^1$ and $t\in \RR$.
+Note that $\DS \TS_\eta S^1 = \{ (\eta,t\, i \eta) : t \in \RR \}$.
 Moreover, we have also introduced in Example~\ref{eggConnPAp2} the map
-$\displaystyle \pi_2:U \times S^1 \to S^1$ defined by
+$\DS \pi_2:U \times S^1 \to S^1$ defined by
 $\pi_2(\VEC{u},\eta) = \eta$ for all
-$\displaystyle (\VEC{u},\eta) \in U \times S^1$.  
+$\DS (\VEC{u},\eta) \in U \times S^1$.  
 Given $\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big) \in
 \TS_{(\VEC{u},\VEC{x})} S_c$, there exists
-$\displaystyle \big((\VEC{u},\eta),(\VEC{p},t\, i \eta)\big)
-\in \TS_{(\VEC{u},\eta)} (U \times S^1)$ with $\displaystyle \eta = e^{i\theta}$ 
+$\DS \big((\VEC{u},\eta),(\VEC{p},t\, i \eta)\big)
+\in \TS_{(\VEC{u},\eta)} (U \times S^1)$ with $\DS \eta = e^{i\theta}$ 
 such that
 \begin{align*}
 \big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big)
@@ -2841,8 +2841,8 @@ Consider the map $\tilde{\theta}: S_c \to \RR$ defined at the beginning
 of Section~\ref{sectRiemannCurv}.
 Using the local charts $(\tilde{W},\tilde{U},\tilde{\phi})$ of $S_c$,
 in particular
-$\displaystyle \tilde{\phi}(\VEC{u},\theta) = e^{i\theta}(\VEC{u},\VEC{e}_1)
-= (\VEC{u},\theta.\VEC{e}_1)$ because $\displaystyle W = U = S$, we
+$\DS \tilde{\phi}(\VEC{u},\theta) = e^{i\theta}(\VEC{u},\VEC{e}_1)
+= (\VEC{u},\theta.\VEC{e}_1)$ because $\DS W = U = S$, we
 get that $(\tilde{\theta}\circ \tilde{\phi})(\VEC{u},\theta) = \theta$
 for all $(\VEC{u},\theta) \in \tilde{U}$ and
 \begin{align*}
@@ -2861,7 +2861,7 @@ for all $(\VEC{u},\theta) \in \tilde{U}$ and
 &= \begin{pmatrix}\VEC{0} & 1\end{pmatrix}
 \begin{pmatrix} \VEC{r} & t \end{pmatrix}^\top = t
 \end{align*}
-where $\displaystyle \VEC{r} \in \RR^2$ is such that
+where $\DS \VEC{r} \in \RR^2$ is such that
 $\VEC{p} = \diff \check{\phi}(\VEC{u}) \VEC{r}$.
 Since $\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big) \in
 \TS_{(\VEC{u},\VEC{x})} S_c$ is arbitrary, we therefore have that
@@ -2880,7 +2880,7 @@ and
 + \cos(\tilde{\theta})\, \rho_2(\VEC{u},\VEC{x})
 \]
 where $\tilde{\theta} = \tilde{\theta}(\VEC{u},\VEC{x})$,
-$\displaystyle \rho_i = (\pi_S)^\ast(\tilde{\omega}_i)$ for $i=1,2$, and
+$\DS \rho_i = (\pi_S)^\ast(\tilde{\omega}_i)$ for $i=1,2$, and
 $\{\tilde{\omega}_1,\tilde{\omega}_2\}$ is the dual basis associated to
 the basis $\{ (\VEC{u}, \VEC{e}_1) , (\VEC{u} , \VEC{e}_2) \}$ of
 $\TS_{\VEC{u}} S$.  We have for $i=1,2$ that
@@ -2924,7 +2924,7 @@ $\check{\rho} = \df{\tilde{\theta}}$ is the Riemann connection on $S_c$.
 We have already seen at the end of Example~\ref{eggConnPAp2} that
 $\df{\check{\rho}} = 0$.  Hence, we get from the second structural
 equation that the curvature $\kappa$ satisfies $\kappa = 0$ on all of
-$\displaystyle S$.
+$\DS S$.
 \end{egg}
 
 \begin{rmk}
@@ -2932,9 +2932,9 @@ Using the observation made in Remark~\ref{rmkHeptheta} and the
 associated interpretation of vector field given in
 Remark~\ref{rmkVFwithOper}, it is clear that
 $\check{\rho} = \df{\theta}$ because
-$\displaystyle \df{\theta}\Big(\pdydx{}{\theta}\Big) =
+$\DS \df{\theta}\Big(\pdydx{}{\theta}\Big) =
 \pdydx{\theta}{\theta} = 1$ and
-$\displaystyle \df{\theta}\Big(\pdydx{}{w_i}\Big) =
+$\DS \df{\theta}\Big(\pdydx{}{w_i}\Big) =
 \pdydx{\theta}{w_i} = 0$ for $i = 0,1$ since $\theta$
 does not depend on $\VEC{w}$ (i.e. on the base point $\VEC{u}$.)
 \end{rmk}
@@ -2983,7 +2983,7 @@ We have two definitions of curvature for a curve: one given in
 (\ref{DGcurvature}) and the geodesic curvature defined above.
 We prove that the curvature defined by (\ref{DGcurvature}) is the
 geodesic curvature.  Without loss of generality, we may assume that
-$\displaystyle \sigma:[a,b]\to S \subset \RR^3$ is a smooth curve
+$\DS \sigma:[a,b]\to S \subset \RR^3$ is a smooth curve
 parameterized by arc length.
 
 We have that $\sigmaU_\ast(t,1) = \big( (\sigma(t), \sigma'(t)),
@@ -3003,11 +3003,11 @@ on $\TS_{\VEC{u},\VEC{x}} S_c$ defined by
 \]
 for all $\big((\VEC{u},\VEC{x}),(\VEC{p}_i,\VEC{q}_i)\big)\in
 \TS_{(\VEC{u},\VEC{x})} S_c$ and $i =1,2$.
-If we derive $\displaystyle \|\sigma'(t)\|^2=1$ with respect to $t$, then
+If we derive $\DS \|\sigma'(t)\|^2=1$ with respect to $t$, then
 we get that $\sigma'(t) \cdot \sigma''(t) = 0$ for all $t$.
 Thus $\sigma''(t)$ is perpendicular to $\sigma'(t)$ for all $t$.
 Hence the fourth component of
-$\displaystyle H(\sigma(t),\sigma'(t))$ is $\|\sigma''(t) \|^{-1} \,
+$\DS H(\sigma(t),\sigma'(t))$ is $\|\sigma''(t) \|^{-1} \,
 \sigma''(t)$; namely, 
 \[
 H(\sigma(t),\sigma'(t))
@@ -3048,7 +3048,7 @@ The goal of this section is to prove the following amazing theorem.
 \begin{theorem}[Gauss-Bonnet] \label{thmGaussBonnet}
 Let $(S,K,h)$ be a connected, oriented and smoothly triangulated
 $2$-dimensional Riemannian manifold.
-Then $\displaystyle \frac{1}{2\pi} \int_S \kappa \dx{V} = \Chi(K)$
+Then $\DS \frac{1}{2\pi} \int_S \kappa \dx{V} = \Chi(K)$
 where $\Chi(K)$ is the the Euler characteristic of the simplicial complex $K$
 used to triangulate $S$.
 \end{theorem}
@@ -3071,11 +3071,11 @@ Let $S$ be an oriented $2$-dimensional Riemannian manifold, and
 $\os{s}{}{}{}{} = \os{\VEC{v}_0}{\VEC{v}_1}{}{}{\VEC{v}_3}$
 be an oriented $2$-simplex.  Suppose that
 \begin{enumerate}
-\item $V$ is an open set such that $\displaystyle [s] \subset V \subset \RR^2$,
+\item $V$ is an open set such that $\DS [s] \subset V \subset \RR^2$,
 \item $h:V \to S$ is a smooth, non-singular \footnotemark, and orientation
 preserving function,
-\item $\displaystyle \sigma:[a,b] \to S$ is a parametric representation of
-the piecewise $\displaystyle C^\infty$ closed curve
+\item $\DS \sigma:[a,b] \to S$ is a parametric representation of
+the piecewise $\DS C^\infty$ closed curve
 $h(\partial\, [s])$ such that the orientation on $\sigma$ is the
 orientation on $h(\partial\, [s])$ induced via $h$
 by $\partial_2 \os{s}{}{}{}{}$, and
@@ -3083,8 +3083,8 @@ by $\partial_2 \os{s}{}{}{}{}$, and
 a horizontal lift of $\sigma$ (Figure~\ref{GBfig1}).
 \end{enumerate}
 Then $\eta(\tilde{\sigma}(b)) = \tilde{\sigma}(a)$ for
-$\displaystyle \eta = e^{i \theta} \in S^1$ with
-$\displaystyle \theta = -\int_{h([s])} \kappa \dx{V}$.
+$\DS \eta = e^{i \theta} \in S^1$ with
+$\DS \theta = -\int_{h([s])} \kappa \dx{V}$.
 \end{prop}
 
 \footnotetext{$h$ non-singular means that
@@ -3094,7 +3094,7 @@ Suppose that $\os{\VEC{x}_{i_0}}{}{}{}{\VEC{x}_{i_1}}$
 is the oriented $1$-simplex associated to a $1$-simplex
 $(\VEC{x}_{i_0},\VEC{x}_{i_1})$ of a simplicial complex $K$.
 For convenience, we adopted the convention that
-$\displaystyle \int_{\osscript{\VEC{x}_{i_0}}{}{}{}{\VEC{x}_{i_1}}} = 
+$\DS \int_{\osscript{\VEC{x}_{i_0}}{}{}{}{\VEC{x}_{i_1}}} = 
 \int_\alpha$ where $\alpha$ is the singular $1$-cube defined by
 $\alpha(t) = \VEC{x}_{i_0} + t (\VEC{x}_{i_1} - \VEC{x}_{i_0})$ for
 $0 \leq t \leq 1$ (or any equivalent parametric representation that
@@ -3102,7 +3102,7 @@ respect the orientation).  More generally, suppose that
 $\os{\VEC{x}_{i_0}}{\VEC{x}_{i_1}}{}{}{\VEC{x}_{i_2}}$
 is the oriented $2$-simplex associated to a $2$-simplex 
 $(\VEC{x}_{i_0},\VEC{x}_{i_1},\VEC{x}_{i_2})$ of a simplicial complex
-$K$, then $\displaystyle
+$K$, then $\DS
 \int_{\partial_s \osscript{\VEC{x}_{i_1}}{\VEC{x}_{i_2}}{}{}{\VEC{x}_{i_3}}}
 = \int_\alpha$ where
 \[
@@ -3118,7 +3118,7 @@ $K$, then $\displaystyle
 \]
 (or any equivalent parametric representation that respect the orientation).
 We have\\
-$\displaystyle
+$\DS
 \int_{\partial_s \osscript{\VEC{v}_{i_1}}{\VEC{v}_{i_2}}{}{}{\VEC{v}_{i_3}}}
 = \int_{\osscript{\VEC{v}_{i_0}}{}{}{}{\VEC{v}_{i_1}}}
 - \int_{\osscript{\VEC{v}_{i_0}}{}{}{}{\VEC{v}_{i_2}}}
@@ -3138,7 +3138,7 @@ Let $\rho$ be the Riemannian connection on $S_c$ given by
 Theorem~\ref{thmRconnect}.
 
 Without loss of generality, we may use the parametric
-representation $\displaystyle \sigma:[0,3] \to S$ of
+representation $\DS \sigma:[0,3] \to S$ of
 $h(\partial [s])$ defined by
 \[
 \sigma(t) =
@@ -3180,7 +3180,7 @@ To prove that $\tilde{h}$ is a smooth function, a close look at the
 beginning of the proof of Proposition~\ref{propHLexists} shows that
 $\tilde{\nu}_r(t)$ is given locally by
 $\tilde{\nu}_r(t) = \eta_{t,r}(\check{\sigma}_r(t))$
-where $\displaystyle (t,r) \mapsto \eta_{t,r} \in S^1$ is smooth
+where $\DS (t,r) \mapsto \eta_{t,r} \in S^1$ is smooth
 and $\check{\sigma}_r(t) = G_1(\nu_r(t))$.  It suffices to replace $\sigma$
 in that proof by $\nu_r$.  The smooth extension of $\tilde{h}$ to an open
 neighbourhood of $[s]$ is illustrated in Figure~\ref{GBfig3}.
@@ -3239,7 +3239,7 @@ $\alpha(t) = \VEC{v}_0 + t(\VEC{v}_1-\VEC{v}_0)$ for $0\leq t \leq 1$, then
 &= \int_0^1 \rho(\tilde{\tau}(t))\big(\tilde{\tau}_\ast(t,1)\big) \dx{t} = 0
 \end{align*}
 because $\tilde{\tau}$ on $[0,1]$ is a horizontal lift of $\sigma$ and thus
-$\displaystyle \rho(\tilde{\tau}(t)) \big(\tilde{\tau}_\ast(t,1)\big) = 0$
+$\DS \rho(\tilde{\tau}(t)) \big(\tilde{\tau}_\ast(t,1)\big) = 0$
 for $t\in [0,1]$ (see Proposition~\ref{propHLexists}).  For the
 same reason,
 \[
@@ -3252,7 +3252,7 @@ $\tilde{\tau}(2) = \tilde{\sigma}(2) = (\sigma(2),\VEC{x}_2)$, we have
 from Proposition~\ref{proUnHorLift} that there exists a smooth function
 $\theta:[2,3]\to \RR$ such that $\theta(2) = 0$,
 $\tilde{\tau}(t) = \eta_t\big(\tilde{\sigma}(t)\big)$ with
-$\displaystyle \eta_t = e^{i\theta(t)} \in S^1$ for $2\leq t \leq 3$, and
+$\DS \eta_t = e^{i\theta(t)} \in S^1$ for $2\leq t \leq 3$, and
 $\rho(\tilde{\tau}(t))\big(\tilde{\tau}_\ast(t,1)\big) = \theta'(t)$
 for $2\leq t \leq 3$.  It follows that
 $\eta_3(\tilde{\sigma}(3)) = \tilde{\tau}(3) = \tilde{\nu}_0(1)
@@ -3280,26 +3280,26 @@ in the previous proposition.  We chose the must convenient one.
   
 From the Mean Value Theorem for integrals, we have that
 $\kappa(\sigma(a))$ is the limit of\\
-$\displaystyle \int_{h([s])} \kappa \dx{V} \big/ \int_{h([s])}\dx{V}$ as
+$\DS \int_{h([s])} \kappa \dx{V} \big/ \int_{h([s])}\dx{V}$ as
 $[s]$ shrink to $\VEC{v}_0$.  
 
 There may be no rotation as stated in the previous proposition 
-despite the fact that $\displaystyle \int_{h([s])} \kappa \dx{V}$
+despite the fact that $\DS \int_{h([s])} \kappa \dx{V}$
 is not be null.  We may have that
-$\displaystyle \int_{h([s])} \kappa \dx{V}$ is a multiple of $2\pi$.
+$\DS \int_{h([s])} \kappa \dx{V}$ is a multiple of $2\pi$.
 \end{rmk}
 
 Suppose that $S$ be a $2$-dimensional Riemannian manifold and that
 $\breve{\sigma}:[0,L] \to S$ is a parametric representation by arc 
-length of a piecewise $\displaystyle C^\infty$ curve $\sigma:[a,b]\to S$
+length of a piecewise $\DS C^\infty$ curve $\sigma:[a,b]\to S$
 of length $L$ such that $\sigma(t) \neq \VEC{0}$ for all but a finite
 number of values of $t$ \footnote{If $\sigma'(t) \neq \VEC{0}$ for all but a
 finite number of values of $t$, then we can define the arc length function
 $s:[a,b] \to [0,L]$ by defining it on each of the intervals where
 $\sigma'(t) \neq \VEC{0}$ and summing them.  As usual, the piecewise
-$\displaystyle C^\infty$ parametric representation by arc length
+$\DS C^\infty$ parametric representation by arc length
 is given by
-$\displaystyle \breve{\sigma} = \sigma \circ s^{-1}:[0,L]\to [a,b]$.}. 
+$\DS \breve{\sigma} = \sigma \circ s^{-1}:[0,L]\to [a,b]$.}. 
 We set
 \[
 \tau(\sigma) = \int_0^L \kappa_{\breve{\sigma}}(t) \dx{t} \ ,
@@ -3307,7 +3307,7 @@ We set
 where $\kappa_{\breve{\sigma}}(t)$ is the geodesic curvature of
 $\breve{\sigma}$ at $t$ defined in the previous section.
 We have that $\tau$ defines a linear mapping on the space of all
-piecewise $\displaystyle C^\infty$ curves on $S$.  If
+piecewise $\DS C^\infty$ curves on $S$.  If
 \[
 \sigma(t) =
 \begin{cases}
@@ -3315,7 +3315,7 @@ piecewise $\displaystyle C^\infty$ curves on $S$.  If
 \sigma_2(t) & \quad \ \text{if}\ c < t \leq b
 \end{cases}
 \]
-for some $c \in\, ]a,b[$, and piecewise $\displaystyle C^\infty$ curves
+for some $c \in\, ]a,b[$, and piecewise $\DS C^\infty$ curves
 $\sigma_1:[a,c] \to S$ and $\sigma_2:[c,b] \to S$, then
 $\tau(\sigma) = \tau(\sigma_1) + \tau(\sigma_2)$.
 
@@ -3325,53 +3325,53 @@ Suppose that:
 and $\os{s}{}{}{}{} = \os{\VEC{v}_0}{\VEC{v}_1}{}{}{\VEC{v}_3}$
 is an oriented $2$-simplex satisfying the hypotheses of
 Proposition~\ref{propRotSimpl},
-\item $\displaystyle \sigma^{\osscript{s}{}{}{}{}}:[a,b] \to S$ is a parametric
-representation of the piecewise $\displaystyle C^\infty$ closed curve
+\item $\DS \sigma^{\osscript{s}{}{}{}{}}:[a,b] \to S$ is a parametric
+representation of the piecewise $\DS C^\infty$ closed curve
 $h(\partial\, [s])$ such that the orientation on
-$\displaystyle \sigma^{\osscript{s}{}{}{}{}}$ is the orientation
+$\DS \sigma^{\osscript{s}{}{}{}{}}$ is the orientation
 on $h(\partial\,[s])$ induces via $h$ by $\partial_2 \os{s}{}{}{}{}$, and
 \item $t_0 = a < t_1 < t_2 < t_3 = b$ are such that
-$\displaystyle \sigma^{\osscript{s}{}{}{}{}}$ is of class
-$\displaystyle C^\infty$ on $[t_j,t_{j+1}]$ for $0 \leq j < 3$.
+$\DS \sigma^{\osscript{s}{}{}{}{}}$ is of class
+$\DS C^\infty$ on $[t_j,t_{j+1}]$ for $0 \leq j < 3$.
 \end{enumerate}
 Let
 \begin{enumerate}
-\item $\displaystyle \sigma_j^{\osscript{s}{}{}{}{}}
+\item $\DS \sigma_j^{\osscript{s}{}{}{}{}}
 = \sigma^{\osscript{s}{}{}{}{}}\big|_{[t_j,t_{j+1}]}$ for $0 \leq j < 3$.
-\item $\displaystyle \sigmaU_j^{\osscript{s}{}{}{}{}} :[t_j,t_{j+1}]
+\item $\DS \sigmaU_j^{\osscript{s}{}{}{}{}} :[t_j,t_{j+1}]
 \to \TS\, S$ be the curve defined by
-$\displaystyle \sigmaU_j^{\osscript{s}{}{}{}{}}(t)
+$\DS \sigmaU_j^{\osscript{s}{}{}{}{}}(t)
 = \big(\sigma^{\osscript{s}{}{}{}{}}(t),(\sigma^{\osscript{s}{}{}{}{}})'(t)\big)$
 for $t_j \leq t \leq t_{j+1}$ and $0 \leq j < 3$, and
-\item $\displaystyle \tilde{\sigma}_j^{\osscript{s}{}{}{}{}}:[t_j,t_{j+1}]$
-be the horizontal lift of $\displaystyle \sigma_j^{\osscript{s}{}{}{}{}}$
-with $\displaystyle \tilde{\sigma}_j^{\osscript{s}{}{}{}{}}(t_j)
+\item $\DS \tilde{\sigma}_j^{\osscript{s}{}{}{}{}}:[t_j,t_{j+1}]$
+be the horizontal lift of $\DS \sigma_j^{\osscript{s}{}{}{}{}}$
+with $\DS \tilde{\sigma}_j^{\osscript{s}{}{}{}{}}(t_j)
 = \tilde{\sigma}_{j-1}^{\osscript{s}{}{}{}{}}(t_j)$ for $0 < j < 3$,
-and $\displaystyle \tilde{\sigma}_0^{\osscript{s}{}{}{}{}}(t_0)
+and $\DS \tilde{\sigma}_0^{\osscript{s}{}{}{}{}}(t_0)
 = \sigmaU_0^{\osscript{s}{}{}{}{}}(t_0)
 = \big(\sigma^{\osscript{s}{}{}{}{}}(t_0),
 (\sigma^{\osscript{s}{}{}{}{}})'(t_0)\big)$.
 \end{enumerate}
-The internal angle $\displaystyle \mu_2^{\osscript{s}{}{}{}{}}$
-and external angle $\displaystyle \nu_2^{\osscript{s}{}{}{}{}}$ at
-$\displaystyle \sigma^{\osscript{s}{}{}{}{}}(t_2)$ are defined
+The internal angle $\DS \mu_2^{\osscript{s}{}{}{}{}}$
+and external angle $\DS \nu_2^{\osscript{s}{}{}{}{}}$ at
+$\DS \sigma^{\osscript{s}{}{}{}{}}(t_2)$ are defined
 in the following figure.
 \pdfbox{riemann_geom/gbfig4}
 We define the internal angle
-$\displaystyle \mu_1^{\osscript{s}{}{}{}{}}$ and
-the external angle $\displaystyle \nu_1^{\osscript{s}{}{}{}{}}$ at
-$\displaystyle \sigma^{\osscript{s}{}{}{}{}}(t_1)$, and the internal
-angle $\displaystyle \mu_3^{\osscript{s}{}{}{}{}}$ and the
-external angle $\displaystyle \nu_3^{\osscript{s}{}{}{}{}}$ at
-$\displaystyle \sigma^{\osscript{s}{}{}{}{}}(t_3)
+$\DS \mu_1^{\osscript{s}{}{}{}{}}$ and
+the external angle $\DS \nu_1^{\osscript{s}{}{}{}{}}$ at
+$\DS \sigma^{\osscript{s}{}{}{}{}}(t_1)$, and the internal
+angle $\DS \mu_3^{\osscript{s}{}{}{}{}}$ and the
+external angle $\DS \nu_3^{\osscript{s}{}{}{}{}}$ at
+$\DS \sigma^{\osscript{s}{}{}{}{}}(t_3)
 = \sigma^{\osscript{s}{}{}{}{}}(t_0)$, in a similar fashion.  An attention
 particular should be given to the directions of the angles at the
-vertex $\displaystyle \sigma^{\osscript{s}{}{}{}{}}(t_2)$
+vertex $\DS \sigma^{\osscript{s}{}{}{}{}}(t_2)$
 indicated by the directed arcs.  All the blue vectors drawn from
-$\displaystyle \sigma^{\osscript{s}{}{}{}{}}(t_2)$ are in fact in
-$\displaystyle \TS_{\sigma^{\osscript{s}{}{}{}{}}(t_2)} S$ because all
+$\DS \sigma^{\osscript{s}{}{}{}{}}(t_2)$ are in fact in
+$\DS \TS_{\sigma^{\osscript{s}{}{}{}{}}(t_2)} S$ because all
 the edges are in $S$.  As well,
-$\displaystyle \tilde{\sigma}_1^{\osscript{s}{}{}{}{}}(t_2)
+$\DS \tilde{\sigma}_1^{\osscript{s}{}{}{}{}}(t_2)
 \in \TS_{\sigma^{\osscript{s}{}{}{}{}}(t_2)} S$ by
 construction.  We have defined the positive directions of the
 interior angles as going from one edge to the previous edge on the
@@ -3383,13 +3383,13 @@ Let $S$ be an oriented $2$-dimensional Riemannian manifold, and
 $\os{s}{}{}{}{} = \os{\VEC{v}_0}{\VEC{v}_1}{}{}{\VEC{v}_3}$
 be an oriented $2$-simplex.  Suppose that
 \begin{enumerate}
-\item $V$ is an open set such that $\displaystyle [s] \subset V \subset \RR^2$,
+\item $V$ is an open set such that $\DS [s] \subset V \subset \RR^2$,
 \item $h:V \to S$ is a smooth, non-singular and orientation
 preserving function, and
-\item $\displaystyle \sigma^{\osscript{s}{}{}{}{}}:[a,b] \to S$ is a
-parametric representation of the piecewise $\displaystyle C^\infty$
+\item $\DS \sigma^{\osscript{s}{}{}{}{}}:[a,b] \to S$ is a
+parametric representation of the piecewise $\DS C^\infty$
 closed curve $h(\partial\, [s])$ such that the orientation on
-$\displaystyle \sigma^{\osscript{s}{}{}{}{}}$ is the orientation on
+$\DS \sigma^{\osscript{s}{}{}{}{}}$ is the orientation on
 $h(\partial\,[s])$ induced via $h$ by $\partial_2 \os{s}{}{}{}{}$.
 \end{enumerate}
 Then
@@ -3403,25 +3403,25 @@ Then
 \end{lemma}
 
 \begin{proof}
-We may assume that $\displaystyle \sigma^{\osscript{s}{}{}{}{}}$ is a
+We may assume that $\DS \sigma^{\osscript{s}{}{}{}{}}$ is a
 parametric representation by arc length because
-$\displaystyle \tau(\sigma_{j-1}^{\osscript{s}{}{}{}{}})$ is computed
-using $\displaystyle \sigma^{\osscript{s}{}{}{}{}}$ parameterized by arc length.
-Let $\displaystyle \tilde{\sigma}^{\osscript{s}{}{}{}{}}:[a,b] \to S_c$
-be the horizontal lift of $\displaystyle \sigma^{\osscript{s}{}{}{}{}}$ with
-$\displaystyle \tilde{\sigma}^{\osscript{s}{}{}{}{}}(a)
+$\DS \tau(\sigma_{j-1}^{\osscript{s}{}{}{}{}})$ is computed
+using $\DS \sigma^{\osscript{s}{}{}{}{}}$ parameterized by arc length.
+Let $\DS \tilde{\sigma}^{\osscript{s}{}{}{}{}}:[a,b] \to S_c$
+be the horizontal lift of $\DS \sigma^{\osscript{s}{}{}{}{}}$ with
+$\DS \tilde{\sigma}^{\osscript{s}{}{}{}{}}(a)
 = \sigmaU^{\osscript{s}{}{}{}{}}(a)
 = \big(\sigma^{\osscript{s}{}{}{}{}}(a),
 (\sigma^{\osscript{s}{}{}{}{}})'(a)\big)$.
 We have from Proposition~\ref{propRotSimpl} that
-$\displaystyle \eta(\tilde{\sigma}^{\osscript{s}{}{}{}{}}(b))
+$\DS \eta(\tilde{\sigma}^{\osscript{s}{}{}{}{}}(b))
 = \tilde{\sigma}^{\osscript{s}{}{}{}{}}(a)$ for
-$\displaystyle \eta = e^{i \theta} \in S^1$ with
-$\displaystyle \theta = -\int_{h([s])} \kappa \dx{V}$.
+$\DS \eta = e^{i \theta} \in S^1$ with
+$\DS \theta = -\int_{h([s])} \kappa \dx{V}$.
 We also have from Proposition~\ref{proUnHorLift} that
-$\displaystyle \sigmaU_{j-1}^{\osscript{s}{}{}{}{}}(t_j)
+$\DS \sigmaU_{j-1}^{\osscript{s}{}{}{}{}}(t_j)
 = \eta_j\big(\tilde{\sigma}_{j-1}^{\osscript{s}{}{}{}{}}(t_j)\big)$ with
-$\displaystyle \eta_j = e^{i\theta_{j-1}^{\osscript{s}{}{}{}{}}}$ where
+$\DS \eta_j = e^{i\theta_{j-1}^{\osscript{s}{}{}{}{}}}$ where
 \[
 \theta_{j-1}^{\osscript{s}{}{}{}{}}
 = \int_{t_{j-1}}^{t_j} \rho\big(\sigmaU_{j-1}^{\osscript{s}{}{}{}{}}(r)\big)
@@ -3443,26 +3443,26 @@ for some $k \in \ZZ$.
 
 To prove that $k=1$, we consider the continuous family of Riemannian
 metrics on $h(V) \subset S$ defined by
-$\displaystyle \eta^{[r]} = \eta^{[0]} + r (\eta - \eta^{[0]})$
+$\DS \eta^{[r]} = \eta^{[0]} + r (\eta - \eta^{[0]})$
 where $\eta$ is the Riemannian metric on $S$ from the statement of
-the lemma and $\displaystyle \eta^{[0]}$ is the Riemannian metric on
-$S$ induced from $\displaystyle \RR^2$ using the function $h:V \to S$.
+the lemma and $\DS \eta^{[0]}$ is the Riemannian metric on
+$S$ induced from $\DS \RR^2$ using the function $h:V \to S$.
 Basically, we treat $h(V)$ and $\sigma$ as $V$ and $\partial_2
 \os{s}{}{}{}{}$ respectively.
 
-For the Riemannian metric $\displaystyle \eta^{[0]}$,
+For the Riemannian metric $\DS \eta^{[0]}$,
 we have that $\kappa = 0$ on
-$h(V)$ because $V$ is an open subset of $\displaystyle \RR^2$
+$h(V)$ because $V$ is an open subset of $\DS \RR^2$
 (see Example~\ref{eggEuclk0}), and
 $\kappa_{\sigma_{j-1}} = 0$ for $0 < j \leq 3$
 since $\partial_2 \os{s}{}{}{}{}$ is piecewise linear
 \footnote{If we use (\ref{DGcurvature}) as we have justified at the end of
 Section~\ref{sectGeodesic}, then we get that $\kappa_{\sigma}(t)=0$ for all
 $t$ in the interval.}.  Hence (\ref{lemmaGBEq1}) yields
-$\displaystyle 0 = (3 - 2k)\pi  - \sum_{j=0}^3 \mu_j^{\osscript{s}{}{}{}{}}$.
+$\DS 0 = (3 - 2k)\pi  - \sum_{j=0}^3 \mu_j^{\osscript{s}{}{}{}{}}$.
 Since the sum of
 the internal angles for a triangle is $\pi$, we have that 
-$\displaystyle \sum_{j=0}^3 \mu_j^{\osscript{s}{}{}{}{}} = \pi$.  Thus $k = 1$.
+$\DS \sum_{j=0}^3 \mu_j^{\osscript{s}{}{}{}{}} = \pi$.  Thus $k = 1$.
 Since (\ref{lemmaGBEq1})) is true for any Riemannian metric and varies
 continuously as $r$ goes from $0$ to $1$, we must have that $k$ also
 varies continuously as $r$ goes from $0$ to $1$.  Note that
@@ -3489,7 +3489,7 @@ every simplex
 $(s) = (\VEC{x}_{i_0},\VEC{x}_{i_1},\VEC{x}_{i_2})$ of the simplicial complex
 $K$, there exist an open set $U_{(s)}$ in the affine space containing
 $\{\VEC{x}_{i_0}, \VEC{x}_{i_1}, \VEC{x}_{i_2}\}$ and a map
-$h_{[s]}:U_{[s]} \to S$ of class $\displaystyle C^\infty$ such that
+$h_{[s]}:U_{[s]} \to S$ of class $\DS C^\infty$ such that
 $[s] \subset U_{[s]}$ and $h_{[s]} = h$ on $[s]$.
 This will justify the use of Lemma~\ref{lemmaGB} later on.
 
@@ -3553,11 +3553,11 @@ The last summation in the relation above is null because each
 edge of the triangulation of $S$ is associated to exactly two
 triangles in the triangulation of $S$; namely, each $1$-simplex in $K$
 is the edge of exactly two $2$-simplices in $K$.
-Suppose that $\displaystyle \sigma_{j_1-1}^{\osscript{s_1}{}{}{}{}}$ and
-$\displaystyle \sigma_{j_2-1}^{\osscript{s_2}{}{}{}{}}$ are the parametric
+Suppose that $\DS \sigma_{j_1-1}^{\osscript{s_1}{}{}{}{}}$ and
+$\DS \sigma_{j_2-1}^{\osscript{s_2}{}{}{}{}}$ are the parametric
 representations of the common edge between the oriented $2$-simplices
 $\os{s_1}{}{}{}{}$ and $\os{s_2}{}{}{}{}$.  Then
-$\displaystyle \tau(\sigma_{j_2-1}^{\osscript{s_2}{}{}{}{}}) =
+$\DS \tau(\sigma_{j_2-1}^{\osscript{s_2}{}{}{}{}}) =
 -\tau(\sigma_{j_2-1}^{\osscript{s_2}{}{}{}{}})$ because the two parametric
 representations have opposite directions.
 
@@ -3588,50 +3588,50 @@ $1$-chain is illustrated in the figure.}{GBfig6}
 
 \begin{egg}
 We can use the Gauss-Bonnet theorem to prove that        \label{eggGBsphere}
-$\displaystyle \int_{S^2} \kappa \dx{V} = 4\pi$ without having to compute
+$\DS \int_{S^2} \kappa \dx{V} = 4\pi$ without having to compute
 the integral.
 
-Suppose that $\displaystyle (S^2,K,h)$ is a smoothly triangulated
+Suppose that $\DS (S^2,K,h)$ is a smoothly triangulated
 manifold.  We have from Proposition~\ref{propIsoSShom} that
 $H_j([K];\RR) \cong H_j(K;\RR)$ for all $j$, and from
 Corollary~\ref{corIsoHkXY} that
-$\displaystyle H_j(S^2;\RR) \cong H_j([K];\RR)$ because
-$\displaystyle h:[K] \to S^2$ is a homeomorphism.  Therefore, we may use the
+$\DS H_j(S^2;\RR) \cong H_j([K];\RR)$ because
+$\DS h:[K] \to S^2$ is a homeomorphism.  Therefore, we may use the
 results in Example~\ref{eggHkSq} to get the Betti numbers
 $\beta_j = \dim(H_j(K;\RR))$ for $0 \leq j \leq 2$ that we need to
 compute the Euler characteristic
-$\displaystyle \Chi(K) = \sum_{j=0}^2 (-1)^j \beta_j$ as defined in
+$\DS \Chi(K) = \sum_{j=0}^2 (-1)^j \beta_j$ as defined in
 Definition~\ref{defnBettiEulerC}.
 
 We have from Example~\ref{eggHkSq} that
-$\displaystyle H_0(S^2;\RR) \cong \RR$, 
-$\displaystyle H_1(S^2;\RR) \cong 0$ and
-$\displaystyle H_2(S^2;\RR) \cong \RR$.  Hence $\beta_0 = \beta_2 = 1$
+$\DS H_0(S^2;\RR) \cong \RR$, 
+$\DS H_1(S^2;\RR) \cong 0$ and
+$\DS H_2(S^2;\RR) \cong \RR$.  Hence $\beta_0 = \beta_2 = 1$
 and $\beta_1 = 0$.  We get that $\Chi(K) = 2$ and thus
-$\displaystyle \int_{S^2} \kappa \dx{V} = 2\pi \Chi(K) = 4\pi$.
+$\DS \int_{S^2} \kappa \dx{V} = 2\pi \Chi(K) = 4\pi$.
 \end{egg}
 
 \begin{egg}
 We can use the Gauss-Bonnet theorem to prove that
-$\displaystyle \int_{\torus{2}} \kappa \dx{V} = 0$ without having to compute
+$\DS \int_{\torus{2}} \kappa \dx{V} = 0$ without having to compute
 the integral.
 
-As in the previous example, suppose that $\displaystyle (\torus{2},K,h)$ is a
+As in the previous example, suppose that $\DS (\torus{2},K,h)$ is a
 smoothly triangulated manifold.  We may use
-$\displaystyle H_j(\torus{2};\RR) \cong H_j(K;\RR)$ for $0 \leq j \leq 2$ to
+$\DS H_j(\torus{2};\RR) \cong H_j(K;\RR)$ for $0 \leq j \leq 2$ to
 get the Betti numbers $\beta_j = \dim(H_j(K;\RR))$ for $0 \leq j \leq 2$.
 Since
-$\displaystyle H_j(\torus{2};\RR) \cong H_j(S^1;\RR) \times H_j(S^1;\RR)$
+$\DS H_j(\torus{2};\RR) \cong H_j(S^1;\RR) \times H_j(S^1;\RR)$
 for $0 \leq j \leq 2$, we get from Example~\ref{eggHkSq} that
-$\displaystyle H_0(\torus{2};\RR) \cong \RR^2$, 
-$\displaystyle H_1(\torus{2};\RR) \cong \RR^2$ and
-$\displaystyle H_2(\torus{2};\RR) \cong 0$.  Hence $\beta_0 = \beta_1 = 2$
+$\DS H_0(\torus{2};\RR) \cong \RR^2$, 
+$\DS H_1(\torus{2};\RR) \cong \RR^2$ and
+$\DS H_2(\torus{2};\RR) \cong 0$.  Hence $\beta_0 = \beta_1 = 2$
 and $\beta_2 = 0$.  We get that $\Chi(K) = 0$ and thus
-$\displaystyle \int_{S^2} \kappa \dx{V} = 2\pi \Chi(K) = 0$.
+$\DS \int_{S^2} \kappa \dx{V} = 2\pi \Chi(K) = 0$.
 \end{egg}
 
 We have seen in Proposition~\ref{propNNVFodd} that there is no
-nowhere null vector field on $\displaystyle S^{k-1}$ if $k$ is odd.
+nowhere null vector field on $\DS S^{k-1}$ if $k$ is odd.
 We can extend this result using Gauss-Bonnet theorem.
 
 \begin{cor}
@@ -3643,12 +3643,12 @@ If $S$ admits a nowhere null smooth vector field, then $\Chi(K) = 0$.
 \begin{proof}
 Suppose that $F:S \to \TS\,S$ is a nowhere null smooth vector field.
 Let $f:S \to S_c$ be the smooth map defined by
-$\displaystyle f(\VEC{u}) = (\|F\VEC{u}\|_{\VEC{u}})^{-1} F(\VEC{u})$ where
+$\DS f(\VEC{u}) = (\|F\VEC{u}\|_{\VEC{u}})^{-1} F(\VEC{u})$ where
 $\|\cdot\|_{\VEC{u}}$ is the norm induced by the Riemannian metric
-$\displaystyle \tau:S \to \bigcup_{\VEC{x} \in S} \T^2(\TS_{\VEC{u}} S)$.
+$\DS \tau:S \to \bigcup_{\VEC{x} \in S} \T^2(\TS_{\VEC{u}} S)$.
 
 According to the second structural equation
-$\displaystyle \df{\rho} = - (\pi_S)^\ast(\kappa \dx{V})$ where $V$ is
+$\DS \df{\rho} = - (\pi_S)^\ast(\kappa \dx{V})$ where $V$ is
 the volume element on $S$.  Hence
 \[
 \df{(f^\ast \rho)} = f^\ast(\df{\rho})
@@ -3679,9 +3679,9 @@ differential linear operators.  In particular, we will use the
 definition of vector fields given in Remark~\ref{rmkVFwithOper}.
 
 If $F$ is a smooth vector field on a manifold $S$ and
-$\displaystyle g \in C^\infty(S)$, then
+$\DS g \in C^\infty(S)$, then
 $F(g):\VEC{u} \mapsto F(\VEC{u})(g)$ for $\VEC{u} \in S$ defines a function
-in $\displaystyle C^\infty(S)$.  Therefore, the following definition
+in $\DS C^\infty(S)$.  Therefore, the following definition
 makes sense.
 
 \begin{defn} \label{defnLieB}
@@ -3692,7 +3692,7 @@ denoted $[F_1,F_2]$, is the smooth vector field on $S$ defined by
 [F_1,F_2](\VEC{u})(g) = F_1(\VEC{u})\big(F_2(g)\big)  
 - F_2(\VEC{u})\big(F_1(g)\big)
 \]
-for all $\VEC{u} \in S$ and $\displaystyle g \in C^\infty(S)$.
+for all $\VEC{u} \in S$ and $\DS g \in C^\infty(S)$.
 \end{defn}
 
 It is not hard to prove that
@@ -3712,7 +3712,7 @@ algebra.  There is a vast literature on this subject.
 Note that if $\omega$ is a smooth differential $1$-form on $S$ and $F$ is
 a smooth vector field on $S$, then $\omega(F):S \to \RR$ defined by
 $\omega(F)(\VEC{u}) = \omega(\VEC{u})\big(F(\VEC{u})\big)$ for all
-$\VEC{u}\in S$ is a function of class $\displaystyle C^\infty$.
+$\VEC{u}\in S$ is a function of class $\DS C^\infty$.
 
 \begin{prop} \label{propdyOmF1F2}
 Suppose that $\omega$ is a smooth differential $1$-form on a smooth
@@ -3729,7 +3729,7 @@ for all $\VEC{u} \in S$.
 \begin{proof}
 As usual, we only need to prove the result for a local chart
 $(W,U,\phi)$ of $S$.  We have that
-$\displaystyle \phi^\ast(\omega) = \sum_{i=1}^k \omega_i \df{u_i}$
+$\DS \phi^\ast(\omega) = \sum_{i=1}^k \omega_i \df{u_i}$
 where $w_i : W \to \RR$ are smooth functions.  Hence $\omega$ is
 locally the sum of terms of the form $h \df{g}$ where $h,g:U \to \RR$
 are smooth functions.  Since both sides of (\ref{LieBEq1}) are linear
@@ -4094,7 +4094,7 @@ Definition~\ref{defnO1O2} that
 \]
 and, similarly, $(\pi_S)_\ast\big(F_2(\VEC{u},\VEC{x})\big)
 = \upsilon(\VEC{u},\VEC{x})$ where
-$\displaystyle \upsilon = e^{i \pi/2} \in S^1$.  Moreover,
+$\DS \upsilon = e^{i \pi/2} \in S^1$.  Moreover,
 $F_1(\VEC{u},\VEC{x})$ and $F_2(\VEC{u},\VEC{x})$ are orthogonal to
 $H(\VEC{u},\VEC{x})$ because
 $\rho(\VEC{u},\VEC{x}))\big(F_1(\VEC{u},\VEC{x})\big) =
@@ -4112,19 +4112,19 @@ the literature.  First, we have the reformulate the definition of an
 $\VEC{u} \in S$ for a vector field $F:S \to \TS\,S$.
 It is a function $\sigma_{\VEC{u}}:I \to S$ where $I$ is an open
 neighbourhood of the origin such that $\sigma_{\VEC{u}}(0) = \VEC{u}$ and
-$\displaystyle \sigma_{\VEC{u}}^\ast\left(\dydx{}{t}\Big|_t\right)
+$\DS \sigma_{\VEC{u}}^\ast\left(\dydx{}{t}\Big|_t\right)
 = F(\sigma_{\VEC{u}}(t))$ for all $t \in I$; namely,
 \begin{equation} \label{IntCurvV2Eq1}
 \sigma_{\VEC{u}}^\ast\left(\dydx{}{t}\Big|_t\right)(g)
 = \dfdx{(g \circ \sigma_{\VEC{u}})}{t}(t) = F(\sigma_{\VEC{u}}(t))(g)
 \end{equation}
-for all $\displaystyle g \in C^\infty(S)$ and $t \in I$.  Note that the
+for all $\DS g \in C^\infty(S)$ and $t \in I$.  Note that the
 interval of existence $I$ may vary with $\VEC{u}$.
 Let $(W,U,\phi)$ be a local chart of $S$.  It follows from
 (\ref{IntCurvV2Eq1}) that
-$\displaystyle \dfdx{(\phi^{-1}\circ \sigma_{\VEC{u}})}{t}
+$\DS \dfdx{(\phi^{-1}\circ \sigma_{\VEC{u}})}{t}
 = \tilde{F}(\phi^{-1}\circ \sigma_{\VEC{u}})$ where
-$\displaystyle \tilde{F}(\VEC{w}) = \sum_{j=1}^k
+$\DS \tilde{F}(\VEC{w}) = \sum_{j=1}^k
 \tilde{f}_j(\VEC{w})\pdydx{}{w_j}$ for $\VEC{w} \in W$ is the local
 representation of $F$.  This is expected if (\ref{IntCurvV2Eq1}) is
 equivalent to the condition in our previous definition of integral
@@ -4148,7 +4148,7 @@ Moreover, suppose that $X:I\times U \to S$ is the flow associated to
 the vector field $F_1$ as explained above.
 Then $\sigma_{\VEC{u}}(t) = X_{\VEC{u}}(t) = X(t,\VEC{u})$ for $t \in I$
 satisfies
-$\displaystyle \sigma_{\VEC{u}}^\ast\left(\dydx{}{t}\Big|_t\right)
+$\DS \sigma_{\VEC{u}}^\ast\left(\dydx{}{t}\Big|_t\right)
 = F_1(\sigma_{\VEC{u}}(t))$ for all $t\in I$ and
 $\sigma_{\VEC{u}}(0) = \VEC{u}$.
 The {\bfseries Lie bracket}\index{Lie Bracket} of $F_1$ and $F_2$ is
@@ -4165,15 +4165,15 @@ Note that we have use for the first time the pull-back of a vector field.
 
 Let $(W,U,\phi)$ be a local chart of $S$.  Suppose that the local
 representation of the vector field $F_i$ is defined by
-$\displaystyle \tilde{F}_i(\VEC{w}) = \sum_{j=1}^k
+$\DS \tilde{F}_i(\VEC{w}) = \sum_{j=1}^k
 (\tilde{f}_i)_j(\VEC{w}) \pdydx{}{w_j}\Big|_{\VEC{w}}$ for $\VEC{w} \in W$ and
-$i =1,2$, where $\displaystyle (\tilde{f}_i)_j:W \to \RR^k$ for
+$i =1,2$, where $\DS (\tilde{f}_i)_j:W \to \RR^k$ for
 $1 \leq j \leq k$ and $i=1,2$ are smooth functions.
 
 The flow $\tilde{X}$ on $W$ associated to the vector field $\tilde{F}_1$ is
 given by $\phi(\tilde{X}(t,\VEC{w})) = X(t,\phi(\VEC{w}))$ for all
 $\VEC{w} \in W$ and $|t|$ small enough.  This follows from the fact that
-$\displaystyle
+$\DS
 X_{\VEC{u}}^\ast\left(\dydx{}{t}\Big|_t\right) = F_1\big(X_{\VEC{u}}(t)\big)$
 implies that
 \begin{align*}
@@ -4188,15 +4188,15 @@ implies that
 \pdfdx{(g \circ \phi)}{w_j} \Big|_{\VEC{w} = \tilde{X}_{\VEC{w}}(t)}
 = \tilde{F_1}(\tilde{X}_{\VEC{w}})(g \circ \phi) 
 \end{align*}
-for all $\displaystyle \phi \in C^\infty(S)$.
+for all $\DS \phi \in C^\infty(S)$.
 
 We have that
-$\displaystyle \dfdx{\tilde{X}(t,\VEC{w})}{t} =
+$\DS \dfdx{\tilde{X}(t,\VEC{w})}{t} =
 \tilde{f}_1\big(\tilde{X}(t,\VEC{w})\big)$ is equivalent to
-$\displaystyle
+$\DS
 \tilde{X}_{\VEC{w}}^\ast\left( \dydx{}{t}\Big|_t \right)(\tilde{g})
 = \tilde{F}_1(\tilde{X}_{\VEC{w}}(t))(\tilde{g})$
-for all $\displaystyle \tilde{g} \in C^\infty(W)$
+for all $\DS \tilde{g} \in C^\infty(W)$
 because
 \[
 \tilde{X}_{\VEC{w}}^\ast\left( \dydx{}{t}\Big|_t \right)(\tilde{g}) 
@@ -4213,11 +4213,11 @@ and
 &= \diff \tilde{g}(\tilde{X}(t,\VEC{w}))
 \, \tilde{f}_1(\tilde{X}(t,\VEC{w}))
 \end{align*}
-for all $\displaystyle \tilde{g} \in C^\infty(W)$ and $|t|$ small enough.
+for all $\DS \tilde{g} \in C^\infty(W)$ and $|t|$ small enough.
 
 The local representation of the vector field
-$\displaystyle Q_t = X_t^\ast(F_2)$ is given by\\
-$\displaystyle \tilde{Q}_t(\VEC{w}) = \sum_{j=1}^k (\tilde{q}_t)_j(\VEC{w})
+$\DS Q_t = X_t^\ast(F_2)$ is given by\\
+$\DS \tilde{Q}_t(\VEC{w}) = \sum_{j=1}^k (\tilde{q}_t)_j(\VEC{w})
 \pdydx{}{w_j}$ where
 $\tilde{q}_t(\VEC{w}) = \diff \tilde{X}_{-t}(\tilde{X}_t(\VEC{w}))
 \, \tilde{f}_2(\tilde{X}_t(\VEC{w}))$
@@ -4257,20 +4257,20 @@ relation that
 for $\VEC{w} \in W$ and $|t|$ small enough.
 
 Since the local representation of the vector field
-$\displaystyle Q_t = X_t^\ast(F_2)$ is given by\\
-$\displaystyle \sum_{j=1}^k (\tilde{q}_t)_j(\VEC{w})
+$\DS Q_t = X_t^\ast(F_2)$ is given by\\
+$\DS \sum_{j=1}^k (\tilde{q}_t)_j(\VEC{w})
 \pdfdx{}{w_j}\Big|_{\VEC{w}=\phi^{-1}(\VEC{u})}$,
 the local representation of the vector field
-$\displaystyle \dfdx{\big(X_t^\ast(F_2)\big)}{t}\Big|_{t=0}$
+$\DS \dfdx{\big(X_t^\ast(F_2)\big)}{t}\Big|_{t=0}$
 is given by
-$\displaystyle \sum_{i=1}^k \dfdx{\big(\tilde{q}_t(\phi^{-1}(\VEC{u}))_j\big)}{t}
+$\DS \sum_{i=1}^k \dfdx{\big(\tilde{q}_t(\phi^{-1}(\VEC{u}))_j\big)}{t}
 \Big|_{t=0}\, \pdfdx{}{w_j}\Big|_{\VEC{w}=\phi^{-1}(\VEC{u})}$.
 
 We prove that the definition of the Lie bracket in (\ref{defnLieBv2}) 
 is equivalent to the definition in Definition~\ref{defnLieB}.
 To prove this claim, we first need a little technical result.
 
-Suppose that $\displaystyle g \in C^\infty(S)$.  Then
+Suppose that $\DS g \in C^\infty(S)$.  Then
 \begin{align}
 &\dfdx{X_t^\ast(g)}{t}(\VEC{u})
 = \dfdx{g(X(t,\VEC{u}))}{t}
@@ -4290,7 +4290,7 @@ We are now ready to prove that the definition of Lie bracket given in
 (\ref{defnLieBv2}) is equivalent to our Definition~\ref{defnLieB}.
 
 Given $\VEC{u} = \phi(\VEC{w})$ and
-$\displaystyle g \in C^\infty(S)$, we have
+$\DS g \in C^\infty(S)$, we have
 \begin{align*}
 &\dfdx{\big(X_t^\ast(F_2)(\VEC{u})\big)}{t}\Big|_{t=0}(g)
 = \dfdx{ \Big(\diff (g \circ \phi) (\VEC{w})
@@ -4327,7 +4327,7 @@ where the fourth equality comes from
 \]
 the second to last equality is derived from the Leibniz' rule
 because\\
-$\displaystyle (G_1,G_2) \mapsto G_1^\ast (F_2)(\VEC{u})\,(G_2^\ast(g))$ is a
+$\DS (G_1,G_2) \mapsto G_1^\ast (F_2)(\VEC{u})\,(G_2^\ast(g))$ is a
 bilinear map since $F_2(\VEC{u})$ is linear, and the last equality
 comes from (\ref{defnLieBv2Eq1}).
 
@@ -4369,21 +4369,21 @@ and $\tilde{\sigma}_{(\VEC{u},\VEC{x})}(0) = (\tilde{\VEC{u}},\tilde{\VEC{x}})$
 bu uniqueness of solutions.
 
 We have that
-$\displaystyle \{ U_{(\VEC{u},\VEC{x})} \}_{(\VEC{u},\VEC{x}) \in S_c(\VEC{u})}$
+$\DS \{ U_{(\VEC{u},\VEC{x})} \}_{(\VEC{u},\VEC{x}) \in S_c(\VEC{u})}$
 is an open cover of the compact set $S_c(\VEC{u})$.  Therefore, there
 exists a finite subcover
-$\displaystyle \{ U_{(\VEC{u},\VEC{x}_j)} \}_{j \in J}$ of
-$S_c(\VEC{u})$.  Let $\displaystyle
+$\DS \{ U_{(\VEC{u},\VEC{x}_j)} \}_{j \in J}$ of
+$S_c(\VEC{u})$.  Let $\DS
 \epsilon_{\VEC{u}} = \min_{j \in J} \epsilon_{(\VEC{u},\VEC{x}_j)}$.
 We have that
 $X:]-\epsilon_{\VEC{u}},\epsilon_{\VEC{u}}[\times S_c(\VEC{u}) \to S_c$
 is well defined.
 
-Let $\displaystyle Q:[0,\epsilon_{\VEC{u}}[ \times S^1 \to S_c$ be
+Let $\DS Q:[0,\epsilon_{\VEC{u}}[ \times S^1 \to S_c$ be
 the function defined by
 $Q(t,\eta) = X\big(t ,\eta(\VEC{u},\tilde{E}(\VEC{u}))\big)$
-for $t \in [0,\epsilon_{\VEC{u}}[$ and $\displaystyle \eta \in S^1$,
-where $\displaystyle \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$
+for $t \in [0,\epsilon_{\VEC{u}}[$ and $\DS \eta \in S^1$,
+where $\DS \tilde{E}(\VEC{u}) = E(\phi^{-1}(\VEC{u}))$
 and $(W,U,\phi)$ is a local chart of $S$ about $\VEC{u}$.
 The local chart $(W,U,\phi)$ of $S$ with $\VEC{u} \in U$ chosen to
 define $\tilde{E}(\VEC{u})$ is irrelevant \footnote{Any 
@@ -4459,14 +4459,14 @@ $D_{\epsilon_{\VEC{u}}}$ can be defined by
 $t ( \theta.\VEC{e}_1) \mapsto \big(\VEC{u}, t (\theta.\tilde{E}(\VEC{u}))\big)$
 for $0 \leq t < \epsilon_{\VEC{u}}$ and $\theta \in \RR$.
 
-Let $\displaystyle P:[0,\epsilon_{\VEC{u}}[\times S^1 \to
+Let $\DS P:[0,\epsilon_{\VEC{u}}[\times S^1 \to
 D_{\epsilon_{\VEC{u}}} \cong B_{\epsilon_{\VEC{u}}}(\VEC{0})$
 be the function defined by $P(t,\eta) = t( \theta.\VEC{e}_1)$
-for $\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[\times S^1$ and
-$\displaystyle \eta = e^{i \theta}$.  Since
-$\displaystyle P\big|_{]0,\epsilon_{\VEC{u}}[\times S^1}$ is an isomorphism,
+for $\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[\times S^1$ and
+$\DS \eta = e^{i \theta}$.  Since
+$\DS P\big|_{]0,\epsilon_{\VEC{u}}[\times S^1}$ is an isomorphism,
 we may define
-$\displaystyle R: D_{\epsilon_{\VEC{u}}} \to [0,\epsilon_{\VEC{u}}[\times S^1$
+$\DS R: D_{\epsilon_{\VEC{u}}} \to [0,\epsilon_{\VEC{u}}[\times S^1$
 by
 \[
 R(\VEC{x}) =
@@ -4477,27 +4477,27 @@ R(\VEC{x}) =
 \end{cases}
 \]
 We have that
-$\displaystyle \big(P\big|_{]0,\epsilon_{\VEC{u}}[\times S^1}\big)^{-1}
+$\DS \big(P\big|_{]0,\epsilon_{\VEC{u}}[\times S^1}\big)^{-1}
 = R\big|_{D_{\epsilon_{\VEC{u}}}\setminus \{\VEC{0}\}}$.
 
 Let $G:D_{\epsilon_{\VEC{u}}} \to S$ be the map defined by
 $G = \pi_S \circ Q \circ R$.  Note that $G$ is well defined
-because $\pi_S(Q(0,\eta)) = \VEC{u}$ for all $\displaystyle \eta \in S^1$.
+because $\pi_S(Q(0,\eta)) = \VEC{u}$ for all $\DS \eta \in S^1$.
 
 By taking $\epsilon_{\VEC{u}}$ smaller if necessary, we now prove that
 $G:D_{\epsilon_{\VEC{u}}} \to G(D_{\epsilon_{\VEC{u}}})$
 is a diffeomorphism.  This implies that $G(D_{\epsilon_{\VEC{u}}})$ is
 an open neighbourhood of $\VEC{u}$ in $S$, and
 $G_\ast$ maps $\TS_{\VEC{0}} D_{\epsilon_{\VEC{u}}}$ onto $\TS_{\VEC{u}} S$.
-We use $\displaystyle D_{\epsilon_{\VEC{u}}} = B_{\epsilon_{\VEC{u}}}(\VEC{0})
+We use $\DS D_{\epsilon_{\VEC{u}}} = B_{\epsilon_{\VEC{u}}}(\VEC{0})
 \subset \RR^2$ and show that
-$\displaystyle \diff G(\VEC{0}) : \RR^2 \to \TS_{\VEC{u}} S$
+$\DS \diff G(\VEC{0}) : \RR^2 \to \TS_{\VEC{u}} S$
 is of rank $2$.  It will then follow from the Inverse Function Theorem
 that $G:D_{\epsilon_{\VEC{u}}} \to S$ is a diffeomorphism for
 $\epsilon_{\VEC{u}}$ small enough.  Consider
-$\displaystyle \VEC{x} = \theta.\VEC{e}_1 \in \RR^2$ with
+$\DS \VEC{x} = \theta.\VEC{e}_1 \in \RR^2$ with
 $0 \leq \theta < 2\pi$ fixed and let
-$\displaystyle \eta = e^{i\theta} \in S^1$.  We get the directional
+$\DS \eta = e^{i\theta} \in S^1$.  We get the directional
 derivative
 \begin{align*}
 \lim_{t \to 0} \frac{1}{t} \big(G(t\VEC{x}) - G(\VEC{0})\big)
@@ -4509,7 +4509,7 @@ derivative
 \end{align*}
 because $(\sigma_\eta(0),\sigma_\eta'(0)) = (\sigma_\eta)_\ast(0,1)
 = \tilde{\sigma}_\eta(0) = \eta (\VEC{u},\tilde{E}(\VEC{u}))$.
-Since $\displaystyle \eta \in S^1$ is arbitrary, all the directions
+Since $\DS \eta \in S^1$ is arbitrary, all the directions
 from the origin in $\TS_{\VEC{u}} S$ are included in the range of
 $\diff G(\VEC{0})$.  Thus $\diff G(\VEC{0})$ is of rank $2$.
 
@@ -4537,7 +4537,7 @@ representation of a geodesic coordinate system.}{GeodFig1}
 For convenience, the lines $t \mapsto t (\theta.\VEC{e}_1)$ in
 $D_{\epsilon_{\VEC{u}}} \cong B_{\epsilon_{\VEC{u}}}(\VEC{0})$
 for $0 \leq t < \epsilon_{\VEC{u}}$ and
-$\displaystyle \eta = e^{i\theta} \in S^1$
+$\DS \eta = e^{i\theta} \in S^1$
 fixed are called {\bfseries radial geodesic}\index{Radial Geodesic}.
 
 The following technical results will be quite useful for our study
@@ -4545,14 +4545,14 @@ of geodesic coordinate systems.
 
 In the rest of the section, we will regularly refer to 
 local charts $(\check{W},\check{U},\check{\phi})$ of
-$\displaystyle [0,\epsilon_{\VEC{u}}[ \times S^1$ where
+$\DS [0,\epsilon_{\VEC{u}}[ \times S^1$ where
 $\check{W} = [0,\epsilon_{\VEC{u}}[ \times I$ for $I$ a connected and open
 interval of length less than $2\pi$,
-$\displaystyle \check{\phi}(r,\theta) = (r,e^{i\theta})$ for
+$\DS \check{\phi}(r,\theta) = (r,e^{i\theta})$ for
 $(r,\theta) \in \check{W}$, and $\check{U} = \check{\phi}(\check{W})$.
 
 There are two natural vector fields $V_1$ and $V_2$ on
-$\displaystyle ]0,\epsilon_{\VEC{u}}[\times S^1$ that we now define.
+$\DS ]0,\epsilon_{\VEC{u}}[\times S^1$ that we now define.
 
 Let $\check{V}_1$ and $\check{V}_2$ be the vector fields
 defined on $\check{W}$ by
@@ -4580,7 +4580,7 @@ V_2(t,\eta) &= \check{\phi}_\ast\big(\check{V}_2(\check{\phi}^{-1}(t,\eta))\big)
 &= \big( (t,\eta) , (0,i\, \eta) \big)
 = \big( (t,\eta) , (0,\upsilon\, \eta) \big)
 \end{align*}
-where $\displaystyle \upsilon = e^{i(\pi/2)}$ as usual.
+where $\DS \upsilon = e^{i(\pi/2)}$ as usual.
 
 Since $(P \circ \check{\phi})(r,\theta) = r (\theta.\VEC{e}_1)$
 for all $(r,\theta) \in \check{W}$. we get
@@ -4594,7 +4594,7 @@ V_1 \circ \check{\phi})(t,\theta)\big)
 \end{align*}
 where $V_1(t,\eta)$ represents a vector field in
 $D_{\epsilon_{\VEC{u}}}$ that point in the radial direction
-$\displaystyle \eta = e^{i\theta}$, and
+$\DS \eta = e^{i\theta}$, and
 \begin{align*}
 P_\ast(V_2(t,\eta))
 &=(P_\ast \circ \check{\phi}_\ast)\big((\check{\phi}^{-1}_\ast \circ
@@ -4617,24 +4617,24 @@ manipulations to use the definition of vector fields given in
 Remark~\ref{rmkVFwithOper}.  The isomorphism between
 $\breve{\TS}_{\VEC{u}} S$ and $\TS_{\VEC{u}} S$ introduced in
 Section~\ref{secTSasDiffop} shows that the vector fields $V_1$ and
-$V_2$ on $\displaystyle ]0,\epsilon_{\VEC{u}}[\times S^1$ can also
+$V_2$ on $\DS ]0,\epsilon_{\VEC{u}}[\times S^1$ can also
 be respectively represented locally as
 \begin{equation} \label{defnV1V2rt}
 \check{V}_1 = \pdydx{}{r}\Big|_{(r,\theta)= \check{\phi}^{-1}(t,\eta)}
 \qquad \text{and} \qquad
 \check{V}_2 = \pdydx{}{\theta}\Big|_{(r,\theta)= \check{\phi}^{-1}(t,\eta)}
 \end{equation}
-for $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
+for $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 
 \begin{lemma}   \label{lemmaMRs2}
 \begin{enumerate}
 \item $Q_\ast(V_1(t,\eta)) = F_1(\tilde{\sigma}_\eta(t))$
-for $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
+for $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 \item $Q^\ast(\rho)(V_1) = Q^\ast(\omega_2)(V_1) = 0$ and
 $Q^\ast(\omega_1)(V_1) = 1$ on
-$\displaystyle ]0,\epsilon_{\VEC{u}}[\times S^1$.
+$\DS ]0,\epsilon_{\VEC{u}}[\times S^1$.
 \item $[V_1,V_2](t,\eta) = \big((t,\eta), (0,0) \big)$
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.  
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.  
 \item $Q_\ast(V_2(t,\eta))\big|_{t=0}
 = H\big( \tilde{\sigma}_\eta(0)\big)$.
 \end{enumerate}
@@ -4642,7 +4642,7 @@ for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 
 \begin{proof}
 \stage{1} Using a local chart $(\check{W},\check{U},\check{\phi})$ of
-$\displaystyle ]0,\epsilon_{\VEC{u}}[\times S^1$ as defined above, we get for
+$\DS ]0,\epsilon_{\VEC{u}}[\times S^1$ as defined above, we get for
 $(t,\eta) = \check{\phi}(r,\theta)$ that
 \begin{align*}
 Q_\ast(V_1(t,\eta)) &= Q_\ast\big(\check{\phi}_\ast
@@ -4674,7 +4674,7 @@ and
 = \omega_2(Q(t,\eta))\big(Q_\ast(V_1(t,\eta))
 = \omega_2(\tilde{\sigma}_\eta(t))\big(F_1(\tilde{\sigma}_\eta(t))\big) = 0 \ .
 \]
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
 by definition of $\rho$, $\omega_2$ and $F_1$.  Moreover,
 \[
 \big(Q^\ast(\omega_1)(V_1)\big)(t,\eta)
@@ -4682,7 +4682,7 @@ by definition of $\rho$, $\omega_2$ and $F_1$.  Moreover,
 = \omega_1(\tilde{\sigma}_\eta(t))\big(F_1(\tilde{\sigma}_\eta(t))\big)
 = 1
 \]
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
 by definition of $\omega_1$ and $F_1$.
 
 \stage{3} Using the local representation of $V_1$ and $V_2$ provided in
@@ -4695,12 +4695,12 @@ by definition of $\omega_1$ and $F_1$.
 \Big|_{(r,\theta)=\check{\phi}^{-}(t,\eta)}
 = 0
 \end{align*}
-for all $\displaystyle g \in C^\infty(]0,\epsilon_{\VEC{u}}[\times S^1)$.
+for all $\DS g \in C^\infty(]0,\epsilon_{\VEC{u}}[\times S^1)$.
 Thus $[V_1,V_2](t,\eta) = \big((t,\eta), (0,0) \big)$
 
 \stage{4} We proceed as in (1).  Using a local chart
 $(\check{W},\check{U},\check{\phi})$ of
-$\displaystyle ]0,\epsilon_{\VEC{u}}[\times S^1$ as defined above, we
+$\DS ]0,\epsilon_{\VEC{u}}[\times S^1$ as defined above, we
 get for $(t,\eta) = \check{\phi}(r,\theta)$ that
 \begin{align*}
 Q_\ast(V_2(t,\eta)) &= Q_\ast\big(\check{\phi}_\ast
@@ -4734,14 +4734,14 @@ using the equivalent formulation for the Lie bracket; namely,
 \[
 [V_1,V_2](t,\eta) = \dfdx{ Y_s^\ast(V_2)(t,\eta)}{s}\Big|_{s=0} 
 \]
-where $\displaystyle Y: ]-\epsilon,\epsilon[ \times
+where $\DS Y: ]-\epsilon,\epsilon[ \times
 ]0,\epsilon_{\VEC{u}}[ \times S^1 \to ]0,\epsilon_{\VEC{u}}[\times S^1$
 for $\epsilon$ small enough is the flow associate to the vector field
 $V_1$.
 
 Using a local chart $(\check{W},\check{U},\check{\phi})$, we have that
 the flow associated to $\check{V}_1$ is the function
-$\displaystyle \check{Y}: ]-\epsilon_{(r,\theta)},\epsilon_{(r,\theta)}[
+$\DS \check{Y}: ]-\epsilon_{(r,\theta)},\epsilon_{(r,\theta)}[
  \times \check{W} \to \check{W}$
 defined by $\check{Y}(s,(r,\theta)) = (r+s,\theta)$ for
 $\epsilon_{(r,\theta)}$ small enough.  Note that we effectively have
@@ -4750,15 +4750,15 @@ that $(\check{Y}_{(r,\theta)})_\ast(s,1) = \big( (r+s,\theta), (1,0)\big)
 $-\epsilon_{(r,\theta)} < s < \epsilon_{(r,\theta)}$.
 
 We proceed as in Subsection~\ref{subsectEDLB} to get the local
-representation of the vector field $\displaystyle Q_s = Y_s^\ast(V_2)$.
-Let $\displaystyle \check{v}_2 :\check{W} \to \RR^2$ be the function
+representation of the vector field $\DS Q_s = Y_s^\ast(V_2)$.
+Let $\DS \check{v}_2 :\check{W} \to \RR^2$ be the function
 associated to the local representation $\check{V}_2$ of $V_2$ given in
-(\ref{defnV1V2rt}); namely, $\displaystyle \check{v}_2 =
+(\ref{defnV1V2rt}); namely, $\DS \check{v}_2 =
 \begin{pmatrix} 0 & 1 \end{pmatrix}^\top$.
 
 The local representation of the vector field
-$\displaystyle Q_s = Y_s^\ast(V_2)$ is
-$\displaystyle \tilde{Q}_s(r,\theta) = (\tilde{q}_s)_1(r,\theta)
+$\DS Q_s = Y_s^\ast(V_2)$ is
+$\DS \tilde{Q}_s(r,\theta) = (\tilde{q}_s)_1(r,\theta)
 \pdydx{}{r} + (\tilde{q}_s)_2(r,\theta) \pdydx{}{\theta}$ where
 \[
 \tilde{q}_s(r,\theta)
@@ -4769,8 +4769,8 @@ $\displaystyle \tilde{Q}_s(r,\theta) = (\tilde{q}_s)_1(r,\theta)
 for $(r,\theta) \in \check{W}$ and
 $-\epsilon_{(r,\theta)} < s < \epsilon_{(r,\theta)}$.
 All this work just to get that the local representation of
-$\displaystyle Y_s^\ast(V_2)$ is
-$\displaystyle \pdydx{}{\theta}\Big|_{(r,\theta) = \check{\phi}^{-1}(t,\eta)}$.
+$\DS Y_s^\ast(V_2)$ is
+$\DS \pdydx{}{\theta}\Big|_{(r,\theta) = \check{\phi}^{-1}(t,\eta)}$.
 
 Therefore
 \[
@@ -4781,26 +4781,26 @@ Therefore
 \pdfdx{g(r,e^{i\theta})}{\theta}\Big|_{(r,\theta) = \check{\phi}^{-1}(t,\eta)}
 \Big)}{s}\Big|_{s=0} = 0
 \]
-for all $\displaystyle g \in C^\infty(]0,\epsilon_{\VEC{u}}[\times S^1)$
+for all $\DS g \in C^\infty(]0,\epsilon_{\VEC{u}}[\times S^1)$
 since the expression between parentheses does not depend on $s$.
 \end{rmk}
 
 \begin{lemma} \label{lemmaMRs1}
 $P_\ast\big( (r,\eta), (p,q \, \upsilon\,\eta)\big)
 = \big( r(\theta.\VEC{e}_1), p(\theta.\VEC{e}_1) + q\,r (\theta + \pi/2).
-\VEC{e}_1\big)$ for $\displaystyle \eta= e^{i\theta}$,
-$\displaystyle \upsilon = e^{i(\pi/2)}$ and $p,q \in \RR$.
-Note that $\displaystyle \big( (r,\eta), (p,q\,\upsilon\,\eta))\big)
+\VEC{e}_1\big)$ for $\DS \eta= e^{i\theta}$,
+$\DS \upsilon = e^{i(\pi/2)}$ and $p,q \in \RR$.
+Note that $\DS \big( (r,\eta), (p,q\,\upsilon\,\eta))\big)
 \in \TS_{(t,\eta)}\, ]0,\epsilon_{\VEC{u}}[\times S^1$.
 \end{lemma}
 
 \begin{proof}
 We consider a local chart $(\check{W},\check{U},\check{\phi})$ of
-$\displaystyle [0,\epsilon_{\VEC{u}}[ \times S^1$.  Recall that
-$\displaystyle \phi(r,\theta) = (r , e^{i\theta} )$
+$\DS [0,\epsilon_{\VEC{u}}[ \times S^1$.  Recall that
+$\DS \phi(r,\theta) = (r , e^{i\theta} )$
 for $(r,\theta) \in \check{W} \subset ]0,\epsilon_{\VEC{u}}[\times \RR$.
 The local representation of $P$ is given by
-$\displaystyle \tilde{P}(r,\theta) = (P\circ \phi)(r,\theta)
+$\DS \tilde{P}(r,\theta) = (P\circ \phi)(r,\theta)
 = r (\theta.\VEC{e}_1)$ for $(r,\theta) \in \check{W}$.
 We have
 \[
@@ -4815,7 +4815,7 @@ and
 \pi/2).\VEC{e}_1\big)\big)
 \]
 or all
-$\displaystyle \big( (r,\theta) , (p,q)\big) \in \TS_{(r,\theta)} \check{W}$.
+$\DS \big( (r,\theta) , (p,q)\big) \in \TS_{(r,\theta)} \check{W}$.
 The conclusion of the lemma comes from the fact that
 $P \circ \phi = \tilde{P}$ implies that
 $P_\ast \circ \phi_\ast = \tilde{P}_\ast$.
@@ -4849,7 +4849,7 @@ for all $\VEC{u} \in S$.
 \begin{lemma}[Gauss]  \label{lemmaGps0}
 $\ps{G_\ast\big(P_\ast(V_1(t,\eta))\big)}
 {G_\ast\big(P_\ast(V_2(t,\eta))\big)}_{\pi_S(Q(t,\eta))} = 0$
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 \end{lemma}
 
 \begin{proof}
@@ -4867,7 +4867,7 @@ Lemma~\ref{lemmaMRs2}, we have
 = (\pi_S)_\ast\big((\tilde{\sigma}_\eta)_\ast(t,1)\big)
 = \tilde{\sigma}_\eta(t) = Q(t,\eta)
 \]
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 Therefore
 \begin{align}
 &\ps{G_\ast\big(P_\ast(V_1(t,\eta))\big)}
@@ -4879,7 +4879,7 @@ Therefore
 &\qquad = \omega_1(Q(t,\eta))\big(Q_\ast(V_2(t,\eta))\big)
 = Q^\ast(\omega_1)(t,\eta)\big(V_2(t,\eta)\big) \label{geoCoordEq0}
 \end{align}
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 We need to prove that the last expression in the relation above is null.
 
 Using the first of the first structural equations in
@@ -4903,7 +4903,7 @@ Q^\ast(\omega_2)(t,\eta)(V_2(t,\eta)) \\
 \omega_2(Q(t,\eta))\big(Q_\ast(V_1(t,\eta))\big) \Big)
 = 0
 \end{align*}
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
 because $\rho(Q(t,\eta))\big(Q_\ast(V_1(t,\eta))\big) = 0$
 and $\omega_2(Q(t,\eta))\big(Q_\ast(V_1(t,\eta)) = 0$
 according to second item of Lemma~\ref{lemmaMRs2}.
@@ -4917,20 +4917,20 @@ It follows from Corollary~\ref{cordyOmF1F2} that
 &\qquad - Q^\ast(\omega_1)(t,\eta)([V_1,V_2](t,\eta))
 \end{split}
 \end{equation}
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.  However,
-$\displaystyle \df{\big(Q^\ast(\omega_1)(V_1)\big)} = 0$ because
-$\displaystyle Q^\ast(\omega_1)(V_1) = 1$ on
-$\displaystyle ]0,\epsilon_{\VEC{u}}[\times S^1$
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.  However,
+$\DS \df{\big(Q^\ast(\omega_1)(V_1)\big)} = 0$ because
+$\DS Q^\ast(\omega_1)(V_1) = 1$ on
+$\DS ]0,\epsilon_{\VEC{u}}[\times S^1$
 according to the second item of Lemma~\ref{lemmaMRs2}, and
-$\displaystyle Q^\ast(\omega)(t,\eta)([V_1,V_2](t,\eta)) = 0$
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
+$\DS Q^\ast(\omega)(t,\eta)([V_1,V_2](t,\eta)) = 0$
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$
 because $[V_1,V_2](t,\eta) = \big((t,\eta), (0,0) \big)$ according to
 the third item of Lemma~\ref{lemmaMRs2}.
 Hence, we get from (\ref{geoCoordEq1}) that
 \begin{equation} \label{geoCoordEq2}
 \df{\big(Q^\ast(\omega_1)(V_2)\big)}(t,\eta)(V_1(t,\eta)) = 0
 \end{equation}
-for all $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
+for all $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 It is again advantageous to use the local representation of $V_1$ and $V_2$
 provided in (\ref{defnV1V2rt}), and our knowledge of the Lie
 derivative of a function along a vector field, to get from
@@ -4940,9 +4940,9 @@ V_1(t,\eta)\big(Q^\ast(\omega_1)(V_2)\big)
 = \pdfdx{\Big( Q^\ast(\omega_1)(V_2) \circ \phi\Big)\Big)}{r}
 \Big|_{(r,\theta) = \phi^{-1}(t,\eta)} = 0
 \]
-for $\displaystyle (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
+for $\DS (t,\eta) \in ]0,\epsilon_{\VEC{u}}[\times S^1$.
 Thus
-$\displaystyle \big(Q^\ast(\omega_1)(V_2)\big)(t,\eta)
+$\DS \big(Q^\ast(\omega_1)(V_2)\big)(t,\eta)
 = Q^\ast(\omega_1)(t,\eta)\big(V_2(t,\eta)\big)$
 is constant with respect to $t = r$.  Therefore, it follows from
 (\ref{geoCoordEq0}) that
@@ -4959,7 +4959,7 @@ P_\ast(V_2(t,\eta))= P_\ast\big( (t,\eta), (0,\upsilon \eta)\big)
 \]
 as $t \to 0$ where we have used Lemma~\ref{lemmaMRs1} to get the
 last equality.  Thus\\
-$\displaystyle 
+$\DS 
 \ps{G_\ast\big(P_\ast(V_1(t,\eta))\big)}
 {G_\ast\big(P_\ast(V_2(t,\eta))\big)}_{\pi_S(Q(t,\eta))} \to 0$
 as $t \to 0$.  Since this inner product is constant, it must
@@ -4967,8 +4967,8 @@ therefore be null for all $t$.
 \end{proof}
 
 \begin{cor}  \label{corMRs3}
-$\displaystyle Q^\ast(\omega_1)(V_2) = 0$ on
-$\displaystyle ]0,\epsilon_{\VEC{u}}[\times S^1$. 
+$\DS Q^\ast(\omega_1)(V_2) = 0$ on
+$\DS ]0,\epsilon_{\VEC{u}}[\times S^1$. 
 \end{cor}
 
 \begin{proof}
@@ -4976,9 +4976,9 @@ This follows from (\ref{geoCoordEq0}) and Gauss' lemma.
 \end{proof}
 
 It follows from Gauss' lemma that
-$\displaystyle t \mapsto G_\ast\big(P_\ast(V_2(t,\eta))\big)$ is
+$\DS t \mapsto G_\ast\big(P_\ast(V_2(t,\eta))\big)$ is
 orthogonal to \\
-$\displaystyle t \mapsto G_\ast\big(P_\ast(V_1(t,\eta))\big) = Q(t,\eta) =
+$\DS t \mapsto G_\ast\big(P_\ast(V_1(t,\eta))\big) = Q(t,\eta) =
 \tilde{\sigma}_\eta(t)$ for all $t \in [0,\epsilon_{\VEC{u}}[$; namely,
 the geodesic curve $t \mapsto \sigma_\eta)t) = \pi_S(\tilde{\sigma}_\eta(t))$
 and the curve $t \mapsto G(P((t,\eta)))
@@ -4998,7 +4998,7 @@ G_\ast\big(P_\ast(V_2(t,\eta))\big)
 = Q^\ast(\omega_2)(t,\eta)\big(V_2(t,\eta)\big) \, \upsilon(Q(t,\eta))
 \end{align*}
 because
-$\displaystyle \omega_1(Q(t,\eta))\big(Q_\ast(V_2(t,\eta))\big)
+$\DS \omega_1(Q(t,\eta))\big(Q_\ast(V_2(t,\eta))\big)
 = Q^\ast(\omega_1)(t,\eta)\big(V_2(t,\eta)\big) = 0$ according to
 Corollary~\ref{corMRs3}.  Thus
 \begin{equation} \label{geoCoordEq3}
@@ -5006,7 +5006,7 @@ Corollary~\ref{corMRs3}.  Thus
 = \big|Q^\ast(\omega_2)(t,\eta)\big(V_2(t,\eta)\big)\big|
 \end{equation}
 for all
-$\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$,
+$\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$,
 where the norm refer to the Riemannian metric on $S$.
 
 We get from the second of the first structural equations that
@@ -5028,10 +5028,10 @@ Q^\ast(\omega_1)(t,\eta)(V_2(t,\eta)) \Big)
 \end{split}
 \end{equation}
 for all
-$\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
-because $\displaystyle Q^\ast(\omega_1)(t,\eta)(V_2(t,\eta)) = 0$ according to
+$\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
+because $\DS Q^\ast(\omega_1)(t,\eta)(V_2(t,\eta)) = 0$ according to
 Corollary~\ref{corMRs3} and
-$\displaystyle Q^\ast(\omega_1)(t,\eta)(V_1(t,\eta)) = 1$ according to
+$\DS Q^\ast(\omega_1)(t,\eta)(V_1(t,\eta)) = 1$ according to
 the second item of Lemma~\ref{lemmaMRs2}.
 
 However, using Corollary~\ref{cordyOmF1F2}, we have
@@ -5044,20 +5044,20 @@ However, using Corollary~\ref{cordyOmF1F2}, we have
 &\qquad = \df{\big(Q^\ast(\omega_2)(V_2)\big)}(t,\eta)(V_1(t,\eta))
 \label{geoCoordEq6}
 \end{align}
-because $\displaystyle Q^\ast(\omega_2)(V_1)=0$ and
+because $\DS Q^\ast(\omega_2)(V_1)=0$ and
 $[V_1,V_2](t,\eta) = \big((t,\eta), (0,0) \big)$ for all
-$\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
+$\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
 according to the second and third items of Lemma~\ref{lemmaMRs2}.
 We deduce from (\ref{geoCoordEq5}) and (\ref{geoCoordEq6}) that
 \begin{equation} \label{geoCoordEq10}
 \df{\big(Q^\ast(\omega_2)(V_2)\big)}(t,\eta)(V_1(t,\eta))
 = \frac{1}{2} Q^\ast(\rho)(t,\eta)(V_2(t,\eta))
 \end{equation}
-for all $\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
+for all $\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
  
 We now almost repeat the previous discussion about
-$\displaystyle Q^\ast(\omega_2)$ but this time with
-$\displaystyle Q^\ast(\rho)$.  From the second structural equations, 
+$\DS Q^\ast(\omega_2)$ but this time with
+$\DS Q^\ast(\rho)$.  From the second structural equations, 
 we have
 \[
 \df{\big(Q^\ast(\rho)\big)} = Q^\ast(\df{\rho})
@@ -5077,9 +5077,9 @@ Q^\ast(\omega_2)(t,\eta)(V_2(t,\eta)) \Big) \nonumber \\
 = -\frac{1}{2} \kappa(\pi_S(Q(t,\eta)))\, Q^\ast(\omega_2)(t,\eta)(V_2(t,\eta))
 \label{geoCoordEq7}
 \end{align}
-for all $\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
-because $\displaystyle Q^\ast(\omega_1)(t,\eta)(V_2(t,\eta)) = 0$ 
-and $\displaystyle Q^\ast(\omega_1)(t,\eta)(V_1(t,\eta)) = 1$ according to the
+for all $\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
+because $\DS Q^\ast(\omega_1)(t,\eta)(V_2(t,\eta)) = 0$ 
+and $\DS Q^\ast(\omega_1)(t,\eta)(V_1(t,\eta)) = 1$ according to the
 second item of Lemma~\ref{lemmaMRs2}.
 
 Using Corollary~\ref{cordyOmF1F2}, we have
@@ -5092,9 +5092,9 @@ Using Corollary~\ref{cordyOmF1F2}, we have
 &\qquad = \df{\big(Q^\ast(\rho)(V_2)\big)}(t,\eta)(V_1(t,\eta))
 \label{geoCoordEq8}
 \end{align}
-because $\displaystyle Q^\ast(\rho)(V_1)=0$ and
+because $\DS Q^\ast(\rho)(V_1)=0$ and
 $[V_1,V_2](t,\eta) = \big((t,\eta), (0,0) \big)$ for all
-$\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
+$\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$
 according to the second and third items of Lemma~\ref{lemmaMRs2}.
 
 We deduce from (\ref{geoCoordEq7}) and (\ref{geoCoordEq8}) that
@@ -5105,7 +5105,7 @@ Q^\ast(\omega_2)(t,\eta)(V_2(t,\eta)) \nonumber \\
 &= -\frac{1}{2} \kappa(G(P(t,\eta)))\, Q^\ast(\omega_2)(t,\eta)(V_2(t,\eta))
 \label{geoCoordEq11}
 \end{align}
-for all $\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
+for all $\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
 
 If we rewrite (\ref{geoCoordEq10}) and
 (\ref{geoCoordEq11}) using the local representation of $V_1$ and $V_2$
@@ -5129,7 +5129,7 @@ and
 \Big(\big( Q^\ast(\omega_2)(V_2) \big)\circ \check{\phi}\Big)
 \Big|_{(r,\theta) = \check{\phi}^{-1}(t,\eta)}  \label{geoCoordEq13}
 \end{align}
-for all $\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
+for all $\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
 Substituting (\ref{geoCoordEq13}) in the derivative with respect to $r$
 of (\ref{geoCoordEq12}) yields
 \[
@@ -5139,11 +5139,11 @@ of (\ref{geoCoordEq12}) yields
 \Big(\big( Q^\ast(\omega_2)(V_2)\big) \circ \check{\phi}\Big)
 \Big|_{(r,\theta) = \check{\phi}^{-1}(t,\eta)}
 \]
-for all $\displaystyle (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
+for all $\DS (t,\eta) \in [0,\epsilon_{\VEC{u}}[ \times S^1$.
 For this second order differential equation to completely determine
-$\displaystyle Q^\ast(\omega_2)(V_2) \circ \check{\phi}$ given $\eta$
+$\DS Q^\ast(\omega_2)(V_2) \circ \check{\phi}$ given $\eta$
 fixed (i.e.\ along a geodesic), we need initial condition at $t=0$ for
-$\displaystyle Q^\ast(\omega_2)(V_2)\circ \check{\phi}$ and its
+$\DS Q^\ast(\omega_2)(V_2)\circ \check{\phi}$ and its
 derivative with respect to $r$.  We have from the fourth item of
 Lemma~\ref{lemmaMRs2} that
 \[
@@ -5164,12 +5164,12 @@ by definition of $\omega_2$ and $H$.  We also get from
 = \frac{1}{2} \ .
 \end{align*}
 Since
-$\displaystyle \big(Q^\ast(\omega_2)(V_2)\circ \check{\phi}\big)
+$\DS \big(Q^\ast(\omega_2)(V_2)\circ \check{\phi}\big)
 \big|_{(r,\theta)=\check{\phi}^{-1}(0,\eta)} = 0$ and
-$\displaystyle \pdfdx{\Big(\big(Q^\ast(\omega_2)(V_2)\big) \circ \check{\phi}
+$\DS \pdfdx{\Big(\big(Q^\ast(\omega_2)(V_2)\big) \circ \check{\phi}
 \Big)}{r}\Big|_{(r,\theta) = \check{\phi}^{-1}(0,\eta)} >0$, we have
 that
-$\displaystyle \big(Q^\ast(\omega_2)(V_2)\circ \check{\phi}\big)
+$\DS \big(Q^\ast(\omega_2)(V_2)\circ \check{\phi}\big)
 \big|_{(r,\theta)=\check{\phi}^{-1}(t,\eta)} > 0$ for $t\geq 0$ small
 enough.  It then follows from (\ref{geoCoordEq3}) that
 \[
@@ -5187,9 +5187,9 @@ $\VEC{u} \in S$,
 \item $G:D_{\epsilon_{\VEC{u}}} \to S$ be a geodesic coordinate system for
 $S$ about $\VEC{u}$,
 \item $t \mapsto \sigma_\eta(t) = G(P(t,\eta))$ for
-$\displaystyle \eta = e^{i\theta} \in S^1$ fixed be a geodesic on $S$ through
+$\DS \eta = e^{i\theta} \in S^1$ fixed be a geodesic on $S$ through
 $\VEC{u}$, and
-\item $\displaystyle h(r) = \big(Q^\ast(\omega_2)(V_2) \circ
+\item $\DS h(r) = \big(Q^\ast(\omega_2)(V_2) \circ
 \check{\phi}\big)(r,\theta)
 = \|G_\ast\big(P_\ast(V_2(\check{\phi}(r,\theta)))\big)
 \|_{G(P(\check{\phi}(r,\theta)))}$ for $(t,\eta) = \check{\phi}(r,\theta)$.
@@ -5226,20 +5226,20 @@ $\VEC{u} \in S$,
 \item $G:D_{\epsilon_{\VEC{u}}} \to S$ be a geodesic coordinate system for
   $S$ about $\VEC{u}$,
 \item $t \mapsto \sigma_\eta(t) = G(P(t,\eta))$ for
-$\displaystyle \eta = e^{i\theta} \in S^1$ fixed be a geodesic on $S$ through
+$\DS \eta = e^{i\theta} \in S^1$ fixed be a geodesic on $S$ through
 $\VEC{u}$, and
 \item $\tilde{\VEC{u}} = \sigma_\eta(\epsilon)$ for some
 $0 < \epsilon < \epsilon_{\VEC{u}}$.
 \end{enumerate}
 Then the length of the geodesic curve $\sigma_\eta$ between
 $\VEC{u}$ and $\tilde{\VEC{u}}$ is less or equal to the length of any
-piecewise $\displaystyle C^\infty$ curves in $S$ between
+piecewise $\DS C^\infty$ curves in $S$ between
 $\VEC{u}$ and $\tilde{\VEC{u}}$.
 \end{theorem}
 
 \begin{proof}
 Recall that the length of a curve given by the piecewise
-$\displaystyle C^\infty$ parametric representation $\alpha:[a,b] \to S$
+$\DS C^\infty$ parametric representation $\alpha:[a,b] \to S$
 is given by
 \[
   L_{\alpha} = \int_a^b \|\alpha_\ast(t,1)\|_{\VEC{u}} \dx{t} \ .
@@ -5254,10 +5254,10 @@ t \, \eta & \quad \text{if} \ z = t \mu \ \text{with} \ t > 0 \\
 0 & \quad \text{if} \ z = 0 \\
 \end{cases}
 \]
-where $\displaystyle \mu \in S^1$.  We have also used the complex
+where $\DS \mu \in S^1$.  We have also used the complex
 representation of the elements of $D_{\epsilon_{\VEC{u}}}$.
 Let $U = G(D_{\epsilon_{\VEC{u}}}) \subset S$ and
-$\displaystyle K = G \circ \tilde{K} \circ G^{-1}:U \to U$.
+$\DS K = G \circ \tilde{K} \circ G^{-1}:U \to U$.
 \pdfbox{riemann_geom/geodfig2}
 
 \stage{i} We first prove that $K_\ast:\TS_{\VEC{v}} U \to \TS_{K(\VEC{v})} U$
@@ -5291,10 +5291,10 @@ $G_\ast(P_\ast(V_1(t,\xi)))$ and $G_\ast(P_\ast(V_2(t,\xi)))$ that
 \end{align*}
 
 Moreover, we get from
-$\displaystyle (\tilde{K} \circ P)(t,\xi) = \tilde{K}(t\xi) = t\eta$
-that $\displaystyle \pdfdx{(\tilde{K} \circ P)}{t}(t,e^{i\nu})
+$\DS (\tilde{K} \circ P)(t,\xi) = \tilde{K}(t\xi) = t\eta$
+that $\DS \pdfdx{(\tilde{K} \circ P)}{t}(t,e^{i\nu})
 = \pdfdx{(t e^{i\theta})}{t} = e^{i\theta} = \eta$ and
-$\displaystyle \pdfdx{(\tilde{K} \circ P)}{\nu}(t,e^{i\nu})
+$\DS \pdfdx{(\tilde{K} \circ P)}{\nu}(t,e^{i\nu})
 = \pdfdx{(t e^{i\theta})}{\nu} = 0$.  Thus
 \[
   \tilde{K}_\ast(P_\ast(V_1(t,\xi)))
@@ -5328,7 +5328,7 @@ third equality.
 
 \stage{ii}
 Suppose that $\beta:[a,b] \to S$ is a piecewise
-$\displaystyle C^\infty$ curve between $\VEC{u}$ and
+$\DS C^\infty$ curve between $\VEC{u}$ and
 $\tilde{\VEC{u}}$.  If $\beta(t) \not\in U$ for some
 $a \leq t < b$, then we let $c = \inf \{ t \in [a,b] : \beta(t) \not\in U \}$.
 We have that $c>a$ because $\beta(a) = \VEC{u} \in U$ and $U$ is an
@@ -5351,8 +5351,8 @@ $\beta_2([a,c[) = \sigma_\eta([0,\epsilon_{\VEC{u}}[)$.
 Since
 $\sigma_\eta:[0,\epsilon_{\VEC{u}}[ \to \sigma_\eta([0,\epsilon_{\VEC{u}}[)$
 is a bijection, we may define $g:[a,c[ \to [0,\epsilon_{\VEC{u}}[$ by 
-$\displaystyle g = \sigma_\eta^{-1} \circ \beta_2$.  The function is piecewise
-$\displaystyle C^\infty$.
+$\DS g = \sigma_\eta^{-1} \circ \beta_2$.  The function is piecewise
+$\DS C^\infty$.
 We get
 \begin{align*}
 L_{\beta_2} &= \int_a^c \big\|(\beta_2)_\ast(t,1) \big\|_{\beta_2(t)} \dx{t}
@@ -5377,7 +5377,7 @@ and $\tau : S \times S \to [0,\infty[$ be the map defined by
 \[
 \tau(\VEC{u}_1,\VEC{u}_2)
 = \inf \big\{ L_{\beta} : \beta\ \text{is a piecewise
-$\displaystyle C^\infty$ curve in $S$ between $\VEC{u}_1$ and
+$\DS C^\infty$ curve in $S$ between $\VEC{u}_1$ and
 $\VEC{u}_2$} \big\}
 \]
 Then $\tau$ is a metric on $S$ and the topology generated by this
@@ -5389,14 +5389,14 @@ We first prove that $\tau$ is a metric.
 \begin{enumerate}
 \item Given $\VEC{u}_1,\VEC{u}_2 \in S$, since $S$ is connected and so
 path connected \footnote{This is true because $S$ is locally
-homeomorphic to $\displaystyle \RR^2$.  In general, connected does not
+homeomorphic to $\DS \RR^2$.  In general, connected does not
 imply path connected.}, there exists at list one piecewise
-$\displaystyle C^\infty$ curve between $\VEC{u}_1$ and $\VEC{u}_2$.  Therefore
+$\DS C^\infty$ curve between $\VEC{u}_1$ and $\VEC{u}_2$.  Therefore
 $\tau(\VEC{u}_1,\VEC{u}_2)$ is defined.
 \item It is clear that $\tau(\VEC{u}_1,\VEC{u}_2) = \tau(\VEC{u}_2,\VEC{u}_1)$
 for all $\VEC{u}_1, \VEC{u}_2 \in S$ by definition of $\tau$.
 \item Given $\VEC{u}_1,\VEC{u}_2,\VEC{u}_3 \in S$ and $\epsilon >0$.
-There exist two piecewise $\displaystyle C^\infty$ curves $\beta_1$
+There exist two piecewise $\DS C^\infty$ curves $\beta_1$
 and $\beta_2$ in $S$ such that $\beta_1$ is a curve between
 $\VEC{u}_1$ and $\VEC{u}_2$ satisfying
 $\tau(\VEC{u}_1,\VEC{u}_2) \geq L_{\beta_1} - \epsilon/2$, and
@@ -5425,7 +5425,7 @@ $S$ about $\VEC{u}_1$.  We may choose $\epsilon_{\VEC{u}_1}$ small
 enough to have $\VEC{u}_2 \not\in U = G(D_{\epsilon_{\VEC{u}_1}})$.
 If $\sigma_\eta(t) = G(P(t,\eta))$ for $0 \leq t < \epsilon_{\VEC{u}}$
 is any geodesic curve, then we have that $L_{\sigma_\eta} \leq L_{\beta}$
-for all piecewise $\displaystyle C^\infty$ curves in $S$ between $\VEC{u}_1$
+for all piecewise $\DS C^\infty$ curves in $S$ between $\VEC{u}_1$
 and $\VEC{u}_2$ because $\VEC{u}_2 \not\in U$.  Note that
 $\epsilon_{\VEC{u}} = L_{\sigma_\eta}$ for all geodesics
 $\sigma_\eta$ because it is parameterized by arc length.  We get that
@@ -5452,41 +5452,41 @@ $G_i:D_{\epsilon} \to S_i$ is a geodesic coordinate system for
 $S_i$ about $\VEC{u}_i$.  Let $U_i = G_i(D_{\epsilon})$
 and $\kappa_i:S_i \to \RR$ be the curvature function on $S_i$ for
 $1\leq i \leq 2$.  If
-$\displaystyle \kappa_1 = \kappa_2 \circ G_2 \circ G_1^{-1}$
-on $U_1 = G_1(D_{\epsilon})$, then $\displaystyle G_2 \circ G_1^{-1}$ is
+$\DS \kappa_1 = \kappa_2 \circ G_2 \circ G_1^{-1}$
+on $U_1 = G_1(D_{\epsilon})$, then $\DS G_2 \circ G_1^{-1}$ is
 an isometry.
 \end{theorem}
 
 \begin{proof}
 We prove that
-$\displaystyle (G_2 \circ G_1^{-1})_\ast: \TS U_1 \to \TS U_2$ is an
+$\DS (G_2 \circ G_1^{-1})_\ast: \TS U_1 \to \TS U_2$ is an
 isometry.
 
-We have that $\displaystyle G_2 \circ G_1^{-1}$ maps the geodesic
+We have that $\DS G_2 \circ G_1^{-1}$ maps the geodesic
 $\sigma_{1,\eta}(t) = (G_1 \circ P)(t,\eta)$ onto the geodesic 
 $\sigma_{2,\eta}(t) = (G_2 \circ P)(t,\eta)$ for
-$0 \leq t \leq \epsilon$ and $\displaystyle \eta \in S^1$.  As we have
+$0 \leq t \leq \epsilon$ and $\DS \eta \in S^1$.  As we have
 seen at the beginning of the proof of Gauss' lemma, we have that
 $(G_i \circ P)_\ast(V_1(t,\eta)) = \tilde{\sigma}_{i,\eta}(t)$
 for $i =1,2$.  Hence
 $\| (G_i\circ P)_\ast (V_1(t,\eta)) \|_{(G_i\circ P)(t,\eta)}
 = \| \tilde{\sigma}_{i,\eta}(t) \|_{\sigma_{i,\eta}(t)} = 1$
 for $i =1,2$ because the geodesics are parameterized by arc
-length.  Thus $\displaystyle G_2 \circ G_1^{-1}$ preserve the length
+length.  Thus $\DS G_2 \circ G_1^{-1}$ preserve the length
 of the tangent vectors along the geodesics.
 
 It follow from Gauss's lemma that
 $(G_i\circ P)_\ast (V_1(t,\eta))$ is orthogonal to 
 $(G_i\circ P)_\ast (V_2(t,\eta))$ for $i =1,2$.  Thus
-$\displaystyle G_2 \circ G_1^{-1}$ preserves the orthogonality at each
+$\DS G_2 \circ G_1^{-1}$ preserves the orthogonality at each
 point along the geodesic.  Therefore, to prove that
-$\displaystyle G_2 \circ G_1^{-1}$ preserves the
+$\DS G_2 \circ G_1^{-1}$ preserves the
 norm of the tangent vectors at each point of $U_1$, it suffices to
-prove that $\displaystyle G_2 \circ G_1^{-1}$ preserves the norm of
+prove that $\DS G_2 \circ G_1^{-1}$ preserves the norm of
 $(G_1\circ P)_\ast (V_2(t,\eta))$.
 
 As usual, let $(\check{W},\check{U},\check{\phi})$ be a local chart of
-$\displaystyle [0,\epsilon[\times S^1$.  
+$\DS [0,\epsilon[\times S^1$.  
 Furthermore, let\\
 $h_i(r) = \big\|\big((G_i\circ P)_\ast(V_2) \circ \check{\phi}\big)(r,\theta)
 \big\|_{(G_i\circ P)(\check{\phi}(r,\theta))}$
@@ -5508,7 +5508,7 @@ By uniqueness of solutions,
 = \big\|\big( (G_2\circ P)_\ast(V_2)(r,\theta) \circ \check{\phi}\big)
 \big\|_{(G_2\circ P)(\check{\phi}(r,\theta))}
 \]
-for $0 \leq r < \epsilon$ and $\displaystyle \eta \in S^1$ arbitrary.
+for $0 \leq r < \epsilon$ and $\DS \eta \in S^1$ arbitrary.
 \end{proof}
 
 \begin{cor}
@@ -5524,7 +5524,7 @@ that $g_\ast(\VEC{u}_1,\VEC{x}_1) = (\VEC{u}_2,\VEC{x}_2)$.
 Let $G_i:D_{\epsilon} \to S$ be a geodesic coordinate system for
 $S$ about $\VEC{u}_i$ and set $U_i = G_i(D_{\epsilon})$ for $i=1,2$.
 
-Choose $\displaystyle \nu \in S^1$ acting on $D_{\epsilon}$ such that
+Choose $\DS \nu \in S^1$ acting on $D_{\epsilon}$ such that
 $\nu_\ast\big((G_1^{-1})_\ast(\VEC{u}_1,\VEC{x}_1)\big)
 = (G_2^{-1})_\ast(\VEC{u}_2,\VEC{x}_2)$ and set $\tilde{G}_2 =  G_2 \circ \nu$.
 We have that $\tilde{G}_2:D_\epsilon \to S$ is a geodesic coordinate
@@ -5532,7 +5532,7 @@ system for $S$ about $\VEC{u}_2$ because $\nu$ maps radial geodesics to
 radial geodesics in $D_{\epsilon}$.
 
 The map $g$ is defined by
-$\displaystyle g = \tilde{G}_2 \circ G_1^{-1}:U_1 \to U_2$.
+$\DS g = \tilde{G}_2 \circ G_1^{-1}:U_1 \to U_2$.
 That $g$ is an isometry comes from the previous theorem with $S_1 =S_2 = S$.
 We also have
 \[
@@ -5543,7 +5543,7 @@ g_\ast(\VEC{u}_1,\VEC{x}_1) = (G_2 \circ \nu \circ G_1^{-1})_\ast
 \]
 \pdfbox{riemann_geom/geodfig4}
 This figure summarizes the proof.  For $i=1,2$, the angle
-$\displaystyle \eta_i \in S^1$ is such that
+$\DS \eta_i \in S^1$ is such that
 $\tilde{\sigma}_{i,\eta_i}(0) = Q_i(0,\eta_i) = (\VEC{u}_i,\VEC{x}_i)$
 as in the construction of $G_i$ for $i=1,2$.  Moreover,
 $\sigma_{i,\eta_i}:[0,\epsilon[\to S$ is a geodesic through $\VEC{u}_i$.
@@ -5568,8 +5568,8 @@ $\tilde{f}:(S_1)_c \to (S_2)_c$ according to Proposition~\ref{profastMap}.
 $\omega_2$ and $\rho$ given in Definition~\ref{defnO1O2} and
 Theorem~\ref{thmConn1form}.
 
-More precisely, let $\displaystyle \omega_1^{[i]}$,
-$\displaystyle \omega_2^{[i]}$ and $\displaystyle \rho^{[i]}$ 
+More precisely, let $\DS \omega_1^{[i]}$,
+$\DS \omega_2^{[i]}$ and $\DS \rho^{[i]}$ 
 be the forms on $S_i$ given in Definition~\ref{defnO1O2} and
 Theorem~\ref{thmConn1form} for $i =1,2$.  We have
 \begin{align*}
@@ -5608,8 +5608,8 @@ for all $\big((\VEC{u},\VEC{x}),(\VEC{p},\VEC{q})\big) \in
 
 The prove that $\tilde{f}$ preserves the differential $1$-form $\rho$
 is a little bit more complex.  We first prove that
-$\displaystyle \tilde{f}^\ast(\rho^{[2]})$ is the Riemann connection on
-$S_1$ if $\displaystyle \rho^{[2]}$ is the Riemann connection on $S_2$.
+$\DS \tilde{f}^\ast(\rho^{[2]})$ is the Riemann connection on
+$S_1$ if $\DS \rho^{[2]}$ is the Riemann connection on $S_2$.
 
 Using Proposition~\ref{proFPrpts}, we find that
 \[
@@ -5627,7 +5627,7 @@ Proposition~\ref{proERequR} that
 = \tilde{f}^\ast(\eta^\ast(\rho^{[2]})) = \tilde{f}^\ast(\rho^{[2]}) \ .
 \]
 Hence, we get from Proposition~\ref{propCIfInv} that
-$\displaystyle \tilde{f}^\ast(\rho^{[2]})$ is a connection $1$-form.
+$\DS \tilde{f}^\ast(\rho^{[2]})$ is a connection $1$-form.
 
 Since $\df{\omega_1^{[2]}} = \rho^{[2]} \wedge \omega_2^{[2]}$
 and $\df{\omega_2^{[2]}} = -\rho^{[2]}  \wedge \omega_1^{[2]}$, we get
@@ -5646,18 +5646,18 @@ and similarly
 =  -\tilde{f}^\ast(\rho^{[2]}) \wedge \tilde{f}^\ast(\omega_1^{[2]})
 =  -\tilde{f}^\ast(\rho^{[2]}) \wedge \omega_1^{[1]} \ .
 \]
-Thus, we get that $\displaystyle \rho^{[1]} = \tilde{f}^\ast(\rho^{[2]})$ by
+Thus, we get that $\DS \rho^{[1]} = \tilde{f}^\ast(\rho^{[2]})$ by
 uniqueness of the Riemann connection as stated in
 Theorem~\ref{thmRconnect}.
 
 \stage{2} $f$ preserve the curvature.  More precisely,
 $\kappa_1 = \kappa_2 \circ f$ where $\kappa_i$ is the curvature
 function on $S_i$ associated to the connection $1$-form
-$\displaystyle \rho^{[i]}$ for $i=1,2$.
+$\DS \rho^{[i]}$ for $i=1,2$.
 
-We have that $\displaystyle \df{\rho^{[1]}}
+We have that $\DS \df{\rho^{[1]}}
 = - (\kappa_1 \circ \pi_{S_1}) \omega_1^{[1]} \wedge \omega_2^{[1]}$
-and $\displaystyle \df{\rho^{[2]}}
+and $\DS \df{\rho^{[2]}}
 = - (\kappa_2 \circ \pi_{S_2}) \omega_1^{[2]} \wedge \omega_2^{[2]}$.
 Hence, using the first item of Proposition~\ref{proTSprpts}, we get
 \begin{align*}
@@ -5735,9 +5735,9 @@ isometry.  Note that the identity map is the unit in $\E_S$.
 \end{proof}
 
 \begin{defn}
-We say that a subgroup $\displaystyle \E_S^o$ of the group $\E_S$ is
+We say that a subgroup $\DS \E_S^o$ of the group $\E_S$ is
 {\bfseries transitive}\index{Transitive} on $S$ if, for
-any $\VEC{u}_1,\VEC{u}_2 \in S$, there exists $\displaystyle f \in \E_S^o$
+any $\VEC{u}_1,\VEC{u}_2 \in S$, there exists $\DS f \in \E_S^o$
 such that $f(\VEC{u}_1) = \VEC{u}_2$.
 \end{defn}
 
@@ -5774,14 +5774,14 @@ We obviously have that $\Id \in \E_S(\VEC{u})$.
 Given $\VEC{u} \in S$ fixed, we have from Proposition~\ref{propfisoRot} that
 $f_\ast:\TS_{\VEC{u}} S \to \TS_{\VEC{u}} S$ is a rotation
 for all $f \in \E_S$ such that $f(\VEC{u})= \VEC{u}$.
-Hence, we may define a map $\displaystyle \Phi:\E_S(\VEC{u}) \to S^1$
+Hence, we may define a map $\DS \Phi:\E_S(\VEC{u}) \to S^1$
 that assign for each $f \in \E_S(\VEC{u})$ the angle of rotation
 of $f_\ast:\TS_{\VEC{u}} S \to \TS_{\VEC{u}} S$.
 
 \begin{prop} \label{propPhi1to1}
 Let $S$ be a connected and oriented $2$-dimensional Riemannian
 manifold.  Given $\VEC{u} \in S$, the map
-$\displaystyle \Phi:\E_S(\VEC{u}) \to S^1$ is one-to-one.
+$\DS \Phi:\E_S(\VEC{u}) \to S^1$ is one-to-one.
 \end{prop}
 
 \begin{proof}
@@ -5789,7 +5789,7 @@ Suppose that $f \in \KE(\Phi)$.
 
 Let $G: D_{\epsilon_{\VEC{u}}} \to S$ be a geodesic coordinate system of $S$
 about $\VEC{u}$.  We assume that
-$\displaystyle D_{\epsilon_{\VEC{u}}}
+$\DS D_{\epsilon_{\VEC{u}}}
 \cong B_{\epsilon_{\VEC{u}}}(\VEC{0}) \subset \RR^2$.
 We have that $f$ maps $G(D_{\epsilon_{\VEC{u}}})$ into itself
 for all $f \in \E_S(\VEC{u})$ because $f(\VEC{u}) = \VEC{u}$ and $f$
@@ -5803,12 +5803,12 @@ $\epsilon_{\VEC{u}}$.  We then get that $f(\VEC{v}) \in D_{\epsilon_{\VEC{u}}}$
 if $\VEC{v} \in D_{\epsilon_{\VEC{u}}}$.  Recall that the geodesics are
 parameterized by arc length.
 
-Since $\displaystyle g_f = G^{-1} \circ f \circ
+Since $\DS g_f = G^{-1} \circ f \circ
 G:D_{\epsilon_{\VEC{u}}} \to D_{\epsilon_{\VEC{u}}}$
 is an orientation preserving isometry leaving the origin fix, we get as in
 Proposition~\ref{propfisoRot} that $g_f$ is a rotation.
 Thus $(g_f)_\ast(\VEC{0},\VEC{y}) = (\VEC{0},g_f(\VEC{y}))$.
-Since $\displaystyle f_\ast = (G \circ g_f \circ G^{-1})_\ast
+Since $\DS f_\ast = (G \circ g_f \circ G^{-1})_\ast
 = G_\ast \circ (g_f)_\ast \circ G^{-1}_\ast$, we get
 \begin{align*}
 f \in \KE(\Phi) \iff f_\ast &= \Id_{\TS_{\VEC{u}} S}
@@ -5838,15 +5838,15 @@ Since $f:S \to S$ is smooth, we have that $V$ is also closed
 \footnote{This follows from the fact that $f$ and $f_\ast$ are
 continuous.  If $(W,U,\phi)$ is a local chart about $\VEC{u}$ and
 $\VEC{u} = \phi(\VEC{w})$, then
-$\displaystyle (\phi^{-1} \circ f \circ \phi)(\VEC{w})
+$\DS (\phi^{-1} \circ f \circ \phi)(\VEC{w})
 = \lim_{i\to \infty} (\phi^{-1} \circ f \circ \phi)(\VEC{w_i})
 = \lim_{i\to \infty} \VEC{w}_i = \VEC{w}$ for
 $\{\VEC{w}_i\}_{i\in\NN} \subset \phi^{-1}(V \cap U)$ converging to $\VEC{w}$.
 Likewise,
-$\displaystyle \diff (\phi^{-1} \circ f \circ \phi)(\VEC{w}) \VEC{y}
+$\DS \diff (\phi^{-1} \circ f \circ \phi)(\VEC{w}) \VEC{y}
 = \lim_{i\to \infty} \diff (\phi^{-1} \circ f \circ \phi)(\VEC{w_i}) \VEC{y}
 = \lim_{i\to \infty} \Id_{\RR^k} \VEC{y} = \VEC{y}$ for all
-$\displaystyle \VEC{y}\in \RR^k$.}
+$\DS \VEC{y}\in \RR^k$.}
 This implies that $V = S$ because $V$ is a non-empty open and closed
 subset of the connected set $S$.  Therefore $f = \Id_S$.
 \end{proof}
@@ -5860,7 +5860,7 @@ $\OO_{\E_S(\VEC{u})}(\VEC{v}) = \{ f(\VEC{v}) : f \in \E_S(\VEC{u}) \}$.
 
 \begin{theorem} \label{thmGeoPCirc}
 Let $S$ be an oriented $2$-dimensional Riemannian manifold.
-Suppose that the map $\displaystyle \Phi:\E_S(\VEC{u}) \to S^1$ is
+Suppose that the map $\DS \Phi:\E_S(\VEC{u}) \to S^1$ is
 onto for some $\VEC{u} \in S$.  If $G:D_{\epsilon_{\VEC{u}}} \to S$ is
 a geodesic coordinate system of $S$ about $\VEC{u}$, then the geodesic through
 $\VEC{u}$ are the orthogonal curves (parameterized by arc length) to
@@ -5870,15 +5870,15 @@ the orbits of $\E_S(\VEC{u})$ through $\VEC{v} \in G(D_{\epsilon_{\VEC{u}}})$
 
 \begin{proof}
 We assume that
-$\displaystyle D_{\epsilon_{\VEC{u}}} \cong B_{\epsilon_{\VEC{u}}}(\VEC{0})
+$\DS D_{\epsilon_{\VEC{u}}} \cong B_{\epsilon_{\VEC{u}}}(\VEC{0})
 \subset \RR^2$.
 
 Given $\VEC{v} \in G(D_\epsilon)$, let $\VEC{w} = G(\VEC{v})$.  As we
 have seen in the proof of Proposition~\ref{propPhi1to1},
-$\displaystyle G^{-1} \circ f \circ G = g_f$ is a rotation in
+$\DS G^{-1} \circ f \circ G = g_f$ is a rotation in
 $D_{\epsilon_{\VEC{u}}}$.  Since
-$\displaystyle \Phi:\E_S(\VEC{u}) \to S^1$ is onto, we have that
-$\displaystyle C_{\VEC{v}} = \{ G^{-1} f(\VEC{v}) = g_f(\VEC{w}) :
+$\DS \Phi:\E_S(\VEC{u}) \to S^1$ is onto, we have that
+$\DS C_{\VEC{v}} = \{ G^{-1} f(\VEC{v}) = g_f(\VEC{w}) :
 f \in \E_S(\VEC{u}) \}$ is a
 full circle in $D_{\epsilon_{\VEC{u}}}$.
 
@@ -5903,27 +5903,27 @@ orientation preserving isometry of a manifold.
 
 \begin{prop} \label{propIsoGr}
 Let $S$ be an oriented $2$-dimensional Riemannian manifold.
-Suppose that $\displaystyle \E_S^o$ is a subgroup of the group $\E_S$
-of orientation preserving isometry of $S$.  If $\displaystyle \E_S^o$
+Suppose that $\DS \E_S^o$ is a subgroup of the group $\E_S$
+of orientation preserving isometry of $S$.  If $\DS \E_S^o$
 is transitive on $S$ and
-$\displaystyle \Phi:\E_S^o \cap \E_S(\VEC{u}) \to S^1$ is onto for
-some $\VEC{u} \in S$, then $\displaystyle \E_S^o = \E_S$.
+$\DS \Phi:\E_S^o \cap \E_S(\VEC{u}) \to S^1$ is onto for
+some $\VEC{u} \in S$, then $\DS \E_S^o = \E_S$.
 \end{prop}
 
 \begin{proof}
 Given $f_1 \in \E_S$, we may use the transitivity of
-$\displaystyle \E_S^o$ to find $\displaystyle f_2 \in \E_S^o$ such
+$\DS \E_S^o$ to find $\DS f_2 \in \E_S^o$ such
 that $f_2(f_1(\VEC{u})) = \VEC{u}$.  Hence
 $f_2 \circ f_1 \in \E_S(\VEC{u})$.  Since $\Phi$ maps
-$\displaystyle \E_S^o \cap \E_S(\VEC{u})$ onto $\displaystyle S^1$,
-there exists $\displaystyle f_3 \in \E_S^o \cap \E_S(\VEC{u})$ such
+$\DS \E_S^o \cap \E_S(\VEC{u})$ onto $\DS S^1$,
+there exists $\DS f_3 \in \E_S^o \cap \E_S(\VEC{u})$ such
 that $\Phi(f_3) = \Phi( f_2\circ f_1)$.
-Since $\displaystyle \Phi: \E_S(\VEC{u}) \to S^1$ is one-to-one, we
+Since $\DS \Phi: \E_S(\VEC{u}) \to S^1$ is one-to-one, we
 get that $f_3 = f_2 \circ f_1$.  Thus
-$\displaystyle f_1 = f_2^{-1} \circ f_3 \in \E_S^o$.
-We have proved that $\displaystyle \E_S \subset \E_S^o$.  But
-$\displaystyle \E_S^o$ is a subgroup of $\E_S$.  Therefore
-$\displaystyle \E_S^o = \E_S$.
+$\DS f_1 = f_2^{-1} \circ f_3 \in \E_S^o$.
+We have proved that $\DS \E_S \subset \E_S^o$.  But
+$\DS \E_S^o$ is a subgroup of $\E_S$.  Therefore
+$\DS \E_S^o = \E_S$.
 \end{proof}
 
 \subsection{Manifolds of Constant Curvatures}
@@ -5963,7 +5963,7 @@ geometries on oriented $2$-dimensional Riemannian manifolds with
 constant curvature.
 
 \begin{egg}[Euclidean Geometry]
-We consider $\displaystyle S = \RR^2$ with the standard Euclidean
+We consider $\DS S = \RR^2$ with the standard Euclidean
 norm and orientation.  This is an oriented $2$-dimensional
 Riemannian manifold.
 
@@ -5971,18 +5971,18 @@ We have already seen in Example~\ref{eggEuclk0} that $S$ has null
 curvature.
 
 The group $G$ formed of all rotations and translation on
-$\displaystyle S = \RR^2$.  It is clearly a subgroup of the group
+$\DS S = \RR^2$.  It is clearly a subgroup of the group
 $\E_S$.  We may wonder if there are other orientation preserving
 isometries on $S$.  Proposition~\ref{propIsoGr} provided the answer to
 this question.  It is clear that $G$ is transitive because it
 contains all the translations.  We also have that
-$\displaystyle \Phi: G \cap \E_S(\VEC{0}) \to S^1$ is onto since
+$\DS \Phi: G \cap \E_S(\VEC{0}) \to S^1$ is onto since
 $G$ contains all the rotation about the origin.  It then follows
 from Proposition~\ref{propIsoGr} that $\E_S = G$ \footnote{It is also
 true that the group of all isometries (no orientation preserving
-required) on $\displaystyle \RR^2$ is equal to the Euclidean group
+required) on $\DS \RR^2$ is equal to the Euclidean group
 $E(2)$ formed of all rotations, reflections through plans containing
-the origin and translation on $\displaystyle S = \RR^2$.}.
+the origin and translation on $\DS S = \RR^2$.}.
 
 It follows from Theorem~\ref{thmGeoPCirc} that the geodesic through a
 point $\VEC{u} \in S$ are traditional straight lines (suitably
@@ -5996,30 +5996,30 @@ The next example is a little surprising but not extremely surprising
 if we think about it.
 
 \begin{egg}[Elliptic Geometry]
-We consider $\displaystyle S = S^2$ with the Riemannian metric induced
-as a submanifold of $\displaystyle \RR^3$.  The orientation on
-$\displaystyle S^2$ is the orientation induced by the standard
-outward unit normal to $\displaystyle S^2$ at each point of
-$\displaystyle S^2$ as defined in Definition~\ref{manifNormal}.
+We consider $\DS S = S^2$ with the Riemannian metric induced
+as a submanifold of $\DS \RR^3$.  The orientation on
+$\DS S^2$ is the orientation induced by the standard
+outward unit normal to $\DS S^2$ at each point of
+$\DS S^2$ as defined in Definition~\ref{manifNormal}.
 
-The group $G$ of rotations in $\displaystyle \RR^3$ centred at the origin
+The group $G$ of rotations in $\DS \RR^3$ centred at the origin
 is a transitive group of orientation preserving isometries on
-$\displaystyle S^2$.  It therefore follows from
+$\DS S^2$.  It therefore follows from
 Proposition~\ref{propIsoGr} that $\E_S = G$.  Moreover, we get from
 Proposition~\ref{propTransKconst} that the curvature $\kappa$ of
-$\displaystyle S^2$ is constant.  It follows from
+$\DS S^2$ is constant.  It follows from
 Example~\ref{eggGBsphere} that
-$\displaystyle 4\pi = \int_{S^2} \kappa \dx{V} = \kappa \int_{S^2} \dx{V} 
+$\DS 4\pi = \int_{S^2} \kappa \dx{V} = \kappa \int_{S^2} \dx{V} 
 = 4\pi \kappa$.  Thus $\kappa = 1 > 0$.
 
-Given $\displaystyle \VEC{u} \in S^2$, the isotropy group of
-$\displaystyle S^2$ at $\VEC{u}$ is the group of all rotations in
-$\displaystyle \RR^3$ whose axis of rotation is the line through
+Given $\DS \VEC{u} \in S^2$, the isotropy group of
+$\DS S^2$ at $\VEC{u}$ is the group of all rotations in
+$\DS \RR^3$ whose axis of rotation is the line through
 $\VEC{u}$ and $\VEC{0}$.  Thus the orbits of $\E_S(\VEC{u})$ are
 the parallels and the geodesic through $\VEC{u}$ are the great circle
 through $\VEC{u}$.  In elliptic geometry, the ``straight lines'' are the
 geodesic (i.e. the great circles) since they are associated to the
-path of shortest distance between two points on $\displaystyle S^2$.
+path of shortest distance between two points on $\DS S^2$.
 Hence, give a great circle $\ell$ and a point $\VEC{p}$ not on $\ell$,
 there does not exist any great circle through $\VEC{p}$ that does not
 intersect $\ell$.  Note also that the sum of the internal angles of a
@@ -6030,12 +6030,12 @@ triangle is greater than $\pi$ as illustrated in the figure below.
 \begin{egg}[Hyperbolic Geometry]
 It is much harder to provide a simple example of a oriented Riemannian
 manifold of constant negative curvature.  The pseudosphere is probably
-the simplest example in $\displaystyle \RR^3$.  Nevertheless, the
+the simplest example in $\DS \RR^3$.  Nevertheless, the
 example that is almost always presented in the literature is the
 {\bfseries Poincaré Model}\index{Poincaré Model}.  It is the imbedding
-in $\displaystyle \RR^2$ of an oriented Riemannian manifold $S$ of
+in $\DS \RR^2$ of an oriented Riemannian manifold $S$ of
 constant negative curvature.  This imbedding is not an isometry.  It
-has been proved that $S$ can only be realized in $\displaystyle \RR^n$
+has been proved that $S$ can only be realized in $\DS \RR^n$
 with $n>3$.
 
 The following figure illustrate how the Poincaré model is built.
@@ -6043,20 +6043,20 @@ The following figure illustrate how the Poincaré model is built.
 The ``straight lines'' in this model are the lines through the origin
 and the arcs of circles that intersect perpendicularly the boundary
 $\partial D$ of
-$\displaystyle D = \{\VEC{x} \in \RR^2 : \|\VEC{x}\| < r \}$ for some $r>0$.
+$\DS D = \{\VEC{x} \in \RR^2 : \|\VEC{x}\| < r \}$ for some $r>0$.
 They are the stereographic projections limited to the lower half of
-$\displaystyle S^2$ of all the circles \footnote{A circle on
-$\displaystyle S^2$ is defined by the intersection of a sphere with
-$\displaystyle S^2$.} that intersect perpendicularly
-the equator of $\displaystyle S^2$.
+$\DS S^2$ of all the circles \footnote{A circle on
+$\DS S^2$ is defined by the intersection of a sphere with
+$\DS S^2$.} that intersect perpendicularly
+the equator of $\DS S^2$.
 
 The {\bfseries Poincaré metric}\index{Poincaré Metric} on
 $\TS_{\VEC{u}} D$ for $\VEC{u} \in D$ is defined by
-$\displaystyle \ps{(\VEC{u},\VEC{x}_1)}{(\VEC{u},\VEC{x}_2)}_{\VEC{u}}
+$\DS \ps{(\VEC{u},\VEC{x}_1)}{(\VEC{u},\VEC{x}_2)}_{\VEC{u}}
 = \frac{\ps{\VEC{x}_1}{\VEC{x}_2}}{(r^2 - \|\VEC{u}\|^2)^2}$
 for all $(\VEC{u},\VEC{x}_i) \in \TS_{\VEC{u}} D$ for $i =1,2$,
 where $\ps{}{}$ and $\|\cdot\|$ denote the standard inner product
-and Euclidean norm on $\displaystyle \RR^2$.
+and Euclidean norm on $\DS \RR^2$.
 
 If $\sigma:[0,1[\to D$ is the straight line emanating from the origin
 given by $\sigma(t) = t (\cos{\theta},\sin{\theta})$ for
@@ -6093,17 +6093,17 @@ We have that $f_{w,\theta}$ maps $D$ onto $D$ for $w \in D$.  Note that
 \end{equation}
 for $|z|=r$.  Thus $f_{w,\theta}:\partial D \to \partial D$.
 Moreover, this map is onto $\partial D$ because
-$\displaystyle f^{-1}_{w,\theta} = f_{-w,\theta}$ exists.  Therefore
-$f_{w,\theta}(\partial D)$ splits $\displaystyle \RR^2$ into two components:
-$D$ and $\displaystyle \RR^2 \setminus \overline{D}$.  Since
-$\displaystyle f_{w,\theta}(0) = - e^{i\theta} w \in D$, we get that
+$\DS f^{-1}_{w,\theta} = f_{-w,\theta}$ exists.  Therefore
+$f_{w,\theta}(\partial D)$ splits $\DS \RR^2$ into two components:
+$D$ and $\DS \RR^2 \setminus \overline{D}$.  Since
+$\DS f_{w,\theta}(0) = - e^{i\theta} w \in D$, we get that
 $f_{w,\theta}(D) \subset D$ because $f_{w,\theta}$ is a continuous
 function and therefore maps components to components.  Again the fact that
-$\displaystyle f_{w,\theta}^{-1}$ exists implies that $f_{w,\theta}(D) = D$.
+$\DS f_{w,\theta}^{-1}$ exists implies that $f_{w,\theta}(D) = D$.
 
 We claim that $f_{w,\theta}$ is an isometry according to the Poincaré
 metric.  To verify that this is true, we use the isomorphism between
-$\CC$ and $\displaystyle \RR^2$ and first note that
+$\CC$ and $\DS \RR^2$ and first note that
 \[
 f_{w,\theta}'(z) = e^{-i\theta}\frac{r^2(r^2-|w|^2)}{(r^2-z\overline{w})^2}
 \]
@@ -6136,17 +6136,17 @@ We then get
 \end{align*}
 for all $(u,z_i) \in \TS_u D$ and $i =1,2$.
 
-Let $\displaystyle \E_D^o
+Let $\DS \E_D^o
 = \{ f_{w,\theta} : w \in D \ \text{and} \ \theta \in [0,2\pi[ \}$.
-We use Proposition~\ref{propIsoGr} to prove that $\displaystyle \E_D = \E_D^o$.
-The group $\displaystyle \E_0^o$ is transitive because
+We use Proposition~\ref{propIsoGr} to prove that $\DS \E_D = \E_D^o$.
+The group $\DS \E_0^o$ is transitive because
 $f_{w,0}$ maps $w\in D$ to $0$.  Thus
-$\displaystyle f_{-w_2,0} \circ f_{w_1,0} = f^{-1}_{w_2,0} \circ f_{w_1,0}$ maps
+$\DS f_{-w_2,0} \circ f_{w_1,0} = f^{-1}_{w_2,0} \circ f_{w_1,0}$ maps
 $w_1 \in D$ to $w_2 \in D$.  Moreover
-$\displaystyle \E_D^o \cap \E_D(0) = \{ f_{0,\theta} : \theta \in [0, 2\pi[ \}$.
-Hence $\displaystyle \Phi:\E_D^o \cap \E_D(0) \to S^1$ is onto.
+$\DS \E_D^o \cap \E_D(0) = \{ f_{0,\theta} : \theta \in [0, 2\pi[ \}$.
+Hence $\DS \Phi:\E_D^o \cap \E_D(0) \to S^1$ is onto.
 Therefore, we may effectively use Proposition~\ref{propIsoGr} to conclude
-that $\displaystyle \E_D = \E_D^o$.
+that $\DS \E_D = \E_D^o$.
 
 We can now confirm that the ``straight lines'' defined at the
 beginning of this example are effectively the geodesics.
@@ -6180,7 +6180,7 @@ on $\Game$.  We have to determine $\theta$, $w$,
 the endpoints $p_1$ and $p_3=-p_1$ of the diagonal $\ell$, and another
 point $p_2$ on $\ell$ such that $f_{w,\theta}(p_i) = q_i$ for $1\leq i \leq 3$.
 As illustrated in the following figure, $p_2 \in \ell$ and $\theta$
-should satisfy $\displaystyle e^{i\theta}p_2 = q_2$ to get
+should satisfy $\DS e^{i\theta}p_2 = q_2$ to get
 $f_{w,\theta}(p_2) = q_2$ because
 $|f_{w,\theta}(p_2)| = |p_2| = |q_2|$ according to (\ref{LFTEq1}).
 \pdfbox{riemann_geom/geodfig10}
@@ -6198,7 +6198,7 @@ r^2p_1 + e^{-i\theta} q_1 p_1 \overline{w}  - r^2w = r^2 e^{-i\theta} q_1
 r^2p_1 + e^{-i\theta} q_3 p_1 \overline{w}  + r^2w = - r^2 e^{-i\theta} q_3  \ .
 \]
 Since $q_1$ and $q_3$ are on $\partial D$, we have that
-$\displaystyle q_3 = e^{i\nu} q_1$ for some $\nu \in \RR$.  Thus, the
+$\DS q_3 = e^{i\nu} q_1$ for some $\nu \in \RR$.  Thus, the
 previous equations become
 \begin{equation} \label{LFTEq2}
 r^2p_1 + e^{-i\theta} q_1 p_1 \overline{w}  - r^2w = r^2 e^{-i\theta} q_1
@@ -6208,18 +6208,18 @@ and
 r^2p_1 + e^{-i(\theta-\nu)} q_1 p_1 \overline{w}  + r^2w
 = - r^2 e^{-i(\theta-\nu)} q_1  \ .
 \end{equation}
-If we subtract $\displaystyle e^{i\nu}$ times (\ref{LFTEq2}) from
+If we subtract $\DS e^{i\nu}$ times (\ref{LFTEq2}) from
 (\ref{LFTEq3}), then we get
 \[
 r^2(1 - e^{i\nu}) p_1 + r^2(1+e^{i\nu}) w = -2 r^2 e^{i(\theta-\nu)}q_1 \ .
 \]
 We can always solve for $p_1$ or $w$ because at least one of
-$\displaystyle 1 - e^{i\nu}$ or $1 + e^{i\nu}$ is non-null.  We can
+$\DS 1 - e^{i\nu}$ or $1 + e^{i\nu}$ is non-null.  We can
 substitute $p_1$ or $w$ into (\ref{LFTEq2}) to get a system of linear
 equations (the real and imaginary parts) for $w$ or $p_1$
 respectively.  Once we have $w$ and $p_1$ in terms of $\theta$, we can
 use the equation
-$\displaystyle q_2 = e^{i\theta}p_2 = \pm e^{i\theta} |q_2| p_1$ to determine
+$\DS q_2 = e^{i\theta}p_2 = \pm e^{i\theta} |q_2| p_1$ to determine
 $\theta$ and thus $p_2$.
 
 We cannot complete this example without illustrating two of the major

@@ -35,7 +35,7 @@ question of which one is better than the other.
 
 \begin{defn}
 A subset $\{\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k\}$ of
-$\displaystyle \RR^n$ is
+$\DS \RR^n$ is
 {\bfseries convex independent}\index{Convex Independent} if
 $\{\VEC{x}_1-\VEC{x}_0,\VEC{x}_2-\VEC{x}_0,\ldots, \VEC{x}_k-\VEC{x}_0\}$
 are linearly independent.
@@ -43,8 +43,8 @@ are linearly independent.
 
 \begin{defn}
 Let $s = \{\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k\}$ be a
-convex independent subset of $\displaystyle \RR^n$.   The set
-$\displaystyle \left\{ \sum_{j=0}^k a_j\VEC{x}_j : a_j \geq 0 \ \text{and} \
+convex independent subset of $\DS \RR^n$.   The set
+$\DS \left\{ \sum_{j=0}^k a_j\VEC{x}_j : a_j \geq 0 \ \text{and} \
 \sum_{j=0}^k a_k = 1 \right\}$, denoted $[s]$ or
 $[\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots,\VEC{x}_k]$, is called a
 {\bfseries closed $\mathbf{k}$-simplex}\index{Closed $k$-Simplex}.
@@ -64,16 +64,16 @@ convex set containing $s$.
 
 \begin{defn}
 The coefficients $a_j$ in the expression
-$\displaystyle \VEC{x} = \sum_{j=0}^k a_j\VEC{x}_j$ with $a_j \geq 0$ and
-$\displaystyle \sum_{j=0}^k a_k = 1$ are called
+$\DS \VEC{x} = \sum_{j=0}^k a_j\VEC{x}_j$ with $a_j \geq 0$ and
+$\DS \sum_{j=0}^k a_k = 1$ are called
 {\bfseries barycentric coordinates}\index{Barycentric Coordinates}
 of $x$.
 \end{defn}
 
 \begin{defn}
 Let $s = \{\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k\}$ be a
-convex independent subset of $\displaystyle \RR^n$.
-The set $\displaystyle \left\{ \sum_{j=0}^k a_j\VEC{x}_j : a_j > 0
+convex independent subset of $\DS \RR^n$.
+The set $\DS \left\{ \sum_{j=0}^k a_j\VEC{x}_j : a_j > 0
 \ \text{and} \ \sum_{j=0}^k a_k = 1 \right\}$, denoted $(s)$ or
 $(\VEC{x}_0,\VEC{x}_1,\VEC{x}_2, \ldots, \VEC{x}_k)$,
 is called an {\bfseries open $\mathbf{k}$-simplex}\index{Open $k$-Simplex}.
@@ -99,7 +99,7 @@ $(s_1) \cap (s_2) = \emptyset$.
 
 \pdfF{alg_top/simpcpx1}{Closed $3$-simplex}{Illustration of a closed
 $3$-simplex
-$\displaystyle [\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\VEC{x}_3] \subset \RR^3$.
+$\DS [\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\VEC{x}_3] \subset \RR^3$.
 This closed simplex is the union of the open faces
 $(\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\VEC{x}_3)$, $(\VEC{x}_0,\VEC{x}_1,\VEC{x}_2)$,
 $(\VEC{x}_0,\VEC{x}_1,\VEC{x}_3)$,
@@ -110,7 +110,7 @@ $(\VEC{x}_0)$, $(\VEC{x}_1)$, $(\VEC{x}_2)$ and $(\VEC{x}_3)$.}{SimpCpx1}
 
 \begin{defn}
 A {\bfseries simplicial complex}\index{Simplicial Complex} $K$ in
-$\displaystyle \RR^n$ is a finite set of open simplices such that:
+$\DS \RR^n$ is a finite set of open simplices such that:
 \begin{enumerate}
 \item If $(s)$ is an open simplices in $K$, then all the open faces of
 the closed simplex $[s]$ are also in $K$.
@@ -120,23 +120,23 @@ either $(s_1) = (s_2)$ or $(s_1) \cap (s_2) = \emptyset$.
 The {\bfseries dimension}\index{Dimension} of the simplicial complex
 $K$, denoted $\dim K$, is defined as the dimension of the largest open
 simplex in $K$.  The union of the open simplices in $K$ is the subset
-of $\displaystyle \RR^n$ denoted $[K]$.
+of $\DS \RR^n$ denoted $[K]$.
 The {\bfseries vertices}\index{Vertices} of $K$ are the elements
 $\VEC{x} \in [K]$ such that $(\VEC{x}) \in K$; namely, $(\VEC{x})$ is a
 $0$-simplex in $K$.
 \end{defn}
 
-We have that $\displaystyle [K] = \bigcup_{(s) \in K} (s)
+We have that $\DS [K] = \bigcup_{(s) \in K} (s)
 = \bigcup_{(s) \in K} [s]$ and $[K]$ is a compact subsets of
-$\displaystyle \RR^n$ because it is a finite union of the compact sets
+$\DS \RR^n$ because it is a finite union of the compact sets
 $[s]$ for $(s) \in K$.
 
 \pdfF{alg_top/simpcpx2}{Simplicial complex}{The simplicial complex
-$K$ represented by the set $\displaystyle [K] \subset \RR^3$ in the
+$K$ represented by the set $\DS [K] \subset \RR^3$ in the
 figure above is the union of the set of all the open faces of the
 closed $3$-simplex $[\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\VEC{x}_3]$ listed in
 Figure~\ref{SimpCpx1} with the set
-$\displaystyle \left\{ (\VEC{x}_0,\VEC{x}_4,\VEC{x}_5),
+$\DS \left\{ (\VEC{x}_0,\VEC{x}_4,\VEC{x}_5),
 (\VEC{x}_0,\VEC{x}_4), (\VEC{x}_0,\VEC{x}_5), (\VEC{x}_4,\VEC{x}_5),
 (\VEC{x}_4), (\VEC{x}_5) \right\}$.  The dimension of $K$ is $3$.}{SimpCpx2}
 
@@ -152,8 +152,8 @@ simplicial complex.
 \begin{defn}
 Let $K$ be a simplicial complex of dimension $k$.  Given
 $0 \leq r \leq k$, the {\bfseries $\mathbf{r}$-skeleton}\index{$r$-Skeleton} 
-of $K$, denoted $\displaystyle K^r$, is the set
-$\displaystyle K^r = \left\{ (s) : (s) \in K \ \text{and}\ \dim\, (s)
+of $K$, denoted $\DS K^r$, is the set
+$\DS K^r = \left\{ (s) : (s) \in K \ \text{and}\ \dim\, (s)
 \leq r \right\}$.
 \end{defn}
 
@@ -162,21 +162,21 @@ we may treat $s$ as the set of all the open faces of $[s]$; namely,
 we may treat $s$ as a simplicial complex.  Note that all the open
 faces of $[s]$ are open $m$-simplices with $m \leq \dim\, [s]$.
 By extension, the {\bfseries $r$-skeleton}\index{$r$-Skeleton} of $s$ for
-$0 \leq r \leq k$, denoted $\displaystyle s^r$, is the set of all open
+$0 \leq r \leq k$, denoted $\DS s^r$, is the set of all open
 faces of $[s]$ corresponding to open $m$-simplex with $m \leq r$.
-Moreover, $\displaystyle [s^r]$ will denote the union
-of all the open simplices in $\displaystyle s^r$.
+Moreover, $\DS [s^r]$ will denote the union
+of all the open simplices in $\DS s^r$.
 
 \begin{defn}
-Given $\displaystyle \VEC{x} \in \RR^n$ and
-$\displaystyle A \subset \RR^n$, the pair $(\VEC{x},A)$ is in
+Given $\DS \VEC{x} \in \RR^n$ and
+$\DS A \subset \RR^n$, the pair $(\VEC{x},A)$ is in
 {\bfseries general position}\index{General Position} if
 $\VEC{x} \not\in A$ and, for any two distinct points
 $\VEC{a}_1$ and $\VEC{a}_2$ in $A$, we have that
 $[\VEC{x},\VEC{a}_1] \cap [\VEC{x},\VEC{a}_2] = \{ \VEC{x}\}$.
 If $(\VEC{x},A)$ is in general position, then the {\bfseries cone}\index{Cone}
 with base $A$ and vertex $\VEC{x}$, denoted $\VEC{x} \ast A$, is the set
-$\displaystyle \VEC{x} \ast A = \bigcup_{\VEC{a} \in A} [\VEC{x},\VEC{a}]$.
+$\DS \VEC{x} \ast A = \bigcup_{\VEC{a} \in A} [\VEC{x},\VEC{a}]$.
 
 Given a simplicial complex $K$, the {\bfseries cone}\index{Cone}
 $\VEC{x} \ast K$ is the simplicial
@@ -188,7 +188,7 @@ $(\VEC{x}_0, \VEC{x}_1, \ldots , \VEC{x}_m) \in K$ with $m \leq \dim K$.
 
 The closed $k$-simplex
 $[s] = [\VEC{x}_0,\VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k]$ can be
-expressed as $\displaystyle [s] = \VEC{x} \ast [s^{k-1}]$ for any
+expressed as $\DS [s] = \VEC{x} \ast [s^{k-1}]$ for any
 $\VEC{x} \in (s)$.
 
 \subsection{Barycentric Subdivisions} \label{ssectBarSubd}
@@ -197,7 +197,7 @@ $\VEC{x} \in (s)$.
 The {\bfseries barycentre}\index{Barycentre} of an open $k$-simplex
 $(s) = (\VEC{x}_0, \VEC{x}_1, \ldots, \VEC{x}_k)$ is the point
 $\VEC{b}_{(s)} \in (s)$ defined by
-$\displaystyle \VEC{b}_{(s)} = (k+1)^{-1} \sum_{j=0}^k \VEC{x}_j$.
+$\DS \VEC{b}_{(s)} = (k+1)^{-1} \sum_{j=0}^k \VEC{x}_j$.
 \end{defn}
 
 \begin{defn}
@@ -225,15 +225,15 @@ Its proof is not too complicated but it is long (see \cite{ST}).  It
 uses the concept of general position introduced above.
 
 \begin{theorem}
-Suppose that $K$ is a simplicial complex in $\displaystyle \RR^n$.  Let
-$\displaystyle K^{[1]}$ be the simplicial complex defined by
+Suppose that $K$ is a simplicial complex in $\DS \RR^n$.  Let
+$\DS K^{[1]}$ be the simplicial complex defined by
 \begin{align*}
 K^{[1]} & = \left\{ (\VEC{b}_{(s_0)}, \VEC{b}_{(s_1)},\ldots, \VEC{b}_{(s_m)}) :
 (s_1) < (s_2) < \ldots < (s_m) \ \text{and} \right. \\
 &\hspace{13em} \left.  \ (s_j) \in K \ \text{for}
 \ 0 \leq j \leq m \leq \dim K  \right\} \ .
 \end{align*}
-Then $\displaystyle K^{[1]}$ is a subdivision of $K$
+Then $\DS K^{[1]}$ is a subdivision of $K$
 (Figure~\ref{SimpCpx4}).  Moreover, we have that \\
 $(\VEC{b}_{(s_0)}, \VEC{b}_{(s_1)},\ldots, \VEC{b}_{(s_m)})$ is a
 subset of $(s_m)$ for all sequences
@@ -242,7 +242,7 @@ $(s_1) < (s_2) < \ldots < (s_m)$ of open simplices in $K$.
 
 \pdfF{alg_top/simpcpx4}{First barycentric subdivision}{We have
 illustrated some of the open simplices in the simplicial complex
-$\displaystyle s^{[1]}$ where $s$ is the simplicial complex
+$\DS s^{[1]}$ where $s$ is the simplicial complex
 associated to the closed $2$-simplex $[s] = [x_0,x_1,x_2]$.  We have
 drawn in blue the open $2$-simplex
 $(\VEC{b}_{(s_1)}, \VEC{b}_{(s_2)}, \VEC{b}_{(s_3)})$ for $(s_1) = (\VEC{x}_1)$,
@@ -253,24 +253,24 @@ $(s_4) = (\VEC{x}_2)$ and $(s_3)$.  Again, we have that $(s_4) < (s_3)$.
 Note that the open $0$-simplex $(\VEC{b}_{(t)})$ is associated to a
 $0$-simplex $(t)$ is $(t)$ itself.}{SimpCpx4}
 
-It follows from the definition of $\displaystyle K^{[1]}$ that
-$\displaystyle \dim K^{[1]} = \dim K$.
+It follows from the definition of $\DS K^{[1]}$ that
+$\DS \dim K^{[1]} = \dim K$.
 
 \begin{defn} \label{defnBarySubd}
-Let $K$ be a simplicial complex in $\displaystyle \RR^n$.
-The simplicial complex $\displaystyle K^{[1]}$ is called the
+Let $K$ be a simplicial complex in $\DS \RR^n$.
+The simplicial complex $\DS K^{[1]}$ is called the
 {\bfseries first barycentric subdivision}\index{Barycentric
 Subdivision!First Barycentric Subdivision} of $K$.  Inductively, we
-may define the {\bfseries $\displaystyle \mathbf{m^{th}}$ barycentric
+may define the {\bfseries $\DS \mathbf{m^{th}}$ barycentric
 subdivision}\index{Barycentric Subdivision!$m^{th}$
 Barycentric Subdivision} of $K$ as the simplicial complex
-$\displaystyle K^{[m]} = (K^{[m-1]})^{[1]}$ for $m>1$.
+$\DS K^{[m]} = (K^{[m-1]})^{[1]}$ for $m>1$.
 \end{defn}
 
-Recall that the diameter of a set $\displaystyle S \subset \RR^n$ is defined
-by $\displaystyle \diam S = \inf_{\VEC{x},\VEC{y} \in S}
+Recall that the diameter of a set $\DS S \subset \RR^n$ is defined
+by $\DS \diam S = \inf_{\VEC{x},\VEC{y} \in S}
 \|\VEC{x}- \VEC{y}\|$ where $\|\cdot\|$ is a norm on
-$\displaystyle \RR^n$, usually the Euclidean norm. 
+$\DS \RR^n$, usually the Euclidean norm. 
 
 \begin{lemma} \label{lemDiams}
 If $[s] = [\VEC{x}_0,\VEC{x}_1,\VEC{x}_2,\ldots, \VEC{x}_k]$ is a
@@ -298,22 +298,22 @@ This is a contradiction.
 
 \begin{defn}
 Let $K$ be a simplicial complex.  The {\bfseries mesh}\index{Mesh}
-of $K$ is defined as $\displaystyle \mesh K = \max_{(s) \in K} \diam\, [s]$.
+of $K$ is defined as $\DS \mesh K = \max_{(s) \in K} \diam\, [s]$.
 \end{defn}
 
 \begin{prop} \label{propMeshMBS}
 Suppose that $K$ is a simplicial complex of dimension $k$.  Then
-$\displaystyle \mesh K^{[1]} \leq (k/(k+1)) \mesh K$.
+$\DS \mesh K^{[1]} \leq (k/(k+1)) \mesh K$.
 \end{prop}
 
 \begin{proof}
-By definitions of $\displaystyle K^{[1]}$ and the mesh of a simplicial
+By definitions of $\DS K^{[1]}$ and the mesh of a simplicial
 complex, there exists $(s_1) < (s_2) < \ldots < (s_m)$ in $K$ with $m \leq k$
 such that
-$\displaystyle \mesh K^{[1]}
+$\DS \mesh K^{[1]}
 = \diam\, [\VEC{b}_{(s_0)}, \VEC{b}_{(s_1)},\ldots, \VEC{b}_{(s_m)}]$.
 It follows from Lemma~\ref{lemDiams} that
-$\displaystyle \mesh^{[1]} K = \|\VEC{b}_{(s_p)} - \VEC{b}_{(s_q)}\|$ for some
+$\DS \mesh^{[1]} K = \|\VEC{b}_{(s_p)} - \VEC{b}_{(s_q)}\|$ for some
 $p,q \in \{0,1,\ldots,m\}$.  Without loss of generality, we may
 re-index the vertices of $K$ and assume
 that $p < q$, $(s_p) = (\VEC{x}_0,\VEC{x}_1,\ldots, \VEC{x}_p)$ and
@@ -350,7 +350,7 @@ because $q \leq k$.
 \end{proof}
 
 It follows from the previous proposition that
-$\displaystyle \mesh K^{[m]} \leq \big( (k/(k+1)\big)^m \mesh K \to 0$
+$\DS \mesh K^{[m]} \leq \big( (k/(k+1)\big)^m \mesh K \to 0$
 as $m \to \infty$.
 
 \subsection{Simplicial Approximation} \label{ssectSA}
@@ -365,14 +365,14 @@ function $\phi :[K] \to [L]$ that satisfies the following conditions.
 there exists $(t) \in L$ such that $\phi(\VEC{x}_i) \in [t]$ for
 $0 \leq i \leq k$. 
 \item If $\VEC{x} \in (s) = (\VEC{x}_0,\VEC{x}_1, \ldots, \VEC{x}_k)$
-and $\displaystyle \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j$ with $a_j >0$
-and $\displaystyle \sum_{j=0}^k a_j = 1$, then 
-$\displaystyle \phi(\VEC{x}) = \sum_{j=0}^k a_j \phi(\VEC{x}_j)$.
+and $\DS \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j$ with $a_j >0$
+and $\DS \sum_{j=0}^k a_j = 1$, then 
+$\DS \phi(\VEC{x}) = \sum_{j=0}^k a_j \phi(\VEC{x}_j)$.
 \end{enumerate}
 \end{defn}
 
-The set $\displaystyle \bigg\{ \phi(\VEC{x}) :
-\displaystyle \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j \ \text{with}\ a_j >0
+The set $\DS \bigg\{ \phi(\VEC{x}) :
+\DS \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j \ \text{with}\ a_j >0
 \ \text{and} \ \sum_{j=0}^k a_j = 1\bigg\}$ in (3) represents an
 open face of $[t]$ mentioned in (2).  It may not be $(t)$ itself because
 $\phi(\VEC{x}_i)$ for $0\leq i \leq k$ may not be all
@@ -381,7 +381,7 @@ the vertices of $[t]$.
 \begin{defn} \label{defnStarV}
 Let $K$ be a simplicial complex and $\VEC{x}$ be a vertex of
 $K$.  The {\bfseries star}\index{Star} of $\VEC{x}$, denoted $\St(\VEC{x})$,
-is the set defined by $\displaystyle
+is the set defined by $\DS
 \St(\VEC{x}) = \bigcup_{\substack{(s) \in K\\\VEC{x} \in [s]}} (s)$
 (Figure~\ref{Star1}).
 \end{defn}
@@ -395,11 +395,11 @@ illustrated on the right in blue the star of $\VEC{x}_1$.}{Star1}
 
 Given a vertex $\VEC{x}$ of a simplicial complex $K$, we have that
 $\St(\VEC{x})$ is open in the induced topology on $[K]$ from
-$\displaystyle \RR^n$.  Moreover, $\VEC{x}$ is the only vertex of $K$ in
+$\DS \RR^n$.  Moreover, $\VEC{x}$ is the only vertex of $K$ in
 $\St(\VEC{x})$ and
-$\displaystyle \{\St(\VEC{x}) : \VEC{x} \ \text{is a vertex of} \ K\}$
+$\DS \{\St(\VEC{x}) : \VEC{x} \ \text{is a vertex of} \ K\}$
 is an open cover of $[K]$ with respect to the induced topology
-on $[K]$ from $\displaystyle \RR^n$.
+on $[K]$ from $\DS \RR^n$.
 
 \begin{defn}
 Let $K$ and $L$ be two simplicial complexes.  A
@@ -438,11 +438,11 @@ have that $\phi(\VEC{x}_j)$ for $0 \leq j \leq m$ are vertices of
 $[t]$.  Note that they may not be all the vertices of $[t]$.
 
 Since $\VEC{x} \in (s)$, we have that
-$\displaystyle \VEC{x} = \sum_{j=0}^m a_j \VEC{x}_j$ for some
-$a_j> 0$ such that $\displaystyle \sum_{j=0}^m a_j = 1$.  Hence, we
+$\DS \VEC{x} = \sum_{j=0}^m a_j \VEC{x}_j$ for some
+$a_j> 0$ such that $\DS \sum_{j=0}^m a_j = 1$.  Hence, we
 get from the definition of simplicial map that
-$\displaystyle \phi(\VEC{x}) = \sum_{j=0}^m a_j \phi(\VEC{x}_j)$ with
-$a_j> 0$ such that $\displaystyle \sum_{j=0}^m a_j = 1$.  Thus
+$\DS \phi(\VEC{x}) = \sum_{j=0}^m a_j \phi(\VEC{x}_j)$ with
+$a_j> 0$ such that $\DS \sum_{j=0}^m a_j = 1$.  Thus
 $\phi(\VEC{x}) \in \big(\phi(\VEC{x}_0), \phi(\VEC{x}_1), \ldots,
 \phi(\VEC{x}_k)\big) \subset [t]$.  Note that we may not have that
 $\big(\phi(\VEC{x}_0), \phi(\VEC{x}_1), \ldots, \phi(\VEC{x}_k)\big) = (t)$
@@ -453,7 +453,7 @@ may be only an open face of $[t]$ not equal to $(t)$ itself..
 \end{proof}
 
 This proposition implies that
-$\displaystyle \|f - \phi\|_{[K]} = \max_{\VEC{x} \in [K]}
+$\DS \|f - \phi\|_{[K]} = \max_{\VEC{x} \in [K]}
 \|f(\VEC{x}) - \phi(\VEC{x}\| \leq \mesh L$.
 
 \begin{prop}
@@ -499,14 +499,14 @@ all vertices $\VEC{x}$ of $K$.  Consider a simplex
 $(s) = (\VEC{x}_0,\VEC{x}_1,\ldots,\VEC{x}_m) \in K$.
 Since $(s) \subset \St(\VEC{x}_j)$ for $0 \leq j \leq m$, we have
 that $f\big( (s)\big) \subset f(\St(\VEC{x}_j)) \subset \St(\phi(\VEC{x}_j))$
-for $0 \leq j \leq m$.  Thus $\displaystyle
+for $0 \leq j \leq m$.  Thus $\DS
 \bigcap_{j=0}^m \St(\phi(\VEC{x}_j)) \neq \emptyset$.  Therefore,
 there exists an open simplex $(t) \subset \St(\phi(\VEC{x}_j))$ for
 $0 \leq j \leq m$.  We get that $\phi(\VEC{x}_j)$ for $0 \leq j \leq m$
 are vertices of $[t]$.  Thus, we may define $\phi\big|_{[s]}$ by
-$\displaystyle \phi\big|_{[s]}(\VEC{x}) = \sum_{j=0}^m a_j \phi(\VEC{x}_j)$ for
-$\displaystyle \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j$ with $a_j >0$
-and $\displaystyle \sum_{j=0}^k a_j = 1$.  In particular,
+$\DS \phi\big|_{[s]}(\VEC{x}) = \sum_{j=0}^m a_j \phi(\VEC{x}_j)$ for
+$\DS \VEC{x} = \sum_{j=0}^k a_j \VEC{x}_j$ with $a_j >0$
+and $\DS \sum_{j=0}^k a_j = 1$.  In particular,
 $\phi\big((s)\big) \subset [t]$.
 
 Since $(s_1) = (s_2)$ or $(s_1) \cap (s_2) = \emptyset$ for all
@@ -526,15 +526,15 @@ for each $m \geq M$.
 \end{theorem}
 
 \begin{proof}
-Since $\displaystyle \{\St(\VEC{y}) : \VEC{y} \ \text{is a vertex of} \ L\}$
+Since $\DS \{\St(\VEC{y}) : \VEC{y} \ \text{is a vertex of} \ L\}$
 is an open cover of $[L]$ with respect to the induced topology on
 $[L]$ and $f:[K]\to [L]$ is continuous, we have that
-$\displaystyle \{f^{-1}(\St(\VEC{y})) :
+$\DS \{f^{-1}(\St(\VEC{y})) :
 \VEC{y} \ \text{is a vertex of} \ L\}$ is an open cover of $[K]$ with
 respect to the induce topology om $[K]$.  Since $[K]$ is compact,
 there exists a number $\epsilon>0$, called the Lebesgue number, such
 that any open ball in $[K]$ of radius less than or equal to $\epsilon$
-is a subset $\displaystyle f^{-1}(\St(\VEC{y}))$ for some vertex
+is a subset $\DS f^{-1}(\St(\VEC{y}))$ for some vertex
 $\VEC{y}$ of $L$ \footnote{Since the number of vertices of $L$ is
 finite, we could have proved the existence of $\epsilon$ without
 making use of the theory of compact sets.}.
@@ -543,7 +543,7 @@ Choose $M$ such that $\mesh K_m < \epsilon/2$ for $m \geq M$.
 Assume that $m \geq M$.  If ${s} \in K_m$, then
 $\diam [s] \leq \mesh K_m < \epsilon/2$.  Hence, for each vertex
 $\VEC{x}$ of $K_m$, we have that
-$\displaystyle \St(\VEC{x}) \subset B_\epsilon(\VEC{x}) \subset 
+$\DS \St(\VEC{x}) \subset B_\epsilon(\VEC{x}) \subset 
 f^{-1}(\St(\VEC{y}))$ for some vertex $\VEC{y}$ of $L$; namely,
 \begin{equation} \label{scapproEq1}
   f(\St(\VEC{x})) \subset \St(\VEC{y})
@@ -553,7 +553,7 @@ $\VEC{y}$ of $L$ satisfying the previous statement, select one of
 them.  Let $\phi_m(\VEC{x}) = \VEC{y}$.  This define a map from the set
 of vertices of $K_m$ to the set of vertices of $L$.  We also have from
 (\ref{scapproEq1}) that
-$\displaystyle f(\St(\VEC{x})) \subset \St(\phi(\VEC{x}))$.
+$\DS f(\St(\VEC{x})) \subset \St(\phi(\VEC{x}))$.
 We can then use Proposition~\ref{propExtSApprox} to get a simplicial
 approximation $\phi_m:[K_m] \to [L]$ of $f$.
 \end{proof}
@@ -573,13 +573,13 @@ $\|f - \phi\|_{[K]} < \epsilon$.
 
 \begin{proof}
 As remarked after Proposition~\ref{propMeshMBS}, if
-$\displaystyle L_j = L^{[j]}$ for $\displaystyle j\in \NNp$, then we
+$\DS L_j = L^{[j]}$ for $\DS j\in \NNp$, then we
 get a sequence of barycentric subdivisions of $L$ such that
 $\mesh L_j \to 0$ as $j \to \infty$.  Thus there exists $j > 0$ such that
 $\mesh L_j < \epsilon$.
 
-Similarly, if $\displaystyle K_m = K^{[m]}$ for
-$\displaystyle m\in \NNp$, then we get a sequence of barycentric
+Similarly, if $\DS K_m = K^{[m]}$ for
+$\DS m\in \NNp$, then we get a sequence of barycentric
 subdivisions of $M$ such that $\mesh K_m \to 0$ as
 $m \to \infty$.  If we apply Theorem~\ref{thESAf} to
 $f:[K] \to [L_j] = [L]$ using the collection of subdivisions
@@ -665,7 +665,7 @@ of $K$.
 For us, the integral domain $R$ will either be $\ZZ$ or $\RR$.
 
 The elements $c \in C_k(K;R)$ are finite sums of the form
-$\displaystyle c = \sum_{\substack{(s) \in K\\\dim(s)=k}} a_{(s)}
+$\DS c = \sum_{\substack{(s) \in K\\\dim(s)=k}} a_{(s)}
 \os{s}{}{}{}{}{}$ with $a_{(s)} \in R$, or more explicitly
 \[
   c = \sum_{(\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k}) \in K}
@@ -706,7 +706,7 @@ as we have illustrated in the figure above.}{SimpHm1}
 Let $K$ be a simplicial complex and $R$ an integral domain.
 The {\bfseries boundary map}\index{Boundary Map}
 $\partial_k: C_k(K;R) \to C_{k-1}(K;R)$ is define by
-$\displaystyle \partial_k \bigg( \sum_{\substack{(s) \in K\\ \dim(s) = k}}
+$\DS \partial_k \bigg( \sum_{\substack{(s) \in K\\ \dim(s) = k}}
 a_{(s)}\os{s}{}{}{}{} \bigg)
 = \sum_{\substack{(s) \in K\\ \dim(s) =k}}  a_{(s)} \partial_k  \os{s}{}{}{}{}$
 or more explicitly
@@ -737,7 +737,7 @@ that cancel each other.
 Let $K$ be a simplicial complex and $R$ an integral domain,\\
 $Z_k(K;R) = \{ c \in C_k(K;R) : \partial_k(c) = 0 \}$
 and $B_k(K;R) = \{ \partial_{k+1}(c) : c \in C_{k+1}(K;R) \}$.
-The {\bfseries (simplicial) $\displaystyle \mathbf{k^{th}}$ homology
+The {\bfseries (simplicial) $\DS \mathbf{k^{th}}$ homology
 module}\index{Homology Module!Simplicial $k^{th}$ Homology Module} of $K$ is the
 free abelian quotient group $H_k(K;R) = Z_k(K;R) / B_k(K;R)$.  The
 elements of $Z_k(K;R)$ are called {\bfseries cycles}\index{Cycle} and those of
@@ -749,7 +749,7 @@ denoted $[c]_K$.
 Suppose that $K$ and $L$ are two simplicial complexes and that
 $f:[K] \to [L]$ is a homeomorphism that maps open simplices in $K$ to
 open simplices in $L$.  The map $C(f): C_k(K;R) \to C_k(L;R)$ defined by
-$\displaystyle C(f)\Big( \sum_{\substack{(s) \in K\\ \dim(s) =k}}
+$\DS C(f)\Big( \sum_{\substack{(s) \in K\\ \dim(s) =k}}
 a_{(s)}\os{s}{}{}{}{} \Big)
 = \sum_{\substack{(s) \in K\\ \dim(s) =k}} a_{(s)} \os{f((s))}{}{}{}{}$
 is an isomorphism.
@@ -767,7 +767,7 @@ is equal to the number of (connected) components of $[K]$.
 
 \begin{proof}[Proof (Sketch)]
 Since $Z_0(K;R) = C_0(K;R)$ and all elements of $C_0(K;R)$
-are of the form $\displaystyle c = \sum_{(\VEC{x}_j) \in K} a_{(\VEC{x}_j)}
+are of the form $\DS c = \sum_{(\VEC{x}_j) \in K} a_{(\VEC{x}_j)}
 \os{\VEC{x}_j}{}{}{}{}$ with $a_{(\VEC{x}_j)} \in R$,  it therefore
 suffices to consider the linear independence of the equivalence
 classes in $H_0(K;R)$ associated to
@@ -797,7 +797,7 @@ K = \{ (\VEC{x}_0), (\VEC{x}_1),
 \]
 
 \stage{a} It follows from Proposition~\ref{propK0KZ} that
-$\displaystyle H_0(K^1;\ZZ) \cong \ZZ$.
+$\DS H_0(K^1;\ZZ) \cong \ZZ$.
 
 \stage{b} We have
 \begin{align*}
@@ -837,9 +837,9 @@ Z_1(K^1;\ZZ)
 - \os{\VEC{x}_0}{}{}{}{\VEC{x}_2} \right) : a \in \ZZ \right\}
 \cong \ZZ \ .
 \]
-We also have that $\displaystyle B_1(K^1;\ZZ) = \{ 0 \}$ because
-$\displaystyle C_2(K^1;\ZZ) = \{ 0 \}$.  Therefore
-$\displaystyle H_1(K^1;\ZZ) = Z_1(K^1;\ZZ) / B_1(K^1;\ZZ) \cong \ZZ$.
+We also have that $\DS B_1(K^1;\ZZ) = \{ 0 \}$ because
+$\DS C_2(K^1;\ZZ) = \{ 0 \}$.  Therefore
+$\DS H_1(K^1;\ZZ) = Z_1(K^1;\ZZ) / B_1(K^1;\ZZ) \cong \ZZ$.
 
 \stage{c} It follows from Proposition~\ref{propK0KZ} that
 $H_0(K;\ZZ) \cong \ZZ$. 
@@ -887,29 +887,29 @@ the Euler characteristic of a simplicial complex.
 
 \begin{defn}   \label{defnBettiEulerC}
 Let $K$ be a simplicial complex.
-The {\bfseries $\displaystyle \mathbf{j^{th}}$ Betti
-number}\index{$\displaystyle j^{th}$ Betti Number}
+The {\bfseries $\DS \mathbf{j^{th}}$ Betti
+number}\index{$\DS j^{th}$ Betti Number}
 of $K$, denoted $\beta_j$, is the non-negative integer defined by
 $\beta_j = \dim(H_j(K;\RR))$.
 The {\bfseries Euler characteristic}\index{Euler Characteristic} of $K$,
 denote $\Chi(K)$, is the integer defined by
-$\displaystyle \Chi(K) = \sum_{j=0}^{\dim(K)} (-1)^j \beta_j$.
+$\DS \Chi(K) = \sum_{j=0}^{\dim(K)} (-1)^j \beta_j$.
 \end{defn}
 
 Some of the readers may have recognized the famous Euler
 characteristic formula introduced in undergraduate geometry courses
 \cite{C}. 
 Suppose that $K$ is the triangulation of the unit sphere
-$\displaystyle S^2 \subset \RR^3$.   The Euler characteristic of this
-triangulation $K$ of $\displaystyle S^2$ is given by $V - E + F$ where
+$\DS S^2 \subset \RR^3$.   The Euler characteristic of this
+triangulation $K$ of $\DS S^2$ is given by $V - E + F$ where
 $V$ is the number of vertices, $E$ is the number of edges, and $F$ is
 the number of faces (i.e. triangles) of $K$.  It is a 
-value independent of the triangulation of $\displaystyle S^2$.
+value independent of the triangulation of $\DS S^2$.
 
 \begin{theorem} \label{thmEulerAlpha}
 Let $K$ be a simplicial complex and $\alpha_j$ be the number of
 open $j$-simplices in $K$.  Then
-$\displaystyle \Chi(K) = \sum_{j=0}^{\dim(K)} (-1)^j \alpha_j$.
+$\DS \Chi(K) = \sum_{j=0}^{\dim(K)} (-1)^j \alpha_j$.
 \end{theorem}
 
 \begin{proof}
@@ -966,7 +966,7 @@ R & \quad \text{if} \ k = -1 \\
 C_k(K;R) & \quad \text{if} \ k \neq -1
 \end{cases}
 \]
-Also, let $\displaystyle \partial_k^\sharp = \partial_k$ for $k \neq 0$ and
+Also, let $\DS \partial_k^\sharp = \partial_k$ for $k \neq 0$ and
 \[
 \partial_0^\sharp \Big( \sum_{(\VEC{x}_j)\in K}
 a_{(\VEC{x}_j)}\os{\VEC{x}_j}{}{}{}{} \Big)
@@ -974,16 +974,16 @@ a_{(\VEC{x}_j)}\os{\VEC{x}_j}{}{}{}{} \Big)
 \]
 for $a_{(\VEC{x}_j)} \in R$.
 It is not difficult to prove that
-$\displaystyle \partial_0^\sharp \circ \partial_1^\sharp= 0$.
+$\DS \partial_0^\sharp \circ \partial_1^\sharp= 0$.
 We can then proceed as we did before to define
-$\displaystyle Z_k^\sharp(X;R)$, $\displaystyle B_k^\sharp(X;R)$
-and $\displaystyle H_k^\sharp(X;R)$.
+$\DS Z_k^\sharp(X;R)$, $\DS B_k^\sharp(X;R)$
+and $\DS H_k^\sharp(X;R)$.
 
 \begin{defn}
 Let $K$ be a simplicial complex and $R$ be an integral domain.
-The quotient $\displaystyle H_k^\sharp(K;R) =
+The quotient $\DS H_k^\sharp(K;R) =
 Z_k^\sharp(X;R) / B_k^\sharp(X;R)$ is called the
-{\bfseries reduced (simplicial) $\displaystyle \mathbf{k^{th}}$ homology
+{\bfseries reduced (simplicial) $\DS \mathbf{k^{th}}$ homology
 module}\index{Homology Module!Reduced (Simplicial) $k^{th}$ Homology Module}
 of $X$.
 \end{defn}
@@ -999,7 +999,7 @@ Let $L$ be a simplicial subcomplex of a simplicial complex $K$ and $R$
 be an integral domain.
 The {\bfseries module of relative chains}\index{Module of Relative Chains}
 of $K \mod L$, denoted $C_k(K,L;R)$, is the free abelian group defined as
-$\displaystyle C_k(K,L;R) = C_k(K;R)/C_k(L;R)$.
+$\DS C_k(K,L;R) = C_k(K;R)/C_k(L;R)$.
 \end{defn}
 
 Since $\partial_k:C_k(L;R) \to C_{k-1}(L;R)$, we may define 
@@ -1021,10 +1021,10 @@ by $\pi_k(c) = \relC[K,L]{c}$ for $c \in C_k(K;R)$.
 \begin{defn}
 Let $L$ be a simplicial subcomplex of a simplicial complex $K$ and $R$
 be an integral domain.
-The {\bfseries relative (simplicial) $\displaystyle \mathbf{k^{th}}$ homology
+The {\bfseries relative (simplicial) $\DS \mathbf{k^{th}}$ homology
 module}\index{Homology Module!Relative (Simplicial) $k^{th}$ Homology Module} of
 $K \mod L$ is the free abelian group
-$\displaystyle H_k(K,L;R) = \KE(\overline{\partial}_k)
+$\DS H_k(K,L;R) = \KE(\overline{\partial}_k)
 /\IMG(\overline{\partial}_{k-1})$.
 The equivalence class in $H_k(K,L;R)$ associated to
 $\relC[K,L]{c} \in Z_k(K,L;R) = \KE(\overline{\partial}_k)$ is denoted
@@ -1051,56 +1051,56 @@ way to be defined) to $S$.
 
 \begin{defn}
 Let $K$ be a simplicial complex.  For $0 \leq k \leq \dim(K)$, let
-$\displaystyle C^k(K;\RR)$ denote the dual space of $C_k(K;\RR)$.
-Namely, $\displaystyle C^k(K;\RR)$ is the vector space of all linear
-functionals on $C_k(K;\RR)$.  The elements of $\displaystyle C^k(K;\RR)$
+$\DS C^k(K;\RR)$ denote the dual space of $C_k(K;\RR)$.
+Namely, $\DS C^k(K;\RR)$ is the vector space of all linear
+functionals on $C_k(K;\RR)$.  The elements of $\DS C^k(K;\RR)$
 are called {\bfseries cochaines}\index{Cochaines}. 
 \end{defn}
 
 \begin{defn}
 Let $K$ be a simplicial complex.  The adjoint of the boundary map
 $\partial_k: C_k(K;\RR) \to C_{k-1}(K;\RR)$ is the map
-$\displaystyle \dfC_{k-1}: C^{k-1}(K;\RR) \to C^k(K;\RR)$ defined
+$\DS \dfC_{k-1}: C^{k-1}(K;\RR) \to C^k(K;\RR)$ defined
 by
 \begin{equation} \label{simplCoOpEq1}
 \big(\dfC_{k-1}(\phi)\big)(c) = \phi\big(\partial_k(c)\big)
 \end{equation}
-for all $c \in C_k(K;\RR)$ and $\displaystyle \phi \in C^{k-1}(K;\RR)$.
-The map $\displaystyle \dfC_k$ is called
+for all $c \in C_k(K;\RR)$ and $\DS \phi \in C^{k-1}(K;\RR)$.
+The map $\DS \dfC_k$ is called
 the {\bfseries coboundary operator}\index{Coboundary Operator}.
 \end{defn}
 
-It is clear that $\displaystyle \dfC_k$ is well and uniquely
+It is clear that $\DS \dfC_k$ is well and uniquely
 defined by (\ref{simplCoOpEq1}).  It is easy to prove using
 $\partial_{k+1} \circ \partial_{k+2} = 0$ that
-$\displaystyle \dfC_{k+1} \circ \dfC_k = 0$.
+$\DS \dfC_{k+1} \circ \dfC_k = 0$.
 
 \begin{defn}
 Let $K$ be a simplicial complex,
-$\displaystyle Z^k(K;\RR) = \{ \phi \in C^k(K;\RR) :
+$\DS Z^k(K;\RR) = \{ \phi \in C^k(K;\RR) :
 \dfC_k \phi = 0 \}$
-and $\displaystyle B^k(K;\RR) = \{ \dfC_{k-1} \phi : \phi \in
+and $\DS B^k(K;\RR) = \{ \dfC_{k-1} \phi : \phi \in
 C^{k-1}(K;\RR) \}$.
-The {\bfseries $\displaystyle \mathbf{k^{th}}$ cohomology
+The {\bfseries $\DS \mathbf{k^{th}}$ cohomology
 module}\index{Cohomology Module!$k^{th}$ Cohomology Module}
 of $K$ is the
-quotient $\displaystyle H^k(K;\RR) = Z^k(K;\RR) / B^k(K;\RR)$.
-The elements of $\displaystyle Z^k(K;\RR)$ are called
+quotient $\DS H^k(K;\RR) = Z^k(K;\RR) / B^k(K;\RR)$.
+The elements of $\DS Z^k(K;\RR)$ are called
 {\bfseries cocycles}\index{Cocycle} and those of
-$\displaystyle B^k(K;\RR)$ are called
+$\DS B^k(K;\RR)$ are called
 {\bfseries coboundaries}\index{Coboundary}.
-The equivalence class in $\displaystyle H^k(K;R)$ associated to
-$\displaystyle \phi \in Z^k(K;R)$ is denoted $[\phi]_K$.
+The equivalence class in $\DS H^k(K;R)$ associated to
+$\DS \phi \in Z^k(K;R)$ is denoted $[\phi]_K$.
 \end{defn}
 
 \begin{theorem} \label{thmHupeHdk}
-Let $K$ be a simplicial complex.  Then $\displaystyle H^k(K;\RR)$ is
-isomorphic to $\displaystyle (H_k(K;\RR))^\ast$.
+Let $K$ be a simplicial complex.  Then $\DS H^k(K;\RR)$ is
+isomorphic to $\DS (H_k(K;\RR))^\ast$.
 \end{theorem}
 
 \begin{proof}
-The map $\displaystyle h:H^k(K;\RR) \to (H_k(K;\RR))^\ast$ defined by
-$h([\phi]_K) = \phi$ for $\displaystyle \phi \in Z^k(K;\RR)$ is well
+The map $\DS h:H^k(K;\RR) \to (H_k(K;\RR))^\ast$ defined by
+$h([\phi]_K) = \phi$ for $\DS \phi \in Z^k(K;\RR)$ is well
 defined because
 \begin{align*}
 \phi \in Z^k(K;\RR) & \Rightarrow \dfC_k(\phi) = 0
@@ -1111,7 +1111,7 @@ defined because
 \end{align*}
 
 We have that $h$ is one-to-one.  Suppose that $[\phi_1]_K = [\phi_2]_K$.
-Then $\displaystyle \phi_1 - \phi_2 = \psi \in B^k(K;\RR)$.  Hence
+Then $\DS \phi_1 - \phi_2 = \psi \in B^k(K;\RR)$.  Hence
 $h([\phi_1]_K) = h([\phi_2]_K) + h([\psi]_K) = h([\phi_2]_K)$
 because
 \begin{align*}
@@ -1124,8 +1124,8 @@ because
 \Rightarrow h([\psi]_K) = 0 \ .
 \end{align*}
 
-We have that $h$ is onto.  Given $\displaystyle \phi \in (H_k(K;\RR))^\ast$,
-then $\displaystyle [\phi]_K \in H^k(K;\RR)$ because
+We have that $h$ is onto.  Given $\DS \phi \in (H_k(K;\RR))^\ast$,
+then $\DS [\phi]_K \in H^k(K;\RR)$ because
 \begin{align*}
 \phi(c) = 0 \ \text{for all}\ c \in B_k(K;\RR)
 &\Rightarrow (\dfC_k \phi)(c) = \phi(\partial_{k+1}(c)) = 0
@@ -1138,14 +1138,14 @@ Thus $h([\phi]_K) = \phi$.
 
 We leave it to the reader to proof that $h$ is a linear mapping.
 
-Hence, the map $h$ is an isomorphism between $\displaystyle H^k(K;\RR)$ and
-$\displaystyle (H_k(K;\RR))^\ast$.
+Hence, the map $h$ is an isomorphism between $\DS H^k(K;\RR)$ and
+$\DS (H_k(K;\RR))^\ast$.
 \end{proof}
 
 It is possible to describe explicitly the action of the coboundary
-operator $\displaystyle \dfC_k$.  Suppose that $K$ is a
+operator $\DS \dfC_k$.  Suppose that $K$ is a
 simplicial complex.   Given an open $k$-simplex $(s)$ in $K$, we defined
-$\displaystyle \phi_{\osscript{s}{}{}{}{}} \in C^k(K;\RR)$ by
+$\DS \phi_{\osscript{s}{}{}{}{}} \in C^k(K;\RR)$ by
 \begin{equation} \label{dfnBCkKR}
 \phi_{\osscript{s}{}{}{}{}}(\os{t}{}{}{}{}) =
 \begin{cases}
@@ -1158,7 +1158,7 @@ for all open $k$-simplices $(t)$ in $K$.
 If $\big\{ \os{s_1}{}{}{}{}, \os{s_2}{}{}{}{}, \ldots, \os{s_m}{}{}{}{} \big\}$
 is a basis of $C_k(K;\RR)$, then
 $\big\{ \phi_{\osscript{s_1}{}{}{}{}}, \phi_{\osscript{s_2}{}{}{}{}}, \ldots,
-\phi_{\osscript{s_m}{}{}{}{}} \big\}$ is a basis of $\displaystyle C^k(K;\RR)$.
+\phi_{\osscript{s_m}{}{}{}{}} \big\}$ is a basis of $\DS C^k(K;\RR)$.
 
 \begin{prop}
 We have for all open $k$-simplices
@@ -1236,26 +1236,26 @@ Subsection~\ref{ssectRCsingT} in the context of singular theory.
 Let $L$ be a simplicial subcomplex of a simplicial complex $K$, and $R$
 be an integral domain.  The adjoint of the boundary operator 
 $\overline{\partial}_k : C_k(K,L;R) \to C_{k-1}(K,L;R)$ is the operator
-$\displaystyle \overline{\dfC}_{k-1} : \big(C_{k-1}(K,L;R)\big)^\ast
+$\DS \overline{\dfC}_{k-1} : \big(C_{k-1}(K,L;R)\big)^\ast
 \to \big(C_k(K,L;R)\big)^\ast$ defined
 \begin{equation} \label{relsimplCoOpEq1}
 \big(\overline{\dfC}_{k-1}(\phi)\big)([c])
 = \phi\big(\overline{\partial}_k([c])\big)
 \end{equation}
 for all $\relC[K,L]{c} \in C_k(K,L;R)$ and
-$\displaystyle \phi \in \big(C_{k-1}(K,L;R)\big)^\ast$.
+$\DS \phi \in \big(C_{k-1}(K,L;R)\big)^\ast$.
 \end{defn}
 
-It is clear that $\displaystyle \overline{\dfC}_k$ is well
+It is clear that $\DS \overline{\dfC}_k$ is well
 and uniquely defined by (\ref{relsimplCoOpEq1}).
 
 \begin{defn}
 Let $L$ be a simplicial subcomplex of a simplicial complex $K$, and $R$
 be an integral domain.
-The {\bfseries relative $\displaystyle \mathbf{k^{th}}$ cohomology
+The {\bfseries relative $\DS \mathbf{k^{th}}$ cohomology
 module}\index{Cohomology Module!Relative $k^{th}$ Cohomology Module} of
 $K \mod L$ is the
-quotient space $\displaystyle H^k(K,L;R) = \KE(\overline{\dfC}_k)/
+quotient space $\DS H^k(K,L;R) = \KE(\overline{\dfC}_k)/
 \IMG(\overline{\dfC}_{k-1})$.
 \end{defn}
 
@@ -1268,24 +1268,24 @@ cup product.
 \begin{defn}
 Let $K$ be a simplicial complex and $R$ be an integral domain.
 The {\bfseries cup product}\index{Cup Product} of
-$\displaystyle \phi_1 \in C^{k_1}(K;R)$ with
-$\displaystyle \phi_2 \in C^{k_2}(K;R)$ is the linear functional
-$\displaystyle \phi_1 \cup \phi_2 \in C^{k_1+k_2}(K;R)$ defined first by
+$\DS \phi_1 \in C^{k_1}(K;R)$ with
+$\DS \phi_2 \in C^{k_2}(K;R)$ is the linear functional
+$\DS \phi_1 \cup \phi_2 \in C^{k_1+k_2}(K;R)$ defined first by
 $(\phi_1 \cup \phi_2)(\os{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_{k_1+k_2}})
 = \phi_1(\os{\VEC{x}_0}{}{\VEC{x}_1}{}{\VEC{x}_{k_1}})
 \,\phi_2(\os{\VEC{x}_{k_1}}{}{\VEC{x}_{K_1+1}}{}{\VEC{x}_{k_1+k_2}})$
 for all $(\VEC{x}_0,\VEC{x}_1, \ldots,\VEC{x}_{k_1+k_2}) \in K$ and
-after extended linearly to $\displaystyle C^{k_1+k_2}(K;R)$.
+after extended linearly to $\DS C^{k_1+k_2}(K;R)$.
 \end{defn}
 
 It is not hard to prove that the cup product is a bilinear map, that
 it is associative and that the identity element is the linear functional
-$\displaystyle \delta \in C^0(K;R)$ defined by
+$\DS \delta \in C^0(K;R)$ defined by
 $\delta(\os{\VEC{x}_i}{}{}{}{}) = 1$ for all vertices $\VEC{x}_i$ of $K$.
 We define the cup product of
-$\displaystyle [\phi_1]_K \in H^{k_1}(K;R)$ and
-$\displaystyle [\phi_2]_K \in H^{k_2}(K;R)$ as
-$\displaystyle [\phi_1]_K\cup[\phi_2]_K = [\phi_1 \cup \phi_2]_K$.
+$\DS [\phi_1]_K \in H^{k_1}(K;R)$ and
+$\DS [\phi_2]_K \in H^{k_2}(K;R)$ as
+$\DS [\phi_1]_K\cup[\phi_2]_K = [\phi_1 \cup \phi_2]_K$.
 
 We will not justify these definitions and deduce their properties.  We
 will prove later that simplicial homology and simplicial cohomology on
@@ -1302,27 +1302,27 @@ de Rham Cohomology}  \label{ssectSCandCM}
 A triple $(S,K,h)$ is a {\bfseries smoothly triangulated
 manifold}\index{Smoothly Triangulated Manifold} if
 \begin{enumerate}
-\item $S$ is a manifold of class $\displaystyle C^\infty$,
+\item $S$ is a manifold of class $\DS C^\infty$,
 \item $K$ is a simplicial complex,
 \item $h:[K] \to S$ is a homeomorphism,
 \item there exist, for every
 $(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_p}) \in K$, an
 open subset $U_{[s]}$ of the $k$-dimensional affine space
-$\displaystyle A_{[s]} =
+$\DS A_{[s]} =
 \{\VEC{x}_{j_0} + \sum_{i=1}^p y_i (\VEC{x}_{j_i}-\VEC{x}_{j_0}) :
 y_i \in \RR \ \text{for} \ 1 \leq i \leq p \}$
-and a map $h_{[s]}:U_{[s]} \to S$ of class $\displaystyle C^\infty$
+and a map $h_{[s]}:U_{[s]} \to S$ of class $\DS C^\infty$
 such that $[s] \subset U_{[s]}$ and $h_{[s]}(\VEC{x}) = h(\VEC{x})$
 for all $\VEC{x} \in [s]$ (Figure~\ref{SimpHm2}), and
 \item $h_{[s]}(U_{[s]})$ is a submanifold of $S$ of class
-$\displaystyle C^\infty$.
+$\DS C^\infty$.
 \end{enumerate}
 \end{defn}
 
 \pdfF{alg_top/simphm2}{Smoothly triangulated manifolds}{We consider
 the simplicial complex\\ $K = \{(\VEC{x}_0),(\VEC{x}_1),(\VEC{x}_2),
 (\VEC{x}_0,\VEC{x}_1),(\VEC{x}_0,\VEC{x}_2),(\VEC{x}_1,\VEC{x}_2)\}$
-and the circle $\displaystyle S^1$ inscribed in $[K]$.  The maps $h$
+and the circle $\DS S^1$ inscribed in $[K]$.  The maps $h$
 is represented by the black arrows.  A possible open set
 $U_{[\VEC{x}_0,\VEC{x}_1]}$ and map $h_{[\VEC{x}_0,\VEC{x}_1]}$ is
 provided with $h_{[\VEC{x}_0,\VEC{x}_1]}$ on
@@ -1332,7 +1332,7 @@ represented by the blue arrows.}{SimpHm2}
 \begin{defn} \label{defnjthBC}
 Let $K$ be a simplicial complex and $\VEC{x}_j$ for $0 \leq j \leq q$
 be the vertices of $K$.  The
-{\bfseries $\displaystyle \mathbf{j^{th}}$ barycentric
+{\bfseries $\DS \mathbf{j^{th}}$ barycentric
 coordinates}\index{Barycentric Coordinates!$j^{th}$ Barycentric Coordinates} of
 $\VEC{x} \in [K]$, denoted $b_j(\VEC{x})$, is defined by
 \[
@@ -1348,7 +1348,7 @@ b_j(\VEC{x}) = \begin{cases}
 \end{defn}
 
 \begin{rmk}
-The $\displaystyle j^{th}$ barycentric coordinates given in
+The $\DS j^{th}$ barycentric coordinates given in
 Definition~\ref{defnjthBC} have several interesting properties.
 \begin{enumerate}
 \item  We have that $b_j:[K]\to \RR$ is continuous.  For instance, suppose
@@ -1360,36 +1360,36 @@ $(\VEC{x}_1,\VEC{x}_2)$ as represented in the following figure.
 $\St(\VEC{x}_2)$ is represented by the continuous lines and the
 shaded area.  Given\\
 $\VEC{x} \in (\VEC{x}_2,\VEC{x}_3,\VEC{x}_4)$, we have that
-$\displaystyle \VEC{x} = \sum_{j=2}^4 a_j \VEC{x}_j$
-with $\displaystyle \sum_{j=2}^4 a_j = 1$.
+$\DS \VEC{x} = \sum_{j=2}^4 a_j \VEC{x}_j$
+with $\DS \sum_{j=2}^4 a_j = 1$.
 The function $b_2$ is continuous with respect to the $a_j$ in the open set
 $(\VEC{x}_2,\VEC{x}_3,\VEC{x}_4)$.  Therefore, if
 $\VEC{x}$ converges to $\tilde{\VEC{x}} \in [\VEC{x}_3,\VEC{x}_4]$, then
 $a_3$ and $a_4$ converge to $\tilde{a}_3$ and $\tilde{a}_4$
 respectively where
-$\displaystyle \tilde{\VEC{x}} = \sum_{j=3}^4 \tilde{a}_j \VEC{x}_j$
-with $\displaystyle \sum_{j=3}^4 \tilde{a}_j = 1$.
+$\DS \tilde{\VEC{x}} = \sum_{j=3}^4 \tilde{a}_j \VEC{x}_j$
+with $\DS \sum_{j=3}^4 \tilde{a}_j = 1$.
 Thus $a_3 + a_4 \to 1$ and so $b_2(\VEC{x}) = a_2$ converges to $0$.
 Hence $b_2$ is continuous along $[\VEC{x}_3,\VEC{x}_4]$.  Likewise,
 if $\VEC{x}$ converges to $\breve{\VEC{x}} \in [\VEC{x}_2,\VEC{x}_3]$, then
 $a_2$ and $a_3$ converge to $\breve{a}_2$ and $\breve{a}_3$
 respectively where
-$\displaystyle \breve{\VEC{x}} = \sum_{j=2}^3 \breve{a}_j \VEC{x}_j$
-with $\displaystyle \sum_{j=2}^3 \breve{a}_j = 1$.
+$\DS \breve{\VEC{x}} = \sum_{j=2}^3 \breve{a}_j \VEC{x}_j$
+with $\DS \sum_{j=2}^3 \breve{a}_j = 1$.
 Thus $b_2(\VEC{x}) = a_2$ converges to $\breve{a}_2 = b_2(\breve{\VEC{x}})$.
 Hence $b_2$ is continuous along $[\VEC{x}_2,\VEC{x}_3]$.  Proceeding
 in a similar way, we can prove that $b_2$ is continuous on all of
 $[K]$.  Likewise, $b_1$ and $b_3$ are continuous on all of
 $[K]$.
 \item For all $\VEC{x} \in [K]$, we have that
-$\displaystyle \VEC{x} = \sum_{j=0}^q b_j(\VEC{x}) \VEC{x}_j$ with
-$b_j(\VEC{x}) \geq 0$ and $\displaystyle \sum_{j=0}^q b_j(\VEC{x}) = 1$.
+$\DS \VEC{x} = \sum_{j=0}^q b_j(\VEC{x}) \VEC{x}_j$ with
+$b_j(\VEC{x}) \geq 0$ and $\DS \sum_{j=0}^q b_j(\VEC{x}) = 1$.
 More precisely, since
 $\VEC{x} \in (\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_p}) \in K$
 for some $j_i \in \{0,1,2,\ldots,q\}$ and $0 \leq i \leq p$, we get
-that $\displaystyle \VEC{x} = \sum_{i=0}^p b_{j_i}(\VEC{x}) \VEC{x}_{j_i}$
+that $\DS \VEC{x} = \sum_{i=0}^p b_{j_i}(\VEC{x}) \VEC{x}_{j_i}$
 with $b_{j_i}(\VEC{x}) > 0$ and
-$\displaystyle \sum_{i=0}^p b_{j_i}(\VEC{x}) = 1$.  Moreover,
+$\DS \sum_{i=0}^p b_{j_i}(\VEC{x}) = 1$.  Moreover,
 $b_j(\VEC{x}) = 0$ if $j \not\in \{ j_0,j_1,\ldots,j_p\}$.
 \end{enumerate}
 \end{rmk}
@@ -1398,7 +1398,7 @@ $b_j(\VEC{x}) = 0$ if $j \not\in \{ j_0,j_1,\ldots,j_p\}$.
 Let $K$ be a simplicial complex and $(s)$ be an open simplex in $K$.
 The {\bfseries star}\index{Star} of $(s)$, denoted $\St\big((s)\big)$, is
 defined by
-$\displaystyle \St\big((s)\big)
+$\DS \St\big((s)\big)
 = \bigcup_{\substack{(t)\, \in K \text{\ such that}
 \\(s) \text{ is a face of } [t]}} (t)$.
 \end{defn}
@@ -1427,11 +1427,11 @@ $\VEC{x} \in \St\big((s)\big)$ then $\VEC{x} \in (t)$ such that $(s)$
 is a face of $[t]$.  Thus
 $(t) = (\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_q})$ with
 $q\geq p$ and $j_i \not\in \{j_0,j_1, \ldots, j_p\}$ for $p < i \leq q$.
-Hence $\displaystyle \VEC{x} = \sum_{i=0}^q b_{j_i}(\VEC{x}) \VEC{x}_{j_1}$
+Hence $\DS \VEC{x} = \sum_{i=0}^q b_{j_i}(\VEC{x}) \VEC{x}_{j_1}$
 with $b_{j_i}(\VEC{x}) > 0$ for $0 \leq i \leq q$
-and $\displaystyle \sum_{i=0}^q b_{j_i}(\VEC{x}) = 1$.  
+and $\DS \sum_{i=0}^q b_{j_i}(\VEC{x}) = 1$.  
 \item It follows from (3) that
-$\displaystyle [K]\setminus \St\big((s)\big) =
+$\DS [K]\setminus \St\big((s)\big) =
 \big\{ \VEC{x} \in K : b_{j_i}(\VEC{x}) = 0 \ \text{for some} \ i\in
 \{0,1,\ldots,p\} \big\}$.
 \item If $(s_1)$ and $(s_2)$ are two open $q$-simplices of a simplicial
@@ -1444,11 +1444,11 @@ cannot be a face of $[s_2]$.
 \end{rmk}
 
 Suppose that $(S,K,h)$ is a smoothly triangulated manifold.  We would
-like to find a relation between the $\displaystyle k^{th}$ cohomology
+like to find a relation between the $\DS k^{th}$ cohomology
 module of $S$ defined in Definition~\ref{defnqdeRhamCM} and the
-$\displaystyle k^{th}$ cohomology group $\displaystyle H^k(K;\RR)$ of
+$\DS k^{th}$ cohomology group $\DS H^k(K;\RR)$ of
 $K$.  For that, we will define a map
-$\displaystyle F_k : C^\infty\big(S,\Omega^k(S)\big) \to C^k(K,\RR)$
+$\DS F_k : C^\infty\big(S,\Omega^k(S)\big) \to C^k(K,\RR)$
 such that the following diagram commutes.
 \[
 \xymatrix{
@@ -1458,10 +1458,10 @@ C^k(K;\RR) \ar[r]_-{\dfC_k} & C^{k+1}(K;\RR)
 }
 \]
 Suppose that $\omega$ is a differential $k$-form on $S$.  To define
-$\displaystyle F_k(\omega) \in C^k(K;\RR)$, it is enough to define
+$\DS F_k(\omega) \in C^k(K;\RR)$, it is enough to define
 $F_k(\omega)$ on the equivalence classes of oriented
 $k$-simplices of $K$ and use the linearity of $F_k(\omega)$ to extend
-its definition to all of $\displaystyle C_k(K;\RR)$.
+its definition to all of $\DS C_k(K;\RR)$.
 Given $\os{s}{}{}{}{} \in C_k(K;\RR)$ with
 $(s) = (\VEC{x}_{j_0},\VEC{x}_{j_1},\ldots,\VEC{x}_{j_k}) \in K$, there
 exists an open subset $U_{[s]}$ and a smooth mapping $h_{[s]}:U_{[s]} \to S$
@@ -1478,18 +1478,18 @@ namely, $(W_{[s]},U_{[s]},\phi_{[s]})$ where
 y_i \in \RR \ \text{for} \ 1 \leq i \leq k \} \\
 \VEC{y} & \mapsto \VEC{x}_{j_0} + \sum_{i=1}^k y_i (\VEC{x}_{j_i}-\VEC{x}_{j_0})
 \end{align*}
-and $\displaystyle W_{[s]} = \phi_{[s]}^{-1}(U_{[s]})$.
-Hence, the local representation of $\displaystyle h_{[s]}^\ast(\omega)$
-is given by $\displaystyle \phi_{[s]}^\ast(h_{[s]}^\ast(\omega)) =
+and $\DS W_{[s]} = \phi_{[s]}^{-1}(U_{[s]})$.
+Hence, the local representation of $\DS h_{[s]}^\ast(\omega)$
+is given by $\DS \phi_{[s]}^\ast(h_{[s]}^\ast(\omega)) =
 g_{[s]} \df{y_1}\wedge \df{y_2} \wedge \ldots \wedge \df{y_q}$ where
-$g_{[s]}:W_{[s]} \to \RR$ is of class $\displaystyle C^\infty$ and
+$g_{[s]}:W_{[s]} \to \RR$ is of class $\DS C^\infty$ and
 \[
 F_k(\omega)(\os{s}{}{}{}{}) = \int_{W_{[s]}} g_{[s]}
 \df{y_1}\wedge \df{y_2} \wedge \ldots \wedge \df{y_k} \ .
 \]
 
 \begin{prop}
-We have that $\displaystyle \dfC_k \circ F_k = F_{k+1} \circ \df{}$.
+We have that $\DS \dfC_k \circ F_k = F_{k+1} \circ \df{}$.
 \end{prop}
 
 \begin{proof}
@@ -1514,8 +1514,8 @@ The next theorem is the main result of this section.
 
 \begin{theorem}[De Rham's Theorem] \label{DeRhamThm}
 Let $(S,K,h)$ be a smoothly triangulated manifold and
-$\displaystyle \tilde{F}_k:H^k(S) \to H^k(K;\RR)$ be the map defined by
-$\displaystyle \tilde{F}_k([\omega])([c]) = [F_k(\omega)(c)]_K$ for the
+$\DS \tilde{F}_k:H^k(S) \to H^k(K;\RR)$ be the map defined by
+$\DS \tilde{F}_k([\omega])([c]) = [F_k(\omega)(c)]_K$ for the
 closed differential $k$-form $\omega$ on $S$ and $k$-chains $c$ in $Z_k(K;\RR)$.
 Then $\tilde{F}_k$ is an isomorphism for $0 \leq k \leq \dim(S)$.
 \end{theorem}
@@ -1526,13 +1526,13 @@ detailed proof in \cite{ST}.
 
 \begin{proof}[Proof (Sketch)]
 \stage{Claim 1} There exist linear maps
-$\displaystyle G_k: C^k(K;\RR) \to C^\infty\big(S,\Omega^k(S)\big)$
+$\DS G_k: C^k(K;\RR) \to C^\infty\big(S,\Omega^k(S)\big)$
 for $0 \leq k \leq \dim(S)$ such that:
 \begin{enumerate}
-\item $\displaystyle \df{}\circ G_k = G_{k+1}\circ \dfC_k$ for
+\item $\DS \df{}\circ G_k = G_{k+1}\circ \dfC_k$ for
 $0 \leq k < \dim(S)$.
 \item $F_k \circ G_k = \Id$.
-\item If $\displaystyle \phi \in C^0(K,\RR)$ satisfies
+\item If $\DS \phi \in C^0(K,\RR)$ satisfies
 $\phi(\os{\VEC{x}}{}{}{}{}) = 1$
 for all $0$-simplices $(\VEC{x}) \in K$, then $G_0(\phi)$ is the
 differential $0$-form (i.e.\ a function on $S$) defined by
@@ -1570,28 +1570,28 @@ of an open $m$-simplex
 $(s) = (\VEC{x}_{j_1},\VEC{x}_{j_2}, \ldots, \VEC{x}_{j_m})$
 of $K$ with $m \leq q$.  By definition of the barycentric coordinates,
 we have that $b_{j_i}(\VEC{x}) > 0$ for $0\leq i \leq m$ and
-$\displaystyle \sum_{i=0}^m b_{j_i}(\VEC{x}) = 1$.  Therefore, we must
+$\DS \sum_{i=0}^m b_{j_i}(\VEC{x}) = 1$.  Therefore, we must
 have that $b_{j_i}(\VEC{x}) \geq 1/(m+1) \geq 1/(q+1)$ for some
 $0 \leq i \leq m$.  Thus $\VEC{x} \in A_{j_i}$.
 
 Given $0 \leq j \leq p$, there exists according to
 Proposition~\ref{topolProp2} an open set
-$\displaystyle V_j \subset \RR^n$ such that
-$\displaystyle  A_j \subset V_j \subset \overline{V}_j
+$\DS V_j \subset \RR^n$ such that
+$\DS  A_j \subset V_j \subset \overline{V}_j
 \subset \RR^n \setminus B_j$.
 Using partition of unity for instance, we can select a function
-$\displaystyle f_j \in C^\infty(\RR^n)$ such that
-$0 \leq f_j(\VEC{x}) \leq 1$ for all $\displaystyle \VEC{x} \in \RR^n$,
+$\DS f_j \in C^\infty(\RR^n)$ such that
+$0 \leq f_j(\VEC{x}) \leq 1$ for all $\DS \VEC{x} \in \RR^n$,
 $f_j(\VEC{x}) = 1$ for all $\VEC{x} \in A_j$ and $f_j(\VEC{x}) = 0$
-for all $\displaystyle \VEC{x} \not\in V_j$.
+for all $\DS \VEC{x} \not\in V_j$.
 It follows from the previous paragraph that, given any $\VEC{x} \in [K]$,
 there exists $0 \leq j \leq p$ such that $f_j(\VEC{x}) = 1$.
-Let $\displaystyle g = \sum_{j=0}^pf_j$ on $\displaystyle \RR^n$.  We
+Let $\DS g = \sum_{j=0}^pf_j$ on $\DS \RR^n$.  We
 have that $g(\VEC{x}) \geq 1$ for all $\VEC{x} \in [K]$.  Thus
 $g(\VEC{x}) \geq 1/2 > 0$ for all $\VEC{x}$ in an open set $W \supset [K]$. 
 Let $g_j = f_j/g$  on $W$ for $0 \leq j \leq p$.  Hence
-$\displaystyle g_j\in C^\infty(W)$ and
-$\displaystyle \sum_{j=0}^pg_j = 1$ on $[K]$.  Moreover,
+$\DS g_j\in C^\infty(W)$ and
+$\DS \sum_{j=0}^pg_j = 1$ on $[K]$.  Moreover,
 $\supp g_j\Big|_{[K]} \subset \supp f_j\Big|_{[K]}
 \subset C_j \subset \St(\VEC{x}_j)$ for $0 \leq j \leq p$.
 
@@ -1623,8 +1623,8 @@ listed above requires, among several results, Stokes' theorem on chains.
 
 \stage{Claim 2}
 If $\omega$ is a closed differential $k$-form on $S$ such that
-$\displaystyle F_k(\omega) = \dfC_k(\phi)$ for some
-$\displaystyle \phi \in C^{k-1}(K;R)$,
+$\DS F_k(\omega) = \dfC_k(\phi)$ for some
+$\DS \phi \in C^{k-1}(K;R)$,
 then there exists a differential $(k-1)$-form $\rho$ on $S$ such that
 $F_{k-1}(\rho) = \phi$ and $\df{\rho} = \omega$.
 
@@ -1632,21 +1632,21 @@ The proof of this claim is in two parts.
 
 \stage{First Part}
 Given an open $q$-simplex $(s) \in K$, let
-$\displaystyle B_{(s)}
+$\DS B_{(s)}
 = \bigcup_{\substack{(t) \text{ an open face of }[s]\\\text{with } \dim (t) < q}}
 (t)$.
 
 We prove the following statements.
 \begin{enumerate}
 \item Assuming $q>0$, if $\omega$ is a closed differential $k$-form defined
-in an open neighbourhood of $B_{(s)}$ in $\displaystyle \RR^n$
+in an open neighbourhood of $B_{(s)}$ in $\DS \RR^n$
 where $(s) \in K$ is an open $q$-simplex. then there exists a closed
 differential $k$-form $\rho$ defined in an open neighbourhood of $[s]$
 such that $\rho = \omega$ in the open neighbourhood of $B_{(s)}$.  If
 $q=k+1$, then we must also require that
-$\displaystyle \int_{\partial [s]} \omega =0$.
+$\DS \int_{\partial [s]} \omega =0$.
 \item Assuming $q,k>0$, if $\omega$ is a closed differential $k$-form
-defined in an open neighbourhood of $[s]$ in $\displaystyle \RR^n$ where
+defined in an open neighbourhood of $[s]$ in $\DS \RR^n$ where
 $(s) \in K$ is an open $q$-simplex, and $\rho$ is a differential $(k-1)$-form
 defined in an open neighbourhood of $B_{(s)}$ and such
 that $\df{\rho} = \omega$ in that neighbourhood of $B_{(s)}$, then
@@ -1654,7 +1654,7 @@ there exists a differential $(k-1)$-form $\nu$ defined in an open
 neighbourhood of $[s]$ such that $\nu = \rho$ in an open neighbourhood
 of $B_{(s)}$ and $\df{\nu} = \omega$ in a neighbourhood of $[s]$.
 If $q=k$, then we must also
-require that $\displaystyle \int_{\partial [s]} \rho = \int_{[s]} \omega$.
+require that $\DS \int_{\partial [s]} \rho = \int_{[s]} \omega$.
 \end{enumerate}
 
 Note that the two extra conditions in the two previous statement are
@@ -1678,7 +1678,7 @@ iterating from $i=0$ up to $i = \dim(S)$ shows that (1) and (2) are
 true for all values of $k$
 
 To prove (1) for $k=0$, we note that $\omega$ is a function on an open
-neighbourhood of $B_{(s)}$ such that $\displaystyle \pdydx{\omega}{x_i} = 0$ in
+neighbourhood of $B_{(s)}$ such that $\DS \pdydx{\omega}{x_i} = 0$ in
 this open neighbourhood for all $i$.  Thus $\omega$ is constant on the
 components of $B_{(s)}$.  If $q>1$, then $B_{(s)}$ is
 connected and so $\omega(\VEC{x}) = c$, a constant, for all
@@ -1688,7 +1688,7 @@ $[s] = [\VEC{x}_{j_1},\VEC{x}_{j_2}]$ for some vertices
 $\VEC{x}_{j_1}$ and $\VEC{x}_{j_2}$ of $K$, and
 $B_{(s)} = \{\VEC{x}_{j_1},\VEC{x}_{j_2}\}$.  But since $q = k+1$, we
 have that
-$\displaystyle 0 = \int_{\partial [s]} \omega = \omega(\VEC{x}_{j_1}) - 
+$\DS 0 = \int_{\partial [s]} \omega = \omega(\VEC{x}_{j_1}) - 
 \omega(\VEC{x}_{j_0})$.  Thus $\omega(\VEC{x}_{j_1}) =
 \omega(\VEC{x}_{j_0}) = c$, a constant.  Therefore, we may again set
 $\rho =c$ in an open neighbourhood of $[s]$.
@@ -1698,8 +1698,8 @@ $\omega$ is a closed differential $k$-form in a connected open set
 $U \supset [s]$ because $[s]$ is connected.  It then follows from 
 Corollary~\ref{corHqg0e0} that $\omega = \df{\mu_1}$ for some
 differential $(k-1)$-form $\mu_1$ on $U$ \footnote{We are using the fact that
-$\displaystyle H^k(U) = H^k(\RR^n) = 0$ for $k>0$ because $U$ is
-diffeomorphic to $\displaystyle \RR^n$.}.  Since $\mu_1$ may not be
+$\DS H^k(U) = H^k(\RR^n) = 0$ for $k>0$ because $U$ is
+diffeomorphic to $\DS \RR^n$.}.  Since $\mu_1$ may not be
 equal to $\rho$ in a neighbourhood of $B_{(s)}$, we consider
 $\mu_2 = \mu_1 - \rho$.  We have that
 $\df{\mu_2} = \df{\mu_1} - \df{\rho} = \omega - \omega = 0$ in a
@@ -1750,7 +1750,7 @@ the union of two disconnect open sets; one about each of the two
 vertices in $B_{(s)}$. 
 
 To complete the proof, we select a real valued function
-$\displaystyle f \in C^\infty(\RR^n)$ such that $f=1$ in an open
+$\DS f \in C^\infty(\RR^n)$ such that $f=1$ in an open
 neighbourhood of $B_{(s)}$ and $f=0$ outside the open neighbourhood
 where $\tau$ is defined.  Then $\rho = \df{(f \tau)}$ satisfies (1)
 because it is obviously exact and 
@@ -1764,32 +1764,32 @@ The second part of the proof of Claim 2 used the second statement
 of the previous part to construct a sequence of differential $(k-1)$-forms
 $\rho_0$, $\rho_1$, $\rho_2$, \ldots , $\rho_{\dim(S)}$ such that
 $\rho_j$ is defined in an open neighbourhood of the $j$-skeleton
-$\displaystyle [K^j]$ of $K$,
-$\df{\rho_j} = \omega$ in this open neighbourhood of $\displaystyle [K^j]$,
-$\rho_j = \rho_{j-1}$ in an open neighbourhood of $\displaystyle [K^{j-1}]$
+$\DS [K^j]$ of $K$,
+$\df{\rho_j} = \omega$ in this open neighbourhood of $\DS [K^j]$,
+$\rho_j = \rho_{j-1}$ in an open neighbourhood of $\DS [K^{j-1}]$
 for $0 < j \leq \dim(S)$, and $F_j(\rho_j) = \phi$ if $j = k-1$.
 We have that $\rho$ in Claim 2 is given by $\rho = \rho_{\dim(S)}$.
 
 The construction of the $\rho_j$ is done by induction on the order $j$
 of the skeletons of $K$.
 
-For $j=0$, the skeleton $\displaystyle K^0$ is a
+For $j=0$, the skeleton $\DS K^0$ is a
 set of discrete points.  We may assume that the open neighbourhood of
-$\displaystyle [K^0]$ is the union of disjoint open balls $B_j$ with
+$\DS [K^0]$ is the union of disjoint open balls $B_j$ with
 $\VEC{x}_j$ being the only vertex of $K$ in $B_j$.  Using Poincaré
 Lemma on each open ball, we get a differential $(k-1)$-form
-$\tilde{\rho}_0$ on the open neighbourhood of $\displaystyle [K^0]$ such that
+$\tilde{\rho}_0$ on the open neighbourhood of $\DS [K^0]$ such that
 $\df{\tilde{\rho}_0} = \omega$.
 If $k-1 > 0$, then we may take $\rho_0 = \tilde{\rho}_0$.
 If $k-1 = 0$, then we have to make sure that
-$F_0(\rho_0) = \phi$ on $\displaystyle [K^0]$.
-For each vertex $\displaystyle \VEC{x}_j$ of $K$, set $\displaystyle
+$F_0(\rho_0) = \phi$ on $\DS [K^0]$.
+For each vertex $\DS \VEC{x}_j$ of $K$, set $\DS
 a_j = \phi\big( (\VEC{x}_j)\big) - \int_{(\VEC{x}_j)}  \tilde{\rho}_0
 = \phi\big( (\VEC{x}_j)\big) - \tilde{\rho}_0(\VEC{x}_j)$.
 Then $\rho_0$ defined in the open neighbourhood of
-$\displaystyle [K^0]$ by $\rho_0\big|_{B_j} = \tilde{\rho}_0 + a_j$ for all $j$
+$\DS [K^0]$ by $\rho_0\big|_{B_j} = \tilde{\rho}_0 + a_j$ for all $j$
 satisfies all the required conditions.  In particular,
-$\displaystyle F_0(\rho_0)\big((\VEC{x}_j)\big) = \int_{(\VEC{x}_j)}
+$\DS F_0(\rho_0)\big((\VEC{x}_j)\big) = \int_{(\VEC{x}_j)}
 \big( \tilde{\rho}_0 + a_j \big) = \phi\big( (\VEC{x}_j)\big)$ for all
 $\VEC{x}_j$.
 
@@ -1816,7 +1816,7 @@ differential $(k-1)$-form $\tilde{\rho}_{(s)}$ in an open neighbourhood
 $U_{(s)}$ of $[s]$ such that $\tilde{\rho}_{[s]} = \rho_{j-1}$ in an open
 neighbourhood of $B_{(s)}$ and $\df{\tilde{\rho}_{(s)}} = \omega$ in
 $U_{(s)}$.   We define $\tilde{\rho}_j$ in a neighbourhood
-of $\displaystyle [K^j]$ by
+of $\DS [K^j]$ by
 $\tilde{\rho}_j\big|_{U_{(s)}} = \tilde{\rho}_{(s)}$ for
 all open $j$-simplices $(s)$ in $K$.   The differential $(k-1)$-form
 $\tilde{\rho}_j$ is well defined by because
@@ -1825,36 +1825,36 @@ neighbourhood of the intersection of $[s_1]$ and $[s_2]$ for all
 open $j$-simplices $(s_1)$ and $(s_2)$ in $K$.
 
 If $k-1 \neq j$, then we may define $\rho_j$ in a neighbourhood
-of $\displaystyle [K^j]$ as $\rho_j = \tilde{\rho}_j$.
+of $\DS [K^j]$ as $\rho_j = \tilde{\rho}_j$.
 
 If $k-1 = j$, then we use a trick similar to the one that we have used in
-the case $j=0$ to ensure that $F_j(\rho_j) = \phi$ on $\displaystyle C^j(K;R)$.
-Let $\displaystyle \alpha_j = \phi - F_{k-1}(\tilde{\rho}_{k-1}) \in C^j(K;R)$.
-We define $\rho_j$ in a neighbourhood $U$ of $\displaystyle [K^j]$ as
+the case $j=0$ to ensure that $F_j(\rho_j) = \phi$ on $\DS C^j(K;R)$.
+Let $\DS \alpha_j = \phi - F_{k-1}(\tilde{\rho}_{k-1}) \in C^j(K;R)$.
+We define $\rho_j$ in a neighbourhood $U$ of $\DS [K^j]$ as
 $\rho_j = \tilde{\rho}_j\big|_U + G_{k-1}(\alpha_j)\big|_U$.
 
 We have from Claim 1 that $G_q(\phi_{\osscript{t}{}{}{}{}}) = 0$
 in an open neighbourhood of $K \setminus \St\big( (t) \big)$ for all
 open $q$-simplices $(t)$ in $K$.  Thus
 $G_q(\phi_{\osscript{t}{}{}{}{}}) = 0$ in a neighbourhood of
-$\displaystyle [K^{q-1}]$ for all open $q$-simplices $(t)$ in $K$.
-Since all elements of $\displaystyle C^q(K;R)$ are linear combinations
+$\DS [K^{q-1}]$ for all open $q$-simplices $(t)$ in $K$.
+Since all elements of $\DS C^q(K;R)$ are linear combinations
 of elements of the form $\phi_{\osscript{t}{}{}{}{}}$ for $(t)$ an
 open $q$-simplex in $K$, we get that $G_q(\phi) = 0$ in a
-neighbourhood of $\displaystyle [K^{q-1}]$ for all
-$\displaystyle \phi \in C^q(K;R)$.  Thus, for $q=k-1 = j$, we
+neighbourhood of $\DS [K^{q-1}]$ for all
+$\DS \phi \in C^q(K;R)$.  Thus, for $q=k-1 = j$, we
 get that
 \[
 \df{\rho_j} = \df{\tilde{\rho}_j} + \df{\big( G_{k-1}(\alpha_j)\big)}
 = \df{\tilde{\rho}_j} + G_k\big(\dfC_{k-1}(\alpha_j)\big)
 = \df{\tilde{\rho}_j} = \omega
 \]
-in a neighbourhood of $\displaystyle [K^{j}]$, and
+in a neighbourhood of $\DS [K^{j}]$, and
 \[
 \rho_j = \tilde{\rho}_j + G_{k-1}(\alpha_j)
 = \tilde{\rho}_j = \rho_{j-1}
 \]
-in a neighbourhood of $\displaystyle [K^{j-1}]$.  Moreover,
+in a neighbourhood of $\DS [K^{j-1}]$.  Moreover,
 \[
 F_j(\rho_j)(\os{s}{}{}{}{})
 = F_j(\tilde{\rho}_j)(\os{s}{}{}{}{})
@@ -1868,18 +1868,18 @@ Claim 1 to get the second equality.
 
 \stage{Conclusion}
 It follows from (1) of Claim 1 that
-$\displaystyle G_k(Z^k(K;\RR)) \subset Z^k(S)$ where
-$\displaystyle Z^k(S)$ is the set of closed differential $k$-forms, and
-$\displaystyle G_k(B^k(K;\RR)) \subset B^k(S)$ where
-$\displaystyle B^k(S)$ is the set of exact differential $k$-forms.
+$\DS G_k(Z^k(K;\RR)) \subset Z^k(S)$ where
+$\DS Z^k(S)$ is the set of closed differential $k$-forms, and
+$\DS G_k(B^k(K;\RR)) \subset B^k(S)$ where
+$\DS B^k(S)$ is the set of exact differential $k$-forms.
 Thus $G_k$ defines a map, that we denote $\tilde{G}_k$, from
-$\displaystyle H^k(K;\RR)$ to $\displaystyle H^k(S)$.  Hence, it
+$\DS H^k(K;\RR)$ to $\DS H^k(S)$.  Hence, it
 follows from (2) that $\tilde{G}_k$ is a right inverse for
 $\tilde{F}_k$ and so $\tilde{F}_k$ is onto.
 
-It follows from Claim 2 that, if $\displaystyle \omega \in Z^k(S)$ and
-$\displaystyle F_k(\omega) \in B^k(K;\RR)$, then
-$\displaystyle \omega \in B^k(S)$.  Since $F_k$ is a linear map, this
+It follows from Claim 2 that, if $\DS \omega \in Z^k(S)$ and
+$\DS F_k(\omega) \in B^k(K;\RR)$, then
+$\DS \omega \in B^k(S)$.  Since $F_k$ is a linear map, this
 proves that $\tilde{F}_k([\omega]) = [0]_K$ implies that $[\omega] = [0]$.
 Thus $F_k$ is one-to-one.  This completes the proof that $\tilde{F}_k$ is an
 isomorphism.

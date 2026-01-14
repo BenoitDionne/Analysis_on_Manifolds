@@ -8,7 +8,7 @@ covered in books on linear algebra.
 
 \begin{defn}
 Let $H$ be a vector space over $\RR$.  A map
-$\displaystyle \tau:H^k \to \RR$ is
+$\DS \tau:H^k \to \RR$ is
 {\bfseries multilinear}\index{Multilinear Mapping} if
 \[
 \tau(\VEC{v}_1,\VEC{v}_2, \ldots, a \VEC{v}_i + b \tilde{\VEC{v}}_i,
@@ -18,26 +18,26 @@ $\displaystyle \tau:H^k \to \RR$ is
 \]
 for all $a, b \in \RR$ and $0 \leq i \leq k$.
 A {\bfseries $\mathbf{k}$-tensor}\index{Tensor!$k$-Tensor} on $H$ is a
-multilinear map $\displaystyle \tau:H^k\to \RR$.  The set of all
-$k$-tensors on $V$ is denoted $\displaystyle \T^k(H)$.
+multilinear map $\DS \tau:H^k\to \RR$.  The set of all
+$k$-tensors on $V$ is denoted $\DS \T^k(H)$.
 \end{defn}
 
-The space $\displaystyle \T^k(H)$ is a vector space over $\RR$ where
+The space $\DS \T^k(H)$ is a vector space over $\RR$ where
 the sum of vectors and the product by a scalar are defined by
 \[
 (a \tau_1+ b \tau_2)(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k) =
 a \tau_1(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k)
 + b \tau_2(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k)
 \]
-for all $\displaystyle \tau_1, \tau_2 \in \T^k(H)$ and all $a, b \in \RR$.
-It is also important to note that $\displaystyle \T^1(H) = H^\ast$,
+for all $\DS \tau_1, \tau_2 \in \T^k(H)$ and all $a, b \in \RR$.
+It is also important to note that $\DS \T^1(H) = H^\ast$,
 the dual space of $H$.
 
 \begin{defn}
 The {\bfseries product of two tensors}\index{Tensor!Product}
-$\displaystyle \tau_1 \in \T^{k_1}(H)$ and
-$\displaystyle \tau_2 \in \T^{k_2}(H)$ is the tensor
-$\displaystyle \tau_1\otimes \tau_2 \in \T^{k_1+k_2}(H)$ defined by
+$\DS \tau_1 \in \T^{k_1}(H)$ and
+$\DS \tau_2 \in \T^{k_2}(H)$ is the tensor
+$\DS \tau_1\otimes \tau_2 \in \T^{k_1+k_2}(H)$ defined by
 \[
 (\tau_1\otimes \tau_2)(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_{k_1+k_2})
 = \tau_1(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_{k_1})
@@ -46,13 +46,13 @@ $\displaystyle \tau_1\otimes \tau_2 \in \T^{k_1+k_2}(H)$ defined by
 \end{defn}
 
 \begin{theorem} \label{stokesBT}
-Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of $H$
-and let $\displaystyle \B^\ast = \{ \phi_i \}_{i=1}^n$ be
+Let $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of $H$
+and let $\DS \B^\ast = \{ \phi_i \}_{i=1}^n$ be
 the dual basis associated to $\B$ \footnotemark.  Then the set
-$\displaystyle
+$\DS
 \MM = \{ \phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k} :
 1 \leq i_m \leq n , \ 1 \leq m \leq k\}$
-is a basis of $\displaystyle \T^k(H)$.
+is a basis of $\DS \T^k(H)$.
 \end{theorem}
 
 \footnotetext{Namely, $\phi_j(\VEC{v}_i) = \delta_{i,j}$
@@ -72,12 +72,12 @@ The proof is a standard proof in linear algebra.  We note that
 \end{cases} \label{stokesBTEq1}
 \end{align}
 
-\stage{i} We prove that any $\displaystyle \tau \in \T^k(H)$ can be expressed
+\stage{i} We prove that any $\DS \tau \in \T^k(H)$ can be expressed
 as a linear combination of elements in $\MM$.
 
 Given $\VEC{w}_j \in H$ for $1 \leq j \leq k$.  Since $\B$ is a basis
 of $H$, we may express each $\VEC{w}_j$ as
-$\displaystyle \VEC{w}_j = \sum_{m_j=1}^n a_{m_j,j} \VEC{v}_{m_j}$ for some
+$\DS \VEC{w}_j = \sum_{m_j=1}^n a_{m_j,j} \VEC{v}_{m_j}$ for some
 $a_{m_j,j} \in \RR$.  We get from (\ref{stokesBTEq1}) that
 \begin{align*}
 &(\phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k})
@@ -124,7 +124,7 @@ for $1 \leq m_j \leq n$ and $1 \leq j \leq k$.
 
 \begin{defn}
 An {\bfseries inner product}\index{Tensor!Inner Product} on $H$ is a
-$2$-tensor $\displaystyle \tau \in \T^2(H)$ such that $\tau$ is
+$2$-tensor $\DS \tau \in \T^2(H)$ such that $\tau$ is
 {\bfseries symmetric}\index{Tensor!Symmetric} and
 {\bfseries positive definite}\index{Tensor!Positive Defined} \footnotemark.
 \end{defn}
@@ -139,9 +139,9 @@ This definition of the inner product corresponds to the standard
 definition of inner product on a vector space.
 
 \begin{theorem} \label{thONBtau}
-Suppose that $\displaystyle \tau\in \T^2(H)$ is an inner product on a
+Suppose that $\DS \tau\in \T^2(H)$ is an inner product on a
 vector space $H$ of dimension $n$ over the real.  There exists a basis
-$\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ of $H$ such that
+$\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ of $H$ such that
 $\tau(\VEC{v}_i,\VEC{v}_j) = \delta_{i,j}$ for all $i$ and $j$.
 \end{theorem}
 
@@ -157,25 +157,25 @@ called an {\bfseries orthonormal basis}\index{Tensor!Orthonormal Basis}
 with respect to the inner product $\tau$.
 \end{defn}
 
-Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of $H$, it
+Let $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of $H$, it
 is possible to choose an inner product on $H$ such that $\B$ is an
-orthonormal basis.  Let $\displaystyle \E = \{ \VEC{e}_i \}_{i=1}^n$
-be the canonical basis of $\displaystyle \RR^n$ and
-$\ps{}{}$ be the standard inner product on $\displaystyle \RR^n$
+orthonormal basis.  Let $\DS \E = \{ \VEC{e}_i \}_{i=1}^n$
+be the canonical basis of $\DS \RR^n$ and
+$\ps{}{}$ be the standard inner product on $\DS \RR^n$
 defined by
-$\displaystyle \ps{\VEC{x}_1}{\VEC{x}_2} = \sum_{j=1}^n x_{j,1}x_{j,2}$
-for $\displaystyle \VEC{x}_i = \sum_{j=1}^n x_{j,i}\VEC{e}_j$ and
+$\DS \ps{\VEC{x}_1}{\VEC{x}_2} = \sum_{j=1}^n x_{j,1}x_{j,2}$
+for $\DS \VEC{x}_i = \sum_{j=1}^n x_{j,i}\VEC{e}_j$ and
 $1 \leq i \leq 2$.
-Moreover, let $\displaystyle f:H \to \RR^n$ be the linear
+Moreover, let $\DS f:H \to \RR^n$ be the linear
 isomorphism defined by $f(\VEC{v}_i) = \VEC{e}_i$ for $1 \leq i \leq n$.
-We define the inner product $\displaystyle \tau \in \T^2(H)$ by
+We define the inner product $\DS \tau \in \T^2(H)$ by
 \begin{align*}
 \tau(\VEC{w}_1,\VEC{w}_2) &= \ps{f(\VEC{w}_1)}{f(\VEC{w}_2)}
 = \ps{\sum_{j=1}^n w_{j,1}f(\VEC{v}_j)}{\sum_{j=1}^n w_{j,2}f(\VEC{v}_j)}
 = \ps{\sum_{j=1}^n w_{j,1}\VEC{e}_j}{\sum_{j=1}^n w_{j,2}\VEC{e}_j} \\
 &= \sum_{j=1}^n w_{j,1}w_{j,2}
 \end{align*}
-for $\displaystyle \VEC{w}_i = \sum_{j=1}^n w_{j,i}\VEC{v}_j$ and
+for $\DS \VEC{w}_i = \sum_{j=1}^n w_{j,i}\VEC{v}_j$ and
 $1 \leq i \leq 2$.  The basis $\B$ is an orthogonal basis with respect
 to the inner product $\tau$.
 
@@ -204,21 +204,21 @@ are proved in standard books in (linear) algebra, for instance in
 \cite{La}.
 
 \begin{defn}
-A $k$-tensor $\displaystyle \tau \in \T^k(H)$ is called
+A $k$-tensor $\DS \tau \in \T^k(H)$ is called
 {\bfseries alternating}\index{Tensor!Alternating} if
 \[
 \tau(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k) =
 -\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)}, \ldots ,\VEC{v}_{\sigma(k)})
 \]
 for any transposition $\sigma$ on $J_k$.  The set of all alternating
-$k$-tensor on $H$ is denoted $\displaystyle \Omega^k(H)$.
+$k$-tensor on $H$ is denoted $\DS \Omega^k(H)$.
 \end{defn}
 
-It is easy to verify that $\displaystyle \Omega^k(H)$ is a linear
-subspace of $\displaystyle \T^k(H)$.
+It is easy to verify that $\DS \Omega^k(H)$ is a linear
+subspace of $\DS \T^k(H)$.
 
 \begin{prop} \label{propAltDefn}
-Given $\displaystyle \tau \in \T^k(H)$, let
+Given $\DS \tau \in \T^k(H)$, let
 \[
 \alt(\tau)(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k)
 = \frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)
@@ -226,13 +226,13 @@ Given $\displaystyle \tau \in \T^k(H)$, let
 \]
 for $\VEC{v}_i \in H$ and $1\leq i \leq k$,
 where $S_k$ is the group of permutations on $J_k = \{1,2,\ldots,k\}$.
-Then $\displaystyle \alt:\T^k(H) \to \Omega^k(H)$.
+Then $\DS \alt:\T^k(H) \to \Omega^k(H)$.
 \end{prop}
 
 \begin{proof}
-Suppose that $\displaystyle \tau \in \T^k(H)$ and $\tilde{\sigma}$ is a
+Suppose that $\DS \tau \in \T^k(H)$ and $\tilde{\sigma}$ is a
 fixed transposition on $J_k$.  We have that
-$\displaystyle \tilde{\sigma}^{-1} = \tilde{\sigma}$ and
+$\DS \tilde{\sigma}^{-1} = \tilde{\sigma}$ and
 \begin{align*}
 \tilde{\sigma} : S_k & \to S_k \\
 \sigma &\mapsto \sigma \circ \tilde{\sigma}
@@ -259,12 +259,12 @@ for all $\VEC{v}_i \in H$ and $1 \leq i \leq k$.
 
 \begin{prop} \label{propAltR}
 \begin{enumerate}
-\item If $\displaystyle \tau \in \Omega^k(H)$, then $\alt(\tau)=\tau$.
-\item If $\displaystyle \tau \in \T^k(H)$, then $\alt(\alt(\tau))=\alt(\tau)$.
-\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$ for $1 \leq i \leq 2$
+\item If $\DS \tau \in \Omega^k(H)$, then $\alt(\tau)=\tau$.
+\item If $\DS \tau \in \T^k(H)$, then $\alt(\alt(\tau))=\alt(\tau)$.
+\item If $\DS \tau_i \in \Omega^{k_i}(H)$ for $1 \leq i \leq 2$
 and $\alt(\tau_1) = 0$, then $\alt(\tau_1 \otimes \tau_2) =
 \alt(\tau_2 \otimes \tau_1) = 0$.
-\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$ for $1 \leq i \leq 3$,
+\item If $\DS \tau_i \in \Omega^{k_i}(H)$ for $1 \leq i \leq 3$,
 then $\alt(\alt(\tau_1\otimes \tau_2) \otimes \tau_3)
 = \alt(\tau_1\otimes \alt(\tau_2 \otimes \tau_3))
 = \alt(\tau_1\otimes \tau_2 \otimes \tau_3)$.
@@ -279,7 +279,7 @@ $\tau(\VEC{v}_{\sigma(1)}, \VEC{v}_{\sigma(2)},\ldots, \VEC{v}_{\sigma(k)})
 for all $\VEC{v}_i \in H$ and $1 \leq i \leq k$.
 Moreover, the number of different functions from $J_k$ to $J_k$ is $k!$.
 Namely, the number of elements of $S_k$, denoted $|S_k|$, is $k!$.
-Hence, for $\displaystyle \tau \in \Omega^k(H)$, we have
+Hence, for $\DS \tau \in \Omega^k(H)$, we have
 \begin{align*}
 &\alt(\tau)(\VEC{v}_1, \VEC{v}_2, \ldots ,\VEC{v}_k)
 = \frac{1}{k!} \sum_{\sigma\in S_k} \sgn(\sigma)
@@ -293,7 +293,7 @@ Hence, for $\displaystyle \tau \in \Omega^k(H)$, we have
 for all $\VEC{v}_i \in H$ and $1 \leq i \leq k$.
 
 \stage{2} This follows from (1) because
-$\displaystyle \alt(\tau) \in \Omega^k(H)$.
+$\DS \alt(\tau) \in \Omega^k(H)$.
 
 \stage{3} Let $\tilde{S}_{k_1} \subset S_{k_1+k_2}$ be the set of all
 permutations $\tilde{\sigma}$ on $J_{k_1+k_2}$ such that
@@ -304,7 +304,7 @@ We choose a representative $\sigma_j \in S_{k_1+k_2}$ for each of the
 elements (i.e.\ equivalence classes) of the quotient group
 $S_{k_1+k_2}/\tilde{S}_{k_1}$.  We end up with a set
 of permutations $S = \{\sigma_j: 1 \leq j \leq J\}$.
-We have that $\displaystyle S_{k_1+k_2} = \bigcup_{1\leq j \le J}
+We have that $\DS S_{k_1+k_2} = \bigcup_{1\leq j \le J}
 \{ \sigma_j \circ \tilde{\sigma} : \tilde{\sigma} \in \tilde{S}_{k_1} \}$
 and each element of $S_{k_1+k_2}$ has a unique representation of the form
 $\sigma_j \circ \tilde{\sigma}$ with $\tilde{\sigma} \in \tilde{S}_{k_1}$
@@ -340,7 +340,7 @@ and $\sigma_j \in S$.  Hence
 = 0
 \end{align*}
 for all $\VEC{v}_i\in H$ and $1 \leq i \leq k_1+k_2$.
-The proof that $\displaystyle \alt(\tau_2 \otimes \tau_1) = 0$ is
+The proof that $\DS \alt(\tau_2 \otimes \tau_1) = 0$ is
 similar.  It suffices to use the subgroup
 $\breve{S}_{k_1} \subset S_{k_1+k_2}$ of all
 permutations $\breve{\sigma}$ on $J_{k_1+k_2}$ such that
@@ -367,9 +367,9 @@ $\alt( \alt(\tau_1 \otimes \tau_2) \otimes \tau_3)
 \begin{defn} \label{defnWwedgeP}
 The {\bfseries wedge product}\index{Tensor!Wedge Product}
 $\tau_1 \wedge \tau_2$ of
-$\displaystyle \tau_1 \in \Omega^{k_1}(H)$ and
-$\displaystyle \tau_2\in \Omega^{k_2}(H)$ is the tensor
-$\displaystyle \tau_1\wedge \tau_2 \in \Omega^{k_1+k_2}(H)$ defined by
+$\DS \tau_1 \in \Omega^{k_1}(H)$ and
+$\DS \tau_2\in \Omega^{k_2}(H)$ is the tensor
+$\DS \tau_1\wedge \tau_2 \in \Omega^{k_1+k_2}(H)$ defined by
 \[
 \tau_1 \wedge \tau_2 = \frac{(k_1+k_2)!}{k_1! k_2!}
 \alt(\tau_1\otimes \tau_2) \ .
@@ -378,14 +378,14 @@ $\displaystyle \tau_1\wedge \tau_2 \in \Omega^{k_1+k_2}(H)$ defined by
 
 Let $H_1$ and $H_2$ be two vector spaces over $\RR$.  Given a linear map
 $f:H_1\to H_2$, we can define a map
-$\displaystyle f^\ast: \T^k(H_2)\to \T^k(H_1)$ by
+$\DS f^\ast: \T^k(H_2)\to \T^k(H_1)$ by
 \[
 (f^\ast(\tau))(\VEC{v}_1,\VEC{v}_2, \ldots,\VEC{v}_k) = 
 \tau(f(\VEC{v}_1),f(\VEC{v}_2), \ldots,f(\VEC{v}_k))
 \]
-for all $\displaystyle \tau \in \T^k(H_2)$ and $\VEC{v}_i \in H_1$ for
+for all $\DS \tau \in \T^k(H_2)$ and $\VEC{v}_i \in H_1$ for
 $1 \leq i \leq k$.  We say that
-$\displaystyle f^\ast(\tau)$ is the {\bfseries pull-back}\index{Pull-Back}
+$\DS f^\ast(\tau)$ is the {\bfseries pull-back}\index{Pull-Back}
 of $\tau$ by $f$.
 
 The wedge product satisfies many relations.  Some of them are listed in
@@ -393,26 +393,26 @@ the next proposition.
 
 \begin{prop} \label{propWedgeR}
 \begin{enumerate}
-\item If $\displaystyle \tau_1,\tau_2 \in \Omega^{k_1}$
-and $\displaystyle \tau_3 \in \Omega^{k_2}(H)$, then
+\item If $\DS \tau_1,\tau_2 \in \Omega^{k_1}$
+and $\DS \tau_3 \in \Omega^{k_2}(H)$, then
 $(\tau_1 + \tau_2)\wedge \tau_3 = \tau_1 \wedge \tau_3 + \tau_2
 \wedge \tau_3$.
-\item If $\displaystyle \tau_1\in \Omega^{k_1}(H)$ and
-$\displaystyle \tau_2,\tau_3 \in \Omega^{k_2}(H)$, then
+\item If $\DS \tau_1\in \Omega^{k_1}(H)$ and
+$\DS \tau_2,\tau_3 \in \Omega^{k_2}(H)$, then
 $\tau_1\wedge(\tau_2+ \tau_3) = \tau_1 \wedge \tau_2 + \tau_1
 \wedge \tau_3$.
-\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$
+\item If $\DS \tau_i \in \Omega^{k_i}(H)$
 for $1 \leq i \leq 2$ and $a \in \RR$, then
 $(a \tau_1) \wedge \tau_2 = \tau_1 \wedge (a\tau_2) = 
 a (\tau_1 \wedge \tau_2)$.
-\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$
+\item If $\DS \tau_i \in \Omega^{k_i}(H)$
 for $1 \leq i \leq 2$, then
-$\displaystyle \tau_1 \wedge \tau_2 = (-1)^{k_1 k_2} \tau_2 \wedge \tau_1$.
-\item If $\displaystyle \tau_i \in \Omega^{k_i}(H)$
+$\DS \tau_1 \wedge \tau_2 = (-1)^{k_1 k_2} \tau_2 \wedge \tau_1$.
+\item If $\DS \tau_i \in \Omega^{k_i}(H)$
 for $1 \leq i \leq 2$ and $f:H_1\to H_2$ is a linear map from the
 vector space $H_1$ to the vector space $H_2$, then 
-$\displaystyle f^\ast(\tau_1 \wedge \tau_2) = f^\ast\tau_1 \wedge f^\ast \tau_2$.
-\item If $\displaystyle \tau_i\in \Omega^{k_i}(H)$ for $1\leq i \leq 3$, then
+$\DS f^\ast(\tau_1 \wedge \tau_2) = f^\ast\tau_1 \wedge f^\ast \tau_2$.
+\item If $\DS \tau_i\in \Omega^{k_i}(H)$ for $1\leq i \leq 3$, then
 \[
 (\tau_1\wedge \tau_2) \wedge \tau_3 = \tau_1 \wedge ( \tau_2 \wedge \tau_3)
 = \frac{(k_1+k_2+k_3)!}{k_1! k_2! k_3!}
@@ -471,7 +471,7 @@ $1 \leq j \leq k_1$.  We have
 &= (-1)^{k_2} \sgn(\tilde{\sigma}_{j-1})
 \end{align*}
 for $1 \leq j \leq k_1$.  By induction, it is easy to verify that
-$\displaystyle \sgn(\tilde{\sigma}_{k_1}) = (-1)^{k_1 k_2}
+$\DS \sgn(\tilde{\sigma}_{k_1}) = (-1)^{k_1 k_2}
 \sgn(\tilde{\sigma}_0) = (-1)^{k_1 k_2} \sgn(\sigma)$.
 
 We claim that $\tilde{\sigma}_{k_1} = \tilde{\sigma}$.  We take a
@@ -531,7 +531,7 @@ for $1 \leq j \leq k_1$.  In particular,
 $\tilde{\sigma}_{k_1} = \tilde{\sigma}$ as claimed.
 
 We therefore have that
-$\displaystyle \sgn(\sigma) = (-1)^{k_1 k_2}\sgn(\tilde{\sigma})$.
+$\DS \sgn(\sigma) = (-1)^{k_1 k_2}\sgn(\tilde{\sigma})$.
 Hence
 \begin{align*}
 &(\tau_1\wedge\tau_2)(\VEC{v}_1, \VEC{v}_, \ldots, \VEC{v}_{k_1+k_2})
@@ -574,13 +574,13 @@ equality.  The other relation in (6) is similarly proved.
 From (6) of the previous theorem, we have associativity of the wedge product.
 Hence, we may defined $\tau_1\wedge \tau_2 \wedge \tau_3$ as
 $(\tau_1\wedge \tau_2) \wedge \tau_3 = \tau_1 \wedge ( \tau_2 \wedge \tau_3)$
-for all $\displaystyle \tau_i \in \Omega^{k_i}(H)$ with $1\leq i \leq 3$.
+for all $\DS \tau_i \in \Omega^{k_i}(H)$ with $1\leq i \leq 3$.
 Inductively, we may define
 $\tau_1\wedge \tau_2 \wedge \ldots \wedge \tau_j$ for all
-$\displaystyle \tau_i\in \Omega^{k_i}(H)$ with $1\leq i \leq j$.
+$\DS \tau_i\in \Omega^{k_i}(H)$ with $1\leq i \leq j$.
 
 \begin{cor} \label{corMwedgesR}
-$\displaystyle \tau_1\wedge \tau_2 \wedge \ldots \wedge \tau_j
+$\DS \tau_1\wedge \tau_2 \wedge \ldots \wedge \tau_j
 = \frac{(k_1+k_2+\ldots + k_j)!}{k_1! k_2! \cdots k_j!}
 \alt(\tau_1\otimes \tau_2 \otimes \ldots \otimes \tau_j)$ for
 $\tau_i \in \Omega^{k_i}(H)$ and $1\leq i \leq j$.
@@ -589,7 +589,7 @@ $\tau_i \in \Omega^{k_i}(H)$ and $1\leq i \leq j$.
 The proof is left to the reader.
 
 \begin{prop} \label{propTssT}
-Given $\displaystyle \tau_i \in \Omega^1(H)$ for $1\leq i \leq k$, we have
+Given $\DS \tau_i \in \Omega^1(H)$ for $1\leq i \leq k$, we have
 \begin{equation} \label{wedgeIeq1}
 \tau_{\rho(1)} \wedge \tau_{\rho(2)} \wedge \ldots \wedge \tau_{\rho(k)}
 = \sgn(\rho)\, \tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_k
@@ -602,7 +602,7 @@ $\tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_k = 0$.
 
 \begin{proof}
 We first note that the map from $S_k$ to itself defined by
-$\displaystyle \sigma \mapsto \sigma\circ\rho^{-1}$ for
+$\DS \sigma \mapsto \sigma\circ\rho^{-1}$ for
 $\sigma \in S_k$ is one-to-one
 and onto.  Moreover, for all $1\leq m \leq k$, we have that
 $\tau_{\rho(m)}(\VEC{w}_{\sigma(m)})
@@ -661,23 +661,23 @@ $\tau_1 \wedge \tau_2 \wedge \ldots \wedge \tau_j  = 0$.
 
 \begin{theorem}  \label{thOkbasis}
 As in Theorem~\ref{stokesBT}, let
-$\displaystyle \B^\ast = \{ \phi_i \}_{i=1}^n$ be
+$\DS \B^\ast = \{ \phi_i \}_{i=1}^n$ be
 the dual basis associated to a basis
-$\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ of $H$.
-The set $\displaystyle \NNN =
+$\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ of $H$.
+The set $\DS \NNN =
 \{ \phi_{i_1} \wedge \phi_{i_2} \wedge \ldots \wedge \phi_{i_k} :
 1 \leq i_1 < i_2 < \ldots < i_k \leq n \}$
-is a basis of $\displaystyle \Omega^k(H)$.  In particular, the dimension of
-$\displaystyle \Omega^k(H)$ is
-$\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}$.
+is a basis of $\DS \Omega^k(H)$.  In particular, the dimension of
+$\DS \Omega^k(H)$ is
+$\DS \binom{n}{k} = \frac{n!}{k!(n-k)!}$.
 \end{theorem}
 
 \begin{proof}
-\stage{i} We first show that any $\displaystyle \tau \in \Omega^k(H)$
+\stage{i} We first show that any $\DS \tau \in \Omega^k(H)$
 can be written as a linear combination of elements in $\NNN$.
 
 It follows from Theorem~\ref{stokesBT} that we may write $\tau$ as
-$\displaystyle \tau = \sum_{\substack{1 \leq i_j \leq n\\1\leq j \leq k}}
+$\DS \tau = \sum_{\substack{1 \leq i_j \leq n\\1\leq j \leq k}}
 a_{i_1,i_2,\ldots,i_k}
 \phi_{i_1} \otimes \phi_{i_2} \otimes \ldots \otimes \phi_{i_k}$
 for some $a_{i_1,i_2,\ldots,i_k} \in \RR$.  Hence, using (1) of
@@ -744,10 +744,10 @@ with $1 \leq m_1 < m_2 < \ldots < m_k \leq n$ and use
 \stage{iii}
 To determine the number of elements in the basis $\NNN$, we first note
 that there are $n (n-1) (n-2)\cdots (n-k+1) = n!/(n-k)!$ ways to select
-$k$ distinct $\phi_i$ from $\displaystyle \BB^\ast$.  However, for
+$k$ distinct $\phi_i$ from $\DS \BB^\ast$.  However, for
 each set of indices $1 \leq i_1 < i_2 < \ldots < i_k\leq n$, all $k!$
 combinations
-$\displaystyle \{ \phi_{i_{\sigma(j)}} \}_{j=1}^k$ for $\sigma \in S_k$
+$\DS \{ \phi_{i_{\sigma(j)}} \}_{j=1}^k$ for $\sigma \in S_k$
 are included in the previous count while only the ordering
 $i_1 < i_2 < \ldots <i_k$ matters for the basis $\NNN$.
 Therefore, the number of elements of $\NNN$ is
@@ -755,9 +755,9 @@ $n!/((n-k)!k!)$.
 \end{proof}
 
 \begin{theorem} \label{stokesTBE}
-Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of the
-vector space $H$ over $\RR$.  If $\displaystyle \tau \in \Omega^n(H)$ and
-$\displaystyle \VEC{w}_i = \sum_{i=1}^n a_{j,i} \VEC{v}_j$
+Let $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of the
+vector space $H$ over $\RR$.  If $\DS \tau \in \Omega^n(H)$ and
+$\DS \VEC{w}_i = \sum_{i=1}^n a_{j,i} \VEC{v}_j$
 for $1 \leq i \leq n$ are $n$ vectors in $H$, then
 \begin{equation}\label{stokesBE}
 \tau(\VEC{w}_1, \VEC{w}_2, \ldots ,\VEC{w}_n) = \det(A)
@@ -773,13 +773,13 @@ all alternating multilinear maps
 \rho: \underbrace{\RR^n \times \RR^n \times \cdots \times
 \RR^n}_{n \text{ times}} \to \RR^n \ ,
 \]
-namely $\displaystyle \rho \in \Omega^n(\RR^n)$,
+namely $\DS \rho \in \Omega^n(\RR^n)$,
 are of the form $\rho(\VEC{x}_1,\VEC{x}_2, \ldots, \VEC{x}_n) = b\,
 \det \begin{pmatrix} \VEC{x}_1 & \VEC{x}_2 & \ldots & \VEC{x}_n \end{pmatrix}$
 for some $b \in \RR$.
 
 Consider the alternating multilinear map
-$\displaystyle \rho:\RR^n \times \ldots \times \RR^n \to \RR$ defined by
+$\DS \rho:\RR^n \times \ldots \times \RR^n \to \RR$ defined by
 \[
 \rho\left(\begin{pmatrix} a_{1,1} \\ a_{2,1} \\ \vdots \\ a_{n,1} \end{pmatrix},
 \begin{pmatrix} a_{1,2} \\ a_{2,2} \\ \vdots \\ a_{n,2} \end{pmatrix},
@@ -803,7 +803,7 @@ $\tau( \VEC{v}_1 , \VEC{v}_2, \ldots, \VEC{v}_n) = b\, \det \Id_n = b$.
 \end{proof}
 
 \begin{cor}
-Suppose that $\displaystyle \tau \in \Omega^k(H)$ and
+Suppose that $\DS \tau \in \Omega^k(H)$ and
 $\VEC{w}_i \in H$ for $1\leq i \leq n$.  Then
 \begin{enumerate}
 \item $\tau(\VEC{w}_{\sigma(1)}, \VEC{w}_{\sigma(2)}, \ldots,
@@ -821,7 +821,7 @@ by a matrix with only one $1$ per row and column, and
 all the other entries being null.  For instance, the permutation 
 $\sigma \in S_4$ defined by $\sigma(1) = 2$, $\sigma(2) = 4$,
 $\sigma(3) = 3$ and $\sigma(4)=1$ is represented by the matrix
-$\displaystyle M_\sigma = \begin{pmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\
+$\DS M_\sigma = \begin{pmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}$
 \footnote{The matrix representation of $\sigma$ may also be
 represented by the transpose of $M_\sigma$.  It all depends if the
@@ -829,7 +829,7 @@ multiplication with a vector is from the left or the right.  We have
 chosen from the right.}.  The transposition
 $\sigma \in S_4$ defined by $\sigma(1) = 3$, $\sigma(2) = 2$,
 $\sigma(3) = 1$ and $\sigma(4)=4$ is represented by the matrix
-$\displaystyle M_\sigma = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\
+$\DS M_\sigma = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\
 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}$.
 We have that $\sgn(\sigma) = \det(M_\sigma)$ \footnote{The reader may
 wonder why we did not define the sign of a permutation using the
@@ -838,13 +838,13 @@ created a vicious circle because the sign of permutations is used to
 define the determinant.}.  With this information, the proof of (1) is
 now a simple consequence of the previous theorem.
 
-Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of the
+Let $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ be a basis of the
 vector space $H$ over $\RR$.  We may write
-$\displaystyle \VEC{w}_i = \sum_{i=1}^n a_{j,i} \VEC{v}_j$
+$\DS \VEC{w}_i = \sum_{i=1}^n a_{j,i} \VEC{v}_j$
 for $1 \leq i \leq n$ and some $a_{j,i} \in \RR$.
 Let $A$ be the matrix with entry in position $(j,i)$ given by
 $a_{j,i}$ for $1\leq i,j \leq n$.
-Since $\displaystyle \VEC{w}_{\sigma(i)} = \sum_{i=1}^n a_{j,\sigma(i)} \VEC{v}_j$
+Since $\DS \VEC{w}_{\sigma(i)} = \sum_{i=1}^n a_{j,\sigma(i)} \VEC{v}_j$
 for $1 \leq i \leq n$, we have that the matrix $\tilde{A}$ with entry
 in position $(j,i)$ given by $a_{j,\sigma(i)}$ is $\tilde{A} = A M_\sigma$.
 
@@ -871,7 +871,7 @@ $\sigma(i) = i$ for $i \neq p, q$.
 
 \section{Orientation} \label{sectOrientRn}
 
-If $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ in
+If $\DS \C = \{ \VEC{w}_i \}_{i=1}^n$ in
 Theorem~\ref{stokesTBE} is a basis of $H$, then $A$ is the matrix of
 change of bases from $\C$ to $\B$.  In particular, $\det(A) \neq 0$.
 Hence (\ref{stokesBE}) divides the bases of $H$ into two groups.  Two
@@ -883,7 +883,7 @@ We define an {\bfseries orientation}\index{Orientation} on a vector
 space $H$ by selecting one of the two groups of bases described above.
 \end{defn}
 
-If $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ is a basis
+If $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ is a basis
 belonging to the chosen group for the orientation on $H$, then we denote this
 orientation by $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
 The order of the vector is fundamental.  The group of bases not
@@ -893,17 +893,17 @@ orientation and is denoted $-[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
 
 \begin{defn}
 The {\bfseries standard orientation}\index{Standard Orientation} on
-$\displaystyle \RR^n$ is given by
+$\DS \RR^n$ is given by
 $[\VEC{e}_1, \VEC{e}_2, \ldots, \VEC{e}_n]$ where
-$\displaystyle \E = \{ \VEC{e}_i \}_{i=1}^n$ is the canonical basis of
-$\displaystyle \RR^n$.
+$\DS \E = \{ \VEC{e}_i \}_{i=1}^n$ is the canonical basis of
+$\DS \RR^n$.
 \end{defn}
 
-If $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$
-and $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ are two orthonormal bases
-with respect to an inner product $\displaystyle \tau\in \T^2(H)$, then
+If $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$
+and $\DS \C = \{ \VEC{w}_i \}_{i=1}^n$ are two orthonormal bases
+with respect to an inner product $\DS \tau\in \T^2(H)$, then
 $A$ in Theorem~\ref{stokesTBE} is an orthogonal matrix, namely
-$\displaystyle A^\top A = \Id_n$.  This follows from
+$\DS A^\top A = \Id_n$.  This follows from
 \begin{align*}
 \delta_{i,j} &= \tau(\VEC{w}_i,\VEC{w}_j)
 = \tau\left(\sum_{k_1=1}^n a_{k_1,i} \VEC{v}_{k_1},
@@ -913,47 +913,47 @@ $\displaystyle A^\top A = \Id_n$.  This follows from
 &= \sum_{k_1,k_2=1}^n a_{k_1,i} a_{k_2,j} \delta_{k_1,k_2}
 = \sum_{k=1}^n a_{k,i} a_{k,j} \ .
 \end{align*}
-Hence, if $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$
-and $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ are two orthonormal bases
-with respect to the inner product $\displaystyle \tau \in \T^2(H)$,
+Hence, if $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$
+and $\DS \C = \{ \VEC{w}_i \}_{i=1}^n$ are two orthonormal bases
+with respect to the inner product $\DS \tau \in \T^2(H)$,
 then $\det A = \pm 1$ in Theorem~\ref{stokesTBE}.
 
 Consider the orientation $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$
 associated to a given orthonormal basis
-$\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ on $H$ with respect to
-the inner product $\displaystyle \tau \in \T^2(H)$.
-Since $\displaystyle \Omega^n(H)$ is of dimension one, there exists a unique
-$\displaystyle \nu \in \Omega^n(H)$ such that
-$\displaystyle \nu(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_n) = 1$.
+$\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ on $H$ with respect to
+the inner product $\DS \tau \in \T^2(H)$.
+Since $\DS \Omega^n(H)$ is of dimension one, there exists a unique
+$\DS \nu \in \Omega^n(H)$ such that
+$\DS \nu(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_n) = 1$.
 It follows from the previous paragraph that
-$\displaystyle \nu(\VEC{w}_1,\VEC{w}_2, \ldots, \VEC{w}_n) = 1$ for all
-orthonormal basis $\displaystyle \C = \{ \VEC{w}_i \}_{i=1}^n$ belonging to
+$\DS \nu(\VEC{w}_1,\VEC{w}_2, \ldots, \VEC{w}_n) = 1$ for all
+orthonormal basis $\DS \C = \{ \VEC{w}_i \}_{i=1}^n$ belonging to
 the orientation $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
 
 \begin{defn}
-Let $\displaystyle \B = \{ \VEC{v}_i \}_{i=1}^n$ be an orthonormal
+Let $\DS \B = \{ \VEC{v}_i \}_{i=1}^n$ be an orthonormal
 basis on $S$ with respect to the inner product
-$\displaystyle \tau \in \T^2(H)$.  The unique
-$\displaystyle \nu \in \Omega^n(H)$
-such that $\displaystyle \nu(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_n) = 1$
+$\DS \tau \in \T^2(H)$.  The unique
+$\DS \nu \in \Omega^n(H)$
+such that $\DS \nu(\VEC{v}_1,\VEC{v}_2, \ldots, \VEC{v}_n) = 1$
 is called the {\bfseries volume element}\index{Volume Element} on $H$
-determined by the inner product $\displaystyle \tau \in \T^2(H)$ and
+determined by the inner product $\DS \tau \in \T^2(H)$ and
 the orientation $[\VEC{v}_1, \VEC{v}_2, \ldots, \VEC{v}_n]$.
 \end{defn}
 
 A particular case of volume element is given by 
-$\displaystyle \nu = \det \in \Omega^n(\RR^n)$ seen in the proof of
+$\DS \nu = \det \in \Omega^n(\RR^n)$ seen in the proof of
 Theorem~\ref{stokesTBE}.  We have that $\det$ is the volume element on
-$\displaystyle \RR^n$ determined by the standard inner product
-$\tau \equiv \ps{}{}$ on $\displaystyle \RR^n$
+$\DS \RR^n$ determined by the standard inner product
+$\tau \equiv \ps{}{}$ on $\DS \RR^n$
 and the orientation $[\VEC{e}_1, \VEC{e}_2, \ldots, \VEC{e}_n]$,
-where $\displaystyle \E = \{ \VEC{e}_i \}_{i=1}^n$ is the canonical basis of
-$\displaystyle \RR^n$.
+where $\DS \E = \{ \VEC{e}_i \}_{i=1}^n$ is the canonical basis of
+$\DS \RR^n$.
 
 To conclude this section, we extend the classical cross product in
-$\displaystyle \RR^3$ to $\displaystyle \RR^n$ for $n>3$.
-Given $\displaystyle \VEC{w}_i \in \RR^n$ for $1\leq i \leq n-1$, let
-$\displaystyle g \in \Omega^1(\RR^n)$ be the linear functional defined by
+$\DS \RR^3$ to $\DS \RR^n$ for $n>3$.
+Given $\DS \VEC{w}_i \in \RR^n$ for $1\leq i \leq n-1$, let
+$\DS g \in \Omega^1(\RR^n)$ be the linear functional defined by
 \[
 g(\VEC{v}) = \det
 \begin{pmatrix} \VEC{w}_1 & \VEC{w}_2 & \ldots & \VEC{w}_{n-1} & \VEC{v}
@@ -962,12 +962,12 @@ g(\VEC{v}) = \det
 % \begin{pmatrix} \VEC{w}_1^\top \\ \VEC{w}_2^\top \\ \vdots \\
 % \VEC{w}_{n-1}^\top \\ \VEC{v}^\top \end{pmatrix}
 \]
-for $\displaystyle \VEC{v} \in \RR^n$.
+for $\DS \VEC{v} \in \RR^n$.
 From the theory of representation of linear functionals on
-$\displaystyle \RR^n$,
-there exists a unique $\displaystyle \VEC{z}\in \RR^n$ such that 
+$\DS \RR^n$,
+there exists a unique $\DS \VEC{z}\in \RR^n$ such that 
 $g(\VEC{v})=\ps{\VEC{v}}{\VEC{z}}$ for all
-$\displaystyle \VEC{v}\in \RR^n$.
+$\DS \VEC{v}\in \RR^n$.
 
 \begin{defn}
 The {\bfseries cross product}\index{Cross Product}
@@ -975,7 +975,7 @@ $\VEC{w}_1\times \VEC{w}_2 \times \ldots \times \VEC{w}_{n-1}$
 is the unique vector $\VEC{z}$ such that
 $\ps{\VEC{v}}{\VEC{z}} =
 \det \begin{pmatrix} \VEC{w}_1 & \VEC{w}_2 & \ldots & \VEC{w}_{n-1} & \VEC{v}
-\end{pmatrix}$ for all $\displaystyle \VEC{v} \in \RR^n$.
+\end{pmatrix}$ for all $\DS \VEC{v} \in \RR^n$.
 \end{defn}
 
 We have by construction that $\VEC{z}$ is orthogonal to $\VEC{w}_i$ for
@@ -989,7 +989,7 @@ for $\sigma \in S_{n-1}$.
 \section{Tangent Spaces} \label{stokes_TSVS}
 
 \begin{defn}
-Let $\displaystyle V \subset \RR^n$ be an open set.  Given $\VEC{v} \in V$, the
+Let $\DS V \subset \RR^n$ be an open set.  Given $\VEC{v} \in V$, the
 {\bfseries tangent space}\index{Tangent Space} of $V$ at $\VEC{v}$ is
 the set
 \[
@@ -1003,55 +1003,55 @@ space by setting
 a_1 (\VEC{v},\VEC{x}_1) + a_2 (\VEC{v},\VEC{x}_2)
 = (\VEC{v}, a_1\VEC{x}_1 + a_2\VEC{x}_2)
 \]
-for all $a_i \in \RR$ and $\displaystyle \VEC{x}_i \in \RR^n$.
+for all $a_i \in \RR$ and $\DS \VEC{x}_i \in \RR^n$.
 For each $\VEC{v} \in V$, we have that $\TS_{\VEC{v}}V$ is linearly
-isomorphic to $\displaystyle \RR^n$.  The canonical basis
-$\displaystyle \{ \VEC{e}_i \}_{i=1}^n$ of $\displaystyle \RR^n$ yields a
+isomorphic to $\DS \RR^n$.  The canonical basis
+$\DS \{ \VEC{e}_i \}_{i=1}^n$ of $\DS \RR^n$ yields a
 {\bfseries canonical basis}\index{Canonical Basis}
 $\E$ on $\TS_{\VEC{v}} V$ defined by
-$\displaystyle \E = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n$.
+$\DS \E = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n$.
 
-This definition of tangent space for an open subset of $\displaystyle \RR^n$ 
+This definition of tangent space for an open subset of $\DS \RR^n$ 
 may seem to be unnecessary and cumbersome but we will see later, when
 working on manifolds, that it is very useful.
 
 \begin{defn}
-Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+Let $\DS V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
 We define an inner product $\ps{}{}_{\VEC{v}}$ on $\TS_{\VEC{v}}V$ by
 \[
 \ps{ (\VEC{v},\VEC{x}_1) }{ (\VEC{v},\VEC{x}_2) }_{\VEC{v}}
 = \tau(\VEC{x}_1,\VEC{x}_2)
 \]
-for all $\displaystyle \VEC{x}_i\in \RR^n$, where 
-$\displaystyle \tau \in \T^2(\RR^n)$ is an inner product.
+for all $\DS \VEC{x}_i\in \RR^n$, where 
+$\DS \tau \in \T^2(\RR^n)$ is an inner product.
 \end{defn}
 
 The most frequent situation in this chapter is when $\tau$ is the
-standard inner product on $\displaystyle \RR^n$.
+standard inner product on $\DS \RR^n$.
 
 The concept of tensors can be naturally extended to $\TS_{\VEC{v}}V$. 
 
 \begin{defn}
-Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
-A $k$-tensors $\displaystyle \tau_{\VEC{v}} \in \T^k( \TS_{\VEC{v}} V)$
+Let $\DS V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+A $k$-tensors $\DS \tau_{\VEC{v}} \in \T^k( \TS_{\VEC{v}} V)$
 is defined by
 \[
 \tau_{\VEC{v}}\big( (\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2), \ldots,
 (\VEC{v},\VEC{x}_k) \big) = \tau(\VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k)
 \]
-for all $\displaystyle \VEC{x}_i \in \RR^n$, where
-$\displaystyle \tau\in \T^k(\RR^n)$.  We say that
+for all $\DS \VEC{x}_i \in \RR^n$, where
+$\DS \tau\in \T^k(\RR^n)$.  We say that
 $\tau_{\VEC{v}}$ is generated by $\tau$.
 \end{defn}
 
-The space $\displaystyle \T^k(\TS_{\VEC{v}}V)$ is a vector
+The space $\DS \T^k(\TS_{\VEC{v}}V)$ is a vector
 space over $\RR$.  If
-$\displaystyle \tau_{\VEC{v}}^{[1]}, \tau_{\VEC{v}}^{[2]} \in \T^k(\TS_{\VEC{v}}V)$
-are generated by $\displaystyle \tau^{[1]},\tau^{[2]} \in \T^k(\RR^n)$
+$\DS \tau_{\VEC{v}}^{[1]}, \tau_{\VEC{v}}^{[2]} \in \T^k(\TS_{\VEC{v}}V)$
+are generated by $\DS \tau^{[1]},\tau^{[2]} \in \T^k(\RR^n)$
 respectively, and $a, b \in \RR$, then
-$\displaystyle a \tau_{\VEC{v}}^{[1]}+ b \tau_{\VEC{v}}^{[2]}
+$\DS a \tau_{\VEC{v}}^{[1]}+ b \tau_{\VEC{v}}^{[2]}
 \in \T(\TS_{\VEC{v}}V)$
-is generated by $\displaystyle a \tau^{[1]} + b \tau^{[2]} \in \T(\RR^n)$.
+is generated by $\DS a \tau^{[1]} + b \tau^{[2]} \in \T(\RR^n)$.
 This follows from
 \begin{align*}
 &(a \tau_{\VEC{v}}^{[1]}+ b \tau_{\VEC{v}}^{[2]})\big( (\VEC{v},\VEC{x}_1),
@@ -1065,17 +1065,17 @@ This follows from
 = (a \tau^{[1]} + b \tau^{[2]})
 \big( \VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k\big)
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$ and $1 \leq i \leq k$.
+for all $\DS \VEC{x}_i \in \RR^n$ and $1 \leq i \leq k$.
 
 We can also extend the product of tensors to $\TS_{\VEC{v}}V$ as it
 follows.
 
 \begin{defn}
-Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+Let $\DS V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
 The {\bfseries product of two tensors}\index{Tensor!Product}
-$\displaystyle \tau_{\VEC{v}}^{[1]} \in \T^{k_1}(\TS_{\VEC{v}}V)$ and
-$\displaystyle \tau_{\VEC{v}}^{[2]} \in \T^{k_2}(\TS_{\VEC{v}}V)$ is the tensor
-$\displaystyle \tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]} \in
+$\DS \tau_{\VEC{v}}^{[1]} \in \T^{k_1}(\TS_{\VEC{v}}V)$ and
+$\DS \tau_{\VEC{v}}^{[2]} \in \T^{k_2}(\TS_{\VEC{v}}V)$ is the tensor
+$\DS \tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]} \in
 \T^{k_1+k_2}(\TS_{\VEC{v}}V)$ defined by
 \begin{align*}
 &(\tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]}) \big( (\VEC{v},\VEC{x}_1),
@@ -1086,16 +1086,16 @@ $\displaystyle \tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]} \in
 \, \tau_{\VEC{v}}^{[2]} \big( (\VEC{v},\VEC{x}_{k_1+1}),
 (\VEC{v},\VEC{x}_{k_1+2}), \ldots, (\VEC{v},\VEC{x}_{k_1+k_2}) \big)
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$.
+for all $\DS \VEC{x}_i \in \RR^n$.
 \end{defn}
 
-If $\displaystyle \tau_{\VEC{v}}^{[i]} \in \T^{k_i}(\TS_{\VEC{v}}V)$
-is generated by $\displaystyle \tau^{[i]} \in \T^{k_1}(\RR^n)$
+If $\DS \tau_{\VEC{v}}^{[i]} \in \T^{k_i}(\TS_{\VEC{v}}V)$
+is generated by $\DS \tau^{[i]} \in \T^{k_1}(\RR^n)$
 for $1\leq i \leq 2$, then
-$\displaystyle \tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]} \in
+$\DS \tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]} \in
 \T^{k_1+k_2}(\TS_{\VEC{v}}V)$
 is generated by
-$\displaystyle \tau^{[1]}\otimes \tau^{[2]} \in \T^{k_1+k_2}(\RR^n)$.
+$\DS \tau^{[1]}\otimes \tau^{[2]} \in \T^{k_1+k_2}(\RR^n)$.
 This follows from
 \begin{align*}
 &(\tau_{\VEC{v}}^{[1]}\otimes \tau_{\VEC{v}}^{[2]})\big( (\VEC{v},\VEC{x}_1),
@@ -1108,18 +1108,18 @@ This follows from
 \, \tau^{[2]} \big( \VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k\big)
 = (\tau_1 \otimes \tau_2) \big( \VEC{x}_1, \VEC{x}_2, \ldots, \VEC{x}_k\big)
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$.
+for all $\DS \VEC{x}_i \in \RR^n$.
 
 With our definition of tensors on $\TS_{\VEC{v}}V$, we may extend the
 wedge product of alternating tensors on $\TS_{\VEC{v}}V$.
 
 \begin{defn}
-Let $\displaystyle V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
+Let $\DS V \subset \RR^n$ be an open set and $\VEC{v} \in V$.
 The {\bfseries wedge product of two alternating tensors}\index{Tensor!Product}
-$\displaystyle \tau_{\VEC{v}}^{[1]} \in \Omega^{k_1}(\TS_{\VEC{v}}V)$ and
-$\displaystyle \tau_{\VEC{v}}^{[2]} \in \Omega^{k_2}(\TS_{\VEC{v}}V)$
+$\DS \tau_{\VEC{v}}^{[1]} \in \Omega^{k_1}(\TS_{\VEC{v}}V)$ and
+$\DS \tau_{\VEC{v}}^{[2]} \in \Omega^{k_2}(\TS_{\VEC{v}}V)$
 is the alternating tensor
-$\displaystyle \tau_{\VEC{v}}^{[1]}\wedge \tau_{\VEC{v}}^{[2]} \in
+$\DS \tau_{\VEC{v}}^{[1]}\wedge \tau_{\VEC{v}}^{[2]} \in
 \Omega^{k_1+k_2}(\TS_{\VEC{v}}V)$ defined by
 \begin{align*}
 &(\tau_{\VEC{v}}^{[1]}\wedge \tau_{\VEC{v}}^{[2]}) \big( (\VEC{v},\VEC{x}_1),
@@ -1129,16 +1129,16 @@ $\displaystyle \tau_{\VEC{v}}^{[1]}\wedge \tau_{\VEC{v}}^{[2]} \in
 \big((\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2), \ldots,
  (\VEC{v},\VEC{x}_{k_1+k_2}) \big)
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$.
+for all $\DS \VEC{x}_i \in \RR^n$.
 \end{defn}
 
 Suppose that
-$\displaystyle \tau_{\VEC{v}}^{[i]} \in \Omega^{k_i}(\TS_{\VEC{v}}V)$ is
-generated by $\displaystyle \tau^{[i]} \in \Omega^{k_i}(\RR^n)$ for
+$\DS \tau_{\VEC{v}}^{[i]} \in \Omega^{k_i}(\TS_{\VEC{v}}V)$ is
+generated by $\DS \tau^{[i]} \in \Omega^{k_i}(\RR^n)$ for
 $1\leq i \leq 2$.
-Then $\displaystyle \tau_{\VEC{v}}^{[1]} \wedge \tau_{\VEC{v}}^{[2]} \in
+Then $\DS \tau_{\VEC{v}}^{[1]} \wedge \tau_{\VEC{v}}^{[2]} \in
 \Omega^{k_1+k_2}(\TS_{\VEC{v}}V)$ is generated by
-$\displaystyle \tau^{[1]} \wedge \tau^{[2]} \in \Omega^{k_1+k_2}(\RR^n)$.
+$\DS \tau^{[1]} \wedge \tau^{[2]} \in \Omega^{k_1+k_2}(\RR^n)$.
 This follows from
 \begin{align*}
 & (\tau_{\VEC{v}}^{[1]} \wedge \tau_{\VEC{v}}^{[2]})\big( (\VEC{v},\VEC{x}_1),
@@ -1170,11 +1170,11 @@ This follows from
 = (\tau^{[1]} \wedge \tau^{[2]})\big(\VEC{x}_1, \VEC{x}_2,
 \ldots, \VEC{x}_{k_1+k_2}\big)
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$.
+for all $\DS \VEC{x}_i \in \RR^n$.
 
-Suppose that $\displaystyle V\subset \RR^n$ and
-$\displaystyle W \subset \RR^m$ are two open sets.
-If $f:V \to W$ is a function of class $\displaystyle C^1$ and
+Suppose that $\DS V\subset \RR^n$ and
+$\DS W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\DS C^1$ and
 $\VEC{v}\in V$, then $\diff f(\VEC{v})$ can be used to define the
 following linear map.
 \begin{align*}
@@ -1182,7 +1182,7 @@ f_\ast: \TS_{\VEC{v}} V &\to \TS_{f(\VEC{v})} W \\
 (\VEC{v},\VEC{x}) &\mapsto \big(f(\VEC{v}) , \diff f(\VEC{v}) \VEC{x}\big)
 \end{align*}
 for each $\VEC{v} \in V$.  This linear map induces a map
-$\displaystyle f^\ast: \T^k(\TS_{f(\VEC{v})} W) \to \T^k(\TS_{\VEC{v}} V)$
+$\DS f^\ast: \T^k(\TS_{f(\VEC{v})} W) \to \T^k(\TS_{\VEC{v}} V)$
 defined by
 \begin{align*}
 f^\ast(\tau_{f(\VEC{v})})\big((\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2), \ldots,
@@ -1190,31 +1190,31 @@ f^\ast(\tau_{f(\VEC{v})})\big((\VEC{v},\VEC{x}_1), (\VEC{v},\VEC{x}_2), \ldots,
 = \tau_{f(\VEC{v})}\big( f_\ast(\VEC{v},\VEC{x}_1), f_\ast(\VEC{v},\VEC{x}_2),
 \ldots, f_\ast(\VEC{v},\VEC{x}_k) \big) \ .
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$.
-We say that $\displaystyle f^\ast(\tau_{f(\VEC{v})})$ is the
+for all $\DS \VEC{x}_i \in \RR^n$.
+We say that $\DS f^\ast(\tau_{f(\VEC{v})})$ is the
 {\bfseries pull-back}\index{Pull-Back} of $\tau_{f(\VEC{v})}$ by $f$.
 
 \begin{prop}  \label{propAsttauR}
-Suppose that $\displaystyle V\subset \RR^n$ and
-$\displaystyle W \subset \RR^m$ are two open sets.
-If $f:V \to W$ is a function of class $\displaystyle C^1$ and
+Suppose that $\DS V\subset \RR^n$ and
+$\DS W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\DS C^1$ and
 $\VEC{v} \in V$, then
 \begin{enumerate}
-\item $\displaystyle f^\ast(\tau_{f(\VEC{v})}^{[1]} + \tau_{f(\VEC{v})}^{[2]})
+\item $\DS f^\ast(\tau_{f(\VEC{v})}^{[1]} + \tau_{f(\VEC{v})}^{[2]})
 = f^\ast(\tau_{f(\VEC{v})}^{[1]}) + f^\ast(\tau_{f(\VEC{v})}^{[2]})$ for all
-$\displaystyle \tau_{f(\VEC{v})}^{[i]} \in \T^k(\TS_{f(\VEC{v})}W)$.
-\item $\displaystyle f^\ast( a\, \tau_{f(\VEC{v})}) =
+$\DS \tau_{f(\VEC{v})}^{[i]} \in \T^k(\TS_{f(\VEC{v})}W)$.
+\item $\DS f^\ast( a\, \tau_{f(\VEC{v})}) =
 a f^\ast(\tau_{f(\VEC{v})})$
-for all $\displaystyle \tau_{f(\VEC{v})} \in \T^k(\TS_{f(\VEC{v})}W)$
+for all $\DS \tau_{f(\VEC{v})} \in \T^k(\TS_{f(\VEC{v})}W)$
 and $a \in \RR$.
-\item $\displaystyle f^\ast( \tau_{f(\VEC{v})}^{[1]} \otimes
+\item $\DS f^\ast( \tau_{f(\VEC{v})}^{[1]} \otimes
 \tau_{f(\VEC{v})}^{[2]})
 = f^\ast(\tau_{f(\VEC{v})}^{[1]}) \otimes f^\ast(\tau_{f(\VEC{v})}^{[2]})$ for
-all $\displaystyle \tau_{f(\VEC{v})}^{[i]} \in \T^{k_i}(\TS_{f(\VEC{v})} W)$.
-\item $\displaystyle f^\ast( \tau_{f(\VEC{v})}^{[1]}
+all $\DS \tau_{f(\VEC{v})}^{[i]} \in \T^{k_i}(\TS_{f(\VEC{v})} W)$.
+\item $\DS f^\ast( \tau_{f(\VEC{v})}^{[1]}
 \wedge \tau_{f(\VEC{v})}^{[2]})
 = f^\ast(\tau_{f(\VEC{v})}^{[1]}) \wedge f^\ast(\tau_{f(\VEC{v})}^{[2]})$ for
-all $\displaystyle \tau_{f(\VEC{v})}^{[i]} \in \Omega^{k_i}(\TS_{f(\VEC{v})} W)$.
+all $\DS \tau_{f(\VEC{v})}^{[i]} \in \Omega^{k_i}(\TS_{f(\VEC{v})} W)$.
 \end{enumerate}
 \end{prop}
 
@@ -1235,7 +1235,7 @@ f_\ast(\VEC{v},\VEC{x}_2) , \ldots, f_\ast(\VEC{v},\VEC{x}_k)\big) \right) \\
 \big( (\VEC{v},\VEC{x}_1) , (\VEC{v},\VEC{x}_2) , \ldots,
 (\VEC{v},\VEC{x}_k)\big) \right)
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$.
+for all $\DS \VEC{x}_i \in \RR^n$.
 
 \stage{4} For $\VEC{v} \in V$ fixed, we have
 \begin{align*}
@@ -1271,19 +1271,19 @@ f^\ast(\tau_{f(\VEC{v})}^{[2]}) \big( (\VEC{v},\VEC{x}_{\sigma(k_1+1)}),
 f^\ast(\tau_{f(\VEC{v})}^{[2]}) \big)\, \big( (\VEC{v},\VEC{x}_1),
 (\VEC{v},\VEC{x}_2), \ldots, (\VEC{v},\VEC{x}_{\sigma(k_1+k_2)})\big)
 \end{align*}
-for all $\displaystyle \VEC{x}_i \in \RR^n$.
+for all $\DS \VEC{x}_i \in \RR^n$.
 \end{proof}
 
 \section{Vector Fields}
 
 \begin{defn}
 A {\bfseries vector field}\index{Vector Field} on an open set
-$\displaystyle V \subset \RR^n$ is a map
+$\DS V \subset \RR^n$ is a map
 \begin{align*}
 F : V & \to \bigcup_{\VEC{v}\in V} \TS_{\VEC{v}} V \\
  \VEC{v} & \mapsto (\VEC{v}, f(\VEC{v}) ) \in \TS_{\VEC{v}} V
 \end{align*}
-where $\displaystyle f:V \to \RR^n$.
+where $\DS f:V \to \RR^n$.
 \end{defn}
 
 It is important to note that $F(\VEC{v}) \in \TS_{\VEC{v}} V$ for each
@@ -1294,18 +1294,18 @@ F(\VEC{v}) = \left(\VEC{v} , \sum_{i=1}^n f_i(\VEC{v}) \VEC{e}_i\right)
 \]
 for all $\VEC{v} \in V$, where $f_i:V \to \RR$ for $1 \leq i \leq n$.
 We say that the vector field $F$ is of class
-$\displaystyle C^k$ if each function $f_i$ is of class
-$\displaystyle C^k$.
+$\DS C^k$ if each function $f_i$ is of class
+$\DS C^k$.
 
 The sum of vector fields, the product of a vector field by a real
 valued function on $V$, the inner product of vector fields and the cross
 product of vector fields are defined by the respective operation in
 $\TS_{\VEC{v}} V$ for every $\VEC{v} \in V$.  For instance, if
-$\displaystyle F,G:V \to \bigcup_{\VEC{v} \in V} \TS_{\VEC{v}} V$ are two
+$\DS F,G:V \to \bigcup_{\VEC{v} \in V} \TS_{\VEC{v}} V$ are two
 vector fields, then $\ps{F}{G}$ is defined by
 $\ps{F}{G}(\VEC{v})
 = \ps{F(\VEC{v})}{G(\VEC{v})}_{\VEC{v}} = \tau(f(\VEC{v}),g(\VEC{v}))$
-for all $\VEC{v} \in V$, where $\displaystyle \tau \in \T^2(\RR^n)$ is
+for all $\VEC{v} \in V$, where $\DS \tau \in \T^2(\RR^n)$ is
 an inner product.
 
 We have introduced this notation for vector fields because it will extend
@@ -1314,7 +1314,7 @@ naturally to vector fields on manifolds as we will see later.
 \section{Differential Forms} \label{stokesDefDiffF}
 
 \begin{defn}
-Let $V$ be an open subset of $\displaystyle \RR^n$.  A
+Let $V$ be an open subset of $\DS \RR^n$.  A
 {\bfseries differential $\mathbf{k}$-form}\index{Differential Form!$k$-Form}
 on $V$ is a map
 \begin{align*}
@@ -1323,23 +1323,23 @@ on $V$ is a map
 \end{align*}
 \end{defn}
 
-It is important to note that $\displaystyle \omega(\VEC{v}) \in
+It is important to note that $\DS \omega(\VEC{v}) \in
 \Omega^k(\TS_{\VEC{v}} V)$ for each $\VEC{v} \in V$.
 
-Let $\displaystyle \left\{\phi_i\right\}_{i=1}^n \subset (\RR^n)^\ast$
+Let $\DS \left\{\phi_i\right\}_{i=1}^n \subset (\RR^n)^\ast$
 be the dual basis associated to a basis
-$\displaystyle \left\{\VEC{u}_j\right\}_{j=1}^n$ of $\displaystyle \RR^n$.
+$\DS \left\{\VEC{u}_j\right\}_{j=1}^n$ of $\DS \RR^n$.
 For each $i$, we define a differential $1$-form $\tilde{\phi}_i$ on
 $V$ by
-$\displaystyle \tilde{\phi}_i(\VEC{v})\big( (\VEC{v}, \VEC{x}) \big)
+$\DS \tilde{\phi}_i(\VEC{v})\big( (\VEC{v}, \VEC{x}) \big)
 = \phi_i(\VEC{x})$ for each $\VEC{v} \in V$ and all
-$\displaystyle \VEC{x} \in \RR^n$.
+$\DS \VEC{x} \in \RR^n$.
 For each $\VEC{v} \in V$, the set
-$\displaystyle \left\{\tilde{\phi}_i(\VEC{v})\right\}_{i=1}^n
+$\DS \left\{\tilde{\phi}_i(\VEC{v})\right\}_{i=1}^n
 \subset (\TS_{\VEC{v}}V)^\ast = \Omega^1(\TS_{\VEC{v}}V)$ is the dual basis
 associated to the basis
-$\displaystyle \left\{ (\VEC{v}, \VEC{u}_j) \right\}_{j=1}^n$ of
-$\displaystyle \TS_{\VEC{v}} V$ because
+$\DS \left\{ (\VEC{v}, \VEC{u}_j) \right\}_{j=1}^n$ of
+$\DS \TS_{\VEC{v}} V$ because
 $\tilde{\phi}_i(\VEC{v})\big( (\VEC{v}, \VEC{u}_j) \big)
 = \phi_i(\VEC{u}_j) = \delta_{i,j}$
 for $1 \leq i,j \leq n$.
@@ -1350,10 +1350,10 @@ $k$-form $\omega$ on $V$ can be expressed as
 \tilde{\phi}_{i_1} \wedge \tilde{\phi}_{i_2} \wedge \ldots \wedge
 \tilde{\phi}_{i_k} \ ,
 \]
-where $\displaystyle \omega_{i_1,i_2,\ldots,i_k}:V\to \RR$ for all indices.
-We say that the differential $k$-form is of class $\displaystyle C^m$
-if each $\displaystyle \omega_{i_1,i_2,\ldots,i_k}$ is of class
-$\displaystyle C^m$.
+where $\DS \omega_{i_1,i_2,\ldots,i_k}:V\to \RR$ for all indices.
+We say that the differential $k$-form is of class $\DS C^m$
+if each $\DS \omega_{i_1,i_2,\ldots,i_k}$ is of class
+$\DS C^m$.
 
 The sum of differential $k$-forms, the product of a differential
 $k$-form by a real valued function on $V$ and the wedge product of a
@@ -1367,33 +1367,33 @@ $(k_1+k_2)$-form on $V$ defined by $(\omega_1 \wedge \omega_2)(\VEC{v}) =
 for all $\VEC{v} \in V$.
 
 If $f:V \to \RR$ is differentiable, then
-$\displaystyle \diff f (\VEC{v}) \in (\RR^n)^\ast$.
+$\DS \diff f (\VEC{v}) \in (\RR^n)^\ast$.
 As we have done with $\phi_i$ above, we may define the following
 differential $1$-form on $V$.
 
 \begin{defn} \label{defnd01}
-Given $f:V\to \RR$ is of class $\displaystyle C^1$, the differential $1$-form
-$\displaystyle \df{f} :V \to \bigcup_{\VEC{v}\in V}
+Given $f:V\to \RR$ is of class $\DS C^1$, the differential $1$-form
+$\DS \df{f} :V \to \bigcup_{\VEC{v}\in V}
 \Omega^1\left( \TS_{\VEC{v}} V \right)$ is defined by
 $\df{f}(\VEC{v}) \, \big((\VEC{v},\VEC{x})\big)
 = \diff f (\VEC{v}) \VEC{x}$
-for each $\VEC{v}\in V$ and all $\displaystyle \VEC{x} \in \RR^n$.
+for each $\VEC{v}\in V$ and all $\DS \VEC{x} \in \RR^n$.
 \end{defn}
 
-If $\displaystyle \pi_i:\RR^n \to \RR$ is the projection defined by
-$\pi_i(\VEC{x}) = x_i$ for all $\displaystyle \VEC{x} \in \RR^n$, then
+If $\DS \pi_i:\RR^n \to \RR$ is the projection defined by
+$\pi_i(\VEC{x}) = x_i$ for all $\DS \VEC{x} \in \RR^n$, then
 the differential $1$-form $\df{\pi_i}$ is defined by
-$\displaystyle \df{\pi_i}(\VEC{v}) \big( (\VEC{v},\VEC{x}) \big) =
+$\DS \df{\pi_i}(\VEC{v}) \big( (\VEC{v},\VEC{x}) \big) =
 \diff \pi_i (\VEC{v}) \VEC{x} = \pi_i(\VEC{x}) = x_i$
-for each $\VEC{v} \in V$ and all $\displaystyle \VEC{x} \in \RR^n$.
-Thus $\displaystyle \df{\pi_i}(\VEC{v}) \in \Omega^1(\TS_\VEC{v} V)$ 
-is generated by $\displaystyle \pi_i \in \Omega^1(\RR^n)$ for all
+for each $\VEC{v} \in V$ and all $\DS \VEC{x} \in \RR^n$.
+Thus $\DS \df{\pi_i}(\VEC{v}) \in \Omega^1(\TS_\VEC{v} V)$ 
+is generated by $\DS \pi_i \in \Omega^1(\RR^n)$ for all
 $\VEC{v} \in V$.
 
 For each $\VEC{v} \in V$, the dual basis of the canonical basis
-$\displaystyle \E = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n \subset
+$\DS \E = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n \subset
 \TS_{\VEC{v}} V$ is
-$\displaystyle \left\{ \df{\pi_i}(\VEC{v}) \right\}_{i=1}^n \subset
+$\DS \left\{ \df{\pi_i}(\VEC{v}) \right\}_{i=1}^n \subset
 (\TS_{\VEC{v}}V)^\ast$.
 By tradition, the differential $1$-form $\df{\pi_i}$ is denoted
 $\df{x_i}$.  Hence, every differential $k$-form $\omega$ on $V$ can be
@@ -1402,7 +1402,7 @@ expressed as
 \omega = \sum_{i_1< i_2< \ldots< i_k} \omega_{i_1,i_2,\ldots,i_k}
 \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \ ,
 \]
-where $\displaystyle \omega_{i_1,i_2,\ldots,i_k}:V\to \RR$ for all indices.
+where $\DS \omega_{i_1,i_2,\ldots,i_k}:V\to \RR$ for all indices.
 
 It is important to note that
 \begin{equation} \label{dxPropr1}
@@ -1431,13 +1431,13 @@ Proposition~\ref{propTssT}.  For instance,
 \wedge \df{x_{i_k}} \big)(\VEC{v}) \, \big( (\VEC{v},\VEC{w}_1), 
 (\VEC{v},\VEC{w}_2), \ldots , (\VEC{v},\VEC{w}_k) \big)
 \end{align*}
-for all $\VEC{v}\in V$ and $\displaystyle \VEC{w}_i \in \RR^n$,
+for all $\VEC{v}\in V$ and $\DS \VEC{w}_i \in \RR^n$,
 where we have used Proposition~\ref{propTssT} to obtain the second
 equality.
 
 \begin{theorem}  \label{thmdefn01}
-Suppose that $\displaystyle V\subset \RR^n$ is an open subset and
-$f:V \to \RR$ is of class $\displaystyle C^1$, then
+Suppose that $\DS V\subset \RR^n$ is an open subset and
+$f:V \to \RR$ is of class $\DS C^1$, then
 \[
 \df{f} = \sum_{j=1}^n \pdydx{f}{x_j} \df{x_j} \ .
 \]
@@ -1452,33 +1452,33 @@ By definition, for every $\VEC{v} \in V$,
 = \sum_{j=1}^n \pdydx{f}{x_j}(\VEC{v})
 \df{x_j}(\VEC{v})\big( (\VEC{v}, \VEC{x}) \big)
 \]
-for all $\displaystyle \VEC{x} \in \RR^n$.
+for all $\DS \VEC{x} \in \RR^n$.
 \end{proof}
 
-Suppose that $\displaystyle V\subset \RR^n$ and
-$\displaystyle W \subset \RR^m$ are two open sets.
-If $f:V \to W$ is a function of class $\displaystyle C^1$,
-then we can extend $\displaystyle f^\ast$ to a map from
+Suppose that $\DS V\subset \RR^n$ and
+$\DS W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\DS C^1$,
+then we can extend $\DS f^\ast$ to a map from
 differential $k$-forms on $W$ to differential $k$-forms on $V$ by
-$\displaystyle f^\ast(\omega)(\VEC{v}) = f^\ast(\omega(f(\VEC{v})))$ for
+$\DS f^\ast(\omega)(\VEC{v}) = f^\ast(\omega(f(\VEC{v})))$ for
 every differential $k$-forms $\omega$ on $W$ and $\VEC{v} \in V$.
-We say that $\displaystyle f^\ast(\omega)$ is the
+We say that $\DS f^\ast(\omega)$ is the
 {\bfseries pull-back}\index{Pull-Back} of the differential
 $k$-form $\omega$ by $f$.
 
 \begin{prop}  \label{propAstoR}
-Suppose that $\displaystyle V\subset \RR^n$ and
-$\displaystyle W \subset \RR^m$ are two open sets.
-If $f:V \to W$ is a function of class $\displaystyle C^1$, then
+Suppose that $\DS V\subset \RR^n$ and
+$\DS W \subset \RR^m$ are two open sets.
+If $f:V \to W$ is a function of class $\DS C^1$, then
 \begin{enumerate}
-\item $\displaystyle f^\ast(\df{x_i}) = \sum_{j=1}^n \pdydx{f_i}{x_j} \df{x_j}$
+\item $\DS f^\ast(\df{x_i}) = \sum_{j=1}^n \pdydx{f_i}{x_j} \df{x_j}$
 for $1 \leq i \leq m$.
-\item $\displaystyle f^\ast(\omega_1 + \omega_2) = f^\ast(\omega_1) +
+\item $\DS f^\ast(\omega_1 + \omega_2) = f^\ast(\omega_1) +
 f^\ast(\omega_2)$ for all differential $k$-forms $\omega_i$ on $W$.
-\item $\displaystyle f^\ast( g\, \omega) = ( g\circ f)f^\ast(\omega)$
+\item $\DS f^\ast( g\, \omega) = ( g\circ f)f^\ast(\omega)$
 for all differential $k$-form $\omega$ on $W$ and functions
-$g:W\to \RR$ of class $\displaystyle C^1$.
-\item $\displaystyle f^\ast( \omega_1 \wedge \omega_2) = f^\ast(\omega_1)
+$g:W\to \RR$ of class $\DS C^1$.
+\item $\DS f^\ast( \omega_1 \wedge \omega_2) = f^\ast(\omega_1)
 \wedge f^\ast(\omega_2)$ for all differential $k_1$-forms $\omega_1$
 and differential $k_2$-form $\omega_2$ on $W$
 \end{enumerate}
@@ -1498,7 +1498,7 @@ and differential $k_2$-form $\omega_2$ on $W$
 = \sum_{j=1}^n \pdydx{f_i}{x_j}(\VEC{v})
 \df{x_j}(\VEC{v})\big( (\VEC{v},\VEC{x}) \big)
 \end{align*}
-for all $\displaystyle \VEC{x}\in \RR^n$.
+for all $\DS \VEC{x}\in \RR^n$.
 
 \stage{2} This proof is left to the reader.
 
@@ -1526,9 +1526,9 @@ Proposition~\ref{propAsttauR} for the third equality.
 \end{proof}
 
 \begin{theorem} \label{stokesCofV}
-Suppose that $V$ and $W$ are two open subsets of $\displaystyle \RR^n$.
+Suppose that $V$ and $W$ are two open subsets of $\DS \RR^n$.
 Let $h:W\to \RR$ and $f:V \to W$ be functions of class
-$\displaystyle C^1$.  Then
+$\DS C^1$.  Then
 \[
 f^\ast\big( h \df{x_1} \wedge \df{x_2} \wedge \ldots \wedge \df{x_n} \big)
 = (h \circ f) (\det \diff f)
@@ -1546,20 +1546,20 @@ f^\ast( h \df{x_1} \wedge \df{x_2} \wedge \ldots \wedge \df{x_n} )
 
 Let $Q = \diff f(\VEC{v})$; namely, the components $q_{i,j}$ of $Q$ for
 $1 \leq i, j \leq n$ are given by
-$\displaystyle q_{i,j} = \dydx{f_i}{x_j}(\VEC{v})$.
+$\DS q_{i,j} = \dydx{f_i}{x_j}(\VEC{v})$.
 Moreover, let
-$\displaystyle \E_{\VEC{v}} = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n$
+$\DS \E_{\VEC{v}} = \left\{ (\VEC{v}, \VEC{e}_i) \right\}_{i=1}^n$
 be the canonical basis of $\TS_{\VEC{v}}V$.
-Recall that $\displaystyle \df{x_i}(\VEC{v}) = \df{\pi_i}(\VEC{v}) \in
+Recall that $\DS \df{x_i}(\VEC{v}) = \df{\pi_i}(\VEC{v}) \in
 \Omega^1(\TS_{\VEC{v}}V)$ for $1\leq i \leq n$
-is generated by the projection $\displaystyle \pi_i:\RR^n \to \RR$ defined by
-$\pi_i(\VEC{x}) = x_i$ for all $\displaystyle \VEC{x} \in \RR^n$.
+is generated by the projection $\DS \pi_i:\RR^n \to \RR$ defined by
+$\pi_i(\VEC{x}) = x_i$ for all $\DS \VEC{x} \in \RR^n$.
 
-Given $\displaystyle \VEC{w}_k \in \RR^n$ for $1\leq k \leq n$, we may write
-$\displaystyle \VEC{w}_k = \sum_{j=1}^n a_{j,k} \VEC{e}_j$
+Given $\DS \VEC{w}_k \in \RR^n$ for $1\leq k \leq n$, we may write
+$\DS \VEC{w}_k = \sum_{j=1}^n a_{j,k} \VEC{e}_j$
 for $1 \leq k \leq n$ and some $a_{j,k} \in \RR$ where
-$\displaystyle \left\{ \VEC{e}_i \right\}_{i=1}^n$ is the canonical
-basis on $\displaystyle \RR^n$.  Let $A$ be the matrix with entries $a_{j,k}$.
+$\DS \left\{ \VEC{e}_i \right\}_{i=1}^n$ is the canonical
+basis on $\DS \RR^n$.  Let $A$ be the matrix with entries $a_{j,k}$.
 
 We get from Theorem~\ref{stokesTBE} that
 \begin{align*}
@@ -1602,7 +1602,7 @@ q_{i,j}\right) \VEC{e}_i, \sum_{i=1}^n\left(\sum_{j=1}^n a_{j,2} q_{i,j}\right)
 \, \big( (\VEC{v},\VEC{w}_1), (\VEC{v},\VEC{w}_2), \ldots ,
 (\VEC{v},\VEC{w}_n)  \big)
 \end{align*}
-for all $\VEC{v} \in V$ and $\displaystyle \VEC{w}_i \in \RR^n$.
+for all $\VEC{v} \in V$ and $\DS \VEC{w}_i \in \RR^n$.
 Thus
 \[
 f^\ast( \df{x_1} \wedge \df{x_2} \wedge \ldots
@@ -1622,8 +1622,8 @@ Suppose that
 \omega = \sum_{1\leq i_1<i_2< \ldots< i_k\leq n} \omega_{i_1,i_2,\ldots,i_k}
 \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}}
 \]
-is a differential $k$-form of class $\displaystyle C^1$ on an open set
-$\displaystyle V \subset \RR^n$.  We define a
+is a differential $k$-form of class $\DS C^1$ on an open set
+$\DS V \subset \RR^n$.  We define a
 differential $k+1$-form $\df{\omega}$ on $V$ by
 \begin{align*}
 \df{\omega} &= \sum_{1\leq i_1 < i_2 < \ldots < i_k\leq n}
@@ -1636,22 +1636,22 @@ differential $k+1$-form $\df{\omega}$ on $V$ by
 \end{defn}
 
 \begin{theorem}\label{stokesDF}
-Suppose that $\displaystyle V\subset \RR^n$ and
-$\displaystyle W \subset \RR^m$ are two open subsets.
+Suppose that $\DS V\subset \RR^n$ and
+$\DS W \subset \RR^m$ are two open subsets.
 \begin{enumerate}
-\item $\displaystyle \df{(\omega + \mu )} = \df{\omega} + \df{\mu}$
+\item $\DS \df{(\omega + \mu )} = \df{\omega} + \df{\mu}$
 for all differential $k$-forms $\omega$ and $\mu$ of class
-$\displaystyle C^1$ on $V$.
-\item $\displaystyle \df{(\omega \wedge \mu)} =
+$\DS C^1$ on $V$.
+\item $\DS \df{(\omega \wedge \mu)} =
 \df{\omega}\wedge \mu + (-1)^p \omega \wedge \df{\mu}$
 for all differential $p$-forms $\omega$ and differential $q$-form
-$\mu$ of class $\displaystyle C^1$ on $V$.
+$\mu$ of class $\DS C^1$ on $V$.
 \item $\df[2]{\omega} \equiv \df{(\df{\omega})} = 0$
 for all differential $k$-forms $\omega$ of class
-$\displaystyle C^2$ on $V$.
-\item $\displaystyle f^\ast (\df{\omega}) = \df{f^\ast(\omega)}$ for all
-differential $k$-forms $\omega$ of class $\displaystyle C^1$ on $W$ and all
-functions $f:V\to W$ of class $\displaystyle C^1$.
+$\DS C^2$ on $V$.
+\item $\DS f^\ast (\df{\omega}) = \df{f^\ast(\omega)}$ for all
+differential $k$-forms $\omega$ of class $\DS C^1$ on $W$ and all
+functions $f:V\to W$ of class $\DS C^1$.
 \end{enumerate}
 \end{theorem}
 
@@ -1659,10 +1659,10 @@ functions $f:V\to W$ of class $\displaystyle C^1$.
 \stage{1} This proof is left to the reader.
 
 \stage{2} We have that
-$\displaystyle \omega = \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+$\DS \omega = \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
 \omega_{i_1,i_2,\ldots,i_p} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
 \wedge \df{x_{i_p}}$ and \\
-$\displaystyle \mu = \sum_{1\leq j_1 <j_2 < \ldots < j_q \leq n}
+$\DS \mu = \sum_{1\leq j_1 <j_2 < \ldots < j_q \leq n}
 \mu_{j_1,j_2,\ldots,j_q} \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
 \wedge \df{x_{j_q}}$.  Hence
 \begin{align*}
@@ -1719,8 +1719,8 @@ Using (1), we get
 \wedge \df{x_{j_q}}\right) \\
 &\quad = \df{\omega} \wedge \mu + (-1)^p \omega \wedge \df{\mu} \ ,
 \end{align*}
-where the factor of $\displaystyle (-1)^p$ comes from
-$\displaystyle \df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+where the factor of $\DS (-1)^p$ comes from
+$\DS \df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
 \wedge \df{x_{i_p}} \wedge \df{x_{j_1}} \wedge \df{x_{j_2}} \wedge \ldots
 \wedge \df{x_{j_q}} = (-1)^p
 \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
@@ -1729,7 +1729,7 @@ $\displaystyle \df{x_m} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
 according to (\ref{dxPropr2}).
 
 \stage{3} If
-$\displaystyle \omega = \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
+$\DS \omega = \sum_{1\leq i_1 <i_2 < \ldots < i_p \leq n}
 \omega_{i_1,i_2,\ldots,i_k} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
 \wedge \df{x_{i_k}}$, then
 \[
@@ -1752,9 +1752,9 @@ and
   \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} = 0
 \end{align*}
 because
-$\displaystyle \pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_j}{x_m}{2}{}{}
+$\DS \pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_j}{x_m}{2}{}{}
 = \pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_m}{x_j}{2}{}{}$ for all $0
-\leq j, m \leq n$ since $\displaystyle \omega_{i_1,i_2,\ldots,i_k} \in C^2(V)$
+\leq j, m \leq n$ since $\DS \omega_{i_1,i_2,\ldots,i_k} \in C^2(V)$
 implies that
 \[
 \pdydxnm{\omega_{i_1,i_2,\ldots,i_k}}{x_j}{x_m}{2}{}{}
@@ -1768,10 +1768,10 @@ particular, both sides are null when $m=j$ according to (\ref{dxPropr1}).
 \stage{4} We prove this result using a proof by induction on the order
 of the differential form.  Using the chain rule, it is easy to verify
 that the result is true if $\omega$ is a $0$-form; namely, if
-$\omega:V \to \RR$ is a function of class $\displaystyle C^1$.
+$\omega:V \to \RR$ is a function of class $\DS C^1$.
 Suppose that the result is true for all differential $k$-form.  If
 $\omega$ is a differential $(k+1)$-from, then we can write
-$\displaystyle \omega = \sum_{j=1}^n \mu_j \wedge \df{x_j}$ for some
+$\DS \omega = \sum_{j=1}^n \mu_j \wedge \df{x_j}$ for some
 $k$-forms $\mu_j$.  From (1), (2) and (3) above, we get
 \begin{align*}
 \df{\omega} &= \sum_{j=1}^n\df{(\mu_j \wedge \df{x_j})}
@@ -1780,11 +1780,11 @@ $k$-forms $\mu_j$.  From (1), (2) and (3) above, we get
 = \sum_{j=1}^n\left(\df{\mu_j} \wedge \df{x_j}\right) \ .
 \end{align*}
 It follows from (2) and (4) of Proposition~\ref{propAstoR} that
-$\displaystyle f^\ast \df{\omega}
+$\DS f^\ast \df{\omega}
 = \sum_{j=1}^n\left(f^\ast \df{\mu_j} \wedge f^\ast \df{x_j}\right)$.
 Recall that $\df{x_j} = \df{\pi_j}$ where $\pi_j:\RR^n \to \RR$ is a
 projection.  Since $\pi_j$ is a $0$-form, we have that
-$\displaystyle \df{ (f^\ast \df{x_j})} = \df{ (f^\ast \df{\pi_j})}
+$\DS \df{ (f^\ast \df{x_j})} = \df{ (f^\ast \df{\pi_j})}
 = \df{(\df{(f^\ast(\pi_j))})} = \df[2]{(\pi_j\circ f)}
 = \df[2]{ f_j} = 0$ for all $j$ because of (3).
 Hence
@@ -1810,15 +1810,15 @@ equality.  This complete the proof by induction.
 \end{proof}
 
 From now on, we will assume that each differential form that we consider is
-of class $\displaystyle C^j$ for $j$ large enough to meet the
+of class $\DS C^j$ for $j$ large enough to meet the
 requirements of the statement about this differential form.
 
 \begin{defn}
 A differential $k$-form $\omega$ on the open set
-$\displaystyle V \subset \RR^n$ is
+$\DS V \subset \RR^n$ is
 {\bfseries closed}\index{Differential Form!Closed}
 if $\df{\omega}=0$ on $V$.  A differential $k$-form $\omega$ on the open set
-$\displaystyle V \subset \RR^n$ is
+$\DS V \subset \RR^n$ is
 {\bfseries exact}\index{Differential Form!Exact}
 if there exists a differential $(k-1)$-form $\mu$ on $V$ such that
 $\df{\mu} = \omega$.
@@ -1837,7 +1837,7 @@ In general, the answer is negative.  Consider the differential $1$-form
 \[
 \omega = \frac{-x_2}{x_1^2+x_2^2} \df{x_1} + \frac{x_1}{x_1^2+x_2^2} \df{x_2}
 \]
-defined on $\displaystyle V= \RR^2 \setminus \{ \VEC{0}\}$ (see
+defined on $\DS V= \RR^2 \setminus \{ \VEC{0}\}$ (see
 warning below).
 
 We have
@@ -1854,7 +1854,7 @@ We have
 \end{align*}
 However, there does not exist any function $\mu$ on $V$ such that
 $\df{\mu} = \omega$.  To prove this statement, let
-$\displaystyle W = \RR^2\setminus \{(x_1,0) : x_1 \geq 0 \}$ and
+$\DS W = \RR^2\setminus \{(x_1,0) : x_1 \geq 0 \}$ and
 consider the function $\theta: W \to \RR$ defined by
 \[
 \theta(\VEC{x}) =
@@ -1870,9 +1870,9 @@ consider the function $\theta: W \to \RR$ defined by
 The image of $\theta$ is $]0,2\pi[$.  We have that $\df{\theta}=\omega$ on
 $W$.  If there was a function $\mu:V\to \RR$ such that
 $\df{\mu} = \omega$ on $V$, then we would have that
-$\displaystyle \pdydx{\mu}{x_1} = \pdydx{\theta}{x_1} =
+$\DS \pdydx{\mu}{x_1} = \pdydx{\theta}{x_1} =
 \frac{-x_2}{x_1^2+x_2^2}$ and
-$\displaystyle \pdydx{\mu}{x_2} = \pdydx{\theta}{x_2} =
+$\DS \pdydx{\mu}{x_2} = \pdydx{\theta}{x_2} =
 \frac{x_1}{x_1^2+x_2^2}$ on $W$.  Thus $\mu = \theta + C$ on $W$ for some
 constant $C$.  However, at $\VEC{x}_0 = (x_1,0)$ with $x_1>0$, we have
 that $\mu(\VEC{x}) = \theta(\VEC{x}) + C \to C$ as $\VEC{x}\to \VEC{x}_0$
@@ -1891,10 +1891,10 @@ The expression             \label{rmkWarning1}
 \omega = \frac{-x_2}{x_1^2+x_2^2} \df{x_1} + \frac{x_1}{x_1^2+x_2^2} \df{x_2}
 \]
 is an abbreviation for $\omega = f_1 \df{x_1} + f_2 \df{x_2}$ where
-$\displaystyle f_1: \RR^2 \setminus \{\VEC{0}\} \to \RR$ is the function defined
-by $\displaystyle f_1(\VEC{x}) = -x_2/(x_1^2 + x_2^2)$ and
-$\displaystyle f_2: \RR^2 \setminus \{\VEC{0}\} \to \RR$ is the function defined
-by $\displaystyle f_2(\VEC{x}) = x_1/(x_1^2 + x_2^2)$.  To introduce
+$\DS f_1: \RR^2 \setminus \{\VEC{0}\} \to \RR$ is the function defined
+by $\DS f_1(\VEC{x}) = -x_2/(x_1^2 + x_2^2)$ and
+$\DS f_2: \RR^2 \setminus \{\VEC{0}\} \to \RR$ is the function defined
+by $\DS f_2(\VEC{x}) = x_1/(x_1^2 + x_2^2)$.  To introduce
 the variable $\VEC{x}$ and be rigorously correct, we should have
 written instead
 \[
@@ -1905,12 +1905,12 @@ but that would have been a uglier expression.
 We will regularly use this type of abbreviation from now on.
 \end{rmk}
 
-Suppose that $\displaystyle \omega = \sum_{i=1}^n \omega_i \df{x_i}$ is a
-closed differential $1$-form on $\displaystyle \RR^n$.  Let
+Suppose that $\DS \omega = \sum_{i=1}^n \omega_i \df{x_i}$ is a
+closed differential $1$-form on $\DS \RR^n$.  Let
 \begin{equation}  \label{introPLEq0}
 \mu(\VEC{x}) = \sum_{j=1}^n \int_0^1 \omega_j(t \VEC{x}) x_j \dx{t}
 \end{equation}
-for $1\leq j \leq n$ and $\displaystyle \VEC{x} \in \RR^n$.
+for $1\leq j \leq n$ and $\DS \VEC{x} \in \RR^n$.
 Then
 \begin{equation} \label{introPLEq1}
 \pdydx{\mu}{x_i}(\VEC{x}) =
@@ -1920,13 +1920,13 @@ Then
 + \omega_i(t\VEC{x}) \right) \dx{t} \ .
 \end{equation}
 Since $\omega$ is a closed differential form, we get that
-$\displaystyle
+$\DS
 \df{\omega} = \sum_{i=1}^n \sum_{j=1}^n \pdydx{\omega_i}{x_j} \df{x_j}
 \wedge \df{x_i} = 0$.
-Therefore, with $\displaystyle (\VEC{x},\VEC{y}) \in \TS_{\VEC{x}} \RR^n$ 
+Therefore, with $\DS (\VEC{x},\VEC{y}) \in \TS_{\VEC{x}} \RR^n$ 
 where $y_i = 0$ for $i\neq p,q$ and $y_i = 1$ for $i=p,q$, we get from
 $\df{\omega}(\VEC{x})(\VEC{x},\VEC{y}) = 0$ that
-$\displaystyle \pdydx{\omega_p}{x_q}(\VEC{x}) 
+$\DS \pdydx{\omega_p}{x_q}(\VEC{x}) 
 = \pdydx{\omega_q}{x_p}(\VEC{x})$ for $1 \leq p < q \leq n$.
 Thus (\ref{introPLEq1}) yields
 \begin{align*}
@@ -1939,16 +1939,16 @@ Thus (\ref{introPLEq1}) yields
 = \int_0^1 \dfdx{\left( t \omega_i(t\VEC{x}) \right)}{t} \dx{t}
 = \omega_i(\VEC{x})
 \end{align*}
-for $\displaystyle \VEC{x} \in \RR^n$.  Hence
+for $\DS \VEC{x} \in \RR^n$.  Hence
 $\df{\mu} = \omega$.  This method to find a differential $0$-form
 $\mu$ such that $\df{\mu} = \omega$ works because the line
-from $\VEC{0}$ to any $\displaystyle \VEC{x} \in \RR^n$ is
+from $\VEC{0}$ to any $\DS \VEC{x} \in \RR^n$ is
 included in the domain of $\omega$.  This is required in the
 definition of $\mu$ in (\ref{introPLEq0}).  To expend this method, we
 consider domains with a similar property.
 
 \begin{defn} \label{defnStarShaped}
-A set $\displaystyle V \subset \RR^n$ is
+A set $\DS V \subset \RR^n$ is
 {\bfseries star-shaped}\index{Star-Shaped} if there exists a point
 $\VEC{y} \in V$ such that the line segment
 $\{ \VEC{y} + t(\VEC{x}-\VEC{y}) : 0\leq 0 \leq 1\} \subset V$ for all
@@ -1962,7 +1962,7 @@ $\df{\mu} = \omega$.  A general form of this integral formula is used
 to prove the following theorem.
 
 \begin{theorem}[Poincaré Lemma]\label{closedexact}
-If $\displaystyle V\subset \RR^n$ is an open set which is star-shaped
+If $\DS V\subset \RR^n$ is an open set which is star-shaped
 and $\omega$ is a closed differential $k$-form on $V$ with $k>0$, then
 $\omega$ is exact on $V$.
 \end{theorem}
@@ -1995,7 +1995,7 @@ Suppose that
 \tau = \sum_{1\leq i_i < i_2 < \ldots < i_k\leq n} \tau_{i_1,i_2,\ldots,i_k}
 \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots \wedge \df{x_{i_k}} \ .
 \]
-Let $\displaystyle g_{i_1,i_2,\ldots,i_k,j}: V \to \RR$ for
+Let $\DS g_{i_1,i_2,\ldots,i_k,j}: V \to \RR$ for
 $1\leq i_1<i_2<\ldots<i_k\leq n$ and $1\leq j \leq k$
 be the functions defined by
 \[
@@ -2062,7 +2062,7 @@ x_{i_j} \sum_{m=1}^n \bigg( \left( \int_0^1 t^k
 \ , \label{stokesEq1}
 \end{align}
 where we have used
-$\displaystyle \df{x_{i_j}} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
+$\DS \df{x_{i_j}} \wedge \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
 \wedge \widehat{\df{x_{i_j}}} \wedge \ldots \wedge \df{x_{i_k}}
 = (-1)^{j-1} \df{x_{i_1}} \wedge \df{x_{i_2}} \wedge \ldots
 \wedge \df{x_{i_j}} \wedge \ldots \wedge \df{x_{i_k}}$ to get the last
@@ -2119,7 +2119,7 @@ differentiable map $H:V \times [0,1] \to V$ such that
 $H(\VEC{x},1) = \VEC{x}$ and $H(\VEC{x},0) = \VEC{y}$ for all
 $\VEC{x} \in V$.  A star-shaped set $V$ as given in
 Definition~\ref{defnStarShaped} is contractible to the point $\VEC{y} \in V$.
-It suffices to use the map $\displaystyle H:V \times [0,1] \to V$
+It suffices to use the map $\DS H:V \times [0,1] \to V$
 defined by $H(\VEC{x},t) = \VEC{y} + t (\VEC{x} - \VEC{y})$
 for $\VEC{x} \in V$ and $t \in [0,1]$.
 
@@ -2134,31 +2134,31 @@ have to introduce the domains of integration that will be considered.
 
 \begin{defn}
 A {\bfseries singular $\mathbf{m}$-cube}\index{Singular $m$-Cube}
-in $\displaystyle \RR^n$ is a continuous function
-$\displaystyle \sigma :I_m \to \RR^n$, where $I_m$ is the unit cube
-$\displaystyle I_m = \{(x_1,x_2,\ldots,x_m): 0 \leq x_j\leq 1
+in $\DS \RR^n$ is a continuous function
+$\DS \sigma :I_m \to \RR^n$, where $I_m$ is the unit cube
+$\DS I_m = \{(x_1,x_2,\ldots,x_m): 0 \leq x_j\leq 1
 \text{ for } 1\leq j \leq m \}\subset \RR^m$.  For $m=0$, we define
-$\displaystyle \RR^m$ and $I_m$ as $\{0\}$.
+$\DS \RR^m$ and $I_m$ as $\{0\}$.
 \end{defn}
 
 A singular $0$-cube is simply a map
-$\displaystyle \sigma: \{0\} \to \RR^n$.
+$\DS \sigma: \{0\} \to \RR^n$.
 The image of a singular $0$-cube $\sigma$ is a point in
-$\displaystyle \RR^n$.  A
-singular $1$-cube is a map $\displaystyle \sigma: [0,1] \to \RR^n$;
-namely, a {\bfseries curve}\index{Curve} in $\displaystyle \RR^n$.
+$\DS \RR^n$.  A
+singular $1$-cube is a map $\DS \sigma: [0,1] \to \RR^n$;
+namely, a {\bfseries curve}\index{Curve} in $\DS \RR^n$.
 
 \begin{defn}
 The {\bfseries standard $\mathbf{m}$-cube}\index{Standard $m$-Cube}
-is the function $\displaystyle \stc_m : I_m \to \RR^m$ defined by
+is the function $\DS \stc_m : I_m \to \RR^m$ defined by
 $\stc_m(\VEC{x}) = \VEC{x}$ for all $\VEC{x} \in I_m$.
 \end{defn}
 
 \begin{defn}
-An {\bfseries $\mathbf{m}$-chain}\index{$m$-Chain} in $\displaystyle \RR^n$
+An {\bfseries $\mathbf{m}$-chain}\index{$m$-Chain} in $\DS \RR^n$
 is an expression of the form
-$\displaystyle \sum_{j=1}^J a_j \sigma_j$, where $a_j \in \ZZ$ and
-$\sigma_j$ is a singular $m$-cube in $\displaystyle \RR^n$ for
+$\DS \sum_{j=1}^J a_j \sigma_j$, where $a_j \in \ZZ$ and
+$\sigma_j$ is a singular $m$-cube in $\DS \RR^n$ for
 $1 \leq j \leq J$ with $J$ a positive integer.
 \end{defn}
 
@@ -2200,9 +2200,9 @@ the $(m-1)$-chain
 
 We have drawn the boundary of the standard $m$-cube for $m=1$
 and $m=2$ in Figure~\ref{StdCube}.  In particular,
-$\displaystyle \stc_{1,1,1}:\{0\} \to \RR^n$ is defined by
+$\DS \stc_{1,1,1}:\{0\} \to \RR^n$ is defined by
 $\stc_{1,1,1}(0) = \stc_1(1)$
-and $\displaystyle \stc_{1,1,0}:\{0\} \to \RR^n$ is defined by
+and $\DS \stc_{1,1,0}:\{0\} \to \RR^n$ is defined by
 $\stc_{1,1,0}(0) = \stc_1(0)$.
 
 \pdfF{diff_forms/stdmcube}{Some examples of boundaries of standard $m$-cubes}
@@ -2226,16 +2226,16 @@ denoted $\partial \sigma$, is defined by the $(m-1)$-chain
 \right) \ .
 \]
 Let $\sigma$ be a $m$-chain given by
-$\displaystyle \sigma = \sum_{j=1}^J a_j \sigma_j$.
+$\DS \sigma = \sum_{j=1}^J a_j \sigma_j$.
 The {\bfseries boundary}\index{Boundary} of $\sigma$, also denote
 $\partial \sigma$, is defined by the $(m-1)$-chain
-$\displaystyle \partial \sigma = \sum_{j=1}^J a_j \partial \sigma_j$.
+$\DS \partial \sigma = \sum_{j=1}^J a_j \partial \sigma_j$.
 \end{defn}
 
 We have drawn the boundary of a singular $2$-cube in Figure~\ref{SingCube}.
 
 \pdfF{diff_forms/singmcube}{A singular $2$-cube in $\RR^3$}
-{We have drawn a singular $2$-cube in $\displaystyle \RR^3$ with its boundary
+{We have drawn a singular $2$-cube in $\DS \RR^3$ with its boundary
 We have that $\partial \sigma_2 = \sigma_{1,1} - \sigma_{1,0}
 + \sigma_{2,0} - \sigma_{2,1}$.  We have added the sign of the 
 faces to the singular $2$-cube.}{SingCube}
@@ -2250,7 +2250,7 @@ Since the boundary of $m$-chain is the sum of the boundary of the
 $m$-cubes that are parts of the chain, it is enough to proof that
 $\partial(\partial \sigma) = 0$ for a $m$-cube $\sigma$.
 
-Since $\displaystyle 
+Since $\DS 
 \partial \sigma = \sum_{j=1}^m (-1)^{j-1} \left( \sigma_{j,1} - \sigma_{j,0}
 \right)$, we get
 \begin{align*}
@@ -2291,9 +2291,9 @@ because we have $1 \leq i \leq j-1 < m$ on the right side of
 (\ref{bdbdE1e}).
 
 Since the coefficient of $(\sigma_{j,s_2})_{i,s_1} (\VEC{y})$ is
-$\displaystyle (-1)^{j+i+s_1+s_2}$ and the coefficient of
+$\DS (-1)^{j+i+s_1+s_2}$ and the coefficient of
 $(\sigma_{i,s_1})_{j-1,s_2} (\VEC{y})$ is
-$\displaystyle (-1)^{j-1+i+s_1+s_2}$, they have opposite signs and thus
+$\DS (-1)^{j-1+i+s_1+s_2}$, they have opposite signs and thus
 cancel each other.  Therefore $\partial (\partial \sigma) = 0$.
 \end{proof}
 
@@ -2328,53 +2328,53 @@ we use the same symbol $\partial$ for all definitions of boundary.
 
 We begin with the definition of the integral of a differential
 $k$-forms on an $k$-chain.  From now on all differential $k$-forms
-$\omega$ on an open set $\displaystyle V\subset \RR^n$ and all
+$\omega$ on an open set $\DS V\subset \RR^n$ and all
 singular $k$-cubes $\sigma: I_k \to V$ are assumed to be of class
-$\displaystyle C^j$ for $j$ as sufficiently large.  Recall that
-$\sigma:I_k \to V$ of class $\displaystyle C^j$ means that there
+$\DS C^j$ for $j$ as sufficiently large.  Recall that
+$\sigma:I_k \to V$ of class $\DS C^j$ means that there
 exist an open set $U \supset I_k$ and a function
-$\tilde{\sigma}:U \to \RR^n$ of class $\displaystyle C^j$ such that
+$\tilde{\sigma}:U \to \RR^n$ of class $\DS C^j$ such that
 $\tilde{\sigma}\big|_{I_k} = \sigma$.
 
 \begin{defn} \label{defStcInt}
 Let $k$ be a positive integer and
 $\omega = f \df{x_1}\wedge \df{x_2}\wedge \ldots \wedge \df{x_k}$
-be a differential $k$-form on $\displaystyle \RR^k$.  The
+be a differential $k$-form on $\DS \RR^k$.  The
 {\bfseries integral of $\omega$}\index{Integral of a Differential Form}
 on $I_k$ is defined by
-$\displaystyle \int_{I_k} \omega = \int_{I_k} f(\VEC{x}) \dx{\VEC{x}}$.
+$\DS \int_{I_k} \omega = \int_{I_k} f(\VEC{x}) \dx{\VEC{x}}$.
 Let $\omega$ be a differential $k$-form defined on an open set
-$\displaystyle V \subset \RR^n$ and
+$\DS V \subset \RR^n$ and
 $\sigma$ be a singular $k$-cube with image in $V$.  The
 {\bfseries integral of $\omega$ on $\sigma$}\index{Integral of a
 Differential Form} is defined by 
-$\displaystyle \int_{\sigma} \omega = \int_{I_k} \sigma^\ast(\omega)$.
+$\DS \int_{\sigma} \omega = \int_{I_k} \sigma^\ast(\omega)$.
 \end{defn}
 
 Obviously, the previous definition include the case where
 $\omega = f \df{x_1}\wedge \df{x_2}\wedge \ldots \wedge \df{x_k}$ is a
-differential $k$-form on $\displaystyle \RR^k$ and $\sigma$ is the standard
+differential $k$-form on $\DS \RR^k$ and $\sigma$ is the standard
 $k$-cube $\stc_m$.  We then have that
-$\displaystyle \int_{\stc_k} \omega = \int_{I_k} \stc_k^\ast(\omega)
+$\DS \int_{\stc_k} \omega = \int_{I_k} \stc_k^\ast(\omega)
 = \int_{I_k} \omega = \int_{I_k} f(\VEC{x}) \dx{\VEC{x}}$.
 
 \begin{defn}
 Let $\omega$ be a $0$-form on an open set
-$\displaystyle V \subset \RR^n$ and $\sigma$ is a singular $0$-cube
+$\DS V \subset \RR^n$ and $\sigma$ is a singular $0$-cube
 with image in $V$.  Namely, $\omega:V \to \RR$ and $\sigma(0) \in V$.
 The {\bfseries integral of $\omega$ on $\sigma$}\index{Integral
 of a Differential Form} is defined by
-$\displaystyle \int_{\sigma} \omega = \omega(\sigma(0))$.
+$\DS \int_{\sigma} \omega = \omega(\sigma(0))$.
 \end{defn}
 
 \begin{defn}
 Let $\omega$ be a differential $k$-form on an open set
-$\displaystyle V \subset \RR^n$ and
-$\displaystyle \sigma = \sum_{j=1}^J a_j \sigma_j$
+$\DS V \subset \RR^n$ and
+$\DS \sigma = \sum_{j=1}^J a_j \sigma_j$
 be a $k$-chain in $V$; namely, the image of each singular $k$-cube
 $\sigma_j$ is in $V$.  The {\bfseries integral of $\omega$ on
 $\sigma$}\index{Integral of a Differential Form} is defined by
-$\displaystyle \int_{\sigma} \omega = \sum_{j=1}^J a_j \int_{\sigma_j} \omega
+$\DS \int_{\sigma} \omega = \sum_{j=1}^J a_j \int_{\sigma_j} \omega
 = \sum_{j=1}^J a_j \int_{I_k} \sigma_j^\ast(\omega)$.
 \end{defn}
 
@@ -2383,7 +2383,7 @@ We give a second proof that the differential $1$-form      \label{CnotEpart2}
 \[
 \omega = \frac{-x_2}{x_1^2+x_2^2} \df{x_1} + \frac{x_1}{x_1^2+x_2^2} \df{x_2}
 \]
-defined on $\displaystyle V= \RR^2 \setminus \{ \VEC{0}\}$ and introduced
+defined on $\DS V= \RR^2 \setminus \{ \VEC{0}\}$ and introduced
 in Example~\ref{CnotEpart1} cannot be exact.
 
 Suppose that $\omega = \df{f}$ where $f:V \to \RR$ is a differentiable
@@ -2413,7 +2413,7 @@ fundamental theorem of calculus is the case $m=1$ and $\omega = \stc_1$
 in the next theorem.
 
 Before stating and proving the next theorem, it is going to be useful
-to evaluate $\displaystyle \stc_{k,j,s}^\ast \df{x_i}$ for
+to evaluate $\DS \stc_{k,j,s}^\ast \df{x_i}$ for
 $1 \leq i , j \leq k$ and $s=0$ or $s=1$.
 Recall that $\df{x_i} = \df{\pi_i}$.  Hence
 \begin{align*}
@@ -2430,7 +2430,7 @@ y_i & \quad \text{if} \ i < j \\
 y_{i-1} & \quad \text{if} \ i > j
 \end{cases}
 \end{align*}
-for all $\VEC{w} \in I_{k-1}$ and $\displaystyle \VEC{y} \in \RR^{k-1}$.
+for all $\VEC{w} \in I_{k-1}$ and $\DS \VEC{y} \in \RR^{k-1}$.
 Therefore,
 \[
 \stc_{k,j,s}^\ast \df{x_i} = \begin{cases}
@@ -2464,8 +2464,8 @@ removed from the wedge product.
 
 \begin{theorem}[Stokes] \label{stokesStokes}
 Suppose that $\omega$ is a differential $(k-1)$-form on an open set
-$\displaystyle V \subset \RR^n$ and
-that $\sigma$ is an $k$-chain in $V$ with $\displaystyle k \in \NNp$.  Then
+$\DS V \subset \RR^n$ and
+that $\sigma$ is an $k$-chain in $V$ with $\DS k \in \NNp$.  Then
 \[
 \int_\sigma \df{\omega} = \int_{\partial \sigma} \omega \ .
 \]
@@ -2473,7 +2473,7 @@ that $\sigma$ is an $k$-chain in $V$ with $\displaystyle k \in \NNp$.  Then
 
 \begin{proof}
 \stage{i} We first prove the theorem for $\sigma = \stc_k$ and
-$\omega$ a differential $(k-1)$-form on $\displaystyle \RR^k$.  We have that
+$\omega$ a differential $(k-1)$-form on $\DS \RR^k$.  We have that
 $\omega$ is the sum of terms of the form
 \begin{equation} \label{stokesFTC1}
 f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge
@@ -2482,7 +2482,7 @@ f \df{x_1} \wedge \ldots \wedge \widehat{\df{x_i}} \wedge \ldots \wedge
 By linearity of the integral, it suffices to prove the theorem for
 (\ref{stokesFTC1}).
 
-Since $\displaystyle
+Since $\DS
 \partial \stc_k = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{j+s} \stc_{k,j,s}$
 and
 \begin{align*}
@@ -2491,7 +2491,7 @@ and
 \df{x_k} \right) \\
 &\qquad = \begin{cases}
 0 & \quad \text{if} \ i \neq j \\
-\displaystyle
+\DS
 \int_{I_{k-1}} f\circ \stc_{k,j,s} \, \df{y_1} \wedge \df{y_2} \wedge
 \ldots \wedge \df{y_{k-1}} &
 \quad \text{if} \ i = j
@@ -2499,7 +2499,7 @@ and
 & \qquad =
 \begin{cases}
 0 & \quad \text{if} \ i \neq j \\
-\displaystyle \int_{I_{k-1}} f(y_1,\ldots, y_{i-1}, s, y_i, \ldots, y_{k-1})
+\DS \int_{I_{k-1}} f(y_1,\ldots, y_{i-1}, s, y_i, \ldots, y_{k-1})
 \df{y_1}\df{y_2}\ldots \df{y_{k-1}} & \quad \text{if} \ i=j
 \end{cases}
 \end{align*}
@@ -2556,11 +2556,11 @@ Hence,
 \[
 \int_{\partial \stc_k} \omega = \int_{\stc_k} \df{\omega}
 \]
-for all differential $(k-1)$-forms $\omega$ on $\displaystyle \RR^k$.
+for all differential $(k-1)$-forms $\omega$ on $\DS \RR^k$.
 
 \subQ{ii}
 Suppose that $\sigma$ is a general singular $k$-cube in an open set
-$\displaystyle V \subset \RR^n$ and that $\omega$ is a differential
+$\DS V \subset \RR^n$ and that $\omega$ is a differential
 $(k-1)$-form on $V$.  Since
 \[
 \partial \sigma = \sum_{j=1}^k \sum_{s=0}^1 (-1)^{i+s} \sigma_{j,s}
@@ -2580,7 +2580,7 @@ we have
 \sigma^\ast(\omega)
 = \int_{\partial \stc_k} \sigma^\ast(\omega) \ .
 \end{align*}
-It follows from (i) applied to $\displaystyle \sigma^\ast(\omega)$ and
+It follows from (i) applied to $\DS \sigma^\ast(\omega)$ and
 (4) of Proposition~\ref{propAstoR} that
 \[
 \int_{\sigma} \df{\omega} = \int_{I_k} \sigma^\ast(\df{\omega})
@@ -2591,8 +2591,8 @@ It follows from (i) applied to $\displaystyle \sigma^\ast(\omega)$ and
 \]
 
 \subQ{iii}
-Finally, if $\sigma = \displaystyle \sum_{j=1}^J a_j \sigma_j$ is a $k$-chain
-in an open set $\displaystyle V \subset \RR^n$ and $\omega$ is a
+Finally, if $\sigma = \DS \sum_{j=1}^J a_j \sigma_j$ is a $k$-chain
+in an open set $\DS V \subset \RR^n$ and $\omega$ is a
 differential $(k-1)$-form in $V$, then
 \[
 \int_{\mu} \df{\omega} = \sum_{j=1}^J a_j \int_{\sigma_j} \df{\omega}

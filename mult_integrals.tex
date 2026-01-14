@@ -7,37 +7,37 @@ As usual, we start with some basic definitions.
 
 \begin{defn}
 A {\bfseries rectangle}\index{Rectangle}
-$\displaystyle R \subset \RR^n$ is a set of
-the form $\displaystyle R = \prod_{i=1}^n I_i$ where the $I_i$ are
+$\DS R \subset \RR^n$ is a set of
+the form $\DS R = \prod_{i=1}^n I_i$ where the $I_i$ are
 bounded intervals. The {\bfseries volume}\index{Volume} of a rectangle
-$\displaystyle R = \prod_{i=1}^n I_i$
-is the value $\displaystyle V(R) = \prod_{i=1}^n |I_i|$ where $|I_i|$
+$\DS R = \prod_{i=1}^n I_i$
+is the value $\DS V(R) = \prod_{i=1}^n |I_i|$ where $|I_i|$
 is the length of the interval $I_i$.  We may use the notation 
 $A(R)$ instead of $V(R)$ when $n=2$.
 \end{defn}
 
 The definition of sets of zero content, sets of measure zero and
 (Jordan) measurable sets in $\RR$ (Definitions~\ref{measureR}
-and \ref{JordanMS}) can be extended to $\displaystyle \RR^n$.
+and \ref{JordanMS}) can be extended to $\DS \RR^n$.
 
 \begin{defn} \label{measure}
-A set $\displaystyle S\in \RR^n$ has
+A set $\DS S\in \RR^n$ has
 {\bfseries zero content}\index{Zero Content} if
 for every $\epsilon>0$ there exists a finite collection of closed rectangles
-$\displaystyle \{ R_i \}_{0\leq i \leq M}$ such that
-$\displaystyle S \subset \bigcup_{i=0}^M R_i$ and
-$\displaystyle \sum_{i=0}^M V(R_i) < \epsilon$.
+$\DS \{ R_i \}_{0\leq i \leq M}$ such that
+$\DS S \subset \bigcup_{i=0}^M R_i$ and
+$\DS \sum_{i=0}^M V(R_i) < \epsilon$.
 
-A set $\displaystyle S\in \RR^n$ has
+A set $\DS S\in \RR^n$ has
 {\bfseries measure zero}\index{Measure Zero} if
 for every $\epsilon>0$ there exists a countable collection of closed
-rectangles $\displaystyle \{ R_i \}_{i\geq 0}$ such that
-$\displaystyle S \subset \bigcup_{i=0}^\infty R_i$ and
-$\displaystyle \sum_{i=0}^\infty V(R_i) < \epsilon$.
+rectangles $\DS \{ R_i \}_{i\geq 0}$ such that
+$\DS S \subset \bigcup_{i=0}^\infty R_i$ and
+$\DS \sum_{i=0}^\infty V(R_i) < \epsilon$.
 \end{defn}
 
 \begin{defn}
-A set $\displaystyle S \subset \RR^n$ is
+A set $\DS S \subset \RR^n$ is
 {\bfseries (Jordan) measurable}\index{Jordan Measurable} if $S$ is bounded
 and $\partial S$ has measure zero.
 \end{defn}
@@ -45,15 +45,15 @@ and $\partial S$ has measure zero.
 \begin{rmk}
 In the definition of sets of measure zero or zero content, we
 may use open rectangles instead of closed rectangles.  Suppose that
-$\displaystyle S \subset \RR^n$ has measure zero according to the
+$\DS S \subset \RR^n$ has measure zero according to the
 definition using closed rectangles.  Given $\epsilon > 0$, there exists a
 countable collection
-$\displaystyle \{R_i\}_{i\geq 0}$ of closed rectangles such that
-$\displaystyle S \subset \bigcup_{i=0}^\infty R_i$ and
-$\displaystyle \sum_{i=0}^\infty V(R_i) < \epsilon/2$.
+$\DS \{R_i\}_{i\geq 0}$ of closed rectangles such that
+$\DS S \subset \bigcup_{i=0}^\infty R_i$ and
+$\DS \sum_{i=0}^\infty V(R_i) < \epsilon/2$.
 For each $i$, choose an open rectangle $V_i$ such that $R_i \subset V_i$
-and $\displaystyle V(V_i) \leq V(R_i) + \epsilon/2^{i+2}$.  Then
-$\displaystyle S \subset \bigcup_{i=0}^\infty R_i \subset
+and $\DS V(V_i) \leq V(R_i) + \epsilon/2^{i+2}$.  Then
+$\DS S \subset \bigcup_{i=0}^\infty R_i \subset
 \bigcup_{i=0}^\infty V_i$ and
 \[
 \sum_{i=0}^\infty V(V_i) \leq \sum_{i=0}^\infty V(R_i) + \frac{\epsilon}{4}
@@ -63,21 +63,21 @@ $\displaystyle S \subset \bigcup_{i=0}^\infty R_i \subset
 Since $\epsilon$ is arbitrary, $S$ has measure zero according to the
 definition using open rectangles.
 
-Conversely, suppose that $\displaystyle S \subset \RR^n$ has measure
+Conversely, suppose that $\DS S \subset \RR^n$ has measure
 zero according to the definition using open rectangles.  Given
 $\epsilon > 0$, there exists a countable collection
-$\displaystyle \{V_i\}_{i\geq 0}$ of open rectangles such that
-$\displaystyle S \subset \bigcup_{i=0}^\infty V_i$ and
-$\displaystyle \sum_{i=0}^\infty V(V_i) < \epsilon$.
+$\DS \{V_i\}_{i\geq 0}$ of open rectangles such that
+$\DS S \subset \bigcup_{i=0}^\infty V_i$ and
+$\DS \sum_{i=0}^\infty V(V_i) < \epsilon$.
 For each $i$, let $R_i = \overline{V_i}$.  Then $V(R_i) = V(V_i)$ for all
-$i$.  Hence $\displaystyle S \subset \bigcup_{i=0}^\infty V_i \subset
+$i$.  Hence $\DS S \subset \bigcup_{i=0}^\infty V_i \subset
 \bigcup_{i=0}^\infty R_i$ and
-$\displaystyle \sum_{i=0}^\infty V(R_i) = \sum_{i=0}^\infty V(V_i) < \epsilon$.
+$\DS \sum_{i=0}^\infty V(R_i) = \sum_{i=0}^\infty V(V_i) < \epsilon$.
 Since $\epsilon$ is arbitrary, $S$ has measure zero according to the
 definition using closed rectangles.
 \end{rmk}
 
-Given a bounded set $\displaystyle V\subset \RR^n$, we define the diameter of
+Given a bounded set $\DS V\subset \RR^n$, we define the diameter of
 $V$ as the number
 \[
   \diam V = \sup \{ \|\VEC{x} - \VEC{y}\| : \VEC{x}, \VEC{y} \in V \} \ .
@@ -85,22 +85,22 @@ $V$ as the number
 
 \begin{prop}
 If, for every $\epsilon>0$, there exists a countable collection of
-compact sets $\displaystyle \{ K_i \}_{i\geq 0}$ such that
-$\displaystyle S \subset \bigcup_{i=0}^\infty K_i$ and
-$\displaystyle \sum_{i=0}^\infty \diam K_i < \epsilon$,
-then the set $\displaystyle S\in \RR^n$ has measure zero.
+compact sets $\DS \{ K_i \}_{i\geq 0}$ such that
+$\DS S \subset \bigcup_{i=0}^\infty K_i$ and
+$\DS \sum_{i=0}^\infty \diam K_i < \epsilon$,
+then the set $\DS S\in \RR^n$ has measure zero.
 \end{prop}
 
 \begin{proof}
 Suppose that $S$ is a set satisfying the hypotheses of the
 proposition.  Given $\epsilon >0$, choose a countable collection of
-compact sets $\displaystyle \{ K_i \}_{i\geq 0}$ such that
-$\displaystyle S \subset \bigcup_{i=0}^\infty K_i$ and
-$\displaystyle \sum_{i=0}^\infty \diam K_i < \epsilon^{1/n}$.
+compact sets $\DS \{ K_i \}_{i\geq 0}$ such that
+$\DS S \subset \bigcup_{i=0}^\infty K_i$ and
+$\DS \sum_{i=0}^\infty \diam K_i < \epsilon^{1/n}$.
 
 Each $K_i$ is a subset of a rectangle $R_i$ with edges of length
-$d_i = \diam K_i$.  Thus $\displaystyle V(R_i) = d_i^n$.  Hence
-$\displaystyle S \subset \bigcup_{i=0}^\infty K_i
+$d_i = \diam K_i$.  Thus $\DS V(R_i) = d_i^n$.  Hence
+$\DS S \subset \bigcup_{i=0}^\infty K_i
 \subset \bigcup_{i=0}^\infty R_i$ and
 \[
 \sum_{i=0}^\infty V(R_i) = \sum_{i=0}^\infty d_i^n \leq
@@ -119,28 +119,28 @@ Compact subsets of a set of measure zero have zero content.
 Suppose that $Z$ is a set of measure zero and that $K\subset Z$ is a
 compact set.  We prove that $K$ has zero content.  Given
 $\epsilon >0$, since $Z$ has measure zero, there exists a countable
-collection $\displaystyle \{V_i\}_{i\geq 0}$ of open rectangles
+collection $\DS \{V_i\}_{i\geq 0}$ of open rectangles
 such that
-$\displaystyle K \subset Z \subset \bigcup_{i=0}^\infty V_i$
-and $\displaystyle \sum_{i=0}^\infty V(V_i) < \epsilon$.
+$\DS K \subset Z \subset \bigcup_{i=0}^\infty V_i$
+and $\DS \sum_{i=0}^\infty V(V_i) < \epsilon$.
 Since $K$ is compact, there exists a finite subcover
-$\displaystyle \{V_{i_j}\}_{0\leq j \leq N}$ such that
-$\displaystyle K \subset \bigcup_{j=0}^N V_{i_j}$.  We obviously
+$\DS \{V_{i_j}\}_{0\leq j \leq N}$ such that
+$\DS K \subset \bigcup_{j=0}^N V_{i_j}$.  We obviously
 have
-$\displaystyle \sum_{j=0}^N V(V_{i_j}) \leq \sum_{i=0}^\infty V(V_i) <
+$\DS \sum_{j=0}^N V(V_{i_j}) \leq \sum_{i=0}^\infty V(V_i) <
 \epsilon$.  Since $\epsilon$ is arbitrary, this shows that $K$ has zero
 content.
 \end{proof}
 
 \begin{defn}
 A {\bfseries partition}\index{Partition} $P$ of a rectangle
-$\displaystyle R = \prod_{i=1}^n I_i \subset \RR^n$, where each $I_i$
+$\DS R = \prod_{i=1}^n I_i \subset \RR^n$, where each $I_i$
 is an interval, is a collection $P = \{ P_i : 1 \leq i \leq n\}$
 where $P_i = \{p_{k,i} : 0 \leq k \leq N_i\}$ is a partition
 of the interval $I_i$ for $1 \leq i \leq n$.
 
 Rectangles of the form
-$\displaystyle R_{k_1,k_2,\ldots,k_n} = \prod_{i=1}^n [p_{k_i-1,i},p_{k_i,i}]$,
+$\DS R_{k_1,k_2,\ldots,k_n} = \prod_{i=1}^n [p_{k_i-1,i},p_{k_i,i}]$,
 where $1 \leq k_i \leq N_i$, are called
 {\bfseries subrectangles of the partition}\index{Subrectangles of the
 Partition} $P$. 
@@ -151,11 +151,11 @@ in basically the same way that we defined the integral of a bounded
 function on an interval.
 
 \begin{defn}
-Let $\displaystyle R \subset \RR^n$ be a rectangle as defined above,
+Let $\DS R \subset \RR^n$ be a rectangle as defined above,
 $f:R\to \RR$ be a bounded function, and $P$ be a partition of $[a,b]$.
-Moreover, let $\displaystyle m_{k_1,k_2,\ldots,k_n}
+Moreover, let $\DS m_{k_1,k_2,\ldots,k_n}
 = \inf\{ f(\VEC{x}) : \VEC{x} \in  R_{k_1,k_2,\ldots,k_n}\}$
-and $\displaystyle M_{k_1,k_2,\ldots,k_n}
+and $\DS M_{k_1,k_2,\ldots,k_n}
 = \sup\{ f(\VEC{x}) : \VEC{x} \in  R_{k_1,k_2,\ldots,k_n}\}$
 for $1 \leq k_i \leq N_i$ and $1 \leq i \leq n$.  The
 {\bfseries lower Riemann sum}\index{Lower Riemann Sum} of $f$ with
@@ -184,7 +184,7 @@ have the same properties than the lower and upper Riemann sums for
 functions of one variable.
 
 \begin{defn}
-Let $\displaystyle R \subset \RR^n$ be a rectangle as defined above and 
+Let $\DS R \subset \RR^n$ be a rectangle as defined above and 
 $f:R \to \RR$ be a bounded function.  The 
 {\bfseries lower Riemann integral}\index{Lower Riemann Integral} of
 $f$ on $R$ is defined as
@@ -199,7 +199,7 @@ of $f$ on $R$ is defined as
 \end{defn}
 
 \begin{defn}
-Let $\displaystyle R \subset \RR^n$ be a rectangle as defined above and
+Let $\DS R \subset \RR^n$ be a rectangle as defined above and
 $f:R\to \RR$ be a bounded function.  If $\U(f) = \LL(f)$, then we say that
 {\bfseries $\mathbf{f}$ is (Riemann) integrable}\index{Riemann Integrable}
 on the rectangle $R$.  The
@@ -215,7 +215,7 @@ bounded function on an interval remain true for the Riemann integral of a
 bounded function on a rectangle.  The obvious exception is
 Theorem~\ref{thCVin1D} that we will reformulate shortly.
 
-Suppose that $R$ is a rectangle in $\displaystyle \RR^n$ and
+Suppose that $R$ is a rectangle in $\DS \RR^n$ and
 $f:R\to \RR$ is a bounded function.  Given $\VEC{x} \in R$, let
 \begin{align*}
 M(\VEC{x},f,\delta) &= \sup \{ f(\VEC{y}) : \VEC{y}\in R \ \text{and}
@@ -236,8 +236,8 @@ $f$ is continuous at $\VEC{x}$ if and only if $o(\VEC{x},f)=0$.
 The following result will be useful shortly.
 
 \begin{lemma} \label{closedLemma}
-Suppose that $\displaystyle R \subset \RR^n$ is a closed set.  The set
-$\displaystyle
+Suppose that $\DS R \subset \RR^n$ is a closed set.  The set
+$\DS
 Z_\epsilon = \left\{ \VEC{x} \in R : o(\VEC{x},f) \geq \epsilon \right\}$
 is a closed subset of $R$.
 \end{lemma}
@@ -247,7 +247,7 @@ If $z_\epsilon = \emptyset$, then $Z_\epsilon$ is closed.
 
 Suppose that $Z_\epsilon \neq \emptyset$.  We prove that the
 complement of $Z_\epsilon$ in $R$ is open relative to the topology
-induced on $R$ from $\displaystyle \RR^n$.
+induced on $R$ from $\DS \RR^n$.
 Given $\VEC{x} \in R \setminus Z_\epsilon$, there exists $\delta >0$
 such that $M(\VEC{x},f,\delta) - m(\VEC{x},f,\delta) < \epsilon$ since
 $o(\VEC{x},f) < \epsilon$.  It suffices to show that
@@ -267,7 +267,7 @@ $o(\VEC{y},f) < \epsilon$.  Thus $\VEC{y} \in R \setminus Z_\epsilon$.
 \end{proof}
 
 \begin{lemma}\label{zeroLemma}
-Let $R$ be a closed rectangle in $\displaystyle \RR^n$ and $f:R\to \RR$
+Let $R$ be a closed rectangle in $\DS \RR^n$ and $f:R\to \RR$
 be a bounded function such that $o(\VEC{x},f) < \epsilon$ for all
 $\VEC{x} \in R$.  Then there exists a partition $P$ of $R$ such that
 $\U_P(f) - \LL_P(f) < \epsilon V(R)$.
@@ -279,18 +279,18 @@ for every $\VEC{x} \in R$ a radius $\delta_x$ such that
 $M(\VEC{x},f,\delta_x) - m(\VEC{x},f,\delta_x) < \epsilon$.
 For each $\VEC{x} \in R$, choose an open rectangle
 $R_{\VEC{x}}$ such that $\VEC{x} \in R_{\VEC{x}} \subset B_{\delta_x}(\VEC{x})$.
-The collection $\displaystyle \{ R_{\VEC{x}} : \VEC{x} \in R \}$
+The collection $\DS \{ R_{\VEC{x}} : \VEC{x} \in R \}$
 is an open cover of the closed and bounded set $R$.  Since $R$ is
 compact, there exists a finite subcover
-$\displaystyle \{ R_{\VEC{x}_i} \}_{1 \leq i \leq N}$ of $R$.
+$\DS \{ R_{\VEC{x}_i} \}_{1 \leq i \leq N}$ of $R$.
 
-Suppose that $\displaystyle
+Suppose that $\DS
 R_{\VEC{x}_i} = \prod_{j=1}^n ]a_{i,j},b_{i,j}[$ for $1 \leq i \leq N$.
 Choose a partition $P$ of $R$ such that
 $a_{i,j},b_{i,j} \in P_i$ for all $1 \leq j \leq N_i$ and $1 \leq i \leq N$
 such that $(a_{i,j},b_{i,j}) \in R$.
 For each $n$-tuple $(k_1,k_2,\ldots,k_n)$, there exists at least one $\VEC{x}_i$
-such that $\displaystyle R_{k_1,k_2,\ldots,k_n} \subset R_{\VEC{x}_i}$.
+such that $\DS R_{k_1,k_2,\ldots,k_n} \subset R_{\VEC{x}_i}$.
 \pdfbox{mult_integrals/coverR}
 Therefore
 \[
@@ -310,7 +310,7 @@ V(R_{k_1,k_2,\ldots,k_n})
 \end{proof}
 
 \begin{theorem}\label{Rexists}
-Let $R$ be a rectangle in $\displaystyle \RR^n$ and $f:R\to \RR$ be
+Let $R$ be a rectangle in $\DS \RR^n$ and $f:R\to \RR$ be
 a bounded function.  The set of all points in $R$ where $f$ is
 discontinuous has measure zero if and only if $f$ is Riemann
 integrable on $R$.
@@ -319,7 +319,7 @@ integrable on $R$.
 \begin{proof}
 Suppose that $Z \subset R$ is the set of points where $f$ is discontinuous.
 Let \\
-$\displaystyle Z_\nu = \left\{ \VEC{x} \in R : o(\VEC{x},f) \geq \nu \right\}$
+$\DS Z_\nu = \left\{ \VEC{x} \in R : o(\VEC{x},f) \geq \nu \right\}$
 for $\nu > 0$.
 
 Since $f$ is bounded, there exists $M>0$ such that $|f(\VEC{x})|<M$ for all
@@ -337,11 +337,11 @@ according to Lemma~\ref{closedLemma} and bounded, it
 is compact.  Since $Z_{\epsilon/(2V(R))}$ is a compact subset of $Z$ which
 has measure zero, it follows from Proposition~\ref{PropMziZC} that
 $Z_{\epsilon/(2V(R))}$ has zero content.  Thus, there exists a
-finite collection $\displaystyle \{R_i\}_{0 \leq i \leq N}$ of closed
+finite collection $\DS \{R_i\}_{0 \leq i \leq N}$ of closed
 rectangles in $R$ such that
-$\displaystyle Z_{\epsilon/(2V(R))} \subset \bigcup_{i=0}^N R_i$ and
+$\DS Z_{\epsilon/(2V(R))} \subset \bigcup_{i=0}^N R_i$ and
 \begin{equation} \label{zeroEqu4}
-\displaystyle \sum_{i=0}^N V(R_i) < \frac{\epsilon}{4M} \ .
+\DS \sum_{i=0}^N V(R_i) < \frac{\epsilon}{4M} \ .
 \end{equation}
 
 As in the proof of Lemma~\ref{zeroLemma}, we choose a partition $P$ of
@@ -357,9 +357,9 @@ $S_2$ is the collection of all the other subrectangles.
 
 For each subrectangle $R_{k_1,k_2,\ldots,k_n}$ of the partition $P$, we
 define as before
-$\displaystyle M_{k_1,k_2,\ldots,k_n}
+$\DS M_{k_1,k_2,\ldots,k_n}
 = \sup \{ f(\VEC{x}) : \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \}$ and
-$\displaystyle m_{k_1,k_2,\ldots,k_n}
+$\DS m_{k_1,k_2,\ldots,k_n}
 = \inf \{ f(\VEC{x}) : \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \}$.
 We have $M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n} < 2M$
 for every subrectangle $R_{k_1,k_2,\ldots,k_n}$ of the partition $P$. 
@@ -390,16 +390,16 @@ a refinement $\tilde{P}$ of the partition $P$ such that
 where the $\tilde{R}_{j_1,j_2,\ldots,j_n}$ are
 subrectangles of the partition $\tilde{P}$ and,
 as expected,
-$\displaystyle \tilde{M}_{j_1,j_2,\ldots,j_n}
+$\DS \tilde{M}_{j_1,j_2,\ldots,j_n}
 = \sup \{ f(\VEC{x}) : \VEC{x} \in \tilde{R}_{j_1,j_2,\ldots,j_n} \}$ and
-$\displaystyle \tilde{m}_{j_1,j_2,\ldots,j_n}
+$\DS \tilde{m}_{j_1,j_2,\ldots,j_n}
 = \inf \{ f(\VEC{x}) : \VEC{x} \in \tilde{R}_{j_1,j_2,\ldots,j_n} \}$.
 
 Repeating inductively this procedure of refinement of the partition for
 each $R_{k_1,k_2,\ldots,k_n} \in S_2$, we end up with a refinement of
 $P$ that we still call $\tilde{P}$ such that (\ref{zeroEqu2}) is true
 for all $R_{k_1,k_2,\ldots,k_n} \in S_2$.  Note that a version of
-Proposition~\ref{propRef} in $\displaystyle \RR^n$ is used to justify the last 
+Proposition~\ref{propRef} in $\DS \RR^n$ is used to justify the last 
 statement.
 
 The relation (\ref{zeroEqu1}) reminds true for the refinement
@@ -438,7 +438,7 @@ V(\tilde{R}_{j_1,j_2,\ldots,j_n}) \\
 \leq \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \ .
 \end{align*}
 Since $\epsilon$ is arbitrary, it follows from the version of 
-Theorem~\ref{intCauchyCR} in $\displaystyle \RR^n$ that $f$ is integrable.
+Theorem~\ref{intCauchyCR} in $\DS \RR^n$ that $f$ is integrable.
 
 \stage{$\Leftarrow$} We have
 \[
@@ -449,20 +449,20 @@ be of measure zero since the countable union of sets of measure zero
 is a set of measure zero.
 
 Choose $\epsilon > 0$.  Let $P$ be a partition of $R$ such that
-$\displaystyle \U_P(f) - \LL_P(f) < \epsilon/(2m)$.  Moreover, let $S_1$
+$\DS \U_P(f) - \LL_P(f) < \epsilon/(2m)$.  Moreover, let $S_1$
 be the collection of all subrectangles $R_{k_1,k_2,\ldots,k_n}$ of the
 partition $P$ such that
-$\displaystyle R_{k_1,k_2,\ldots,k_n}^\circ \cap Z_{1/n} \neq \emptyset$.
+$\DS R_{k_1,k_2,\ldots,k_n}^\circ \cap Z_{1/n} \neq \emptyset$.
 For each $R_{k_1,k_2,\ldots,k_n} \in S_1$, there is at least one
 point of $Z_{1/m}$ which is in the interior of $R_{k_1,k_2,\ldots,k_n}$.
 Therefore, we get
-$\displaystyle  M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n} \geq 1/m$
+$\DS  M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n} \geq 1/m$
 for each $R_{k_1,k_2,\ldots,k_n} \in S_1$ \footnote{The condition
-$\displaystyle R_{k_1,k_2,\ldots,k_n} \cap Z_{1/m} \neq \emptyset$ is
+$\DS R_{k_1,k_2,\ldots,k_n} \cap Z_{1/m} \neq \emptyset$ is
 not sufficient to ensure that
-$\displaystyle  M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n}
+$\DS  M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n}
 \geq 1/m$.  We may have that
-$\displaystyle \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \cap Z_{1/m}
+$\DS \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \cap Z_{1/m}
 \subset \partial R_{k_1,k_2,\ldots,k_n}$ with
 $M_{k_1,k_2,\ldots,k_n} - m_{k_1,k_2,\ldots,k_n} < 1/m$ 
 but $o(\VEC{x},f) \geq 1/m$ because of the values of $f$ in 
@@ -481,13 +481,13 @@ we get
 < \frac{\epsilon}{2} \ .
 \end{equation}
 
-Let $\displaystyle B
+Let $\DS B
 = \bigcup_{R_{k_1,k_2,\ldots,k_n}} \partial R_{k_1,k_2,\ldots,k_n}$.
 The union is over all rectangles $R_{k_1,k_2,\ldots,k_n}$ generated by
 the partition $P$ of $R$.  The set $B$ is
 compact and has zero content since it is composed of a finite number of
 line segments.  Choose a finite collection $S_2$ of closed rectangles
-such that $\displaystyle B \subset \bigcup_{T\in S_2} T$ and
+such that $\DS B \subset \bigcup_{T\in S_2} T$ and
 \begin{equation}\label{multintzeroB}
   \sum_{T\in S_2} V(T) < \frac{\epsilon}{2}
 \end{equation}
@@ -507,25 +507,25 @@ Since $\epsilon$ is arbitrary, we obtain that $Z_{1/m}$ has zero
 content and so is of measure zero.
 \end{proof}
 
-Given $\displaystyle W \subset \RR^n$,
-let $\displaystyle \Chi_W:\RR^n \to \RR$ be
+Given $\DS W \subset \RR^n$,
+let $\DS \Chi_W:\RR^n \to \RR$ be
 the function defined by
 \[
 \Chi(\VEC{x}) = \begin{cases}
 1 & \quad \text{if} \ \VEC{x} \in W \\
-0 & \displaystyle \quad \text{if} \ \VEC{x} \in \RR^n\setminus W
+0 & \DS \quad \text{if} \ \VEC{x} \in \RR^n\setminus W
 \end{cases}
 \]
 The only points where $\Chi_W$ is discontinuous are the points on
 $\partial W$.
 
 \begin{defn}
-Let $\displaystyle W \subset \RR^n$ be a Jordan measurable set.  Given
+Let $\DS W \subset \RR^n$ be a Jordan measurable set.  Given
 a bounded function $f:W\to \RR$, we define the
 {\bfseries Riemann integral of $f$ on $W$}\index{Riemann
-Integral of a Function}, denoted $\displaystyle \int_W f$ or
-$\displaystyle \int_W f(\VEC{x})\dx{\VEC{x}}$, as the integral
-$\displaystyle \int_R \Chi_W f$ if this integral exists
+Integral of a Function}, denoted $\DS \int_W f$ or
+$\DS \int_W f(\VEC{x})\dx{\VEC{x}}$, as the integral
+$\DS \int_R \Chi_W f$ if this integral exists
 \footnotemark\ where $R$ is a closed rectangle containing $W$.
 We say that $f$ is {\bfseries Riemann integrable}\index{Riemann
 Integrable} on $W$.
@@ -544,10 +544,10 @@ discontinuous has measure zero for the same reasons that we have used
 to prove this result for functions of one variable.
 
 \begin{prop}
-Let $R$ be a rectangle in $\displaystyle \RR^n$ and suppose that
+Let $R$ be a rectangle in $\DS \RR^n$ and suppose that
 $Z\subset R$ has zero content.  If $h:Z \to \RR$ is a bounded
 function, then $h$ is Riemann integrable on $Z$ and
-$\displaystyle \int_Z h = 0$.
+$\DS \int_Z h = 0$.
 \end{prop}
 
 \begin{proof}
@@ -558,31 +558,31 @@ $M = \sup \{ h(\VEC{x}) : \VEC{x} \in Z\}$.
 We give two proofs of this property.
 
 The first proof uses Theorem~\ref{Rexists}.  The set of points where
-$\displaystyle \Chi_Z h: R\to \RR$ is discontinuous has zero content
+$\DS \Chi_Z h: R\to \RR$ is discontinuous has zero content
 because it is a subset of $\overline{Z}$ which has zero content
 \footnote{Given $\epsilon >0$, if $\{R_i\}_{0\leq i \leq N}$ is a
 collection of closed rectangles such that
-$\displaystyle Z \subset \bigcup_{i=0}^N R_i$ and
-$\displaystyle \sum_{i=0}^N V(R_i) < \epsilon$, then
-$\displaystyle \overline{Z} \subset \bigcup_{i=0}^N R_i$ and we still
-have $\displaystyle \sum_{i=0}^N V(R_i) < \epsilon$.}.
+$\DS Z \subset \bigcup_{i=0}^N R_i$ and
+$\DS \sum_{i=0}^N V(R_i) < \epsilon$, then
+$\DS \overline{Z} \subset \bigcup_{i=0}^N R_i$ and we still
+have $\DS \sum_{i=0}^N V(R_i) < \epsilon$.}.
 Hence $\overline{Z}$ has measure zero.  It then follows from
 Theorem~\ref{Rexists} that $\Chi_Z h$ is integrable on $R$.
 
 The second proof does not use Theorem~\ref{Rexists}.
 Given $\epsilon > 0$, there exists a finite collection of
-open rectangles $\displaystyle \{ R_i\}_{0 \leq i \leq N}$ such that
-$\displaystyle Z \subset \bigcup_{i=0}^N R_i$ and
-$\displaystyle \sum_{i=0}^N V(R_i) < \frac{\epsilon}{M-m}$.
+open rectangles $\DS \{ R_i\}_{0 \leq i \leq N}$ such that
+$\DS Z \subset \bigcup_{i=0}^N R_i$ and
+$\DS \sum_{i=0}^N V(R_i) < \frac{\epsilon}{M-m}$.
 
 Choose a partition $P$ of $R$ such that the vertices of all the
 rectangles $R_i$ are included in $P$.  We then have
-$\displaystyle M_{k_1,k_2,\ldots,k_n} = \sup \{ \Chi_Z(\VEC{x}) h(\VEC{x}) :
+$\DS M_{k_1,k_2,\ldots,k_n} = \sup \{ \Chi_Z(\VEC{x}) h(\VEC{x}) :
  \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \} =0$ and
-$\displaystyle m_{k_1,k_2,\ldots,k_n} = \inf \{ \Chi_Z(\VEC{x}) h(\VEC{x}) :
+$\DS m_{k_1,k_2,\ldots,k_n} = \inf \{ \Chi_Z(\VEC{x}) h(\VEC{x}) :
  \VEC{x} \in R_{k_1,k_2,\ldots,k_n} \} = 0$ for all
-subrectangles $\displaystyle R_{k_1,k_2,\ldots,k_n}$ of the partition
-$P$ such that $\displaystyle R_{k_1,k_2,\ldots,k_n} \cap R_i = \emptyset$
+subrectangles $\DS R_{k_1,k_2,\ldots,k_n}$ of the partition
+$P$ such that $\DS R_{k_1,k_2,\ldots,k_n} \cap R_i = \emptyset$
 for all $i$.  Hence
 \begin{align*}
 \U_P(\Chi_Z h) - \LL_P(\Chi_Z h)
@@ -595,8 +595,8 @@ for all $i$.  Hence
 < \epsilon \ .
 \end{align*}
 Note that the last equality comes from the fact that
-$\displaystyle R_{k_1,k_2,\ldots,k_n} \cap R_i \neq \emptyset$ implies
-that $\displaystyle R_{k_1,k_2,\ldots,k_n}^\circ \subset R_i$ because
+$\DS R_{k_1,k_2,\ldots,k_n} \cap R_i \neq \emptyset$ implies
+that $\DS R_{k_1,k_2,\ldots,k_n}^\circ \subset R_i$ because
 that $R_i$ are open.  Hence
 \[
 \bigcup_{\substack{R_{k_1,k_2,\ldots,k_n} \cap R_i \neq \emptyset\\
@@ -605,10 +605,10 @@ that $R_i$ are open.  Hence
 \]
 
 It follows from the version of Theorem~\ref{intCauchyCR} in
-$\displaystyle \RR^n$ that $\Chi_Z h$ is integrable on $R$.
+$\DS \RR^n$ that $\Chi_Z h$ is integrable on $R$.
 
-\stage{ii} To prove that $\displaystyle \int_Z h = 0$, we consider
-$\displaystyle h = h^+ - h^-$ where
+\stage{ii} To prove that $\DS \int_Z h = 0$, we consider
+$\DS h = h^+ - h^-$ where
 \[
 h^+(\VEC{x}) = \begin{cases}
 h(\VEC{x}) & \quad \text{if} \ h(\VEC{x}) > 0 \\
@@ -620,26 +620,26 @@ h^-(\VEC{x}) = \begin{cases}
 0 & \quad \text{otherwise}
 \end{cases}
 \]
-It follows from (i) that $\displaystyle h^+$ and $\displaystyle h^-$
+It follows from (i) that $\DS h^+$ and $\DS h^-$
 are integrable on $R$ and
 \[
 \int_Z h  = \int_R \Chi_Z h 
 = \int_R \Chi_Z h^+ - \int_R \Chi_Z h^-
 = \int_Z h^+ - \int_Z h^- \ .
 \]
-It suffices to prove that $\displaystyle \int_Z h^+$ and
-$\displaystyle \int_Z h^-$ are null.
+It suffices to prove that $\DS \int_Z h^+$ and
+$\DS \int_Z h^-$ are null.
 
-To prove that $\displaystyle \int_Z h^+$ is null, we prove that
-$\displaystyle \LL_P(\Chi_Z h^+) = 0$ for all partitions $P$ of $R$.
+To prove that $\DS \int_Z h^+$ is null, we prove that
+$\DS \LL_P(\Chi_Z h^+) = 0$ for all partitions $P$ of $R$.
 Let $P$ be a partition of $R$ and let
-$\displaystyle \delta = \min_{\substack{0<k_i\leq N_i\\1 \leq i \leq n}}
+$\DS \delta = \min_{\substack{0<k_i\leq N_i\\1 \leq i \leq n}}
 V(R_{k_1,k_2,\ldots,k_n})$.  We have that $\delta >0$ because there
 is a finite number of subrectangles.
 Since $Z$ has measure zero, there exists a finite collection of
-open rectangles $\displaystyle \{ R_i\}_{0 \leq i \leq N}$ such that
-$\displaystyle Z \subset \bigcup_{i=0}^N R_i$ and
-$\displaystyle \sum_{i=0}^N V(R_i) < \delta$.
+open rectangles $\DS \{ R_i\}_{0 \leq i \leq N}$ such that
+$\DS Z \subset \bigcup_{i=0}^N R_i$ and
+$\DS \sum_{i=0}^N V(R_i) < \delta$.
 We have
 \[
 m_{k_1,k_2,\ldots,k_n} = \inf \{ \Chi_Z(\VEC{x})h^+(\VEC{x}) :
@@ -647,25 +647,25 @@ m_{k_1,k_2,\ldots,k_n} = \inf \{ \Chi_Z(\VEC{x})h^+(\VEC{x}) :
 \]
 for every subrectangle $R_{k_1,k_2,\ldots,k_n}$ of the partition $P$
 because
-$\displaystyle R_{k_1,k_2,\ldots,k_n} \setminus Z \supset
+$\DS R_{k_1,k_2,\ldots,k_n} \setminus Z \supset
 R_{k_1,k_2,\ldots,k_n} \setminus \bigcup_{i=1}^\infty R_i \neq \emptyset$
 since
 \[
 V\left(\bigcup_{i=1}^\infty R_i\right)
 \leq \sum_{i=1}^\infty V(R_i) < \delta \leq V(R_{k_1,k_2,\ldots,k_n}) \ .
 \]
-Thus $\displaystyle \LL_P(\Chi_Z h^+ ) = 0$.  The proof that
-$\displaystyle \LL_P(\Chi_Z h^-) = 0$ for all partitions $P$ of $R$ is similar.
+Thus $\DS \LL_P(\Chi_Z h^+ ) = 0$.  The proof that
+$\DS \LL_P(\Chi_Z h^-) = 0$ for all partitions $P$ of $R$ is similar.
 \end{proof}
 
 \begin{rmk}
 The previous proposition is also true if $Z$           \label{rmkC0meas}
 is a closed set of measure zero.  We have that the set of points where
-$\displaystyle \Chi_Z h: R\to \RR$ is discontinuous has measure zero 
+$\DS \Chi_Z h: R\to \RR$ is discontinuous has measure zero 
 because it is a subset of $\overline{Z} = Z$ which has measure zero.
 Therefore, it follows from Theorem~\ref{Rexists} that
 $\Chi_Z h$ is integrable on $R$.  The proof that
-$\displaystyle \int_Z h = 0$ does not change.
+$\DS \int_Z h = 0$ does not change.
 
 It follows that the next corollary is also true if $Z$ is a closed set
 of measure zero.
@@ -676,10 +676,10 @@ zero.
 \end{rmk}
 
 \begin{cor} \label{corIfeIgZ0}
-Let $R$ be a rectangle in $\displaystyle \RR^n$.  Suppose that
+Let $R$ be a rectangle in $\DS \RR^n$.  Suppose that
 $f,g:R \to \RR$ are two Riemann integrable functions such that
 the set $Z = \{ \VEC{x} \in R : f(\VEC{x}) \neq g(\VEC{x}) \}$ has
-zero content.  Then $\displaystyle \int_R f = \int_R g$.
+zero content.  Then $\DS \int_R f = \int_R g$.
 \end{cor}
 
 \begin{proof}
@@ -690,16 +690,16 @@ proposition, we get
 \]
 \end{proof}
 
-\section{Bounded Curves in $\displaystyle \mathbf{\RR^n}$}
+\section{Bounded Curves in $\DS \mathbf{\RR^n}$}
 
-A {\bfseries curve}\index{Curve} in $\displaystyle \RR^n$ is the image
-of a continuous function $\displaystyle \sigma:[a,b]\to \RR^n$.
+A {\bfseries curve}\index{Curve} in $\DS \RR^n$ is the image
+of a continuous function $\DS \sigma:[a,b]\to \RR^n$.
 To simplify the discussion, we will freely refer to $\sigma$ as a
 curve though the curve is its image.  A curve $\sigma$ is
 {\bfseries closed}\index{Closed Curve} if $\sigma(a)=\sigma(b)$. 
 The domain of $\sigma$ could also be a semi-open or open interval.
 
-A bounded curve in $\displaystyle \RR^n$ should have zero content
+A bounded curve in $\DS \RR^n$ should have zero content
 (measure zero), should it not?  Unfortunately, the following example
 due to Peano shows that this is not true.
 
@@ -711,31 +711,31 @@ uniform limit of the closed curves $\sigma_i$ for $i\geq 1$ defined as
 it follows.
 \pdfbox{mult_integrals/peano}
 The curve $\sigma_i$ contains the centre of all the rectangles 
-$\displaystyle \left[\frac{j_1-1}{2^i}, \frac{j_1}{2^i}\right]\times
+$\DS \left[\frac{j_1-1}{2^i}, \frac{j_1}{2^i}\right]\times
 \left[\frac{j_2-1}{2^i}, \frac{j_2}{2^i}\right]$ for
-$\displaystyle 1\leq j_1, j_2 \leq 2^i$ and $i \geq 1$.
+$\DS 1\leq j_1, j_2 \leq 2^i$ and $i \geq 1$.
 By choosing a proper parametric representation $\sigma_i$ on $[0,1]$
 for each $i$, one can show that
-$\displaystyle \sup_{0\leq x\leq 1} \|\sigma_i(x) - \sigma_{i+1}(x)\| \leq
+$\DS \sup_{0\leq x\leq 1} \|\sigma_i(x) - \sigma_{i+1}(x)\| \leq
 \frac{1}{2^{i+1}}$ for $i \geq 1$ as it is illustrated in green in the
 figure above for $i=1$.
 \end{egg}
 
 However, if we require that the curve
-$\displaystyle \sigma:[a,b]\to \RR^n$ be continuously differentiable,
+$\DS \sigma:[a,b]\to \RR^n$ be continuously differentiable,
 then the image of the curve $\sigma$ must have zero content.
 
 \begin{prop}\label{curveC1zero}
-Suppose that $\displaystyle \sigma:[a,b]\to \RR^n$ belongs to
-$\displaystyle C^1([a,b])$.  Then $\sigma([a,b])$ has zero content.
+Suppose that $\DS \sigma:[a,b]\to \RR^n$ belongs to
+$\DS C^1([a,b])$.  Then $\sigma([a,b])$ has zero content.
 \end{prop}
 
 \begin{proof}
-We prove the proposition for $\displaystyle \sigma:[a,b]\to \RR^2$
+We prove the proposition for $\DS \sigma:[a,b]\to \RR^2$
 only.  The proof is (almost) identical for
-$\displaystyle \sigma:[a,b]\to \RR^n$.
+$\DS \sigma:[a,b]\to \RR^n$.
 
-Let $\displaystyle C = \sup \{ \|\sigma'(t)\| : t \in [a,b] \}$.
+Let $\DS C = \sup \{ \|\sigma'(t)\| : t \in [a,b] \}$.
 Note that $C < \infty$ because $\sigma'$ is continuous on the compact set
 $[a,b]$.  Moreover,
 \[
@@ -745,7 +745,7 @@ $[a,b]$.  Moreover,
 for all $t\in [a,b]$ and $i=1$ or $2$.
 
 Given $\epsilon>0$, choose $K>0$ large enough such that
-$\displaystyle 2C^2(b-a)^2/K < \epsilon$.  Let
+$\DS 2C^2(b-a)^2/K < \epsilon$.  Let
 $T=\{t_i: 0 \leq i \leq K\}$ be the partition of $[a,b]$ with
 $t_i = a+i(b-a)/K$ for $0 \leq i \leq K$.
 
@@ -765,10 +765,10 @@ Hence
 for every $s_1$ and $s_2$ in $[t_{i-1},t_i]$ and $0 < i \leq K$.
 Therefore, for each $0 < i \leq K$, we can choose a rectangle $R_i$
 with sides parallel to the axis and
-$\displaystyle A(R_i) \leq \left( \sqrt{2} C(b-a)/K\right)^2
+$\DS A(R_i) \leq \left( \sqrt{2} C(b-a)/K\right)^2
 = 2C^2(b-a)^2/K^2$ such that
 $\sigma([t_{i-1},t_i]) \subset R_i$.  Thus
-$\displaystyle \sigma([a,b]) \subset \bigcup_{i=1}^K R_i$ with
+$\DS \sigma([a,b]) \subset \bigcup_{i=1}^K R_i$ with
 \[
 \sum_{i=1}^K A(R_i) \leq \sum_{i=1}^K \frac{2C^2(b-a)^2}{K^2}
 = \frac{2C^2(b-a)^2}{K} < \epsilon \ .
@@ -812,7 +812,7 @@ Then $g$ and $G$ are integrable on $I_2$ and
 \begin{proof}
 We prove only (1), the proof of (2) is similar.
 
-Let $\displaystyle P_j=\{ p_{i,j} : 0 \leq i \leq N_j\}$ be a partition
+Let $\DS P_j=\{ p_{i,j} : 0 \leq i \leq N_j\}$ be a partition
 of $I_j$ for $j=1$ and $2$.  Then $P= \{P_1,P_2\}$
 is a partition of $R = I_1\times I_2$.  The subrectangles $R_{i,j}$ of the
 partition $R$ are of the form
@@ -844,8 +844,8 @@ It follows from (\ref{fub1}) that
 \begin{equation} \label{fub2}
 \LL_P(f) \leq \sum_{i=1}^{N_1} h(x_1^{[i]}) (p_{i,1}-p_{i-1,1})
 \end{equation}
-for all $\displaystyle x_1^{[i]} \in [p_{i-1,1},p_{i,1}]$
-with $0 < i \leq N_1$.  If $\displaystyle
+for all $\DS x_1^{[i]} \in [p_{i-1,1},p_{i,1}]$
+with $0 < i \leq N_1$.  If $\DS
 m_i = \inf \{ h(x_1^{[i]}) : p_{i-1,1}\leq x_1^{[i]} \leq p_{i,1} \}$ for all $i$,
 then it follows from (\ref{fub2}) that
 \begin{equation} \label{fub3}
@@ -877,8 +877,8 @@ It follows from (\ref{fub1v2}) that
 \begin{equation} \label{fub2v2}
 \U_P(f) \geq \sum_{i=1}^{N_1} H(x_1^{[i]}) (p_{i,1}-p_{i-1,1})
 \end{equation}
-for all $\displaystyle x_1^{[i]} \in [p_{i-1,1},p_{i,1}]$
-with $0 < i \leq N_1$.  If $\displaystyle
+for all $\DS x_1^{[i]} \in [p_{i-1,1},p_{i,1}]$
+with $0 < i \leq N_1$.  If $\DS
 M_i = \sup \{ H(x_1^{[i]}) : p_{i-1,1}\leq x_1^{[i]} \leq p_{i,1} \}$ for all $i$,
 then it follows from (\ref{fub2v2}) that
 \begin{equation} \label{fub3v2}
@@ -901,14 +901,14 @@ We get from (\ref{fub7}) that
 \U_{P_1}(h) - \LL_{P_1}(h) \leq \U_P(f) - \LL_P(f) < \epsilon \ .
 \]
 Since $\epsilon$ is arbitrary, it follows from the version of
-Theorem~\ref{intCauchyCR} in $\displaystyle \RR^n$ that
+Theorem~\ref{intCauchyCR} in $\DS \RR^n$ that
 $h:I_1\to \RR$ is integrable.  Moreover, we get from (\ref{fub7}) that
 $\LL_P(f) \leq \LL_{P_1}(h) \leq \LL(h)$ for all partitions $P$ of
 $R$.  Thus $\LL(f) \leq \LL(h)$.  Similarly, we get from (\ref{fub7})
 that $\U(h) \leq \U_{P_1}(h) \leq \U_P(f)$ for all partitions $P$ of $R$.
 Thus $\U(h) \leq \U(f)$.  We have shown that
 $\LL(f) \leq \LL(h) \leq \U(h) \leq \U(f)$.  Since $f$ is integrable on
-$R$, we have $\displaystyle \LL(f) = \U(f) = \int_R f$.  Hence
+$R$, we have $\DS \LL(f) = \U(f) = \int_R f$.  Hence
 \[
 \int_{I_1} h(x_1) \dx{x_1} = \LL(h) = \U(h) = \LL(f) = \U(f) = \int_R f \ .
 \]
@@ -930,14 +930,14 @@ We get from (\ref{fub7v2}) that
 \U_{P_1}(H) - \LL_{P_1}(H) \leq \U_P(f) - \LL_P(f) < \epsilon \ .
 \]
 Since $\epsilon$ is arbitrary, it follows from the version of
-Theorem~\ref{intCauchyCR} in $\displaystyle \RR^n$ that
+Theorem~\ref{intCauchyCR} in $\DS \RR^n$ that
 $H:I_1\to \RR$ is integrable.  Moreover, we get from (\ref{fub7v2}) that
 $\U_P(f) \geq \U_{P_1}(H) \geq \U(H)$ for all partitions $P$ of
 $R$.  Thus $\U(f) \geq \U(H)$.  Similarly, we get from (\ref{fub7v2})
 that $\LL(H) \geq \LL_{P_1}(H) \geq \LL_P(f)$ for all partitions $P$ of $R$.
 Thus $\LL(H) \geq \LL(f)$.  We have shown that
 $\LL(f) \leq \LL(H) \leq \U(H) \leq \U(f)$.  Since $f$ is integrable on
-$R$, we have $\displaystyle \LL(f) = \U(f) = \int_R f$.  Hence
+$R$, we have $\DS \LL(f) = \U(f) = \int_R f$.  Hence
 \[
 \int_{I_1} H(x_1) \dx{x_1} = \LL(H) = \U(H) = \LL(f) = \U(f) = \int_R f \ .
 \qedhere
@@ -948,7 +948,7 @@ $R$, we have $\displaystyle \LL(f) = \U(f) = \int_R f$.  Hence
 \begin{enumerate}
 \item If $f:I_1 \times I_2 \to \RR$ is Riemann integrable and
 $f_{x_1}$ is Riemann integrable for all $x_1$, then
-$\displaystyle h(x_1) = H(x_1) = \int_{I_2} f(x_1,x_2) \dx{x_2}$
+$\DS h(x_1) = H(x_1) = \int_{I_2} f(x_1,x_2) \dx{x_2}$
 and we get from Fubini's Theorem that
 \[
 \int_{I_1 \times I_2} f = \int_{I_1}
@@ -957,7 +957,7 @@ and we get from Fubini's Theorem that
 This is called an {\bfseries iterated integral}\index{Iterated Integral}.
 \item Similarly to (1), if $f:I_1 \times I_2 \to \RR$ is Riemann integrable and
 $f_{x_2}$ is Riemann integrable for all $x_2$, then
-$\displaystyle g(x_2) = G(x_2) = \int_{I_1} f(x_1,x_2) \dx{x_1}$ and
+$\DS g(x_2) = G(x_2) = \int_{I_1} f(x_1,x_2) \dx{x_1}$ and
 we get from Fubini's Theorem that
 \[
 \int_{I_1\times I_2} f = \int_{I_2}
@@ -977,8 +977,8 @@ Consider the function $f:[0,1]\times [0,1]\to \RR$ defined by
 \[
 f(x_1,x_2) =
 \begin{cases}
-\displaystyle 1-\frac{1}{q} &
-\qquad \displaystyle \text{if} \ x_2 \in [0,1]\cap \QQ 
+\DS 1-\frac{1}{q} &
+\qquad \DS \text{if} \ x_2 \in [0,1]\cap \QQ 
 \text{ and } x_1 = \frac{p}{q}\ \text{where} \\
 & \qquad \qquad 0 < p \leq q \ \text{are relatively prime.} \\
 1 & \qquad \text{otherwise}
@@ -986,7 +986,7 @@ f(x_1,x_2) =
 \]
 
 \stage{i} We first prove that $f$ is Riemann integrable on $S =
-[0,1]\times [0,1]$ and $\displaystyle \int_S f = 1$.  Given
+[0,1]\times [0,1]$ and $\DS \int_S f = 1$.  Given
 $\epsilon>0$, we choose $q_0 \in \NN$ large enough such that
 $1/q_0 < \epsilon/2$.  We also choose a partition
 $P = \{ P_1, P_2 \}$ of $S$ where
@@ -1019,9 +1019,9 @@ $a_k \not\in [x_{i-1,1},x_{i,1}]$ for all $k$, and the second sum is over all
 subrectangles $R_{i,j}$ such that $a_k \in [x_{i-1,1},x_{i,1}]$ for some $k$.
 
 We have
-$\displaystyle \sum\nolimits' \frac{1}{q_0} (p_{i,1}-p_{i-1,1})(p_{j,2}-p_{j-1,2})
+$\DS \sum\nolimits' \frac{1}{q_0} (p_{i,1}-p_{i-1,1})(p_{j,2}-p_{j-1,2})
 < \frac{\epsilon}{2}$ because
-$\displaystyle \frac{1}{q_0} < \frac{\epsilon}{2}$ and
+$\DS \frac{1}{q_0} < \frac{\epsilon}{2}$ and
 \[
 \sum\nolimits' (p_{i,1}-p_{i-1,1})(p_{j,2}-p_{j-1,2})
 \leq \sum_{\substack{0<i\leq N_1\\0<j\leq N_2}}
@@ -1040,12 +1040,12 @@ we also have
 We get from (\ref{fub4}) that $\U_P(f) - \LL_P(f) < \epsilon$.
 Since $\epsilon$ is arbitrary, it follows that $f$ is integrable on
 $S$ according to the version of Theorem~\ref{intCauchyCR} in
-$\displaystyle \RR^n$.
+$\DS \RR^n$.
 Since $\U_P(f) = 1$ for all partition $P$ of $S$, we have
-$\displaystyle \int_S f = \U(f) = 1$.
+$\DS \int_S f = \U(f) = 1$.
 
 \stage{ii}
-However, $\displaystyle \int_0^1 f_{x_1}(x_2) \dx{x_2} = 1$ for
+However, $\DS \int_0^1 f_{x_1}(x_2) \dx{x_2} = 1$ for
 $x_1\in \{0\} \cup [0,1]\setminus \QQ$ but $f_{x_1}$ is not Riemann
 integrable for $x_1\in \QQ \cap ]0,1]$.  To prove that $f_{x_1}$ is
 not Riemann integrable for $x_1\in \QQ \cap ]0,1]$, suppose that
@@ -1054,31 +1054,31 @@ $x_1 = p/q$ where $0 < p \leq q$ are relatively prime.  Then
 f_{x_1}(x_2) =
 \begin{cases}
 1 & \quad \text{if} \ x_2 \in [0,1]\setminus \QQ \\
-\displaystyle 1-\frac{1}{q} & \quad \text{if} \ x_2 \in \QQ \cap [0,1]
+\DS 1-\frac{1}{q} & \quad \text{if} \ x_2 \in \QQ \cap [0,1]
 \end{cases}
 \]
 This function is not Riemann integrable according to
 Theorem~\ref{thRIiffMZ} because $f_{x_1}$ is discontinuous at all
 points of $[0,1]$ which is not a set of measure zero.  Since
 $Q \cap ]0,1]$ does not have measure zero, 
-$\displaystyle x_1 \mapsto \displaystyle \int_0^1 f(x_1,x_2)\dx{x_2}$
+$\DS x_1 \mapsto \DS \int_0^1 f(x_1,x_2)\dx{x_2}$
 cannot define a Riemann integrable function on $[0,1]$.
 
 \stage{iii} We cannot use (1) above to define an iterated integral for
-$\displaystyle \int_S f$.  However, Fubini's Theorem can be used.
+$\DS \int_S f$.  However, Fubini's Theorem can be used.
 We have
 \[
 h(x_1) =
 \begin{cases}
-\displaystyle 1 - \frac{1}{q} & \displaystyle \quad \text{if} \
+\DS 1 - \frac{1}{q} & \DS \quad \text{if} \
 x_1 = \frac{p}{q} \ \text{where} \ 0 < p \leq q \
 \text{are relatively prime}. \\
 1 & \quad \text{if} \ x_1 \in \{0\} \cup [0,1]\setminus \QQ
 \end{cases}
 \]
-and $\displaystyle \int_0^1 h(x_1) \dx{x_1} = 1$.  The proof that this last
+and $\DS \int_0^1 h(x_1) \dx{x_1} = 1$.  The proof that this last
 integral is equal to $1$ is similar to (in fact, is a stripped version
-of) the proof that $\displaystyle \int_S f = 1$ above.
+of) the proof that $\DS \int_S f = 1$ above.
 \item It is possible for both iterated integrals in (1) and (2) to
 exist, and even be equal, but that the function
 $f:I_1 \times I_2 \to \RR$ not be Riemann integrable.
@@ -1092,8 +1092,8 @@ Let
 I_{i,j,k} = \left[ \frac{j-1}{2^i}, \frac{j}{2^i}\right] \times
 \left[ \frac{k-1}{2^i}, \frac{k}{2^i}\right]
 \]
-for $\displaystyle 0 <j,k \leq 2^i$.  For each $i>0$, we have
-$\displaystyle S = \bigcup_{0<j,k\leq 2^i} I_{i,j,k}$.
+for $\DS 0 <j,k \leq 2^i$.  For each $i>0$, we have
+$\DS S = \bigcup_{0<j,k\leq 2^i} I_{i,j,k}$.
 For $i=1$, the set $S$ is the union of four squares; namely,
 \[
 S = \bigcup_{0<j,k\leq 2} I_{1,j,k}
@@ -1110,19 +1110,19 @@ each of these points is the unique point of $Q_1 \cup Q_2$ on the
 horizontal and vertical lines on which it belongs.  We have by
 construction that $Q_1 \cap Q_2 = \emptyset$.
 Suppose that we have constructed $Q_1$, $Q_2$, \ldots, $Q_{s-1}$.  For
-$i=s$, the set $S$ is the union of $\displaystyle 2^{2s}$ squares.  Let
+$i=s$, the set $S$ is the union of $\DS 2^{2s}$ squares.  Let
 $Q_s$ be the set containing one point from each square such that
 each of these points is the unique point of
-$\displaystyle \bigcup_{i=1}^{s} Q_i$ on the horizontal and vertical
+$\DS \bigcup_{i=1}^{s} Q_i$ on the horizontal and vertical
 lines on which it belongs.  We have by construction that
-$\displaystyle Q_s \cap \left( \bigcup_{i=1}^{s-1} Q_i \right) = \emptyset$.
+$\DS Q_s \cap \left( \bigcup_{i=1}^{s-1} Q_i \right) = \emptyset$.
 We have an inductive method to define all the sets $Q_s$.
 
-The set $Q$ is the set $\displaystyle Q = \bigcup_{s=1}^{\infty} Q_s$.
+The set $Q$ is the set $\DS Q = \bigcup_{s=1}^{\infty} Q_s$.
 We have that $\overline{Q} = S$ because every open subset of $S$
 contains squares of the form $I_{i,j,k}$ for $i$ large enough and
 each of these squares contains a point of $Q$.  We also have that
-$\displaystyle Q^\circ = \emptyset$ because there is at most one point
+$\DS Q^\circ = \emptyset$ because there is at most one point
 of $Q$ on each horizontal and vertical lines.  Therefore, every open
 subset contains points that are not in $Q$.  Thus $\partial Q = S$.
 
@@ -1132,10 +1132,10 @@ not of measure zero.
 However $x_2 \mapsto \chi_Q(x_1,x_2)$ is Riemann integrable on $I$ for all
 $x_1\in I$ because $\Chi_Q(x_1,x_2) = 0$ for all $x_2\in I$ but at
 most one point.  Since
-$\displaystyle \int_I \chi_Q(x_1,x_2) \dx{x_2} = 0$ for all $x_1\in I$, we get
-$\displaystyle \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_2} \right)
+$\DS \int_I \chi_Q(x_1,x_2) \dx{x_2} = 0$ for all $x_1\in I$, we get
+$\DS \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_2} \right)
 \dx{x_1}= 0$.  Similarly, we get
-$\displaystyle \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_1} \right)
+$\DS \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_1} \right)
 \dx{x_2}= 0$.
 \end{enumerate}
 \end{rmkList}
@@ -1143,24 +1143,24 @@ $\displaystyle \int_I \left( \int_I \chi_Q(x_1,x_2) \dx{x_1} \right)
 \section{Partition of Unity}
 
 \begin{theorem}\label{cov1}
-Let $\displaystyle \{U_\alpha\}_{\alpha \in A}$ be an open cover of
-$\displaystyle W \subset \RR^n$; namely,
+Let $\DS \{U_\alpha\}_{\alpha \in A}$ be an open cover of
+$\DS W \subset \RR^n$; namely,
 $U_\alpha$ is an open set for every $\alpha$ and
-$\displaystyle W \subset \bigcup_{\alpha \in A} U_\alpha$.  There exist
+$\DS W \subset \bigcup_{\alpha \in A} U_\alpha$.  There exist
 an open set $V \supset W$ and a collection
-$\displaystyle \{\phi_j\}_{j \in \NNp}$ of
-functions in $\displaystyle C^\infty(V)$ such that:
+$\DS \{\phi_j\}_{j \in \NNp}$ of
+functions in $\DS C^\infty(V)$ such that:
 \begin{enumerate}
 \item $0 \leq \phi_j(\VEC{x}) \leq 1$ for all
-$\displaystyle \VEC{x} \in V$ and all $\displaystyle j \in \NNp$.
+$\DS \VEC{x} \in V$ and all $\DS j \in \NNp$.
 \item For each $\VEC{x}\in W$, there exists an open neighbourhood
 $W_{\VEC{x}} \subset V$ of $\VEC{x}$ such that
-$\displaystyle \phi_j\big|_{W_\VEC{x}} = 0$ for all but a finite
+$\DS \phi_j\big|_{W_\VEC{x}} = 0$ for all but a finite
 number of $\phi_j$.
 \item For each $\VEC{x} \in W$, we have
-$\displaystyle \sum_{j \in \NNp} \phi_j(\VEC{x}) = 1$.  This sum
+$\DS \sum_{j \in \NNp} \phi_j(\VEC{x}) = 1$.  This sum
 is finite according to (2).
-\item For each $\displaystyle j \in \NNp$, we have that
+\item For each $\DS j \in \NNp$, we have that
 $\supp \phi_j$ is a compact set and
 $\supp \phi_j \subset U_\alpha$ for some $\alpha \in A$.
 \end{enumerate}
@@ -1168,7 +1168,7 @@ $\supp \phi_j \subset U_\alpha$ for some $\alpha \in A$.
 
 \begin{proof}
 \stage{i} If $W$ is compact, then there exists a finite subcover 
-$\displaystyle \{U_{\alpha_i}: 1 \leq i \leq N\}$ of $W$.
+$\DS \{U_{\alpha_i}: 1 \leq i \leq N\}$ of $W$.
 For each $\VEC{x} \in W$, there exist $0 < r_{\VEC{x},1} < r_{\VEC{x},2}$
 such that
 \[
@@ -1176,10 +1176,10 @@ such that
   \subset \overline{B_{r_{\VEC{x},2}}(\VEC{x})} \subset U_{\alpha_i}
 \]
 for $\alpha_i \in A$.
-Since $\displaystyle \{B_{r_{\VEC{x},1}}(\VEC{x}) \}_{\VEC{x} \in W}$
+Since $\DS \{B_{r_{\VEC{x},1}}(\VEC{x}) \}_{\VEC{x} \in W}$
 is an open cover of the compact set $W$, there exists a finite
 subcover
-$\displaystyle \{B_{r_{\VEC{x}_k,1}}(\VEC{x}_k) : 1 \leq k \leq M \}$
+$\DS \{B_{r_{\VEC{x}_k,1}}(\VEC{x}_k) : 1 \leq k \leq M \}$
 of $W$.  For each $1 \leq k \leq M$, let
 \begin{align*}
 &\psi_k(\VEC{x}) = \\
@@ -1192,29 +1192,29 @@ e^{-1/(r_{\VEC{x}_k,2}^2 - \|\VEC{x} - \VEC{x}_k\|^2)}
 0 & \quad \text{if} \ \|\VEC{x} - \VEC{x}_k\| \geq r_{\VEC{x}_j,2}
 \end{cases}
 \end{align*}
-for $\displaystyle \VEC{x} \in \RR^n$.
-We have $\displaystyle \psi_k \in C^\infty(\RR^n)$,
-$0 \leq \psi_k(\VEC{x}) \leq 1$ for all $\displaystyle \VEC{x} \in \RR^n$,
+for $\DS \VEC{x} \in \RR^n$.
+We have $\DS \psi_k \in C^\infty(\RR^n)$,
+$0 \leq \psi_k(\VEC{x}) \leq 1$ for all $\DS \VEC{x} \in \RR^n$,
 $\psi_k(\VEC{x}) = 1$ for all $\VEC{x} \in B_{r_{\VEC{x}_k,1}}(\VEC{x}_k)$,
 and
 $\supp \psi_k \subset \overline{B_{r_{\VEC{x}_k,2}}(\VEC{x}_k)}
 \subset U_{\alpha_i}$ for some $\alpha_i \in A$.
 
 Let $\phi_1 = \psi_1$ and
-$\displaystyle \phi_{j+1} = \psi_{j+1}\prod_{k=1}^j(1-\psi_k)$
+$\DS \phi_{j+1} = \psi_{j+1}\prod_{k=1}^j(1-\psi_k)$
 for $1 <j < M$.
 
 \begin{enumerate}
 \item We have
 $0 \leq \phi_j(\VEC{x}) \leq 1$ for all
-$\displaystyle \VEC{x} \in \RR^n$ and $1 \leq j \leq M$ because
+$\DS \VEC{x} \in \RR^n$ and $1 \leq j \leq M$ because
 $\phi_j$ is the product of functions whose image is in $[0,1]$.
 \item For each $\VEC{x}\in W$, it is obvious that there exists an
-open neighbourhood $\displaystyle W_{\VEC{x}} \subset \RR^n$ of
+open neighbourhood $\DS W_{\VEC{x}} \subset \RR^n$ of
 $\VEC{x}$ such that
-$\displaystyle \phi_j\big|_{W_\VEC{x}} = 0$ for all but a finite
+$\DS \phi_j\big|_{W_\VEC{x}} = 0$ for all but a finite
 number of $\phi_j$ because there is only a finite number of $\phi_j$.
-\item To prove that $\displaystyle \sum_{j=1}^M\phi_j(\VEC{x}) = 1$
+\item To prove that $\DS \sum_{j=1}^M\phi_j(\VEC{x}) = 1$
 for all $\VEC{x} \in W$, we first prove by induction that
 \begin{equation} \label{thPofUEq1}
 \sum_{j=1}^m \phi_j = 1 - \prod_{j=1}^m(1-\psi_j)
@@ -1236,7 +1236,7 @@ the proof by induction.  It follows from (\ref{thPofUEq1}) that
 for all $\VEC{x} \in W$ because every $\VEC{x} \in W$ is element
 of $B_{r_{\VEC{x}_k,1}}(\VEC{x}_k)$ for at least one $k$ and
 $\psi_k(\VEC{y}) = 1$ for all $\VEC{y} \in B_{r_{\VEC{x}_k,1}}(\VEC{x}_k)$.
-Therefore, $\displaystyle \sum_{j=1}^M \phi_j(\VEC{x}) = 1$
+Therefore, $\DS \sum_{j=1}^M \phi_j(\VEC{x}) = 1$
 for all $\VEC{x} \in W$.
 \item Since $\supp \phi_j \subset \supp \psi_j \subset
 \overline{B_{r_{\VEC{x}_j,2}}(\VEC{x}_j)}$, we have that
@@ -1244,47 +1244,47 @@ $\supp \phi_j$ is a compact set because it is closed and bounded.
 We also have $\supp \phi_j \subset U_{\alpha_j}$.
 \end{enumerate}
 All the conclusions of the theorem are satisfied by the collection
-$\displaystyle \{\phi_j\}_{1 \leq j \leq M}$.
+$\DS \{\phi_j\}_{1 \leq j \leq M}$.
 
-\stage{ii} Suppose that $\displaystyle W = \bigcup_{j=0}^\infty W_j$
+\stage{ii} Suppose that $\DS W = \bigcup_{j=0}^\infty W_j$
 where each $W_j$ is compact and
-$\displaystyle W_j \subset W_{j+1}^\circ$ for all $j$.
+$\DS W_j \subset W_{j+1}^\circ$ for all $j$.
 We also assume that $W_0 = \emptyset$ to simplify the discussion.
 Let $V_1 = W_1$ and
-$\displaystyle V_j = W_j \setminus W_{j-1}^\circ$ for $j \geq 2$.
+$\DS V_j = W_j \setminus W_{j-1}^\circ$ for $j \geq 2$.
 
-Let $\displaystyle U_{\alpha,1} = U_\alpha \cap W_2^\circ$ for all $\alpha \in A$.
+Let $\DS U_{\alpha,1} = U_\alpha \cap W_2^\circ$ for all $\alpha \in A$.
 Since $V_1$ is a compact set and
-$\displaystyle \{U_{\alpha,1}\}_{\alpha \in A}$ is an open cover of $V_1$,
-we may use (i) to find $\displaystyle \{\psi_{k,1}: 1 \leq k \leq N_1\}$
+$\DS \{U_{\alpha,1}\}_{\alpha \in A}$ is an open cover of $V_1$,
+we may use (i) to find $\DS \{\psi_{k,1}: 1 \leq k \leq N_1\}$
 such that $0 \leq \psi_{k,1}(\VEC{x}) \leq 1$ for all
-$\displaystyle \VEC{x} \in \RR^n$ and $1\leq k \leq N_1$,
-$\displaystyle \sum_{k=1}^{N_1} \psi_{k,1}(\VEC{x}) = 1$ for all
+$\DS \VEC{x} \in \RR^n$ and $1\leq k \leq N_1$,
+$\DS \sum_{k=1}^{N_1} \psi_{k,1}(\VEC{x}) = 1$ for all
 $\VEC{x} \in V_1$, and $\supp \psi_{k,1}$ is a compact set with
 $\supp \psi_{k,1} \subset U_{\alpha_{k,1}}$ for some $\alpha_{k,1} \in A$.
 
-For $j \geq 2$, let $\displaystyle U_{\alpha,j} = U_\alpha \cap
+For $j \geq 2$, let $\DS U_{\alpha,j} = U_\alpha \cap
 \left(W_{j+1}^\circ\setminus W_{j-2}\right)$ for all $\alpha \in A$.
 Since $V_j$ is a compact set and
-$\displaystyle \{U_{\alpha,j}\}_{\alpha\in A}$ is an open cover of $V_j$,
-we may use (i) to find $\displaystyle \{\psi_{k,j}: 1 \leq k \leq N_j\}$
+$\DS \{U_{\alpha,j}\}_{\alpha\in A}$ is an open cover of $V_j$,
+we may use (i) to find $\DS \{\psi_{k,j}: 1 \leq k \leq N_j\}$
 such that
 $0 \leq \psi_{k,j}(\VEC{x}) \leq 1$ for all
-$\displaystyle \VEC{x} \in \RR^n$ and $1\leq k \leq N_j$,
-$\displaystyle \sum_{k=1}^{N_j} \psi_{k,j}(\VEC{x}) = 1$ for all
+$\DS \VEC{x} \in \RR^n$ and $1\leq k \leq N_j$,
+$\DS \sum_{k=1}^{N_j} \psi_{k,j}(\VEC{x}) = 1$ for all
 $\VEC{x} \in V_j$, and
 $\supp \psi_{k,j}$ is a compact set with
 $\supp \psi_{k,j} \subset U_{\alpha_{k,j}}$ for some $\alpha_{k,j} \in A$.
 
 \pdfbox{mult_integrals/partunit}
 
-Let $\displaystyle \psi(\VEC{x})
+Let $\DS \psi(\VEC{x})
 = \sum_{j=1}^\infty \sum_{k=1}^{N_j} \psi_{k,j}(\VEC{x})$ for
-$\displaystyle \VEC{x} \in \RR^n$.  We first note that the sum is
+$\DS \VEC{x} \in \RR^n$.  We first note that the sum is
 finite for each $\VEC{x}$ because $\psi_{k,j}(\VEC{x}) = 0$ if
-$\displaystyle \VEC{x} \not\in W_{j+1}^\circ\setminus W_{j-2}$ by construction.
+$\DS \VEC{x} \not\in W_{j+1}^\circ\setminus W_{j-2}$ by construction.
 Moreover, if $\VEC{x} \in W$, then $\VEC{x} \in V_q$ for some $q \geq 1$
-because $\displaystyle \VEC{x} \in W = \bigcup_{j=1}^\infty V_j$.  Hence
+because $\DS \VEC{x} \in W = \bigcup_{j=1}^\infty V_j$.  Hence
 \[
 \psi(\VEC{x})
 = \sum_{\substack{j \text{ such that}\\
@@ -1298,31 +1298,31 @@ Since $\psi(x) = 1$ for all $\VEC{x} \in W$ and $\psi$ is continuous,
 we can find for each $\VEC{x} \in W$ an open neighbourhood
 $V_{\VEC{x}}$ of $\VEC{x}$ such that $\psi(\VEC{y}) > 1/2$ 
 for all $\VEC{y} \in V_{\VEC{x}}$.  We may take
-$\displaystyle V = \bigcup_{\VEC{x}\in W} V_{\VEC{x}}$.}.
+$\DS V = \bigcup_{\VEC{x}\in W} V_{\VEC{x}}$.}.
 Let
 \[
 \rho_{k,j}(\VEC{x}) = \frac{\psi_{k,j}(\VEC{x})}{\psi(\VEC{x})}
 \]
 for $\VEC{x} \in V$, $j \geq 1$ and $1 \leq k \leq N_j$.
-We have that $\displaystyle \rho_{k,j} \in C^\infty(V)$ because
-$\psi_{k,j}$ and $\psi$ are in $\displaystyle C^\infty(V)$, and
-$\psi(\VEC{x}) \neq 0$ for all $\displaystyle \VEC{x} \in V$.
+We have that $\DS \rho_{k,j} \in C^\infty(V)$ because
+$\psi_{k,j}$ and $\psi$ are in $\DS C^\infty(V)$, and
+$\psi(\VEC{x}) \neq 0$ for all $\DS \VEC{x} \in V$.
 
 \begin{enumerate}
 \item We have by construction that
 $0 \leq \rho_{k,j}(\VEC{x}) \leq 1$ for all
-$\displaystyle \VEC{x} \in V$, $j \geq 1$ and $1 \leq k \leq N_j$.
+$\DS \VEC{x} \in V$, $j \geq 1$ and $1 \leq k \leq N_j$.
 \item There exists an open neighbourhood
 $W_{\VEC{x}} \subset V$ of $\VEC{x} \in W$
 such that $\rho_{k,j}\big|_{W_\VEC{x}} = 0$ for all but a finite
 number of the $\rho_{k,j}$.  More precisely, given
 $\VEC{x} \in W$, we have $\VEC{x} \in V_j$ for some $j$.
 Since $\rho_{k,q}(\VEC{y}) = 0$ for all
-$\displaystyle \VEC{y} \in W_{j+1}^\circ \setminus W_{j-2}$
+$\DS \VEC{y} \in W_{j+1}^\circ \setminus W_{j-2}$
 if $q<j-2$ and $q>j+1$, it suffices to choose an open neighbourhood
-$\displaystyle W_{\VEC{x}} \subset W_{j+1}^\circ \setminus W_{j-2}$ of $\VEC{x}$.
+$\DS W_{\VEC{x}} \subset W_{j+1}^\circ \setminus W_{j-2}$ of $\VEC{x}$.
 \item We also have by construction that
-$\displaystyle \sum_{j=1}^\infty \sum_{k=1}^{N_j}
+$\DS \sum_{j=1}^\infty \sum_{k=1}^{N_j}
 \rho_{k,j}(\VEC{x}) = 1$ for all $\VEC{x} \in W$.
 \item Since $\supp \rho_{k,j} = \supp \psi_{k,j}$, we
 have that $\rho_{k,j}$ has a compact support because
@@ -1331,27 +1331,27 @@ $\supp \rho_{k,j} = \supp \psi_{k,j}
 \subset U_{\alpha_{k,j}}$ for some $\alpha_{k,j} \in A$
 for each $j \geq 1$ and $1 \leq k \leq N_j$.
 \end{enumerate}
-The collection $\displaystyle \{\phi_j\}_{j \in \NNp}$ that satisfies
+The collection $\DS \{\phi_j\}_{j \in \NNp}$ that satisfies
 all the conclusions of the theorem is defined as it follows.
 $\phi_j = \rho_{j,1} $ for $1 \leq j \leq N_1$ and
 $\phi_j = \rho_{k,q} $ for
-$\displaystyle j = \sum_{i=1}^{q-1} N_i + k$ and
+$\DS j = \sum_{i=1}^{q-1} N_i + k$ and
 $1 \leq k \leq N_q$ with $q >1$.
 
 \stage{iii} If $W$ is an open set, then
-$\displaystyle W = \bigcup_{j=j}^\infty W_j$ where
-$\displaystyle W_j = \{\VEC{x} : \dist{\VEC{x}}{\RR^n \setminus W}
+$\DS W = \bigcup_{j=j}^\infty W_j$ where
+$\DS W_j = \{\VEC{x} : \dist{\VEC{x}}{\RR^n \setminus W}
 \geq 1/j\} \cap \{\VEC{x} : \|\VEC{x}\| \leq j\}$.  The sets $W_j$ are
-compact and $\displaystyle W_j \subset W_{j+1}^\circ$ for all $j\geq
+compact and $\DS W_j \subset W_{j+1}^\circ$ for all $j\geq
 1$.  We may therefore used (ii).  If $W$ is not open, then we use (ii) with
-the open set $\displaystyle \bigcup_{\alpha \in A} U_\alpha\supset W$
+the open set $\DS \bigcup_{\alpha \in A} U_\alpha\supset W$
 instead of $W$.
 \end{proof}
 
 \begin{rmk}
 In the previous theorem, if $\{U_i\}_{1\leq i \leq N}$    \label{rmkFPUcase}
 is a finite open cover of a compact set
-$\displaystyle W \subset \RR^n$, then the
+$\DS W \subset \RR^n$, then the
 first part of the proof proves that we can choose a finite partition of unity
 $\{ \phi_i \}_{1 \leq i \leq N}$ subordinate to the open cover
 $\{U_i\}_{1\leq i \leq N}$ of $W$ such that $\supp \phi_i \subset U_i$
@@ -1361,16 +1361,16 @@ new $\phi_i$, and to reorder the $\phi_i$.
 \end{rmk}
 
 \begin{defn}
-The collection $\displaystyle \{\phi_j\}_{j \in \NNp}$ of the
+The collection $\DS \{\phi_j\}_{j \in \NNp}$ of the
 previous theorem is called a
 {\bfseries partition of unity}\index{Partition of Unity}
-subordinated to the open cover $\displaystyle \{U_\alpha\}_{\alpha\in A}$
+subordinated to the open cover $\DS \{U_\alpha\}_{\alpha\in A}$
 of $W$.
 \end{defn}
 
 \begin{prop} \label{cov4}
-Suppose that $\displaystyle \{\phi_j\}_{i \in \NNp}$ is a partition of
-unity subordinated to the open cover $\displaystyle \{U_\alpha\}_{\alpha\in A}$
+Suppose that $\DS \{\phi_j\}_{i \in \NNp}$ is a partition of
+unity subordinated to the open cover $\DS \{U_\alpha\}_{\alpha\in A}$
 of $W$.  If $K\subset W$ is a compact set, then there exist only a finite
 number of functions $\phi_j$ such that $\phi_j\big|_K \neq 0$.
 \end{prop}
@@ -1378,18 +1378,18 @@ number of functions $\phi_j$ such that $\phi_j\big|_K \neq 0$.
 \begin{proof}
 For each $\VEC{x} \in K$, let $W_{\VEC{x}}$ be the open set given in
 (2) of Theorem~\ref{cov1}.  Then
-$\displaystyle \{W_{\VEC{x}}\}_{\VEC{x} \in K}$ is an open cover
+$\DS \{W_{\VEC{x}}\}_{\VEC{x} \in K}$ is an open cover
 of the compact set $K$.  Therefore, there exists a finite subcover
-$\displaystyle \{W_{\VEC{x}_j}: 1\leq j \leq N\}$ of $K$.
+$\DS \{W_{\VEC{x}_j}: 1\leq j \leq N\}$ of $K$.
 
 A function $\phi_j$ such that $\phi_j\big|_K \neq 0$ must
 also be one of the functions such that
-$\displaystyle \phi_j\big|_{W_{\VEC{x}_j}} \neq 0$ for some $j$.
+$\DS \phi_j\big|_{W_{\VEC{x}_j}} \neq 0$ for some $j$.
 There are only a finite number of them according to (2) of Theorem~\ref{cov1}.
 \end{proof}
 
 \begin{defn}
-An open cover $\displaystyle \{U_\alpha\}_{\alpha\in A}$ of an open
+An open cover $\DS \{U_\alpha\}_{\alpha\in A}$ of an open
 set $W$ is called {\bfseries admissible}\index{Admissible Open Cover}
 if $U_\alpha \subset W$ for all $\alpha$.
 \end{defn}
@@ -1397,22 +1397,22 @@ if $U_\alpha \subset W$ for all $\alpha$.
 \section{General Definition of the Integral}
 
 \begin{defn}
-Let $W$ be a Jordan measurable subset of $\displaystyle \RR^n$.  In
+Let $W$ be a Jordan measurable subset of $\DS \RR^n$.  In
 this and the next sections, we denote the Riemann integral of a Riemann
-integrable function $h:W\to \RR$ by $\displaystyle \rint_W h $.
+integrable function $h:W\to \RR$ by $\DS \rint_W h $.
 \end{defn}
 
 The reason for this new notation is that we will shortly generalize
 the definition of integrable functions.  One of our goal is to
-generalize to $\displaystyle \RR^n$ the concept of improper integral
+generalize to $\DS \RR^n$ the concept of improper integral
 for functions of one variable that we have seen in the previous
 chapter.
 
 \begin{lemma} \label{lemBZimplR}
-Let $W$ be an open subset of $\displaystyle \RR^n$ and
+Let $W$ be an open subset of $\DS \RR^n$ and
 $f:W\to \RR$ be a function which is bounded on bounded open
 subsets of $W$ and continuous on $W$ except possibly on a set of
-measure zero.  If $\displaystyle \psi:W \to \RR$ is a continuous
+measure zero.  If $\DS \psi:W \to \RR$ is a continuous
 function with compact support in $W$, then $\psi\, f:W \to \RR$ is
 Riemann integrable on $W$.
 \end{lemma}
@@ -1422,7 +1422,7 @@ Since $\supp \psi \, f \subset \supp \psi$ and $\supp \psi$ is a
 compact subset of $W$, we get that $\supp \psi \, f \subset W$ is
 compact.  Thus $\supp \psi \, f \subset W$ is bounded and so it is
 contained in a bounded open subset of $W$.  Moreover, there exists a
-bounded rectangle $\displaystyle R \subset \RR^n$ such that
+bounded rectangle $\DS R \subset \RR^n$ such that
 $\supp \psi\,f \subset R$.  We may assume that
 $\psi(\VEC{x}) = f(\VEC{x})$ for $\VEC{x} \in R \setminus W$.
 
@@ -1435,24 +1435,24 @@ continuous function with compact support.
 
 Therefore, we have from Theorem~\ref{Rexists} that
 $\psi \, f$ is Riemann integrable on $R$.  Moreover,
-$\displaystyle \int_W \psi \, f  = \int_R \psi \, f$.
+$\DS \int_W \psi \, f  = \int_R \psi \, f$.
 \end{proof}
 
 \begin{prop} \label{cov3}
-Let $W$ be an open subset of $\displaystyle \RR^n$ and
+Let $W$ be an open subset of $\DS \RR^n$ and
 $f:W\to \RR$ be a function which is bounded on bounded open
 subsets of $W$ and continuous on $W$ except possibly on a set of
 measure zero.
-Suppose that $\displaystyle \{\phi_j\}_{j \in \NNp}$ and
-$\displaystyle \{\tilde{\phi}_k\}_{k \in \NNp}$
+Suppose that $\DS \{\phi_j\}_{j \in \NNp}$ and
+$\DS \{\tilde{\phi}_k\}_{k \in \NNp}$
 are two partitions of unity subordinated respectively to the admissible
-open covers $\displaystyle \{U_{\alpha}\}_{\alpha\in A}$
+open covers $\DS \{U_{\alpha}\}_{\alpha\in A}$
 and
-$\displaystyle \{\tilde{U}_{\tilde{\alpha}}\}_{\tilde{\alpha}\in \tilde{A}}$
+$\DS \{\tilde{U}_{\tilde{\alpha}}\}_{\tilde{\alpha}\in \tilde{A}}$
 of the open set $W$.
-Then $\displaystyle \sum_{j \in \NNp} \rint_W \phi_j |f|$
+Then $\DS \sum_{j \in \NNp} \rint_W \phi_j |f|$
 converges if and only if
-$\displaystyle \sum_{k \in \NNp} \rint_W \tilde{\phi}_k |f|$
+$\DS \sum_{k \in \NNp} \rint_W \tilde{\phi}_k |f|$
 converges.  Moreover, the two sums are equal when they converges.  
 \end{prop}
 
@@ -1461,16 +1461,16 @@ According to the previous lemma, all the functions $\phi_j |f|$,
 $\tilde{\phi}_k|f|$ and $\phi_j \tilde{\phi}_k|f|$ are Riemann
 integrable on $W$.
 
-Let $K_j = \supp \phi_j |f|$ for $\displaystyle j \in \NNp$.
+Let $K_j = \supp \phi_j |f|$ for $\DS j \in \NNp$.
 The set $K_j$ is compact according to (4) of Theorem~\ref{cov1}.
 
 We then have from Proposition~\ref{cov4} that there are only a finite
 number of functions $\tilde{\phi}_k$ such that
-$\displaystyle \tilde{\phi}_k\big|_{K_j} \neq 0$.
+$\DS \tilde{\phi}_k\big|_{K_j} \neq 0$.
 It follows that the sum
-$\displaystyle \sum_{k \in \NNp} \tilde{\phi}_k \phi_j |f|$ is a
+$\DS \sum_{k \in \NNp} \tilde{\phi}_k \phi_j |f|$ is a
 finite sum for each $j$.  A similar argument proves that 
-$\displaystyle \sum_{j \in \NNp} \phi_j\tilde{\phi}_k|f|$
+$\DS \sum_{j \in \NNp} \phi_j\tilde{\phi}_k|f|$
 is a finite sum for each $k$.  Hence,
 \begin{equation} \label{cov5}
 \begin{split}
@@ -1487,7 +1487,7 @@ is a finite sum for each $k$.  Hence,
 \end{split}
 \end{equation}
 The first equality comes from
-$\displaystyle \sum_{k \in \NNp} \tilde{\phi}_k(\VEC{x}) = 1$ for all
+$\DS \sum_{k \in \NNp} \tilde{\phi}_k(\VEC{x}) = 1$ for all
 $\VEC{x} \in W$.  Since the summation with respect to $k$ is finite on
 $\supp \phi_j$, we may pull the summation with respect to $k$ outside
 the integral to get the second equality.  The third equality is true
@@ -1495,21 +1495,21 @@ because we may change the order of summation of positive series.
 Since the summation with respect to $j$ is finite on
 $\supp \tilde{\phi}_k$, we may bring the summation with respect to
 $j$ inside the integral to get the fourth equality.  The last equality
-comes from $\displaystyle \sum_{j\in \NNp} \phi_j(\VEC{x}) = 1$ for all
+comes from $\DS \sum_{j\in \NNp} \phi_j(\VEC{x}) = 1$ for all
 $\VEC{x} \in W$.
 \end{proof}
 
 The previous proposition is used to justify the following definition.
 
 \begin{defn}\label{cov2}
-Suppose that $\displaystyle \{\phi_j\}_{j \in \NNp}$
+Suppose that $\DS \{\phi_j\}_{j \in \NNp}$
 is a partition of unity subordinated to an admissible open cover
-$\displaystyle \{U_{\alpha}\}_{\alpha\in A}$ of the open set $W$.
+$\DS \{U_{\alpha}\}_{\alpha\in A}$ of the open set $W$.
 Let $f:W\to \RR$ be a function which is bounded on bounded open
 subsets of $W$ and continuous on $W$ except possibly on a set of
 measure zero.  We say that $f$ is {\bfseries integrable}\index{Integrable} 
 on $W$ if
-$\displaystyle \sum_{j \in \NNp} \rint_W \phi_j |f|$ converges.
+$\DS \sum_{j \in \NNp} \rint_W \phi_j |f|$ converges.
 \end{defn}
 
 As a consequence of the previous proposition, this definition is independent
@@ -1521,40 +1521,40 @@ in Definition~\ref{cov2}.  To refer to a function integrable in the
 sense of Riemann, we will say that the function is Riemann integrable.
 
 \begin{prop}
-Suppose that $\displaystyle \{\phi_j\}_{j \in \NNp}$ and
-$\displaystyle \{\tilde{\phi}_j\}_{j \in \NNp}$ are two partitions of
+Suppose that $\DS \{\phi_j\}_{j \in \NNp}$ and
+$\DS \{\tilde{\phi}_j\}_{j \in \NNp}$ are two partitions of
 unity subordinated respectively to the admissible open cover 
-$\displaystyle \{U_{\alpha}\}_{\alpha\in A}$ and
-$\displaystyle \{\tilde{U}_{\tilde{\alpha}}\}_{\tilde{\alpha}\in \tilde{A}}$
+$\DS \{U_{\alpha}\}_{\alpha\in A}$ and
+$\DS \{\tilde{U}_{\tilde{\alpha}}\}_{\tilde{\alpha}\in \tilde{A}}$
 of the open set $W$.
 Let $f:W\to \RR$ be a function which is bounded on bounded open
 subsets of $W$ and continuous on $W$ except possibly on a set of
 measure zero.
 If $f:W\to \RR$ is an integrable function, then
-$\displaystyle \sum_{j \in \NNp} \rint_W \phi_j f 
+$\DS \sum_{j \in \NNp} \rint_W \phi_j f 
 = \sum_{j \in \NNp} \rint_W \tilde{\phi}_j f$.
 \end{prop}
 
 \begin{proof}
 Since $f$ is integrable,
-$\displaystyle \sum_{j \in \NNp} \rint_W \phi_j |f|$ and
-$\displaystyle \sum_{k \in \NNp} \rint_W \tilde{\phi}_k |f|$
+$\DS \sum_{j \in \NNp} \rint_W \phi_j |f|$ and
+$\DS \sum_{k \in \NNp} \rint_W \tilde{\phi}_k |f|$
 converge (and are equal).  Thus
-$\displaystyle \sum_{j \in \NNp} \rint_W \phi_j f$ and
-$\displaystyle \sum_{k \in \NNp} \rint_W \tilde{\phi}_k f$
+$\DS \sum_{j \in \NNp} \rint_W \phi_j f$ and
+$\DS \sum_{k \in \NNp} \rint_W \tilde{\phi}_k f$
 converge absolutely because
-$\displaystyle \left| \rint_W \phi_j f\right|
-\leq \rint_W \phi_j |f|$ and for all $\displaystyle j \in \NNp$ and
-$\displaystyle \left| \rint_W \tilde{\phi}_k f\right|
-\leq \rint_W \tilde{\phi}_k |f|$ for all $\displaystyle k \in \NNp$.
+$\DS \left| \rint_W \phi_j f\right|
+\leq \rint_W \phi_j |f|$ and for all $\DS j \in \NNp$ and
+$\DS \left| \rint_W \tilde{\phi}_k f\right|
+\leq \rint_W \tilde{\phi}_k |f|$ for all $\DS k \in \NNp$.
 
 As in the proof of Proposition~\ref{cov3}, we have that
-$\displaystyle \sum_{k \in \NNp} \tilde{\phi}_k \phi_j f$ is a finite
+$\DS \sum_{k \in \NNp} \tilde{\phi}_k \phi_j f$ is a finite
 sum for each $j$ and
-$\displaystyle \sum_{j \in \NNp} \phi_j \tilde{\phi}_k f$
+$\DS \sum_{j \in \NNp} \phi_j \tilde{\phi}_k f$
 is a finite sum for each $k$.  It also follows from
 (\ref{cov5}) in the proof of Proposition~\ref{cov3} that
-$\displaystyle \sum_{j \in \NNp} \sum_{k \in \NNp}
+$\DS \sum_{j \in \NNp} \sum_{k \in \NNp}
 \rint_W \tilde{\phi}_k \phi_j f$ converges absolutely.  Hence,
 \begin{align*}
 \sum_{j \in \NNp} \rint_W \phi_j f
@@ -1567,7 +1567,7 @@ $\displaystyle \sum_{j \in \NNp} \sum_{k \in \NNp}
 = \sum_{k \in \NNp} \rint_W \tilde{\phi}_k f
 \end{align*}
 The first equality comes from
-$\displaystyle \sum_{k \in \NNp} \tilde{\phi}_k(\VEC{x}) = 1$
+$\DS \sum_{k \in \NNp} \tilde{\phi}_k(\VEC{x}) = 1$
 for all $\VEC{x}$.
 Since the summation with respect to $k$ is finite, we may
 pull the summation with respect to $k$ outside of the
@@ -1576,7 +1576,7 @@ because we may change the order of summation of absolutely convergent
 series.  Since the summation with respect to $j$ is
 finite, we may bring the summation with respect to $j$ inside the
 integral to get the fourth equality.  The last equality comes from
-$\displaystyle \sum_{j \in \NNp} \phi_j(\VEC{x}) = 1$ for all
+$\DS \sum_{j \in \NNp} \phi_j(\VEC{x}) = 1$ for all
 $\VEC{x}$.
 \end{proof}
 
@@ -1584,9 +1584,9 @@ The previous proposition proves that the following definition is
 independent of the admissible open cover and partition of unity.
 
 \begin{defn} \label{cov6}
-Suppose that $\displaystyle \{\phi_j\}_{j \in \NNp}$
+Suppose that $\DS \{\phi_j\}_{j \in \NNp}$
 is a partition of unity subordinated to an admissible open cover
-$\displaystyle \{U_{\alpha}\}_{\alpha\in A}$ of the open set $W$.
+$\DS \{U_{\alpha}\}_{\alpha\in A}$ of the open set $W$.
 Let $f:W\to \RR$ be a function which is bounded on bounded open
 subsets of $W$ and continuous on $W$ except possibly on a set of
 measure zero.
@@ -1600,7 +1600,7 @@ defined as
 
 \begin{rmk}
 We stated Definitions~\ref{cov2} and \ref{cov6} using the   \label{cov38}
-$\displaystyle C^\infty$ functions $\phi_j$ provided by the partition
+$\DS C^\infty$ functions $\phi_j$ provided by the partition
 of unity because they came for free from Theorem~\ref{cov1}.  However,
 we may only assumed that the $\phi_j$ are continuous.   This will not
 change the class of integrable functions as none of the previous
@@ -1608,32 +1608,32 @@ propositions required the smoothness of the $\phi_j$.
 \end{rmk}
 
 \begin{theorem}\label{RIIinNS}
-Let $W$ be an open and Jordan measurable subset of $\displaystyle \RR^n$ and
+Let $W$ be an open and Jordan measurable subset of $\DS \RR^n$ and
 $f:W\to \RR$ be a Riemann integrable function on $W$.  Then $f$ is
 integrable on $W$ in the new sense.
 \end{theorem}
 
 \begin{proof}
-Suppose that $\displaystyle \{U_{\alpha}\}_{\alpha\in A}$ is an
+Suppose that $\DS \{U_{\alpha}\}_{\alpha\in A}$ is an
 admissible open cover of $W$ and that
-$\displaystyle \{\phi_j\}_{j \in \NNp}$ is a partition of
-unity subordinate to $\displaystyle \{U_{\alpha}\}_{\alpha\in A}$.
+$\DS \{\phi_j\}_{j \in \NNp}$ is a partition of
+unity subordinate to $\DS \{U_{\alpha}\}_{\alpha\in A}$.
 
 Since $W$ is bounded, $W$ is contained in a closed and bounded rectangle $K$.
 Since $f$ is Riemann integrable, $f$ is bounded and thus
 $M = \sup \{ f(\VEC{x}) : \VEC{x} \in W \} < \infty$.  For every finite subset
-$\displaystyle Q \subset \NNp$, we have
+$\DS Q \subset \NNp$, we have
 \[
 \sum_{j \in Q} \rint_W \phi_j |f| \leq
 M \sum_{j \in Q} \rint_W \phi_j = M \rint_W \sum_{j\in Q} \phi_j \leq
 M \rint_W 1 \leq M V(K) < \infty \ ,
 \]
 where the second inequality comes from
-$\displaystyle \sum_{j\in Q} \phi_j(\VEC{x})
+$\DS \sum_{j\in Q} \phi_j(\VEC{x})
 \leq \sum_{j \in \NNp} \phi_j(\VEC{x}) = 1$
 for all $\VEC{x} \in W$ and the third inequality comes from
-$\displaystyle \rint_W \Chi_W = V(W)$ and $\displaystyle W \subset K$.  Since
-$\displaystyle \sum_{j \in \NNp} \rint_W \phi_j |f|$ is a
+$\DS \rint_W \Chi_W = V(W)$ and $\DS W \subset K$.  Since
+$\DS \sum_{j \in \NNp} \rint_W \phi_j |f|$ is a
 series of positive terms, we get
 \[
 \sum_{j \in \NNp} \rint_W \phi_j |f| =
@@ -1648,7 +1648,7 @@ the Riemann integral of $f$ is equal to the integral of $f$ as we have
 defined in Definition~\ref{cov6}.
 
 \begin{theorem}
-Suppose that $\displaystyle W \subset \RR^n$ is an open and Jordan
+Suppose that $\DS W \subset \RR^n$ is an open and Jordan
 measurable set.  Moreover, suppose that $f:W\to \RR$ is Riemann
 integrable (and so integrable in the new sense according to
 Theorem~\ref{RIIinNS}).  Then the Riemann integral of $f$ on $W$ is
@@ -1661,9 +1661,9 @@ Choose $M>0$ such that $|f(\VEC{x})|<M$ for all $\VEC{x} \in W$.
 
 \stage{i}
 Given $\epsilon>0$, there exists a compact subset $K\subset W$ such that
-$\displaystyle \rint_{W\setminus K} 1 < \epsilon/M$.  More precisely,
+$\DS \rint_{W\setminus K} 1 < \epsilon/M$.  More precisely,
 to find $K$, we use a partition $P$ of a rectangle $R$ containing $W$
-such that $\displaystyle \LL(\Chi_W) - \LL_P(\Chi_W) < \epsilon/M$.  Note that
+such that $\DS \LL(\Chi_W) - \LL_P(\Chi_W) < \epsilon/M$.  Note that
 $\Chi_W$ is integrable because $W$ is a Jordan measurable set and so
 the set of points $\partial W$ where $\Chi_W$ is discontinuous has
 measure zero.   We have
@@ -1679,7 +1679,7 @@ $m_{k_1,k_2,\ldots,k_n}
 = \inf \{ \Chi_W(\VEC{x}) : \VEC{x} \in R_{k_1,k_2,\ldots,k_n}\} = 0$
 if $R_{k_1,k_2,\ldots,k_n} \cap (R\setminus W) \neq \emptyset$.
 
-Let $\displaystyle K = \bigcup_{R_{k_1,k_2,\ldots,k_n} \subset W}
+Let $\DS K = \bigcup_{R_{k_1,k_2,\ldots,k_n} \subset W}
 R_{k_1,k_2,\ldots,k_n}$.  Then
 \[
 \rint_K 1 = \rint_R \Chi_K = \sum_{R_{k_1,k_2,\ldots,k_n} \subset W}
@@ -1695,17 +1695,17 @@ because $\Chi_W$ is integrable.  It follows that
 = \LL(\Chi_W) - \LL_P(\Chi_W) < \epsilon/M \ .
 \]
 
-\stage{ii} Suppose that $\displaystyle \{U_{\alpha}\}_{\alpha\in A}$ is an
+\stage{ii} Suppose that $\DS \{U_{\alpha}\}_{\alpha\in A}$ is an
 admissible open cover of $W$ and that
-$\displaystyle \{\phi_j\}_{j \in \NNp}$ is a partition of
-unity subordinate to $\displaystyle \{U_{\alpha}\}_{\alpha\in A}$.
+$\DS \{\phi_j\}_{j \in \NNp}$ is a partition of
+unity subordinate to $\DS \{U_{\alpha}\}_{\alpha\in A}$.
 
 According to Proposition~\ref{cov4}, there are only finitely many
-$\phi_j$ such that $\displaystyle \phi_j\big|_K \neq 0$.
-Let $\displaystyle Q\subset \NNp$ be the set of
-indices $\displaystyle j \in \NNp$ such that
+$\phi_j$ such that $\DS \phi_j\big|_K \neq 0$.
+Let $\DS Q\subset \NNp$ be the set of
+indices $\DS j \in \NNp$ such that
 $\phi_j\big|_K \neq 0$.  Then, for any finite set
-$\displaystyle G \subset \NNp$ such that $Q\subset G$, we have
+$\DS G \subset \NNp$ such that $Q\subset G$, we have
 \begin{align*}
 &\left| \rint_W f  - \sum_{j\in G} \rint_W \phi_j f  \right|
 = \left| \rint_W f \left( 1 - \sum_{j \in G} \phi_j \right) \right|
@@ -1721,12 +1721,12 @@ To get the last two inequalities, we have used the relation
 \leq \sum_{j\in \NNp} \phi_j(\VEC{x}) = 1
 \]
 for all $\VEC{x} \in W$ and
-$\displaystyle \sum_{j\in Q} \phi_j(\VEC{x}) = 1$
+$\DS \sum_{j\in Q} \phi_j(\VEC{x}) = 1$
 for all $\VEC{x}\in K$ because the other $\phi_j$ are null on
 $K$.  In particular, this last inequality implies that
-$\displaystyle 1 - \sum_{j\in Q} \phi_j(\VEC{x})$ may be
+$\DS 1 - \sum_{j\in Q} \phi_j(\VEC{x})$ may be
 non zero only if $\VEC{x} \in W\setminus K$.  Since
-$\displaystyle G\subset \NNp$ with $Q \subset G$ is arbitrary, we get
+$\DS G\subset \NNp$ with $Q \subset G$ is arbitrary, we get
 \[
 \left| \rint_W f  - \sum_{j \in \NNp} \rint_W \phi_j f  \right|
 \leq \epsilon \ .
@@ -1743,8 +1743,8 @@ Since $\epsilon$ is arbitrary, we get
 The main result of this section is the following theorem.
 
 \begin{theorem} \label{cov7}
-Let $\displaystyle W\subset \RR^n$ be an open set, and
-$\displaystyle g:W\to \RR^n$ be a
+Let $\DS W\subset \RR^n$ be an open set, and
+$\DS g:W\to \RR^n$ be a
 one-to-one and continuously differentiable function such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$.  If
 $f:g(W)\to \RR$ is integrable, then
@@ -1774,8 +1774,8 @@ The following proposition is at the heart of the proof of
 Theorem~\ref{cov7}.
 
 \begin{prop}\label{cov8}
-Let $\displaystyle W\subset \RR^n$ be an open set, and
-$\displaystyle g:W\to \RR^n$ be a one-to-one and continuously
+Let $\DS W\subset \RR^n$ be an open set, and
+$\DS g:W\to \RR^n$ be a one-to-one and continuously
 differentiable function such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$.  If $f:g(W)\to
 \RR$ is Riemann integrable with compact support in $g(W)$, then
@@ -1790,18 +1790,18 @@ To proof this proposition, we first give several lemmas which will
 reduce the proof to a simple situation.
 
 \begin{lemma} \label{lemC1Meas0}
-Let $\displaystyle W\subset \RR^n$ be an open set and
-$\displaystyle f:W\to \RR^n$ be continuously differentiable function.
+Let $\DS W\subset \RR^n$ be an open set and
+$\DS f:W\to \RR^n$ be continuously differentiable function.
 If $A \subset W$ has measure zero, then $f(A)$ has measure zero.
 \end{lemma}
 
 \begin{proof}
 We can write $W$ as the countable union of compact sets
-$Q_j$ for $\displaystyle j \in \NNp$ such that
-$\displaystyle Q_j \subset Q_{j+1}^\circ \subset Q_{j+1} \subset W$
+$Q_j$ for $\DS j \in \NNp$ such that
+$\DS Q_j \subset Q_{j+1}^\circ \subset Q_{j+1} \subset W$
 for all $j$.  For instance, we may write
-$\displaystyle W = \bigcup_{j \in \NNp} Q_j$ where $Q_j$ is the compact set
-$\displaystyle Q_j = \{ \VEC{x} \in W :
+$\DS W = \bigcup_{j \in \NNp} Q_j$ where $Q_j$ is the compact set
+$\DS Q_j = \{ \VEC{x} \in W :
 \|\VEC{x}\| \leq j \ \text{and} \ \dist{\partial W}{\VEC{x}} \leq 1/j \}$.
 Since
 \[
@@ -1813,34 +1813,34 @@ it suffices to prove that $f(A \cap Q_j)$ is of measure zero.  Recall
 that a subset of a set of measure zero has measure zero and the
 countable union of sets of measure zero has measure zero.
 
-We consider an arbitrary but fixed $\displaystyle j \in \NNp$.
-Let $M$ be the maximum of $\|\displaystyle \diff f\|$ on $Q_{j+1}$.
+We consider an arbitrary but fixed $\DS j \in \NNp$.
+Let $M$ be the maximum of $\|\DS \diff f\|$ on $Q_{j+1}$.
 We have that $M < \infty$ because $\diff f$ is continuous
 on the compact set $Q_{j+1}$, so $\|\diff f\|$ reaches
 its maximum at a point of $Q_{j+j}$.
 
 Given $\epsilon >0$, since $Z = A \cap Q_j$ has measure zero, there
-exists a collection of rectangles $\displaystyle \{ R_i \}_{i\geq 0}$ such
-that $\displaystyle Z \subset \bigcup_{i=0}^\infty R_i$ and
-$\displaystyle \sum_{i=0}^\infty V(R_i) < \frac{\epsilon}{n^{n/2}M^n}$.
+exists a collection of rectangles $\DS \{ R_i \}_{i\geq 0}$ such
+that $\DS Z \subset \bigcup_{i=0}^\infty R_i$ and
+$\DS \sum_{i=0}^\infty V(R_i) < \frac{\epsilon}{n^{n/2}M^n}$.
 By subdividing the rectangles $R_i$ if necessary we may assume that
 the $R_i$ are squares with edges of length
-$\displaystyle d_i < \frac{1}{j(j+1)\sqrt{n}}$.
-Hence $\displaystyle \diam R_i < \frac{1}{j(j+1)}$.
+$\DS d_i < \frac{1}{j(j+1)\sqrt{n}}$.
+Hence $\DS \diam R_i < \frac{1}{j(j+1)}$.
 Thus $R_i \subset Q_{j+1}^\circ$ for all $i$.
 \pdfbox{mult_integrals/measurefC1}
 Using the Mean Value Theorem for functions from
-$\displaystyle \RR^n$ to $\displaystyle \RR^n$ (Theorem 9.19 in \cite{R}),
+$\DS \RR^n$ to $\DS \RR^n$ (Theorem 9.19 in \cite{R}),
 we find that
 $\| f(\VEC{x}) - f(\VEC{y}) \| \leq M \|\VEC{x} - \VEC{y} \|$
 for all $\VEC{x}, \VEC{y} \in R_i$ and all $i$.  It follows that
 \[
   \diam f(R_i) \leq M \diam R_i = \sqrt{n}\, M d_i
 \]
-for all $i$.  Thus, each $\displaystyle f(R_i)$ is a subset of a
-square $\displaystyle S_i \subset \RR^n$ with edges of length
+for all $i$.  Thus, each $\DS f(R_i)$ is a subset of a
+square $\DS S_i \subset \RR^n$ with edges of length
 $\sqrt{n}\, M d_i$.  The volume of $S_i$ is
-$\displaystyle V(S_i) = n^{n/2} M^n d_i^n$.  We have
+$\DS V(S_i) = n^{n/2} M^n d_i^n$.  We have
 \[
 f(Z) \subset f\left(\bigcup_{i=1}^\infty R_i\right)
 = \bigcup_{i=1}^\infty f(R_i) \subset \bigcup_{i=1}^\infty S_i
@@ -1850,14 +1850,14 @@ with
 \sum_{i=1}^\infty V(S_i) = \sum_{i=1}^\infty n^{n/2} M^n d_i^n
   =  n^{n/2} M^n \sum_{i=1}^\infty d_i^n < \epsilon
 \]
-because $\displaystyle V(R_i) = d_i^n$.
+because $\DS V(R_i) = d_i^n$.
 Since $\epsilon$ is arbitrary, this proves that
-$\displaystyle f(Z)$ has measure zero.
+$\DS f(Z)$ has measure zero.
 \end{proof}
 
 \begin{lemma}\label{cov27}
-Let $\displaystyle W\subset \RR^n$ be an open set, and
-$\displaystyle g:W\to \RR^n$ be a one-to-one and continuously
+Let $\DS W\subset \RR^n$ be an open set, and
+$\DS g:W\to \RR^n$ be a one-to-one and continuously
 differentiable function such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$.  If $f:g(W)\to \RR$
 is Riemann integrable with compact support, then
@@ -1872,21 +1872,21 @@ $f(\VEC{x}) =0$ for $\VEC{x} \in W\setminus K$.
 \stage{i} The support of $(f \circ g)\, |\det \diff g|: W \to \RR$ is
 a compact subset of $W$.
 
-We have that $\displaystyle g:W\to \RR^n$ is a homeomorphism of $W$
+We have that $\DS g:W\to \RR^n$ is a homeomorphism of $W$
 onto $g(W)$ because $g$ one-to-one, $g$ continuously differentiable, and
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x}\in W$ implies that $g$
 is an open mapping \footnote{Namely, $g(V)$ is an open subset of
-$\displaystyle \RR^n$ for all open sets $V \subset W$.  Note that open
-subsets of $W$ with the induced topology from $\displaystyle \RR^n$
+$\DS \RR^n$ for all open sets $V \subset W$.  Note that open
+subsets of $W$ with the induced topology from $\DS \RR^n$
 are open subsets of $\RR^n$ because $W$ is open.} thanks to the
 Inverse Function Theorem.
-Thus $\displaystyle g^{-1}(K) \subset W$ is a compact set because
+Thus $\DS g^{-1}(K) \subset W$ is a compact set because
 continuous functions map compact sets onto compacts sets.
 
 Since $(f \circ g)(\VEC{x}) = 0$ for
-$\displaystyle \VEC{x} \in W \setminus g^{-1}(K)$,
+$\DS \VEC{x} \in W \setminus g^{-1}(K)$,
 the support of $(f \circ g)\, |\det \diff g|: W \to \RR$ is a subset
-of the compact set $\displaystyle g^{-1}(K)$.  Therefore the support
+of the compact set $\DS g^{-1}(K)$.  Therefore the support
 is compact because a closed subset of a compact set is compact.
 
 \stage{ii} $(f \circ g)\, |\det \diff g|: W \to \RR$ is bounded.
@@ -1897,8 +1897,8 @@ We have that $M < \infty$ because $f$ is bounded on $g(W)$.
 Since $|\det \diff g|: W \to \RR$ is a continuous
 function because $g$ is continuously differentiable,
 the function $|\det \diff g|$ restricted to the compact set
-$\displaystyle g^{-1}(K)$ reaches it maximum a point in
-$\displaystyle g^{-1}(K)$.  Therefore
+$\DS g^{-1}(K)$ reaches it maximum a point in
+$\DS g^{-1}(K)$.  Therefore
 $L = \max \{ |\det \diff g(\VEC{x})| : \VEC{x} \in g^{-1}(K)\} < \infty$.
 It follows that
 \[
@@ -1906,12 +1906,12 @@ It follows that
 |f(g(\VEC{x}))| \, |\det \diff g(\VEC{x})| \leq M L
 \]
 for all $\VEC{x} \in W$ because $f(g(\VEC{x})) = 0$ for all
-$\displaystyle \VEC{x} \in W \setminus g^{-1}(K)$.
+$\DS \VEC{x} \in W \setminus g^{-1}(K)$.
 
 \stage{iii} $(f \circ g)\, |\det \diff g|: W \to \RR$ is continuous
 except possibly on a set of measure zero.  In fact, if $Z \subset K$ is the
 set of measure zero where $f$ is discontinuous, then we show that
-$\displaystyle g^{-1}(Z) \subset g^{-1}(K) \subset W$ is the set of
+$\DS g^{-1}(Z) \subset g^{-1}(K) \subset W$ is the set of
 measure zero where $(f \circ g)\, |\det \diff g|: W \to \RR$ is
 discontinuous.
 
@@ -1919,12 +1919,12 @@ As we say in (i), since $g :W \to g(W)$ is one-to-one and onto $g(W)$,
 $g$ is continuously differentiable and
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$, we get from the
 Inverse Function Theorem that $g$ is an open mapping.  Moreover, we
-also get that $\displaystyle \diff g^{-1}(\VEC{y})$ exists for all
-$\VEC{y} \in g(W)$.  In particular, $\displaystyle \diff g^{-1}(\VEC{y})
+also get that $\DS \diff g^{-1}(\VEC{y})$ exists for all
+$\VEC{y} \in g(W)$.  In particular, $\DS \diff g^{-1}(\VEC{y})
 = (\diff g)^{-1}(g^{-1}(\VEC{y}))$ for all $\VEC{y} \in g(W)$ according
 to the Inverse Function Theorem.  Thus $g:W \to g(W)$ is a diffeomorphism.
 
-It follows from Lemma~\ref{lemC1Meas0} that $\displaystyle g^{-1}(Z)$
+It follows from Lemma~\ref{lemC1Meas0} that $\DS g^{-1}(Z)$
 has measure zero.
 
 \stage{iv} We get from (ii) and (iii) that
@@ -1933,8 +1933,8 @@ Theorem~\ref{Rexists}.
 \end{proof}
 
 \begin{lemma}\label{cov10}
-Let $\displaystyle W\subset \RR^n$ be an open set, and
-$\displaystyle g:W\to \RR^n$ be a
+Let $\DS W\subset \RR^n$ be an open set, and
+$\DS g:W\to \RR^n$ be a
 one-to-one and continuously differentiable function such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$.
 If Proposition~\ref{cov8} is true for Riemann integrable functions
@@ -1947,15 +1947,15 @@ Suppose that Proposition~\ref{cov8} is true for Riemann integrable functions
 $f:g(W) \to [0,\infty[$ with compact support.
 
 Given a Riemann integrable function $h: g(W) \to \RR$ with compact support, let
-$\displaystyle h^+ = (h + |h|)/2$ and $\displaystyle h^- = (|h|-h)/2$.
-We have $\displaystyle h = h^+ - h^-$
-with $\displaystyle h^+(\VEC{x}) \geq 0$ and
-$\displaystyle h^-(\VEC{x}) \geq 0$ for all
+$\DS h^+ = (h + |h|)/2$ and $\DS h^- = (|h|-h)/2$.
+We have $\DS h = h^+ - h^-$
+with $\DS h^+(\VEC{x}) \geq 0$ and
+$\DS h^-(\VEC{x}) \geq 0$ for all
 $\VEC{x} \in g(W)$.  Moreover, since $h:g(W)\to \RR$ and
 $|h|:g(W)\to \RR$ are Riemann integrable functions with compact support
 according to the version of Proposition~\ref{propAIFlstIAF} for
 functions of several variables, we have that
-$\displaystyle h^+$ and $\displaystyle h^-$ are Riemann integrable 
+$\DS h^+$ and $\DS h^-$ are Riemann integrable 
 function on $g(W)$ with compact support.
 Hence
 \begin{align*}
@@ -1971,8 +1971,8 @@ Riemann integrable functions $f:g(W) \to [0,\infty[$ with compact support.
 \end{proof}
 
 \begin{lemma} \label{cov11}
-Let $\displaystyle W\subset \RR^n$ be an open set, and
-$\displaystyle g:W\to \RR^n$ be a
+Let $\DS W\subset \RR^n$ be an open set, and
+$\DS g:W\to \RR^n$ be a
 one-to-one and continuously differentiable function such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$.
 If Proposition~\ref{cov8} is true for $f = \Chi_Q$ where $Q \subset g(W)$ is a
@@ -2003,14 +2003,14 @@ From Lemma~\ref{cov27}, we have that
 $(f \circ g)\,|\det\diff g|:W\to [0,\infty[$ is Riemann
 integrable and has compact support.  In the following discussion, we
 assume without loss of generality that
-$\displaystyle f: \RR^n \to [0,\infty[$ by
-setting $f(\VEC{x})=0$ for $\displaystyle \VEC{x} \in \RR^n \setminus g(W)$.
+$\DS f: \RR^n \to [0,\infty[$ by
+setting $f(\VEC{x})=0$ for $\DS \VEC{x} \in \RR^n \setminus g(W)$.
 
 \stage{i}
 Let $R$ be a rectangle containing the support of $f$ and $P$ be a
 partition of $R$.  As usual, the subrectangles generated by the
 partition are denoted $R_{k_1,k_2,\ldots,k_n}$ and
-$\displaystyle m_{k_1,k_2,\ldots,k_n}
+$\DS m_{k_1,k_2,\ldots,k_n}
 = \inf \{ f(\VEC{y}) : \VEC{y} \in R_{k_1,k_2,\ldots,k_n}\}$.
 Note that $m_{k_1,k_2,\ldots,k_n} = 0$ if
 $R_{k_1,k_2,\ldots,k_n} \cap (R \setminus \supp f) \neq \emptyset$.
@@ -2034,7 +2034,7 @@ where the third equality comes from (\ref{lemCVEq1}) with $Q$ replaced
 by $R_{k_1,k_2,\ldots,k_n}$, and the fourth equality is a consequence
 of the linearity of the Riemann integral.  Note that the sum is
 finite.  The inequality is true because
-$\displaystyle 0 \leq \sum_{R_{k_1,k_2,\ldots,k_n} \subset g(W)}
+$\DS 0 \leq \sum_{R_{k_1,k_2,\ldots,k_n} \subset g(W)}
 m_{k_1,k_2,\ldots,k_n} \Chi_{R_{k_1,k_2,\ldots,k_n}} \leq f$.
 
 Since (\ref{cov12}) is true for all partition $P$ of $R$, we get
@@ -2053,7 +2053,7 @@ following the approach used in (i).
 Let $R$ be a rectangle containing $K = \supp f$ and $P$ be a partition of
 $R$.  As before, the subrectangles generated by the partition are
 denoted $R_{k_1,k_2,\ldots,k_n}$ and
-$\displaystyle M_{k_1,k_2,\ldots,k_n}
+$\DS M_{k_1,k_2,\ldots,k_n}
 = \sup \{ f(\VEC{y}) : \VEC{y} \in R_{k_1,k_2,\ldots,k_n} \}$.
 Since $K$ is a compact subset of the open set $g(W)$, we may select
 the partition $P$ fine enough such that the
@@ -2097,10 +2097,10 @@ M_{k_1,k_2,\ldots,k_n}\Chi_{R_{k_1,k_2,\ldots,k_n}}\bigg) \circ g \bigg)\,
 where the third equality comes from (\ref{lemCVEq1}) with $Q$ replaced
 by $R_{k_1,k_2,\ldots,k_n}$, and the fourth equality is a consequence
 of the linearity of the Riemann integral.  The inequality is true
-because $\displaystyle \supp f \subset
+because $\DS \supp f \subset
 \bigcup_{R_{k_1,k_2,\ldots,k_n}\cap \supp f \neq \emptyset}
 R_{k_1,k_2,\ldots,k_n}$ and
-$\displaystyle f \leq \sum_{R_{k_1,k_2,\ldots,k_n} \cap \supp f \neq \emptyset}
+$\DS f \leq \sum_{R_{k_1,k_2,\ldots,k_n} \cap \supp f \neq \emptyset}
 M_{k_1,k_2,\ldots,k_n} \Chi_{R_{k_1,k_2,\ldots,k_n}}$.
 
 Since (\ref{cov15}) is true for all fine enough partition $P$ of $R$,
@@ -2117,8 +2117,8 @@ It follows from (\ref{cov13}) and (\ref{cov14}) that
 \end{proof}
 
 \begin{lemma}\label{cov16}
-Let $\displaystyle W\subset \RR^n$ be an open set.
-Proposition~\ref{cov8} is true if $\displaystyle g:W\to \RR^n$ is an
+Let $\DS W\subset \RR^n$ be an open set.
+Proposition~\ref{cov8} is true if $\DS g:W\to \RR^n$ is an
 invertible linear map.
 \end{lemma}
 
@@ -2140,11 +2140,11 @@ This equation can be restated as
 Note that $\diff g (\VEC{x}) = g$ for all $\VEC{x} \in W$ because $g$ is
 a linear map.  The equation (\ref{cov17}) simply states that the
 volume of $Q$ is equal to $|\det g|$ times the volume of
-$\displaystyle g^{-1}(Q)$ because $|\det g|$ is constant.
+$\DS g^{-1}(Q)$ because $|\det g|$ is constant.
 
-Since $\displaystyle g:\RR^n \to \RR^n$ is a linear map such that
+Since $\DS g:\RR^n \to \RR^n$ is a linear map such that
 $\det g \neq 0$, we may express $g$ as $g = G_1 G_2 \ldots G_s$ where
-the $G_i$ are linear maps $\displaystyle G:\RR^n \to \RR^n$ of the
+the $G_i$ are linear maps $\DS G:\RR^n \to \RR^n$ of the
 following forms.
 \begin{enumerate}
 \item For some $1 \leq k \leq n$ and $a \neq 1$, the components
@@ -2194,20 +2194,20 @@ One learns in Linear algebra that transformations of the form (2) and
 the volume by a factor of $|a|$.  We have that $|\det G| = |a|$ for
 transformations $G$ of the form (1) and $|\det G| = 1$ for
 transformation $G$ of the form (2) and (3).  Hence, for any set
-$\displaystyle U \subset \RR^n$, the volume of $G(U)$ is the volume of $U$
+$\DS U \subset \RR^n$, the volume of $G(U)$ is the volume of $U$
 multiplied by $|\det G|$ for all the linear matrices of the form (1),
 (2) and (3).
 
 The volume of $Q$ is therefore the product of the volume of
-$\displaystyle g^{-1}(Q)$ by\\
+$\DS g^{-1}(Q)$ by\\
 $|\det G_1| \, |\det G_2| \ldots |\det G_s|= |\det g|$ as claimed by
 (\ref{cov17}).
 \end{proof}
 
 \begin{lemma} \label{cov18}
-Let $\displaystyle W\subset \RR^n$ be an open set.
+Let $\DS W\subset \RR^n$ be an open set.
 If Proposition~\ref{cov8} is true for the one-to-one and continuously
-differentiable functions $\displaystyle g:W\to \RR^n$ such that
+differentiable functions $\DS g:W\to \RR^n$ such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x} \in W$ and
 $\diff g(\VEC{a}) = \Id$ for some $\VEC{a} \in W$,
 then Proposition~\ref{cov8} is true in general.
@@ -2216,26 +2216,26 @@ then Proposition~\ref{cov8} is true in general.
 \begin{proof}
 Suppose that Proposition~\ref{cov8} is true for
 one-to-one and continuously differentiable functions
-$\displaystyle g:W\to \RR^n$ such that
+$\DS g:W\to \RR^n$ such that
 $\det \diff g(\VEC{x}) \neq 0$ for all $\VEC{x}\in W$ and
 $\diff g(\VEC{a}) = \Id$ for some $\VEC{a} \in W$.
 
-Suppose that $\displaystyle h:W\to \RR^n$ is a one-to-one and
+Suppose that $\DS h:W\to \RR^n$ is a one-to-one and
 continuously differentiable function such that
 $\det \diff h(\VEC{x}) \neq 0$ for all $\VEC{x}\in W$.
 Given $\VEC{a} \in W$, let $T= \diff h(\VEC{a})$.  We have that
-$\displaystyle T:\RR^n \to \RR^n$ is a linear invertible map
+$\DS T:\RR^n \to \RR^n$ is a linear invertible map
 because $\det \diff h(\VEC{a}) \neq 0$.
 
 Suppose that $f: h(W) \to \RR$ is a Riemann integrable function with
 compact support in $h(W)$.  Since
-$\displaystyle T: T^{-1}(h(W)) \to \RR^n$ is a
+$\DS T: T^{-1}(h(W)) \to \RR^n$ is a
 one-to-one and continuously differentiable function such that
 $\det \diff T(\VEC{x}) = \det T \neq 0$ for all $\VEC{x} \in W$, we
 get from Lemma~\ref{cov27} that
-$\displaystyle (f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a
+$\DS (f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a
 Riemann integrable function with compact support.
-Note that $\displaystyle T^{-1}(h(W)) \subset \RR^n$ is an open set
+Note that $\DS T^{-1}(h(W)) \subset \RR^n$ is an open set
 and recall that $\diff T(\VEC{x}) = T$ for all $\VEC{x}$ because $T$
 is a linear map.
 Furthermore, since $T$ is an invertible linear map, we get
@@ -2244,9 +2244,9 @@ from Lemma~\ref{cov16} that
 \rint_{h(W)} f = \rint_{T^{-1}(h(W))} (f \circ T) |\det T| \ .
 \end{equation}
 
-Since $\displaystyle (f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a Riemann
+Since $\DS (f \circ T) |\det T| : T^{-1}(h(W)) \to \RR$ is a Riemann
 integrable function with compact support
-and $\displaystyle g = T^{-1}\circ h: W \to \RR^n$ is a
+and $\DS g = T^{-1}\circ h: W \to \RR^n$ is a
 one-to-one and continuously differentiable function such that
 \[
 \det (\diff g(\VEC{x}))
@@ -2296,11 +2296,11 @@ integral on $W$ to a sum of integrals on intervals.
 
 We have from Lemma~\ref{cov27} that $(f\circ g) g'$ is Riemann
 integrable with compact support in $W$.  Since
-$\displaystyle g^{-1}(\supp f) \subset W$ is a compact set because $\supp f$ 
-is compact and $\displaystyle g^{-1}:g(W) \to \RR$ is continuous as we
+$\DS g^{-1}(\supp f) \subset W$ is a compact set because $\supp f$ 
+is compact and $\DS g^{-1}:g(W) \to \RR$ is continuous as we
 have shown in the proof of Lemma~\ref{cov27}, and
 since $W$ is connected, there exists a closed interval $[\alpha,\beta]
-\subset W$ such that $\displaystyle g^{-1}(\supp f) \subset [\alpha,\beta]$.  
+\subset W$ such that $\DS g^{-1}(\supp f) \subset [\alpha,\beta]$.  
 Therefore $\supp f \subset g([\alpha,\beta])$.
 
 The condition that $g'(x) \neq 0$ for all $x \in W$ implies that $g$
@@ -2343,8 +2343,8 @@ for all Riemann integrable functions $f:g(U_{\VEC{a}}) \to \RR$ with
 compact support in $g(U_{\VEC{a}})$.
 
 Given $\VEC{a} \in W$, let $T= \diff g(\VEC{a})$ and
-$\displaystyle \tilde{g} = T^{-1} \circ g$.  The map
-$\displaystyle \tilde{g}:W \to \RR^k$ is a
+$\DS \tilde{g} = T^{-1} \circ g$.  The map
+$\DS \tilde{g}:W \to \RR^k$ is a
 one-to-one and continuously differentiable map such that
 $\det \diff \tilde{g} (\VEC{x}) \neq 0$ for all $\VEC{x} \in W$ and
 $\diff \tilde{g}(\VEC{a}) = \Id$.
@@ -2362,13 +2362,13 @@ We have
 \begin{equation} \label{cov20}
 \diff Q_1(\VEC{x}) =
 \begin{pmatrix}
-\displaystyle \pdydx{\tilde{g}_1}{x_1}(\VEC{x}) &
-\displaystyle \pdydx{\tilde{g}_1}{x_2}(\VEC{x}) & \ldots &
-\displaystyle \pdydx{\tilde{g}_1}{x_k}(\VEC{x}) \\
+\DS \pdydx{\tilde{g}_1}{x_1}(\VEC{x}) &
+\DS \pdydx{\tilde{g}_1}{x_2}(\VEC{x}) & \ldots &
+\DS \pdydx{\tilde{g}_1}{x_k}(\VEC{x}) \\
 \vdots & \vdots & \ddots & \vdots \\
-\displaystyle \pdydx{\tilde{g}_{k-1}}{x_1}(\VEC{x}) &
-\displaystyle \pdydx{\tilde{g}_{k-1}}{x_2}(\VEC{x}) & \ldots &
-\displaystyle \pdydx{\tilde{g}_{k-1}}{x_k}(\VEC{x}) \\[1em]
+\DS \pdydx{\tilde{g}_{k-1}}{x_1}(\VEC{x}) &
+\DS \pdydx{\tilde{g}_{k-1}}{x_2}(\VEC{x}) & \ldots &
+\DS \pdydx{\tilde{g}_{k-1}}{x_k}(\VEC{x}) \\[1em]
 0 & 0 & \ldots & 1
 \end{pmatrix} \ .
 \end{equation}
@@ -2381,11 +2381,11 @@ In particular, we have
 \end{pmatrix} = \Id \ .
 \end{equation}
 Since $\diff Q_1(\VEC{a})$ is invertible and
-$\displaystyle \diff Q_1:W\to \RR^k$
+$\DS \diff Q_1:W\to \RR^k$
 is continuous, we get that $\diff Q_1(\VEC{x})$ is invertible for all
 $\VEC{x}$ in a neighbourhood of $\VEC{a}$.  Hence, we may use the
 Inverse Function Theorem to find an open neighbourhood $U_1$ of $\VEC{a}$ such  
-that $\displaystyle Q_1:U_1\to \RR^k$ is a diffeomorphism of the open
+that $\DS Q_1:U_1\to \RR^k$ is a diffeomorphism of the open
 set $U_1$ onto the open set $Q_1(U_1)$.
 
 Consider
@@ -2403,10 +2403,10 @@ We have
 1 & \ldots & 0 & 0 \\
 \vdots & \ddots & \vdots & \vdots \\
 0 & \ldots & 1 & 0 \\
-\displaystyle \pdfdx{(\tilde{g}_k \circ Q_1^{-1})}{x_1}(\VEC{x}) &
+\DS \pdfdx{(\tilde{g}_k \circ Q_1^{-1})}{x_1}(\VEC{x}) &
 \ldots &
-\displaystyle \pdfdx{(\tilde{g}_k \circ Q_1^{-1})}{x_{k-1}}(\VEC{x}) &
-\displaystyle \pdfdx{(\tilde{g}_k \circ Q_1^{-1})}{x_k}(\VEC{x})
+\DS \pdfdx{(\tilde{g}_k \circ Q_1^{-1})}{x_{k-1}}(\VEC{x}) &
+\DS \pdfdx{(\tilde{g}_k \circ Q_1^{-1})}{x_k}(\VEC{x})
 \end{pmatrix} .
 \end{equation}
 Using the Inverse Function Theorem for $Q_1$, we get
@@ -2427,12 +2427,12 @@ $\delta_{j,k} = 1$ when $j=k$ and $0$ otherwise.
 Hence $\diff Q_2(Q_1(\VEC{a})) = \Id_k$.
 
 Since $\diff Q_2(Q_1(\VEC{a}))$ is invertible and
-$\displaystyle \diff Q_2:Q_1(U_1)\to \RR^k$ is continuous, we get that
+$\DS \diff Q_2:Q_1(U_1)\to \RR^k$ is continuous, we get that
 $\diff Q_2(\VEC{x})$ is invertible for all $\VEC{x}$ in a
 neighbourhood of $\VEC{b} = Q_1(\VEC{a})$.  Hence, we may use the Inverse
 Function Theorem to find an open neighbourhood
 $U_2 \subset Q_1(U_1)$ of $\VEC{b}$ such  
-that $\displaystyle Q_2:U_2\to \RR^k$ is a diffeomorphism of the open
+that $\DS Q_2:U_2\to \RR^k$ is a diffeomorphism of the open
 set $U_2$ onto the open set $Q_2(U_2)$.
 \pdfbox{mult_integrals/cov2}
 
@@ -2452,7 +2452,7 @@ that
 = \rint_{Q_1^{-1}(R)} |\det \diff Q_1| \ .
 \]
 Suppose that $R = R_1 \times [a,b]$ where
-$\displaystyle R_1 \subset \RR^{k-1}$ is a closed
+$\DS R_1 \subset \RR^{k-1}$ is a closed
 rectangle such that $R_1\times [a,b] \subset Q_1(U_1)$.
 
 From Fubini's Theorem, we get
@@ -2474,13 +2474,13 @@ Q_1^{-1}(R) = \bigcup_{x_k \in [a,b]} \left( Q_{1,x_k}^{-1}(R_1) \times \{x_k\}
 \right) \ .
 \]
 Note that $Q_{1,x_k}$ is one-to-one because
-$\displaystyle Q_1:U_1 \to \RR^k$ is
+$\DS Q_1:U_1 \to \RR^k$ is
 one-to-one.  Moreover
 \[
 \det \diff_{\VEC{y}} Q_{1,x_k}(\VEC{y})
 = \det \diff Q_1(\VEC{y},x_k) \neq 0
 \]
-for all $\displaystyle (\VEC{y},x_k)\in U_1$ follows
+for all $\DS (\VEC{y},x_k)\in U_1$ follows
 from (\ref{cov20}) and $\det \diff Q_1(\VEC{x}) \neq 0$ for all
 for all $\VEC{x} \in U_1$.  Therefore $Q_{1,x_k}$ satisfies
 Proposition~\ref{cov8} in dimension $k-1$ for all $x_k \in [a,b]$.
@@ -2502,18 +2502,18 @@ for all $x_k \in [a,b]$.  Thus
 where the last equality comes from Fubini's Theorem since
 $\det \diff Q_1$ is continuous on $U_1$.  This last statement
 needs some clarifications.  Since
-$\displaystyle Q_1:U_1 \to \RR^k$ is a one-to-one and continuously
+$\DS Q_1:U_1 \to \RR^k$ is a one-to-one and continuously
 differentiable function with $\det \diff Q_1 (\VEC{x}) \neq 0$ for all
 $\VEC{x} \in U_1$, we have that $Q_1 : U_1 \to Q(U_1)$ is a
 diffeomorphism.  It follows from Lemma~\ref{lemC1Meas0} that
-$\displaystyle Q_1^{-1}(R)$ is Jordan measurable because
-$\displaystyle \partial Q_1^{-1}(R) = Q_1^{-1}(\partial R)$ is of
+$\DS Q_1^{-1}(R)$ is Jordan measurable because
+$\DS \partial Q_1^{-1}(R) = Q_1^{-1}(\partial R)$ is of
 measure zero since $\partial R$ is of measure zero.  We also have that
-$\displaystyle Q_1^{-1}(R)$ is bounded because $R$ is a compact set and thus
-$\displaystyle Q_1^{-1}(R)$ is a compact set in $\displaystyle \RR^k$.
+$\DS Q_1^{-1}(R)$ is bounded because $R$ is a compact set and thus
+$\DS Q_1^{-1}(R)$ is a compact set in $\DS \RR^k$.
 The Fubini's Theorem is applied to the function
-$\displaystyle \Chi_{Q_1^{-1}(R)} |\det \diff Q_1|$ on a rectangle
-containing $\displaystyle {Q_1^{-1}(R)}$.
+$\DS \Chi_{Q_1^{-1}(R)} |\det \diff Q_1|$ on a rectangle
+containing $\DS {Q_1^{-1}(R)}$.
 
 \stage{iii.b} We prove that
 \begin{equation}\label{cov22B}
@@ -2531,7 +2531,7 @@ that
 = \rint_{Q_2^{-1}(R)} |\det \diff Q_2| \ .
 \]
 Suppose that $R = R_1 \times [a,b]$ where
-$\displaystyle R_1 \subset \RR^{k-1}$ is a closed
+$\DS R_1 \subset \RR^{k-1}$ is a closed
 rectangle such that $R_1\times [a,b] \subset Q_2(U_2)$.
 
 From Fubini's Theorem, we have
@@ -2540,14 +2540,14 @@ From Fubini's Theorem, we have
 \rint_{[a,b]} \dx{x_k} \right) \dx{\VEC{y}} \ .
 \]
 Let
-$\displaystyle  Q_{2,\VEC{y}}(x_k) = \tilde{g}_k(Q_1^{-1}(\VEC{y},x_k))$
+$\DS  Q_{2,\VEC{y}}(x_k) = \tilde{g}_k(Q_1^{-1}(\VEC{y},x_k))$
 for all $(\VEC{y},x_k) \in U_2$.  The important observation is that
 \[
 Q_2^{-1}(R) = \bigcup_{\VEC{y} \in R_1}
 \left( \{\VEC{y}\} \times Q_{2,\VEC{y}}^{-1}([a,b]) \right) \ .
 \]
 Note that $Q_{2,\VEC{y}}$ is one-to-one because
-$\displaystyle Q_2:U_2 \to \RR^k$ is one-to-one.  Moreover
+$\DS Q_2:U_2 \to \RR^k$ is one-to-one.  Moreover
 \[
 \diff_x Q_{2,\VEC{y}}(x_k) =
 \dfdx{\tilde{g}_k(Q_1^{-1}(\VEC{y},x))}{x}\Big|_{x = x_k}
@@ -2566,7 +2566,7 @@ Hence, by our hypothesis of induction, we have
 \left| \det \diff Q_2 (\VEC{y},x_k) \right| \dx{x_k}
 \]
 for all $\VEC{y} \in R_1$ because
-$\displaystyle \det \diff Q_2 (\VEC{y},x_k) =
+$\DS \det \diff Q_2 (\VEC{y},x_k) =
 \diff_{x_k} Q_{2,\VEC{y}}(x_k)$ for all $(\VEC{y},x_k) \in U_2$
 according to (\ref{cov35}).  Hence
 \[
@@ -2578,13 +2578,13 @@ according to (\ref{cov35}).  Hence
 where the last equality comes from Fubini's Theorem since
 $\det \diff Q_2$ is continuous on $U_2$.  As in (iii.a), this last statement
 needs some clarifications.  Since
-$\displaystyle Q_2:U_2 \to \RR^k$ is a one-to-one and continuously
+$\DS Q_2:U_2 \to \RR^k$ is a one-to-one and continuously
 differentiable function with $\det \diff Q_2 (\VEC{x}) \neq 0$ for all
 $\VEC{x} \in U_2$, we have that $Q_2: U_2 \to Q(U_2)$ is a diffeomorphism.
-It follows as in (iii.a) that $\displaystyle Q_2^{-1}(R)$ is a bounded
+It follows as in (iii.a) that $\DS Q_2^{-1}(R)$ is a bounded
 and Jordan measurable set.  The Fubini's Theorem is applied to the function
-$\displaystyle \Chi_{Q_2^{-1}(R)} |\det \diff Q_2|$ on a rectangle
-containing $\displaystyle {Q_2^{-1}(R)}$.
+$\DS \Chi_{Q_2^{-1}(R)} |\det \diff Q_2|$ on a rectangle
+containing $\DS {Q_2^{-1}(R)}$.
 
 \stage{iii.c}
 We now prove (\ref{cov22}) with $U_{\VEC{a}} = U_1$.
@@ -2592,7 +2592,7 @@ We consider the Riemann integrable function $h:\tilde{g}(U_1) \to \RR$
 with compact support in $\tilde{g}(U_1)$ defined by $h = f \circ T$
 where $f:g(U_1) = (T \circ \tilde{g})(U_1) \to \RR$ is a
 Riemann integrable functions with compact support in $g(U_1)$.
-Recall that $\displaystyle \tilde{g} = Q_2\circ Q_1 = T^{-1} \circ g$ on $U_1$.
+Recall that $\DS \tilde{g} = Q_2\circ Q_1 = T^{-1} \circ g$ on $U_1$.
 
 We get from Lemma~\ref{cov27} that
 $(h \circ \tilde{g}) |\det \diff \tilde{g}|:U_1 \to \RR$ is a Riemann
@@ -2638,20 +2638,20 @@ looking for at the beginning of (iii).
 
 \stage{iii.d} Since $f$ in the statement of Proposition~\ref{cov8} has
 a compact support, there exists a finite collection
-$\displaystyle \{ U_{\VEC{a}_i} \}_{1 \leq i \leq N}$ of open subsets of $W$
-such that $\displaystyle \supp f \subset \bigcup_{i=1}^N g(U_{\VEC{a}_i})$
+$\DS \{ U_{\VEC{a}_i} \}_{1 \leq i \leq N}$ of open subsets of $W$
+such that $\DS \supp f \subset \bigcup_{i=1}^N g(U_{\VEC{a}_i})$
 and (\ref{cov22}) is true for all Riemann integrable functions
 with compact support in $g(U_{\VEC{a}_i})$.
-Do not forget that $\displaystyle g:W\to \RR^n$ is an open mapping and so
+Do not forget that $\DS g:W\to \RR^n$ is an open mapping and so
 $g(U_{\VEC{a}_i})$ is an open set for all $i$.
 
-Let $\displaystyle \{\phi_i\}_{1 \leq i \leq N}$ be a partition of unity
+Let $\DS \{\phi_i\}_{1 \leq i \leq N}$ be a partition of unity
 subordinate to the open cover
-$\displaystyle \{ g(U_{\VEC{a}_i}) \}_{1 \leq i \leq N}$ of $\supp f$
+$\DS \{ g(U_{\VEC{a}_i}) \}_{1 \leq i \leq N}$ of $\supp f$
 as described in Remark~\ref{rmkFPUcase}.  In particular,
 $\supp \phi_i \subset g(U_{\VEC{a}_i})$ for all $i$.
 We have
-$\displaystyle f = \sum_{i=1}^N \phi_i f$ on $g(W)$ and
+$\DS f = \sum_{i=1}^N \phi_i f$ on $g(W)$ and
 \begin{align*}
 \rint_{g(W)} f & = \rint_{g(W)} \sum_{i=1}^N \phi_i f
 = \sum_{i=1}^N \rint_{g(W)}  \phi_i f 
@@ -2673,28 +2673,28 @@ Proposition~\ref{cov8}.
 
 \begin{proof}[Proof (of Theorem~\ref{cov7})]
 Since $f:g(W) \to \RR$ is integrable, there exist an admissible open
-cover $\displaystyle \{\tilde{U}_{\alpha}\}_{\alpha\in A}$ of $g(W)$ and a
-partition of unity $\displaystyle \{\phi_j\}_{j \in \NNp}$
-subordinate to $\displaystyle \{\tilde{U}_{\alpha}\}_{\alpha\in A}$ such that
+cover $\DS \{\tilde{U}_{\alpha}\}_{\alpha\in A}$ of $g(W)$ and a
+partition of unity $\DS \{\phi_j\}_{j \in \NNp}$
+subordinate to $\DS \{\tilde{U}_{\alpha}\}_{\alpha\in A}$ such that
 \[
   \int_{g(W)} f = \sum_{j \in \NNp} \rint_{g(W)} \phi_j f \ .
 \]
 In particular, the sum converges absolutely.
-For each $\displaystyle j \in \NNp$, we have that
+For each $\DS j \in \NNp$, we have that
 $\supp \phi_j \subset \tilde{U}_{\alpha_j}$ for some $\alpha_j \in A$.
 
 Since $g:W \to g(W)$ is a diffeomorphism as we have shown in (iii) of
 the proof of Lemma~\ref{cov27}, the collection
-$\displaystyle \{U_{\alpha}\}_{\alpha\in A}$ where
-$\displaystyle U_\alpha = g^{-1}(\tilde{U}_{\alpha})$ for all $\alpha$
+$\DS \{U_{\alpha}\}_{\alpha\in A}$ where
+$\DS U_\alpha = g^{-1}(\tilde{U}_{\alpha})$ for all $\alpha$
 is an admissible open cover of $W$ and
-$\displaystyle \{\phi_j\circ g\}_{j \in \NNp}$ is
+$\DS \{\phi_j\circ g\}_{j \in \NNp}$ is
 a partition of unity subordinate to
-$\displaystyle \{U_{\alpha}\}_{\alpha\in A}$ of class $\displaystyle C^1$
+$\DS \{U_{\alpha}\}_{\alpha\in A}$ of class $\DS C^1$
 (see Remark~\ref{cov38}).  We have that
-$\displaystyle \sum_{j \in \NNp} (\phi_j\circ g)(\VEC{x}) = 1$
+$\DS \sum_{j \in \NNp} (\phi_j\circ g)(\VEC{x}) = 1$
 for all $\VEC{x} \in W$ and
-$\displaystyle \supp (\phi_j \circ g)
+$\DS \supp (\phi_j \circ g)
 \subset U_{\alpha_j} = g^{-1}(\tilde{U}_{\alpha_j})$
 for all $j \in \NNp$.
 
@@ -2706,7 +2706,7 @@ $\tilde{U}_{\alpha_j}$, we may use Proposition~\ref{cov8} to conclude that
 \rint_{g(U_{\alpha_j})} \phi_j h
 = \rint_{U_{\alpha_j}} ((\phi_j h)\circ g)\, |\det \diff g|
 \]
-for $h=|f|$ and $h=f$, and all $\displaystyle j \in \NNp$.  Thus
+for $h=|f|$ and $h=f$, and all $\DS j \in \NNp$.  Thus
 \begin{align*}
 \int_{g(W)} h &= \sum_{j \in \NNp} \rint_{g(W)} \phi_j h
 = \sum_{j \in \NNp} \rint_{g(U_{\alpha_j})} \phi_j h
@@ -2732,18 +2732,18 @@ $A = \{ \VEC{x} \in W : \det \diff g(\VEC{x}) = 0 \}$ is a closed set
 of measure zero because the set $g(A)$ is always of measure zero.
 
 \begin{defn}
-Let $U$ be an open subset of $\displaystyle \RR^n$ and
-$\displaystyle f:U \to \RR^n$ be a continuously differentiable
+Let $U$ be an open subset of $\DS \RR^n$ and
+$\DS f:U \to \RR^n$ be a continuously differentiable
 function.
 
-A point $\displaystyle \VEC{x} \in U$ is 
+A point $\DS \VEC{x} \in U$ is 
 a {\bfseries critical point}\index{Critical Point} of $f$ if
 $\det(\diff f(\VEC{x})) = 0$ or, equivalently, $\diff f(\VEC{x})$ has
 rank less than $n$ or $\diff f(\VEC{x})$ is not invertible.
 
-A point $\displaystyle \VEC{y} \in \RR^n$ is
+A point $\DS \VEC{y} \in \RR^n$ is
 a {\bfseries regular value}\index{Regular value} of $f$ if
-none of the points $\displaystyle \VEC{x} \in f^{-1}(\{\VEC{y}\})$
+none of the points $\DS \VEC{x} \in f^{-1}(\{\VEC{y}\})$
 is a critical point.
 \end{defn}
 
@@ -2751,20 +2751,20 @@ Before stating the main result of this section, we state a result
 about regular points that will be useful later.
 
 \begin{prop}  \label{regValCoIm}
-Let $U$ be an open subset of $\displaystyle \RR^n$ and
-$\displaystyle f:U \to \RR^n$ be a continuously differentiable
-function.  If $\displaystyle \VEC{y} \in \RR^n$ is
-a regular value of $f$, then $\displaystyle f^{-1}(\{\VEC{y}\})$ is
+Let $U$ be an open subset of $\DS \RR^n$ and
+$\DS f:U \to \RR^n$ be a continuously differentiable
+function.  If $\DS \VEC{y} \in \RR^n$ is
+a regular value of $f$, then $\DS f^{-1}(\{\VEC{y}\})$ is
 the union of isolated points.
 \end{prop}
 
 \begin{proof}
-Suppose that $\VEC{x} \in \displaystyle f^{-1}(\{\VEC{y}\})$.  Then
+Suppose that $\VEC{x} \in \DS f^{-1}(\{\VEC{y}\})$.  Then
 $\det (\diff f(\VEC{x}))\neq 0$ because $\VEC{y}$ is regular.  We get
 from the Inverse Function Theorem that $f$ is an isomorphism from an
 open neighbourhood $U_{\VEC{x}} \subset U$ of $\VEC{x}$ to an open
 neighbourhood $V_{\VEC{y}}$ of $\VEC{y}$.  In particular,
-$\displaystyle U_{\VEC{x}} \cap f^{-1}(\{\VEC{y}\}) = \{\VEC{x}\}$.
+$\DS U_{\VEC{x}} \cap f^{-1}(\{\VEC{y}\}) = \{\VEC{x}\}$.
 \end{proof}
 
 The next theorem says that almost all points in the image of a
@@ -2774,8 +2774,8 @@ proof is given in \cite{GP} which, according to the authors, is
 ``virtually verbatim'' from \cite{Mi}.
 
 \begin{theorem}[Sard's Theorem]
-Let $U$ be an open subset of $\displaystyle \RR^n$ and
-$\displaystyle f:U \to \RR^n$ be a continuously differentiable
+Let $U$ be an open subset of $\DS \RR^n$ and
+$\DS f:U \to \RR^n$ be a continuously differentiable
 function.  Moreover, let
 $A = \{\VEC{x} \in U : \det(\diff f(\VEC{x})) = 0\}$,
 Then $f(A)$ is a set of measure zero.
@@ -2784,18 +2784,18 @@ Then $f(A)$ is a set of measure zero.
 \begin{proof}
 \stage{i} Suppose that $R \subset U$ is a closed rectangle with sides
 of length $L$.  Since $\diff f$ is continuous on the compact set $R$,
-we have that $\displaystyle \pdydx{f_i}{x_j}$ is uniformly continuous
+we have that $\DS \pdydx{f_i}{x_j}$ is uniformly continuous
 on $R$ for $1\leq i, j \leq n$.   Given $\epsilon > 0$, there exists
 $\delta > 0$ such that
-$\displaystyle \left| \pdydx{f_i}{x_j}(\VEC{y}) - \pdydx{f_i}{x_j}(\VEC{x})
+$\DS \left| \pdydx{f_i}{x_j}(\VEC{y}) - \pdydx{f_i}{x_j}(\VEC{x})
 \right| < \frac{\epsilon}{n}$ for $\|\VEC{y} - \VEC{x}\| < \delta$
 and $1\leq i, j \leq n$.
-Choose $N$ large enough such that $\displaystyle n (L/N)^2 < \delta^2$
-and partition the rectangle $R$ into $\displaystyle N^n$ subrectangles
+Choose $N$ large enough such that $\DS n (L/N)^2 < \delta^2$
+and partition the rectangle $R$ into $\DS N^n$ subrectangles
 with sides of length $L/N$.  It follows from our choice of $N$ that
 the diameter $(L\sqrt{n})/N$ of the subrectangles is less than
 $\delta$.   Hence, if $R_{k_1,k_2,\ldots,k_n}$ is one of the subrectangles, then
-$\displaystyle \left| \pdydx{f_i}{x_j}(\VEC{y}) - \pdydx{f_i}{x_j}(\VEC{x})
+$\DS \left| \pdydx{f_i}{x_j}(\VEC{y}) - \pdydx{f_i}{x_j}(\VEC{x})
 \right| < \frac{\epsilon}{n}$ for all
 $\VEC{x}, \VEC{y} \in R_{k_1,k_2,\ldots,k_n}$
 and $1\leq i, j \leq n$ because $\|\VEC{y} - \VEC{x}\| < \delta$
@@ -2803,10 +2803,10 @@ for all $\VEC{x}, \VEC{y} \in R_{k_1,k_2,\ldots,k_n}$.
 
 \stage{ii} Suppose that $R_{k_1,k_2,\ldots,k_n}$ is one of the
 subrectangles of $R$ and choose $\VEC{x} \in R_{k_1,k_2,\ldots,k_n}$.  Let
-$\displaystyle g:R_{k_1,k_2,\ldots,k_n} \to \RR^n$ be
+$\DS g:R_{k_1,k_2,\ldots,k_n} \to \RR^n$ be
 the function defined by $g(\VEC{y}) = (\diff f(\VEC{x}))\VEC{y} - f(\VEC{y})$
 for $\VEC{y} \in R_{k_1,k_2,\ldots,k_n}$.  Since
-$\displaystyle \left| \pdydx{g_i}{x_j}(\VEC{y}) \right|
+$\DS \left| \pdydx{g_i}{x_j}(\VEC{y}) \right|
 = \left| \pdydx{f_i}{x_j}(\VEC{x}) - \pdydx{f_i}{x_j}(\VEC{y})
 \right| < \frac{\epsilon}{n}$ for $\VEC{y} \in R_{k_1,k_2,\ldots,k_n}$, we
 get from the Mean Value Theorem and Schwarz inequality that
@@ -2844,28 +2844,28 @@ for $\VEC{x}, \VEC{y} \in R_{k_1,k_2,\ldots,k_n}$.
 \stage{iii} Suppose that $A \cap R_{k_1,k_2,\ldots,k_n}\neq \emptyset$ for some
 subrectangle $R_{k_1,k_2,\ldots,k_n}$.  Choose
 $\VEC{x} \in A \cap R_{k_1,k_2,\ldots,k_n}$.
-Since $\diff f(\VEC{x})$ is not onto $\displaystyle \RR^n$, its image
-is a subspace $\displaystyle S \subset \RR^n$ of dimension at most
+Since $\diff f(\VEC{x})$ is not onto $\DS \RR^n$, its image
+is a subspace $\DS S \subset \RR^n$ of dimension at most
 $n-1$.  In particular, $(\diff f(\VEC{x})) (\VEC{y} - \VEC{x}) \in S$ for all
 $\VEC{y} \in R_{k_1,k_2,\ldots,k_n}$.  It follows from (\ref{sardEq1}) that
-$\displaystyle \dist{S+f(\VEC{x})}{f(\VEC{y})}
+$\DS \dist{S+f(\VEC{x})}{f(\VEC{y})}
 = \dist{S}{f(\VEC{y}) - f(\VEC{x})} \leq (\epsilon L \sqrt{n})/N$
 for all $\VEC{y} \in R_{k_1,k_2,\ldots,k_n}$.
 
-Moreover, since $\displaystyle \pdydx{f_i}{x_j}$ is continuous on the
+Moreover, since $\DS \pdydx{f_i}{x_j}$ is continuous on the
 compact set $R$ for $1\leq i, j \leq n$, they all reach their maximum
 on $R$.  Thus, there exists $M>0$ such that
-$\displaystyle \left| \pdydx{f_i}{x_j}(\VEC{z})\right| \leq M$ for all
+$\DS \left| \pdydx{f_i}{x_j}(\VEC{z})\right| \leq M$ for all
 $\VEC{z} \in R$ and $1\leq i, j \leq n$.  Proceeding as we did for
 (\ref{sardEq2}) and (\ref{sardEq3}) with $f$ instead of $g$, we get
 $|f_i(\VEC{x}) - f_i(\VEC{y})| \leq M\sqrt{n}\, \|\VEC{x} - \VEC{y}\|$ and
-$\displaystyle \|f(\VEC{x})- f(\VEC{y})\| \leq M n \|\VEC{x} - \VEC{y}\|
+$\DS \|f(\VEC{x})- f(\VEC{y})\| \leq M n \|\VEC{x} - \VEC{y}\|
 \leq (M n^{3/2} L)/N$ for all $\VEC{y} \in R$.
 
 Therefore, when $A \cap R_{k_1,k_2,\ldots,k_n} \neq \emptyset$, we have that
 $f(A\cap R_{k_1,k_2,\ldots,k_n})$ is contained in a cylinder
 $C$ of radius
-$\displaystyle (M n^{3/2} L)/N$ and height $2 (\epsilon L \sqrt{n})/N$
+$\DS (M n^{3/2} L)/N$ and height $2 (\epsilon L \sqrt{n})/N$
 with an axis perpendicular to the space $S$.
 \pdfbox{mult_integrals/sard}
 The volume of $C$ is
@@ -2880,64 +2880,64 @@ The volume of $C$ is
 \end{align*}
 where we have used the fact that the ``area'' of the cross section
 perpendicular to the axis of the cylinder is the volume of a sphere of 
-radius $\displaystyle (M n^{3/2} L)/N$ in the subspace $S$ of
+radius $\DS (M n^{3/2} L)/N$ in the subspace $S$ of
 dimension $n-1$.  The volume of a sphere of radius $r$ in
-$\displaystyle \RR^m$ is
-$\displaystyle (2 \pi^{m/2} r^m)/(m \Gamma(m/2))$ \footnote{
-Integrating $\displaystyle e^{-\pi \|\VEC{x}\|_2^2}$ over
-$\displaystyle \RR^m$ using spherical coordinates (i.e.\ coordinates of the
+$\DS \RR^m$ is
+$\DS (2 \pi^{m/2} r^m)/(m \Gamma(m/2))$ \footnote{
+Integrating $\DS e^{-\pi \|\VEC{x}\|_2^2}$ over
+$\DS \RR^m$ using spherical coordinates (i.e.\ coordinates of the
 form $\VEC{x} = r \VEC{y}$ with $\|\VEC{y}\|=1$), the reader can verify that
-the volume of $B_1(\VEC{0})$ is $\displaystyle 2 \pi^{m/2}/(m\Gamma(m/2))$.
+the volume of $B_1(\VEC{0})$ is $\DS 2 \pi^{m/2}/(m\Gamma(m/2))$.
 In particular, the volume of $B_1(\VEC{0})$ in
-$\displaystyle \RR^2$ and $\displaystyle \RR^3$ are respectively $\pi$
+$\DS \RR^2$ and $\DS \RR^3$ are respectively $\pi$
 and $4\pi/3$.}
 
-Hence $f(A \cap R)$ is contained in the union of $\displaystyle N^n$
+Hence $f(A \cap R)$ is contained in the union of $\DS N^n$
 cylinders whose total volume is at most
-$\displaystyle \epsilon B (L/N)^n N^n = \epsilon B L^n$.  Since $\epsilon$ is
+$\DS \epsilon B (L/N)^n N^n = \epsilon B L^n$.  Since $\epsilon$ is
 arbitrary, we have that $f(A\cap R)$ is of zero content.
 
 \stage{iv} Since $U$ is the union of closed rectangles $\{R_i\}_{i\in \NN}$ 
 (see remark below) and the countable union of sets of zero content is
 a set of measure zero, we have that
-$\displaystyle f(A) = \bigcup_{i\in \NN} f(A \cap R_i)$
+$\DS f(A) = \bigcup_{i\in \NN} f(A \cap R_i)$
 is of measure zero.
 \end{proof}
 
 \begin{rmk}
 There are several methods to prove that and open set
-$\displaystyle V \subset \RR^n$ is the countable union of closed rectangles.
+$\DS V \subset \RR^n$ is the countable union of closed rectangles.
 We present two methods.  The first one is quick and simple but lack
 the constructive approach which is often really useful.
 
-\stage{$\displaystyle \mathbf{1^{st}}$ Method}
+\stage{$\DS \mathbf{1^{st}}$ Method}
 For each $\VEC{x} \in U$, choose a closed rectangle
 $R_{\VEC{x}}=[a_1(\VEC{x}),b_1(\VEC{x})]\times[a_2(\VEC{x}),b_2(\VEC{x})]
 \times\cdots\times[a_n(\VEC{x}),b_n(\VEC{x})] \subset U$
 such that $\VEC{x} \in R_{\VEC{x}}$ and
 $a_j(\VEC{x}),b_j(\VEC{x}) \in \QQ$ for $1\leq j \leq n$.  Then
-$\displaystyle U = \bigcup_{\VEC{x}\in V} R_{\VEC{x}}$.  Surprisingly,
+$\DS U = \bigcup_{\VEC{x}\in V} R_{\VEC{x}}$.  Surprisingly,
 the number of rectangles is countable because\\
-$\displaystyle \{ (a_1(\VEC{x}),b_1(\VEC{x}),a_2(\VEC{x}),b_2(\VEC{x}),\ldots,
+$\DS \{ (a_1(\VEC{x}),b_1(\VEC{x}),a_2(\VEC{x}),b_2(\VEC{x}),\ldots,
 a_n(\VEC{x}),b_n(\VEC{x})) : \VEC{x} \in U \} \subset \QQ^{2n}$
 and a subset of a countable set is a countable set.
 
-\stage{$\displaystyle \mathbf{2^{nd}}$ Method}
+\stage{$\DS \mathbf{2^{nd}}$ Method}
 Let $U_j = \{ \VEC{x} \in U : \|\VEC{x}\| < j \ \text{and} \
 \dist{\VEC{x}}{\partial U} > 1/j \}$ for $j>0$ and
 $V_0 = \emptyset$.   Note that many of the sets $U_j$ may be empty but
 that does not mater.
 Moreover, let $K_j = \overline{U}_j \setminus U_{j-1}$ for $j>0$.
 We have that the $K_j$ are compacts subsets of $U$ and
-$\displaystyle U = \bigcup_{j>0} K_j$.
+$\DS U = \bigcup_{j>0} K_j$.
 For each $\VEC{x} \in K_j$, choose a closed rectangle
 $R_{\VEC{x}} \subset U$ such that $\VEC{x} \in R_{\VEC{x}}$.
-Since $\displaystyle \{ R_{\VEC{x}}^\circ \}_{\VEC{x}\in K_j}$ is an open
+Since $\DS \{ R_{\VEC{x}}^\circ \}_{\VEC{x}\in K_j}$ is an open
 cover of the compact set $K_j$, there exists a finite subcover
-$\displaystyle \{ R_{j,i}^\circ \}_{1 \leq i \leq I_j}$ of $K_j$.
-The union of the $\displaystyle \{ R_{j,i} \}_{1 \leq i \leq I_j}$ for
+$\DS \{ R_{j,i}^\circ \}_{1 \leq i \leq I_j}$ of $K_j$.
+The union of the $\DS \{ R_{j,i} \}_{1 \leq i \leq I_j}$ for
 $j>0$ is a countable collection of closed rectangles such that
-$\displaystyle U = \bigcup_{1 \leq i \leq I_j,\, j>0} R_{j,i}$.
+$\DS U = \bigcup_{1 \leq i \leq I_j,\, j>0} R_{j,i}$.
 \end{rmk}
 
 \section{Exercises}
@@ -2949,7 +2949,7 @@ graph of $f$ has zero content.       \label{graphcontzero}
 
 \begin{sol}
 Given $\epsilon>0$, we may choose a partition $P=\{p_i: 0 \leq i \leq N\}$ of
-$[a,b]$ such that $\displaystyle \U_P(f) - \LL_P(f) < \epsilon$
+$[a,b]$ such that $\DS \U_P(f) - \LL_P(f) < \epsilon$
 because $f$ is Riemann integrable.
 
 As usual, let $m_i = \inf\{f(x) : p_{i-1}\leq x \leq p_i \}$ and
@@ -2958,7 +2958,7 @@ Consider the rectangles
 $E_i = \{ (x,y) : p_{i-1} \leq x \leq p_i \ \text{and}
 \ m_i \leq y \leq M_i \}$ for $0<i\leq N$.  We have that the graph of
 $f$ is a subset 
-of $\displaystyle E = \bigcup_{i=1}^N E_i$ and the area of $E$ is
+of $\DS E = \bigcup_{i=1}^N E_i$ and the area of $E$ is
 \[
   A(E) = \sum_{i=1}^N (M_i - m_i)(p_i - p_{i-1})
   = \U_P(f) - \LL_P(f) < \epsilon \ .
@@ -2969,18 +2969,18 @@ content zero.
 
 \begin{question}
 Suppose that $f:[a,b]\to [0,\infty[$ is Riemann integrable.  Let\\
-$\displaystyle
+$\DS
 S = \left\{ (x,y) : a \leq x \leq b \ \text{and} \ 0 \leq y \leq f(x)
 \right\}$.
 Prove that $S$ is Jordan measurable and the area $A(S)$ of $S$ is equal to
-$\displaystyle \int_a^b f(x) \dx{x}$.
+$\DS \int_a^b f(x) \dx{x}$.
 \end{question}
 
 \begin{sol}
 \stage{i}
 Since $f$ is Riemann integrable, $f$ is bounded.  Thus, there exists $C>0$
 such that $\sup \{ f(x) : a \leq x \leq b \} < C$.  Since
-$\displaystyle S\subset R
+$\DS S\subset R
 = \left\{ (x,y) : a \leq x \leq b \ \text{and} \ 0 \leq y \leq C \right\}$,
 $S$ is bounded.  Moreover, $\partial S$ is the union of four sets of
 zero content and so of measure zero.
@@ -3036,18 +3036,18 @@ and
   \leq \U_{\{P,Q\}}(\Chi_S) \ .
 \]
 It follows from (\ref{airunderf}) that
-$\displaystyle \left| A(S) - \int_a^b f(x)\dx{x} \right| < \epsilon$.
+$\DS \left| A(S) - \int_a^b f(x)\dx{x} \right| < \epsilon$.
 Since $\epsilon$ is arbitrary, we get
-$\displaystyle A(S) = \int_a^b f(x)\dx{x}$.
+$\DS A(S) = \int_a^b f(x)\dx{x}$.
 \end{sol}
 
 \begin{question}
-Let $S$ be a bounded subset of $\displaystyle \RR^2$.   \label{innerarea}
-Prove that $S$ and $\displaystyle S^\circ$ have the same inner area;
+Let $S$ be a bounded subset of $\DS \RR^2$.   \label{innerarea}
+Prove that $S$ and $\DS S^\circ$ have the same inner area;
 namely, show that $\LL(\Chi_S) = \LL(\Chi_{S^\circ})$.
 Note that we do not require $S$ to be Jordan measurable.  If it was,
 then the question would be easy to answer because
-$\displaystyle S \setminus S^\circ \subset \partial S$ would be a
+$\DS S \setminus S^\circ \subset \partial S$ would be a
 subset of the closed set of measure zero $\partial S$ and we will be
 able to use Remark~\ref{rmkC0meas}.
 \end{question}
@@ -3059,7 +3059,7 @@ of $R$.  We assume that $P=\{p_i:0 \leq i \leq N\}$ and
 $Q=\{q_j: 0 \leq j \leq M\}$, and let
 $R_{i,j} = \{(x,y) : p_{i-1}\leq x \leq p_i \ \text{and}
 \ q_{j-1} \leq y \leq q_j\}$ for $0 < i \leq N$ and $0 < j \leq M$.
-Given $\displaystyle V \subset \RR^2$, let
+Given $\DS V \subset \RR^2$, let
 \[
 m_{i,j}(V) = \inf \{ \Chi_V(x,y) : (x,y) \in R_{i,j}\}
 = \begin{cases}
@@ -3068,7 +3068,7 @@ m_{i,j}(V) = \inf \{ \Chi_V(x,y) : (x,y) \in R_{i,j}\}
 \end{cases}
 \]
 for $0 < i \leq N$ and $0 < j \leq M$.
-We have that $\displaystyle m_{i,j}(S^\circ) \leq m_{i,j}(S)$ for
+We have that $\DS m_{i,j}(S^\circ) \leq m_{i,j}(S)$ for
 $0 < i \leq N$ and $0 < j \leq M$.
 Hence
 \begin{align*}
@@ -3088,11 +3088,11 @@ Let $R$ be a rectangle containing $S$ and $\{P,Q\}$ be a partition of $R$.
 We assume that $P$, $Q$ and $R_{i,j}$ are as defined in (i).
 
 Given $\epsilon >0$, choose
-$\displaystyle \delta < \frac{\epsilon}{\LL(\Chi_S)}$.
+$\DS \delta < \frac{\epsilon}{\LL(\Chi_S)}$.
 We assume that $\LL(\Chi_S) > 0$ otherwise
 $0 = \LL(\Chi_S) \leq \LL(\Chi_{S^\circ})$ and there is nothing
 to prove.  For each rectangle $R_{i,j} \subset S$, we construct a rectangle
-$\displaystyle \breve{R}_{i,j} \subset R_{i,j}^\circ \subset S^\circ$ by
+$\DS \breve{R}_{i,j} \subset R_{i,j}^\circ \subset S^\circ$ by
 shrinking the rectangle $R_{i,j}$ by a factor of
 $\sqrt{1-\delta}$ in both directions.
 We have $A(\breve{R}_{i,j}) = (1-\delta) A(R_{i,j})$ and
@@ -3131,7 +3131,7 @@ $\LL(\Chi_{S^\circ}) \geq \LL(\Chi_S)$.
 \end{sol}
 
 \begin{question}
-Let $S$ be a bounded subset of $\displaystyle \RR^2$.    \label{outerarea}
+Let $S$ be a bounded subset of $\DS \RR^2$.    \label{outerarea}
 Prove that $S$ and $\overline{S}$ have the same outer area; namely, show that
 $\U(\Chi_S) = \U(\Chi_{\overline{S}})$.  As for
 question~\ref{innerarea}, we do not require $S$ to be Jordan measurable.
@@ -3142,7 +3142,7 @@ The proof is similar to the proof given for Question~\ref{innerarea}.
 \end{sol}
 
 \begin{question}
-Let $S$ be a bounded subset of $\displaystyle \RR^2$.  Prove that outer
+Let $S$ be a bounded subset of $\DS \RR^2$.  Prove that outer
 area of $S$ is equal to the inner area of $S$ plus the outer area of
 $\partial S$; namely, prove that
 $\U(\Chi_S) = \LL(\Chi_{\overline{S}}) + \U(\Chi_{\partial S})$.
@@ -3151,7 +3151,7 @@ measurable.
 \end{question}
 
 \begin{sol}
-We have that $\displaystyle \partial S = \overline{S} \setminus S^\circ$.
+We have that $\DS \partial S = \overline{S} \setminus S^\circ$.
 
 \stage{i} We first prove that
 $\U(\Chi_S) \leq \LL(\Chi_S) + \U(\Chi_{\partial S})$.
@@ -3179,7 +3179,7 @@ m_{i,j}(V) = \inf \{ \Chi_V(x,y) : (x,y) \in R_{i,j}\}
 0 & \quad \text{otherwise}
 \end{cases}
 \]
-for all $\displaystyle V \subset \RR^2$.
+for all $\DS V \subset \RR^2$.
 Note that $m_{i,j}(V) = M_{i,j}(V)$ for $R_{i,j} \subset V$.
 Hence
 \begin{align*}
@@ -3193,17 +3193,17 @@ Hence
 where the first equality is a consequence of the result of
 Question~\ref{outerarea}.  Since this is true for all
 partitions $\{P,Q\}$ of $R$, we get
-$\displaystyle \U(\Chi_S) \leq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
+$\DS \U(\Chi_S) \leq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
 
 \stage{ii} We now prove that
-$\displaystyle \U(\Chi_S) \geq \LL(\Chi_S) + \U(\Chi_{\partial S})$.
+$\DS \U(\Chi_S) \geq \LL(\Chi_S) + \U(\Chi_{\partial S})$.
 Again, according to the result of Question~\ref{innerarea}, it is
 enough to prove that
-$\displaystyle \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
+$\DS \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
 
 Let $R$ be rectangle containing $\overline{S}$.  Given $\epsilon >0$,
 choose a partition $\{\tilde{P},\tilde{Q}\}$ of $R$ such that
-$\displaystyle \LL_{\{\tilde{P},\tilde{Q}\}}(\Chi_{S^\circ})
+$\DS \LL_{\{\tilde{P},\tilde{Q}\}}(\Chi_{S^\circ})
 + \epsilon > \LL(\Chi_{S^\circ})$.
 Let $\{P,Q\}$ be a refinement of $\{\tilde{P},\tilde{Q}\}$.
 We assume that $P$, $Q$ and $R_{i,j}$ are as defined in (i).
@@ -3221,22 +3221,22 @@ where the first equality is again a consequence of the result of
 Question~\ref{outerarea}.
 Since this is true for any refinement $\{P,Q\}$ of
 $\{\tilde{P},\tilde{Q}\}$, we get
-$\displaystyle \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) - \epsilon +
+$\DS \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) - \epsilon +
 \U(\Chi_{\partial S})$.
 Since this last inequality is true for all $\epsilon >0$, we finally
 get
-$\displaystyle \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
+$\DS \U(\Chi_S) \geq \LL(\Chi_{S^\circ}) + \U(\Chi_{\partial S})$.
 \end{sol}
 
 \begin{question}
 Prove the                         \label{MeanValueTHInt}
 {\bfseries Mean Value Theorem for integrals}\index{Mean
 Value Theorem for Integrals}.  Namely, let
-$\displaystyle S\subset \RR^n$ be a compact, convex and Jordan
+$\DS S\subset \RR^n$ be a compact, convex and Jordan
 measurable set.  If $g:S\to \RR$ is Riemann integrable,
 $g(\VEC{x}) \geq 0$ for all $\VEC{x} \in S$, and $f:S\to \RR$ is
 continuous, then there exists $\VEC{a}\in S$ such that
-$\displaystyle \int_S f(\VEC{x}) g(\VEC{x}) \dx{\VEC{x}} =
+$\DS \int_S f(\VEC{x}) g(\VEC{x}) \dx{\VEC{x}} =
 f(\VEC{a}) \int_S g(\VEC{x}) \dx{\VEC{x}}$.
 \end{question}
 
@@ -3244,8 +3244,8 @@ f(\VEC{a}) \int_S g(\VEC{x}) \dx{\VEC{x}}$.
 Since $f, g:S \to \RR$ are Riemann integrable, we have that
 $fg:S\to \RR$ is Riemann integrable (Question~\ref{intfg}).
 Let
-$\displaystyle m = \inf\{ f(\VEC{x}) : \VEC{x} \in S \}$ and
-$\displaystyle M = \sup\{ f(\VEC{x}) : \VEC{x} \in S \}$.
+$\DS m = \inf\{ f(\VEC{x}) : \VEC{x} \in S \}$ and
+$\DS M = \sup\{ f(\VEC{x}) : \VEC{x} \in S \}$.
 $m$ and $M$ are real number because $f$ is continuous on the compact set
 $S$.  In fact, $m=f(\VEC{x}_1)$ and $M=f(\VEC{x}_2)$ for some $\VEC{x}_1$ and
 $\VEC{x}_2$ in $S$.
@@ -3258,15 +3258,15 @@ M \int_S g(\VEC{x}) \dx{\VEC{x}} \ .
 \]
 
 The result is trivial if
-$\displaystyle \int_S g(\VEC{x}) \dx{\VEC{x}} = 0$.  We therefore
-assume that $\displaystyle \int_S g(\VEC{x}) \dx{\VEC{x}} >0$.
+$\DS \int_S g(\VEC{x}) \dx{\VEC{x}} = 0$.  We therefore
+assume that $\DS \int_S g(\VEC{x}) \dx{\VEC{x}} >0$.
 Thus
 \[
 m \leq \frac{\int_S g(\VEC{x})f(\VEC{x}) \dx{\VEC{x}}}
 {\int_S g(\VEC{x}) \dx{\VEC{x}} } \leq M \ .
 \]
 Since $f$ is continuous on $S$ and the line
-$\displaystyle \ell = \{\VEC{x}_1 + t(\VEC{x}_2-\VEC{x}_1) : 0 \leq t \leq 1\}$
+$\DS \ell = \{\VEC{x}_1 + t(\VEC{x}_2-\VEC{x}_1) : 0 \leq t \leq 1\}$
 between $\VEC{x}_1$ and $\VEC{x}_2$ is completely inside $S$ because $S$ is
 convex, we may use the Intermediate Value Theorem to find
 $t_1 \in [0,1]$ such that
@@ -3286,14 +3286,14 @@ f(x,y) = \begin{cases}
 2y & \qquad \text{if} \quad \VEC{x} \in \RR\setminus \QQ
 \end{cases}
 \]
-Prove that $\displaystyle \int_0^1 \int_0^1 f(x,y) \dx{y}\dx{x} =1$ but
-$\displaystyle \int_0^1 \int_0^1 f(x,y) \dx{x}\dx{y}$ does not exist.
+Prove that $\DS \int_0^1 \int_0^1 f(x,y) \dx{y}\dx{x} =1$ but
+$\DS \int_0^1 \int_0^1 f(x,y) \dx{x}\dx{y}$ does not exist.
 \end{question}
 
 \begin{question}
 Consider the function
 \[
-f(x,y) = \begin{cases} \displaystyle \frac{1}{q} &
+f(x,y) = \begin{cases} \DS \frac{1}{q} &
 \quad \text{if}\ x = p/q \ \text{where $0< p \leq q$ are relatively prime} \\
 0 & \quad \text{otherwise}
 \end{cases}
@@ -3318,16 +3318,16 @@ $y \in [0,1]$ and compute the integral.\\
 \subQ{c} Prove that $y \to f(x,y)$ is integrable on $[0,1]$ for all
 $x \in [0,1]$ and compute the integral.\\
 \subQ{d} Prove that
-$\displaystyle \int_0^1 \int_0^1 f(x,y) \dx{x}\dx{y}$ and
-$\displaystyle \int_0^1 \int_0^1 f(x,y) \dx{y}\dx{x}$ exist but are
+$\DS \int_0^1 \int_0^1 f(x,y) \dx{x}\dx{y}$ and
+$\DS \int_0^1 \int_0^1 f(x,y) \dx{y}\dx{x}$ exist but are
 not equal.
 \end{question}
 
 \begin{sol}
 \subQ{a} The function $f$ is not integrable on $S$ because $f$ is not
 bounded on $S$.  For instance,
-$\displaystyle f(z/2,z) = 1/z^2 \to \infty$ as $z \to 0$
-and $\displaystyle f(z,z/2) = -1/z^2 \to -\infty$ as $z \to 0$.
+$\DS f(z/2,z) = 1/z^2 \to \infty$ as $z \to 0$
+and $\DS f(z,z/2) = -1/z^2 \to -\infty$ as $z \to 0$.
 
 \subQ{b} For $y \in ]0,1[$ fixed, we have
 \[
@@ -3351,7 +3351,7 @@ is a set of zero content.  We have
 
 For $y = 0$ or $y = 1$, we have that
 $f_y(x) = f(x,y) = 0$ for $0 \leq x \leq 1$.
-Hence $f_y$ is integrable and $\displaystyle \int_0^1 f_y(x) \dx{x} = 0$.
+Hence $f_y$ is integrable and $\DS \int_0^1 f_y(x) \dx{x} = 0$.
 
 \subQ{c} For $x \in ]0,1[$ fixed, we have
 \[
@@ -3375,11 +3375,11 @@ of zero content. We have
 
 For $x = 0$ or $x = 1$, we have that
 $f_x(y) = f(x,y) = 0$ for $0 \leq y \leq 1$.
-Hence $f_x$ is integrable and $\displaystyle \int_0^1 f_x(y) \dx{y} = 0$.
+Hence $f_x$ is integrable and $\DS \int_0^1 f_x(y) \dx{y} = 0$.
 
 \subQ{d}
-Let $\displaystyle g(x) = \int_0^1 f_x(y) \dx{y}$ for $0 \leq x \leq 1$
-and $\displaystyle h(y) = \int_0^1 f_y(x) \dx{x}$ for $0 \leq y \leq 1$.
+Let $\DS g(x) = \int_0^1 f_x(y) \dx{y}$ for $0 \leq x \leq 1$
+and $\DS h(y) = \int_0^1 f_y(x) \dx{x}$ for $0 \leq y \leq 1$.
 We have
 \[
 g(x) = \begin{cases}
@@ -3396,10 +3396,10 @@ h(y) =
 Since they are two continuous functions on $]0,1[$ and
 $\{0,1\}$ is a set of zero content, they are both Riemann integrable on
 $[0,1]$.  In fact, 
-$\displaystyle
+$\DS
 \int_0^1 \int_0^1 f(x,y) \dx{y}\dx{x} =\int_0^1 g(x) \dx{x} = -1$
 and
-$\displaystyle
+$\DS
 \int_0^1 \int_0^1 f(x,y) \dx{x}\dx{y} =\int_0^1 h(y) \dx{y} = 1$.
 \end{sol}
 
@@ -3445,10 +3445,10 @@ using polar or spherical coordinates because these changes of
 variables are not properly defined at the origin.
 
 \begin{question}
-Consider the region $D$ enclosed by the curve $\displaystyle y=x^3$,
+Consider the region $D$ enclosed by the curve $\DS y=x^3$,
 and the lines $x=1$ and $y=0$.  Give two integrals to compute the mass
 of this thin region if the density is given by
-$\displaystyle \rho(x,y) = \sqrt{x^4+1}$.  Compute the mass of this
+$\DS \rho(x,y) = \sqrt{x^4+1}$.  Compute the mass of this
 region using one of the integrals that you have given.
 \end{question}
 
@@ -3457,7 +3457,7 @@ We have to compute the mass of the region represented in the following
 figure.
 \pdfbox{mult_integrals/extra11}
 The mass is given by the formula
-$\displaystyle m = \iint_D \rho = \int_0^1 \int_0^{x^3} \rho(x,y) \dx{y}\dx{x} =
+$\DS m = \iint_D \rho = \int_0^1 \int_0^{x^3} \rho(x,y) \dx{y}\dx{x} =
 \int_0^1 \int_{y^{1/3}}^1 \rho(x,y) \dx{x}\dx{y}$.
 It is easier to compute the mass of the region $D$ with the first
 double integral than the second one (the reader should try to
@@ -3472,14 +3472,14 @@ m = \int_0^1 \int_0^{x^3} \sqrt{x^4+1} \dx{y}\dx{x} &=
 \end{sol}
 
 \begin{question}
-Evaluate $\displaystyle I = \iint_S (x^2 - \sqrt{y})$, where $S$
-is the region enclosed by the parabola $\displaystyle x=y^2$ and the
+Evaluate $\DS I = \iint_S (x^2 - \sqrt{y})$, where $S$
+is the region enclosed by the parabola $\DS x=y^2$ and the
 line $x=2y$.
 \end{question}
 
 \begin{sol}
 The ordinates ($y$ values) of the points of intersection of
-$\displaystyle x=y^2$ and $x=2y$ are given by
+$\DS x=y^2$ and $x=2y$ are given by
 \[
 y^2 = 2y \Rightarrow y(y-2) = 0 \Rightarrow y=0\ \text{or}\ y= 2 \ .
 \]
@@ -3487,7 +3487,7 @@ We find the two intersection points $(0,0)$ and $(4,2)$.  We have
 drawn the region below.
 \pdfbox{mult_integrals/question1}
 We have
-$\displaystyle I = \int_0^4 \int_{x/2}^{\sqrt{x}} (x^2 - \sqrt{y})\dx{y}\dx{x}
+$\DS I = \int_0^4 \int_{x/2}^{\sqrt{x}} (x^2 - \sqrt{y})\dx{y}\dx{x}
   = \int_0^2 \int_{y^2}^{2y} (x^2 - \sqrt{y}) \dx{x} \dx{y}$.
 We evaluate the second integral.
 \begin{align*}
@@ -3501,10 +3501,10 @@ I &= \int_0^2 \left( \frac{x^3}{3} - x \sqrt{y}\right)\bigg|_{y^2}^{2y} \dx{x}
 \end{sol}
 
 \begin{question}
-Express the following double integrals $\displaystyle \iint_S f$
+Express the following double integrals $\DS \iint_S f$
 in terms of iterated integrals in two different ways.\\
-\subQ{a} $S$ is the region enclosed by $\displaystyle y=x^{1/3}$ and
-$\displaystyle y=x^2$ for $y\geq 0$.\\
+\subQ{a} $S$ is the region enclosed by $\DS y=x^{1/3}$ and
+$\DS y=x^2$ for $y\geq 0$.\\
 \subQ{b} $S$ is the triangle with vertices at $(0,0)$, $(-1,1)$ and
 $(2,1)$.\\
 \subQ{c} $S$ is the region enclosed by the $x$ axis, the line $x=2$
@@ -3513,7 +3513,7 @@ and the curve $y=\ln(x)$.
 
 \begin{sol}
 \subQ{a} The abscissas ($x$ values) of the points of intersection of
-$\displaystyle y=x^2$ with $\displaystyle y=x^{1/3}$ are given by
+$\DS y=x^2$ with $\DS y=x^{1/3}$ are given by
 \[
 x^2 = x^{1/3} \Rightarrow x(x^5- 1) = 0 \Rightarrow x=0\ \text{or}
 \ x = 1 \ .
@@ -3546,19 +3546,19 @@ Hence
 \end{sol}
 
 \begin{question}
-Express the following double integrals $\displaystyle \iint_S f$
+Express the following double integrals $\DS \iint_S f$
 in terms of iterated integrals in two different ways.\\
-\subQ{a} $S$ is the region enclosed by $\displaystyle y=x^3$ and
+\subQ{a} $S$ is the region enclosed by $\DS y=x^3$ and
 $y=4x$ for $y\leq 0$.\\
 \subQ{b} $S$ is the triangle with vertices at $(0,0)$, $(2,2)$ and
 $(3,1)$.\\
-\subQ{c} $S$ is the region enclosed by the parabolas $\displaystyle y=x^2$ and
-$\displaystyle y=6 - 4x -x^2$.
+\subQ{c} $S$ is the region enclosed by the parabolas $\DS y=x^2$ and
+$\DS y=6 - 4x -x^2$.
 \end{question}
 
 \begin{sol}
 \subQ{a} The abscissas (x values) of the points of intersection of
-$\displaystyle y=x^3$ with $y=4x$ are given by
+$\DS y=x^3$ with $y=4x$ are given by
 \[
 x^3 = 4x \Rightarrow x(x^2-4) = 0 \Rightarrow x=0, x= -2 \ \text{or}
 \ x = 2 \ .
@@ -3583,8 +3583,8 @@ Hence
 \end{align*}
 
 \subQ{c} The abscissas of the points of intersection of the two
-parabolas $\displaystyle y=x^2$ and
-$\displaystyle y=6 - 4x -x^2$ are given by
+parabolas $\DS y=x^2$ and
+$\DS y=6 - 4x -x^2$ are given by
 \[
 x^2 = 6- 4x - x^2 \Rightarrow 2x^2 + 4x -6 = 0
 \Rightarrow 2(x-1)(x+3)=0 \Rightarrow x= -3\ \text{or}
@@ -3610,13 +3610,13 @@ for $y\leq 10$.
 \end{sol}
 
 \begin{question}
-Evaluate the integral $\displaystyle \iint_S f$ in each of the
+Evaluate the integral $\DS \iint_S f$ in each of the
 following cases.\\
-\subQ{a} $\displaystyle f(x,y) = ye^{2x}$ and $S$ is the region
+\subQ{a} $\DS f(x,y) = ye^{2x}$ and $S$ is the region
 enclosed by $y=x$, $y=1$, $y=3$ and the $y$ axis.\\
-\subQ{b} $\displaystyle f(x,y) = \cos(y^3+1)$ and $S$ is the region enclosed by
+\subQ{b} $\DS f(x,y) = \cos(y^3+1)$ and $S$ is the region enclosed by
 $y=\sqrt{x}$, $y=1$ and the $y$ axis.\\
-\subQ{c} $\displaystyle f(x,y) = y e^{xy}$ and $S$ is the region enclosed by
+\subQ{c} $\DS f(x,y) = y e^{xy}$ and $S$ is the region enclosed by
 $y=1/x$, $x=2$ and $y=1$.
 \end{question}
 
@@ -3675,7 +3675,7 @@ parts.  Thus
 
 \begin{question}
 Let $f:[0,1]\to \RR$ be a continuous function.  Is the integral
-$\displaystyle \int_0^1 \int_x^{1-x} f(y) \dx{y} \dx{x}$
+$\DS \int_0^1 \int_x^{1-x} f(y) \dx{y} \dx{x}$
 equal to the integral of $f$ over the region delimited by the limits
 of integration?  Write the integral of $f$ over the 
 region delimited by the boundary of integration as the sum of two
@@ -3691,7 +3691,7 @@ The integral over this domain is
   + \int_{1/2}^1 \int_{1-x}^x f(y) \dx{y}\dx{x} \ .
 \]
 This is not equal to
-$\displaystyle \int_0^1 \int_x^{1-x} f(y) \dx{y}\dx{x}$ because
+$\DS \int_0^1 \int_x^{1-x} f(y) \dx{y}\dx{x}$ because
 \begin{align*}
 \int_0^1 \int_x^{1-x} f(y) \dx{y}\dx{x}
 &= \int_0^{1/2} \int_{x}^{1-x} f(y)\dx{y}\dx{x}
@@ -3699,7 +3699,7 @@ $\displaystyle \int_0^1 \int_x^{1-x} f(y) \dx{y}\dx{x}$ because
 &= \int_0^{1/2} \int_{x}^{1-x} f(y)\dx{y}\dx{x}
   - \int_{1/2}^1 \int_{1-x}^x f(y) \dx{y}\dx{x} \ .
 \end{align*}
-To express $\displaystyle \iint_S f$ as the sum of two
+To express $\DS \iint_S f$ as the sum of two
 integrals of one variable, we change the order of integration.
 \begin{align*}
 \iint_S f &= \int_0^{1/2} \int_0^y f(y)\dx{x} \dx{y}
@@ -3724,7 +3724,7 @@ $a=0$, $b=y$, $c=1-y$ and $d=1$.
 
 \begin{question}
 Reverse the order of integration of the integral
-$\displaystyle \int_1^3 \int_1^{\sqrt{x^2-1}} f(x,y)\dx{y}\dx{x}$.
+$\DS \int_1^3 \int_1^{\sqrt{x^2-1}} f(x,y)\dx{y}\dx{x}$.
 Is this integral equal to the integral of $f$ over the region enclosed
 by the limits of integration?  Justify your answer.
 \end{question}
@@ -3756,24 +3756,24 @@ $f$ over $S$ is given by
 
 \begin{question}
 Reverse the order of integration of the integral
-$\displaystyle \int_{-6}^8 \int_{x^{1/3}}^{(x+6)/7} xy \dx{y}\dx{x}$.
+$\DS \int_{-6}^8 \int_{x^{1/3}}^{(x+6)/7} xy \dx{y}\dx{x}$.
 \end{question}
 
 \begin{question}
 Reverse the order of integration in the integral
-$\displaystyle \int_0^a \int_0^{\sqrt{2ay-y^2}} f(x,y) \dx{x}\dx{y}$.
+$\DS \int_0^a \int_0^{\sqrt{2ay-y^2}} f(x,y) \dx{x}\dx{y}$.
 \end{question}
 
 \begin{sol}
-From $\displaystyle x=\sqrt{2ay-y^2}$, we get that
-$\displaystyle x^2=2ay-y^2$.  By completing the square with respect to
-the variable $y$, we get that $\displaystyle x^2 - a^2 = -(y - a)^2$.
+From $\DS x=\sqrt{2ay-y^2}$, we get that
+$\DS x^2=2ay-y^2$.  By completing the square with respect to
+the variable $y$, we get that $\DS x^2 - a^2 = -(y - a)^2$.
 Thus, the boundary of the domain of integration $S$ is an arc of the
-circle $\displaystyle x^2+ (y - a)^2 = a^2$.  The following figure
+circle $\DS x^2+ (y - a)^2 = a^2$.  The following figure
 shows the domain of integration.
 \pdfbox{mult_integrals/midterm_1}
-Solving $\displaystyle x^2+ (y - a)^2 = a^2$ for $y$, we get that
-$\displaystyle y = a - \sqrt{a^2 - x^2}$ on the lower part of the circle.
+Solving $\DS x^2+ (y - a)^2 = a^2$ for $y$, we get that
+$\DS y = a - \sqrt{a^2 - x^2}$ on the lower part of the circle.
 Hence
 \[
 \int_0^a \int_0^{\sqrt{2ay-y^2}} f(x,y) \dx{x}\dx{y}
@@ -3822,8 +3822,8 @@ with respect to $y$ to avoid having to split the domain of integration.
 \end{sol}
 
 \begin{question}
-Compute the integral of $\displaystyle f(x,y)=x^2+y^2$ over the region $D$
-enclosed by the parabola $\displaystyle x=y^2-2y$ and the line $y=x$.
+Compute the integral of $\DS f(x,y)=x^2+y^2$ over the region $D$
+enclosed by the parabola $\DS x=y^2-2y$ and the line $y=x$.
 \end{question}
 
 \begin{sol}
@@ -3847,8 +3847,8 @@ split the domain of integration.
 \end{sol}
 
 \begin{question}
-Evaluate $\displaystyle I = \iint_S (x + 3y^3)$ where $S$ is
-the upper half of the disk $\displaystyle x^2 + y^2  \leq 4$.
+Evaluate $\DS I = \iint_S (x + 3y^3)$ where $S$ is
+the upper half of the disk $\DS x^2 + y^2  \leq 4$.
 \end{question}
 
 \begin{sol}
@@ -3856,7 +3856,7 @@ Because of the shape of the domain of integration, it is advantageous
 to use polar coordinates to compute this integral.
 Let $x = r \cos(\theta)$ and $y= r\sin(\theta)$ for $0 \leq r \leq 2$
 and $0 \leq \theta \leq \pi$.  Since
-$\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
+$\DS \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
 we get
 \begin{align*}
 I &= \int_0^2 \int_0^\pi \left(r\cos(\theta) + 3 r^3
@@ -3871,7 +3871,7 @@ I &= \int_0^2 \int_0^\pi \left(r\cos(\theta) + 3 r^3
 = 4 \, \frac{r^5}{5}\bigg|_0^2 = \frac{128}{5} \ ,
 \end{align*}
 where the famous trigonometric identity
-$\displaystyle \sin^2(\theta) = 1 - \cos^2(\theta)$
+$\DS \sin^2(\theta) = 1 - \cos^2(\theta)$
 has been used to get the second equality above.
 \end{sol}
 
@@ -3883,12 +3883,12 @@ $r = 1 + \cos(\theta)$.
 \begin{sol}
 The region $S$ is shown in the following figure.
 \pdfbox{mult_integrals/question18}
-We need to compute $\displaystyle A = \iint_S 1$.  Since $S$ is
+We need to compute $\DS A = \iint_S 1$.  Since $S$ is
 given using polar coordinates, this suggests that polar coordinates should
 be used to compute the integral.  Let $x = r \cos(\theta)$ and
 $y = r\sin(\theta)$ for $0 \leq r \leq 1 + \cos(\theta)$ and
 $0 \leq \theta \leq 2\pi$.  We have that
-$\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$.
+$\DS \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$.
 Thus
 \begin{align*}
 A &= \iint_S 1
@@ -3908,8 +3908,8 @@ has been used to get the fifth equality.
 \end{sol}
 
 \begin{question}
-Evaluate $\displaystyle \iint_S e^{-(x^2+xy+y^2)}$ where
-$\displaystyle S = \{ (x,y) : x^2 + xy + y^2 \leq 1 \}$.
+Evaluate $\DS \iint_S e^{-(x^2+xy+y^2)}$ where
+$\DS S = \{ (x,y) : x^2 + xy + y^2 \leq 1 \}$.
 \end{question}
 
 \begin{sol}
@@ -3920,7 +3920,7 @@ x^2 + xy + y^2 = \begin{pmatrix} x & y \end{pmatrix}
 \begin{pmatrix} 1 & 1/2 \\ 1/2 & 1 \end{pmatrix}
 \begin{pmatrix} x \\ y \end{pmatrix} \ .
 \]
-Let $\displaystyle A = \begin{pmatrix} 1 & 1/2 \\ 1/2 & 1 \end{pmatrix}$.
+Let $\DS A = \begin{pmatrix} 1 & 1/2 \\ 1/2 & 1 \end{pmatrix}$.
 Since $A$ is symmetric, it has only real eigenvalues and an orthogonal matrix
 may be used to diagonalize $A$.  More precisely, suppose that
 $\lambda_1$ and $\lambda_2$ are the eigenvalues of $A$.
@@ -3933,29 +3933,29 @@ $\lambda_1 = \lambda_2$.  We may select them (using Gram-Schmidt
 orthogonalization) such that they are orthonormal.
 Hence, with
 $R = \begin{pmatrix} \VEC{v}_1 & \VEC{v}_2\end{pmatrix}$, we have
-$\displaystyle R^\top A R = \begin{pmatrix} \lambda_1 & 0 \\ 0 &
+$\DS R^\top A R = \begin{pmatrix} \lambda_1 & 0 \\ 0 &
 \lambda_2 \end{pmatrix}$.
 
 It is easy to see that
-$\displaystyle \VEC{v}_1 =
+$\DS \VEC{v}_1 =
 \begin{pmatrix} 1/\sqrt{2} \\ 1/\sqrt{2} \end{pmatrix}$ and
-$\displaystyle \VEC{v}_2 =
+$\DS \VEC{v}_2 =
 \begin{pmatrix} -1/\sqrt{2} \\ 1/\sqrt{2} \end{pmatrix}$ are
 eigenvectors of $A$ associated to the eigenvalues $\lambda_1=3/2$ and
 $\lambda_2=1/2$ of $A$.  Thus, with
-$\displaystyle R = \begin{pmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\
+$\DS R = \begin{pmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\
 1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix}$, we get
-$\displaystyle R^\top A R = \begin{pmatrix} 3/2 & 0 \\ 0 & 1/2 \end{pmatrix}$.
-Note that $\displaystyle R = \begin{pmatrix}
+$\DS R^\top A R = \begin{pmatrix} 3/2 & 0 \\ 0 & 1/2 \end{pmatrix}$.
+Note that $\DS R = \begin{pmatrix}
 \cos(\theta) & -\sin(\theta) \\ \sin(\theta) &
 \cos(\theta) \end{pmatrix}\bigg|_{\theta=\pi/4}$ is a counterclockwise
 rotation by $\pi/4$ about the origin.
 
 We may use this information to choose a change of variables 
 $g:D \to S$ to compute the integral.  We choose
-$\displaystyle \begin{pmatrix} x \\ y \end{pmatrix} =
+$\DS \begin{pmatrix} x \\ y \end{pmatrix} =
 g(u,v) = R \begin{pmatrix} u \\ v \end{pmatrix}$.  Thus
-$\displaystyle \left| \det \diff g \right| = \left| \det
+$\DS \left| \det \diff g \right| = \left| \det
 \begin{pmatrix} 1/\sqrt{2} & -1/\sqrt{2} \\
 1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix} \right| = 1$.
 This was to be expected because rotations do not change the volume of
@@ -3977,13 +3977,13 @@ To determine the domain $D$ of $g$, we note that
 = \frac{3}{2} \ u^2 + \frac{1}{2} \ v^2 
 \end{align*}
 Hence $g$ maps
-$\displaystyle D = \left\{ (u,v) : \frac{3u^2}{2} + \frac{v^2}{2} \leq 1
+$\DS D = \left\{ (u,v) : \frac{3u^2}{2} + \frac{v^2}{2} \leq 1
 \right\}$ onto $S$.  We get
 \[
 \iint_S e^{-(x^2+xy+y^2)} = \iint_D e^{-(3u^2/2) - (v^2/2)} \ .
 \]
 We now use a second change of variables; namely,
-$\displaystyle
+$\DS
 \begin{pmatrix} u \\ v \end{pmatrix} = h(r,s)
 = \begin{pmatrix} \sqrt{2/3}\, r \cos(s) \\ \sqrt{2}\, r\sin(s) \end{pmatrix}$
 for $0\leq r \leq 1$ and $0 \leq \theta \leq 2\pi$.  Thus
@@ -3999,16 +3999,16 @@ $|\det \diff h| = 2r /\sqrt{3}$ and
 \begin{question}
 Let $D$ be the region bounded by $y=x/2$, $y=(x/2) + 2$, $y=3x$ and $y=3x-4$.
 Use an appropriate change of variables to compute
-$\displaystyle \iint_D xy$.
+$\DS \iint_D xy$.
 \end{question}
 
 \begin{sol}
 \pdfbox{mult_integrals/supp1}
 Let $u= 3x-y$ and $v= y - x/2$. We get that
 $x = 2(u+v)/5$ and $y= (u+6v)/5$.  We consider the change of variables
-$\displaystyle \begin{pmatrix} x \\ y \end{pmatrix} = g(u,v)
+$\DS \begin{pmatrix} x \\ y \end{pmatrix} = g(u,v)
 = \begin{pmatrix} 2(u+v)/5 \\ (u+6v)/5 \end{pmatrix}$.  We have that
-$\displaystyle |\det \diff g(u,v)| = \left|\det
+$\DS |\det \diff g(u,v)| = \left|\det
 \begin{pmatrix} 2/5 & 2/5 \\ 1/5 & 6/5 \end{pmatrix}\right| = \frac{2}{5}$.
 Moreover, $u = 3x-y$ varies from $0$ to $4$, and
 $v= y - x/2$ varies from $0$ to $2$.  Thus
@@ -4037,10 +4037,10 @@ The density $\rho$ of this thin plate is constant.
 Recall that the coordinates $(\overline{x},\overline{y})$ of the
 {\bfseries centroid}\index{Centroid}
 of a thin plate $D$ of density $\rho(x,y)$ at $(x,y) \in D$
-are found as it follows.  Let $\displaystyle m = \iint_D \rho$ be the
+are found as it follows.  Let $\DS m = \iint_D \rho$ be the
 mass of the thin plate.  Then
-$\displaystyle \overline{x} = \frac{1}{m} \iint_D x \rho$ and 
-$\displaystyle \overline{x} = \frac{1}{m} \iint_D y \rho$.
+$\DS \overline{x} = \frac{1}{m} \iint_D x \rho$ and 
+$\DS \overline{x} = \frac{1}{m} \iint_D y \rho$.
 
 The parallelogram $R$ is shown in the figure below.
 \pdfbox{mult_integrals/question26}
@@ -4048,7 +4048,7 @@ Let $u= x-3y$ and $v= 2x + y$.  We get that
 $x = (u+3v)/7$ and $y= (v -2u)/7$.  This is the change of variables
 that we use with $0 \leq u \leq 10$ and $0 \leq v \leq 15$.
 We have that
-$\displaystyle \left| \frac{\partial(x,y)}{\partial(u,v)} \right|
+$\DS \left| \frac{\partial(x,y)}{\partial(u,v)} \right|
 = \left|\det
 \begin{pmatrix} 1/7 & 3/7 \\ -2/7 & 1/7 \end{pmatrix}\right| = \frac{1}{7}$.
 Thus, the mass is
@@ -4073,7 +4073,7 @@ and
 \end{sol}
 
 \begin{question}
-Compute the integral $\displaystyle \iint_R (2x+y)^2(3y-x)^{-2}$
+Compute the integral $\DS \iint_R (2x+y)^2(3y-x)^{-2}$
 where $R$ is the parallelogram given by $-1 \leq 2x+y \leq 6$ and
 $-3 \leq 3y -x \leq 4$.
 \end{question}
@@ -4085,7 +4085,7 @@ Let $u= 2x+y$ and $v= 3y - x$.  We get that
 $x = (3u-v)/7$ and $y= (u+2v)/7$.  This is the change of variables
 that we use with $-1 \leq u \leq 6$ and $-3 \leq v \leq 4$.
 We have that
-$\displaystyle \left|\frac{\partial(x,y)}{\partial(u,v)} \right|
+$\DS \left|\frac{\partial(x,y)}{\partial(u,v)} \right|
 = \left|\det
 \begin{pmatrix} 3/7 & -1/7 \\ 1/7 & 2/7 \end{pmatrix}\right| = \frac{1}{7}$.
 Thus
@@ -4115,13 +4115,13 @@ Let $u= xy$ and $v=y/x$.  We get that
 $x = \sqrt{u/v}$ and $y= \sqrt{uv}$.  This is the change of variables
 that we use with $1 \leq u \leq 9$ and $1 \leq v \leq 4$.
 We have that
-$\displaystyle
+$\DS
 \left|\frac{\partial(x,y)}{\partial(u,v)} \right|
 = \left|\det
-\begin{pmatrix} \displaystyle \frac{1}{2}u^{-1/2}v^{-1/2} &
-\displaystyle -\frac{1}{2} u^{1/2} v^{-3/2} \\[0.7em]
-\displaystyle \frac{1}{2} u^{-1/2}v^{1/2} &
-\displaystyle \frac{1}{2} u^{1/2} v^{-1/2}
+\begin{pmatrix} \DS \frac{1}{2}u^{-1/2}v^{-1/2} &
+\DS -\frac{1}{2} u^{1/2} v^{-3/2} \\[0.7em]
+\DS \frac{1}{2} u^{-1/2}v^{1/2} &
+\DS \frac{1}{2} u^{1/2} v^{-1/2}
 \end{pmatrix}\right| = \frac{1}{2 v}$.
 Thus, the mass is
 \[
@@ -4144,16 +4144,16 @@ and
 
 \begin{question}
 Let $R$ be the region enclosed by the hyperbolas $xy=1$, $xy=4$,
-$\displaystyle x^2 -y^2 = 1$ and $\displaystyle x^2-y^2= 9$ for $x$,
+$\DS x^2 -y^2 = 1$ and $\DS x^2-y^2= 9$ for $x$,
 $y > 0$.  Compute the mass of the thin plate represented by this
-region if the density is given by $\displaystyle \rho(x,y) = (x^2+y^2)^3$.
+region if the density is given by $\DS \rho(x,y) = (x^2+y^2)^3$.
 \end{question}
 
 \begin{sol}
 The region $R$ is represented in the figure below.
 \pdfbox{mult_integrals/question28}
 
-We want to compute the mass $\displaystyle m = \iint_S (x^2+y^2)^3$.
+We want to compute the mass $\DS m = \iint_S (x^2+y^2)^3$.
 For this question, we apply the change of variables in
 the opposite direction.  Namely, we assume that
 \[
@@ -4161,20 +4161,20 @@ the opposite direction.  Namely, we assume that
 \left|\det \diff g(x,y)\right| = \iint_S f(u,v)
 \]
 for some function $f:S \to \RR$ where
-$\displaystyle (x^2+y^2)^3 = f(g(x,y))\, \left|\det \diff g(x,y)\right|$
+$\DS (x^2+y^2)^3 = f(g(x,y))\, \left|\det \diff g(x,y)\right|$
 and $g:R \to S$ is our change of variables.  Let $u = xy$ and
-$\displaystyle v=x^2 - y^2$.  If we try to express $x$ and $y$ in
+$\DS v=x^2 - y^2$.  If we try to express $x$ and $y$ in
 terms of $u$ and $v$, then we get ugly formulae.  Therefore, we proceed
 slightly differently than usual.  Let
-$\displaystyle \begin{pmatrix} u \\ v \end{pmatrix} = g(x,y)
+$\DS \begin{pmatrix} u \\ v \end{pmatrix} = g(x,y)
 = \begin{pmatrix} xy \\ x^2 - y^2 \end{pmatrix}$
 with $S = \{ (u,v) : 1 \leq u \leq 4 \text{ and } 1 \leq v \leq 9 \}$.
 We have that
-$\displaystyle \left| \det \diff g(x,y) \right)
+$\DS \left| \det \diff g(x,y) \right)
 =\left| \frac{\partial(u,v)}{\partial(x,y)} \right|
 = \left| \det \begin{pmatrix} y & x \\ 2x & -2y \end{pmatrix} \right|
 = 2(x^2 + y^2)$ and
-$\displaystyle f(u,v) = \frac{v^2 + 4 u^2}{2} = \frac{(x^2+y^2)^22}{2}$.
+$\DS f(u,v) = \frac{v^2 + 4 u^2}{2} = \frac{(x^2+y^2)^22}{2}$.
 Hence, the mass is
 \begin{align*}
 m &= \iint_R (x^2+y^2)^3
@@ -4187,7 +4187,7 @@ m &= \iint_R (x^2+y^2)^3
 \end{sol}
 
 \begin{question}
-Evaluate the integral $\displaystyle \iint_S \frac{1}{x+y}$
+Evaluate the integral $\DS \iint_S \frac{1}{x+y}$
 where $S$ is the region bounded by the $x$ and $y$ axes, and the lines
 $x+y=1$ and $x+y=4$.
 \end{question}
@@ -4204,7 +4204,7 @@ ignore $v=0$ to ensure that the change of variables is injective.
 
 Unfortunately, this change of variables requires the computation of
 an improper integral.  We have that
-$\displaystyle \left|\frac{\partial(x,y)}{\partial(u,v)} \right|
+$\DS \left|\frac{\partial(x,y)}{\partial(u,v)} \right|
 = \left|\det
 \begin{pmatrix} 1/(1+v) & -u/(1+v)^2 \\
 v/(1+v) & u/(1+v)^2 \end{pmatrix}\right| = \frac{u}{(1+v)^2}$.
@@ -4225,20 +4225,20 @@ slightly modify the previous change of variables.
 
 We still set $u = x +y$ for $1 \leq u \leq 4$.
 Instead of using $y = v x$ for $0 < v < \infty$ as we did before,
-we use $\displaystyle y = \left(\frac{v}{1-v}\right)x$ for $0 < 0 < 1$.
+we use $\DS y = \left(\frac{v}{1-v}\right)x$ for $0 < 0 < 1$.
 This substitution yields $y=0$ when $v=0$ and approaches $x=0$ when
-$\displaystyle v \to 1^-$.  If we solve for $v$, then we get
-$\displaystyle v = \frac{y}{x+y}$.  Thus, the change of variables that
+$\DS v \to 1^-$.  If we solve for $v$, then we get
+$\DS v = \frac{y}{x+y}$.  Thus, the change of variables that
 we use is $x=u-uv$ and $y=uv$ for $1 \leq u \leq 4$ and $0 < v < 1$.
 We have to ignore $v=0$ to ensure that the change of variables is injective.
 As $u$ varies from $1$ to $4$, we have all the lines $x+y=u$ that
 cover $S$.  When $v$ varies from $0$ to $1$ (excluding the end
-points), we have that $\displaystyle y = \left(\frac{v}{1-v}\right)x$
+points), we have that $\DS y = \left(\frac{v}{1-v}\right)x$
 yields all the lines through the origin that cover $S$ except for the
 segments
 $\{(x,0) : 1 \leq x \leq 4\}$ and $\{(0,y) : 1 \leq y \leq 4\}$.
 
-We have that $\displaystyle \left|\frac{\partial(x,y)}{\partial(u,v)} \right|
+We have that $\DS \left|\frac{\partial(x,y)}{\partial(u,v)} \right|
 = \left|\det \begin{pmatrix} 1-v & -u \\ v & u \end{pmatrix}\right| = u$.
 Thus
 \[
@@ -4259,7 +4259,7 @@ The region is shown in the following figure.
 We use polar coordinates to compute the area of this region.
 Let $x = r \cos(\theta)$ and $y=r\sin(\theta)$ with $0 \leq \theta < 2\pi$
 and $\theta \leq r \leq 3$.  We have that
-$\displaystyle \left|\frac{\partial(x,y)}{\partial(r,\theta)}\right| = r$
+$\DS \left|\frac{\partial(x,y)}{\partial(r,\theta)}\right| = r$
 and the area is
 \begin{align*}
 A &= \iint_D 1 = \int_0^{\pi/2} \int_{\theta}^3 r \dx{r}\dx{\theta}
@@ -4272,19 +4272,19 @@ A &= \iint_D 1 = \int_0^{\pi/2} \int_{\theta}^3 r \dx{r}\dx{\theta}
 
 \begin{question}
 Compute the volume of the right cylinder whose base is the region of
-the $x,y$ plane bounded by the curve $\displaystyle x^2+y^2 = x$, and
+the $x,y$ plane bounded by the curve $\DS x^2+y^2 = x$, and
 whose height is given by $z=4-y$.
 \end{question}
 
 \begin{sol}
-One can rewrite $\displaystyle x^2+y^2 = x$ as
-$\displaystyle \left(x - \frac{1}{2}\right)^2 + y^2 = \frac{1}{4}$.
+One can rewrite $\DS x^2+y^2 = x$ as
+$\DS \left(x - \frac{1}{2}\right)^2 + y^2 = \frac{1}{4}$.
 This is a circle of radius $1/2$ centred at $(1/2, 0)$.  The bounded
 region is shown in the following figure.
 \pdfbox{mult_integrals/extra7}
 We use polar coordinates $x= 1/2 + r\cos(\theta)$ and $y=r\sin(\theta)$
 for $0 \leq \theta < 2\pi$ and $0< r < 1/2$.
-We have that $\displaystyle
+We have that $\DS
 \left|\frac{\partial(x,y)}{\partial(r,\theta)}\right| = r$
 and the volume of the cylinder is
 \begin{align*}
@@ -4300,7 +4300,7 @@ V &= \iint_D (4-y)
 
 \begin{question}
 Compute the volume of the solid obtained if we cut out the ellipsoid
-given by the $\displaystyle \frac{x^2}{16}+\frac{y^2}{16}+z^2 \leq 1$ with a
+given by the $\DS \frac{x^2}{16}+\frac{y^2}{16}+z^2 \leq 1$ with a
 cylinder of radius $3$ whose axis is the $z$ axis.
 \end{question}
 
@@ -4313,7 +4313,7 @@ the plane $z=0$, the volume of the solid is twice the volume of this
 section.
 \pdfbox{mult_integrals/extra8}
 We have that
-$\displaystyle \left|\frac{\partial(x,y)}{\partial(r,\theta)}\right| = r$
+$\DS \left|\frac{\partial(x,y)}{\partial(r,\theta)}\right| = r$
 and the volume is
 \begin{align*}
 V& = 2\iint_D \sqrt{1-\frac{x^2}{16} - \frac{y^2}{16}}
@@ -4328,16 +4328,16 @@ V& = 2\iint_D \sqrt{1-\frac{x^2}{16} - \frac{y^2}{16}}
 
 \begin{question}
 Compute the volume of the ellipsoid $E$ given by
-$\displaystyle (2x+y +z)^2 + (2x-y)^2  + 4z^2 \leq 4$.
+$\DS (2x+y +z)^2 + (2x-y)^2  + 4z^2 \leq 4$.
 \end{question}
 
 \begin{sol}
 Let $u = 2x+y+z$, $v=2x-y$ and $w = 2z$.  We get that
-$\displaystyle x = \frac{u}{4} + \frac{v}{4} - \frac{w}{8}$,
-$\displaystyle y = \frac{u}{2} - \frac{v}{2} - \frac{w}{4}$ and
-$\displaystyle z = \frac{w}{2}$.  This is the change of variables that
+$\DS x = \frac{u}{4} + \frac{v}{4} - \frac{w}{8}$,
+$\DS y = \frac{u}{2} - \frac{v}{2} - \frac{w}{4}$ and
+$\DS z = \frac{w}{2}$.  This is the change of variables that
 we use.  We have that
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(u,v,w)} \right|
+$\DS \left|\frac{\partial(x,y,z)}{\partial(u,v,w)} \right|
 = \left|\det
   \begin{pmatrix} 1/4 & 1/4 & -1/8 \\ 1/2 & -1/2 & -1/4 \\
   0 & 0 & 1/2 \end{pmatrix}\right| = \frac{1}{8}$.
@@ -4347,15 +4347,15 @@ Thus, the volume of $E$ is
   = \frac{1}{8} \iiint_{u^2+v^2+w^2 \leq 4} \dx{u}\dx{v}\dx{w} \ .
 \]
 We could compute this integral using spherical coordinates but it is
-easier to use the formula $\displaystyle \frac{4r^3\pi}{3}$ to
+easier to use the formula $\DS \frac{4r^3\pi}{3}$ to
 compute the volume of a sphere of radius $r$; a proof of this formulae
 is given in Question~\ref{questVolSphere} for the benefit of the
-reader.  We get that $\displaystyle V = \frac{4\pi}{3}$.
+reader.  We get that $\DS V = \frac{4\pi}{3}$.
 \end{sol}
 
 \begin{question}
 If $S$ is the solid enclosed by the paraboloid
-$\displaystyle z=x^2+y^2$ and the plane $z=1$, write the iterated
+$\DS z=x^2+y^2$ and the plane $z=1$, write the iterated
 integrals of a function $f$ over the region $S$ in the orders
 $\dx{z}\dx{y}\dx{x}$, $\dx{y}\dx{z}\dx{x}$ and $\dx{x}\dx{y}\dx{z}$.
 \end{question}
@@ -4379,27 +4379,27 @@ f(x,y,z) \dx{y} \dx{z} \dx{x} \\
 For each of the following integrals, sketch its domain of integration 
 and express the iterated integral in the requested orders.\\
 \subQ{a}
-$\displaystyle \int_0^1 \int_0^{1-y^2}\int_0^y f(x,y,z) \dx{z}\dx{x}\dx{y}$
+$\DS \int_0^1 \int_0^{1-y^2}\int_0^y f(x,y,z) \dx{z}\dx{x}\dx{y}$
 in the orders $\dx{z}\dx{y}\dx{x}$ and $\dx{y}\dx{z}\dx{x}$.\\
 \subQ{b}
-$\displaystyle \int_0^2 \int_0^{1-x/2} \int_0^{x/2} f(x,y,z)\dx{z}\dx{y}\dx{x}$
+$\DS \int_0^2 \int_0^{1-x/2} \int_0^{x/2} f(x,y,z)\dx{z}\dx{y}\dx{x}$
 in the orders $\dx{y}\dx{x}\dx{z}$ and $\dx{x}\dx{y}\dx{z}$.\\
 \subQ{c}
-$\displaystyle \int_0^1 \int_0^z \int_0^y f(x,y,z)\dx{x}\dx{y}\dx{z}$
+$\DS \int_0^1 \int_0^z \int_0^y f(x,y,z)\dx{x}\dx{y}\dx{z}$
 in the orders $\dx{z}\dx{y}\dx{x}$ and $\dx{y}\dx{x}\dx{z}$.\\
 \subQ{d}
-$\displaystyle \int_0^1 \int_0^y \int_0^{x/\sqrt{3}} f(x,y,z)\dx{z}\dx{x}\dx{y}$
+$\DS \int_0^1 \int_0^y \int_0^{x/\sqrt{3}} f(x,y,z)\dx{z}\dx{x}\dx{y}$
 in the orders $\dx{z}\dx{y}\dx{x}$ and $\dx{y}\dx{z}\dx{x}$.\\
 \subQ{e}
-$\displaystyle \int_1^2 \int_1^z \int_{1/y}^2 f(x,y,z)\dx{x}\dx{y}\dx{z}$
+$\DS \int_1^2 \int_1^z \int_{1/y}^2 f(x,y,z)\dx{x}\dx{y}\dx{z}$
 in the orders $\dx{z}\dx{y}\dx{x}$ and $\dx{y}\dx{z}\dx{x}$.\\
 \subQ{f}
-$\displaystyle
+$\DS
 \int_{0}^{4} \int_{\sqrt{x}}^{2} \int_{0}^{2-y} f(x,y,z) \dx{z} \dx{y}\dx{x} $
 in the orders
 $\text{d}x\,\text{d}z\,\text{d}y$ and $\text{d}y\,\text{d}x\,\text{d}z$.\\
 \subQ{g}
-$\displaystyle \int_0^2 \int_1^{2-x/2} \int_x^2 f(x,y,z)\dx{z}\dx{y}\dx{x}$
+$\DS \int_0^2 \int_1^{2-x/2} \int_x^2 f(x,y,z)\dx{z}\dx{y}\dx{x}$
 in the orders $\dx{y}\dx{x}\dx{z}$ and $\dx{x}\dx{y}\dx{z}$.
 \end{question}
 
@@ -4409,7 +4409,7 @@ limits of integration is shown in the following figure.
 \pdfbox{mult_integrals/question16}
 $S$ is the solid in the quadrant $x,y,z \geq 0$ which is enclosed by
 the planes $x=0$, $y=0$ and $z=y$, and the surface
-$\displaystyle x=1-y^2$.  We have
+$\DS x=1-y^2$.  We have
 \[
 \iiint_S f =
 \int_0^1 \int_0^{\sqrt{1-x}} \int_0^y f(x,y,z) \dx{z} \dx{y} \dx{x}
@@ -4422,10 +4422,10 @@ The domain of integration is represented in the following figure.
 \pdfbox{mult_integrals/supp5}
 We have
 \begin{align*}
-\displaystyle \int_0^2 \int_0^{1-x/2} \int_0^{x/2} f(x,y,z)\dx{z}\dx{y}\dx{x}
-&= \displaystyle \int_0^1 \int_{2z}^2 \int_0^{1-x/2} f(x,y,z)\dx{y}\dx{x}\dx{z}
+\DS \int_0^2 \int_0^{1-x/2} \int_0^{x/2} f(x,y,z)\dx{z}\dx{y}\dx{x}
+&= \DS \int_0^1 \int_{2z}^2 \int_0^{1-x/2} f(x,y,z)\dx{y}\dx{x}\dx{z}
 \\
-&= \displaystyle \int_0^1 \int_0^{1-z} \int_{2z}^{2-2y}
+&= \DS \int_0^1 \int_0^{1-z} \int_{2z}^{2-2y}
 f(x,y,z)\dx{x}\dx{y}\dx{z} \ .
 \end{align*}
 
@@ -4460,21 +4460,21 @@ $z=x$ and $y=2 - x/2$ is the line given by $z = 4 -2y$.  Hence, we get
 
 \begin{question}
 A solid $V$ is defined by the region enclosed by the surfaces
-$\displaystyle z=x^2-3$,
+$\DS z=x^2-3$,
 $z=x-1$, $y=0$ and $y=2$.  If the density of the solid is given by
-$\displaystyle \rho(a,y,z) = x^2y$, compute the mass of the solid.
+$\DS \rho(a,y,z) = x^2y$, compute the mass of the solid.
 \end{question}
 
 \begin{sol}
 The abscissas of the points of intersection of the curve
-$\displaystyle z=x^2-3$ and the line $z=x-1$ are given by
+$\DS z=x^2-3$ and the line $z=x-1$ are given by
 \[
   x^2 - 3 = x - 1 \Leftrightarrow x^2 -x  -2 = (x-2)(x+1) = 0
   \Leftrightarrow x= -1\ \text{or}\ x=2 \ .
 \]
 Thus the points of intersection are $(x,z) = (-1,-2)$ and $(x,z) = (2,1)$.
-The two surfaces in $\displaystyle \RR^3$ given by
-$\displaystyle z=x^2-3$ and $z=x-1$
+The two surfaces in $\DS \RR^3$ given by
+$\DS z=x^2-3$ and $z=x-1$
 intersect each along the lines $\{ (-1,y,2) : y \in \RR\}$
 and $\{ (2,y,1) : y \in \RR\}$.
 The solid $V$ is represented in the following figure.
@@ -4495,7 +4495,7 @@ m &= \int_0^2 \int_{-1}^2 \int_{x^2-3}^{x-1} x^2y \dx{z}\dx{x}\dx{y}
 
 \begin{question}
 Compute the volume of the solid $D$ in the region $x,y,z \geq 0$ bounded
-by the cylinder $\displaystyle x^2+z^2=9$ and the planes $y = -x/2 +1$,
+by the cylinder $\DS x^2+z^2=9$ and the planes $y = -x/2 +1$,
 $x=0$, $y=0$ and $z=0$.
 \end{question}
 
@@ -4515,17 +4515,17 @@ V &= \iiint_D 1 = \int_0^2 \int_0^{-x/2+1}\int_0^{\sqrt{9-x^2}}\dx{z}\dx{y}\dx{x
 &= \frac{11\sqrt{5}}{6} + \frac{9}{2}\arcsin\left(\frac{2}{3}\right)
 - \frac{9}{2} \ .
 \end{align*}
-We have used the substitution $\displaystyle u = 9-x^2$ to compute the
-integral $\displaystyle \int_0^2 \frac{x}{2}\sqrt{9-x^2} \dx{x}$, and the
+We have used the substitution $\DS u = 9-x^2$ to compute the
+integral $\DS \int_0^2 \frac{x}{2}\sqrt{9-x^2} \dx{x}$, and the
 trigonometric substitution $x=3\sin(\theta)$ to compute the integral
-$\displaystyle \int_0^2 \sqrt{9-x^2} \dx{x}$.
+$\DS \int_0^2 \sqrt{9-x^2} \dx{x}$.
 \end{sol}
 
 \begin{question}
 Let $R$ be the solid obtained from the intersection of the cylinders
-$\displaystyle x^2+y^2 = 4$ and $\displaystyle x^2+z^2=4$.  Compute the
+$\DS x^2+y^2 = 4$ and $\DS x^2+z^2=4$.  Compute the
 volume of $R$ and its mass if the density is given by
-$\displaystyle \rho(x,y,z) = x^2$.
+$\DS \rho(x,y,z) = x^2$.
 \end{question}
 
 \begin{sol}
@@ -4556,7 +4556,7 @@ x^2 \dx{z} \dx{y} \dx{x}\\
 
 \begin{question}
 If $D$ is the pyramid with vertices at $(0,0,0)$, $(1,1,1)$, $(0,1,0)$
-and $(0,1,1)$, compute $\displaystyle \iiint_D xz$.
+and $(0,1,1)$, compute $\DS \iiint_D xz$.
 \end{question}
 
 \begin{sol}
@@ -4577,7 +4577,7 @@ Hence
 
 \begin{question}
 If $D$ is the pyramid with vertices at $(0,0,0)$, $(1,1,0)$, $(0,1,0)$
-and $(0,1,1)$, compute $\displaystyle \iiint_D xz$.
+and $(0,1,1)$, compute $\DS \iiint_D xz$.
 \end{question}
 
 \begin{sol}
@@ -4606,12 +4606,12 @@ Hence
 
 \begin{question}
 If $D$ is the pyramid with vertices at $(1,0,0)$, $(0,1,0)$, $(0,0,1)$ and
-$(0,0,0)$, compute\\ $\displaystyle \iiint_D (xy+z)$.
+$(0,0,0)$, compute\\ $\DS \iiint_D (xy+z)$.
 \end{question}
 
 \begin{question}
 If $D$ is the pyramid with vertices at $(0,0,0)$, $(2,0,0)$, $(1,1,0)$ and
-$(0,0,3)$, compute $\displaystyle \iiint_D xy$.
+$(0,0,3)$, compute $\DS \iiint_D xy$.
 \end{question}
 
 \begin{sol}
@@ -4625,7 +4625,7 @@ is perpendicular to the plane.  The equation of the plane is of the
 form $\ps{\VEC{n}}{(x,y,z)} = 3x + 3y +2z = C$
 where $C$ is a constant.  Since the point $(2,0,0)$ is on that plane,
 we must have $C=6$.  Thus, the equation of the plane is
-$\displaystyle z = 3\left(1 -\frac{x}{2} - \frac{y}{2}\right)$.
+$\DS z = 3\left(1 -\frac{x}{2} - \frac{y}{2}\right)$.
 Hence
 \begin{align*}
 \iiint_D xy &= \int_0^1 \int_y^{2-y}\int_0^{3(1-x/2-y/2)}xy
@@ -4642,7 +4642,7 @@ Hence
 
 \begin{question}
 Find the coordinates of the centroid of the half-cone given by
-$\displaystyle \sqrt{x^2+y^2} \leq z \leq 1$ and $x \geq 0$.  We
+$\DS \sqrt{x^2+y^2} \leq z \leq 1$ and $x \geq 0$.  We
 assume that the density $\rho$ is constant to $1$; namely,
 $\rho(x,y,z) = 1$ for all $(x,y,z) \in S$.    
 \end{question}
@@ -4653,8 +4653,8 @@ We have drawn the half-cone $S$ in the figure below.
 We use the cylindrical coordinates
 $x=r\cos(\theta)$, $y=r\sin(\theta)$ and $z=z$ for
 $-\pi/2 \leq \theta \leq \pi/2$, $0 \leq r \leq 1$ and
-$\displaystyle r = \sqrt{x^2+y^2} \leq z \leq 1$.  We have that
-$\displaystyle
+$\DS r = \sqrt{x^2+y^2} \leq z \leq 1$.  We have that
+$\DS
 \left|\frac{\partial(x,y,z)}{\partial(r,\theta,z)}\right| = r $.
 The mass is
 \[
@@ -4692,7 +4692,7 @@ density is constant.
 
 \begin{question}
 Find the coordinates of the centroid of the portion $B$ of the
-ball $\displaystyle x^2 + y^2 + z^2 \leq 4$ for $x$, $y$, $z \geq 0$.
+ball $\DS x^2 + y^2 + z^2 \leq 4$ for $x$, $y$, $z \geq 0$.
 The density $\rho$ of the ball is constant.
 \end{question}
 
@@ -4703,7 +4703,7 @@ We use the spherical coordinates
 $x=r\cos(\theta)\sin(\phi)$, $y=r\sin(\theta)\sin(\phi)$ and
 $z=r\cos(\phi)$ for $0 \leq \theta \leq \pi/2$, $0 \leq \phi \leq
 \pi/2$ and $0 \leq r \leq 2$.  We have that
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(r,\theta,\phi}\right|
+$\DS \left|\frac{\partial(x,y,z)}{\partial(r,\theta,\phi}\right|
 = r^2\sin(\phi)$.  The mass is
 \[
 m = \iiint_B \rho
@@ -4742,8 +4742,8 @@ under permutations of the axes.
 
 \begin{question}
 Compute the volume $V$ of the region $R$ enclosed   \label{questVolSphere}
-by the sphere $\displaystyle x^2 + y^2 + z^2 = 4$ and the cylinder
-$\displaystyle y^2 + z^2 =1$.
+by the sphere $\DS x^2 + y^2 + z^2 = 4$ and the cylinder
+$\DS y^2 + z^2 =1$.
 \end{question}
 
 \begin{sol}
@@ -4756,9 +4756,9 @@ figure.
 \stage{i} We compute he volume $V_1$ of the part of the cylinder
 inside the sphere.  We use the cylindrical coordinates $x=x$,
 $y = r\cos(\theta)$ and
-$z=r\sin(\theta)$ for $\displaystyle -\sqrt{4-r^2} \leq x \leq \sqrt{4-r^2}$,
+$z=r\sin(\theta)$ for $\DS -\sqrt{4-r^2} \leq x \leq \sqrt{4-r^2}$,
 $0 \leq r \leq 1$ and $0 \leq \theta \leq 2\pi$.  We have that
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(x,r,\theta)}\right| = r$.
+$\DS \left|\frac{\partial(x,y,z)}{\partial(x,r,\theta)}\right| = r$.
 Hence
 \begin{align*}
 V_1 &= \int_0^{2\pi} \int_0^1 \int_{-\sqrt{4-r^2}}^{\sqrt{4-r^2}} r
@@ -4780,7 +4780,7 @@ a sphere.  We use the spherical coordinates $x=r\cos(\theta)\sin(\phi)$,
 $y = r\sin(\theta)\sin(\phi)$ and
 $z=r\cos(\phi)$ for $0 \leq r \leq 2$, $0 \leq \theta \leq 2\pi$ and
 $0 \leq \phi \leq \pi$.  We have that
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(r,\theta,\phi)}\right|
+$\DS \left|\frac{\partial(x,y,z)}{\partial(r,\theta,\phi)}\right|
 = r^2 \sin(\phi)$.
 Hence
 \begin{align*}
@@ -4795,13 +4795,13 @@ V_2 &= \int_0^{2\pi} \int_0^{\pi} \int_0^2 r^2 \sin(\phi)
 \end{align*}
 
 \stage{iii} Therefore, the volume of the region is
-$\displaystyle
+$\DS
 V = \frac{32\pi}{3} - \frac{4 (8-3\sqrt{3})\pi}{3} = 4 \sqrt{3}\, \pi$.
 \end{sol}
 
 \begin{question}
 Find the volume $V$ of the solid $R$ enclosed between the upper part of
-the sphere $\displaystyle x^2+y^2+z^2=25$ and the plane $z=4$.\\
+the sphere $\DS x^2+y^2+z^2=25$ and the plane $z=4$.\\
 \subQ{a} Setup but do not compute the integral in Cartesian coordinates.\\
 \subQ{b} Setup but do not compute the integral in cylindrical coordinates.\\
 \subQ{c} Setup but do not compute the integral in polar coordinates.\\
@@ -4809,24 +4809,24 @@ the sphere $\displaystyle x^2+y^2+z^2=25$ and the plane $z=4$.\\
 \end{question}
 
 \begin{sol}
-The intersection of the sphere $\displaystyle x^2 + y^2 + z^2 = 25$
-with the plane $z=4$ is the circle $\displaystyle x^2+y^2=9$.
+The intersection of the sphere $\DS x^2 + y^2 + z^2 = 25$
+with the plane $z=4$ is the circle $\DS x^2+y^2=9$.
 We have drawn the solid $R$ in the figure below.
 \pdfbox{mult_integrals/question22}
 
 \subQ{a}
 In Cartesian coordinates, the volume is
-$\displaystyle
+$\DS
 V = \int_{-3}^3 \int_{-\sqrt{9-x^2}}^{\sqrt{9-x^2}} \int_4^{\sqrt{25-x^2-y^2}}
 \dx{z}\dx{y}\dx{x}$.
 
 \subQ{b}
 We use the cylindrical coordinates $x=r\cos(\theta)$,
-$y=r\sin(\theta)$ and $z=z$ for $\displaystyle 4 \leq z \leq \sqrt{25 -r^2}$,
+$y=r\sin(\theta)$ and $z=z$ for $\DS 4 \leq z \leq \sqrt{25 -r^2}$,
 $0 \leq r \leq 3$ and $0 \leq \theta \leq 2\pi$.  We have that
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(r,\theta,z)}\right| = r$.
+$\DS \left|\frac{\partial(x,y,z)}{\partial(r,\theta,z)}\right| = r$.
 The volume is
-$\displaystyle V = \int_0^{2\pi} \int_0^3  \int_{4}^{\sqrt{25-r^2}}
+$\DS V = \int_0^{2\pi} \int_0^3  \int_{4}^{\sqrt{25-r^2}}
 r \dx{z}\dx{r}\dx{\theta}$.
 
 \subQ{c} 
@@ -4836,9 +4836,9 @@ $4/\cos(\phi) \leq r \leq 5$, $0 \leq \phi \leq \pi/3$ and
 $0 \leq \theta \leq 2\pi$.
 \pdfbox{mult_integrals/question22b}
 We have that
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(r,\theta,\phi)}\right|
+$\DS \left|\frac{\partial(x,y,z)}{\partial(r,\theta,\phi)}\right|
 = r^2 \sin(\phi)$.  The volume is\\
-$\displaystyle V = \int_0^{2\pi} \int_0^{\arccos(4/5)}
+$\DS V = \int_0^{2\pi} \int_0^{\arccos(4/5)}
 \int_{4/\cos(\phi)}^5 r^2 \sin(\phi) \dx{r}\dx{\phi}\dx{\theta}$.
 
 \subQ{d}  The easiest integral to compute is in cylindrical coordinates
@@ -4875,8 +4875,8 @@ V &= \int_0^{2\pi} \int_0^{\arccos(4/5)}
 
 \begin{question}
 Compute the volume $V$ of the bounded region $R$ enclosed part the
-cylinder $\displaystyle (x-1)^2+y^2 =1$, the cone
-$\displaystyle x^2 + y^2 - (z-2)^2 = 0$ and the $x,y$ plane.
+cylinder $\DS (x-1)^2+y^2 =1$, the cone
+$\DS x^2 + y^2 - (z-2)^2 = 0$ and the $x,y$ plane.
 \end{question}
 
 \begin{sol}
@@ -4884,7 +4884,7 @@ We have drawn the region $R$ in the figure below.
 \pdfbox{mult_integrals/question21}
 Because of the cylinder, we are first inclined to use the cylindrical
 coordinates $x = 1 + r\cos(\theta)$, $y=r\sin(\theta)$ and $z=z$ for
-$\displaystyle 0 \leq z \leq 2 - \sqrt{x^2+y^2}
+$\DS 0 \leq z \leq 2 - \sqrt{x^2+y^2}
 = 2 - \sqrt{r^2 + 2r \cos(\theta) +  1}$,
 $0 \leq r \leq 1$ and $0 \leq \theta \leq 2 \pi$.  Unfortunately, the
 reader may verify that this leads to a difficult integral to compute.
@@ -4908,7 +4908,7 @@ x^2 + y^2 - (z-2)^2 = 0 \Rightarrow
 r^2 - (z-2)^2=0 \Rightarrow z = 2 - r
 \]
 for $z-2 ,r \geq 0$.  Since
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(r,\theta.z)}\right| = r$,
+$\DS \left|\frac{\partial(x,y,z)}{\partial(r,\theta.z)}\right| = r$,
 the volume is
 \begin{align*}
 V &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos(\theta)} \int_0^{2 -r}
@@ -4931,27 +4931,27 @@ r \dx{z} \dx{r} \dx{\theta}
 
 \begin{question}
 Set up an integral in cylindrical coordinates to compute the volume of the
-solid $S$ enclosed by the sphere $\displaystyle x^2+y^2+z^2=12$ and the cone
-$\displaystyle 3z^2 = x^2 + y^2$ for $z\geq 0$.  Answer the same question in
+solid $S$ enclosed by the sphere $\DS x^2+y^2+z^2=12$ and the cone
+$\DS 3z^2 = x^2 + y^2$ for $z\geq 0$.  Answer the same question in
 spherical coordinates.
 \end{question}
 
 \begin{sol}
 The solid $S$ is represented in the following figure.
 \pdfbox{mult_integrals/midterm_2}
-On the intersection of the sphere $\displaystyle x^2+y^2+z^2=12$ and the cone
-$\displaystyle 3z^2 = x^2 + y^2$ where $z \geq 0$, we have
+On the intersection of the sphere $\DS x^2+y^2+z^2=12$ and the cone
+$\DS 3z^2 = x^2 + y^2$ where $z \geq 0$, we have
 \[
 3z^2 = x^2 + y^2 = 12 - z^2 \Rightarrow 
 4z^2 = 12 \Rightarrow z= \pm \sqrt{3} \ .
 \]
 Thus, the intersection of the two surfaces is the circle
-$\displaystyle x^2+y^2 = 9$ with $z = \sqrt{3}$.
+$\DS x^2+y^2 = 9$ with $z = \sqrt{3}$.
 
 In cylindrical coordinates, we have that
 $x = r\cos(\theta)$, $y = r\sin(\theta)$ and $z =z$
 for $0 \leq \theta \leq 2\pi$, $0\leq r \leq 3$ and
-$\displaystyle r/\sqrt{3} \leq z \leq \sqrt{12-r^2}$.  Since
+$\DS r/\sqrt{3} \leq z \leq \sqrt{12-r^2}$.  Since
 $|\det \diff g(r,\theta,z) | = r$, the volume of the
 solid is
 \[
@@ -4963,7 +4963,7 @@ In spherical coordinates, we have that
 $x = r\cos(\theta)\sin(\phi)$, $y= r\sin(\theta)\sin(\phi)$ and
 $z=r\cos(\phi)$ for $0 \leq \theta \leq 2\pi$, $0 \leq \phi \leq \pi/3$ and
 $0 \leq r \leq 2\sqrt{3}$.  Since
-$\displaystyle \left| \det \diff g \right| = r^2\sin(\phi)$, the
+$\DS \left| \det \diff g \right| = r^2\sin(\phi)$, the
 volume of the solid is
 \[
 V = \int_S 1 = \int_0^{2\pi} \int_0^{\pi/3} \int_0^{2\sqrt{3}}
@@ -4973,29 +4973,29 @@ r \sin^2(\phi) \dx{r}\dx{\phi}\dx{\theta} \ .
 
 \begin{question}
 Set up an integral in cylindrical coordinates to compute the volume of the
-solid $S$ enclosed by the sphere $\displaystyle x^2+y^2+z^2=5$ and the
-paraboloid $\displaystyle 4z = x^2 + y^2$.   Answer the same question
+solid $S$ enclosed by the sphere $\DS x^2+y^2+z^2=5$ and the
+paraboloid $\DS 4z = x^2 + y^2$.   Answer the same question
 in spherical coordinates.
 \end{question}
 
 \begin{sol}
 The solid $S$ is represented in the following figure.
 \pdfbox{mult_integrals/extra2}
-On the intersection of the sphere $\displaystyle x^2+y^2+z^2=5$ and
-the paraboloid $\displaystyle 4z = x^2 + y^2$ where $z \geq 0$, we
+On the intersection of the sphere $\DS x^2+y^2+z^2=5$ and
+the paraboloid $\DS 4z = x^2 + y^2$ where $z \geq 0$, we
 have
 \[
 4z = x^2 + y^2 = 5 - z^2 \Rightarrow  z^5+ 4z- 5= (z+5)(z-1) = 0
 \Rightarrow z= -5\ \text{or}\ z = 1 \ .
 \]
 Thus, the intersection of the two surfaces is the circle
-$\displaystyle x^2+y^2= 4$ with $z=1$.
+$\DS x^2+y^2= 4$ with $z=1$.
 
 In cylindrical coordinates, we have that
 $x =r\cos(\theta)$, $y=r\sin(\theta)$ and $z=z$
 for $0 \leq \theta \leq 2\pi$, $0 \leq r \leq 2$ and
-$\displaystyle r^2/4 \leq z \leq \sqrt{5-r^2}$.  Since
-$\displaystyle \left| \det \diff g \right| = r$, the volume of the
+$\DS r^2/4 \leq z \leq \sqrt{5-r^2}$.  Since
+$\DS \left| \det \diff g \right| = r$, the volume of the
 solid is
 \[
 V =
@@ -5010,7 +5010,7 @@ $x = r\cos(\theta)\sin(\phi)$, $y= r\sin(\theta)\sin(\phi)$ and
 $z = r\cos(\phi))$ for $0 \leq \theta \leq 2\pi$,
 $0 \leq \phi \leq \tilde{\phi}$ and $0 \leq r \leq \sqrt{5}$, and
 for $0 \leq \theta \leq 2\pi$, $\tilde{\phi} \leq \phi \leq \pi/2$ and
-$\displaystyle 0 \leq r \leq 4 \cos(\phi)/\sin^2(\phi)$.
+$\DS 0 \leq r \leq 4 \cos(\phi)/\sin^2(\phi)$.
 We have that $\tilde{\phi} = \arctan(2)$.  To determine the range of
 $r$ for $\tilde{\phi} \leq \phi \leq \pi/2$, we used
 \begin{align*}
@@ -5019,7 +5019,7 @@ $r$ for $\tilde{\phi} \leq \phi \leq \pi/2$, we used
 \sin^2(\phi) = r^2 \sin^2(\phi) \\
 &\Rightarrow r = 0 \ \text{or}\ r = 4 \cos(\phi)/\sin^2(\phi) \ .
 \end{align*}
-Since $\displaystyle \left| \det \diff g \right| = r^2\sin(\phi)$,
+Since $\DS \left| \det \diff g \right| = r^2\sin(\phi)$,
 the volume of the solid is
 \begin{align*}
 V &= \int_S 1 =
@@ -5055,10 +5055,10 @@ it is often used in engineering applications, often without proper
 justifications.
 
 The improper integral is formally defined as
-$\displaystyle \int_S f = \lim_{q\to \infty} \int_{S(q)} f$ where 
+$\DS \int_S f = \lim_{q\to \infty} \int_{S(q)} f$ where 
 $S(q_1) \subsetneqq S(q_2) \subset S$ for $q_1 < q_2$ and $S(q) \to S$ as
 $q \to \infty$, or $S(q_1) \subsetneqq S(q_2) \subset S$ for $q_2 < q_1$ and
-$S(q) \to S$ as $\displaystyle q \to 0^+$.  We will not provide any
+$S(q) \to S$ as $\DS q \to 0^+$.  We will not provide any
 rigorous definition of convergence for sets (though this could be
 done) since we will not use improper integrals in higher dimensions in
 these lecture notes.
@@ -5066,10 +5066,10 @@ these lecture notes.
 As an example of the difference between the definition of improper
 integrals given above and the general definition of integrals given in
 Definition~\ref{cov2}, we consider the integral
-$\displaystyle \int_1^\infty \frac{\sin(x)}{x} \dx{x}$.  We have seen
+$\DS \int_1^\infty \frac{\sin(x)}{x} \dx{x}$.  We have seen
 in Question~\ref{questsinoxCD} that this improper integral converges
-but $\displaystyle \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
-diverges.  Thus $\displaystyle \frac{\sin(x)}{x}$ is a converging
+but $\DS \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
+diverges.  Thus $\DS \frac{\sin(x)}{x}$ is a converging
 improper integral on $[1,\infty[$ but it is not integrable on
 $[1,\infty[$ according to Definition~\ref{cov2}.
 
@@ -5081,12 +5081,12 @@ Determine if the following improper integrals converge or
 diverge.  If they converge, then compute their value.
 \begin{center}
 \begin{tabular}{*{1}{l@{\hspace{0.5em}}l@{\hspace{3em}}}l@{\hspace{0.5em}}l}
-\subQ{a} & $\displaystyle \iiint_{\RR^3} \frac{1}{1+x^2+y^2+z^2}$  &
-\subQ{b} & $\displaystyle \iint_{x,y>0} \frac{1}{(1+x^2+y^2)^3}$ \\[0.8em]
-\subQ{c} & $\displaystyle \iiint_{x^2+y^2+z^2<1}
+\subQ{a} & $\DS \iiint_{\RR^3} \frac{1}{1+x^2+y^2+z^2}$  &
+\subQ{b} & $\DS \iint_{x,y>0} \frac{1}{(1+x^2+y^2)^3}$ \\[0.8em]
+\subQ{c} & $\DS \iiint_{x^2+y^2+z^2<1}
 \frac{z^2}{(x^2+y^2+z^2)^{3/2}}$ &
-\subQ{d} & $\displaystyle \iint_{x>0} x e^{-x^2-y^2}$ \\[0.8em]
-\subQ{e} & $\displaystyle \iint_{x^2+y^2<1} \frac{x^2}{(x^2+y^2)^2}$ &  &
+\subQ{d} & $\DS \iint_{x>0} x e^{-x^2-y^2}$ \\[0.8em]
+\subQ{e} & $\DS \iint_{x^2+y^2<1} \frac{x^2}{(x^2+y^2)^2}$ &  &
 \end{tabular}
 \end{center}
 \end{question}
@@ -5096,10 +5096,10 @@ diverge.  If they converge, then compute their value.
 We use spherical coordinates $x= r\cos(\theta)\sin(\phi)$,
 $y = r \sin(\theta)\sin(\phi)$ and $z = r \cos(\phi)$ for
 $0 \leq \theta < 2\pi$, $0 \leq \phi < \pi$ and $0 \leq r < q$ where
-$q\to \infty$.  We have that $\displaystyle S(q) = B_q(\VEC{0}) \subset \RR^3$
+$q\to \infty$.  We have that $\DS S(q) = B_q(\VEC{0}) \subset \RR^3$
 in our formal definition of improper integrals.
 Since
-$\displaystyle \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
+$\DS \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
   = r^2 \sin(\phi)$,
 we get
 \begin{align*}
@@ -5121,10 +5121,10 @@ The integral diverges.
 \subQ{b} 
 We use polar coordinates $x= r\cos(\theta)$ and $y = r \sin(\theta)$ for
 $0 \leq \theta < \pi/2$ and $0 \leq r < q$ where $q\to \infty$.
-We have that $\displaystyle S(q) = B_q(\VEC{0}) \cap \{ (x,y): x,y \geq 0\} 
+We have that $\DS S(q) = B_q(\VEC{0}) \cap \{ (x,y): x,y \geq 0\} 
 \subset \RR^2$ in our formal definition of improper integrals.
 Since
-$\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
+$\DS \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
 we get
 \begin{align*}
 \iint_{x,y>0} \frac{1}{(1+x^2+y^2)^3}
@@ -5142,10 +5142,10 @@ The integral converges.
 We use spherical coordinates $x= r\cos(\theta)\sin(\phi)$,
 $y = r \sin(\theta)\sin(\phi)$ and $z = r \cos(\phi)$ for
 $0 \leq \theta < 2\pi$, $0 \leq \phi < \pi$ and $q \leq r \leq 1$ where
-$q\to 0$.  We have that $\displaystyle S(q) = B_1(\VEC{0}) \setminus
+$q\to 0$.  We have that $\DS S(q) = B_1(\VEC{0}) \setminus
 B_q(\VEC{0}) \subset \RR^3$ in our formal definition of improper
 integrals.  Since
-$\displaystyle \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
+$\DS \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
 = r^2 \sin(\phi)$, we get
 \begin{align*}
 &\iiint_{x^2+y^2+z^2<1} \frac{z^2}{(x^2+y^2+z^2)^{3/2}}
@@ -5165,10 +5165,10 @@ The integral converges.
 \subQ{d}
 We use polar coordinates $x= r\cos(\theta)$ and $y = r \sin(\theta)$ for
 $-\pi/2 \leq \theta \leq \pi/2$ and $0 \leq r < q$ where $q\to \infty$.
-We have that $\displaystyle S(q) = B_q(\VEC{0}) \cap \{(x,y): x \geq 0\}
+We have that $\DS S(q) = B_q(\VEC{0}) \cap \{(x,y): x \geq 0\}
 \subset \RR^2$ in our formal definition of improper integrals.
 Since
-$\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
+$\DS \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
 we get
 \begin{align*}
 \iint_{x>0} x e^{-x^2-y^2}
@@ -5183,17 +5183,17 @@ r^2\cos(\theta) e^{-r^2} \dx{\theta}\dx{r}
 + \int_0^q \frac{e^{-r^2}}{2}\dx{r}\right)
 = \int_0^\infty e^{-r^2} \dx{r} = \sqrt{\pi}
 \end{align*}
-because $\displaystyle \lim_{q\to\infty} q e^{-q^2}= 0$ as can be
+because $\DS \lim_{q\to\infty} q e^{-q^2}= 0$ as can be
 shown with l'Hospital Rule.  We have use integration by parts to get
 the fourth equality above.
 
 \subQ{e}
 We use polar coordinates $x= r\cos(\theta)$ and $y = r \sin(\theta)$ for
 $0 \leq \theta < 2 \pi$ and $q \leq r \leq 1$ where $q\to 0$.
-We have that $\displaystyle S(q) = B_1(\VEC{0}) \setminus
+We have that $\DS S(q) = B_1(\VEC{0}) \setminus
 B_q(\VEC{0}) \subset \RR^2$ in our formal definition of improper
 integrals.  Since
-$\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
+$\DS \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$,
 we get
 \begin{align*}
 &\iint_{x^2+y^2<1} \frac{x^2}{(x^2+y^2)^2}

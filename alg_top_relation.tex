@@ -82,7 +82,7 @@ In analogy to $H_k(K;R) = \KE(\partial_k) / \IMG(\partial_{k-1})$,
 we can define $\tilde{H}_k(K;R) = \KE(\tilde{\partial}_k)
 / \IMG(\tilde{\partial}_{k-1})$.  Likewise, we define the
 quotient space
-$\displaystyle \tilde{C}_k(K,L;R) = \tilde{C}_k(K;R)/\tilde{C}_k(L;R)$.
+$\DS \tilde{C}_k(K,L;R) = \tilde{C}_k(K;R)/\tilde{C}_k(L;R)$.
 Since $\tilde{\partial}_k:\tilde{C}_k(L;R) \to \tilde{C}_{k-1}(L;R)$,
 we may define the operator
 $\overline{\tilde{\partial}}_k:\tilde{C}_k(K,L;R) \to \tilde{C}_{k-1}(K,L;R)$
@@ -90,7 +90,7 @@ by $\overline{\tilde{\partial}}_k(\relC[K,L]{c}) =
 \relC[K,L]{\tilde{\partial}_k(c)}$ for all $c \in \tilde{C}_k(K;R)$, where
 $\relC[K,L]{\cdot}$ represents an equivalence class in
 $\tilde{C}_k(K,L;R)$.   We also define
-$\displaystyle \tilde{H}_k(K,L;R) = \KE\big(\overline{\tilde{\partial}}_k\big) /
+$\DS \tilde{H}_k(K,L;R) = \KE\big(\overline{\tilde{\partial}}_k\big) /
 \IMG\big(\overline{\tilde{\partial}}_{k-1}\big)$.
 
 \begin{rmk}
@@ -114,15 +114,15 @@ $(\VEC{y}_0,\VEC{y}_1,\ldots,\VEC{y}_k)$ and
 extended linearly to all of $\tilde{C}_k(K_1;R)$.
 \end{defn}
 
-Since $\displaystyle \tilde{C}_k(f)$ commutes with
-$\displaystyle \tilde{\partial}_k$, we get the following proposition.
+Since $\DS \tilde{C}_k(f)$ commutes with
+$\DS \tilde{\partial}_k$, we get the following proposition.
 
 \begin{prop}
 In the context of the previous definition, the map
-$\displaystyle \tilde{H}_k(f): \tilde{H}_k(K_1;R) \to \tilde{H}_k(K_2,R)$
+$\DS \tilde{H}_k(f): \tilde{H}_k(K_1;R) \to \tilde{H}_k(K_2,R)$
 defined by
-$\displaystyle \tilde{H}_k(f)([c]_{K_1}) = [ \tilde{C}_k(f)(c)]_{K_2}$ for all
-$\displaystyle [c]_{K_1} \in \tilde{H}_k(K_1;R)$ is an homomorphism.
+$\DS \tilde{H}_k(f)([c]_{K_1}) = [ \tilde{C}_k(f)(c)]_{K_2}$ for all
+$\DS [c]_{K_1} \in \tilde{H}_k(K_1;R)$ is an homomorphism.
 \end{prop}
 
 The following result is easy to proof.
@@ -131,11 +131,11 @@ The following result is easy to proof.
 Suppose that $L_i$ is a subcomplex of a simplicial complex
 $K_i$ for $i =1,2$, and that $R$ is an integral domain.
 If $f:(K_1,L_1) \to (K_2,L_2)$, then the map
-$\displaystyle \tilde{H}_k(f): \tilde{H}_k(K_1,L_1;R) \to
+$\DS \tilde{H}_k(f): \tilde{H}_k(K_1,L_1;R) \to
 \tilde{H}_k(K_2,L_2,R)$ defined by
-$\displaystyle \tilde{H}_k(f)(\relC[K_1,L_1]{c}) =
+$\DS \tilde{H}_k(f)(\relC[K_1,L_1]{c}) =
 \relC[K_2,L_2]{\tilde{C}_k(f)(c)}$ for all
-$\displaystyle \relC[K_1,L_1]{c} \in \tilde{H}_k(K_1,L_1;R)$ is an
+$\DS \relC[K_1,L_1]{c} \in \tilde{H}_k(K_1,L_1;R)$ is an
 homomorphism.
 \end{prop}
 
@@ -152,7 +152,7 @@ We first construct an augmentation-preserving chain map
 $\F = \{ f_k\}_{k\in \NN}$ between the chain complex
 $\tilde{\C} = \{ \tilde{C}_k(K;R), \tilde{\partial}_k \}_{k\in \NN}$ and the
 chain complex $\SS = \{ S_k([K];R), \partial_k \}_{k\in \NN}$.
-Recall that $\displaystyle [K] = \bigcup_{(s) \in K} (s)$.
+Recall that $\DS [K] = \bigcup_{(s) \in K} (s)$.
 Given an ordered $k$-simplex
 $(s) = (\VEC{y}_0,\VEC{y}_1, \ldots,\VEC{y}_k)$,
 we set $F\big((\VEC{y}_0,\VEC{y}_1, \ldots,\VEC{y}_k)\big)
@@ -174,10 +174,10 @@ $\{ \tilde{C}_k(L;R), \tilde{\partial}_k \}_{k\in \NN}$ and the
 chain complex $\{ S_k([L];R), \partial_k \}_{k\in \NN}$.
 Since the chain map $\F$ is augmentation preserving, $\F$ is also a
 chain map between the augmented chain complex
-$\displaystyle \tilde{\C}^\sharp
+$\DS \tilde{\C}^\sharp
 = \{ \tilde{C}_k^\sharp (K;R), \tilde{\partial}_k^\sharp \}_{k\in \NN}$
 and the augmented chain complex
-$\displaystyle \SS^\sharp
+$\DS \SS^\sharp
 = \{ S_k^\sharp([K];R), \partial_k^\sharp \}_{k\in \NN}$.
 
 Using $F$, we may define the following homomorphisms:
@@ -191,10 +191,10 @@ $\tilde{H}_k(F)([c]_K) = [F(c)]_{[K]}$ for all $[c]_K \in
 \item $\tilde{H}_k(F) : \tilde{H}_k(K,L;R) \to H_k([K],[L];R)$ by
 $\tilde{H}_k(F)([c]_{K,L}) = [F(c)]_{[K],[L]}$ for all
 $[c]_{K,L} \in \tilde{H}_k(K,L;R)$, and
-\item $\displaystyle \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(K;R) \to
+\item $\DS \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ by
-$\displaystyle \tilde{H}_k^\sharp(F)([c]_K) = [F(c)]_{[K]}$ for all
-$\displaystyle [c]_K \in \tilde{H}_k^\sharp(K;R)$.
+$\DS \tilde{H}_k^\sharp(F)([c]_K) = [F(c)]_{[K]}$ for all
+$\DS [c]_K \in \tilde{H}_k^\sharp(K;R)$.
 \end{itemize}
 }
 
@@ -203,7 +203,7 @@ Let $L$ be a subcomplex of a simplicial complex $K$ and $R$ be an
 integral domain. Then
 \begin{enumerate}
 \item $\tilde{H}_k(F): \tilde{H}_k(K;R) \to H_k([K];R)$ is an isomorphism,
-\item $\displaystyle \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(K;R) \to
+\item $\DS \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is an isomorphism, and
 \item $\tilde{H}_k(F) : \tilde{H}_k(K,L;R) \to H_k([K],[L];R)$ is an
 isomorphism.
@@ -218,7 +218,7 @@ equivalent to (2).  So, we only need to prove (2) and (3).
 induction on the number of elements in $K$.
 
 \stage{I.i} If $K$ has only one element, then $K = \{ (\VEC{x}_i) \}$ for some
-$\displaystyle \VEC{x}_i\in \RR^n$.  We have that $\tilde{C}_k(K;R)$
+$\DS \VEC{x}_i\in \RR^n$.  We have that $\tilde{C}_k(K;R)$
 is generated by the ordered $k$-simplex
 $(s) = (\VEC{x}_i,\VEC{x}_i, \ldots, \VEC{x}_i)$ and
 $\delta_{(s)}:\Delta_k \to [K] = \{\VEC{x}_i\}$ is the affine map
@@ -234,7 +234,7 @@ $H_k([K],\emptyset;R) = H_k([K];R)$.
 than $N$ elements and prove that it is also true if $K$ has $N$ elements.
 
 It suffices to prove that
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is an isomorphism.
 Suppose that this is true.  We get the following commuting diagram from
 Proposition~\ref{propConnectingH} \footnote{There are versions of
@@ -257,10 +257,10 @@ ordered simplicial homology.}
 }
 \]
 where each row is an exact sequence.
-Since $\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(L;R) \to
+Since $\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(L;R) \to
 H_k^\sharp([L];R)$ is an isomorphism because $L$ has less than $N$
 elements, and
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is an isomorphism by assumption,
 we get from Proposition~\ref{propCsCtfauHsH} that
 $\tilde{H}_k(F): \tilde{H}_k(L;R) \to H_k([L];R)$ and
@@ -270,7 +270,7 @@ $\tilde{H}_k(F) : \tilde{H}_k(K,L;R) \to H_k([K],[L];R)$
 is an isomorphism.
 
 We now prove that
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is an isomorphism.
 Suppose that $(s) \in K$ is a simplex which is not
 the face of any other simplex but itself.  Then
@@ -304,7 +304,7 @@ where $\iota$ denotes an inclusion map.  We have by
 induction that
 $\tilde{H}_k(F): \tilde{H}_k(K_1;K_3;R) \to H_k([K_1],[K_3];R)$
 is an isomorphism.  To prove that
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R)
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R)
 \to H_k^\sharp([K];R)$
 is an isomorphism, we prove
 that all the maps $\tilde{H}_k(\iota)$, $H_k(\iota)$,
@@ -312,11 +312,11 @@ $\tilde{H}_k(\Id)$ and $H_k(\Id)$ are isomorphism.
 
 Since $[K_2] = [s]$ is contractible, we get from
 Proposition~\ref{propContrXeXA} that
-$\displaystyle H_k(\Id):H_k^\sharp([K];R) \to H_k^\sharp([K],[K_2];R)$
+$\DS H_k(\Id):H_k^\sharp([K];R) \to H_k^\sharp([K],[K_2];R)$
 is an isomorphism for $k \geq 0$.  Since 
-$\displaystyle H_k^\sharp([K],[K_2];R) = H_k([K],[K_2];R)$ for $k>0$,
+$\DS H_k^\sharp([K],[K_2];R) = H_k([K],[K_2];R)$ for $k>0$,
 we get that
-$\displaystyle H_k(\Id):H_k^\sharp([K];R) \to H_k([K],[K_2];R)$
+$\DS H_k(\Id):H_k^\sharp([K];R) \to H_k([K],[K_2];R)$
 is an isomorphism for $k>0$.  For $k=0$, we assume that
 $[K]$ is the disjoint union of path-connected components 
 $X_j$ for $j \in J$.  There exists $j_0 \in J$ such that
@@ -336,13 +336,13 @@ H_0(X_{j_0};R) = H_0([K];R) \cong H_0^\sharp([K];R) \oplus R \ .
 \]
 Since $H_0(X_j;R) \cong R$ for all $j$ according to
 Corollary~\ref{corContrHk}, we get that
-$\displaystyle H_0([K],[K_2];R)
+$\DS H_0([K],[K_2];R)
 = \bigoplus_{j \in J \setminus \{j_0\}} H_0(X_j;R)
 \cong H_0^\sharp([K];R)$.  Since the previous isomorphism is deduced
 from the identity map, we again have that
-$\displaystyle H_0(\Id):H_0^\sharp([K];R) \to H_0([K],[K_2];R)$
+$\DS H_0(\Id):H_0^\sharp([K];R) \to H_0([K],[K_2];R)$
 is an isomorphism.  The same reasoning shows that
-$\displaystyle \tilde{H}_k(\Id):\tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k(\Id):\tilde{H}_k^\sharp(K;R) \to
 \tilde{H}_k(K,K_2;R)$ is an isomorphism for $k \geq 0$
 \footnote{The courageous reader is invited to repeat for
 relative and reduced simplicial homology what we have done for relative
@@ -374,9 +374,9 @@ is an isomorphism.  Unfortunately, the excision theorem,
 Theorem~\ref{thmExcis}, cannot be used directly because we have the
 situation where the set that we want to excise, namely $(s)$, is such
 that $\overline{(s)} = [s]$ is not a subset of
-$\displaystyle [K_2]^\circ = (s)$,
+$\DS [K_2]^\circ = (s)$,
 where closure and interior of sets are relative to the induce topology
-on $[K]$ from $\displaystyle \RR^n$.
+on $[K]$ from $\DS \RR^n$.
 We therefore need to use Proposition~\ref{propVUAX}.
 
 Suppose that $(s)$ is a $k$-simplex and that $(s_0)$, $(s_1)$, \ldots,
@@ -393,7 +393,7 @@ V = \VEC{p} + \epsilon (V_1 - \VEC{p}) =
 \]
 for $0 < \epsilon <1$ fixed (Figure~\ref{HkEHkfig}).
 
-We have that $\displaystyle \overline{V} \subset (s)^\circ = (s)$.
+We have that $\DS \overline{V} \subset (s)^\circ = (s)$.
 There is a retraction $r$ of $[K_2] \setminus V$ onto $[K_3]$
 (Figure~\ref{HkEHkfig}).  By defining $r$ to be the identity on
 $[K_1]\setminus [K_2]$, we get a deformation retraction of
@@ -403,7 +403,7 @@ therefore use Proposition~\ref{propVUAX} to conclude that
 $H_k(\iota):H_k([K_1],[K_3];R) \to H_k([K] \setminus V, [K_2] \setminus V;R)$
 is an isomorphism.
 
-Moreover, since $\displaystyle \overline{V} \subset (s)^\circ = (s)$,
+Moreover, since $\DS \overline{V} \subset (s)^\circ = (s)$,
 we may use the excision theorem, Theorem~\ref{thmExcis}, to conclude that
 $H_k(\iota):H_k([K] \setminus V, [K_2] \setminus V;R) \to H_k([K], [K_2];R)$.
 is an isomorphism.  It follows from the previous paragraph that
@@ -419,38 +419,38 @@ infinitely many elements.
 
 It still follows from Proposition~\ref{propCsCtfauHsH} that (1) is
 equivalent to (2).  Moreover, if we prove that
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is an isomorphism for all $k$, then we can use long
 exact sequences and the Five Lemma exactly as we have done in (I.ii) to
 show that this implies that (3) is true for all $k$.
 
 Thus, we only have to prove that
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ where $K$ has infinitely many elements.
 
 \stage{II.i}  Suppose that $c \in S_k([K];R)$.  We may express $c$ as a
-finite sum $\displaystyle c = \sum_{j\in J} a_j \sigma_j$, where
+finite sum $\DS c = \sum_{j\in J} a_j \sigma_j$, where
 $a_j \in R$ and $\sigma_j$ is a singular $k$-simplex in $[K]$ for all $j$.
 We prove that there exists a simplicial
 subcomplex $L_c$ of $K$ such that $L_c$ has a finite number of elements and
-$\displaystyle Q = \bigcup_{j\in J} \sigma_j(\Delta_k) \subset [L_c]$.
+$\DS Q = \bigcup_{j\in J} \sigma_j(\Delta_k) \subset [L_c]$.
 Since the $\sigma_j$ are continuous functions and $\Delta_k$ is
 compact, we have that $\sigma_j(\Delta_k)$ is a compact set.
 Thus $Q$ is a compact set because it is the finite union of compact
 sets.  Suppose that there is no finite number of simplices
 in $K$ that cover $Q$.  Then there exists an
-infinite collection $\displaystyle \{ (s_i) \}_{i\in \NN}$ of distinct
+infinite collection $\DS \{ (s_i) \}_{i\in \NN}$ of distinct
 simplices in $K$ such that $(s_i) \cap Q \neq \emptyset$
 for all $i \in \NN$ \footnote{These simplices are obtained inductively using
-the fact that $\displaystyle Q \subset [K] = \bigcup_{(s) \in K} (s)$.}.
+the fact that $\DS Q \subset [K] = \bigcup_{(s) \in K} (s)$.}.
 Choose $\VEC{z}_i \in (s_i) \cap Q$ for each $i \in \NN$.
-Let $\displaystyle U_m = Q \setminus \bigcup_{i\neq m} \{ \VEC{z}_i \}$
+Let $\DS U_m = Q \setminus \bigcup_{i\neq m} \{ \VEC{z}_i \}$
 for all $m \in \NN$.  The sets $U_m$ are open sets (see Remark~\ref{rmkUmOpen}
-below) and $\displaystyle Q = \bigcup_{m \in \NN} U_m$.  Thus
+below) and $\DS Q = \bigcup_{m \in \NN} U_m$.  Thus
 $\{ U_m\}_{m\in \NN}$ is an open cover of the compact set
 $Q$.  Therefore, there exists a finite subcover
 $\{ U_{m_t}\}_{0\leq t \leq T}$ of $Q$.  But
-$\displaystyle Q \varsupsetneqq \bigcup_{0\leq t\leq T} U_{m_t}$ because
+$\DS Q \varsupsetneqq \bigcup_{0\leq t\leq T} U_{m_t}$ because
 $\VEC{z}_i \not\in \bigcup_{0\leq t \leq T} U_{m_t}$ if $i \neq m_t$ for
 $0 \leq t\leq T$.  This is a contradiction.   Hence, there are a
 finite number of simplices in $K$ whose union cover $Q$.
@@ -458,15 +458,15 @@ If we add all the faces of these simplices, then we get a finite simplicial
 subcomplex $L_c$ of $K$ with $Q \subset [L_c]$.
 
 \stage{II.ii}  We first prove that
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is onto.  Suppose that
-$\displaystyle [c]_K \in H_k^\sharp([K];R)$ and that
-$\displaystyle c = \sum_{j\in J} a_j \sigma_j$, where
+$\DS [c]_K \in H_k^\sharp([K];R)$ and that
+$\DS c = \sum_{j\in J} a_j \sigma_j$, where
 $a_j \in R$ and $\sigma_j$ is a singular $k$-simplex in $[K]$ for all
 $j \in J$.
 Using (II.i), we get a finite simplicial subcomplex $L_c$ of $K$ such that
-$\displaystyle c \in S_k^\sharp([L_c];R)$ and thus
-$\displaystyle [c]_{L_c} \in H_k^\sharp([L_c];R)$.
+$\DS c \in S_k^\sharp([L_c];R)$ and thus
+$\DS [c]_{L_c} \in H_k^\sharp([L_c];R)$.
 we consider the commutative diagram
 \[
 \xymatrix@C+2em{
@@ -478,30 +478,30 @@ we consider the commutative diagram
 }
 \]
 We have from (I) that
-$\displaystyle \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(L_c;R) \to
+$\DS \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(L_c;R) \to
 H_k^\sharp([L_c];R)$ is an isomorphism.  Thus, there
-exists $\displaystyle [b]_{L_c} \in \tilde{H}_k^\sharp(L_c;R)$ such that
-$\displaystyle \tilde{H}_k^\sharp(F)([b]_{L_c}) = [c]_{[L_c]}$.  we
+exists $\DS [b]_{L_c} \in \tilde{H}_k^\sharp(L_c;R)$ such that
+$\DS \tilde{H}_k^\sharp(F)([b]_{L_c}) = [c]_{[L_c]}$.  we
 therefore get that\\
-$\displaystyle \tilde{H}_k^\sharp(F)\big(\tilde{H}_k(\iota)
+$\DS \tilde{H}_k^\sharp(F)\big(\tilde{H}_k(\iota)
 ([b]_{L_c})\big) = H_k(\iota)\big( \tilde{H}_k^\sharp(F)([b]_{L_c}) \big)
 = [c]_{[K]}$.  Hence $[c]_{[K]}$ is in the image of
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$.
 
-To prove that $\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+To prove that $\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is one-to-one, suppose that
-$\displaystyle \tilde{H}_k^\sharp(F)([c]_K) = [F(c)]_{[K]} = [0]_{[K]}$ for some
-$\displaystyle [c]_K \in \tilde{H}_k^\sharp(K;R)$.  This means that
-$\displaystyle F(c) = \partial^\sharp(b)$ for some $b \in S_{k+1}([K];R)$.
+$\DS \tilde{H}_k^\sharp(F)([c]_K) = [F(c)]_{[K]} = [0]_{[K]}$ for some
+$\DS [c]_K \in \tilde{H}_k^\sharp(K;R)$.  This means that
+$\DS F(c) = \partial^\sharp(b)$ for some $b \in S_{k+1}([K];R)$.
 Using (II.i), we get a finite simplicial subcomplex $L_c$ of $K$ such that
-$\displaystyle F(c) \in S_k^\sharp([L_c];R)$ and a finite simplicial
+$\DS F(c) \in S_k^\sharp([L_c];R)$ and a finite simplicial
 subcomplex $L_b$ of $K$ such that
-$\displaystyle b \in S_{k+1}^\sharp([L_b];R)$.
+$\DS b \in S_{k+1}^\sharp([L_b];R)$.
 Let $L = L_c \cup L_b$.  We have that $L$ is a finite simplicial
-subcomplex of $K$ with $\displaystyle F(c) \in S_k^\sharp([L];R)$ and
-$\displaystyle b \in S_{k+1}([L];R)$.
-We also have that $\displaystyle c \in \tilde{C}_k^\sharp(L;R)$
+subcomplex of $K$ with $\DS F(c) \in S_k^\sharp([L];R)$ and
+$\DS b \in S_{k+1}([L];R)$.
+We also have that $\DS c \in \tilde{C}_k^\sharp(L;R)$
 because $c$ is a finite linear combinations of ordered $k$-simplices
 which are included in $L$ by construction \footnote{It follows from
 the definition of $F$ that if $(s)$ is one of the ordered
@@ -519,27 +519,27 @@ We consider the commutative diagram
 & H_k^\sharp([K];R)
 }
 \]
-Since $\displaystyle F(c) = \partial^\sharp(b) \in S_k^\sharp([L];R)$
-with $\displaystyle b \in S_{k+1}^\sharp([L];R)$, we have that
-$\displaystyle [F(c)]_{[L]}= [0]_{[L]} \in \tilde{H}_k^\sharp([L];R)$.
-Since $\displaystyle \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(L;R) \to
+Since $\DS F(c) = \partial^\sharp(b) \in S_k^\sharp([L];R)$
+with $\DS b \in S_{k+1}^\sharp([L];R)$, we have that
+$\DS [F(c)]_{[L]}= [0]_{[L]} \in \tilde{H}_k^\sharp([L];R)$.
+Since $\DS \tilde{H}_k^\sharp(F) : \tilde{H}_k^\sharp(L;R) \to
 H_k^\sharp([L];R)$ is an isomorphism according to (I), we have that
-$\displaystyle [c]_L = [0]_L \in \tilde{H}_k^\sharp(L;R)$.  Thus
-$\displaystyle [c]_K = \tilde{H}(\iota)([c]_L) = [0]_K \in 
+$\DS [c]_L = [0]_L \in \tilde{H}_k^\sharp(L;R)$.  Thus
+$\DS [c]_K = \tilde{H}(\iota)([c]_L) = [0]_K \in 
 \tilde{H}_k^\sharp(K;R)$.
 \end{proof}
 
 \begin{rmk}
 We prove that the sets $U_m$ in part (II.i) of          \label{rmkUmOpen}
 the previous proof are open sets.  By adding the missing faces if
-needed to $\displaystyle \{ (s_i) \}_{i\in \NN}$, we get a
+needed to $\DS \{ (s_i) \}_{i\in \NN}$, we get a
 a simplicial subcomplex $L$ of $K$.  Consider
 $\VEC{z} \in U_m$.  If $\VEC{z} \in U_m \setminus [L]$, 
 then $V = Q \setminus [L]$ can be used as an open neighbourhood of
 $\VEC{z}$ such that $V \subset U_m$.  If
-$\displaystyle \VEC{z} \in [L] = \bigcup_{(s) \in L} (s)$, then
+$\DS \VEC{z} \in [L] = \bigcup_{(s) \in L} (s)$, then
 there exists a unique $(s) \in L$ such that $\VEC{z} \in (s)$.
-The finite union $\displaystyle W =
+The finite union $\DS W =
 \bigcup_{\substack{(t) \in K\\ [t]\cap [s] \neq \emptyset}} (t)$ 
 is an open neighbourhood of $\VEC{z}$ in the induce topology on $[K]$.
 Moreover, $W$ contains only a finite number of $\VEC{z}_i$ with
@@ -549,7 +549,7 @@ the $\VEC{z}_i$ with $i \neq m$ that may be in one of the $(t)$ listed
 in the union.  We do not want to reject $\VEC{z}_m$ if it is in $W$;
 in particular if $\VEC{z} = \VEC{z}_m$.
 If $\VEC{z}_{m_s}$ for $m_s \neq m$ and $0\leq s \leq S$ are the
-$\VEC{z}_i \in W$, then $\displaystyle Q \cap \big( W \setminus
+$\VEC{z}_i \in W$, then $\DS Q \cap \big( W \setminus
 \{ \VEC{z}_{m_s} : 0\leq s \leq S\}\big) \subset U_m$ is an open
 neighbourhood of $\VEC{z}$.  
 \end{rmk}
@@ -567,19 +567,19 @@ is the affine map defined by
 $\delta_{\osscript{s}{}{}{}{}}(\VEC{e}_j) = \VEC{x}_{i_j}$ for
 $0 \leq j \leq k$.  We extend $G$ to $C_k(K;R)$ by linearity;
 namely,
-$\displaystyle G\Big(\sum_{\substack{(s) \in K\\\dim(s)=k}} a_{(s)}
+$\DS G\Big(\sum_{\substack{(s) \in K\\\dim(s)=k}} a_{(s)}
 \os{s}{}{}{}{}\Big) = \sum_{\substack{(s) \in K\\\dim(s)=k}} a_{(s)}
 G(\os{s}{}{}{}{})$ where $a_{(s)} \in R$ and the sum is finite.
 The rest of this subsection is devoted to justify how we may
 ``replace'' $F$ by $G$.
 
-Let $\displaystyle \phi:C_k(K;R) \to \tilde{C}_k(K;R)$
+Let $\DS \phi:C_k(K;R) \to \tilde{C}_k(K;R)$
 be the function defined by \\
 $\phi(\os{\VEC{x}_{j_0}}{}{\VEC{x}_{j_1}}{}{\VEC{x}_{j_k}})
 = (\VEC{x}_{j_0},\VEC{x}_{j_1}, \ldots, \VEC{x}_{j_k})$ for all 
 oriented $k$-simplices with $j_0 < j_1 < \ldots < j_k$ and
-extended to $\displaystyle C_k(K;R)$ by linearly,
-and $\displaystyle \psi:\tilde{C}_k(K;R) \to C_k(K;R)$
+extended to $\DS C_k(K;R)$ by linearly,
+and $\DS \psi:\tilde{C}_k(K;R) \to C_k(K;R)$
 be the function defined by
 \[
 \psi\big((\VEC{y}_0,\VEC{y}_1,\ldots,\VEC{y}_k)\big)
@@ -590,7 +590,7 @@ be the function defined by
 \end{cases}
 \]
 for all ordered $k$-simplices and extended to
-$\displaystyle \tilde{C}_k(K;R)$ by linearly.
+$\DS \tilde{C}_k(K;R)$ by linearly.
 We note that $\psi((s)) = 0$ when $(s)$ has at least two equal vertices.
 It is clear that $\tilde{\partial}_k \circ \phi = \phi \circ \partial_k$.
 It is also true that
@@ -643,96 +643,96 @@ We have the following commutative diagram
 \]
 Namely, $\{\phi_k\}_{k\in \ZZ}$ with $\phi_k = \phi$ for all $k$ is a
 chain map from the chain complex
-$\displaystyle \C = \{(C_k(K;R),\partial_k)\}_{k\in \ZZ}$
+$\DS \C = \{(C_k(K;R),\partial_k)\}_{k\in \ZZ}$
 to the chain complex
-$\displaystyle \tilde{\C}
+$\DS \tilde{\C}
 = \{(\tilde{C}_k(K;R),\tilde{\partial}_k)\}_{k\in \ZZ}$ and
 $\{\psi_k\}_{k\in \ZZ}$ with $\psi_k = \psi$ for all $k$ is a
-chain map from $\displaystyle \tilde{\C}$ to $\displaystyle \C$.
+chain map from $\DS \tilde{\C}$ to $\DS \C$.
 
 Since
-$\displaystyle \phi: \KE(\partial_k) \to \KE(\tilde{\partial}_k)$
+$\DS \phi: \KE(\partial_k) \to \KE(\tilde{\partial}_k)$
 and
-$\displaystyle \phi: \IMG(\partial_{k-1}) \to
+$\DS \phi: \IMG(\partial_{k-1}) \to
 \IMG(\tilde{\partial}_{k-1})$, we can
 define the homomorphism
-$\displaystyle \tilde{H}_k(\phi):H_k(K;R) \to \tilde{H}_k(K;R)$
+$\DS \tilde{H}_k(\phi):H_k(K;R) \to \tilde{H}_k(K;R)$
 by
-$\displaystyle \tilde{H}_k(\phi)([c]_K) = [\phi(c)]_K$ for all
-$\displaystyle c \in C_k(K;R)$,
+$\DS \tilde{H}_k(\phi)([c]_K) = [\phi(c)]_K$ for all
+$\DS c \in C_k(K;R)$,
 where as usual $[\cdot]_K$ represents equivalence classes in both
-$\displaystyle H_k(K;R)$ and
-$\displaystyle \tilde{H}_k(K;R)$.
+$\DS H_k(K;R)$ and
+$\DS \tilde{H}_k(K;R)$.
 Similarly, since
-$\displaystyle \psi:\KE(\tilde{\partial}_k) \to \KE(\partial_k)$
+$\DS \psi:\KE(\tilde{\partial}_k) \to \KE(\partial_k)$
 and
-$\displaystyle \psi:\IMG(\tilde{\partial}_{k-1}) \to
+$\DS \psi:\IMG(\tilde{\partial}_{k-1}) \to
 \IMG(\partial_{k-1})$, we may
 define the homomorphism
-$\displaystyle \tilde{H}_k(\psi):\tilde{H}_k(K;R) \to
+$\DS \tilde{H}_k(\psi):\tilde{H}_k(K;R) \to
 H_k(K;R)$ by
-$\displaystyle \tilde{H}_k(\psi)([c]_K) = [\psi(c)]_K$ for all
-$\displaystyle c \in \tilde{C}_k(K;R)$.
+$\DS \tilde{H}_k(\psi)([c]_K) = [\psi(c)]_K$ for all
+$\DS c \in \tilde{C}_k(K;R)$.
 
 We can repeat all the previous discussion for the reduced
 homology (i.e.\ with $\partial_k$ replaced by
-$\displaystyle \partial_k^\sharp$ and $\tilde{\partial}_k$
-replaced by $\displaystyle \tilde{\partial}_k^\sharp$) and
+$\DS \partial_k^\sharp$ and $\tilde{\partial}_k$
+replaced by $\DS \tilde{\partial}_k^\sharp$) and
 define
-$\displaystyle \tilde{H}_k^\sharp(\phi):H_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(\phi):H_k^\sharp(K;R) \to
 \tilde{H}_k^\sharp(K;R)$ and
-$\displaystyle \tilde{H}_k^\sharp(\psi):\tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(\psi):\tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp(K;R)$.  We assume that
-$\displaystyle \tilde{C}_{-1}^\sharp(K;R) = R$ and
-$\displaystyle C_{-1}^\sharp(K;R) = R$, and that
-$\displaystyle \phi:C_{-1}^\sharp(K;R) \to \tilde{C}_{-1}^\sharp(K;R)$
+$\DS \tilde{C}_{-1}^\sharp(K;R) = R$ and
+$\DS C_{-1}^\sharp(K;R) = R$, and that
+$\DS \phi:C_{-1}^\sharp(K;R) \to \tilde{C}_{-1}^\sharp(K;R)$
 and
-$\displaystyle \psi:\tilde{C}_{-1}^\sharp(K;R) \to C_{-1}^\sharp(K;R)$
+$\DS \psi:\tilde{C}_{-1}^\sharp(K;R) \to C_{-1}^\sharp(K;R)$
 are the identity maps.
 
 According to Proposition~\ref{propCsCtfauHsH}, if we prove that
-$\displaystyle \tilde{H}_k^\sharp(\phi)$ is an isomorphism, then 
-we will have that $\displaystyle \tilde{H}_k(\phi)$ is an isomorphism.
-To prove that $\displaystyle \tilde{H}_k^\sharp(\phi)$ is an
-isomorphism, we prove that $\displaystyle \tilde{H}_k^\sharp(\psi)$ is
-the inverse of $\displaystyle \tilde{H}_k^\sharp(\phi)$.
+$\DS \tilde{H}_k^\sharp(\phi)$ is an isomorphism, then 
+we will have that $\DS \tilde{H}_k(\phi)$ is an isomorphism.
+To prove that $\DS \tilde{H}_k^\sharp(\phi)$ is an
+isomorphism, we prove that $\DS \tilde{H}_k^\sharp(\psi)$ is
+the inverse of $\DS \tilde{H}_k^\sharp(\phi)$.
 
 It is clear that $\psi \circ \phi = \Id$ on
-$\displaystyle C_k^\sharp(K;R)$.  Thus
-$\displaystyle \tilde{H}_k^\sharp(\psi) \circ \tilde{H}_k^\sharp(\phi) = \Id$
-on $\displaystyle H_k^\sharp(K;R)$.
+$\DS C_k^\sharp(K;R)$.  Thus
+$\DS \tilde{H}_k^\sharp(\psi) \circ \tilde{H}_k^\sharp(\phi) = \Id$
+on $\DS H_k^\sharp(K;R)$.
 To prove that
-$\displaystyle \tilde{H}_k^\sharp(\phi) \circ \tilde{H}_k^\sharp(\psi) = \Id$
+$\DS \tilde{H}_k^\sharp(\phi) \circ \tilde{H}_k^\sharp(\psi) = \Id$
 requires a little bit more work because $\phi \circ \psi$ is not the identity.
 We need to prove that there exists a chain homotopy between
 $\F = \{ f_k\}_{k\in \ZZ}$ with
-$\displaystyle f_k = \Id:\tilde{C}_k^\sharp(K;R) \to \tilde{C}_k^\sharp(K;R)$
+$\DS f_k = \Id:\tilde{C}_k^\sharp(K;R) \to \tilde{C}_k^\sharp(K;R)$
 and
 $\GG = \{ g_k\}_{k\in \ZZ}$ with
-$\displaystyle g_k = \phi\circ \psi :\tilde{C}_k^\sharp(K;R) \to
+$\DS g_k = \phi\circ \psi :\tilde{C}_k^\sharp(K;R) \to
 \tilde{C}_k^\sharp(K;R)$.
 Namely, we need to find $\DD = \{ D_k \}_{k\in \ZZ}$ with
-$\displaystyle D_k : \tilde{C}_k^\sharp(K;R) \to \tilde{C}_{k+1}^\sharp(K;R)$
+$\DS D_k : \tilde{C}_k^\sharp(K;R) \to \tilde{C}_{k+1}^\sharp(K;R)$
 such that
-$\displaystyle \tilde{\partial}_{k+1}^\sharp \circ D_k +
+$\DS \tilde{\partial}_{k+1}^\sharp \circ D_k +
 D_{k-1} \circ \tilde{\partial}_k^\sharp =
 \phi\circ \psi - \Id$ on $\tilde{C}_k^\sharp(K;R)$.
 After this is done, we will be able to use
 Proposition~\ref{propCHiFeG} \footnote{To be precise, a version of
 this proposition for ordered simplicial homology.}
 to conclude that
-$\displaystyle \tilde{H}_k^\sharp(\Id) = \tilde{H}_k^\sharp(\phi\circ \psi)$
+$\DS \tilde{H}_k^\sharp(\Id) = \tilde{H}_k^\sharp(\phi\circ \psi)$
 for all $k$; namely,
-$\displaystyle \tilde{H}_k^\sharp(\phi) \circ \tilde{H}_k^\sharp(\psi)
+$\DS \tilde{H}_k^\sharp(\phi) \circ \tilde{H}_k^\sharp(\psi)
 = \Id:\tilde{H}_k^\sharp(K;R) \to \tilde{H}_k^\sharp(K;R)$.
 
 \begin{prop}  \label{propOOhomCM}
 There exists $\DD = \{ D_k \}_{k\in \ZZ}$ with
-$\displaystyle D_k : \tilde{C}_k^\sharp(K;R) \to \tilde{C}_{k+1}^\sharp(K;R)$
+$\DS D_k : \tilde{C}_k^\sharp(K;R) \to \tilde{C}_{k+1}^\sharp(K;R)$
 such that
-$\displaystyle \tilde{\partial}_{k+1}^\sharp \circ D_k
+$\DS \tilde{\partial}_{k+1}^\sharp \circ D_k
 + D_{k-1} \circ \tilde{\partial}_k^\sharp =
-\phi\circ \psi - \Id$ on $\displaystyle \tilde{C}_k^\sharp(K;R)$.
+\phi\circ \psi - \Id$ on $\DS \tilde{C}_k^\sharp(K;R)$.
 \end{prop}
 
 \begin{proof}
@@ -745,38 +745,38 @@ $(\VEC{x}_{i_0}, \VEC{x}_{i_1}, \ldots , \VEC{x}_{i_k}) \in K$.
 Hence $K \subset \VEC{p} \ast K$.
 
 We prove that the chain complex
-$\displaystyle \{(\tilde{C}_k^\sharp(\VEC{p}\ast K;R),
+$\DS \{(\tilde{C}_k^\sharp(\VEC{p}\ast K;R),
 \tilde{\partial}_k^\sharp)\}_{k\in \ZZ}$ is
 acyclic.  Let
-$\displaystyle Q_k: \tilde{C}_k^\sharp(\VEC{p}\ast K;R) \to
+$\DS Q_k: \tilde{C}_k^\sharp(\VEC{p}\ast K;R) \to
 \tilde{C}_{k+1}^\sharp(\VEC{p}\ast K;R)$ be
 the mapping define by 
 $Q_k\big( (\VEC{y}_0, \VEC{y}_1, \ldots, \VEC{y}_k) \big)
 =(\VEC{p}, \VEC{y}_0, \VEC{y}_1, \ldots, \VEC{y}_k)$
 for all $(\VEC{y}_0, \VEC{y}_1, \ldots, \VEC{y}_k) \in \VEC{p} \ast K$, and 
-extended by linearity to $\displaystyle \tilde{C}_k^\sharp(\VEC{p}\ast K;R)$.
+extended by linearity to $\DS \tilde{C}_k^\sharp(\VEC{p}\ast K;R)$.
 
 Proceeding as we did in Section~\ref{subsectExcis}, we find that
-$\displaystyle \tilde{\partial}_1^\sharp(Q_0(c))
+$\DS \tilde{\partial}_1^\sharp(Q_0(c))
 = c - \tilde{\partial}_0^\sharp(c) (\VEC{p})$ for
-all $\displaystyle c \in \tilde{C}_0^\sharp(\VEC{p} \ast K;R)$ and
-$\displaystyle \tilde{\partial}_{k+1}^\sharp(Q_k(c))
+all $\DS c \in \tilde{C}_0^\sharp(\VEC{p} \ast K;R)$ and
+$\DS \tilde{\partial}_{k+1}^\sharp(Q_k(c))
 = c - Q_{k-1}(\tilde{\partial}_k^\sharp(c))$
-for all $\displaystyle c \in \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$ if $k>0$.
+for all $\DS c \in \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$ if $k>0$.
 
-If $\displaystyle c \in \tilde{Z}_0^\sharp(\VEC{p} \ast K;R)$, then
-$\displaystyle \tilde{\partial}_0^\sharp(c) =0$.
-Therefore $\displaystyle c = \tilde{\partial}_1^\sharp(Q_0(c))$.
-Hence $\displaystyle c \in \tilde{B}_0^\sharp(\VEC{p} \ast K;R)$.  Thus
+If $\DS c \in \tilde{Z}_0^\sharp(\VEC{p} \ast K;R)$, then
+$\DS \tilde{\partial}_0^\sharp(c) =0$.
+Therefore $\DS c = \tilde{\partial}_1^\sharp(Q_0(c))$.
+Hence $\DS c \in \tilde{B}_0^\sharp(\VEC{p} \ast K;R)$.  Thus
 $[c]_{\VEC{p}\ast K} = [0]_{\VEC{p}\ast K}$.  We get that
-$\displaystyle \tilde{H}_0^\sharp(\VEC{p} \ast K;R) = 0$.
+$\DS \tilde{H}_0^\sharp(\VEC{p} \ast K;R) = 0$.
 
-If $\displaystyle c \in \tilde{Z}_k^\sharp(\VEC{p} \ast K;R)$ with $k>0$, then
-$\displaystyle \tilde{\partial}_k^\sharp(c) = 0$.  Therefore
-$\displaystyle c = \tilde{\partial}_{k+1}^\sharp(Q_k(c))$.
-Hence $\displaystyle c \in \tilde{B}_k^\sharp(\VEC{p} \ast K;R)$.
+If $\DS c \in \tilde{Z}_k^\sharp(\VEC{p} \ast K;R)$ with $k>0$, then
+$\DS \tilde{\partial}_k^\sharp(c) = 0$.  Therefore
+$\DS c = \tilde{\partial}_{k+1}^\sharp(Q_k(c))$.
+Hence $\DS c \in \tilde{B}_k^\sharp(\VEC{p} \ast K;R)$.
 Thus $[c]_{\VEC{p}\ast K} = [0]_{\VEC{p}\ast K}$.  We get that
-$\displaystyle \tilde{H}_k^\sharp(\VEC{p} \ast K;R) = 0$.
+$\DS \tilde{H}_k^\sharp(\VEC{p} \ast K;R) = 0$.
 
 \stage{ii}  Let $\eta = \phi\circ \psi$.
 Given $\sigma = (\VEC{y}_0,\VEC{y}_1,\ldots,\VEC{y}_k) \in \VEC{p} \ast K$,
@@ -784,31 +784,31 @@ Let $L_\sigma$ be the smallest subcomplex of $\VEC{p}\ast K$ containing
 the vertices $\VEC{y}_0$, $\VEC{y}_1$, \ldots, $\VEC{y}_k$,
 $\eta(\VEC{y}_0)$, $\eta(\VEC{y}_1)$, \ldots,$\eta(\VEC{y}_{k-1}$ and
 $\eta(\VEC{y}_k)$.
-We have that $\displaystyle \tilde{\partial}_k^\sharp(\sigma) \in
+We have that $\DS \tilde{\partial}_k^\sharp(\sigma) \in
 \tilde{C}_k^\sharp(L_\sigma;R)$.
-Moreover, if $\displaystyle \sigma \in \tilde{C}_k^\sharp(K;R)$,
+Moreover, if $\DS \sigma \in \tilde{C}_k^\sharp(K;R)$,
 then $L_\sigma \subset K$ because
-$\displaystyle \eta: \tilde{C}_k^\sharp(K;R) \to \tilde{C}_k^\sharp(K;R)$.
+$\DS \eta: \tilde{C}_k^\sharp(K;R) \to \tilde{C}_k^\sharp(K;R)$.
 
 We use a proof by induction to construct
-$\displaystyle D_k : \tilde{C}_k^\sharp(\VEC{p} \ast K;R) \to
+$\DS D_k : \tilde{C}_k^\sharp(\VEC{p} \ast K;R) \to
 \tilde{C}_{k+1}^\sharp(\VEC{p} \ast K;R)$
 such that
-$\displaystyle \tilde{\partial}_{k+1}^\sharp \circ D_k
+$\DS \tilde{\partial}_{k+1}^\sharp \circ D_k
 = D_{k-1} \circ \tilde{\partial}_k^\sharp =
-\eta - \Id$ on $\displaystyle \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$
+\eta - \Id$ on $\DS \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$
 and such that
-$\displaystyle D_k \big(\tilde{C}_k^\sharp(Q;R)\big) \subset
+$\DS D_k \big(\tilde{C}_k^\sharp(Q;R)\big) \subset
 \tilde{C}_{k+1}^\sharp(Q;R)$ for all simplicial subcomplexes of
 $\VEC{p} \ast K$; in particular, for $Q = K$.
 
 \stage{$\mathbf{k=-1}$}
-We define $\displaystyle D_{-1} : \tilde{C}_{-1}^\sharp(\VEC{p} \ast K;R) = R \to
+We define $\DS D_{-1} : \tilde{C}_{-1}^\sharp(\VEC{p} \ast K;R) = R \to
 \tilde{C}_0^\sharp(\VEC{p} \ast K;R)$ by $D_{-1}(r) = 0$ for $r \in R$.
 
 \stage{$\mathbf{k=0}$}
 Consider
-$\displaystyle \sigma = (\VEC{y}) \in \tilde{C}_1^\sharp(\VEC{p} \ast K;R)$.
+$\DS \sigma = (\VEC{y}) \in \tilde{C}_1^\sharp(\VEC{p} \ast K;R)$.
 Thus $\VEC{y}$ is a vertex of $\VEC{p} \ast K$.
 Since
 \[
@@ -816,55 +816,55 @@ Since
 = \eta(\partial_0^\sharp(\sigma)) - \Id(\partial_0^\sharp(\sigma))
 = \eta(1) - \Id(1) = 1 -1 = 0 \ ,
 \]
-we get that $\displaystyle \eta(\sigma) - \Id(\sigma) \in
+we get that $\DS \eta(\sigma) - \Id(\sigma) \in
 \tilde{Z}_0^\sharp(\VEC{p} \ast K;R)$.
-Since $\displaystyle \tilde{H}_0^\sharp(\VEC{p} \ast K;R) = 0$
-by (i), we have that $\displaystyle \eta(\sigma)
+Since $\DS \tilde{H}_0^\sharp(\VEC{p} \ast K;R) = 0$
+by (i), we have that $\DS \eta(\sigma)
 - \Id(\sigma) \in \tilde{B}_0^\sharp(\VEC{p} \ast K;R)$.  Thus,
-there exists $\displaystyle b_\sigma \in \tilde{C}_1^\sharp(\VEC{p}\ast K;R)$
+there exists $\DS b_\sigma \in \tilde{C}_1^\sharp(\VEC{p}\ast K;R)$
 such that
-$\displaystyle \tilde{\partial}_1^\sharp(b_\sigma) = \eta(\sigma) - \Id(\sigma)$.
+$\DS \tilde{\partial}_1^\sharp(b_\sigma) = \eta(\sigma) - \Id(\sigma)$.
 We may assume that
-$\displaystyle b_\sigma \in \tilde{C}_1^\sharp(L_\sigma;R)$ because
-$\displaystyle \eta(\sigma) - \Id(\sigma) \in \tilde{C}_0^\sharp(L_\sigma;R)$.
+$\DS b_\sigma \in \tilde{C}_1^\sharp(L_\sigma;R)$ because
+$\DS \eta(\sigma) - \Id(\sigma) \in \tilde{C}_0^\sharp(L_\sigma;R)$.
 
 We set $D_0(\sigma) = b_\sigma$ for all ordered $0$-simplices $\sigma$
 of $\VEC{p} \ast K$, and extend $D_0$ by linearity to
-$\displaystyle \tilde{C}_0^\sharp(\VEC{p} \ast K;R)$.
+$\DS \tilde{C}_0^\sharp(\VEC{p} \ast K;R)$.
 
 By linearity, we have
 \[
 \tilde{\partial}_1^\sharp(D_0(c)) + D_{-1}(\tilde{\partial}_0^\sharp(c))
 = \tilde{\partial}_1^\sharp(D_0(c)) = \eta(c) - \Id(c)
 \]
-for all $\displaystyle c \in \tilde{C}_0^\sharp(\VEC{p} \ast K;R)$.
-If $\displaystyle c \in \tilde{C}_0^\sharp(Q;R)$ for some simplicial
+for all $\DS c \in \tilde{C}_0^\sharp(\VEC{p} \ast K;R)$.
+If $\DS c \in \tilde{C}_0^\sharp(Q;R)$ for some simplicial
 subcomplex $Q$ of $\VEC{p} \ast K$, then $c$ is the sum (after
 simplification) of oriented $0$-simplices $\sigma$ in $Q$.  Since
-$\displaystyle D_0(\sigma) \in \tilde{C}_1^\sharp(L_\sigma;R)
+$\DS D_0(\sigma) \in \tilde{C}_1^\sharp(L_\sigma;R)
 \subset \tilde{C}_1^\sharp(Q,R)$
 for all of these oriented $0$-simplices because $L_\sigma \subset Q$
 for each of them, we have that
-$\displaystyle D_0(c) \in \tilde{C}_1^\sharp(Q,R)$.
-In particular, $\displaystyle D_0 \big(\tilde{C}_0^\sharp(K;R)\big) \subset
+$\DS D_0(c) \in \tilde{C}_1^\sharp(Q,R)$.
+In particular, $\DS D_0 \big(\tilde{C}_0^\sharp(K;R)\big) \subset
 \tilde{C}_1^\sharp(K;R)$.
 
 \stage{$\mathbf{k>0}$}
 We assume for $q <k$ that
-$\displaystyle \tilde{\partial}_{q+1}^\sharp \circ D_q
+$\DS \tilde{\partial}_{q+1}^\sharp \circ D_q
 + D_{q-1} \circ \tilde{\partial}_q^\sharp = \eta - \Id$ on
-$\displaystyle \tilde{C}_q^\sharp(\VEC{p} \ast K;R)$
+$\DS \tilde{C}_q^\sharp(\VEC{p} \ast K;R)$
 and
-$\displaystyle D_q \big(\tilde{C}_q^\sharp(Q;R)\big) \subset
+$\DS D_q \big(\tilde{C}_q^\sharp(Q;R)\big) \subset
 \tilde{C}_{q+1}^\sharp(Q;R)$ for all simplicial
 subcomplexes $Q$ of $\VEC{p} \ast K$.
 
 Suppose that $\sigma$ is an ordered $k$-simplex of $\VEC{p} \ast K$.
-Let $\displaystyle c_\sigma = \eta(\sigma) - \Id(\sigma) -
+Let $\DS c_\sigma = \eta(\sigma) - \Id(\sigma) -
 D_{k-1}(\tilde{\partial}_k^\sharp(\sigma))$.
-We have that $\displaystyle c_\sigma \in \tilde{C}_k^\sharp(L_\sigma;R)$
+We have that $\DS c_\sigma \in \tilde{C}_k^\sharp(L_\sigma;R)$
 because
-$\displaystyle D_{k-1}\big(\tilde{C}_{k-1}^\sharp(L_\sigma;R)\big)
+$\DS D_{k-1}\big(\tilde{C}_{k-1}^\sharp(L_\sigma;R)\big)
 \subset \tilde{C}_k^\sharp(L_\sigma;R)$ by hypothesis of induction.
 
 From our hypothesis of induction, we also have
@@ -888,22 +888,22 @@ From our hypothesis of induction, we also have
 &= 0
 \end{align*}
 because
-$\displaystyle \tilde{\partial}_{k-1}^\sharp(\tilde{\partial}_k^\sharp(\sigma))
+$\DS \tilde{\partial}_{k-1}^\sharp(\tilde{\partial}_k^\sharp(\sigma))
 = 0$.
-Thus $\displaystyle c_\sigma \in \tilde{Z}_k^\sharp(\VEC{p} \ast K;R)$.
-Since $\displaystyle \tilde{H}_{k+1}^\sharp(\VEC{p} \ast K;R) = 0$,
+Thus $\DS c_\sigma \in \tilde{Z}_k^\sharp(\VEC{p} \ast K;R)$.
+Since $\DS \tilde{H}_{k+1}^\sharp(\VEC{p} \ast K;R) = 0$,
 we have that
-$\displaystyle c_\sigma \in \tilde{B}_k^\sharp(\VEC{p} \ast K;R)$.
+$\DS c_\sigma \in \tilde{B}_k^\sharp(\VEC{p} \ast K;R)$.
 Therefore, there exists
-$\displaystyle b_\sigma \in \tilde{C}_{k+1}^\sharp(\VEC{p} \ast K;R)$
-such that $\displaystyle \tilde{\partial}_{k+1}^\sharp(b_\sigma) = c_\sigma$.
+$\DS b_\sigma \in \tilde{C}_{k+1}^\sharp(\VEC{p} \ast K;R)$
+such that $\DS \tilde{\partial}_{k+1}^\sharp(b_\sigma) = c_\sigma$.
 We may assume that
-$\displaystyle b_\sigma \in \tilde{C}_{k+1}^\sharp(L_\sigma;R)$
-because $\displaystyle c_\sigma \in \tilde{C}_k^\sharp(L_\sigma;R)$.
+$\DS b_\sigma \in \tilde{C}_{k+1}^\sharp(L_\sigma;R)$
+because $\DS c_\sigma \in \tilde{C}_k^\sharp(L_\sigma;R)$.
 
 As expected, we set $D_k(\sigma) = b_\sigma$ for all ordered
 $k$-simplices $\sigma$ of $\VEC{p} \ast K$, and extend $D_k$ by
-linearity to $\displaystyle \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$.
+linearity to $\DS \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$.
 
 By linearity, we have
 \begin{align*}
@@ -913,53 +913,53 @@ D_{k-1}(\tilde{\partial}_k^\sharp(c)) \big)
 + D_{k-1}(\tilde{\partial}_k^\sharp(c)) \\
 &= \eta(c) - \Id(c)
 \end{align*}
-for all $\displaystyle c \in \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$.
-If $\displaystyle c \in \tilde{C}_k^\sharp(Q;R)$ for some simplicial
+for all $\DS c \in \tilde{C}_k^\sharp(\VEC{p} \ast K;R)$.
+If $\DS c \in \tilde{C}_k^\sharp(Q;R)$ for some simplicial
 subcomplex $Q$ of $\VEC{p} \ast K$, then $c$ is the sum (after
 simplification) of oriented $k$-simplices $\sigma$ in $Q$.  Since,
-$\displaystyle D_k(\sigma) \in \tilde{C}_{k+1}^\sharp(L_\sigma;R) \subset
+$\DS D_k(\sigma) \in \tilde{C}_{k+1}^\sharp(L_\sigma;R) \subset
 \tilde{C}_{k+1}^\sharp(Q,R)$
 for all of these oriented $k$-simplices because $L_\sigma \subset Q$
 for each of them, we have that
-$\displaystyle D_k(c) \in \tilde{C}_{k+1}^\sharp(Q,R)$.
-In particular, $\displaystyle D_0 \big(\tilde{C}_k^\sharp(K;R)\big) \subset
+$\DS D_k(c) \in \tilde{C}_{k+1}^\sharp(Q,R)$.
+In particular, $\DS D_0 \big(\tilde{C}_k^\sharp(K;R)\big) \subset
 \tilde{C}_{k+1}^\sharp(K;R)$.
 
 The operator $D_k$ that we are looking for in the statement of the
 proposition is $D_K$ defined above restricted to
-$\displaystyle \tilde{C}_k^\sharp(K;R)$.
+$\DS \tilde{C}_k^\sharp(K;R)$.
 \end{proof}
 
 We have that $G = F \circ \phi$.  Therefore,
-$\displaystyle H_k^\sharp(G) = \tilde{H}_k^\sharp(F) \circ
+$\DS H_k^\sharp(G) = \tilde{H}_k^\sharp(F) \circ
 \tilde{H}_k^\sharp(\phi) : H_k^\sharp(K;R) \to H_k^\sharp([K];R)$ is
 an homomorphism.  Since
-$\displaystyle \tilde{H}_k^\sharp(\phi): H_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(\phi): H_k^\sharp(K;R) \to
 \tilde{H}_k^\sharp(K;R)$ is an isomorphism and
-$\displaystyle \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
+$\DS \tilde{H}_k^\sharp(F): \tilde{H}_k^\sharp(K;R) \to
 H_k^\sharp([K];R)$ is an isomorphism according to the
 Proposition~\ref{propHkEHkv1}, we have that
-$\displaystyle H_k^\sharp(G) : H_k^\sharp(K;R) \to H_k^\sharp([K];R)$ is an
+$\DS H_k^\sharp(G) : H_k^\sharp(K;R) \to H_k^\sharp([K];R)$ is an
 isomorphism.  For similar reasons,
-$\displaystyle H_k(G) : H_k(K;R) \to H_k([K];R)$ is an
+$\DS H_k(G) : H_k(K;R) \to H_k([K];R)$ is an
 isomorphism.
 
 We can repeat the previous discussion in the context of relative
 homology.
-Since $\displaystyle \phi:C_k(L;R) \to \tilde{C}_k(L;R)$,
+Since $\DS \phi:C_k(L;R) \to \tilde{C}_k(L;R)$,
 we may define the homomorphism
-$\displaystyle \phi:C_k(K,L;R) \to \tilde{C}_k(K,L;R)$ by
+$\DS \phi:C_k(K,L;R) \to \tilde{C}_k(K,L;R)$ by
 $\phi(\relC[K,L]{c}) = \relC[K,L]{\phi(c)}$ for all
-$\displaystyle \relC[K,L]{c} \in C_k(K,L;R)$, where as usual
+$\DS \relC[K,L]{c} \in C_k(K,L;R)$, where as usual
 $\relC[K,L]{\cdot}$ represents the
-equivalence classes in both $\displaystyle C_k(K,L;R)$,
-and $\displaystyle \tilde{C}_k(K,L;R)$.
+equivalence classes in both $\DS C_k(K,L;R)$,
+and $\DS \tilde{C}_k(K,L;R)$.
 Similarly,
-Since $\displaystyle \psi:\tilde{C}_k(L;R) \to C_k(L;R)$,
+Since $\DS \psi:\tilde{C}_k(L;R) \to C_k(L;R)$,
 we may define the homomorphism
-$\displaystyle \psi:\tilde{C}_k(K,L;R) \to C_k(K,L;R)$ by
+$\DS \psi:\tilde{C}_k(K,L;R) \to C_k(K,L;R)$ by
 $\psi(\relC[K,L]{c}) = \relC[K,L]{\psi(c)}$ for all
-$\displaystyle \relC[K,L]{c} \in \tilde{C}_k(K,L;R)$.
+$\DS \relC[K,L]{c} \in \tilde{C}_k(K,L;R)$.
 We have the following commutative diagram 
 \[
 \xymatrix@C+2ex{
@@ -980,79 +980,79 @@ We have the following commutative diagram
 \]
 Namely, $\{\phi_k\}_{k\in \ZZ}$ with $\phi_k = \phi$ for all $k$ is a
 chain map from the chain complex
-$\displaystyle \C = \{(C_k(K,L;R), \overline{\partial}_k)\}_{k\in \ZZ}$
+$\DS \C = \{(C_k(K,L;R), \overline{\partial}_k)\}_{k\in \ZZ}$
 to the chain complex
 $\tilde{\C} = \{(\tilde{C}_k(K,L;R),
 \overline{\tilde{\partial}}_k)\}_{k\in \ZZ}$ and
 $\{\psi_k\}_{k\in \ZZ}$ with $\psi_k = \psi$ for all $k$ is a
-chain map from $\displaystyle \tilde{\C}$ to $\displaystyle \C$.
+chain map from $\DS \tilde{\C}$ to $\DS \C$.
 
 We may define the homomorphism
-$\displaystyle \tilde{H}_k(\phi):H_k(K,L;R) \to \tilde{H}_k(K,L;R)$ by\\
-$\displaystyle \tilde{H}_k(\phi)([c]_{K,L}) = [\phi(c)]_{K,L}$ for all
-$\displaystyle [c]_{K,L} \in H_k(K,L;R)$,
+$\DS \tilde{H}_k(\phi):H_k(K,L;R) \to \tilde{H}_k(K,L;R)$ by\\
+$\DS \tilde{H}_k(\phi)([c]_{K,L}) = [\phi(c)]_{K,L}$ for all
+$\DS [c]_{K,L} \in H_k(K,L;R)$,
 where as usual $[\cdot]_{K,L}$ represents the equivalence classes in both
-$\displaystyle H_k(K,L;R)$, and $\displaystyle \tilde{H}_k(K,L;R)$
+$\DS H_k(K,L;R)$, and $\DS \tilde{H}_k(K,L;R)$
 As well, we may define the homomorphism
-$\displaystyle \tilde{H}_k(\psi):\tilde{H}_k(K,L;R) \to H_k(K,L;R)$ by
-$\displaystyle \tilde{H}_k(\psi)([c]_{K,L}) = [\psi(c)]_{K,L}$ for all
-$\displaystyle [c]_{K,L} \in \tilde{H}_k(K,L;R)$.
+$\DS \tilde{H}_k(\psi):\tilde{H}_k(K,L;R) \to H_k(K,L;R)$ by
+$\DS \tilde{H}_k(\psi)([c]_{K,L}) = [\psi(c)]_{K,L}$ for all
+$\DS [c]_{K,L} \in \tilde{H}_k(K,L;R)$.
 
 We can repeat all the previous discussion for the reduced
 homology and define
-$\displaystyle \tilde{H}_k^\sharp(\phi):H_k^\sharp(K,L;R) \to
+$\DS \tilde{H}_k^\sharp(\phi):H_k^\sharp(K,L;R) \to
 \tilde{H}_k^\sharp(K,L;R)$ and
-$\displaystyle \tilde{H}_k^\sharp(\psi):\tilde{H}_k^\sharp(K,L;R) \to
+$\DS \tilde{H}_k^\sharp(\psi):\tilde{H}_k^\sharp(K,L;R) \to
 H_k^\sharp(K,L;R)$.
 
 As we did for the regular homology, we can use
 Proposition~\ref{propCsCtfauHsH} to conclude that
-$\displaystyle \tilde{H}_k^\sharp(\phi)$ is an isomorphism if and only
-if $\displaystyle \tilde{H}_k(\phi)$ is an isomorphism.
-To prove that $\displaystyle \tilde{H}_k^\sharp(\phi)$ is an
-isomorphism, we prove that $\displaystyle \tilde{H}_k^\sharp(\psi)$ is
-the inverse of $\displaystyle \tilde{H}_k^\sharp(\phi)$.  The proof is almost
+$\DS \tilde{H}_k^\sharp(\phi)$ is an isomorphism if and only
+if $\DS \tilde{H}_k(\phi)$ is an isomorphism.
+To prove that $\DS \tilde{H}_k^\sharp(\phi)$ is an
+isomorphism, we prove that $\DS \tilde{H}_k^\sharp(\psi)$ is
+the inverse of $\DS \tilde{H}_k^\sharp(\phi)$.  The proof is almost
 identical to the proof that we gave above for the reduced homology.
 The only difference is that we use the following proposition instead
 of Proposition~\ref{propOOhomCM}.
 
 \begin{prop}
 There exists $\DD = \{ D_k \}_{k\in \ZZ}$ with
-$\displaystyle D_k : \tilde{C}_k^\sharp(K,L;R) \to
+$\DS D_k : \tilde{C}_k^\sharp(K,L;R) \to
 \tilde{C}_{k+1}^\sharp(K,L;R)$ such that
-$\displaystyle \tilde{\partial}_{k+1}^{\,\sharp} \circ D_k
+$\DS \tilde{\partial}_{k+1}^{\,\sharp} \circ D_k
 + D_{k-1} \circ \tilde{\partial}_k^{\,\sharp} =
-\phi\circ \psi - \Id$ on $\displaystyle \tilde{C}_k^\sharp(K,L;R)$.
+\phi\circ \psi - \Id$ on $\DS \tilde{C}_k^\sharp(K,L;R)$.
 \end{prop}
 
 \begin{proof}[Proof (Sketch)]
 We can use the chain homotopy $\DD = \{ D_k \}_{k\in \ZZ}$ obtained in
 Proposition~\ref{propOOhomCM} to induce a
 chain homotopy between $\F = \{ f_k\}_{k\in \ZZ}$ with
-$\displaystyle f_k = \Id:\tilde{C}_k^\sharp(K,L;R) \to \tilde{C}_k^\sharp(K,L;R)$
+$\DS f_k = \Id:\tilde{C}_k^\sharp(K,L;R) \to \tilde{C}_k^\sharp(K,L;R)$
 and $\GG = \{ g_k\}_{k\in \ZZ}$ with
-$\displaystyle g_k = \phi\circ \psi :\tilde{C}_k^\sharp(K,L;R) \to
+$\DS g_k = \phi\circ \psi :\tilde{C}_k^\sharp(K,L;R) \to
 \tilde{C}_k^\sharp(K,L;R)$.
 
-It suffices to note that $\displaystyle D_k: \tilde{C}_k^\sharp(K;R)
+It suffices to note that $\DS D_k: \tilde{C}_k^\sharp(K;R)
 \to \tilde{C}_{k+1}^\sharp(K;R)$ was defined in such a way to have
-that $\displaystyle D_k: \tilde{C}_k^\sharp(L;R)
+that $\DS D_k: \tilde{C}_k^\sharp(L;R)
 \to \tilde{C}_{k+1}^\sharp(L;R)$.  Thus we can define
-$\displaystyle D_k: \tilde{C}_k^\sharp(K,L;R)
+$\DS D_k: \tilde{C}_k^\sharp(K,L;R)
 \to \tilde{C}_{k+1}^\sharp(K,L;R)$ in a natural way as we have done
-with $\displaystyle \tilde{\partial}_k^{\,\sharp}$ for instance to get
-$\displaystyle \overline{\tilde{\partial}}_k^{\,\sharp}$.
+with $\DS \tilde{\partial}_k^{\,\sharp}$ for instance to get
+$\DS \overline{\tilde{\partial}}_k^{\,\sharp}$.
 \end{proof}
 
 We get from $G = F \circ \phi$ that
-$\displaystyle H_k(G) = \tilde{H}_k(F) \circ
+$\DS H_k(G) = \tilde{H}_k(F) \circ
 \tilde{H}_k(\phi) : H_k(K,L;R) \to H_k([K],[L];R)$ is
 an homomorphism.  Since
-$\displaystyle \tilde{H}_k(\phi): H_k(K,L;R) \to \tilde{H}_k(K,L;R)$
+$\DS \tilde{H}_k(\phi): H_k(K,L;R) \to \tilde{H}_k(K,L;R)$
 is an isomorphism and
-$\displaystyle \tilde{H}_k(F): \tilde{H}_k(K,L;R) \to H_k([K],[L];R)$
+$\DS \tilde{H}_k(F): \tilde{H}_k(K,L;R) \to H_k([K],[L];R)$
 is an isomorphism according to the Proposition~\ref{propHkEHkv1}, we have that
-$\displaystyle H_k(G) : H_k(K,L;R) \to H_k([K],[L];R)$ is an isomorphism.
+$\DS H_k(G) : H_k(K,L;R) \to H_k([K],[L];R)$ is an isomorphism.
 
 In summary, we get the following result.
 
@@ -1086,7 +1086,7 @@ Cohomology}
 Suppose that $L$ is a simplicial subcomplex of a simplicial complex
 $K$, and that $R$ is an integral domain.  We have defined in the
 previous subsection an homomorphism
-$\displaystyle G: C_k(K;R) \to S_k([K];R)$ and shown that it
+$\DS G: C_k(K;R) \to S_k([K];R)$ and shown that it
 induces isomorphism $H_k(G):H_k(K;R) \to H_k([K];R)$ and 
 $H_k(G):H_k(K,L;R) \to H_k([K],[L];R)$.
 
@@ -1095,8 +1095,8 @@ By duality, we get the following result.
 \begin{prop}
 Let $L$ be a subcomplex of a simplicial complex $K$ and $R$ is an
 integral domain. Then
-$\displaystyle H^k(G): H^k([K];R) \to H^k(K;R)$
-and $\displaystyle H^k(G) : H^k([K],[L];R) \to H^k(K,L;R)$ are 
+$\DS H^k(G): H^k([K];R) \to H^k(K;R)$
+and $\DS H^k(G) : H^k([K],[L];R) \to H^k(K,L;R)$ are 
 isomorphisms.
 \end{prop}
 

@@ -7,16 +7,16 @@ We begin with several basic definitions.
 
 \begin{defn}
 A {\bfseries partition}\index{Partition} of an interval $[a,b]$ is
-a subset $\displaystyle P = \{ p_i :0 \leq i \leq N \}$ of
+a subset $\DS P = \{ p_i :0 \leq i \leq N \}$ of
 $[a,b]$ such that $a=p_0 < p_1 < p_2 < p_3 < \ldots < p_N = b$ with
 $N \in \NN$.
 \end{defn}
 
 \begin{defn}
 Consider a bounded function $f:[a,b]\to \RR$ and a partition
-$\displaystyle P = \{ p_i :0 \leq i \leq N\}$ of $[a,b]$.  Let
-$\displaystyle m_i = \inf\{ f(x) : x\in [p_{i-1},p_i] \}$
-and $\displaystyle M_i = \sup\{ f(x) : x\in [p_{i-1},p_i] \}$
+$\DS P = \{ p_i :0 \leq i \leq N\}$ of $[a,b]$.  Let
+$\DS m_i = \inf\{ f(x) : x\in [p_{i-1},p_i] \}$
+and $\DS M_i = \sup\{ f(x) : x\in [p_{i-1},p_i] \}$
 for $1 \leq i \leq N$.  The
 {\bfseries lower Riemann sum}\index{Lower Riemann Sum} of $f$ with
 respect to the partition $P$ is
@@ -49,13 +49,13 @@ $\LL_P(f) \leq \LL_Q(f)$ and $\U_Q(f) \leq \U_P(f)$.
 \end{prop}
 
 \begin{proof}
-Suppose that $\displaystyle P = \{ p_i :0 \leq i \leq N\}$ and that
+Suppose that $\DS P = \{ p_i :0 \leq i \leq N\}$ and that
 $Q$ contains one more point than $P$.  Let $q \in Q\setminus P$ be this point.
 
-As usual, let $\displaystyle m_i = \inf\{f(x) : x\in [p_{i-1},p_i] \}$ for
+As usual, let $\DS m_i = \inf\{f(x) : x\in [p_{i-1},p_i] \}$ for
 $1 \leq i \leq N$.  There exists $j$ such that $p_{j-1} < q < p_j$.  If
-$\displaystyle \tilde{m}_j = \inf\{ f(x) : x\in [p_{j-1},q] \}$ and
-$\displaystyle \breve{m}_j = \inf\{f(x) : x\in [q,p_j] \}$,
+$\DS \tilde{m}_j = \inf\{ f(x) : x\in [p_{j-1},q] \}$ and
+$\DS \breve{m}_j = \inf\{f(x) : x\in [q,p_j] \}$,
 then $\tilde{m}_j \geq m_j$ and $\breve{m}_j \geq m_j$.  Hence
 \begin{align*}
 \LL_Q(f)-\LL_P(f) &= \tilde{m}_j(q-p_{j-1}) + \breve{m}_j(p_j-q)
@@ -71,12 +71,12 @@ The proof that $\U_Q(f)\leq\U_P(f)$ is similar.
 
 \begin{cor} \label{defint1}
 Consider a bounded function $f:[a,b]\to \RR$.  If $P$ and $Q$ are two
-partitions of $[a,b]$, then $\displaystyle \LL_P(f) \leq \U_Q(f)$.
+partitions of $[a,b]$, then $\DS \LL_P(f) \leq \U_Q(f)$.
 \end{cor}
 
 \begin{proof}
 Let $R=P\cup Q$.  $R$ is a refinement of both $P$ and $Q$.  Hence
-$\displaystyle \LL_P(f) \leq \LL_R(f) \leq \U_R(f) \leq \U_Q(f)$
+$\DS \LL_P(f) \leq \LL_R(f) \leq \U_R(f) \leq \U_Q(f)$
 where the first and last inequalities comes from the previous proposition and
 the middle inequality is a consequence of the definition of lower and upper
 Riemann sums.
@@ -122,9 +122,9 @@ of $[a,b]$ such that $\U_P(f) - \LL_P(f) < \epsilon$.
 
 \begin{proof}
 \stage{$\mathbf{\Leftarrow}$}
-Since $\displaystyle \LL_P(f) \leq \LL(f) \leq \U(f) \leq \U_p(f)$ for all
+Since $\DS \LL_P(f) \leq \LL(f) \leq \U(f) \leq \U_p(f)$ for all
 partition $P$ of $[a,b]$, we have
-$\displaystyle \U(f) - \LL(f) < \epsilon$
+$\DS \U(f) - \LL(f) < \epsilon$
 for all $\epsilon > 0$.  Therefore $\U(f) = \LL(f)$ and $f$ is
 integrable.
 
@@ -146,11 +146,11 @@ $[a,b]$.
 
 \begin{proof}
 Suppose that $f$ is a decreasing function.  We consider the partition
-$\displaystyle P_N = \{ p_i = a + i(b-a)/N : 0 \leq i \leq N \}$
+$\DS P_N = \{ p_i = a + i(b-a)/N : 0 \leq i \leq N \}$
 of $[a,b]$.  Since $f$ is decreasing, we have
-$\displaystyle m_i = \inf \{f(x) : x \in [p_{i-1},p_i]\} = f(p_i)$
+$\DS m_i = \inf \{f(x) : x \in [p_{i-1},p_i]\} = f(p_i)$
 and
-$\displaystyle M_i = \sup \{f(x) : x \in [p_{i-1},p_i]\} = f(p_{i-1})$
+$\DS M_i = \sup \{f(x) : x \in [p_{i-1},p_i]\} = f(p_{i-1})$
 for all $i$.  Hence
 \begin{align*}
 \U_{P_N}(f) - \LL_{P_N}(f) 
@@ -169,7 +169,7 @@ The proof for $f$ increasing is similar.
 \begin{prop} \label{propIfleIg}
 If $f:[a,b]\to \RR$ and $g:[a,b]\to \RR$ are two integrable functions such
 that $f(x)\leq g(x)$ for all $x\in [a,b]$, then
-$\displaystyle \int_a^b f(x) \dx{x} \leq \int_a^b g(x) \dx{x}$
+$\DS \int_a^b f(x) \dx{x} \leq \int_a^b g(x) \dx{x}$
 \end{prop}
 
 \begin{proof}
@@ -211,7 +211,7 @@ $[m,M]$ is a compact set, we have that $\tilde{g}$ reaches its maximum
 at some point of $[m,M]$.  In particular, $K<\infty$.
 
 Given $\epsilon>0$, let
-$\displaystyle \tilde{\epsilon} = \frac{\epsilon}{b-a+2K}$.
+$\DS \tilde{\epsilon} = \frac{\epsilon}{b-a+2K}$.
 Since $g$ is a continuous function on the compact set $[m.M]$, it is
 uniformly continuous on $[m,M]$.  Therefore, there exists $\delta>0$
 such that $\delta < \tilde{\epsilon}$ and $|g(x)-g(y)| < \tilde{\epsilon}$ for
@@ -219,12 +219,12 @@ $x,y \in [m,M]$ with $|x-y|<\delta$.
 
 Since $f$ is integrable on $[a,b]$, there exists a partition
 $P = \{p_i : 0 \leq i \leq N\}$ of $[a,b]$ such that
-$\displaystyle \U_P(f) - \LL_P(f) < \delta^2$.
+$\DS \U_P(f) - \LL_P(f) < \delta^2$.
 Let
-$\displaystyle m_i = \inf \{ f(x) : p_{i-1} \leq x \leq p_i \}$,
-$\displaystyle M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \}$,
-$\displaystyle \tilde{m}_i = \inf \{ h(x) : p_{i-1} \leq x \leq p_i \}$
-and $\displaystyle \tilde{M}_i = \sup \{ h(x) : p_{i-1} \leq x \leq p_i \}$.
+$\DS m_i = \inf \{ f(x) : p_{i-1} \leq x \leq p_i \}$,
+$\DS M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \}$,
+$\DS \tilde{m}_i = \inf \{ h(x) : p_{i-1} \leq x \leq p_i \}$
+and $\DS \tilde{M}_i = \sup \{ h(x) : p_{i-1} \leq x \leq p_i \}$.
 Moreover, let $A = \big\{ i \in \{1,2,\ldots,N\} :  M_i - m_i < \delta\big\}$
 and $B = \{1,2,\ldots,N\} \setminus A$.
 
@@ -265,7 +265,7 @@ $h$ is integrable on $[a,b]$.
 \begin{prop} \label{propAIFlstIAF}
 Suppose that $f:[a,b]\to \RR$ is integrable.  Then $|f|:[a,b]\to \RR$ is
 integrable and
-$\displaystyle \left| \int_a^b f(x)\dx{x} \right| \leq \int_a^b |f(x)|\dx{x}$.
+$\DS \left| \int_a^b f(x)\dx{x} \right| \leq \int_a^b |f(x)|\dx{x}$.
 \end{prop}
 
 \begin{proof}
@@ -276,7 +276,7 @@ $g(x) = |x|$ for $x\in [m.M]$ that $x \mapsto g(f(x)) = |f(x)|$ is
 integrable.
 
 Take $\nu = 1$ or $-1$ such that
-$\displaystyle \nu \int_a^b f(x) \dx{x} \geq 0$.  It follows from
+$\DS \nu \int_a^b f(x) \dx{x} \geq 0$.  It follows from
 Proposition~\ref{propIfleIg} and Question~\ref{QcIfeqIcf} that
 \[
 0 \leq \left| \int_a^b f(x) \dx{x} \right|
@@ -303,15 +303,15 @@ Let $|I|$ denote the length of the interval $I$.
 
 A set $S\in \RR$ has {\bfseries zero content}\index{Zero Content} if
 for every $\epsilon>0$ there exists a finite collection of closed
-intervals $\displaystyle \{ I_i \}_{i=1}^M$ such that
-$\displaystyle S \subset \bigcup_{i=1}^M I_i$ and
-$\displaystyle \sum_{i=1}^M |I_i| < \epsilon$.
+intervals $\DS \{ I_i \}_{i=1}^M$ such that
+$\DS S \subset \bigcup_{i=1}^M I_i$ and
+$\DS \sum_{i=1}^M |I_i| < \epsilon$.
 
 A set $S\in \RR$ has {\bfseries measure zero}\index{Measure Zero} if
 for every $\epsilon>0$ there exists a countable collection of closed
-intervals $\displaystyle \{ I_i \}_{i=1}^\infty$ such that
-$\displaystyle S \subset \bigcup_{i=1}^\infty I_i$ and
-$\displaystyle \sum_{i=1}^\infty |I_i| < \epsilon $.
+intervals $\DS \{ I_i \}_{i=1}^\infty$ such that
+$\DS S \subset \bigcup_{i=1}^\infty I_i$ and
+$\DS \sum_{i=1}^\infty |I_i| < \epsilon $.
 \end{defn}
 
 \begin{rmk}
@@ -326,7 +326,7 @@ set of measure zero according to our definition.
 \end{rmk}
 
 \begin{defn} \label{JordanMS}
-A set $\displaystyle S \subset \RR$ is
+A set $\DS S \subset \RR$ is
 {\bfseries (Jordan) measurable}\index{Jordan Measurable} if $S$ is bounded
 and $\partial S$ has measure zero.
 \end{defn}
@@ -340,7 +340,7 @@ $f$ is integrable on $[a,b]$.
 The proof of this theorem is given in Chapter~\ref{chapMultInt} on the
 integration of real valued functions of several variables.
 
-Given $S \subset \RR$, let $\displaystyle \Chi_S:\RR \to \RR$ be the
+Given $S \subset \RR$, let $\DS \Chi_S:\RR \to \RR$ be the
 function defined by
 \[
 \Chi(x) = \begin{cases}
@@ -355,8 +355,8 @@ $\partial S$.
 Given a Jordan measurable set $S \subset \RR$ and a function
 $f:S\to \RR$, we define the
 {\bfseries integral of $f$ on $S$}\index{Integral of a Function}, denoted
-$\displaystyle \int_S f$ or $\displaystyle \int_S f(x)\dx{x}$, as the
-integral $\displaystyle \int_a^b \Chi_S f$ for $[a,b] \supset S$
+$\DS \int_S f$ or $\DS \int_S f(x)\dx{x}$, as the
+integral $\DS \int_a^b \Chi_S f$ for $[a,b] \supset S$
 if this integral exists \footnotemark.
 \end{defn}
 
@@ -383,11 +383,11 @@ $\Chi_Sf:[a,b] \to \RR$ is discontinuous.
 \section{Darboux Theorem}
 
 Consider an integrable function $f:[a,b]\to \RR$.  Given a partition
-$\displaystyle P = \{ p_i : 0 \leq i \leq N\}$ of the interval $[a,b]$
-and a set of points $\displaystyle P^\ast = \{ p_i^\ast:1 \leq i \leq N\}$
-such that $\displaystyle p_{i-1} \leq p_i^\ast \leq p_i$ for all $i$, the
+$\DS P = \{ p_i : 0 \leq i \leq N\}$ of the interval $[a,b]$
+and a set of points $\DS P^\ast = \{ p_i^\ast:1 \leq i \leq N\}$
+such that $\DS p_{i-1} \leq p_i^\ast \leq p_i$ for all $i$, the
 {\bfseries Riemann sum}\index{Riemann Sum} associated to $P$ and
-$\displaystyle P^\ast$ is the sum
+$\DS P^\ast$ is the sum
 \[
 R(f,P,P^\ast) = \sum_{i=1}^N f(p_i^\ast) (p_i-p_{i-1}) \ .
 \]
@@ -398,25 +398,25 @@ Given $\epsilon >0$, there exists $\delta >0$ such that
 \[
 \left| R(f,P,P^\ast) - \int_a^b f(x)\dx{x} \right| < \epsilon
 \]
-if the partition $\displaystyle P = \{ p_i : 0 \leq i \leq N\}$
+if the partition $\DS P = \{ p_i : 0 \leq i \leq N\}$
 of $[a,b]$ is such that $|p_i-p_{i-1}|<\delta$ for all
-$i$ and all sets $\displaystyle P^\ast$ as defined above.
+$i$ and all sets $\DS P^\ast$ as defined above.
 \end{theorem}
 
 This theorem is the reason why, in elementary calculus courses, the
-Riemann integral $\displaystyle \int_a^b f(x) \dx{x}$
+Riemann integral $\DS \int_a^b f(x) \dx{x}$
 of a continuous function $f:[a,b]\to \RR$ is defined as the limit of Riemann
-sums $\displaystyle R(f,P_j,P^\ast_j)$ where the partition
-$\displaystyle P_j = \{ p_{j,i} :0 \leq i \leq N_j\}$ of the interval
+sums $\DS R(f,P_j,P^\ast_j)$ where the partition
+$\DS P_j = \{ p_{j,i} :0 \leq i \leq N_j\}$ of the interval
 $[a,b]$ is such that
-$\displaystyle \max_{1\leq i \leq N_j} (p_{j,i}-p_{j,i-1}) \to 0$
+$\DS \max_{1\leq i \leq N_j} (p_{j,i}-p_{j,i-1}) \to 0$
 as $j\to \infty$.  The points in
-$\displaystyle P^\ast_j = \{ p_{j,i}^\ast : 1 \leq i \leq N_j\}$ are often
+$\DS P^\ast_j = \{ p_{j,i}^\ast : 1 \leq i \leq N_j\}$ are often
 chosen to be the right or left end points of the intervals
 $[p_{j,i-1},p_{j,i}]$, or the midpoints of these intervals.  The
 previous theorem ensures that the limit is 
 independent of the partitions $P_j$ and the sets
-$\displaystyle P^\ast_j$ chosen.
+$\DS P^\ast_j$ chosen.
 
 To prove this theorem, we need the following lemma.
 
@@ -424,8 +424,8 @@ To prove this theorem, we need the following lemma.
 Suppose that $f:[a,b]\to \RR$ is an integrable function on $[a,b]$.
 Let $C = \sup\{|f(x)|: a\leq x \leq b\}$ \footnotemark.
 Suppose that 
-$\displaystyle P = \{ p_i : 0 \leq i \leq N_P\}$ and
-$\displaystyle Q = \{ q_i : 0 \leq i \leq N_Q\}$ are two partitions of
+$\DS P = \{ p_i : 0 \leq i \leq N_P\}$ and
+$\DS Q = \{ q_i : 0 \leq i \leq N_Q\}$ are two partitions of
 $[a,b]$, and $P$ is such that $p_i-p_{i-1}<\delta$ for all $i$.  Then,
 \[
 \U_P(f) < \U_{P\cup Q}(f) + 2 C N_Q\delta \quad \text{and} \quad
@@ -437,10 +437,10 @@ $[a,b]$, and $P$ is such that $p_i-p_{i-1}<\delta$ for all $i$.  Then,
 integrable by assumption and therefore $f$ is bounded on $[a,b]$.}
 
 \begin{proof}
-Let $\displaystyle P\cup Q = \{ z_j : 0 \leq j \leq N\}$,
-$\displaystyle M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \}$
+Let $\DS P\cup Q = \{ z_j : 0 \leq j \leq N\}$,
+$\DS M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \}$
 for $1 \leq i \leq N_P$ and
-$\displaystyle \tilde{M}_j = \sup \{ f(x) : z_{j-1} \leq x \leq z_j \}$
+$\DS \tilde{M}_j = \sup \{ f(x) : z_{j-1} \leq x \leq z_j \}$
 for $1 \leq j \leq N$.
 
 Given $1 \leq i \leq N_P$, there exist integers $j_1$ and
@@ -478,23 +478,23 @@ of the first one if we replace $f$ by $-f$.
 
 \begin{proof}[Proof (of Theorem~\ref{thmDarboux})]
 Choose $\epsilon >0$.  Since
-$\displaystyle \LL_P(f) \leq R(f,P,P^\ast) \leq \U_P(f)$
-for all partitions $P$ of $[a,b]$ and sets $\displaystyle P^\ast$ as
+$\DS \LL_P(f) \leq R(f,P,P^\ast) \leq \U_P(f)$
+for all partitions $P$ of $[a,b]$ and sets $\DS P^\ast$ as
 defined above, it is enough to find $\delta$ such that
 \begin{equation} \label{DarbouxEq1}
 \left| \LL_P(f) - \int_a^bf(x)\dx{x} \right| < \frac{\epsilon}{2}
 \quad \text{and} \quad
 \left| \U_P(f) - \int_a^bf(x)\dx{x} \right| < \frac{\epsilon}{2}
 \end{equation}
-for all partitions $\displaystyle P = \{ p_i : 0 \leq i \leq N_P\}$ of
+for all partitions $\DS P = \{ p_i : 0 \leq i \leq N_P\}$ of
 $[a,b]$ satisfying $p_i-p_{i-1}<\delta$.  To be more precise,
 (\ref{DarbouxEq1}) implies that $\U_P(f) - \LL_P(f) < \epsilon$.
-Since $\displaystyle \int_a^b f(x)\dx{x}$ and $\displaystyle  R(f,P,P^\ast)$
+Since $\DS \int_a^b f(x)\dx{x}$ and $\DS  R(f,P,P^\ast)$
 are in the interval $[\LL_P(f), \U_P(f)]$, we get the conclusion of
 the theorem.
 
 Since $f$ is integrable on $[a,b]$, there exists a partition
-$\displaystyle Q = \{ q_i : 0 \leq i \leq N_Q\}$ of
+$\DS Q = \{ q_i : 0 \leq i \leq N_Q\}$ of
 $[a,b]$ such that
 \begin{equation} \label{DarbouxEq2}
 \left| \LL_Q(f) - \int_a^bf(x)\dx{x} \right| < \frac{\epsilon}{4}
@@ -504,7 +504,7 @@ $[a,b]$ such that
 
 Let $C = \sup \{ |f(x)| ; a\leq x \leq b \}$ and
 $\delta = \epsilon/(8 N_Q C)$.
-Suppose that $\displaystyle P = \{ p_i : 0 \leq i \leq N_P\}$ is a
+Suppose that $\DS P = \{ p_i : 0 \leq i \leq N_P\}$ is a
 partition of $[a,b]$ such that $p_i-p_{i-1} < \delta$ for all $i$.
 From the previous lemma and (\ref{DarbouxEq2}), we have
 \[
@@ -542,7 +542,7 @@ $[\alpha,\beta]$ and
 \stage{i}
 Choose $\epsilon>0$.  Since $\phi'$ is integrable on $[\alpha,\beta]$, there
 exists a partition
-$\displaystyle \tilde{P} = \{\tilde{p}_i: 0 \leq i \leq N\}$ of
+$\DS \tilde{P} = \{\tilde{p}_i: 0 \leq i \leq N\}$ of
 $[\alpha,\beta]$ such that
 \begin{equation}\label{intCompZ}
 \U_{\tilde{P}} (\phi') - \LL_{\tilde{P}} (\phi')
@@ -550,13 +550,13 @@ $[\alpha,\beta]$ such that
 < \epsilon
 \end{equation}
 where
-$\displaystyle \tilde{M}_i = \sup \{\phi'(y) : \tilde{p}_{i-1} \leq y
+$\DS \tilde{M}_i = \sup \{\phi'(y) : \tilde{p}_{i-1} \leq y
 \leq \tilde{p}_i \}$ and
-$\displaystyle \tilde{m}_i = \inf \{\phi'(y) : \tilde{p}_{i-1} \leq y
+$\DS \tilde{m}_i = \inf \{\phi'(y) : \tilde{p}_{i-1} \leq y
 \leq \tilde{p}_i \}$ for all $i$.
 
 Let $p_i = \phi(\tilde{p}_i)$ for $0 \leq i \leq N$.  The set
-$\displaystyle P = \{p_i : 0 \leq i \leq N\} = \phi(\tilde{P})$ is a
+$\DS P = \{p_i : 0 \leq i \leq N\} = \phi(\tilde{P})$ is a
 partition of $[a,b]$ because $\phi:[\alpha,\beta]\to [a,b]$ is
 strictly increasing and onto.  In fact, every partition of $[a,b]$ is
 the image by $\phi$ of a partition of $[\alpha,\beta]$.
@@ -575,7 +575,7 @@ $u_i = \phi(w_i)$ for each $i$.  We have
 \sum_{i=1}^N f(\phi(w_i)) \left( \phi(\tilde{p}_i)-\phi(\tilde{p}_{i-1})\right)
 = \sum_{i=1}^N f(\phi(w_i)) \phi'(z_i) (\tilde{p}_i-\tilde{p}_{i-1}) \ .
 \end{equation}
-If $\displaystyle C = \sup \{|f(x)| : a \leq x \leq b \}$, then we get from
+If $\DS C = \sup \{|f(x)| : a \leq x \leq b \}$, then we get from
 (\ref{intCompZ}) that
 \begin{align}
 &\left| \sum_{i=1}^N f(\phi(w_i)) \phi'(w_i) (\tilde{p}_i-\tilde{p}_{i-1})
@@ -590,10 +590,10 @@ If $\displaystyle C = \sup \{|f(x)| : a \leq x \leq b \}$, then we get from
 \end{align}
 
 Let
-$\displaystyle
+$\DS
 \breve{M}_i = \sup \{ f(\phi(y))\phi'(y) : \tilde{p}_{i-1} \leq y \leq
 \tilde{p}_i \}$ and
-$\displaystyle M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \}$
+$\DS M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \}$
 for all $i$.
 
 It follows from (\ref{intCompA}) and (\ref{intCompB}) that
@@ -632,10 +632,10 @@ Finally, we get from (\ref{intCompC}) and (\ref{intCompD}) that
 \end{equation}
 
 Let
-$\displaystyle
+$\DS
 \breve{m}_i = \inf \{ f(\phi(y))\phi'(y) : \tilde{p}_{i-1} \leq y \leq
 \tilde{p}_i \}$ and
-$\displaystyle m_i = \inf \{ f(x) : p_{i-1} \leq x \leq p_i \}$
+$\DS m_i = \inf \{ f(x) : p_{i-1} \leq x \leq p_i \}$
 for all $i$.
 
 It follows from (\ref{intCompA}) and (\ref{intCompB}) that
@@ -676,8 +676,8 @@ Finally, we get from (\ref{intCompCm}) and (\ref{intCompDm}) that
 \stage{ii}
 Choose a partition $Q_1$ of $[a,b]$ and a partition $Q_2$ of
 $[\alpha,\beta]$ such that
-$\displaystyle \left| \U_{Q_1}(f) - \U(f)\right|<\epsilon$ and
-$\displaystyle \left| \U_{Q_2}((f\circ \phi)\phi') -
+$\DS \left| \U_{Q_1}(f) - \U(f)\right|<\epsilon$ and
+$\DS \left| \U_{Q_2}((f\circ \phi)\phi') -
 \U((f\circ \phi)\phi'))\right|<\epsilon$.  Choose a partition
 $\tilde{P}$ such that (\ref{intCompZ}) is satisfied,
 $Q_2 \subset \tilde{P}$ and $Q_1 \subset P = \phi(\tilde{P})$.
@@ -710,12 +710,12 @@ and from (\ref{intCompEm}) that
   \leq \epsilon (C+2) \ .
 \end{align*}
 Since $\epsilon$ is arbitrary, we finally get
-$\displaystyle \U(f) = \U ((f\circ \phi)\phi')$ and
-$\displaystyle \LL(f) = \LL ((f\circ \phi)\phi')$.
+$\DS \U(f) = \U ((f\circ \phi)\phi')$ and
+$\DS \LL(f) = \LL ((f\circ \phi)\phi')$.
 
-Thus, $f$ is integrable (i.e.\ $\displaystyle \U(f)=\LL(f)$) if and only if
+Thus, $f$ is integrable (i.e.\ $\DS \U(f)=\LL(f)$) if and only if
 $(f\circ \phi)\phi'$ is integrable (i.e.\
-$\displaystyle \U ((f\circ \phi)\phi')= \LL ((f\circ \phi)\phi')$),
+$\DS \U ((f\circ \phi)\phi')= \LL ((f\circ \phi)\phi')$),
 and if they are integrable, then we have
 \[
 \int_a^b f(x) \dx{x} = \LL(f) = \U(f)
@@ -739,7 +739,7 @@ may use Theorem~\ref{thCVin1D} to get
 = \int_{\alpha}^{\beta} (\tilde{f} \circ \tilde{\phi}) \tilde{\phi}'
 = - \int_{\alpha}^{\beta} (f \circ \phi) \phi' \ .
 \]
-We leave it to the reader to verify that $\displaystyle 
+We leave it to the reader to verify that $\DS 
 \int_{\tilde{\phi}(\alpha)}^{\tilde{\phi}(\beta)} \tilde{f}
 = \int_{-\phi(\alpha)}^{-\phi(\beta)} \tilde{f}
 = \int_{\phi(\beta)}^{\phi(\alpha)} f$ using the definition of the Riemann
@@ -753,9 +753,9 @@ integral.  We finally get
 \section{Sequence of Functions}
 
 \begin{theorem} \label{thUCandInt}
-Suppose that $\displaystyle \{ f_k\}_{k=0}^\infty$ is a sequence of
+Suppose that $\DS \{ f_k\}_{k=0}^\infty$ is a sequence of
 integrable real valued functions defined on the interval $[a,b]$.  Moreover,
-suppose that $\displaystyle \{ f_k\}_{k=0}^\infty$ converges uniformly on
+suppose that $\DS \{ f_k\}_{k=0}^\infty$ converges uniformly on
 $[a,b]$ to the function $f:[a,b]\to \RR$.  Then $f$ is integrable on $[a,b]$
 and
 \[
@@ -764,10 +764,10 @@ and
 \end{theorem}
 
 \begin{proof}
-Choose $\epsilon >0$.  Since $\displaystyle \{ f_k\}_{k=0}^\infty$ converges
+Choose $\epsilon >0$.  Since $\DS \{ f_k\}_{k=0}^\infty$ converges
 uniformly on $[a,b]$ to the function $f:[a,b]\to \RR$, there exists $K>0$
 ($K$ depends on $\epsilon$) such that
-$\displaystyle \left| f_k(x) - f(x) \right| < \frac{\epsilon}{4(b-a)}$
+$\DS \left| f_k(x) - f(x) \right| < \frac{\epsilon}{4(b-a)}$
 for all $x\in [a,b]$ and $k>K$.  Thus
 \begin{equation}\label{intConv1}
 f_k(x) - \frac{\epsilon}{4(b-a)} < f(x) < f_k(x) + \frac{\epsilon}{4(b-a)}
@@ -780,8 +780,8 @@ a partition $P_m$ of $[a,b]$ such that
 \U_{P_m}(f_m) - \LL_{P_m}(f_m) < \epsilon/2 \ .
 \end{equation}
 Let
-$\displaystyle g_m(x) = f_m(x) - \frac{\epsilon}{4(b-a)}$
-and $\displaystyle h_m(x) = f_m(x) + \frac{\epsilon}{4(b-a)}$
+$\DS g_m(x) = f_m(x) - \frac{\epsilon}{4(b-a)}$
+and $\DS h_m(x) = f_m(x) + \frac{\epsilon}{4(b-a)}$
 for $x\in[a,b]$.  It follows from (\ref{intConv1}) and
 Proposition~\ref{propIfleIg} that
 \[
@@ -795,7 +795,7 @@ Combining this relation with (\ref{intConv2}) yields
 < \LL_{P_m}(f_m) + \frac{3\epsilon}{4} \ .
 \]
 It follows that
-$\displaystyle \left| \U_{P_m}(f) - \LL_{P_m}(f) \right| < \epsilon$.
+$\DS \left| \U_{P_m}(f) - \LL_{P_m}(f) \right| < \epsilon$.
 Since $\epsilon>0$ is arbitrary, we get from Theorem~\ref{intCauchyCR}
 that $f$ is integrable on $[a,b]$.
 
@@ -823,17 +823,17 @@ by definition of limit of sequences.
 \end{proof}
 
 In the previous theorem, the uniform convergence of the sequence
-$\displaystyle \{ f_n\}_{n=0}^\infty$ of integrable real valued functions
+$\DS \{ f_n\}_{n=0}^\infty$ of integrable real valued functions
 defined on the interval $[a,b]$ can be replaced by pointwise convergence if
-the sequence $\displaystyle \{ f_n\}_{n=0}^\infty$ is uniformly bounded and
+the sequence $\DS \{ f_n\}_{n=0}^\infty$ is uniformly bounded and
 converges pointwise toward an integrable function.
 
 \begin{theorem}[Bounded Convergence Theorem] \label{thBCT}
-Suppose that $\displaystyle \{ f_k\}_{k=0}^\infty$ is a sequence of integrable 
+Suppose that $\DS \{ f_k\}_{k=0}^\infty$ is a sequence of integrable 
 real valued functions defined on an interval $[a,b]$,
-$\displaystyle \{ f_k\}_{n=0}^\infty$
+$\DS \{ f_k\}_{n=0}^\infty$
 converges pointwise to an integrable function $f:[a,b]\to \RR$, and
-there exists $C>0$ such that $\displaystyle \big| f_k(x) \big| \leq C$
+there exists $C>0$ such that $\DS \big| f_k(x) \big| \leq C$
 for all $x\in [a,b]$ and $k \in \NN$.  Then
 \[
 \lim_{k\to \infty} \int_a^b f_k(x)\dx{x} = \int_a^b f(x)\dx{x} \ .
@@ -850,20 +850,20 @@ prove a few results.
 \begin{prop}[Dini's Uniform Convergence Theorem]  \label{thDini}
 Suppose that $D \subset \RR$ is a compact set, $f:D \to \RR$ is a
 continuous function,
-$\displaystyle \{f_k\}_{k=0}^\infty$ is a sequence of continuous
+$\DS \{f_k\}_{k=0}^\infty$ is a sequence of continuous
 real valued functions on $D$ such that
 $f_{k+1}(x) \leq f_k(x)$ for all $x \in D$ and all $k\geq 0$
 (or $f_{k+1}(x) \geq f_k(x)$ for all $x \in D$ and all $k\geq 0$), and
-$\displaystyle \lim_{k\to \infty}f_k(x) = f(x)$ for
+$\DS \lim_{k\to \infty}f_k(x) = f(x)$ for
 all $x \in D$.  Then $f_k \to f$ uniformly on $D$ as $k \to \infty$.
 \end{prop}
 
 \begin{proof}
 \stage{i} We first consider the case where
-$\displaystyle \{f_k\}_{k=0}^\infty$ is a sequence of continuous
+$\DS \{f_k\}_{k=0}^\infty$ is a sequence of continuous
 real valued functions on $D$ such that
 $f_{k+1}(x) \leq f_k(x)$ for all $x \in D$ and
-all $k \geq 0$, and $\displaystyle \lim_{k\to \infty}f_k(x) = 0$
+all $k \geq 0$, and $\DS \lim_{k\to \infty}f_k(x) = 0$
 for all $x \in D$.
 
 Choose $\epsilon > 0$.  For each $x \in D$, there exists
@@ -874,19 +874,19 @@ $\delta_{k,x}>0$ such that $|f_k(x) - f_k(y)| < \epsilon/2$ for
 all $y \in ]x - \delta_{k,x}, x + \delta_{k,x}[$.
 
 The collection of open intervals
-$\displaystyle
+$\DS
 \{ ]x - \delta_{K_x,x}, x + \delta_{K_x,x}[ \}_{x\in K}$
 forms an open cover of the compact set $D$.  Therefore, there is a
-finite subcover $\displaystyle
+finite subcover $\DS
 \{ ]x_j -\delta_{K_{x_j},x_j}, x_j + \delta_{K_{x_j},x_j}[ \}_{0\leq j \leq J}$
 of $D$.
 
-Let $\displaystyle K = \max_{1\leq j \leq J} K_{x_j}$.
-Given $x \in D$, we have $\displaystyle x \in
+Let $\DS K = \max_{1\leq j \leq J} K_{x_j}$.
+Given $x \in D$, we have $\DS x \in
 ]x_j - \delta_{K_{x_j},x_j} ,x_j + \delta_{K_{x_j},x_j}[$
 for some $0 \leq j \leq J$.  Hence
-$\displaystyle \big|f_{K_{x_j}}(x) - f_{K_{x_j}}(x_j)\big| < \epsilon/2$.
-Moreover $\displaystyle 0 \leq f_{K_{x_j}}(x_j) < \epsilon/2$.
+$\DS \big|f_{K_{x_j}}(x) - f_{K_{x_j}}(x_j)\big| < \epsilon/2$.
+Moreover $\DS 0 \leq f_{K_{x_j}}(x_j) < \epsilon/2$.
 Hence
 \[
 0 \leq f_k(x) \leq f_K(x) \leq f_{K_{x_j}}(x)
@@ -900,7 +900,7 @@ $0 \leq f_k(x) < \epsilon$ for all $x \in D$ and $k \geq K$.  This
 proves that $f_k \to 0$ uniformly on $D$ as $k \to \infty$. 
 
 \stage{ii}  To proof the proposition, it suffices to apply (i) to
-$\displaystyle \{g_k\}_{k=1}^\infty$ where $g_k = f_k - f$ for all
+$\DS \{g_k\}_{k=1}^\infty$ where $g_k = f_k - f$ for all
 $k \geq 0$ (or $g_k = f - f_k$ for all $k \geq 0$).
 \end{proof}
 
@@ -908,35 +908,35 @@ $k \geq 0$ (or $g_k = f - f_k$ for all $k \geq 0$).
 Suppose that $f:[a,b] \to [0,\infty[$ is a bounded function.  For each
 $\epsilon>0$, there exists a continuous function $g:[a,b]\to [0,\infty[$
 such that $g(x) \leq f(x)$ for all $x \in [a,b]$ and
-$\displaystyle \LL(f) - \int_a^b g < \epsilon$.
+$\DS \LL(f) - \int_a^b g < \epsilon$.
 \end{lemma}
 
 \begin{proof}
 By definition of the lower Riemann integral, there exists a partition
 $P = \{p_i : 0 \leq i \leq N\}$ of $[a,b]$ such that
 $\LL(f) - \LL_P(f) < \epsilon/2$.  If
-$\displaystyle m_i = \inf\{ f(x) : x\in [p_{i-1},p_i] \}$ for
+$\DS m_i = \inf\{ f(x) : x\in [p_{i-1},p_i] \}$ for
 $1 \leq i \leq N$, then we have
 \[
 \LL_P(f) = \sum_{i=1}^N m_i (p_i - p_{i-1})  = \int_a^b h \ ,
 \]
-where $\displaystyle h = \sum_{i=1}^N m_i \Chi_{[p_{i-1},p_i]}$.
-Hence $\displaystyle \LL(f) - \int_a^b h < \frac{\epsilon}{2}$.
+where $\DS h = \sum_{i=1}^N m_i \Chi_{[p_{i-1},p_i]}$.
+Hence $\DS \LL(f) - \int_a^b h < \frac{\epsilon}{2}$.
 We can construct a piecewise linear function $g:[a,b] \to \RR$
 such that $g(x) \leq h(x)$ for all $x\in [a,b]$ and
-$\displaystyle \int_a^b h - \int_a^b g < \frac{\epsilon}{2}$.
+$\DS \int_a^b h - \int_a^b g < \frac{\epsilon}{2}$.
 \pdfbox{integrals/contlin}
 The graph of $g$ is in blue.  The area in blue is smaller than
 $\epsilon/2$.
-Thus $\displaystyle \LL(f) - \int_a^b g < \epsilon$.
+Thus $\DS \LL(f) - \int_a^b g < \epsilon$.
 \end{proof}
 
 \begin{lemma} \label{lemmaBCT2}
-Suppose that $\displaystyle \{f_k\}_{k=0}^\infty$ is a sequence of
+Suppose that $\DS \{f_k\}_{k=0}^\infty$ is a sequence of
 bounded real valued functions on $[a,b]$ such that
 $f_{k+1}(x) \leq f_k(x)$ for all $x\in[a,b]$ and $k\geq 0$, and
-$\displaystyle \lim_{k\to \infty}f_k(x) = 0$ for all $x \in [a,b]$.
-Then $\displaystyle \lim_{k\to \infty}\LL(f_k) = 0$.
+$\DS \lim_{k\to \infty}f_k(x) = 0$ for all $x \in [a,b]$.
+Then $\DS \lim_{k\to \infty}\LL(f_k) = 0$.
 \end{lemma}
 
 \begin{proof}
@@ -944,18 +944,18 @@ Choose $\epsilon >0$.
 It follows from the previous lemma that, for each function $f_k$,
 there exists a continuous function $g_k:[a,b] \to [0,\infty[$ such that
 $g_k(x) \leq f_k(x)$ for all $x\in [a,b]$ and
-$\displaystyle \LL(f_k) - \int_a^b g_k < \frac{\epsilon}{2^{k+1}}$.
+$\DS \LL(f_k) - \int_a^b g_k < \frac{\epsilon}{2^{k+1}}$.
 
-Let $\displaystyle h_k = \min_{0 \leq j \leq k} g_j$
+Let $\DS h_k = \min_{0 \leq j \leq k} g_j$
 for $k\geq 0$.  We have that $h_k:[a,b]\to \RR$ is a continuous
 function because the $g_j$ are continuous functions, and $h_{k+1}(x)
 \leq h_k(x)$ for all $x\in [a,b]$ and $k \geq 0$.
 Moreover $0 \leq h_k(x) \leq g_k(x) \leq f_k(x)$ for all $x \in [a,b]$ and
 $k \geq 0$.  Thus
-$\displaystyle \lim_{k\to \infty}h_k(x) =0$ for all $x\in[a,b]$ by the
+$\DS \lim_{k\to \infty}h_k(x) =0$ for all $x\in[a,b]$ by the
 famous sandwich theorem.  It then follows from Proposition~\ref{thDini}
 that $h_k \to 0$ uniformly on $[a,b]$ as $k \to \infty$.  Thus
-$\displaystyle \lim_{k\to \infty} \int_a^b h_k = \int_0^b 0 = 0$
+$\DS \lim_{k\to \infty} \int_a^b h_k = \int_0^b 0 = 0$
 according to Theorem~\ref{thUCandInt}.
 
 We now prove that
@@ -963,11 +963,11 @@ We now prove that
 0 \leq \LL(f_k) \leq \epsilon \left(1 - \frac{1}{2^k}\right) + \int_a^b h_k
 \end{equation}
 for all $k$.  Hence, if we let $k$ converges to $\infty$, then we get
-$\displaystyle 0 \leq \lim_{k\to \infty} \LL(f_k) \leq \epsilon$.
+$\DS 0 \leq \lim_{k\to \infty} \LL(f_k) \leq \epsilon$.
 Since $\epsilon$ is arbitrary, this will prove that
-$\displaystyle \lim_{k\to \infty} \LL(f_k) = 0$.
+$\DS \lim_{k\to \infty} \LL(f_k) = 0$.
 
-Let $\displaystyle H_{i,k} = \max_{ i\leq j \leq k} g_j$ for
+Let $\DS H_{i,k} = \max_{ i\leq j \leq k} g_j$ for
 $0 \leq i \leq k$.  For $0 \leq i \leq k$, we have that
 $H_{i,k}:[a,b]\to \RR$ is a continuous function because the $g_j$ are
 continuous functions.  Moreover, for $0 \leq j < k$, we have
@@ -984,7 +984,7 @@ $0 \leq i \leq k$.  Hence
 \end{equation}
 for all $x \in [a,b]$ and $k \geq 0$.
 Since
-$\displaystyle H_{i,k}(x) \leq \max_{i\leq j \leq k} f_j(x) \leq f_i(x)$
+$\DS H_{i,k}(x) \leq \max_{i\leq j \leq k} f_j(x) \leq f_i(x)$
 for all $x \in [a,b]$ and $0 \leq i < k$, we have
 $\LL_P(H_{i,k}) \leq \LL_P(f_i)$ for all partitions $P$ of $[a,b]$
 and $0 \leq i < k$.  Thus
@@ -1014,22 +1014,22 @@ Finally, we get (\ref{LLfito0Eq1}) from
 \begin{proof}[Proof (of Theorem~\ref{thBCT})]
 Let $g_k = |f_k - f|$ for $k \geq 1$.  We have
 $0 \leq g_k \leq 2C$ for all $k \geq 0$ and
-$\displaystyle \lim_{k\to \infty} g_k(x) = 0$ for all $x \in[a,b]$.
+$\DS \lim_{k\to \infty} g_k(x) = 0$ for all $x \in[a,b]$.
 
 Let $h_k:[a,b] \to \RR$ be the function defined by
-$\displaystyle h_k(x) = \sup_{i\geq k} g_i(x)$ for all $x \in [a,b]$
+$\DS h_k(x) = \sup_{i\geq k} g_i(x)$ for all $x \in [a,b]$
 and $k \geq 0$.  Note that $0 \leq h_k(x) \leq 2C$ for all
 $x \in [a,b]$ and $k \geq 0$.
 Moreover $h_{k+1}(x) \leq h_k(x)$ for all $x \in [a,b]$ and $k \geq 0$
 and
-$\displaystyle \lim_{k\to \infty} h_k(x) = \limsup_{k\to \infty} g_k(x)
+$\DS \lim_{k\to \infty} h_k(x) = \limsup_{k\to \infty} g_k(x)
 = \lim_{k\to \infty} g_k(x) = 0$ for all $x \in [a,b]$ because
-$\displaystyle \lim_{k\to \infty}f_k(x) = f(x)$ for all $x\in[a,b]$.
+$\DS \lim_{k\to \infty}f_k(x) = f(x)$ for all $x\in[a,b]$.
 It follows from Lemma~\ref{lemmaBCT2} that
-$\displaystyle \lim_{k\to \infty} \LL(h_k) = 0$.
+$\DS \lim_{k\to \infty} \LL(h_k) = 0$.
 
 Since $g_k \leq h_k$ for all $k \geq 0$, we have
-$0 \leq \displaystyle \int_a^b g_k = \LL(g_k) \leq \LL(h_k) \to 0$
+$0 \leq \DS \int_a^b g_k = \LL(g_k) \leq \LL(h_k) \to 0$
 as $k \to \infty$.
 
 Since $f$ and the $f_k$ are integrable, $f_k - f$ is integrable and we
@@ -1066,12 +1066,12 @@ $P=\{p_i : 0 \leq i \leq N\}$ of $[a,b]$, we have
 $m_i = \inf \{ f(x) : p_{i-1} \leq x \leq p_i \} = 0$
 and $M_i = \sup \{ f(x) : p_{i-1} \leq x \leq p_i \} = 1$ for all $i$
 because $[p_{i-1},p_i]$ contains rational and irrational numbers.
-Thus $\displaystyle \LL_P(f) = \sum_{i=1}^N m_i ( p_i - p_{i-1}) = 0$
-and $\displaystyle \U_P(f) = \sum_{i=1}^N M_i ( p_i - p_{i-1}) = b - a > 0$.
+Thus $\DS \LL_P(f) = \sum_{i=1}^N m_i ( p_i - p_{i-1}) = 0$
+and $\DS \U_P(f) = \sum_{i=1}^N M_i ( p_i - p_{i-1}) = b - a > 0$.
 
-Hence $\displaystyle
+Hence $\DS
 \U(f) = \inf \{ \U_P(f) : P \text{ is a partition of } [a,b] \} = b-a$
-is not equal to $\displaystyle
+is not equal to $\DS
 \LL(f) = \sup \{ \LL_P(f) : P \text{ is a partition of } [a,b] \} = 0$.
 \end{sol}
 
@@ -1079,7 +1079,7 @@ is not equal to $\displaystyle
 Suppose that $f:[a,b]\to \RR$ is an           \label{QcIfeqIcf}
 integrable function and $c \in \RR$.  Using the definition of the
 integral, prove that $c f : [a,b] \to \RR$ is integrable and
-$\displaystyle \int_a^b cf(x)\dx{x} = c \int_a^b f(x)\dx{x}$.
+$\DS \int_a^b cf(x)\dx{x} = c \int_a^b f(x)\dx{x}$.
 \end{question}
 
 \begin{sol}
@@ -1089,12 +1089,12 @@ The result is trivial for $c=0$.  We may therefore assume that $c \neq 0$.
 
 Given $\epsilon >0$, since $f$ is integrable on $[a,b]$, there exists
 a partition $P=\{p_i :0 \leq i \leq N\}$ of the interval $[a,b]$ such
-that $\displaystyle \U_P(f) - \LL_p(f) < \epsilon/|c|$.
+that $\DS \U_P(f) - \LL_p(f) < \epsilon/|c|$.
 Let
-$\displaystyle m_i = \inf\{ f(x) : p_{i-1} \leq x \leq p_i\}$,
-$\displaystyle M_i = \sup\{ f(x) : p_{i-1} \leq x \leq p_i\}$,
-$\displaystyle \tilde{m}_i = \inf\{ cf(x) : p_{i-1} \leq x \leq p_i\}$
-and $\displaystyle \tilde{M}_i = \sup\{ cf(x) : p_{i-1} \leq x \leq p_i\}$.
+$\DS m_i = \inf\{ f(x) : p_{i-1} \leq x \leq p_i\}$,
+$\DS M_i = \sup\{ f(x) : p_{i-1} \leq x \leq p_i\}$,
+$\DS \tilde{m}_i = \inf\{ cf(x) : p_{i-1} \leq x \leq p_i\}$
+and $\DS \tilde{M}_i = \sup\{ cf(x) : p_{i-1} \leq x \leq p_i\}$.
 
 If $c>0$, then $\tilde{m}_i = c m_i$ and $\tilde{M}_i = c M_i$
 for all $i$.  Thus
@@ -1156,8 +1156,8 @@ if $c >0$ and
 \LL_P(cf) = c\, \U_P(f) \leq c \int_a^b f(x) \dx{x} \leq
   c \LL_P(f) = \U_P(cf)
 \]
-if $c<0$.   So $\displaystyle \int_a^b cf(x)\dx{x}$ and
-$\displaystyle c \int_a^b f(x)\dx{x}$ are in the interval
+if $c<0$.   So $\DS \int_a^b cf(x)\dx{x}$ and
+$\DS c \int_a^b f(x)\dx{x}$ are in the interval
 $[\LL_P(cf),\U_P(cf)]$ of length at most $\epsilon$.  Since $\epsilon$
 is arbitrary, we get (\ref{QQ1c}).
 \end{sol}
@@ -1167,7 +1167,7 @@ Suppose that $f:[a,b]\to \RR$ is an integrable function on $[a,b]$
 and $c\in \RR$.  Using the definition of the integral (i.e.\ without
 using substitution), prove that the function $g:[a-c,b-c]\to\RR$
 defined by $g(x)=f(x+c)$ for $x\in [a-c,b-c]$ is integrable, and
-that $\displaystyle \int_a^b f(x)\dx{x} = \int_{a-c}^{b-c} f(x+c)\dx{x}$.
+that $\DS \int_a^b f(x)\dx{x} = \int_{a-c}^{b-c} f(x+c)\dx{x}$.
 \end{question}
 
 \begin{sol}
@@ -1234,8 +1234,8 @@ and
 \LL_P(f) = \LL_Q(g) \leq  \int_{a-c}^{b-c} g(x) \dx{x} =
 \int_{a-c}^{b-c} f(x+c) \dx{x} \leq \U_Q(g) = \U_P(f) \ .
 \]
-Thus, $\displaystyle \int_a^b f(x) \dx{x}$ and
-$\displaystyle  \int_{a-c}^{b-c} f(x+c) \dx{x}$ are both in the interval
+Thus, $\DS \int_a^b f(x) \dx{x}$ and
+$\DS  \int_{a-c}^{b-c} f(x+c) \dx{x}$ are both in the interval
 $[\LL_P(f), \U_P(f)]$ of length at most $\epsilon$.  Since $\epsilon$
 is arbitrary, we get (\ref{QQ2a}).
 \end{sol}
@@ -1245,7 +1245,7 @@ Suppose that $f:[a,b]\to \RR$ is an integrable function on $[a,b]$
 and $c>0$.  Using the definition of the integral (i.e.\ without
 using substitution), prove that the function $g:[a/c,b/c]\to\RR$
 defined by $g(x)=f(c x)$ for $x\in [a/c,b/c]$ is integrable, and that
-$\displaystyle \frac{1}{c} \int_a^b f(x)\dx{x} = \int_{a/c}^{b/c} f(c x)\dx{x}$.
+$\DS \frac{1}{c} \int_a^b f(x)\dx{x} = \int_{a/c}^{b/c} f(c x)\dx{x}$.
 \end{question}
 
 \begin{sol}
@@ -1322,7 +1322,7 @@ Suppose that $f:[a,b]\to \RR$ is an integrable function on $[a,b]$.
 Using the definition of the integral (i.e.\ without using
 substitution), prove that the function $g:[-b,-a]\to\RR$ 
 defined by $g(x)=f(-x)$ for $x\in [-b,-a]$ is integrable, and that
-$\displaystyle \int_a^b f(x)\dx{x} = \int_{-b}^{-a} f(-x)\dx{x}$.
+$\DS \int_a^b f(x)\dx{x} = \int_{-b}^{-a} f(-x)\dx{x}$.
 \end{question}
 
 \begin{question}
@@ -1389,7 +1389,7 @@ is bounded on $[m,M]$.  Hence, $g\circ f:[a,b]\to \RR$ is bounded
 because $f(x) \in [m,M]$ for all $x \in [a,b]$.
 
 Given $\epsilon>0$, choose a partition $P=\{p_i : 0 \leq i \leq N\}$ of
-$[a,b]$ such that $\displaystyle \U_P(f) - \LL_P(f) < \epsilon/K$.
+$[a,b]$ such that $\DS \U_P(f) - \LL_P(f) < \epsilon/K$.
 As usual, let $m_i = \inf\{f(x) : p_{i-1}\leq x \leq p_i \}$ and
 $M_i = \sup\{f(x):p_{i-1}\leq x \leq p_i\}$.  Since
 \[
@@ -1410,23 +1410,23 @@ Hence
 \end{sol}
 
 \begin{question}
-Let $\displaystyle \{x_n\}_{=0}^\infty$ be a convergent sequence in $\RR$.
-Show that the set $\displaystyle \{x_n : n \geq 0\}$ has content
+Let $\DS \{x_n\}_{=0}^\infty$ be a convergent sequence in $\RR$.
+Show that the set $\DS \{x_n : n \geq 0\}$ has content
 zero.
 \end{question}
 
 \begin{sol}
-Let $\displaystyle x = \lim_{n\to \infty} x_n$.  Given $\epsilon>0$,
+Let $\DS x = \lim_{n\to \infty} x_n$.  Given $\epsilon>0$,
 choose $N$ such that
-$\displaystyle |x_n - x| < \frac{\epsilon}{4}$ for $n> N$.
+$\DS |x_n - x| < \frac{\epsilon}{4}$ for $n> N$.
 
-Let $\displaystyle R_n =
+Let $\DS R_n =
 [x_n - \frac{\epsilon}{5^{n+1}},x_n + \frac{\epsilon}{5^{n+1}}]$ for
 $0 \leq n \leq N$.  Moreover, let
-$\displaystyle R_{N+1} = \left[x - \frac{\epsilon}{4},
+$\DS R_{N+1} = \left[x - \frac{\epsilon}{4},
 x + \frac{\epsilon}{4} \right]$.
 
-We have $\displaystyle \{x_n: n \geq 0\} \subset \bigcup_{n=0}^{N+1} R_n$
+We have $\DS \{x_n: n \geq 0\} \subset \bigcup_{n=0}^{N+1} R_n$
 and
 \begin{align*}
 \sum_{n=0}^{N+1} \left|R_n\right|
@@ -1440,21 +1440,21 @@ and
 = \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \ .
 \end{align*}
 Since $\epsilon$ is arbitrary, this proves that 
-$\displaystyle \{x_n : n \geq 0\}$ has content zero.
+$\DS \{x_n : n \geq 0\}$ has content zero.
 \end{sol}
 
 \begin{question}
 Suppose that $f:[a,b]\to \RR$ is integrable      \label{QContIntpos}
 and $f(x)\geq 0$ for all $x\in [a,b]$.   If there exists $x_0 \in [a,b]$
 where $f$ is continuous at $x_0$ and $f(x_0)>0$, then
-$\displaystyle \int_a^b f(x) \dx{x} > 0$.
+$\DS \int_a^b f(x) \dx{x} > 0$.
 \end{question}
 
 \begin{sol}
 \stage{i} First, we assume that $a < x_0 < b$.
 Let $\epsilon = f(x_0)/2$.  Since $f$ is continuous at $x_0$, there exists
 $\delta >0$ small enough such that
-$\displaystyle |f(x) - f(x_0)| < \epsilon = f(x_0)/2$
+$\DS |f(x) - f(x_0)| < \epsilon = f(x_0)/2$
 for all $x \in ]x_0-\delta, x_0+\delta[ \subset ]a,b[$.
 Thus
 \begin{align*}
@@ -1466,13 +1466,13 @@ Thus
 \geq \int_{x_0 - \delta}^{x_0+\delta} \frac{f(x_0)}{2} \dx{x}
 = \delta f(x_0) > 0
 \end{align*}
-because $\displaystyle f(x) \geq f(x_0)/2$ for 
+because $\DS f(x) \geq f(x_0)/2$ for 
 $x \in ]x_0-\delta, x_0+\delta[$.
 
 \stage{ii} We now assume that $x_0 = b$.
 Let $\epsilon = f(b)/2$.  Since $f$ is continuous at $b$, there exists
 $\delta >0$ small enough such that
-$\displaystyle |f(x) - f(b)| < \epsilon = f(b)/2$
+$\DS |f(x) - f(b)| < \epsilon = f(b)/2$
 for all $x \in ]b-\delta, b[$. Thus
 \[
 \int_a^b f(x) \dx{x}
@@ -1482,11 +1482,11 @@ for all $x \in ]b-\delta, b[$. Thus
 \geq \int_{b - \delta}^b \frac{f(b)}{2} \dx{x}
 = \frac{\delta f(x_0)}{2} > 0
 \]
-because $\displaystyle f(x) \geq f(x_0)/2$ for 
+because $\DS f(x) \geq f(x_0)/2$ for 
 $x \in ]b-\delta, b[$.
 
 \stage{iii} Finally, a proof similar to the previous one in (ii) shows
-that $\displaystyle \int_a^b f(x) \dx{x} > 0$ if $x_0 = a$.
+that $\DS \int_a^b f(x) \dx{x} > 0$ if $x_0 = a$.
 \end{sol}
 
 \begin{question}
@@ -1495,7 +1495,7 @@ differentiable function such that $F'(x) = f(x)$ for all $x\in[a,b]$.  Prove
 from the definition of the integral (i.e.\ without the Fundamental
 Theorem of Calculus) that
 \[
-  \displaystyle F(b)-F(a) = \int_a^b f(x)\dx{x} \ .
+  \DS F(b)-F(a) = \int_a^b f(x)\dx{x} \ .
 \]
 \end{question}
 
@@ -1527,15 +1527,15 @@ for $1 \leq i \leq N$, we get
 \leq F(b) - F(a) = \sum_{i=1}^N f(y_i)(p_i - p_{i-1}) \\
 & \leq \sum_{i=1}^N M_i(p_i - p_{i-1}) = \U_P(f) \ .
 \end{align*}
-We also have $\displaystyle \LL_P(f) \leq \int_a^b f(x) \dx{x}
-\leq \U_P(f)$.  Thus, both $\displaystyle \int_a^b f(x) \dx{x}$ and
+We also have $\DS \LL_P(f) \leq \int_a^b f(x) \dx{x}
+\leq \U_P(f)$.  Thus, both $\DS \int_a^b f(x) \dx{x}$ and
 $F(b)-F(a)$ are in the interval $[\LL_P(f),\U_P(f)]$ of length smaller
 than $\epsilon$.  Therefore
 \[
 \left| \int_a^b f(x) \dx{x} - (F(b) - F(a)) \right| < \epsilon \ .
 \]
 Since this is true for all $\epsilon >0$, we get
-$\displaystyle \int_a^b f(x) \dx{x} = F(b) - F(a)$.
+$\DS \int_a^b f(x) \dx{x} = F(b) - F(a)$.
 \end{sol}
 
 \begin{question}
@@ -1549,18 +1549,18 @@ $x\in [a,b]$ is replaced by $f(x)>0$ for all $x\in[a,b]$?
 If $f:[a,b]\to \RR$ and $g:[a,b]\to \RR$ are      \label{intfg}
 integrable, prove that $f g:[a,b]\to \RR$ is integrable.\\
 {\bfseries Hint}: Prove first that $h:[a,b]\to\RR$ integrable on
-$[a,b]$ implies that $\displaystyle h^2$ is integrable on $[a,b]$.
+$[a,b]$ implies that $\DS h^2$ is integrable on $[a,b]$.
 \end{question}
 
 \begin{sol}
-\stage{i} We first prove that $\displaystyle h^2$ is integrable on $[a,b]$ if
+\stage{i} We first prove that $\DS h^2$ is integrable on $[a,b]$ if
 $h:[a,b]\to\RR$ is integrable on $[a,b]$.   If $h:[a,b]\to\RR$ is
 integrable, then $h$ is bounded on $[a,b]$ by definition of the
 Riemann integral.  Let $C>0$ be a constant such that $|h(x)|<C$ for
 all $x\in [a,b]$.
 
 Given $\epsilon>0$, choose a partition $P=\{p_i : 0 \leq i \leq N\}$ of
-$[a,b]$ such that $\displaystyle \U_P(h) - \LL_P(h) < \epsilon/(2C)$.
+$[a,b]$ such that $\DS \U_P(h) - \LL_P(h) < \epsilon/(2C)$.
 
 As usual, let $m_i = \inf\{h(x) : p_{i-1}\leq x \leq p_i \}$ and
 $M_i = \sup\{h(x):p_{i-1}\leq x \leq p_i \}$ for $1 \leq i \leq N$.  Since
@@ -1573,8 +1573,8 @@ for all $x,y\in [p_{i-1},p_i]$, we get
 \tilde{M}_i - \tilde{m}_i \leq 2C (M_i - m_i)
 \]
 where
-$\displaystyle \tilde{m}_i = \inf\{ h^2(x) : p_{i-1}\leq x \leq p_i \}$ and
-$\displaystyle\tilde{M}_i = \sup\{ h^2(x) : p_{i-1}\leq x \leq p_i \}$.  Hence
+$\DS \tilde{m}_i = \inf\{ h^2(x) : p_{i-1}\leq x \leq p_i \}$ and
+$\DS\tilde{M}_i = \sup\{ h^2(x) : p_{i-1}\leq x \leq p_i \}$.  Hence
 \begin{align*}
 \U_P(h^2) - \LL_P(h^2) &= \sum_{i=1}^N
 (\tilde{M}_i - \tilde{m}_i) (p_i - p_{i-1})
@@ -1585,8 +1585,8 @@ Since $\epsilon$ is arbitrary, it follows from
 Theorem~\ref{intCauchyCR} that $h^2$ is integrable on $[a,b]$.
 
 \stage{ii} To prove that $f g$ is integrable, we write
-$\displaystyle f g = \frac{1}{2}\left( (f+g)^2 - f^2 - g^2 \right)$.
-Since $\displaystyle (f+g)^2$, $\displaystyle f^2$ and $\displaystyle
+$\DS f g = \frac{1}{2}\left( (f+g)^2 - f^2 - g^2 \right)$.
+Since $\DS (f+g)^2$, $\DS f^2$ and $\DS
 g^2$ are integrable, then $f g$ is integrable.
 \end{sol}
 
@@ -1599,7 +1599,7 @@ on $[0,9]$.
 
 \begin{question}
 Give a non-integrable function $f:[a,b]\to \RR$ such that $|f|$ and
-$\displaystyle f^2$ are integrable on $[a,b]$.
+$\DS f^2$ are integrable on $[a,b]$.
 \end{question}
 
 \begin{sol}
@@ -1611,14 +1611,14 @@ f(x) = \begin{cases}
 \end{cases}
 \]
 The function $f$ is not integrable on the interval $[0,1]$ because
-$\U(f) = 1$ and $\LL(f) = -1$.  However, $|f|$ and $\displaystyle f^2$
+$\U(f) = 1$ and $\LL(f) = -1$.  However, $|f|$ and $\DS f^2$
 are integrable on the interval $[0,1]$ because $|f(x)|=1$ and
-$\displaystyle f^2(x) = 1$ for all $x \in [0,1]$.
+$\DS f^2(x) = 1$ for all $x \in [0,1]$.
 \end{sol}
 
 \begin{question}
 Suppose that $f:[a,b]\to \RR$ is an integrable function such that
-$\displaystyle \int_0^1 f(x)g(x)\dx{x} =0$ for all continuous functions
+$\DS \int_0^1 f(x)g(x)\dx{x} =0$ for all continuous functions
 $g:[a,b]\to\RR$.  Prove that $f(x) = 0$ for all $x\in[a,b]$ where $f$ is
 continuous.  In particular, show that $f=0$ on $[a,b]$ if $f:[a,b]\to\RR$ is
 continuous.
@@ -1677,7 +1677,7 @@ The result is also true if $g$ increasing is replaced by $g$ decreasing.
 
 \begin{sol}
 \stage{i} Suppose that $g(b)=0$.  Let
-$\displaystyle F(x) = \int_a^x f(t) \dx{t}$.  Since $f$ is continuous
+$\DS F(x) = \int_a^x f(t) \dx{t}$.  Since $f$ is continuous
 on $[a,b]$, the Fundamental Theorem of Calculus tells us that $F$
 is differentiable and that $F'(x) = f(x)$ for all $x$.  Using
 integration by parts, we get
@@ -1728,7 +1728,7 @@ $c\in[a,b]$ such that
 \begin{question}
 Suppose that $h:[a,b]\to \RR$ is a non-negative, decreasing function and
 $f:[a,b]\to \RR$ is continuous.  Prove that there exists $\xi\in [a,b]$ such
-that $\displaystyle \int_a^b f(x)h(x) \dx{x} = h(a) \int_a^\xi f(x)\dx{x}$.\\
+that $\DS \int_a^b f(x)h(x) \dx{x} = h(a) \int_a^\xi f(x)\dx{x}$.\\
 {\bfseries Hint}: If we assume that $h$ is also differentiable, then this is a
 consequence of Question~\ref{secondMVT} with $g(x) = h(x) - h(b)$.
 For the more general case, one may use the Riemann-Stieltjes integral
@@ -1739,7 +1739,7 @@ little project.
 \begin{question}
 Consider a continuous function $p:[a,b]\to \RR$ such that $p(x)\geq 0$ for
 all $x\in[a,b]$.  Suppose that there exists a constant $c>0$ such that
-$\displaystyle p(x) \leq c \int_a^x p(t)\dx{t}$ for all $x\in[a,b]$.  
+$\DS p(x) \leq c \int_a^x p(t)\dx{t}$ for all $x\in[a,b]$.  
 Prove that $p(x)=0$ for all $x\in[a,b]$.
 \end{question}
 
@@ -1749,7 +1749,7 @@ the infimum of the non-empty set $\{ x\in[a,b] : p(x)>0 \}$.  Since $p$ is
 continuous, $x_0 < b$ and there exists $\delta >0$ such that
 $x_0+\delta \leq b$ and $p(x) > 0$ for $x \in ]x_0,x_0+\delta]$.
 
-Let $\displaystyle P(x) = c \int_a^x p(t) \dx{t}$ for $x\in[a,b]$.  We
+Let $\DS P(x) = c \int_a^x p(t) \dx{t}$ for $x\in[a,b]$.  We
 have $p(x)\leq P(x)$ for all $x$ by hypothesis.  If $x_0>a$, then we
 have $P(x)=0$ for $x\in[a,x_0[$ because $p(x)=0$ for $x \in [a,x_0[$
 by definition of $x_0$.  We have $P(x)>0$ for $x \in ]x_0,b]$ because
@@ -1784,8 +1784,8 @@ we have in the theory of ordinary differential equations.
 \begin{question}
 Suppose that $f:[a,b]\to \RR$ is a continuous function such that
 $f(x)\geq 0$ for all $x\in [a,b]$ and
-$\displaystyle M=\sup\{f(x) : x \in [a,b]\}$.  Prove that
-$\displaystyle M =
+$\DS M=\sup\{f(x) : x \in [a,b]\}$.  Prove that
+$\DS M =
 \lim_{n\to \infty} \left( \int_a^b f^n(x) \dx{x} \right)^{1/n}$.
 \end{question}
 
@@ -1798,7 +1798,7 @@ we get
 \[
 \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \leq M (b-a)^{1/n}
 \]
-for all $n>0$.  Since $\displaystyle (b-a)^{1/n} \to 1$ as $n\to \infty$,
+for all $n>0$.  Since $\DS (b-a)^{1/n} \to 1$ as $n\to \infty$,
 we get
 \[
 \lim_{n\to \infty} \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \leq M \ .
@@ -1806,7 +1806,7 @@ we get
 
 Given $\epsilon>0$ such that $M-\epsilon > 0$, let
 $J = \{ x \in [a,b] : f(x) > M-\epsilon \}$.  Since
-$f$ is continuous, $\displaystyle J = f^{-1}(]M-\epsilon, \infty[)$ is
+$f$ is continuous, $\DS J = f^{-1}(]M-\epsilon, \infty[)$ is
 an open subset of $[a,b]$.  Thus $J$ contain an 
 open interval $I$.  The interval $I$ is obviously measurable.  Let 
 $\delta >0$ be the length of $I$. We have
@@ -1818,7 +1818,7 @@ Hence
 \[
 \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \geq (M-\epsilon) \delta^{1/n} \ .
 \]
-Since $\displaystyle \delta^n \to 1$ as $n\to \infty$, we get
+Since $\DS \delta^n \to 1$ as $n\to \infty$, we get
 \[
 \lim_{n\to \infty} \left( \int_a^b f^n(x) \dx{x} \right)^{1/n} \geq
 (M-\epsilon) \ .
@@ -1840,7 +1840,7 @@ Prove that
 \end{question}
 
 \begin{question}
-Consider the functions $\displaystyle f_n(x) = \frac{nx}{1+nx}$ for
+Consider the functions $\DS f_n(x) = \frac{nx}{1+nx}$ for
 $n \geq 1$.  Let
 \[
 f(x) =
@@ -1851,39 +1851,39 @@ f(x) =
 \]
 Prove that $f_n\to f$ pointwise on $[0,1]$ as $n\to \infty$ and, without
 computing any integral, that
-$\displaystyle \int_0^1 f_n(x)\dx{x} \to \int_0^1 f(x) \dx{x}$
+$\DS \int_0^1 f_n(x)\dx{x} \to \int_0^1 f(x) \dx{x}$
 as $n\to \infty$.
 \end{question}
 
 \begin{question}
 Prove that
-$\displaystyle \lim_{n\to \infty} \int_a^\pi \frac{\sin(nx)}{nx} \dx{x} =0$
+$\DS \lim_{n\to \infty} \int_a^\pi \frac{\sin(nx)}{nx} \dx{x} =0$
 for $0<a<\pi$.  What can be said if $a=0$?
 \end{question}
 
 \begin{sol}
 The result is the same for $a=0$ or $a>0$.  We leave the proof of the
 case $a >0$ to the reader.  It suffices to note that
-$\displaystyle \Big|\frac{\sin(n x)}{nx}\Big| \leq \frac{1}{n a}$ 
+$\DS \Big|\frac{\sin(n x)}{nx}\Big| \leq \frac{1}{n a}$ 
 for $a \leq x < \pi$.  The bounded convergence theorem can then be used to
 conclude that
-$\displaystyle \lim_{n\to \infty} \int_a^\pi \frac{\sin(nx)}{nx} \dx{x} =0$.
+$\DS \lim_{n\to \infty} \int_a^\pi \frac{\sin(nx)}{nx} \dx{x} =0$.
 
 We prove the result for $a=0$.  Let
 \[
 f_n(x) = \begin{cases}
-\displaystyle \frac{\sin(nx)}{nx} & \qquad 0 < x \leq \pi \\
+\DS \frac{\sin(nx)}{nx} & \qquad 0 < x \leq \pi \\
 1 & \qquad x = 0
 \end{cases}
 \]
-for $\displaystyle n\in \NNp$.  Recall that
-$\displaystyle -1 < \frac{\sin(y)}{y} <1$ for $y>0$ and
-$\displaystyle \lim_{y\to 0} \frac{\sin(y)}{y} = 1$.  Therefore, the functions
-$f_n:[0,\pi]\to \RR$ are continuous and $\displaystyle  |f_n(x)| \leq 1$ for
-all $x\in [0,\pi]$ and $\displaystyle n \in \NNp$.  Moreover,
-$\displaystyle |f_n(x)| \leq \frac{1}{nx} \to  0$ as $ n \to \infty$ for all
-$x\in ]0,\pi]$ and $\displaystyle \lim_{n\to \infty}f_n(x) = 1$ for $x = 0$.
-Hence, the sequence of functions $\displaystyle \{f_n\}_{n=1}^\infty$ converge
+for $\DS n\in \NNp$.  Recall that
+$\DS -1 < \frac{\sin(y)}{y} <1$ for $y>0$ and
+$\DS \lim_{y\to 0} \frac{\sin(y)}{y} = 1$.  Therefore, the functions
+$f_n:[0,\pi]\to \RR$ are continuous and $\DS  |f_n(x)| \leq 1$ for
+all $x\in [0,\pi]$ and $\DS n \in \NNp$.  Moreover,
+$\DS |f_n(x)| \leq \frac{1}{nx} \to  0$ as $ n \to \infty$ for all
+$x\in ]0,\pi]$ and $\DS \lim_{n\to \infty}f_n(x) = 1$ for $x = 0$.
+Hence, the sequence of functions $\DS \{f_n\}_{n=1}^\infty$ converge
 pointwise to the integrable function $f:[0,\pi]\to \RR$ defined by $f(x)=0$
 for all $x\in ]0,\pi]$ and $f(0)=1$.
 
@@ -1896,19 +1896,19 @@ We may use the bounded convergence theorem to conclude that
 \end{sol}
 
 \begin{question}
-Compute $\displaystyle \lim_{n \to \infty} \int_0^1 f_n(x) \dx{x}$ for
-the following sequences $\displaystyle \{f_n\}_{n=1}^\infty$ of functions.\\
+Compute $\DS \lim_{n \to \infty} \int_0^1 f_n(x) \dx{x}$ for
+the following sequences $\DS \{f_n\}_{n=1}^\infty$ of functions.\\
 \subQ{a}
-$\displaystyle f_n(x)= \left( 1 + \frac{x}{n} \right)^n$ for $x\in [0,1]$.\\
+$\DS f_n(x)= \left( 1 + \frac{x}{n} \right)^n$ for $x\in [0,1]$.\\
 \subQ{b}
-$\displaystyle f_n(x)= \sum_{k=0}^{n} (-x)^k$ for $x \in [0,1]$.
+$\DS f_n(x)= \sum_{k=0}^{n} (-x)^k$ for $x \in [0,1]$.
 
 Use the result in (b) to deduce a series expansion for $\ln(2)$.
 \end{question}
 
 \begin{question}
 Give an example of a sequence of integrable functions
-$\displaystyle \{f_n\}_{n=0}^\infty$ on $[0,1]$ that converges pointwise to a
+$\DS \{f_n\}_{n=0}^\infty$ on $[0,1]$ that converges pointwise to a
 non integrable function $f:[0,1]\to \RR$.
 \end{question}
 
@@ -1936,14 +1936,14 @@ f(x) = \lim_{n\to \infty} f_n(x) =
 which is not integrable on $[0,1]$.
 
 \subI{Second example}
-Let $\displaystyle f_n(x) = \frac{nx}{1+nx^2}$ for $0\leq x \leq 1$.
+Let $\DS f_n(x) = \frac{nx}{1+nx^2}$ for $0\leq x \leq 1$.
 For each $n \geq 0$, the function $f_n$ is integrable on $[0,1]$
 because it is continuous on $[0,1]$.  We have
 \[
 \lim_{n\to \infty} f_n(x) = \lim_{n\to \infty} \frac{nx}{1+nx^2}
 = \lim_{n\to \infty} \frac{x}{(1/n)+x^2} = \frac{1}{x}
 \]
-for $x >0$ and $\displaystyle \lim_{n\to \infty} f_n(x) =0$ for $x=0$ because
+for $x >0$ and $\DS \lim_{n\to \infty} f_n(x) =0$ for $x=0$ because
 $f_n(0)=0$ for all $n$.  Hence
 \[
 f(x) = \lim_{n\to \infty} f_n(x) = \begin{cases}
@@ -1968,7 +1968,7 @@ Suppose that there exists $x\in [0,1]$ such that $f(x) \neq 0$.
 
 Let $c = \inf \{ x \in [0,1] : f(x) \neq 0 \}$.  Since $f$ is
 continuous and $f(x) = 0$ for $x < c$, we get
-$\displaystyle f(c)=\lim_{x\to c^-}f(x) = 0$.  Therefore
+$\DS f(c)=\lim_{x\to c^-}f(x) = 0$.  Therefore
 $0 \leq c <1$.  Do not forget that $f(0)=0$ because of (\ref{probl1}).
 
 \stage{i} We first show that $f(x) > 0$ for all $x \in ]c,1]$.
@@ -1986,15 +1986,15 @@ that the integral of $f$ between $a$ and $b$ is non-null.
 This is a contradiction.  Thus $f(x) \neq 0$ for all $x \in ]c,1]$;
 namely, either $f(x) >0$ for all $x \in ]c,1]$ or $f(x) < 0$ for all
 $x \in ]c,1]$.  Since
-$\displaystyle \int_0^x f(t) \dx{t} = (f(x))^2 \geq 0$, we must
+$\DS \int_0^x f(t) \dx{t} = (f(x))^2 \geq 0$, we must
 therefore have $f(x)>0$ for all $x \in ]c,1]$.
 
 \stage{ii}
 Since $f$ is continuous, it follows from the Fundamental Theorem of Calculus
 that $F:[0,1] \to \RR$ defined by
-$\displaystyle F(x) = \int_0^x f(t) \dx{t}$ is differentiable.
+$\DS F(x) = \int_0^x f(t) \dx{t}$ is differentiable.
 Since (i) implies that
-$\displaystyle f(x) = \left( \int_0^x f(t) \dx{t} \right)^{1/2}
+$\DS f(x) = \left( \int_0^x f(t) \dx{t} \right)^{1/2}
 = \left( F(x) \right)^{1/2}$ for all $x \in [0,1]$, we get
 that $f$ is differentiable.
 
@@ -2010,14 +2010,14 @@ we get
 \[
 \left( \frac{x}{2}+C\right)^2 = \frac{x^2}{4} + Cx \ .
 \]
-If we simplify this equation, then we get $\displaystyle C^2=0$.
+If we simplify this equation, then we get $\DS C^2=0$.
 Thus $f(x) = x/2$ for $0\leq x \leq 1$.
 \end{sol}
 
 \begin{question}
 Answer the following questions without using $\ln$.  This problem
 introduces one of the possible definitions of $\ln$.
-Let $\displaystyle L(x) = \int_1^x \frac{1}{t}\dx{t}$.  Prove that
+Let $\DS L(x) = \int_1^x \frac{1}{t}\dx{t}$.  Prove that
 $L:]0,\infty[\to \RR$ is continuously differentiable and that
 $L(xy)=L(x)+L(y)$ for all $x,y \in]0,\infty[$.\\
 {\bfseries Hint}: let $G(x)=L(xy)$ for $y>0$ fixed and compute $G'(x)$.
@@ -2026,9 +2026,9 @@ $L(xy)=L(x)+L(y)$ for all $x,y \in]0,\infty[$.\\
 \begin{sol}
 Since $f:]0,\infty[ \to \RR$ defined by $f(t) = 1/t$ is continuous, it
 follows from the Fundamental Theorem of Calculus that $L'(x) = 1/x$
-for $x>0$.  Hence $L$ is of class $\displaystyle C^1$ on $]0,\infty[$.
+for $x>0$.  Hence $L$ is of class $\DS C^1$ on $]0,\infty[$.
 
-Let $\displaystyle G(x) = L(xy) = \int_1^{xy}\frac{1}{t} \dx{t}$ for
+Let $\DS G(x) = L(xy) = \int_1^{xy}\frac{1}{t} \dx{t}$ for
 $y>0$ arbitrary but fixed.  Using the chain rule, we get
 \[
 G'(x) = \Big( \dfdx{\Big( \int_1^u \frac{1}{t} \dx{t} \Big)\Big|_{u=xy}}{u}
@@ -2041,19 +2041,19 @@ for $x >0$.  Thus
 G(x)-G(1) = \int_1^x G'(t) \dx{t} = \int_1^x \frac{1}{t}\dx{t} = L(x)
 \]
 for $x >0$.  Since $G(1)=L(y)$ and $G(x) = L(xy)$, we get
-$\displaystyle L(xy) = L(x) + L(y)$ for $x,y >0$.
+$\DS L(xy) = L(x) + L(y)$ for $x,y >0$.
 \end{sol}
 
 \begin{question}
 Describe the continuous functions $f:[0,1]\to \RR$ that satisfy
-$\displaystyle \int_0^x f(t) \dx{t} = \int_x^1 f(t) \dx{t}$ for all
+$\DS \int_0^x f(t) \dx{t} = \int_x^1 f(t) \dx{t}$ for all
 $x\in[0,1]$.
 \end{question}
 
 \begin{sol}
 Since $f$ is a continuous function,
-$\displaystyle F(x) = \int_0^x f(t) \dx{t}$ and
-$\displaystyle G(x) = \int_x^1 f(t) \dx{t} = - \int_1^x f(t) \dx{t}$
+$\DS F(x) = \int_0^x f(t) \dx{t}$ and
+$\DS G(x) = \int_x^1 f(t) \dx{t} = - \int_1^x f(t) \dx{t}$
 are two differentiable functions on $]0,1[$ according to the
 Fundamental Theorem of Calculus.  We have by hypothesis
 that $F(x) = G(x)$ for all $x\in [0,1]$.  Therefore
@@ -2075,7 +2075,7 @@ relatively prime} \\
 \end{cases}
 \]
 Is $f$ Riemann integrable on $[0,1]$?  If it is, then what is the
-value of $\displaystyle \int_0^1 f(x) \dx{x}$? \\
+value of $\DS \int_0^1 f(x) \dx{x}$? \\
 {\bfseries Hint}: If $N$ is a positive integer, then there are only a
 finite number of rational numbers in the interval $[0,1]$ of the form
 $p/q$ with $p$ and $q$ relatively prime and $0 < q \leq N$.
@@ -2083,8 +2083,8 @@ $p/q$ with $p$ and $q$ relatively prime and $0 < q \leq N$.
 
 \begin{sol}
 We prove that $f$ is integrable and that
-$\displaystyle \int_0^1 f(x)\dx{x} = 0$.
-Given $\epsilon>0$, choose $\displaystyle q_0 \in \NNp$ large enough such that
+$\DS \int_0^1 f(x)\dx{x} = 0$.
+Given $\epsilon>0$, choose $\DS q_0 \in \NNp$ large enough such that
 $1/q_0 < \epsilon/2$, and a partition
 $R = \{r_i: 0 \leq i \leq N\}$ of $[0,1]$ such that
 \[
@@ -2094,14 +2094,14 @@ $R = \{r_i: 0 \leq i \leq N\}$ of $[0,1]$ such that
 Note that there are less than $q_0(q_0+1)/2$ values of $x$ of the form
 $p/q$ with $p$ and $q$ relatively prime and $0 \leq q \leq q_0$ \footnote{
 The total number of pairs $(p,q)$ with $0 < p\leq q \leq q_0$ is
-$\displaystyle \sum_{q=1}^{q_0} q = \frac{q_0(q_0+1)}{2}$.  However,
+$\DS \sum_{q=1}^{q_0} q = \frac{q_0(q_0+1)}{2}$.  However,
 for a large number of pairs $(p,q)$, we note that
 $p$ and $q$ are not relatively prime. \label{fnQChap1}}.  Let
 $\{a_k :1 \leq k \leq K\}$ with $K < q_0(q_0+1)/2$ be these values.
 
 Let $m_i = \inf\{f(x) : r_{i-1} \leq x \leq r_i \}$ and
 $M_i = \sup\{f(x) : r_{i-1} \leq x \leq r_i \}$ for $1 \leq i \leq N$.
-Then $\displaystyle M_i - m_i < 1/q_0$ if
+Then $\DS M_i - m_i < 1/q_0$ if
 $a_k \not\in [r_{i-1},r_i]$ for all $k$.  Hence
 \[
 \U_R(f) - \LL_R(f) = \sum_{i=1}^N (M_i-m_i )(r_i-r_{i-1})
@@ -2112,12 +2112,12 @@ where the first sum is over all sub-intervals $[r_{i-1},r_i]$ such that
 $a_k \not\in [r_{i-1},r_i]$ for all $k$, and the second sum is over all
 sub-intervals $[r_{i-1},r_i]$ such that $a_k \in [r_{i-1},r_i]$ for some $k$.
 
-We have $\displaystyle \sum\nolimits' \frac{1}{q_0} (r_i-r_{i-1})<
+We have $\DS \sum\nolimits' \frac{1}{q_0} (r_i-r_{i-1})<
 \frac{\epsilon}{2}$ because $1/q_0 < \epsilon/2$ and
-$\displaystyle \sum_{i=0}^N (r_i-r_{i-1}) = 1$; the length of the interval
+$\DS \sum_{i=0}^N (r_i-r_{i-1}) = 1$; the length of the interval
 $[0,1]$.
 
-Moreover $\displaystyle \sum\nolimits'' (r_i-r_{i-1}) < \frac{\epsilon}{2}$
+Moreover $\DS \sum\nolimits'' (r_i-r_{i-1}) < \frac{\epsilon}{2}$
 because there are at most $q_0(q_0+1)/2$ intervals
 $[r_{i-1},r_i]$ containing some $a_k$.  Thus
 \[
@@ -2129,7 +2129,7 @@ $[r_{i-1},r_i]$ containing some $a_k$.  Thus
 Therefore $\U_R(f) - \LL_R(f) < \epsilon$.  Since $\epsilon$ is
 arbitrary, it follows from Theorem~\ref{intCauchyCR} that $f$ is
 integrable on $[0,1]$.  Since $\LL_R(f) = 0$ for all partition $R$ of
-$[0,1]$, we get $\displaystyle \int_0^1 f = \LL(f) = 0$.
+$[0,1]$, we get $\DS \int_0^1 f = \LL(f) = 0$.
 \end{sol}
 
 \begin{question}
@@ -2143,7 +2143,7 @@ x^2 \sin(1/x^2) & \quad \text{if} \ x > 0 \\
 \]
 Prove that $F'(x)$ exists for all $x$ but that $F':[0,1]\to \RR$ is
 not integrable.  Therefore, we do not have
-$\displaystyle \int_0^1 F'(x)\dx{x} = F(1)-F(0)$.
+$\DS \int_0^1 F'(x)\dx{x} = F(1)-F(0)$.
 \end{question}
 
 \begin{sol}
@@ -2160,30 +2160,30 @@ and
 \lim_{h\to 0^+} \frac{h^2 \sin(1/h^2) - 0}{h}
 = \lim_{h\to 0^+} h \sin\left(\frac{1}{h^2}\right) = 0
 \]
-because $\displaystyle 
+because $\DS 
 \left| h \sin\left( \frac{1}{h^2} \right) \right| \leq h \to 0$ as
 $h \to 0^+$.  Thus $F'(0) = 0$.  Hence
 \[
 F'(x) = \begin{cases}
-\displaystyle 2x \sin\left(\frac{1}{x^2}\right) -
+\DS 2x \sin\left(\frac{1}{x^2}\right) -
 \frac{2}{x} \cos\left(\frac{1}{x^2}\right) & \quad \text{if} \ x > 0 \\
 0 & \quad \text{if} \ x \leq 0
 \end{cases}
 \]
 Note that $F'$ is not bounded in any neighbourhood of the origin.  For
-instance, with $\displaystyle x_n = \frac{1}{\sqrt{2 n \pi}}$, we have
-$\displaystyle x_n \to 0^+$ and $F'(x_n) = -2 \sqrt{2n\pi} \to -\infty$ as
+instance, with $\DS x_n = \frac{1}{\sqrt{2 n \pi}}$, we have
+$\DS x_n \to 0^+$ and $F'(x_n) = -2 \sqrt{2n\pi} \to -\infty$ as
 $n \to \infty$.  Therefore, $F'$ is not integrable on $[0,1]$.
 \end{sol}
 
 \begin{question}
 Consider a continuous function $f:[0,1]\to \RR$.  We define inductively a
 sequence of real valued functions on $[0,1]$ by $f_0(x) = f(x)$ and
-$\displaystyle f_{k+1}(x) = \int_0^x f_k(t) \dx{t}$ for
+$\DS f_{k+1}(x) = \int_0^x f_k(t) \dx{t}$ for
 $x\in[0,1]$ and $k \in \NN$.  Prove that
-$\displaystyle |f_k(x)| \leq M x^k/k!$ for all
+$\DS |f_k(x)| \leq M x^k/k!$ for all
 $k\geq 0$ and all $x \in [0,1]$ where
-$\displaystyle M = \sup\{|f(x)|: x\in [0,1]\}$.  Moreover, prove that
+$\DS M = \sup\{|f(x)|: x\in [0,1]\}$.  Moreover, prove that
 $\{f_k\}_{k=0}^\infty$ converges uniformly to $0$ on $[0,1]$.
 \end{question}
 
@@ -2214,8 +2214,8 @@ It follows from (i) that
 \left| f_k(x) \right| \leq \frac{M}{k!} \, x^k \leq \frac{M}{k!}
 \]
 for all $x\in[0,1]$.  Given $\epsilon >0$, choose
-$\displaystyle K \in \NNp$ such
-that $\displaystyle \frac{M}{K!} < \epsilon$.  Then
+$\DS K \in \NNp$ such
+that $\DS \frac{M}{K!} < \epsilon$.  Then
 \[
 \left| f_k(x) - 0 \right| \leq \frac{M}{k!} \leq \frac{M}{K!} <
 \epsilon
@@ -2265,21 +2265,21 @@ f(a) ( b - a)
 \]
 where we have used integration by parts to compute the second integral
 on the right hand side in (\ref{intconc}).  If we isolate
-$\displaystyle \int_a^b f(x) \dx{x}$, then we get
+$\DS \int_a^b f(x) \dx{x}$, then we get
 \[
   \int_a^b f(x) \dx{x} \geq \frac{f(a) + f(b)}{2} (b-a ) \ .
 \]
 This proves the left side of the inequality in (\ref{trapMidPoint}).
 
 \stage{ii} This time, we start with the Taylor's polynomial of $f$
-of order $2$ centred at $\displaystyle \frac{a+b}{2}$.
+of order $2$ centred at $\DS \frac{a+b}{2}$.
 \[
 f(x) = f\left(\frac{a+b}{2}\right)
 + f'\left(\frac{a+b}{2}\right) \left( x - \frac{a+b}{2}\right)
 + \frac{f''(\xi)}{2} \left( x - \frac{a+b}{2}\right)^2
 \]
-where $\displaystyle \xi = \xi((a+b)/2)$ is between
-$x$ and $\displaystyle (a+b)/2$.  Since $f''(\xi) \leq 0$ for
+where $\DS \xi = \xi((a+b)/2)$ is between
+$x$ and $\DS (a+b)/2$.  Since $f''(\xi) \leq 0$ for
 $\xi\in [a,b]$, we have
 \[
 f(x) \leq f\left(\frac{a+b}{2}\right)
@@ -2319,20 +2319,20 @@ the following two conditions for every $y\in [c,d]$:
 $x \in [a,b]$ is Riemann integrable and,
 \item given $\epsilon >0$, there exists $\delta > 0$ (that may also depend
 on $y$) such that
-$\displaystyle \Big|\pdydx{f}{y}(x,z) - \pdydx{f}{y}(x,y) \Big| < \epsilon$
+$\DS \Big|\pdydx{f}{y}(x,z) - \pdydx{f}{y}(x,y) \Big| < \epsilon$
 for all $z \in ]y - \delta,y + \delta[$ and all $x \in [a,b]$.
 \end{enumerate}
-Then $\displaystyle F(y) = \int_a^b f(x,y)\dx{x}$ for $y \in [c,d]$ is
+Then $\DS F(y) = \int_a^b f(x,y)\dx{x}$ for $y \in [c,d]$ is
 differentiable and
 \begin{equation} \label{supplTEq1}
 F'(y) = \int_a^b \pdydx{f}{y}(x,y)\dx{x} \ .
 \end{equation}
 This formula can be generalized to functions defined by
-$\displaystyle F(y) = \int_a^{h(y)} f(x,y)\dx{x}$ for $y \in [c,d]$ where
+$\DS F(y) = \int_a^{h(y)} f(x,y)\dx{x}$ for $y \in [c,d]$ where
 $h:[c,d] \to [a,b]$ is differentiable, and $f$ and
-$\displaystyle \pdydx{f}{y}$ are continuous on $[a,b]\times [c,d]$.
+$\DS \pdydx{f}{y}$ are continuous on $[a,b]\times [c,d]$.
 These last conditions ensure that (1) and (2) above are satisfied.
-If we set $\displaystyle G(u,v) = \int_a^uf(x,v) \dx{x}$ for
+If we set $\DS G(u,v) = \int_a^uf(x,v) \dx{x}$ for
 $(u,v) \in [a,b]\times [c,d]$, then
 $F(y) = G(h(y),y)$ for $y \in [c,d]$.  Using the chain rule, we find
 that
@@ -2354,13 +2354,13 @@ Let
 \[
 f(x,y) =
 \begin{cases}
-\displaystyle \frac{x^3}{y^2}\, e^{-x^2/y} & \quad \text{if}\ y > 0 \\
+\DS \frac{x^3}{y^2}\, e^{-x^2/y} & \quad \text{if}\ y > 0 \\
   0 & \quad \text{if}\ y \leq 0
 \end{cases}
 \]
 and $f_x(y) = f_y(x) = f(x,y)$ for all $x$ and $y$.\\
-\subQ{a} Prove that $\displaystyle f_y \in C^1(\RR)$ for all $y$ fixed
-and $\displaystyle f_x \in C^1(\RR)$ for all $x$ fixed.\\
+\subQ{a} Prove that $\DS f_y \in C^1(\RR)$ for all $y$ fixed
+and $\DS f_x \in C^1(\RR)$ for all $x$ fixed.\\
 \subQ{b} Prove that $f$ is not bounded in any neighbourhood of the
 origin.\\
 \subQ{c} Prove that
@@ -2377,40 +2377,40 @@ Does any of this contradict the theory?
 \end{question}
 
 \begin{sol}
-\subQ{a} We have that $\displaystyle f_y \in C^1(\RR)$ for all $y$
+\subQ{a} We have that $\DS f_y \in C^1(\RR)$ for all $y$
 fixed because $f_y(x) = 0$ for all $x\in \RR$ when $y\leq 0$ and
-$\displaystyle f_y(x) = x^3e^{-x^2/y}/y^2$ for all $x$ when $y>0$.
+$\DS f_y(x) = x^3e^{-x^2/y}/y^2$ for all $x$ when $y>0$.
 
-We have that $\displaystyle f_x$ is continuously differentiable
+We have that $\DS f_x$ is continuously differentiable
 on $\RR \setminus \{0\}$ for all $x$ fixed because $f_x(y) = 0$ for
-all $y <0$ and $\displaystyle f_x(y) = x^3e^{-x^2/y}/y^2$ for all $y>0$.
+all $y <0$ and $\DS f_x(y) = x^3e^{-x^2/y}/y^2$ for all $y>0$.
 The only issue is at the origin.  We first note that $f_x$ is
 continuous at the origin because
-$\displaystyle \lim_{y \to 0^-} f_x(y) = 0$ and
-$\displaystyle \lim_{y \to 0^+} f_x(y)
+$\DS \lim_{y \to 0^-} f_x(y) = 0$ and
+$\DS \lim_{y \to 0^+} f_x(y)
 = \lim_{y \to 0^+} \frac{x^3}{y^2}\,e^{-x^2/y} = 0$ \footnote{One may
 use l'Hospital Rule to compute this limit.}.
-We also have $\displaystyle \dydx{f_x}{y}(0) = 0$ because
-$\displaystyle \lim_{y\to 0^-} \frac{f_x(y)-f_x(0)}{y} = 0$
+We also have $\DS \dydx{f_x}{y}(0) = 0$ because
+$\DS \lim_{y\to 0^-} \frac{f_x(y)-f_x(0)}{y} = 0$
 and
-$\displaystyle \lim_{y\to 0^+} \frac{f_x(y)-f_x(0)}{y}
+$\DS \lim_{y\to 0^+} \frac{f_x(y)-f_x(0)}{y}
 = \lim_{y\to 0^+} \frac{x^3}{y^3} e^{-x^2/y} = 0$ \footnote{Again, one may
 use l'Hospital Rule to compute this limit.}.
 Thus
 \[
 \dydx{f_x}{y}(y) = \begin{cases}
-\displaystyle \left(\frac{-2x^3}{y^3} + \frac{x^5}{y^4} \right) e^{-x^2/y} &
+\DS \left(\frac{-2x^3}{y^3} + \frac{x^5}{y^4} \right) e^{-x^2/y} &
 \quad \text{if } y > 0 \\
 0 & \quad \text{if } y \leq 0
 \end{cases}
 \]
 Again, it is easy to show that
-$\displaystyle \lim_{y\to 0} \dydx{f_x}{y}(y) = \dydx{f_x}{y}(0)$.  Thus
-$\displaystyle f_x \in C^1(\RR)$.
+$\DS \lim_{y\to 0} \dydx{f_x}{y}(y) = \dydx{f_x}{y}(0)$.  Thus
+$\DS f_x \in C^1(\RR)$.
 
 \subQ{b} We have
-$\displaystyle f(\sqrt{y},y) = \frac{1}{\sqrt{y}\, e} \to \infty$ as
-$\displaystyle y \to 0^+$.
+$\DS f(\sqrt{y},y) = \frac{1}{\sqrt{y}\, e} \to \infty$ as
+$\DS y \to 0^+$.
 
 \subQ{c} As we have done in (a), we can show that
 \[
@@ -2420,15 +2420,15 @@ x e^{-x^2/y} & \quad \text{if}\ y > 0 \\
   0 & \quad \text{if}\ y \leq 0
 \end{cases}
 \]
-is a function of class $\displaystyle C^1$ on $\RR$
-and $\displaystyle \dydx{g_x}{y} = f_x$ for all $x$ fixed.  Hence, we
+is a function of class $\DS C^1$ on $\RR$
+and $\DS \dydx{g_x}{y} = f_x$ for all $x$ fixed.  Hence, we
 have from the Fundamental Theorem of Calculus that
 \[
 \int_0^1 f(x,y) \dx{y} = \int_0^1 f_x(y) \dx{y}
 = g_x(y)\Big|_{y=0}^{y=1}= x e^{-x^2} \ .
 \]
 Thus
-$\displaystyle \pdfdx{\int_0^1 f(x,y) \dx{y}}{x} = e^{-x^2} -2 x^2 e^{-x^2}$
+$\DS \pdfdx{\int_0^1 f(x,y) \dx{y}}{x} = e^{-x^2} -2 x^2 e^{-x^2}$
 and
 \begin{equation} \label{fxyBEq1}
 \pdfdx{\int_0^1 f(x,y) \dx{y}}{x}\bigg|_{x=0} = 1 \ .
@@ -2437,23 +2437,23 @@ and
 We have
 \[
 \pdydx{f}{x}(x,y) = \begin{cases}
-\displaystyle \left(\frac{3x^2}{y^2} - \frac{2x^4}{y^3}\right)e^{-x^2/y} &
+\DS \left(\frac{3x^2}{y^2} - \frac{2x^4}{y^3}\right)e^{-x^2/y} &
 \quad \text{if } y > 0 \\
 0 & \quad \text{if } y \leq  0
 \end{cases}
 \]
-Let $\displaystyle h_x(y) = \pdydx{f}{x}(x,y)$ for all $y \in \RR$ and
+Let $\DS h_x(y) = \pdydx{f}{x}(x,y)$ for all $y \in \RR$ and
 $x$ fixed.  Again, as we have done in (a), we can prove that
 \[
 k_x(y) =
 \begin{cases}
-\displaystyle \left( 1- \frac{2x^2}{y}\right) e^{-x^2/y}
+\DS \left( 1- \frac{2x^2}{y}\right) e^{-x^2/y}
 & \quad \text{if}\ y > 0 \\
 0 & \quad \text{if}\ y \leq 0
 \end{cases}
 \]
-is a function of class $\displaystyle C^1$ on $\RR$
-and $\displaystyle \dydx{k_x}{y} = h_x$ for all $x$ fixed.  Hence, we
+is a function of class $\DS C^1$ on $\RR$
+and $\DS \dydx{k_x}{y} = h_x$ for all $x$ fixed.  Hence, we
 have from the Fundamental Theorem of Calculus that
 \[
 \int_0^1 \pdydx{f}{x}(x,y)\dx{y}
@@ -2468,16 +2468,16 @@ Hence
 It follows from (\ref{fxyBEq1}) and (\ref{fxyBEq2})
 that (\ref{supplTEq1}) is true.
 
-However, since $\displaystyle \pdydx{f}{x}(0,y) = 0$ for all $y$, we get
-$\displaystyle \int_0^1 \pdydx{f}{x}(0,y) \dx{y} = 0$.
+However, since $\DS \pdydx{f}{x}(0,y) = 0$ for all $y$, we get
+$\DS \int_0^1 \pdydx{f}{x}(0,y) \dx{y} = 0$.
 
 The fact that (\ref{supplTEq1}) is true does not come from the theory
-because $\displaystyle \pdydx{f}{x}$ are not bounded in any
+because $\DS \pdydx{f}{x}$ are not bounded in any
 neighbourhood of the origin.  Thus (2) cannot be satisfied.
 \end{sol}
 
 \begin{question}
-Let $\displaystyle F(x) = \int_{g(x)}^{h(x)}f(x,y)\dx{y}$     \label{derintf}
+Let $\DS F(x) = \int_{g(x)}^{h(x)}f(x,y)\dx{y}$     \label{derintf}
 where all the functions are sufficiently differentiable.  Compute $F'(x)$.
 \end{question}
 
@@ -2500,8 +2500,8 @@ F'(x) &= f(x,h(x)) h'(x) + \int_a^{h(x)}\pdydx{f}{x}(x,y) \dx{y}
 Compute the derivatives of
 \begin{center}
 \begin{tabular}{*{1}{l@{\hspace{1em}}l@{\hspace{3em}}}l@{\hspace{1em}}l}
-\subQ{a} & $\displaystyle F(x) = \int_x^{x^2} \frac{e^{xy}}{y} \dx{y}$ &
-\subQ{b} & $\displaystyle G(x) = \int_{2x}^{3x} \cos(x^2y) \dx{y}$
+\subQ{a} & $\DS F(x) = \int_x^{x^2} \frac{e^{xy}}{y} \dx{y}$ &
+\subQ{b} & $\DS G(x) = \int_{2x}^{3x} \cos(x^2y) \dx{y}$
 \end{tabular}
 \end{center}
 \end{question}
@@ -2537,7 +2537,7 @@ F'(x)
 &= 9\cos(3x^3) - 6\cos(2x^3) - \frac{2}{x^3}
 \left( \cos(3x^3) - \cos(2x^3) \right) \ ,
 \end{align*}
-where we have use the substitution $\displaystyle u = x^2y$ for the
+where we have use the substitution $\DS u = x^2y$ for the
 third equality and integration by parts for the fourth equality.
 \end{sol}
 
@@ -2546,10 +2546,10 @@ Given a continuous function $f:\RR\to\RR$, let $f_0(x) = f(x)$ and
 \[
 f_n(x) = \frac{1}{(n-1)!} \int_0^x (x-y)^{n-1} f(y) \dx{y}
 \]
-for $\displaystyle n \in \NNp$ and $\VEC{x}\in \RR$.  Prove that
-$\displaystyle \dydx{f_n}{x}(x) = f_{n-1}(x)$ and use this result to
-prove that $f_n$ is the $\displaystyle n^{th}$ order primitive of
-$f$; namely, $\displaystyle \dydxn{f_n}{x}{n} = f$.
+for $\DS n \in \NNp$ and $\VEC{x}\in \RR$.  Prove that
+$\DS \dydx{f_n}{x}(x) = f_{n-1}(x)$ and use this result to
+prove that $f_n$ is the $\DS n^{th}$ order primitive of
+$f$; namely, $\DS \dydxn{f_n}{x}{n} = f$.
 \end{question}
 
 \subsubsection{Improper Integrals}
@@ -2576,20 +2576,20 @@ We have that $f$ is Riemann integrable on $[a,1]$ for all $a >0$.
 We review below some of the results about improper integrals that we
 assume are known to the readers.  They will be useful for the questions below.
 \begin{enumerate}
-\item $\displaystyle \int_1^\infty \frac{1}{x^p} \dx{x}$ converges for $p>1$
+\item $\DS \int_1^\infty \frac{1}{x^p} \dx{x}$ converges for $p>1$
 and diverges for $p\leq 1$.
-\item $\displaystyle \int_0^1 \frac{1}{x^p} \dx{x}$ converges for
+\item $\DS \int_0^1 \frac{1}{x^p} \dx{x}$ converges for
 $p<1$ and diverges for $p\geq 1$.
 \item Suppose that $f, g:]a,b[\rightarrow \RR$ are two continuous
 functions such that $0\leq f(x)\leq g(x)$ for $a < x < b$.  Then
-$\displaystyle \int_a^b f(x) \dx{x}$ converges if
-$\displaystyle \int_a^b g(x) \dx{x}$ converges.  Moreover,
-$\displaystyle \int_a^b g(x) \dx{x}$ diverges if
-$\displaystyle \int_a^b f(x) \dx{x}$ diverges.  These results are known
+$\DS \int_a^b f(x) \dx{x}$ converges if
+$\DS \int_a^b g(x) \dx{x}$ converges.  Moreover,
+$\DS \int_a^b g(x) \dx{x}$ diverges if
+$\DS \int_a^b f(x) \dx{x}$ diverges.  These results are known
 as the {\bfseries comparison test}\index{Comparison Test}.
 \item Suppose that $f:]a,b[\rightarrow \RR$ is a continuous function.
-If $\displaystyle \int_a^b |f(x)| \dx{x}$ converges, then
-$\displaystyle \int_a^b f(x) \dx{x}$ converges.
+If $\DS \int_a^b |f(x)| \dx{x}$ converges, then
+$\DS \int_a^b f(x) \dx{x}$ converges.
 \end{enumerate}
 
 \begin{question}
@@ -2597,43 +2597,43 @@ Determine if the following improper integrals converge or
 diverge.
 \begin{center}
 \begin{tabular}{*{2}{l@{\hspace{0.5em}}l@{\hspace{3em}}}l@{\hspace{0.5em}}l}
-\subQ{a} & $\displaystyle \int_0^1 \frac{1}{x^{1/3} (x^2+2x)^{1/2}}\dx{x}$  &
-\subQ{b} & $\displaystyle \int_0^1 \frac{x^2}{\sqrt{1-x^4}} \dx{x}$ &
-\subQ{c} & $\displaystyle \int_0^\infty \sqrt{x} e^{-x} \dx{x}$ \\[0.8em]
-\subQ{d} & $\displaystyle \int_1^\infty \frac{1}{x\sqrt{x+3}} \dx{x}$ &
-\subQ{e} & $\displaystyle \int_1^\infty \frac{x^2 -2 x -3}{x(x^2+1)} \dx{x}$ & 
-\subQ{f} & $\displaystyle \int_0^\infty x^2 e^{-x^2}\dx{x}$ \\[0.8em]
-\subQ{g} & $\displaystyle \int_3^\infty \frac{\sin(4x)}{x^2 -x -2}\dx{x}$ &
-\subQ{h} & $\displaystyle \int_1^\infty \tan\left(\frac{1}{x}\right) \dx{x}$ & 
-\subQ{i} & $\displaystyle \int_0^\infty \frac{e^x}{1+e^{2x}} \dx{x}$ \\[0.8em]
-\subQ{j} & $\displaystyle \int_0^\infty \frac{1-\cos(x)}{x^2} \dx{x}$ &
-\subQ{k} & $\displaystyle \int_0^1 \frac{1}{\sqrt{x^3+x^2}} \dx{x}$ &
-\subQ{l} & $\displaystyle \int_1^\infty \frac{1}{\sqrt{x^3+x^2}} \dx{x}$
+\subQ{a} & $\DS \int_0^1 \frac{1}{x^{1/3} (x^2+2x)^{1/2}}\dx{x}$  &
+\subQ{b} & $\DS \int_0^1 \frac{x^2}{\sqrt{1-x^4}} \dx{x}$ &
+\subQ{c} & $\DS \int_0^\infty \sqrt{x} e^{-x} \dx{x}$ \\[0.8em]
+\subQ{d} & $\DS \int_1^\infty \frac{1}{x\sqrt{x+3}} \dx{x}$ &
+\subQ{e} & $\DS \int_1^\infty \frac{x^2 -2 x -3}{x(x^2+1)} \dx{x}$ & 
+\subQ{f} & $\DS \int_0^\infty x^2 e^{-x^2}\dx{x}$ \\[0.8em]
+\subQ{g} & $\DS \int_3^\infty \frac{\sin(4x)}{x^2 -x -2}\dx{x}$ &
+\subQ{h} & $\DS \int_1^\infty \tan\left(\frac{1}{x}\right) \dx{x}$ & 
+\subQ{i} & $\DS \int_0^\infty \frac{e^x}{1+e^{2x}} \dx{x}$ \\[0.8em]
+\subQ{j} & $\DS \int_0^\infty \frac{1-\cos(x)}{x^2} \dx{x}$ &
+\subQ{k} & $\DS \int_0^1 \frac{1}{\sqrt{x^3+x^2}} \dx{x}$ &
+\subQ{l} & $\DS \int_1^\infty \frac{1}{\sqrt{x^3+x^2}} \dx{x}$
 \\[0.8em]
-\subQ{m} & $\displaystyle \int_0^\infty e^x \sin(e^x) \dx{x}$ &
-\subQ{n} & $\displaystyle \int_0^\infty x \sin(e^x) \dx{x}$ &
-\subQ{o} & $\displaystyle \int_0^1 \frac{\sin(1/x)}{x} \dx{x}$ \\[0.8em]
-\subQ{p} & $\displaystyle \int_0^1 x\ln(x) \dx{x}$ & & & &
+\subQ{m} & $\DS \int_0^\infty e^x \sin(e^x) \dx{x}$ &
+\subQ{n} & $\DS \int_0^\infty x \sin(e^x) \dx{x}$ &
+\subQ{o} & $\DS \int_0^1 \frac{\sin(1/x)}{x} \dx{x}$ \\[0.8em]
+\subQ{p} & $\DS \int_0^1 x\ln(x) \dx{x}$ & & & &
 \end{tabular}
 \end{center}
 \end{question}
 
 \begin{sol}
 \subQ{a}
-We have $\displaystyle x^{1/3} (x^2+2x)^{1/2} = x^{5/6} (x+2)^{1/2} \geq
+We have $\DS x^{1/3} (x^2+2x)^{1/2} = x^{5/6} (x+2)^{1/2} \geq
 x^{5/6} \sqrt{2}$ for $0\leq x \leq 1$.  Thus
-$\displaystyle \frac{1}{x^{1/3} (x^2+2x)^{1/2}} \leq \frac{1}{x^{5/6} \sqrt{2}}$
+$\DS \frac{1}{x^{1/3} (x^2+2x)^{1/2}} \leq \frac{1}{x^{5/6} \sqrt{2}}$
 for $0 < x \leq 1$.
-Since $\displaystyle \int_0^1 x^{-p} \dx{x}$ converges for $p<1$, we
+Since $\DS \int_0^1 x^{-p} \dx{x}$ converges for $p<1$, we
 have by the comparison test that
-$\displaystyle \int_0^1 \frac{1}{x^{1/3} (x^2+2x)^{1/2}}\dx{x}$ converges.
+$\DS \int_0^1 \frac{1}{x^{1/3} (x^2+2x)^{1/2}}\dx{x}$ converges.
 
 \subQ{b} We have
 \[
 \lim_{q\to 1^-}\int_0^q \frac{x^2}{\sqrt{1-x^4}} \dx{x}
 = \lim_{q\to 1^-}\int_0^q \frac{x^2}{\sqrt{(1-x^2)(1+x^2)}} \dx{x} \ .
 \]
-With the substitution $\displaystyle u=1-x^2$ for $0\leq x < 1$, we
+With the substitution $\DS u=1-x^2$ for $0\leq x < 1$, we
 get
 \[
 \lim_{q\to 1^-} \int_0^q \frac{x^2}{\sqrt{1-x^4}} \dx{x}
@@ -2642,32 +2642,32 @@ get
 = \lim_{q\to 1^-} \frac{1}{2}\int_{\sqrt{1-q}}^1
 \frac{\sqrt{1-u}}{\sqrt{u(2-u)}} \dx{u} \ .
 \]
-Since $\displaystyle 
+Since $\DS 
 0\leq \frac{\sqrt{1-u}}{\sqrt{u(2-u)}} \leq \frac{1}{\sqrt{u}}$
 for $0 < u \leq 1$
-and $\displaystyle \int_0^1 u^{-1/2} \dx{u}$ converges, we
+and $\DS \int_0^1 u^{-1/2} \dx{u}$ converges, we
 get from the comparison test that
-$\displaystyle \int_0^1 \frac{\sqrt{1-u}}{\sqrt{u(2-u)}} \dx{u}$
-converges.  Hence $\displaystyle \int_0^1 \frac{x^2}{\sqrt{1-x^4}} \dx{x}$
+$\DS \int_0^1 \frac{\sqrt{1-u}}{\sqrt{u(2-u)}} \dx{u}$
+converges.  Hence $\DS \int_0^1 \frac{x^2}{\sqrt{1-x^4}} \dx{x}$
 converges.
 
-\subQ{c} Since $\displaystyle \sqrt{x}e^{-x}$ is continuous on $[0,1]$, the
-integral $\displaystyle \int_0^1 \sqrt{x} e^{-x} \dx{x}$ exists.  We
-only have to consider $\displaystyle \int_1^\infty \sqrt{x} e^{-x} \dx{x}$.
+\subQ{c} Since $\DS \sqrt{x}e^{-x}$ is continuous on $[0,1]$, the
+integral $\DS \int_0^1 \sqrt{x} e^{-x} \dx{x}$ exists.  We
+only have to consider $\DS \int_1^\infty \sqrt{x} e^{-x} \dx{x}$.
 
-We first prove that $\displaystyle h(x) = \sqrt{x} e^{-x/2}$ is
+We first prove that $\DS h(x) = \sqrt{x} e^{-x/2}$ is
 bounded for $x\geq 1$.  Since
 \[
 h'(x) = \frac{1}{2} x^{-1/2} e^{-x/2} - \frac{1}{2} x^{1/2}e^{-x/2}
 = \frac{1}{2} x^{-1/2} ( 1-x) e^{-x/2} < 0
 \]
 for $x > 1$, the function $h$ is decreasing on $]1,\infty[$.  Thus
-$\displaystyle h(x) \leq h(1) = e^{-1/2}$ for $x>1$.  Since
-$\displaystyle 0 \leq \sqrt{x} e^{-x} = h(x) e^{-x/2} \leq e^{-1/2}
+$\DS h(x) \leq h(1) = e^{-1/2}$ for $x>1$.  Since
+$\DS 0 \leq \sqrt{x} e^{-x} = h(x) e^{-x/2} \leq e^{-1/2}
 e^{-x/2}$ for $x \geq 1$ and
-$\displaystyle \int_1^\infty e^{-x/2} \dx{x}$ converges, we get from
+$\DS \int_1^\infty e^{-x/2} \dx{x}$ converges, we get from
 the comparison test that
-$\displaystyle \int_1^\infty \sqrt{x} e^{-x} \dx{x}$ converges.  Thus
+$\DS \int_1^\infty \sqrt{x} e^{-x} \dx{x}$ converges.  Thus
 \[
 \int_0^\infty \sqrt{x} e^{-x} \dx{x} = \int_0^1 \sqrt{x} e^{-x} \dx{x}
 + \int_1^\infty \sqrt{x} e^{-x} \dx{x}
@@ -2675,37 +2675,37 @@ $\displaystyle \int_1^\infty \sqrt{x} e^{-x} \dx{x}$ converges.  Thus
 converges.
 
 \subQ{d}
-Since $\displaystyle \frac{1}{x\sqrt{x+3}} \leq \frac{1}{x^{3/2}}$
-and $\displaystyle \int_1^\infty x^{-3/2}\dx{x}$ converges because
-$\displaystyle \int_1^\infty x^{-p}\dx{x}$ converges for $p>1$, we get
+Since $\DS \frac{1}{x\sqrt{x+3}} \leq \frac{1}{x^{3/2}}$
+and $\DS \int_1^\infty x^{-3/2}\dx{x}$ converges because
+$\DS \int_1^\infty x^{-p}\dx{x}$ converges for $p>1$, we get
 from the comparison test that
-$\displaystyle \int_1^\infty \frac{1}{x\sqrt{x+3}} \dx{x}$
+$\DS \int_1^\infty \frac{1}{x\sqrt{x+3}} \dx{x}$
 converges.
 
 \subQ{e} Since
-$\displaystyle \lim_{x\to \infty} \frac{x^2 -2x-3}{x^2+1} = 1$, there
+$\DS \lim_{x\to \infty} \frac{x^2 -2x-3}{x^2+1} = 1$, there
 exists $C > 0$ such that
-$\displaystyle \frac{x^2 -2x-3}{x^2+1} > \frac{1}{2}$
+$\DS \frac{x^2 -2x-3}{x^2+1} > \frac{1}{2}$
 for $x \geq C$.  Hence
-$\displaystyle \frac{x^2 -2x-3}{x(x^2+1)} > \frac{1}{2x}$ for $x \geq C$.
-Since $\displaystyle \int_C^\infty \frac{1}{2x} \dx{u}$ diverges, we
+$\DS \frac{x^2 -2x-3}{x(x^2+1)} > \frac{1}{2x}$ for $x \geq C$.
+Since $\DS \int_C^\infty \frac{1}{2x} \dx{u}$ diverges, we
 get from the comparison test that
-$\displaystyle \int_C^\infty \frac{x^2 -2x-3}{x(x^2+1)} \dx{x}$ diverges.
+$\DS \int_C^\infty \frac{x^2 -2x-3}{x(x^2+1)} \dx{x}$ diverges.
 It follows from
 \[
 \int_1^q \frac{x^2 -2 x -3}{x(x^2+1)} \dx{x}
 = \int_1^C \frac{x^2 -2 x -3}{x(x^2+1)} \dx{x}
 + \int_C^q \frac{x^2 -2 x -3}{x(x^2+1)} \dx{x}
 \]
-that $\displaystyle \int_1^\infty \frac{x^2 -2x-3}{x(x^2+1)} \dx{x}$ diverges.
-Note that $\displaystyle \int_1^C \frac{x^2 -2 x -3}{x(x^2+1)} \dx{x}$ is a real
-number because $\displaystyle \frac{x^2 -2 x -3}{x(x^2+1)}$ is
+that $\DS \int_1^\infty \frac{x^2 -2x-3}{x(x^2+1)} \dx{x}$ diverges.
+Note that $\DS \int_1^C \frac{x^2 -2 x -3}{x(x^2+1)} \dx{x}$ is a real
+number because $\DS \frac{x^2 -2 x -3}{x(x^2+1)}$ is
 continuous for $1 \leq x \leq C$.
 
-\subQ{f} Since $\displaystyle x^2 e^{-x^2} \leq x^3 e^{-x^2}$ for $x\geq 1$ and
-$\displaystyle \int_1^\infty x^3 e^{-x^2} \dx{x}$ converges, we get
+\subQ{f} Since $\DS x^2 e^{-x^2} \leq x^3 e^{-x^2}$ for $x\geq 1$ and
+$\DS \int_1^\infty x^3 e^{-x^2} \dx{x}$ converges, we get
 from the comparison test that 
-$\displaystyle \int_1^\infty x^2 e^{-x^2} \dx{x}$ converges.
+$\DS \int_1^\infty x^2 e^{-x^2} \dx{x}$ converges.
 Note that
 \begin{align*}
 \lim_{q\to\infty}  \int_1^q x^3 e^{-x^2} \dx{x}
@@ -2714,10 +2714,10 @@ Note that
 &= \lim_{q\to\infty} -\frac{1}{2} \left( e^{-q^2} + q^2 e^{-q^2} 
 - 2 e^{-1} \right)  = \frac{1}{e} \ ,
 \end{align*}
-where we have used the substitution $\displaystyle u=x^2$ for the
+where we have used the substitution $\DS u=x^2$ for the
 first equality, integration by parts for the second equality, and
 l'Hospital Rule to compute
-$\displaystyle \lim_{q\to \infty} q^2 e^{-q^2} = 0$.  Hence
+$\DS \lim_{q\to \infty} q^2 e^{-q^2} = 0$.  Hence
 \[
 \int_0^q x^2 e^{-x^2}\dx{x}
 = \underbrace{\int_0^1 x^2 e^{-x^2}\dx{x}}_{\in \RR}
@@ -2730,23 +2730,23 @@ converges as $q \to \infty$.
 \left| \frac{\sin(4x)}{x^2 -x -2}\right|
 \leq \frac{1}{x^2 -x -2} = \frac{1}{(x-2)(x+1)}
 \]
-for $x\geq 3$.  Moreover, $\displaystyle x -2 \geq \frac{x}{3}
+for $x\geq 3$.  Moreover, $\DS x -2 \geq \frac{x}{3}
 \Rightarrow \frac{1}{x-2} \leq \frac{3}{x}$ and
-$\displaystyle x+1 > x \Rightarrow \frac{1}{x+1} < \frac{1}{x}$
+$\DS x+1 > x \Rightarrow \frac{1}{x+1} < \frac{1}{x}$
 for $x\geq 3$.  Thus
-$\displaystyle \left| \frac{\sin(4x)}{x^2 -x -2}\right| <\frac{3}{x^2}$
+$\DS \left| \frac{\sin(4x)}{x^2 -x -2}\right| <\frac{3}{x^2}$
 for $x\geq 3$.
-Since $\displaystyle \int_3^\infty \frac{1}{x^2} \dx{x}$ converges
-because $\displaystyle \int_3^\infty x^{-p}\dx{x}$ converges for $p>1$,
+Since $\DS \int_3^\infty \frac{1}{x^2} \dx{x}$ converges
+because $\DS \int_3^\infty x^{-p}\dx{x}$ converges for $p>1$,
 we get from the comparison theorem that
-$\displaystyle \int_3^\infty \frac{\sin(4x)}{x^2 -x -2}\dx{x}$
+$\DS \int_3^\infty \frac{\sin(4x)}{x^2 -x -2}\dx{x}$
 converges absolutely, and so converges.
 
-\subQ{h} Since $\displaystyle \tan(u) > u$ for $0< u <1$, we get
-$\displaystyle \tan\left(\frac{1}{x}\right) > \frac{1}{x}$ for
-$1\leq x<\infty$.  Since $\displaystyle \int_1^\infty \frac{1}{x} \dx{x}$
+\subQ{h} Since $\DS \tan(u) > u$ for $0< u <1$, we get
+$\DS \tan\left(\frac{1}{x}\right) > \frac{1}{x}$ for
+$1\leq x<\infty$.  Since $\DS \int_1^\infty \frac{1}{x} \dx{x}$
 diverges, we get from the comparison test that
-$\displaystyle \int_1^\infty \tan\left(\frac{1}{x}\right) \dx{x}$
+$\DS \int_1^\infty \tan\left(\frac{1}{x}\right) \dx{x}$
 diverges.
 \end{sol}
 
@@ -2754,17 +2754,17 @@ diverges.
 Consider the function
 \[
 f(x) = \begin{cases}
-1 & \displaystyle
+1 & \DS
 \quad \text{if} \  x \in \left[n,n + \frac{1}{2^n}\right]
 \ \text{for some}\  n \in \NNp \\
 0 & \quad \text{otherwise}
 \end{cases}
 \]
 \subQ{a} Prove that $f(x) \not\to 0$ as $x \to \infty$ but $f$ is bounded.\\
-\subQ{b} Prove that $\displaystyle \int_0^\infty f(x) \dx{x}$ converges and is
+\subQ{b} Prove that $\DS \int_0^\infty f(x) \dx{x}$ converges and is
 equal to $1$.\\
 \subQ{c} Construct an unbounded function $f:\RR\to \RR$ such that
-$\displaystyle \int_0^\infty f(x) \dx{x}$ converges.
+$\DS \int_0^\infty f(x) \dx{x}$ converges.
 \end{question}
 
 \begin{sol}
@@ -2772,7 +2772,7 @@ $\displaystyle \int_0^\infty f(x) \dx{x}$ converges.
 $f(x) \to 0$ as $x \to \infty$.
 
 \subQ{b}
-Let $\displaystyle F(q) = \int_0^q f(x) \dx{x}$.
+Let $\DS F(q) = \int_0^q f(x) \dx{x}$.
 Since $f(x)\geq 0$ for all $x\geq 0$, the function $F$ is
 monotonically increasing.  Moreover
 \[
@@ -2782,24 +2782,24 @@ F(q) \leq \sum_{n=1}^{\intpt{q}} \frac{1}{2^n} =
 \]
 for all $q$, where $\intpt{q}$ is the integer part of $q$.  Since $F$ is
 monotonically increasing and bounded, we have that
-$\displaystyle \lim_{q\to \infty} F(q) = \sup_{q\geq 0} F(q)$
+$\DS \lim_{q\to \infty} F(q) = \sup_{q\geq 0} F(q)$
 exists.
 
 Given $\epsilon >0$, choose $M$ large enough such that
-$\displaystyle \left| \sum_{n=1}^m \frac{1}{2^n} - 1 \right| < \epsilon$
+$\DS \left| \sum_{n=1}^m \frac{1}{2^n} - 1 \right| < \epsilon$
 for $m \geq M$.  This is possible because the geometric series 
-$\displaystyle \sum_{n=1}^\infty \frac{1}{2^n}$ converges to $1$.
-Hence, for $\displaystyle q> M+ 1/2^M$, we have
+$\DS \sum_{n=1}^\infty \frac{1}{2^n}$ converges to $1$.
+Hence, for $\DS q> M+ 1/2^M$, we have
 \[
 1 \geq F(q) \geq F(M + 1/2^M) = \sum_{n=1}^M \frac{1}{2^n} > 1-\epsilon \ .
 \]
 Since $\epsilon$ is arbitrary, we get
-$\displaystyle \lim_{q\to \infty} F(q) = \sup_{q\geq 0} F(q) = 1$.
+$\DS \lim_{q\to \infty} F(q) = \sup_{q\geq 0} F(q) = 1$.
 
 \subQ{c} Consider the function
 \[
 g(x) = \begin{cases}
-n & \displaystyle
+n & \DS
 \quad \text{if} \  x \in \left[n,n + \frac{1}{n2^n}\right]
 \ \text{for some}\  n \in \NNp \\
 0 & \quad \text{otherwise}
@@ -2807,7 +2807,7 @@ n & \displaystyle
 \]
 It is clear that $g$ is not bounded because $g(n)=n$ for all positive
 integers $n$.
-Let $\displaystyle G(q) = \int_0^q g(x) \dx{x}$.
+Let $\DS G(q) = \int_0^q g(x) \dx{x}$.
 Since $g(x)\geq 0$ for all
 $x\geq 0$, the function $G$ is monotonically increasing.  Moreover
 \[
@@ -2817,23 +2817,23 @@ G(q) \leq \sum_{n=1}^{\intpt{q}} \frac{n}{n2^n} =
 \]
 for all $q$, where $\intpt{q}$ is the integer part of $q$.  Since $G$ is
 monotonically increasing and bounded, we have that
-$\displaystyle \lim_{q\to \infty} G(q) = \sup_{q\geq 0} G(q)$
+$\DS \lim_{q\to \infty} G(q) = \sup_{q\geq 0} G(q)$
 exists.  We also have $G(q) = F(q)$ for all positive integer $q$.  Thus
-$\displaystyle \lim_{\substack{q\to \infty\\ q \in \NNp}} G(q) =
+$\DS \lim_{\substack{q\to \infty\\ q \in \NNp}} G(q) =
 \lim_{\substack{q\to \infty\\ q\in \NNp}} F(q) = 1$.
-Since $\displaystyle \lim_{q\to \infty} G(q)$ exists, we have
-$\displaystyle \lim_{q\to \infty} G(q) = 1$.
+Since $\DS \lim_{q\to \infty} G(q)$ exists, we have
+$\DS \lim_{q\to \infty} G(q) = 1$.
 \end{sol}
 
 \begin{question}
 Prove that                     \label{questsinoxCD}
-$\displaystyle \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
+$\DS \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
 diverges but
-$\displaystyle \int_1^\infty \frac{\sin(x)}{x} \dx{x}$ converges
+$\DS \int_1^\infty \frac{\sin(x)}{x} \dx{x}$ converges
 \end{question}
 
 \begin{sol}
-We first prove that $\displaystyle \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
+We first prove that $\DS \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
 diverges.  We have
 \begin{align*}
 \int_{n\pi}^{(n+1)\pi} \frac{|\sin(x)|}{x} \dx{x}
@@ -2853,7 +2853,7 @@ for $n \geq 1$.  Thus
 \int_{n\pi}^{(n+1)\pi} \frac{|\sin(x)|}{x} \dx{x} \geq \frac{2}{(n+1)\pi}
 \geq \frac{1}{\pi} \int_{n\pi}^{(n+1)\pi} \frac{1}{x}\dx{x}
 \]
-for $\displaystyle n\in \NNp$.
+for $\DS n\in \NNp$.
 
 Since
 \[
@@ -2862,22 +2862,22 @@ Since
 \geq \frac{1}{\pi} \sum_{n=1}^{q-1} \int_{n\pi}^{(n+1)\pi} \frac{1}{x} \dx{x}
 = \frac{1}{\pi} \int_{\pi}^{q\pi} \frac{1}{x} \dx{x}
 \]
-for $\displaystyle q \in \NNp$, and
-$\displaystyle \int_\pi^\infty \frac{1}{x} \dx{x}$ diverges, we get
-that $\displaystyle \int_\pi^\infty \frac{|\sin(x)|}{x} \dx{x}$
+for $\DS q \in \NNp$, and
+$\DS \int_\pi^\infty \frac{1}{x} \dx{x}$ diverges, we get
+that $\DS \int_\pi^\infty \frac{|\sin(x)|}{x} \dx{x}$
 diverges and therefore
-$\displaystyle \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
+$\DS \int_1^\infty \frac{|\sin(x)|}{x} \dx{x}$
 diverges.
 
-To prove that $\displaystyle \int_1^\infty \frac{\sin(x)}{x} \dx{x}$
+To prove that $\DS \int_1^\infty \frac{\sin(x)}{x} \dx{x}$
 converges, we use integration by parts to get
 \[
 \int_1^q \frac{\sin(x)}{x} \dx{x}
 = - \frac{\cos(x)}{x}\bigg|_1^q - \int_1^q \frac{\cos(x)}{x^2} \dx{x}
 = \cos(1) - \frac{\cos(q)}{q} - \int_1^q \frac{\cos(x)}{x^2} \dx{x} \ .
 \]
-Since $\displaystyle \frac{|\cos(x)|}{x^2} \leq \frac{1}{x^2}$ and
-$\displaystyle \int_1^\infty \frac{1}{x^2}\dx{x}$ converges, we get that
+Since $\DS \frac{|\cos(x)|}{x^2} \leq \frac{1}{x^2}$ and
+$\DS \int_1^\infty \frac{1}{x^2}\dx{x}$ converges, we get that
 \[
 \lim_{q\to \infty} \int_1^q \frac{\sin(x)}{x} \dx{x}
 = \cos(1) - \lim_{q\to \infty} \int_1^q \frac{\cos(x)}{x^2} \dx{x}
@@ -2889,10 +2889,10 @@ exists.
 Let $f:[0,\infty[\to \RR$ be a continuous function and
 $g:[0,\infty[\to \RR$ be a continuously differentiable function.
 Suppose that
-$\displaystyle F(x) = \int_0^x f(y) \dx{y}$ is bounded on $[0,\infty[$,
+$\DS F(x) = \int_0^x f(y) \dx{y}$ is bounded on $[0,\infty[$,
 $g'(x) \leq 0$ for $x\geq 0$, and
-$\displaystyle \lim_{x\to \infty} g(x) = 0$.
-Prove that $\displaystyle \int_0^\infty f(x) g(x) \dx{x}$ converges.
+$\DS \lim_{x\to \infty} g(x) = 0$.
+Prove that $\DS \int_0^\infty f(x) g(x) \dx{x}$ converges.
 \end{question}
 
 \begin{sol}
@@ -2922,15 +2922,15 @@ because $F(0) = 0$.  Moreover
 \end{align*}
 as $q \to \infty$, where we have used the second hypothesis for the
 first equality and the third hypothesis to compute the limit.  Thus
-$\displaystyle \int_0^\infty F(x) g'(x) \dx{x}$ converges absolutely
+$\DS \int_0^\infty F(x) g'(x) \dx{x}$ converges absolutely
 and therefore converges.  It follows from (\ref{impprodA}) and 
-(\ref{impprodB}) that $\displaystyle \int_0^\infty f(x) g(x) \dx{x}$
+(\ref{impprodB}) that $\DS \int_0^\infty f(x) g(x) \dx{x}$
 converges.
 \end{sol}
 
 \begin{question}
 Suppose that $f:[0,1]\to \RR$ is Riemann integrable, prove that
-$\displaystyle \lim_{q\to 0^+} \int_q^1 f(x) \dx{x} = \int_0^1 f(x) \dx{x}$.
+$\DS \lim_{q\to 0^+} \int_q^1 f(x) \dx{x} = \int_0^1 f(x) \dx{x}$.
 This shows that the definition of the improper integral agrees with
 the definition of the Riemann integral when the function is Riemann
 integrable.
@@ -2938,9 +2938,9 @@ integrable.
 
 \begin{question}
 Give a function $f:[a,b]\to \RR$ such that
-$\displaystyle \lim_{q\to a^+} \int_q^b f(x) \dx{x} = \int_a^b f(x) \dx{x}$
+$\DS \lim_{q\to a^+} \int_q^b f(x) \dx{x} = \int_a^b f(x) \dx{x}$
 but
-$\displaystyle \lim_{q\to a^+} \int_q^b |f(x)| \dx{x}$ does not exist.
+$\DS \lim_{q\to a^+} \int_q^b |f(x)| \dx{x}$ does not exist.
 The property that $f$ integrable implies $|f|$ integrable does not hold for
 improper integrals.
 \end{question}
@@ -2949,15 +2949,15 @@ improper integrals.
 \begin{question}
 Suppose that $f:[1,\infty[\to \RR$ is a monotonically decreasing
 function such that $f(x)\geq 0$ for all $x \geq 1$.  Prove that
-$\displaystyle \int_1^\infty f(x)\dx{x}$ converges if and only if the
-series $\displaystyle \sum_{k=1}^\infty f(k)$ converges.  This is
+$\DS \int_1^\infty f(x)\dx{x}$ converges if and only if the
+series $\DS \sum_{k=1}^\infty f(k)$ converges.  This is
 called the {\bfseries integral test}\index{Integral Test}.
 \end{question}
 
 \begin{sol}
 \stage{$\Rightarrow$}
-Suppose that $\displaystyle \int_1^\infty f(x)\dx{x}$ converges.  Let
-$\displaystyle M = \int_1^\infty f(x)\dx{x} < \infty$.  Since
+Suppose that $\DS \int_1^\infty f(x)\dx{x}$ converges.  Let
+$\DS M = \int_1^\infty f(x)\dx{x} < \infty$.  Since
 $f(x) \geq 0$ for all $x\geq 1$, we have
 \[
   M = \int_1^\infty f(x) \dx{x} \geq \int_1^N f(x) \dx{x}
@@ -2968,17 +2968,17 @@ M \geq \int_1^N f(x) \dx{x} = \sum_{n=1}^{N-1} \int_n^{n+1} f(x) \dx{x}
 \geq \sum_{n=1}^{N-1} \int_n^{n+1} f(n+1) \dx{x}
 = \sum_{n=1}^{N-1} f(n+1) = \sum_{n=2}^N f(n)
 \]
-for all $N>0$.  Thus $\displaystyle S_N= \sum_{n=1}^N f(n)$ is an
+for all $N>0$.  Thus $\DS S_N= \sum_{n=1}^N f(n)$ is an
 non-decreasing and bounded sequence; more precisely, bounded by $M + f(1)$.
-It follows that $\displaystyle \left\{ S_N \right\}_{N=1}^\infty$
-converges; namely, $\displaystyle \sum_{n=1}^\infty f(n)$ converges.
+It follows that $\DS \left\{ S_N \right\}_{N=1}^\infty$
+converges; namely, $\DS \sum_{n=1}^\infty f(n)$ converges.
 
 \stage{$\Leftarrow$}
-Suppose that $\displaystyle \sum_{n=1}^\infty f(n)$ converges.
-Let $\displaystyle M = \sum_{n=1}^\infty f(n) < \infty$.
-We have that $\displaystyle F(q) = \int_1^q f(x) \dx{x}$ for $q \geq 1$
+Suppose that $\DS \sum_{n=1}^\infty f(n)$ converges.
+Let $\DS M = \sum_{n=1}^\infty f(n) < \infty$.
+We have that $\DS F(q) = \int_1^q f(x) \dx{x}$ for $q \geq 1$
 is a non-decreasing, non-negative function because $f(x)\geq 0$ for all
-$x \geq 1$.   Given $q \geq 1$, choose $\displaystyle N \in \NNp$ such that
+$x \geq 1$.   Given $q \geq 1$, choose $\DS N \in \NNp$ such that
 $N\geq q$.  Since $f(x) \geq 0$ for all $x \geq 1$, we have
 \[
 F(q) = \int_1^q f(x) \dx{x} \leq \int_1^N f(x) \dx{x} \ .
@@ -2991,37 +2991,37 @@ F(q) &\leq \int_1^N f(x) \dx{x} = \sum_{n=1}^{N-1} \int_n^{n+1} f(x) \dx{x} \\
 \end{align*}
 Since $q \geq 1$ is arbitrary, $F$ is also bounded by $M$.  Since
 $F:[1,\infty[\to \RR$ is a bounded and non-decreasing function, we
-have that $\displaystyle \lim_{q\to \infty} F(q)$ exists; namely,
-$\displaystyle \int_1^\infty f(x)\dx{x}$ converges.
+have that $\DS \lim_{q\to \infty} F(q)$ exists; namely,
+$\DS \int_1^\infty f(x)\dx{x}$ converges.
 \end{sol}
 
 \begin{question}
 Suppose that $f:[a,\infty[\to \RR$ is integrable on all bounded
 intervals of the form $[a,q]$.  Prove that
-$\displaystyle \int_a^\infty f(x)\dx{x}$
+$\DS \int_a^\infty f(x)\dx{x}$
 converges if and only if for every $\epsilon>0$ there exists $K>a$
 such that
-$\displaystyle \left| \int_c^d f(x)\dx{x} \right| < \epsilon$ for
+$\DS \left| \int_c^d f(x)\dx{x} \right| < \epsilon$ for
 $K\leq c \leq d$.
 \end{question}
 
 \begin{sol}
-Let $\displaystyle F(q) = \int_a^q f(x) \dx{x}$ for $q \geq a$.
+Let $\DS F(q) = \int_a^q f(x) \dx{x}$ for $q \geq a$.
 The question can be reformulated as follows.
-Show that $\displaystyle \lim_{q\to \infty} F(q)$ exists if and only
+Show that $\DS \lim_{q\to \infty} F(q)$ exists if and only
 if there exists for every $\epsilon>0$ a constant $K>a$ such that
 $|F(d) - F(c) |< \epsilon$ for $K\leq c \leq d$.  But this is just
 the Cauchy Criterion of convergence for the function $F:[0,\infty[\to \RR$.
 \end{sol}
 
 \begin{question}
-Suppose that $\displaystyle \{ f_k\}_{k=0}^\infty$ is a sequence of functions
+Suppose that $\DS \{ f_k\}_{k=0}^\infty$ is a sequence of functions
 defined on $]0,\infty[$ such that (1) $f_k$ is integrable on $[a,b]$ for
 every interval $[a,b] \subset ]0,\infty[$, (2) there exists a function
 $f:]0,\infty[\to\RR$ such that $f_k \to f$ uniformly on compact
 subsets of $]0,\infty[$ as $k \to \infty$, and (3) there exists a function
 $g:]0,\infty[\to\RR$ such that $|f_k|\leq g$ on $]0,\infty[$ and
-$\displaystyle \int_0^\infty g(x)\dx{x}$ converges.  Prove that
+$\DS \int_0^\infty g(x)\dx{x}$ converges.  Prove that
 \[
 \lim_{k\to \infty} \int_0^\infty f_k(x)\dx{x} = \int_0^\infty f(x)\dx{x}
 \]

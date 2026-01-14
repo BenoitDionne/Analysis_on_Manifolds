@@ -18,8 +18,8 @@ applications.
 
 \section{Gradient, Curl and Divergence}
 
-Let $\Omega$ be an open subset of $\displaystyle \RR^3$ and
-$\displaystyle F:\Omega \rightarrow \RR^3$ be a differentiable vector
+Let $\Omega$ be an open subset of $\DS \RR^3$ and
+$\DS F:\Omega \rightarrow \RR^3$ be a differentiable vector
 field.  The {\bfseries curl}\index{Vector Field!Curl} of
 $F = F_1\VEC{e}_1 + F_2\VEC{e}_2 + F_3\VEC{e}_3$
 is defined (symbolically) by
@@ -28,7 +28,7 @@ is defined (symbolically) by
 \curL F & =  \graD \times F
 = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x_1} & \displaystyle \pdydx{}{x_2} & \displaystyle
+\DS \pdydx{}{x_1} & \DS \pdydx{}{x_2} & \DS
 \pdydx{}{x_3} \\[0.7em]
 F_1 & F_2 & F_3
 \end{pmatrix} \\
@@ -48,7 +48,7 @@ vector field $F$ is defined (symbolically) by
 \diV F =  \graD \cdot F
 = \pdydx{F_1}{x_1} + \pdydx{F_2}{x_2} + \pdydx{F_3}{x_3} \ .
 \]
-If $\displaystyle F:\Omega \rightarrow \RR^3$ is a twice continuously
+If $\DS F:\Omega \rightarrow \RR^3$ is a twice continuously
 differentiable vector field, then the reader can again verify by a
 simple computation that $\diV(\curL F) = 0$.
 
@@ -56,7 +56,7 @@ Everything that we just said about the curl and the divergence can be
 rephrased in term of differential forms.  We first match functions and
 vector fields to differential forms.
 
-Let $f: \Omega \to \RR$ and $\displaystyle F:\Omega \to \RR^3$ be sufficiently
+Let $f: \Omega \to \RR$ and $\DS F:\Omega \to \RR^3$ be sufficiently
 continuously differentiable.  We define the following associations.
 \begin{align*}
 f & \longleftrightarrow f \\
@@ -120,7 +120,7 @@ We will use the following definition from now on.
 \begin{defn} \label{defnPathV1}
 A {\bfseries curve}\index{Curve} or {\bfseries path}\index{Path} is a
 singular $1$-cube represented by a continuously differentiable function
-$\displaystyle \sigma:I_1 = [0,1] \to \RR^n$.  If $\sigma(0) = \VEC{x}_0$ and
+$\DS \sigma:I_1 = [0,1] \to \RR^n$.  If $\sigma(0) = \VEC{x}_0$ and
 $\sigma(1) = \VEC{x}_1$, then we say that
 $\sigma$ is a {\bfseries curve or path from $\VEC{x}_0$ to $\VEC{x}_1$}.
 \end{defn}
@@ -128,8 +128,8 @@ $\sigma$ is a {\bfseries curve or path from $\VEC{x}_0$ to $\VEC{x}_1$}.
 Without any consequence, we may
 replace the closed interval $[0,1]$ by any closed interval of the form
 $[a,b]$.  Recall that continuously differentiable means that
-$\displaystyle \sigma = \sum_{j=1}^n \sigma_i\,\VEC{e}_i$
-with $\displaystyle \sigma_j \in C^1([a,b])$ for $1 \leq j\leq n$.
+$\DS \sigma = \sum_{j=1}^n \sigma_i\,\VEC{e}_i$
+with $\DS \sigma_j \in C^1([a,b])$ for $1 \leq j\leq n$.
 
 We will interchangeably use the term ``curve'' to designate the
 function $\sigma$ or its image $C = \sigma([a,b])$.  In classical
@@ -151,7 +151,7 @@ theorem without careful handling.
 We can recast our definition of orientation on $1$-dimensional
 manifolds to the context of curves.  Suppose that $C$ has a
 continuously differentiable parametric representation
-$\displaystyle \sigma:[a,b]\to \RR^n$ and assume that
+$\DS \sigma:[a,b]\to \RR^n$ and assume that
 $\sigma'(w) \neq \VEC{0}$ for all $w \in [a,b]$.  We may continuously
 assign to each point $\VEC{u} \in C$ a unit tangent vector
 $\VEC{t}(\VEC{u})$.  The
@@ -159,7 +159,7 @@ $\VEC{t}(\VEC{u})$.  The
 {\bfseries direction}\index{Curve!Direction} on $C$ is given by continuously
 selecting a unit tangent vector $\VEC{t}$ at each point of $C$.  The
 curve $C$ has therefore two possible orientations.
-The parametric representation $\displaystyle \sigma:[a,b] \to \RR^n$
+The parametric representation $\DS \sigma:[a,b] \to \RR^n$
 of $C$ is consistent with the orientation on $C$ if
 \begin{equation} \label{vcDefnTVc}
   \VEC{t}(\sigma(w)) = \|\sigma'(w)\|^{-1} \sigma'(w)
@@ -170,14 +170,14 @@ For this reason, it is common to give the orientation along a curve
 as the direction of the motion along the curve.  For instance, we may
 say that the direction along a curve $C$ between two points $\VEC{a}$
 and $\VEC{b}$ is from $\VEC{a}$ to $\VEC{b}$.  This means that a
-parametric representation $\displaystyle \sigma:[a,b] \to \RR^n$ of
+parametric representation $\DS \sigma:[a,b] \to \RR^n$ of
 $C$ must satisfy $\sigma(a) = \VEC{a}$ and $\sigma(b) = \VEC{b}$.
 Thus, we travel from $\VEC{a}$ to $\VEC{b}$ along $C$ as $t$ increases
 from $a$ to $b$.  The direction along the curve $C$ is therefore given
 by the unit tangent vector defined by (\ref{vcDefnTVc}).
 
 \pdfF{vect_calculus/Line}{Parametric representation of a curve}
-{$\displaystyle \sigma:[a,b]\rightarrow \RR^n$ is a parametric
+{$\DS \sigma:[a,b]\rightarrow \RR^n$ is a parametric
 representation of the curve $C$ consistent with its orientation.}{line}
 
 The {\bfseries line integral}\index{Line Integral of a Function} of a
@@ -186,7 +186,7 @@ function $f:C \rightarrow \RR$ along the curve $C$ is defined by
 \int_C f \dx{s} \equiv \int_a^b f(\sigma(w))\,\|\sigma'(w)\|\dx{w}
 \end{equation}
 if this integral exists, where as usual $\|\cdot\|$ denotes the
-Euclidean norm in $\displaystyle \RR^n$.  Using the change of variable
+Euclidean norm in $\DS \RR^n$.  Using the change of variable
 formula, we may show that the line integral of $f$ along $C$ does not
 depend on the parametric representation used.  We write
 \begin{equation} \label{classicvolelem1D}
@@ -216,18 +216,18 @@ where the third equality comes from (\ref{defn1Dvolelem}) with
 $\nu = \df{s}$.
 \end{rmk}
 
-Let $\displaystyle F:V \rightarrow \RR^n$ be a continuous
+Let $\DS F:V \rightarrow \RR^n$ be a continuous
 {\bfseries vector fields}\index{Vector Field}; namely, a continuous
-vector valued function from $V$ to $\displaystyle \RR^n$.
+vector valued function from $V$ to $\DS \RR^n$.
 The {\bfseries line integral}\index{Vector Field!Line Integral} of a
-vector field $\displaystyle F:V \to \RR^n$ along a curve $C$ is defined by
+vector field $\DS F:V \to \RR^n$ along a curve $C$ is defined by
 \begin{equation}\label{classicLineIntVectF}
   \int_C F \cdot \dx{\VEC{s}} \equiv \int_C F \cdot \VEC{t} \dx{s}
 = \int_a^b F(\sigma(w)) \cdot \sigma'(w) \dx{w}
 \end{equation}
 if this integral exists, where $\VEC{t}(\VEC{u})$ is a tangent unit
 vector to the curve $C$ at the point $\VEC{u} \in C$ and
-$\displaystyle \sigma:[a,b] \to \RR^n$ is a parametric representation
+$\DS \sigma:[a,b] \to \RR^n$ is a parametric representation
 of $C$, both of them consistent with the selected orientation on $C$.
 The integral is independent of the parametric representation of $C$
 used as long as this parametric representation is consistent with the
@@ -241,18 +241,18 @@ The definition of the line integral of a vector field in
 (\ref{classicLineIntVectF}) is nothing else than the integral of a
 differential $1$-form along a $1$-dimensional manifold.
 
-The integral $\displaystyle \int_C F \cdot \VEC{t} \dx{s}$ in
+The integral $\DS \int_C F \cdot \VEC{t} \dx{s}$ in
 (\ref{classicLineIntVectF}) is the integral
-$\displaystyle \int_{C\setminus \{\VEC{a},\VEC{b}\}} \omega$ defined
+$\DS \int_{C\setminus \{\VEC{a},\VEC{b}\}} \omega$ defined
 in Definition~\ref{DefIntMan} where $\omega$ is the differential $1$-form
-$\displaystyle \omega = \sum_{j=1}^n F_j \df{x_j}$.
+$\DS \omega = \sum_{j=1}^n F_j \df{x_j}$.
 \end{rmk}
 
 \begin{theorem}[Fundamental Theorem for Line Integral]
-Let $V$ be an open subset of $\displaystyle \RR^n$.  Suppose that
+Let $V$ be an open subset of $\DS \RR^n$.  Suppose that
 $C \subset V$ is a curve with a parametric representation
 $\sigma: [a,b] \to V$ consistent with its orientation.
-If $\displaystyle f \in C^1(V)$, then
+If $\DS f \in C^1(V)$, then
 \[
 \int_C \graD f \cdot \VEC{t} \dx{s} = f(\sigma(b)) - f(\sigma(a)) \ ,
 \]
@@ -265,14 +265,14 @@ consistent with the selected orientation on $C$.
 The Fundamental Theorem for Line Integral is just a special case
 of Theorem~\ref{stokesStokes}, Stokes' theorem, with the differential
 $0$-form $\omega$ replaced by $f$ and the singular $1$-cube $\sigma$
-replaced by $\displaystyle \tilde{\sigma}:[0,1]\to \RR^n$ defined by
+replaced by $\DS \tilde{\sigma}:[0,1]\to \RR^n$ defined by
 $\tilde{\sigma}(w) = \sigma(a + w(b-a))$ for $0 \leq w \leq 1$.  We
 get that
-$\displaystyle \int_{\tilde{\sigma}} \df{f} = \int_{\partial
+$\DS \int_{\tilde{\sigma}} \df{f} = \int_{\partial
 \tilde{\sigma}} f$.
 
 Since
-$\displaystyle \df{f} = \sum_{i=1}^n \pdydx{f}{x_i} \df{x_i}$, we have
+$\DS \df{f} = \sum_{i=1}^n \pdydx{f}{x_i} \df{x_i}$, we have
 \begin{align*}
 \int_C \graD f \cdot \VEC{t} \dx{s}
 &=\int_{[a,b]} \big(\graD f(\sigma(v))\big) \cdot \sigma'(v) \dx{v}
@@ -316,7 +316,7 @@ representations.
 
 \begin{defn}
 A curve $C$ with a parametric representation 
-$\displaystyle \sigma:[a,b]\rightarrow \RR^n$ is
+$\DS \sigma:[a,b]\rightarrow \RR^n$ is
 {\bfseries closed}\index{Curve!Closed} if $\sigma(a) = \sigma(b)$.
 \end{defn}
 
@@ -324,12 +324,12 @@ There are a couple of interesting consequences to the fundamental
 theorem of line integral.
 
 \begin{prop}\label{DGoint}
-Let $V$ be an open subset of $\displaystyle \RR^n$
-and $\displaystyle F:V \rightarrow \RR^n$ be a continuous vector field.
-The integral $\displaystyle \int_C F \cdot \VEC{t} \dx{s}$ is
+Let $V$ be an open subset of $\DS \RR^n$
+and $\DS F:V \rightarrow \RR^n$ be a continuous vector field.
+The integral $\DS \int_C F \cdot \VEC{t} \dx{s}$ is
 independent of the curve $C \subset V$ joining two points
 $\VEC{a}$ and $\VEC{b}$ in $V$ if and only if
-$\displaystyle \oint_C F \cdot \VEC{t} \dx{s} = 0$ for all
+$\DS \oint_C F \cdot \VEC{t} \dx{s} = 0$ for all
 closed curves $C$ in $V$.  As usual, $\VEC{t}(\VEC{u})$ is a tangent unit
 vector to the curve $C$ at the point $\VEC{u} \in C$ consistent with
 the orientation on $C$.
@@ -340,7 +340,7 @@ The symbol $\oint$ is used to denote an integral over a closed curve.
 \begin{proof}
 \stage{$\mathbf{\Rightarrow}$}
 Suppose that $C$ is a closed curve with a parametric representation
-$\displaystyle \sigma:[a,b]\rightarrow V$ consistent with its
+$\DS \sigma:[a,b]\rightarrow V$ consistent with its
 orientation. 
 Let $C_1$ be the curve with parametric representation
 $\sigma_1:[0,1] \to V$ given by
@@ -396,7 +396,7 @@ follows that
 - \int_a^b F(\sigma_2(w) \cdot \sigma_2'(w) \dx{w}
 = \int_{C_1} F \cdot \VEC{t} \dx{s} - \int_{C_2} F \cdot \VEC{t} \dx{s} \ . 
 \end{align*}
-Hence $\displaystyle \int_{C_1} F \cdot \VEC{t} \dx{s}
+Hence $\DS \int_{C_1} F \cdot \VEC{t} \dx{s}
 = \int_{C_2} F \cdot \VEC{t} \dx{s}$.
 \end{proof}
 
@@ -407,27 +407,27 @@ reader to prove these properties.
 
 If $C_1$ is a curve where the direction is from $\VEC{a}$ to $\VEC{b}$ and
 $C_2$ is the same curve where the direction is from $\VEC{b}$ to
-$\VEC{a}$, then $\displaystyle \int_{C_1} F\cdot \VEC{t} \dx{s}
+$\VEC{a}$, then $\DS \int_{C_1} F\cdot \VEC{t} \dx{s}
 = -\int_{C_2} F\cdot \VEC{t} \dx{s}$.
 
 If $C_1$ is a curve from $\VEC{a}$ to $\VEC{b}$ and
 $C_2$ is a curve from $\VEC{b}$ to $\VEC{c}$, then the union of these
 two curves forms a curve $C_3$ from $\VEC{a}$ to $\VEC{c}$ and
-$\displaystyle \int_{C_3} F\cdot \VEC{t} \dx{s} = \int_{C_1} F\cdot
+$\DS \int_{C_3} F\cdot \VEC{t} \dx{s} = \int_{C_1} F\cdot
 \VEC{t} \dx{s} + \int_{C_2} F\cdot \VEC{t} \dx{s}$.
 \end{rmk}
 
 \begin{defn}
-Let $\displaystyle F:V \rightarrow \RR^n$ be a continuous vector field.  If
-$\displaystyle \int_C F \cdot \VEC{t} \dx{s}$ is independent
+Let $\DS F:V \rightarrow \RR^n$ be a continuous vector field.  If
+$\DS \int_C F \cdot \VEC{t} \dx{s}$ is independent
 of the path $C$ in $V$ joining two points $\VEC{a}$ and $\VEC{b}$,
 then $F$ is called a
 {\bfseries conservative}\index{Vector Field!Conservative} vector field.
 \end{defn}
 
 \begin{prop}\label{DGconserveA}
-Let $V$ be an open subset $\displaystyle \RR^n$ and 
-$\displaystyle F:V \rightarrow \RR^n$ be a continuous
+Let $V$ be an open subset $\DS \RR^n$ and 
+$\DS F:V \rightarrow \RR^n$ be a continuous
 vector field.  If $F$ is conservative, then
 $F = \graD f$ for some real valued function $f$ defined on $V$.
 \end{prop}
@@ -436,11 +436,11 @@ $F = \graD f$ for some real valued function $f$ defined on $V$.
 We have that $V$ is the union of open connected components \footnote{The
 readers may consult an introductory textbook in topology (e.g.\
 \cite{MU}) if they are not familiar with the concept of connected and
-path-connected subsets.  In $\displaystyle \RR^n$, connected and path-connected
+path-connected subsets.  In $\DS \RR^n$, connected and path-connected
 open subsets are the same.  It is not true in all general topological
 spaces and it is not even true for close subsets of
-$\displaystyle \RR^n$.  For the
-present context, it suffices to know that $\displaystyle W \subset \RR^n$ is
+$\DS \RR^n$.  For the
+present context, it suffices to know that $\DS W \subset \RR^n$ is
 connected if for each $\VEC{a}, \VEC{b} \in W$ there exists a curve
 from $\VEC{a}$ to $\VEC{b}$.}.  Let $U$ be an open connected component
 of $V$.
@@ -455,7 +455,7 @@ Since $F$ is conservative, this
 definition is independent of the curve $C \subset U$ from $\VEC{x}_0$ to
 $\VEC{x}$ used.
 
-We prove that $\displaystyle \pdydx{f}{x_i}(\VEC{x}) = F_i(\VEC{x})$
+We prove that $\DS \pdydx{f}{x_i}(\VEC{x}) = F_i(\VEC{x})$
 for all $\VEC{x} \in W$ and $1 \leq i \leq n$.  Suppose that
 $\sigma:[0,1] \to U$ is the parametric representation of the curve $C$
 consistent with the orientation from $\VEC{x}_0$ to $\VEC{x}$.  Since
@@ -495,8 +495,8 @@ conservative according to Proposition~\ref{DGoint}.
 
 \subsection{A Little Note on Arc Length}\label{ALNAL}
 
-Suppose that $C$ is a curve in $\displaystyle \RR^n$ with the parametric
-representation $\displaystyle \sigma:[a,b] \to \RR^n$.  Recall that we
+Suppose that $C$ is a curve in $\DS \RR^n$ with the parametric
+representation $\DS \sigma:[a,b] \to \RR^n$.  Recall that we
 may tolerate that there be a finite subset $N$ of $[a,b]$ such that
 $\sigma$ is one-to-one on $[a,b]\setminus N$ but not on the full
 interval $[a,b]$.
@@ -511,8 +511,8 @@ As the partition becomes finer, we expect to get better
 approximations of what we intuitively define as the ``length'' of $C$.
 
 \begin{defn}  \label{defnArcLen}
-Let $C$ be a curve in $\displaystyle \RR^n$ with the parametric
-representation $\displaystyle \sigma:[a,b] \to \RR^n$.
+Let $C$ be a curve in $\DS \RR^n$ with the parametric
+representation $\DS \sigma:[a,b] \to \RR^n$.
 The {\bfseries length}\index{Curve!Length} $L$ of the curve
 $C$ is defined by
 \begin{equation}\label{ALNALa}
@@ -529,8 +529,8 @@ Since we assume that our parametric representations are continuously
 differentiable, we have the following result.
 
 \begin{theorem}\label{arclength}
-Suppose that $C$ is a curve in $\displaystyle \RR^n$ with the parametric
-representation $\displaystyle \sigma:[a,b] \to \RR^n$, then the length
+Suppose that $C$ is a curve in $\DS \RR^n$ with the parametric
+representation $\DS \sigma:[a,b] \to \RR^n$, then the length
 $L$ of the curve $C$ is given by
 \[
   L = \int_C \dx{s} = \int_a^b \|\sigma'(t)\| \dx{t} \ .
@@ -542,7 +542,7 @@ stated in Proposition~\ref{propAIFlstIAF} a version of this lemma for
 integrable real valued functions.
 
 \begin{lemma}
-If $\displaystyle f:[a,b]\to \RR^n$ is continuous, then
+If $\DS f:[a,b]\to \RR^n$ is continuous, then
 \[
   \left\| \int_a^b f(t) \dx{t} \right\| \leq \int_a^b \|f(t)\| \dx{t} \ .
 \]
@@ -553,11 +553,11 @@ Recall that
 \[
 \int_a^b f(t) \dx{t} =
 \begin{pmatrix}
-\displaystyle \int_a^b f_1(t) \dx{t} & \displaystyle \int_a^b f_2(t) \dx{t}
-& \ldots & \displaystyle \int_a^b f_n(t) \dx{t}
+\DS \int_a^b f_1(t) \dx{t} & \DS \int_a^b f_2(t) \dx{t}
+& \ldots & \DS \int_a^b f_n(t) \dx{t}
 \end{pmatrix}^\top \ .
 \]
-Given any unit vector $\displaystyle \VEC{v} \in \RR^n$, we get
+Given any unit vector $\DS \VEC{v} \in \RR^n$, we get
 \begin{equation} \label{NIflessINfEq1}
 \begin{split}
 \left| \left( \int_a^b f(t) \dx{t} \right) \cdot \VEC{v} \right|
@@ -567,12 +567,12 @@ Given any unit vector $\displaystyle \VEC{v} \in \RR^n$, we get
 = \int_a^b \| f(t) \| \dx{t} \ ,
 \end{split}
 \end{equation}
-where we have used Schwarz inequality in $\displaystyle \RR^n$ for the
+where we have used Schwarz inequality in $\DS \RR^n$ for the
 second inequality.
-We may assume that $\displaystyle \int_a^b f(t) \dx{t} \neq \VEC{0}$
+We may assume that $\DS \int_a^b f(t) \dx{t} \neq \VEC{0}$
 since the result is trivial in that case.  We get the conclusion of
 the lemma by using the unit vector
-$\displaystyle
+$\DS
 \VEC{v} = \left\|\int_a^b f(t) \dx{t}\right\|^{-1} \int_a^b f(t) \dx{t}$
 in (\ref{NIflessINfEq1}).
 \end{proof}
@@ -593,17 +593,17 @@ L_P(\sigma) =
 = \int_a^b \| \sigma'(t) \| \dx{t} \ .
 \]
 Since this is true for any partition $P$ of $[a,b]$, we get that
-$\displaystyle L \leq \int_a^b \| \sigma'(t) \| \dx{t}$.
+$\DS L \leq \int_a^b \| \sigma'(t) \| \dx{t}$.
 
 \stage{ii} Given $\epsilon > 0$, choose $\delta > 0$ such that
 $\|\sigma'(t) - \sigma'(s) \| < \epsilon$ for
 $|t-s| < \delta$.  This is possible because
-$\displaystyle \sigma':[a,b]\to \RR^n$ is continuous on the compact set
+$\DS \sigma':[a,b]\to \RR^n$ is continuous on the compact set
 $[a,b]$.  Therefore, it is uniformly continuous on $[a,b]$.
 
 Let $P= \{t_0,t_1,t_2, \ldots, t_N\}$ be a partition of
 $[a,b]$ such that $t_i - t_{i-1} < \delta$ for $1 \leq i \leq N$.
-Therefore $\displaystyle \|\sigma'(t)\| - \|\sigma'(t_i)\|
+Therefore $\DS \|\sigma'(t)\| - \|\sigma'(t_i)\|
 \leq \|\sigma'(t) - \sigma'(t_i)\| < \epsilon$
 for $t_{i-1} \leq t \leq t_i$.  Hence
 \begin{align*}
@@ -627,7 +627,7 @@ for $t_{i-1} \leq t \leq t_i$.  Hence
 2\epsilon (t_i -t_{i-1})
 \end{align*}
 where the second equality comes from
-$\displaystyle \int_{t_{i-1}}^{t_i} \|\sigma'(t_i)\| \dx{t} 
+$\DS \int_{t_{i-1}}^{t_i} \|\sigma'(t_i)\| \dx{t} 
 = \left\| \int_{t_{i-1}}^{t_i} \sigma'(t_i) \dx{t} \right\|$
 because $\sigma'(t_i)$ does not depend on $t$.  We conclude that
 \begin{align*}
@@ -638,15 +638,15 @@ because $\sigma'(t_i)$ does not depend on $t$.  We conclude that
 &= L_P(\sigma) + 2 \epsilon(b-a) \leq L + 2\epsilon (b-a) \ .
 \end{align*}
 Since this is true for any $\epsilon >0$, we get the inequality
-$\displaystyle \int_a^b \| \sigma'(t) \| \dx{t} \leq L$.
+$\DS \int_a^b \| \sigma'(t) \| \dx{t} \leq L$.
 \end{proof}
 
 The reader will read in Section~\ref{subsectArea} a totally different
 story for the area of a surface.
 
 \begin{defn} \label{defnALF}
-Let $C$ be a curve in $\displaystyle \RR^n$ with the parametric
-representation $\displaystyle \sigma:[a,b] \to \RR^n$.
+Let $C$ be a curve in $\DS \RR^n$ with the parametric
+representation $\DS \sigma:[a,b] \to \RR^n$.
 The {\bfseries arc length function}\index{Curve!Arc Length Function}
 along the curve $C$ is defined by
 \[
@@ -656,25 +656,25 @@ for $a \leq t \leq b$.
 \end{defn}
 
 \begin{defn}
-A curve $C$ in $\displaystyle \RR^n$ is said to be
+A curve $C$ in $\DS \RR^n$ is said to be
 {\bfseries parameterized by arc
 length}\index{Curve!Parameterized by Arc Length} if the parametric
-representation $\displaystyle \sigma:[a,b] \to \RR^n$ of $C$ satisfies
+representation $\DS \sigma:[a,b] \to \RR^n$ of $C$ satisfies
 $\|\sigma'(t)\|=1$ for $a \leq t \leq b$.
 \end{defn}
 
 If $C$ is parameterized by arc length with the
-parametric representation $\displaystyle \sigma:[a,b] \to \RR^n$,
+parametric representation $\DS \sigma:[a,b] \to \RR^n$,
 then the arc length function satisfies $s(t) = t - a$.  In particular, the
 length $L$ of $C$ is $L = b-a$.
 
-If $\displaystyle \sigma:[a,b] \to \RR^n$ is a parametric
+If $\DS \sigma:[a,b] \to \RR^n$ is a parametric
 representation of a curve $C$ such that $\|\sigma'(t)\| \neq 0$ for
 $a\leq t \leq b$, then the arc length function $s:[a,b] \to [0,L]$ is a
 continuously differentiable and strictly increasing function.  Thus
-$\displaystyle s^{-1}:[0,L] \to [a,b]$ exists and is a continuously
+$\DS s^{-1}:[0,L] \to [a,b]$ exists and is a continuously
 differentiable function.  If we set
-$\displaystyle \breve{\sigma}(t) = \sigma(s^{-1}(t))$ for
+$\DS \breve{\sigma}(t) = \sigma(s^{-1}(t))$ for
 $0 \leq t \leq L$, then
 the curve $C$ is parameterized by arc length with
 the parametric representation $\breve{\sigma}$ because
@@ -693,11 +693,11 @@ for $0 \leq t \leq L$.
 \section{Surface Integrals}
 
 In this section, a {\bfseries surface}\index{Surface} is a
-continuously differentiable function $\displaystyle \rho:W \to \RR^n$ where
-$W$ is an open subset of $\displaystyle \RR^2$ and $\diff \rho(\VEC{w})$
+continuously differentiable function $\DS \rho:W \to \RR^n$ where
+$W$ is an open subset of $\DS \RR^2$ and $\diff \rho(\VEC{w})$
 is of rank $2$ for all $\VEC{w} \in W$.  Thus, a surface is a $2$-dimensional
-manifold without boundary of class $\displaystyle C^1$ of
-$\displaystyle \RR^n$ which can be represented with only
+manifold without boundary of class $\DS C^1$ of
+$\DS \RR^n$ which can be represented with only
 one local chart.
 
 As we did for the term ``curve'', we will also interchangeably use the
@@ -708,7 +708,7 @@ the function $\rho$ is called a
 of the surface $S$. 
 
 There may be occasions where we will tolerate that
-$\displaystyle \rho: W \to \RR^n$ be one-to-one except on a set of measure zero.
+$\DS \rho: W \to \RR^n$ be one-to-one except on a set of measure zero.
 
 Suppose that $f:S \rightarrow \RR$ is a function. The
 {\bfseries surface integral}\index{Surface Integral of a Function}
@@ -722,12 +722,12 @@ if this integral exists, where (symbolically)
 \[
 (\rho_{w_1} \times \rho_{w_2})(\VEC{w}) = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{\rho_1}{w_1}(\VEC{w}) & \displaystyle
+\DS \pdydx{\rho_1}{w_1}(\VEC{w}) & \DS
 \pdydx{\rho_2}{w_1}(\VEC{w}) &
-\displaystyle \pdydx{\rho_3}{w_1}(\VEC{w}) \\[0.7em]
-\displaystyle \pdydx{\rho_1}{w_2}(\VEC{w}) & \displaystyle
+\DS \pdydx{\rho_3}{w_1}(\VEC{w}) \\[0.7em]
+\DS \pdydx{\rho_1}{w_2}(\VEC{w}) & \DS
 \pdydx{\rho_2}{w_2}(\VEC{w}) &
-\displaystyle \pdydx{\rho_3}{w_2}(\VEC{w})
+\DS \pdydx{\rho_3}{w_2}(\VEC{w})
 \end{pmatrix}
 \]
 if the determinant is developed along the top row only.
@@ -767,20 +767,20 @@ is continuously differentiable and $\diff \rho(\VEC{w})$ has rank $2$
 for all $\VEC{w} \in W$, we may continuously assign to each point
 $\VEC{u}$ of $C$ a unit normal vector $\VEC{n}(\VEC{u})$.
 
-If $S$ is a surface in $\displaystyle \RR^3$, then there is a close
+If $S$ is a surface in $\DS \RR^3$, then there is a close
 link between the selected orientation on $S$ and the outward unit normal to $S$
 at each point of $S$.  As we have seen in Remark~\ref{rmkOUNinRR3},
-if $\displaystyle \mu_{\VEC{u}} =
+if $\DS \mu_{\VEC{u}} =
 [(\VEC{u},\VEC{v}_{\VEC{u},1}), (\VEC{u},\VEC{v}_{\VEC{u},2}) ]$
 is the selected orientation on $\TS_{\VEC{u}} S$, where
-$\displaystyle \{ (\VEC{u},\VEC{v}_{\VEC{u},1}),
+$\DS \{ (\VEC{u},\VEC{v}_{\VEC{u},1}),
 (\VEC{u},\VEC{v}_{\VEC{u},2}) \}$ is an orthonormal basis of
 $\TS_{\VEC{u}} S$, then the outward unit normal is
-$\displaystyle \VEC{n}_{\VEC{u}}
+$\DS \VEC{n}_{\VEC{u}}
 = (\VEC{u}, \VEC{v}_{\VEC{u},1} \times \VEC{v}_{\VEC{u},2})$.
 Suppose that $\rho$ is a parametric representation consistent with the
 orientation on $S$, then
-$\displaystyle \mu_{\rho(\VEC{w})} = \left[ \left(\rho(\VEC{w}),
+$\DS \mu_{\rho(\VEC{w})} = \left[ \left(\rho(\VEC{w}),
 \pdydx{\rho}{w_1}(\VEC{w})\right), \left(\rho(\VEC{w}),
 \pdydx{\rho}{w_2}(\VEC{w})\right) \right]$ for all $\VEC{w} \in W$
 and
@@ -796,7 +796,7 @@ define on orientation on $S$ by continuously selecting an outward unit
 normal vector $\VEC{n}$ at each point of $S$.  This is another
 confirmation that the surface $S$ has two possible orientations.
 
-Suppose that $\displaystyle F:\Omega \rightarrow \RR^3$ is a vector field.
+Suppose that $\DS F:\Omega \rightarrow \RR^3$ is a vector field.
 The {\bfseries surface integral of $F$ over the oriented surface
 $S$}\index{Vector Field!Surface Integral} is
 defined by
@@ -820,8 +820,8 @@ The definition of the surface integral of a
 vector field in (\ref{classicSurfInt}) is nothing else than the
 integral of a differential $2$-form over a $2$-dimensional manifold.
 namely, the integral
-$\displaystyle \int_S F \cdot \VEC{n} \dx{S}$ in (\ref{classicSurfInt})
-is nothing else than the integral $\displaystyle \int_S \omega$ defined
+$\DS \int_S F \cdot \VEC{n} \dx{S}$ in (\ref{classicSurfInt})
+is nothing else than the integral $\DS \int_S \omega$ defined
 in (\ref{DefIntMan}) where $\omega$ is the differential $2$-form
 $\omega = F_1 \df{x_2} \wedge \df{x_3} + F_2 \df{x_3} \wedge \df{x_1}
 + F_3 \df{x_1} \wedge \df{x_2}$.   This can
@@ -854,7 +854,7 @@ F_1 \df{x_2}\wedge \df{x_3} + F_2 \df{x_3}\wedge \df{x_1}
 
 \begin{rmk}
 If the surface $S$ is given by $w_3=g(w_1,w_2)$ for
-$\displaystyle (w_1,w_2) \in W \subset \RR^2$, then
+$\DS (w_1,w_2) \in W \subset \RR^2$, then
 \begin{align*}
 &\iint_S f \dx{S} \\
 &\ = \iint_W f(w_1,w_2,g(w_1,w_2))
@@ -885,7 +885,7 @@ We also have
 + F_3(w_1,w_2,g(w_1,w_2)) \right) \dx{w_1}\dx{w_2} \ ,
 \end{align*}
 where $\epsilon = 1$ if
-$\displaystyle \left(-\pdydx{g}{w_1}(\VEC{w}),
+$\DS \left(-\pdydx{g}{w_1}(\VEC{w}),
 -\pdydx{g}{w_2}(\VEC{w}), 1\right)$ points in the same direction than
 the normal\\ $\VEC{n}(w_1,w_2,g(w_1,w_2))$ associated to the orientation
 on $S$ and $\epsilon = -1$ otherwise.  This is a special case of
@@ -925,15 +925,15 @@ instance, we would like to use polygonal surfaces (like triangles or
 rectangles) to approximate the area of a surface.  Unfortunately, this
 approach does not work as expected.
 
-Suppose that $\displaystyle \rho: R \to \RR^3$ is a parametric
-representation of a surface $S$ where $\displaystyle R \subset \RR^2$
+Suppose that $\DS \rho: R \to \RR^3$ is a parametric
+representation of a surface $S$ where $\DS R \subset \RR^2$
 is an open rectangle.  Suppose that we cut $R$ into small triangles
 $R_i$.  For each triangle $R_i$. let $A_i$ be the area of the
-triangles in $\displaystyle \RR^3$ having vertices at
+triangles in $\DS \RR^3$ having vertices at
 $\rho(\VEC{a}_i)$, $\rho(\VEC{b}_i)$ and $\rho(\VEC{c}_i)$ where
 $\VEC{a}_i$, $\VEC{b}_i$ and $\VEC{c}_i$ are the vertices of $R_i$.
 We approximate the area of
-$\displaystyle \rho(R_i) \subset \RR^3$ by $A_i$.   If the
+$\DS \rho(R_i) \subset \RR^3$ by $A_i$.   If the
 triangles $R_i$ are very small, then the area of $\rho(R)$ should be
 approximately equal to the sum of the $A_i$ over all the triangles
 $R_i$ that compose $R$, should not it?  Unfortunately, this is not
@@ -963,9 +963,9 @@ the classical Stokes' theorem and the divergence theorem.  We present
 all of them below.
 
 \begin{theorem}[Green's Theorem]\label{StandardGreenTh}
-Let $\displaystyle S \subset \RR^2$ be a compact $2$-dimensional
-manifold of class $\displaystyle C^1$ with boundary.  Suppose that
-$\displaystyle F_i:\RR^2 \to \RR$ is of class $\displaystyle C^1$ for
+Let $\DS S \subset \RR^2$ be a compact $2$-dimensional
+manifold of class $\DS C^1$ with boundary.  Suppose that
+$\DS F_i:\RR^2 \to \RR$ is of class $\DS C^1$ for
 $1\leq i \leq 2$.  Then
 \begin{equation} \label{SGTEq1}
 \oint_{\partial S} F_1 \dx{x_1} + F_2 \dx{x_2} 
@@ -978,10 +978,10 @@ In such case, we say that the orientation or direction of $\partial S$ is
 {\bfseries positive}\index{Surface!Positive Orientation} with respect to $S$.
 \end{theorem}
 
-Since $S$ is a $2$-dimensional manifold in $\displaystyle \RR^2$, the
+Since $S$ is a $2$-dimensional manifold in $\DS \RR^2$, the
 integral on the right hand side of (\ref{SGTEq1}) is simply
-$\displaystyle \int_S \left(\pdydx{F_2}{x_1} - \pdydx{F_1}{x_2}\right) \dx{x_1}
-\dx{x_2}$.  Note that $\displaystyle (S^\circ,S^\circ,\Id)$ is a local chart
+$\DS \int_S \left(\pdydx{F_2}{x_1} - \pdydx{F_1}{x_2}\right) \dx{x_1}
+\dx{x_2}$.  Note that $\DS (S^\circ,S^\circ,\Id)$ is a local chart
 for $S$ consistent with the orientation on $S$.  As we said in the
 last section, the value of he integral does not change if we include
 or not the boundary of $S$.
@@ -1010,10 +1010,10 @@ as defined in Definition~\ref{manifOutNormal} (Figure~\ref{GreenTh}).
 to the statement of Green's Theorem, Theorem~\ref{StandardGreenTh}}{GreenTh}
 
 \begin{theorem}[Classical Stokes' Theorem]\label{StandardStokesTh}
-Let $\displaystyle S \subset \RR^3$ be a compact and oriented
-$2$-dimension manifold of class $\displaystyle C^1$ with boundary.
-Suppose that $\displaystyle F:\RR^3\to \RR^3$ is a vector field of class
-$\displaystyle C^1$.  Then
+Let $\DS S \subset \RR^3$ be a compact and oriented
+$2$-dimension manifold of class $\DS C^1$ with boundary.
+Suppose that $\DS F:\RR^3\to \RR^3$ is a vector field of class
+$\DS C^1$.  Then
 \begin{equation} \label{diff_geom_sg}
 \oint_{\partial S} F \cdot \VEC{t} \dx{s}
 = \int_S \curL F \cdot \VEC{n} \dx{A} \ ,
@@ -1022,7 +1022,7 @@ where $(\VEC{u},\VEC{n}(\VEC{u}))$ is the outward unit normal to
 $S$ at $\VEC{u} \in S$ as defined in 
 Definition~\ref{manifNormal} and $(\VEC{u},\VEC{t}(\VEC{u}))$ is a
 unit tangent vector to $\partial S$ at $\VEC{u} \in \partial S$
-such that $\displaystyle
+such that $\DS
 [(\VEC{u},\VEC{n}(\VEC{u})),(\VEC{u},\tilde{\VEC{n}}(\VEC{u})),
 (\VEC{u},\VEC{t}(\VEC{u}))] =[(\VEC{u},\VEC{e}_1),(\VEC{u},\VEC{e}_2),
 (\VEC{u},\VEC{e}_3)]$ if
@@ -1049,9 +1049,9 @@ with $\omega = F_1 \df{x_1} + F_2 \df{x_2} + F_3 \df{x_3}$.  We get
 \end{equation}
 
 We have from (\ref{manifVFXYZN}) of Theorem~\ref{manifVFXYZT} that
-$\displaystyle n_1 \dx{A} = \df{x_2}\wedge\df{x_3}$,
-$\displaystyle n_2 \dx{A} = \df{x_3}\wedge\df{x_1}$ and
-$\displaystyle n_3 \dx{A} = \df{x_1}\wedge\df{x_2}$ on $S$.  Thus
+$\DS n_1 \dx{A} = \df{x_2}\wedge\df{x_3}$,
+$\DS n_2 \dx{A} = \df{x_3}\wedge\df{x_1}$ and
+$\DS n_3 \dx{A} = \df{x_1}\wedge\df{x_2}$ on $S$.  Thus
 \begin{align}
 &(\curL F \cdot \VEC{n}) \dx{A}
 = \left( \pdydx{F_3}{x_2}-\pdydx{F_2}{x_3} \right)n_1 \dx{A}
@@ -1121,11 +1121,11 @@ for all $\VEC{w} \in W$.
 
 \begin{rmk}
 After having stated Green's and Stokes' theorems     \label{rmkImport}
-for compact manifolds of class $\displaystyle C^1$, we could restated
+for compact manifolds of class $\DS C^1$, we could restated
 them based on Theorem~\ref{GenStokesTh} or
 Theorem~\ref{GenStokesThV2}.  For instance, if we used
 Theorem~\ref{GenStokesTh}, then we assume that $S$ is a bounded
-manifold without boundary of class $\displaystyle C^1$.  In that
+manifold without boundary of class $\DS C^1$.  In that
 situation, $\partial S$ should then be replaced by the set of regular
 points $S_r$ of $S$ in the statement of Green's and Stokes' theorems.
 
@@ -1135,7 +1135,7 @@ statement of Theorem~\ref{GenStokesTh}.  If the differential form
 $\omega$ does not have a compact support, then the manifold $S$ must be
 bounded.  We then use Theorem~\ref{GenStokesTh} with $\omega$
 replaced by $\psi \omega$ where $\psi$ is a function of class
-$\displaystyle C^\infty$ with compact support and such that
+$\DS C^\infty$ with compact support and such that
 $\psi(\VEC{u}) = 1$ for all $\VEC{u} \in S$.
 
 From now on, $S_r$ will be denoted $\partial S$ even if the points
@@ -1160,16 +1160,16 @@ yields a single local chart that cover the entire interior of $S$.
 are not always providing local charts for all points of the line or the
 surface.   For instance, suppose that we want to
 integrate a continuous differential $1$-form $\omega$ over the unit circle 
-$\displaystyle S^1$.  We may use the parametric representation
-$\displaystyle \sigma(\theta) = (\cos(\theta),\sin(\theta))$
+$\DS S^1$.  We may use the parametric representation
+$\DS \sigma(\theta) = (\cos(\theta),\sin(\theta))$
 for $0 \leq \theta < 2\pi$.  But this does not represent a local
 chart.  This yields the local chart
-$\displaystyle C_1 = \big(]0,2\pi[, S^1 \setminus \{\VEC{e}_1\}, \sigma\big)$
+$\DS C_1 = \big(]0,2\pi[, S^1 \setminus \{\VEC{e}_1\}, \sigma\big)$
 but we are missing a local chart to cover $\VEC{e}_1$.  Rigorously, we
 must add another local chart like
-$\displaystyle C_2 = \big([-\epsilon,\epsilon [,
+$\DS C_2 = \big([-\epsilon,\epsilon [,
 \sigma(]-\epsilon,\epsilon[), \sigma\big)$ to completely cover
-$\displaystyle S^1$.  Then we use a partition of unity $\{\psi_1, \psi_2\}$
+$\DS S^1$.  Then we use a partition of unity $\{\psi_1, \psi_2\}$
 subordinate to $\{C_1,C_2\}$.  The integral is therefore
 \[
 \int_{S^1} \omega = \sum_{j=1}^2 \int_{S^1} \psi_i \omega
@@ -1177,12 +1177,12 @@ subordinate to $\{C_1,C_2\}$.  The integral is therefore
 + \int_{]-\epsilon,\epsilon[} \sigma^\ast(\psi_2 \omega) \ .
 \]
 However, since $\omega$ is continuous of the compact set
-$\displaystyle S^1$, we can show using one of the convergence theorems
+$\DS S^1$, we can show using one of the convergence theorems
 for integrals (i.e. Theorem~\ref{thBCT} or Lebesgue dominated
 convergence theorem) that
-$\displaystyle \int_{]0,2\pi[} \sigma^\ast(\psi_1 \omega) \to
+$\DS \int_{]0,2\pi[} \sigma^\ast(\psi_1 \omega) \to
 \int_{]0,2\pi[} \sigma^\ast(\omega)$ and
-$\displaystyle \int_{]-\epsilon,\epsilon[} \sigma^\ast(\psi_2 \omega)
+$\DS \int_{]-\epsilon,\epsilon[} \sigma^\ast(\psi_2 \omega)
 \to 0$ as $\epsilon \to 0$.
 
 We have a similar issue when using cylindrical or spherical
@@ -1218,9 +1218,9 @@ subordinate to $\{C_j\}_{1\leq j \leq 4}$.  The integral is therefore
 + \int_{B_\epsilon(\VEC{0})} \rho_4^\ast(\psi_4 \omega) \ .
 \end{align*}
 However, since $\omega$ is continuous of the compact set
-$\displaystyle S^2$, we can show as we mentioned for the integral over
-$\displaystyle S^1$ that
-$\displaystyle \int_{\{(\theta,\phi);0<\theta<2\pi,0<\phi<\pi\}}
+$\DS S^2$, we can show as we mentioned for the integral over
+$\DS S^1$ that
+$\DS \int_{\{(\theta,\phi);0<\theta<2\pi,0<\phi<\pi\}}
 \rho^\ast(\psi_1 \omega)
 \to
 \int_{\{(\theta,\phi);0<\theta<2\pi,0<\phi<\pi\}} \rho^\ast(\omega)$
@@ -1310,7 +1310,7 @@ Hence,
 We now use the classical Stokes' theorem to compute the integral of
 the vector field (\ref{DG_vector_field}) along $\partial S$ in the
 positive direction of $\partial S$.  The classical Stokes' theorem states that
-$\displaystyle
+$\DS
 \int_{\partial S} F \cdot \VEC{t} \dx{s} = \int_S \curL F \cdot
 \VEC{n} \dx{S}$.  The curl of $F$ is
 \[
@@ -1323,18 +1323,18 @@ $\displaystyle
 \]
 To compute the surface integral on $S$, we use cylindrical coordinates
 to obtain a parametric representation for $S$.  Namely,
-$\displaystyle \rho(w_1, w_2) =
+$\DS \rho(w_1, w_2) =
 \begin{pmatrix} 3\cos(w_1) & 3\sin(w_1) & w_2 \end{pmatrix}^\top$
 for $0 < w_1 < \pi/2$ and $0 < w_2 < 2$.
-Hence $\displaystyle \curL F (\rho(\VEC{w})) =
+Hence $\DS \curL F (\rho(\VEC{w})) =
 \begin{pmatrix} -3\sin(w_1) & 0 & -3\cos(w_1) \end{pmatrix}^\top$ and
 \[
 \pdydx{\rho}{w_1} \times \pdydx{\rho}{w_2}
 = \begin{pmatrix} 3\cos(w_1) & 3\sin(w_1) & 0 \end{pmatrix}^\top \ .
 \]
-This form of $\displaystyle \pdydx{\rho}{w_1} \times \pdydx{\rho}{w_2}$
+This form of $\DS \pdydx{\rho}{w_1} \times \pdydx{\rho}{w_2}$
 is not surprising because the outward unit normal to $S$ at
-$\rho(\VEC{w}) \in S$ is given by $\displaystyle
+$\rho(\VEC{w}) \in S$ is given by $\DS
 \VEC{n}(\rho(\VEC{w})) =
 \begin{pmatrix} \cos(w_1) & \sin(w_1) & 0 \end{pmatrix}^\top$.
 This shows that the parametric representation is consistent with the
@@ -1355,9 +1355,9 @@ as expected.
 \end{egg}
 
 \begin{prop}\label{DGconserveB}
-Let $\displaystyle F:V \rightarrow \RR^3$ be a continuously
+Let $\DS F:V \rightarrow \RR^3$ be a continuously
 differentiable vector field on a convex open subset $V$ of
-$\displaystyle \RR^3$.  If $F$ satisfies
+$\DS \RR^3$.  If $F$ satisfies
 $\curL F = \VEC{0}$ in $V$, then $F$ is conservative.
 \end{prop}
 
@@ -1365,7 +1365,7 @@ $\curL F = \VEC{0}$ in $V$, then $F$ is conservative.
 This is a special case of Theorem~\ref{closedexact} for
 differential $1$-forms
 $\omega = F_1 \df{x_1} + F_2 \df{x_2} + F_3 \df{x_3}$ because a convex
-subset of $\displaystyle \RR^3$ is star-shaped.  Since $\df{\omega} = 0$
+subset of $\DS \RR^3$ is star-shaped.  Since $\df{\omega} = 0$
 (i.e. $\curL F = \VEC{0}$), it follows from Theorem~\ref{closedexact}
 that there exists a $0$-form $f$ such that $\df f = \omega$
 (i.e. $\graD f = F$).  The conclusion of the proposition follows from
@@ -1382,7 +1382,7 @@ from Stokes's Theorem that
   \oint_C F \cdot \dx{\VEC{s}} = \iint_S \curL F \cdot \dx{\VEC{S}} = 0 \ .
 \]
 Since $C$ is arbitrary, we get from Proposition~\ref{DGoint} that
-$\displaystyle \oint_{\tilde{C}} F \cdot \dx{\VEC{s}}$ is independent of the
+$\DS \oint_{\tilde{C}} F \cdot \dx{\VEC{s}}$ is independent of the
 path $\tilde{C}$ in $V$ connecting two points $\VEC{a}$ and $\VEC{b}$.  Thus,
 $F$ is conservative.
 \end{proof}
@@ -1397,10 +1397,10 @@ surface in $V$ that has the circle
 $C = \{ (x_1,x_2,0): x_1^2 + x_2^2 =1 \}$ as its boundary.
 
 \begin{theorem}[Divergence Theorem]\label{StandardDivTh}
-Let $\displaystyle S \subset \RR^3$ be a compact $3$-dimension
-manifold of class $\displaystyle C^1$ with a boundary.  Suppose that
-$\displaystyle F:\RR^3\to \RR^3$ is a
-vector field of class $\displaystyle C^1$.  Then
+Let $\DS S \subset \RR^3$ be a compact $3$-dimension
+manifold of class $\DS C^1$ with a boundary.  Suppose that
+$\DS F:\RR^3\to \RR^3$ is a
+vector field of class $\DS C^1$.  Then
 \begin{equation}\label{diff_geom_div}
 \int_S \diV F \dx{V} = \int_{\partial S} F \cdot \VEC{n} \dx{A} \ ,
 \end{equation}
@@ -1417,7 +1417,7 @@ $[(\VEC{u}, \VEC{n}(\VEC{u})), (\VEC{u}, \VEC{v}_1(\VEC{u})),
 (\VEC{u}, \VEC{v}_2(\VEC{u}))] =
 [(\VEC{u},\VEC{e}_1),(\VEC{u},\VEC{e}_2), (\VEC{u},\VEC{e}_3)]$, the
 standard orientation on\\
-$\displaystyle \TS_{\VEC{u}} S \cong \RR^3$ for
+$\DS \TS_{\VEC{u}} S \cong \RR^3$ for
 $\VEC{u} \in \partial S$.
 
 The expressions $\dx{A}$ and $\dx{V}$ in the statement of the previous
@@ -1450,9 +1450,9 @@ and
 + F_3 \df{x_1}\wedge\df{x_2}
 = \omega
 \end{align*} because
-$\displaystyle n_1 \dx{A} = \df{x_2}\wedge\df{x_3}$,
-$\displaystyle n_2 \dx{A} = \df{x_3}\wedge\df{x_1}$ and
-$\displaystyle n_3 \dx{A} = \df{x_1}\wedge\df{x_2}$ on $\partial S$
+$\DS n_1 \dx{A} = \df{x_2}\wedge\df{x_3}$,
+$\DS n_2 \dx{A} = \df{x_3}\wedge\df{x_1}$ and
+$\DS n_3 \dx{A} = \df{x_1}\wedge\df{x_2}$ on $\partial S$
 according to Theorem~\ref{manifVFXYZT}.
 \end{proof}
 
@@ -1461,7 +1461,7 @@ Remark~\ref{rmkImport} is also valid for the divergence theorem.
 \begin{egg}
 We again consider the vector field $F$            \label{DG_df5}
 given in (\ref{DG_vector_field}).  Let $V$ be the open
-half-sphere $\displaystyle x_1^2+x_2^3+x_3^2<4$ with $x_3> 0$.
+half-sphere $\DS x_1^2+x_2^3+x_3^2<4$ with $x_3> 0$.
 The region $V$ is drawn in following figure.
 \figbox{vect_calculus/div_ex}{6cm}
 We compute the surface integral of $F$ over $S = \partial V$.  The
@@ -1487,9 +1487,9 @@ Hence
 \end{pmatrix}^\top \ .
 \]
 Note that
-$\displaystyle \rho_1\left(\frac{\pi}{4},0\right) = \begin{pmatrix}
+$\DS \rho_1\left(\frac{\pi}{4},0\right) = \begin{pmatrix}
 \sqrt{2} & 0 & \sqrt{2} \end{pmatrix}^\top$ and
-$\displaystyle
+$\DS
 \left( \pdydx{\rho_1}{w_1} \times \pdydx{\rho_1}{w_2}\right)
 \left(\frac{\pi}{4},0\right) = \begin{pmatrix} 2 & 0 & 2 \end{pmatrix}^\top$.
 This is a vector pointing outside $V$ as required by the
@@ -1499,7 +1499,7 @@ case, then we could have changed the parametric representation by inverting the
 coordinate names $w_1$ and $w_2$ for instance to obtain a representation
 consistent with the orientation on $S_1$.
 We have that
-$\displaystyle \left\|\pdydx{\rho_1}{w_1}(\VEC{w}) \times 
+$\DS \left\|\pdydx{\rho_1}{w_1}(\VEC{w}) \times 
 \pdydx{\rho_1}{w_2}(\VEC{w})\right\| = 4 \sin(w_1)$ and
 $\dx{A} = 4 \sin(w_1) \dx{w_1}\dx{w_2}$.
 
@@ -1509,7 +1509,7 @@ A parametric representation of $S_2$ is given by
 w_2\cos(w_1) & w_2\sin(w_1) & 0 \end{pmatrix}^\top
 \]
 for $0 < w_1 < 2\pi$ and $0 < w_2 < 2$.
-Again, $\displaystyle \pdydx{\rho_2}{w_1}(\VEC{w}) \times
+Again, $\DS \pdydx{\rho_2}{w_1}(\VEC{w}) \times
 \pdydx{\rho_2}{w_2}(\VEC{w}) = \begin{pmatrix}
 0 & 0 & -w_2 \end{pmatrix}^\top$ is a vector pointing outside $V$ as
 required by the orientation on $S_2$.  The attentive reader may have
@@ -1519,11 +1519,11 @@ one-to-one because $\rho_2(0,w_1) = \VEC{0}$ for $0 < w_1 < 2\pi$.
 Moreover, it cannot be used to define the outward unit
 vector since $\rho_2(\VEC{0}) = \VEC{0}$.  Nevertheless, we may still
 use this parametric representation because
-$\displaystyle \int_{S_2} F \cdot \VEC{n} \dx{A}
+$\DS \int_{S_2} F \cdot \VEC{n} \dx{A}
 = \int_{S_2 \setminus \{\VEC{0}\}} F \cdot \VEC{n} \dx{A}$ since
 a set with a single point represent a set of measure zero.
 We have that
-$\displaystyle \left\|\pdydx{\rho_2}{w_1}(\VEC{w}) \times 
+$\DS \left\|\pdydx{\rho_2}{w_1}(\VEC{w}) \times 
 \pdydx{\rho_2}{w_2}(\VEC{w})\right\| = w_2$ and
 $\dx{A} = w_2 \dx{w_1}\dx{w_2}$ for $w_2>0$.
 
@@ -1584,11 +1584,11 @@ as expected.
 \end{egg}
 
 \begin{prop}\label{DGclosedexact}
-Let $\displaystyle F:V \rightarrow \RR^3$ be a continuously
+Let $\DS F:V \rightarrow \RR^3$ be a continuously
 differentiable vector field on a convex open subset $V$ of
-$\displaystyle \RR^3$.  If $F$ satisfies
+$\DS \RR^3$.  If $F$ satisfies
 $\diV F = 0$ in $V$, then $F = \curL G$ for some continuously
-differentiable vector field $\displaystyle G:V \to \RR^3$.
+differentiable vector field $\DS G:V \to \RR^3$.
 \end{prop}
 
 \begin{proof}
@@ -1596,7 +1596,7 @@ This is in fact a special case of Theorem~\ref{closedexact} for
 differential $2$-forms
 $\omega = F_1 \df{x_2} \wedge \df{x_3} + F_2 \df{x_3} \wedge \df{x_1}
 + F_3 \df{x_1} \wedge \df{x_2}$ because a convex subset of
-$\displaystyle \RR^3$ is star-shaped.  Since $\df{\omega} = 0$ (i.e.
+$\DS \RR^3$ is star-shaped.  Since $\df{\omega} = 0$ (i.e.
 $\diV F = 0$),  it follows from Theorem~\ref{closedexact} that there
 exists a $1$-form
 $\tau = G_1 \df{x_1} + G_2 \df{x_2} + G_3 \df{x_3}$ such that
@@ -1640,16 +1640,16 @@ from the algebraic to the geometric notations for vectors and
 vice-versa when one notation is more convenient than the other.
 This is something that we have done occasionally in the past but will
 be done more frequently in this section.  In particular, if $\VEC{v}$
-and $\VEC{w}$ are two vectors in $\displaystyle \RR^n$,
-then $\displaystyle \VEC{v}\cdot \VEC{w} = \VEC{v}^\top \VEC{w}
+and $\VEC{w}$ are two vectors in $\DS \RR^n$,
+then $\DS \VEC{v}\cdot \VEC{w} = \VEC{v}^\top \VEC{w}
 = \VEC{w}^\top \VEC{v}$.
 
 \subsection{Tangent Vector, Curvature and Torsion}
 
 We start with the basic concept of tangent line to a curve.
-Let $C$ is a curve in $\displaystyle \RR^3$ with a continuously
+Let $C$ is a curve in $\DS \RR^3$ with a continuously
 differentiable parametric representation
-$\displaystyle \sigma:]a,b[ \rightarrow \RR^3$.
+$\DS \sigma:]a,b[ \rightarrow \RR^3$.
 The basic definition of derivative as a limit of secants shows that
 $\sigma'(w)$ is a tangent vector to the curve $C$ at
 $\sigma(w)$ for $w \in ]a,b[$, and $\sigma'(w)$ points in the
@@ -1668,7 +1668,7 @@ to $C$ at $\VEC{u} = \sigma(w) \in C$ is given by
 \]
 
 \begin{egg}
-Consider the curve $C$ in $\displaystyle \RR^3$      \label{DG_df1}
+Consider the curve $C$ in $\DS \RR^3$      \label{DG_df1}
 given by the parametric representation\\
 $\sigma(w) = \begin{pmatrix} w\cos(w) & w\sin(w)  & w \end{pmatrix}^\top$
 for $w\in\RR$.  We have drawn a section of this curve in the following figure.
@@ -1702,19 +1702,19 @@ $\sigma(10)$ (in blue) in the following figure.
 \figbox{vect_calculus/diff_geom02}{6cm}
 \end{egg}
 
-As before, let $\displaystyle C \subset \RR^3$ be a curve and
-$\displaystyle \sigma:]a,b[\rightarrow \RR^3$ be a
+As before, let $\DS C \subset \RR^3$ be a curve and
+$\DS \sigma:]a,b[\rightarrow \RR^3$ be a
 sufficiently differentiable parametric representation of $C$
 consistent with the orientation on $C$.
 
 \begin{lemma} \label{UnitOrhtog}
-Suppose that $\displaystyle g:]a,b[ \to \RR^n$ is a differentiable vector valued
+Suppose that $\DS g:]a,b[ \to \RR^n$ is a differentiable vector valued
 function such that $\|g(w)\| = c$, a constant, for all $w \in ]a,b[$.
 Then $g'(w)$ is orthogonal to $g(w)$ for all $w \in ]a,b[$.
 \end{lemma}
 
 \begin{proof}
-If we derive both sides of $\displaystyle g(w) \cdot g(w) = c^2$ with respect to
+If we derive both sides of $\DS g(w) \cdot g(w) = c^2$ with respect to
 $w$, then we get $2 g'(w) \cdot g(w) = 0$ for all $w \in ]a,b[$.
 Therefore $g'(w)$ is orthogonal to $g(w)$ for all $w \in ]a,b[$.
 \end{proof}
@@ -1729,7 +1729,7 @@ the previous lemma with $g(w) = \VEC{t}(\sigma(w))$ to find that
 \end{equation}
 is orthogonal to $\VEC{t}(\sigma(w))$ for all $w \in ]a,b[$.  It
 follows from the definition of $\VEC{t}(\sigma(w))$ that
-$\displaystyle \dfdx{\big(\VEC{t}(\sigma(w))\big)}{w}$ and
+$\DS \dfdx{\big(\VEC{t}(\sigma(w))\big)}{w}$ and
 $\sigma'(w)$ are orthogonal.  This is also obvious from
 (\ref{diffTEqu}) and the properties of the cross product.
 
@@ -1768,7 +1768,7 @@ We will generalize the definition of curvature vector and curvature in
 Sections~\ref{sectRiemannCurv} and \ref{sectGeodesic} later.
 
 \begin{rmk}
-Why did we introduce this extra factor $\displaystyle \|\sigma'(w)\|^{-1}$ in
+Why did we introduce this extra factor $\DS \|\sigma'(w)\|^{-1}$ in
 (\ref{curvatureEq1})?  It does not even transform $\VEC{k}(\VEC{u})$
 to a unit vector.
 
@@ -1780,19 +1780,19 @@ $\VEC{t}(\VEC{u}) = \sigma'(w)$ and $\VEC{k}(\VEC{u}) = \sigma''(w)$
 if $C$ is parameterized by arc length as we have introduced in
 Subsection~\ref{ALNAL}.
 
-Suppose that $\displaystyle \sigma : [a,b] \to \RR^3$ is a curve of
+Suppose that $\DS \sigma : [a,b] \to \RR^3$ is a curve of
 length $L$ such that $\sigma'(w) \neq \VEC{0}$ for all $w \in [a,b]$.
 Then we can use the arc length function $s:[a,b] \to [0,L]$ given in
 Definition~\ref{defnALF} to obtain a parametric representation
-$\displaystyle \breve{\sigma} = \sigma \circ s^{-1}:[0,L] \to \RR^3$
+$\DS \breve{\sigma} = \sigma \circ s^{-1}:[0,L] \to \RR^3$
 such that $C$ is parameterized by arc length with $\breve{\sigma}$.
 Recall that $s'(t) = \|\sigma(t)\|$ for all $t \in ]a,b[$.
 This parametric representation is often called the {\bfseries natural
 parametric representation}\index{Curve!Natural Parametric Representation}
 of the curve $C$.  With this representation, we have that the tangent
 unit vector to $C$ at $\VEC{u} = \breve{\sigma}(t)$ is
-$\displaystyle \VEC{t}(\VEC{u}) = \breve{\sigma}'(t)$ because
-$\displaystyle \|\breve{\sigma}'(t)\| = 1$ for all $t \in ]0,L[$.
+$\DS \VEC{t}(\VEC{u}) = \breve{\sigma}'(t)$ because
+$\DS \|\breve{\sigma}'(t)\| = 1$ for all $t \in ]0,L[$.
 The curvature vector of $C$ at $\VEC{u} = \breve{\sigma}(t) \in C$ is
 then simply $\VEC{k}(\VEC{u}) = \breve{\sigma}''(t)$.
 
@@ -1813,7 +1813,7 @@ and
 \dfdx{\left(\|\sigma'(w)\|^{-1} \sigma'(w)\right)}{w}
 \end{align*}
 as we have defined above.   This justify the extra factor
-$\displaystyle \|\sigma'(w)\|^{-1}$ in (\ref{curvatureEq1}).
+$\DS \|\sigma'(w)\|^{-1}$ in (\ref{curvatureEq1}).
 
 Though the formulae for the tangent unit vector and the curvature
 vector are much simpler when the natural parametric representation of
@@ -1860,9 +1860,9 @@ $\sigma(10)$ in the following figure.
 \figbox{vect_calculus/diff_geom03}{6cm}
 \end{egg}
 
-Let $\displaystyle \VEC{N}(\VEC{u}) = \|\VEC{k}(\VEC{u})\|^{-1} \VEC{k}(\VEC{u})
+Let $\DS \VEC{N}(\VEC{u}) = \|\VEC{k}(\VEC{u})\|^{-1} \VEC{k}(\VEC{u})
 = (\kappa(\VEC{u}))^{-1}\VEC{k}(\VEC{u})$ and
-$\displaystyle \VEC{B}(\VEC{u}) = \VEC{t}(\VEC{u}) \times \VEC{N}(\VEC{u})$
+$\DS \VEC{B}(\VEC{u}) = \VEC{t}(\VEC{u}) \times \VEC{N}(\VEC{u})$
 for $\VEC{\VEC{u}} \in C$.
 The vector $\VEC{N}(\VEC{u})$ is called the
 {\bfseries principal normal}\index{Surface!Principal Normal} and
@@ -1877,9 +1877,9 @@ moving along the curve $C$.
 
 Since $\VEC{B}(\sigma(w))$ is of norm one for all $w \in ]a,b[$, we have from
 Lemma~\ref{UnitOrhtog} that\\
-$\displaystyle \dfdx{\VEC{B}(\sigma(w))}{w}$ is orthogonal to
+$\DS \dfdx{\VEC{B}(\sigma(w))}{w}$ is orthogonal to
 $\VEC{B}(\sigma(w))$ for all $w \in ]a,b[$.  We also have that
-$\displaystyle \dfdx{\VEC{B}(\sigma(w))}{w}$ is orthogonal to
+$\DS \dfdx{\VEC{B}(\sigma(w))}{w}$ is orthogonal to
 $\VEC{t}(\sigma(w))$ for all $w \in ]a,b[$ because
 \[
 \dfdx{\VEC{B}(\sigma(w))}{w} = \left(\dfdx{\VEC{t}(\sigma(w))}{w} \right)
@@ -1888,15 +1888,15 @@ $\VEC{t}(\sigma(w))$ for all $w \in ]a,b[$ because
 = \VEC{t}(\sigma(w)) \times \dfdx{\VEC{N}(\sigma(w))}{w}
 \]
 for all $w \in ]a,b[$ since
-$\displaystyle \left(\dfdx{\VEC{t}(\sigma(w))}{w} \right)$ and
+$\DS \left(\dfdx{\VEC{t}(\sigma(w))}{w} \right)$ and
 $\VEC{N}(\sigma(w))$ are both parallel to $\VEC{k}(\sigma(w))$.
 Hence
-$\displaystyle \dfdx{\VEC{B}(\sigma(w))}{w} \cdot \VEC{t}(\sigma(w)) = 0$
+$\DS \dfdx{\VEC{B}(\sigma(w))}{w} \cdot \VEC{t}(\sigma(w)) = 0$
 for all $w\in ]a,b[$ because
-$\displaystyle \VEC{t}(\sigma(w)) \times \dfdx{\VEC{N}(\sigma(w))}{w}$
+$\DS \VEC{t}(\sigma(w)) \times \dfdx{\VEC{N}(\sigma(w))}{w}$
 is orthogonal to $\VEC{t}(\sigma(w))$.
 Since
-$\displaystyle \dfdx{\VEC{B}(\sigma(w))}{w}$ is orthogonal to both
+$\DS \dfdx{\VEC{B}(\sigma(w))}{w}$ is orthogonal to both
 $\VEC{t}(\sigma(w))$ and $\VEC{B}(\sigma(w))$ for all $w \in ]a,b[$,
 we get
 \[
@@ -1917,7 +1917,7 @@ verify that
 for all $w \in [a,b]$.  The triple product
 $(\sigma'(u) \times \sigma''(u)) \cdot \sigma'''(u)$ is
 the determinant of the matrix
-$\displaystyle \begin{pmatrix} \sigma'(w) & \sigma''(w) & \sigma'''(w)
+$\DS \begin{pmatrix} \sigma'(w) & \sigma''(w) & \sigma'''(w)
 \end{pmatrix}$.
 
 \begin{egg}[Example~\ref{DG_df2} (Continued)]
@@ -1925,7 +1925,7 @@ We compute the torsion of the curve $C$ of      \label{DG_df3}
 Example~\ref{DG_df1} at $\sigma(10)$.
 
 We have
-$\displaystyle \sigma'''(w) = \begin{pmatrix}
+$\DS \sigma'''(w) = \begin{pmatrix}
 - 3\cos(w) + w\sin(w) & - 3\sin(w) - w\cos(w) & 0 \end{pmatrix}^\top$
 for all $w \in \RR$.
 
@@ -1968,17 +1968,17 @@ the orientation on $S$.  To motivate this statement, we need to
 go back to the definition of the Riemann integral.
 
 Let $I_2 = [0,1]\times [0,1]$.
-Suppose that $\displaystyle \rho: I_2 \rightarrow \RR^3$ is a
-parametric representation of class $\displaystyle C^1$ consistent with
+Suppose that $\DS \rho: I_2 \rightarrow \RR^3$ is a
+parametric representation of class $\DS C^1$ consistent with
 the orientation on the surface $S$.   This
 parametric representation is such that
-$\displaystyle \pdydx{\rho}{w_1} \times \pdydx{\rho}{w_2}$ points
+$\DS \pdydx{\rho}{w_1} \times \pdydx{\rho}{w_2}$ points
 in the direction of the outward unit normal $\VEC{n}$ to $S$
 associated with the orientation on $S$.
 
 Suppose that $P = \{P_1,P_2\}$ is a partition of $I_2$ given by the partitions
-$\displaystyle P_1 = \{w_{1,i}: 0 \leq i \leq N_1\}$ and
-$\displaystyle P_2 = \{w_{2,i} : 0 \leq i \leq N_2\}$ of the $w_1$
+$\DS P_1 = \{w_{1,i}: 0 \leq i \leq N_1\}$ and
+$\DS P_2 = \{w_{2,i} : 0 \leq i \leq N_2\}$ of the $w_1$
 and $w_2$ axes respectively.  Moreover, suppose that the points in
 the two partitions $P_1$ and $P_2$ are equally spaced; namely, there
 are two constants $\Delta w_1$ and $\Delta w_2$ such that
@@ -1992,18 +1992,18 @@ $\Delta w_2 = w_{2,i+1}-w_{2,i}$ for $0<j \leq N_2$.  We have that
 \begin{pmatrix}
 F_1(\rho(w_{1,i},w_{2,j})) & F_2(\rho(w_{1,i},w_{2,j})) &
   F_3(\rho(w_{1,i},w_{2,j})) \\[0.5em]
-\displaystyle \pdydx{\rho_1}{w_1}(w_{1,i},w_{2,j}) \Delta w_1 &
-\displaystyle \pdydx{\rho_2}{w_1}(w_{1,i},w_{2,j}) \Delta w_1 &
-\displaystyle \pdydx{\rho_3}{w_1}(w_{1,i},w_{2,j}) \Delta w_1 \\[1em]
-\displaystyle \pdydx{\rho_1}{w_2}(w_{1,i},w_{2,j}) \Delta w_2 &
-\displaystyle \pdydx{\rho_2}{w_2}(w_{1,i},w_{2,j}) \Delta w_2 &
-\displaystyle \pdydx{\rho_3}{w_2}(w_{1,i},w_{2,j}) \Delta w_2
+\DS \pdydx{\rho_1}{w_1}(w_{1,i},w_{2,j}) \Delta w_1 &
+\DS \pdydx{\rho_2}{w_1}(w_{1,i},w_{2,j}) \Delta w_1 &
+\DS \pdydx{\rho_3}{w_1}(w_{1,i},w_{2,j}) \Delta w_1 \\[1em]
+\DS \pdydx{\rho_1}{w_2}(w_{1,i},w_{2,j}) \Delta w_2 &
+\DS \pdydx{\rho_2}{w_2}(w_{1,i},w_{2,j}) \Delta w_2 &
+\DS \pdydx{\rho_3}{w_2}(w_{1,i},w_{2,j}) \Delta w_2
 \end{pmatrix}
 \end{align*}
 is the volume of the box defined by the vectors
 $F(\rho(w_{1,i},w_{2,j}))$,
-$\displaystyle \pdydx{\rho}{w_1}(w_{1,i},w_{2,j}) \Delta w_1$ and
-$\displaystyle \pdydx{\rho}{w_2}(w_{1,i},w_{2,j}) \Delta w_2$ that we have
+$\DS \pdydx{\rho}{w_1}(w_{1,i},w_{2,j}) \Delta w_1$ and
+$\DS \pdydx{\rho}{w_2}(w_{1,i},w_{2,j}) \Delta w_2$ that we have
 drawn in Figure~\ref{FluxRepr}.  This is an approximation of the
 volume of fluid that pass through the little region
 $\rho([w_{1,i},w_{1,i+1}]\times[w_{2,j},w_{2,j+1}])$ of $S$ in the direction
@@ -2034,41 +2034,41 @@ F(\rho(w_{1,i},w_{2,j})) \cdot \left( \pdydx{\rho}{u}(w_{1,i},w_{2,j})
 
 \subsubsection{A Physical Interpretation of the Divergence}
 
-A vector field $\displaystyle F:\RR^3 \to \RR^3$ can be associated to
+A vector field $\DS F:\RR^3 \to \RR^3$ can be associated to
 a system of differential equations $\sigma'(t) = F(\sigma(t))$.
 Students learn in their first course on ordinary differential
-equations that, given $\displaystyle \VEC{y} \in \RR^3$ and a vector field
-$F$ of class $\displaystyle C^1$ on $\displaystyle \RR^3$,
+equations that, given $\DS \VEC{y} \in \RR^3$ and a vector field
+$F$ of class $\DS C^1$ on $\DS \RR^3$,
 there exist an open neighbourhood $I_{\VEC{y}} \subset \RR$ of $0$ and
-a unique function $\displaystyle \sigma:I_{\VEC{y}} \to \RR^3$ such
+a unique function $\DS \sigma:I_{\VEC{y}} \to \RR^3$ such
 that $\sigma'(t) = F(\sigma(t))$ for $t \in I_{\VEC{y}}$ and
 $\sigma(0) = \VEC{y}$.  The function
-$\displaystyle \sigma:I_{\VEC{y}} \to \RR^3$ is a parametric
-representation of a curve in $\displaystyle \RR^3$ through $\VEC{y}$
+$\DS \sigma:I_{\VEC{y}} \to \RR^3$ is a parametric
+representation of a curve in $\DS \RR^3$ through $\VEC{y}$
 which is tangent to the vector field $F$ at all points of the curve because
 $\sigma'(t) = F(\sigma(t))$ for all $t \in I_{\VEC{y}}$.
 
-Because $F$ is of class $\displaystyle C^1$, there exist an open
+Because $F$ is of class $\DS C^1$, there exist an open
 neighbourhood $I \subset \RR$ of $0$ and an open subset $U$ of
-$\displaystyle \RR^3$
+$\DS \RR^3$
 such that we may define a continuously differentiable map
-$\displaystyle \phi: I \times U \to \RR^3$
+$\DS \phi: I \times U \to \RR^3$
 by $\phi(t,\VEC{x}) = \sigma(t)$ for $t \in I$ and $\VEC{x} \in U$ where
 $\sigma$ is the unique function such that $\sigma'(t) = F(\sigma(t))$
 for $t \in I$ and $\sigma(0) = \VEC{x} \in U$.  The function $\phi$
 defines what we call a local {\bfseries flow}\index{Flow}.
-For each $\displaystyle \VEC{x} \in U$, we may view
+For each $\DS \VEC{x} \in U$, we may view
 $\{\phi(t,\VEC{x}) : t \in I\}$ as the trajectory of a particle starting
 at $\VEC{x}$ and moving under the influence of the vector field
 $F$.
 
-Let $\displaystyle P_0 =
+Let $\DS P_0 =
 \left\{ \VEC{x} + s_1 \VEC{e}_1 + s_2 \VEC{e}_2 + s_3 \VEC{e}_3 :
 0\leq s_i \leq \epsilon \right\}$
 for really small $\epsilon$.  The set $P_0$ represents a small box
 that we have drawn in Figure~\ref{diff_geom_DIV}.
 Using the Taylor's expansion theorem for functions from
-$\displaystyle \RR^3$ to $\displaystyle \RR^3$, we find that the image
+$\DS \RR^3$ to $\DS \RR^3$, we find that the image
 of a point
 $\VEC{x} + s_1 \VEC{e}_1 + s_2 \VEC{e}_2 + s_3 \VEC{e}_3$ of the box $P_0$
 along the flow is given by
@@ -2106,7 +2106,7 @@ $F$ at the point $\VEC{x}$.
 \pdfF{vect_calculus/div_interp}{Physical interpretation of the divergence}
 {Physical interpretation of the divergence.}{diff_geom_DIV}
 
-Since $\displaystyle \pdydx{\phi}{t}(t,\VEC{x}) = F(\phi(t,\VEC{x}))$, we have
+Since $\DS \pdydx{\phi}{t}(t,\VEC{x}) = F(\phi(t,\VEC{x}))$, we have
 \[
 \pdfdx{ \diff_{\VEC{x}} \phi(t,\VEC{x}) }{t}
 = \diff_{\VEC{x}} \left( \pdydx{\phi}{t}(t,\VEC{x}) \right)
@@ -2124,14 +2124,14 @@ for $1 \leq i \leq 3$.
 Since $\phi(0,\VEC{x}) = \VEC{x}$ for all $\VEC{x} \in U$, we get that
 $\diff_{\VEC{x}} \phi(0,\VEC{x}) = \Id$.  Thus (\ref{diff_geom_DD0})
 yields
-$\displaystyle  \VEC{v}_i(0,\VEC{x}) = \epsilon\, \VEC{e}_i$
+$\DS  \VEC{v}_i(0,\VEC{x}) = \epsilon\, \VEC{e}_i$
 for $1 \leq i \leq 3$,
 as it should be for $P_0$, and (\ref{diff_geom_DD1}) becomes
 \begin{equation} \label{diff_geom_DD2}
 \dydx{\VEC{v}_i}{t}(0,\VEC{x}) = \epsilon\, \diff F(\VEC{x}) \VEC{e}_i
 \end{equation}
 for $1 \leq i \leq 3$.  The volume of $P_t$ is given by
-$\displaystyle V(t,\VEC{x}) = \VEC{v}_1(t,\VEC{x}) \cdot
+$\DS V(t,\VEC{x}) = \VEC{v}_1(t,\VEC{x}) \cdot
 \left(\VEC{v}_2(t,\VEC{x}) \times \VEC{v}_3(t,\VEC{x}) \right)$.
 Thus
 \begin{align*}
@@ -2171,7 +2171,7 @@ then we get
 + \pdydx{F_3}{x_3}(\VEC{y}) \right) = \epsilon^3 \diV F(\VEC{y}) \ .
 \end{align*}
 Since the volume $V(0,\VEC{y})$ of $P_0$ is obviously
-$\displaystyle \epsilon^3$, we get (\ref{diff_geom_DD3}).
+$\DS \epsilon^3$, we get (\ref{diff_geom_DD3}).
 
 If $\diV F = 0$, then it
 follows from (\ref{diff_geom_DD3}) that the volume of a region
@@ -2191,12 +2191,12 @@ object moving along a flow.  The vectors $\VEC{v}_0$ and $\VEC{w}_0$
 move along the flow.}{diff_geom_CURL2} 
 
 We consider
-$\displaystyle \VEC{w}(t) = \diff_{\VEC{x}}\phi(t,\VEC{x}) \VEC{w}_0$
-and $\displaystyle \VEC{v}(t) = \diff_{\VEC{x}}\phi(t,\VEC{x}) \VEC{v}_0$.
+$\DS \VEC{w}(t) = \diff_{\VEC{x}}\phi(t,\VEC{x}) \VEC{w}_0$
+and $\DS \VEC{v}(t) = \diff_{\VEC{x}}\phi(t,\VEC{x}) \VEC{v}_0$.
 Proceeding as we did to obtain (\ref{diff_geom_DD2}), we get
-$\displaystyle \dydx{\VEC{w}}{t}(0) = \diff F(\VEC{x}) \VEC{w}_0$
+$\DS \dydx{\VEC{w}}{t}(0) = \diff F(\VEC{x}) \VEC{w}_0$
 and
-$\displaystyle \dydx{\VEC{v}}{t}(0) = \diff F(\VEC{x}) \VEC{v}_0$.
+$\DS \dydx{\VEC{v}}{t}(0) = \diff F(\VEC{x}) \VEC{v}_0$.
 The cosine of the angle between the vectors $\VEC{w}(t)$ and $\VEC{v}(t)$
 is determined by the scalar product $\VEC{v}(t) \cdot \VEC{w}(t)$.  Hence,
 if we want to measure any variation of this angle, it suffices to
@@ -2215,10 +2215,10 @@ derivative.
 \end{split}
 \end{equation}
 We may write
-$\displaystyle \diff F(\VEC{x}) = S(\VEC{x}) + W(\VEC{x})$, where
-$\displaystyle S(\VEC{x}) = \left( \diff F(\VEC{x}) +
+$\DS \diff F(\VEC{x}) = S(\VEC{x}) + W(\VEC{x})$, where
+$\DS S(\VEC{x}) = \left( \diff F(\VEC{x}) +
 \diff F(\VEC{x})^\top \right)/2$ and
-$\displaystyle W(\VEC{x}) = \left( \diff F(\VEC{x})
+$\DS W(\VEC{x}) = \left( \diff F(\VEC{x})
 - \diff F(\VEC{x})^\top \right)/2$.
 The symmetric matrix $S$ is called the
 {\bfseries deformation matrix}\index{Deformation Matrix}
@@ -2239,24 +2239,24 @@ W(\VEC{x})
 \left( \diff F(\VEC{x}) - \diff F(\VEC{x})^\top \right) \\
 &= \frac{1}{2}
 \begin{pmatrix}
-0 & \displaystyle \pdydx{F_1}{x_2}(\VEC{x}) - \pdydx{F_2}{x_1}(\VEC{x}) &
-\displaystyle \pdydx{F_1}{x_3}(\VEC{x}) - \pdydx{F_3}{x_1}(\VEC{x}) \\[1em]
-\displaystyle \pdydx{F_2}{x_1}(\VEC{x}) - \pdydx{F_1}{x_2}(\VEC{x}) & 0 &
-\displaystyle \pdydx{F_2}{x_3}(\VEC{x}) - \pdydx{F_3}{x_2}(\VEC{x}) \\[1em]
-\displaystyle \pdydx{F_3}{x_1}(\VEC{x}) - \pdydx{F_1}{x_3}(\VEC{x}) &
-\displaystyle \pdydx{F_3}{x_2}(\VEC{x}) - \pdydx{F_2}{x_3}(\VEC{x}) & 0
+0 & \DS \pdydx{F_1}{x_2}(\VEC{x}) - \pdydx{F_2}{x_1}(\VEC{x}) &
+\DS \pdydx{F_1}{x_3}(\VEC{x}) - \pdydx{F_3}{x_1}(\VEC{x}) \\[1em]
+\DS \pdydx{F_2}{x_1}(\VEC{x}) - \pdydx{F_1}{x_2}(\VEC{x}) & 0 &
+\DS \pdydx{F_2}{x_3}(\VEC{x}) - \pdydx{F_3}{x_2}(\VEC{x}) \\[1em]
+\DS \pdydx{F_3}{x_1}(\VEC{x}) - \pdydx{F_1}{x_3}(\VEC{x}) &
+\DS \pdydx{F_3}{x_2}(\VEC{x}) - \pdydx{F_2}{x_3}(\VEC{x}) & 0
 \end{pmatrix} \\
 &= \frac{1}{2}
 \begin{pmatrix}
-0 & \displaystyle -\left(\curL F(\VEC{x})\right)_3 &
-\displaystyle \left(\curL F(\VEC{x})\right)_2 \\
-\displaystyle \left(\curL F(\VEC{x})\right)_3 & 0 &
-\displaystyle -\left(\curL F(\VEC{x})\right)_1 \\
-\displaystyle -\left(\curL F(\VEC{x})\right)_2 & 
-\displaystyle \left(\curL F(\VEC{x})\right)_1 & 0
+0 & \DS -\left(\curL F(\VEC{x})\right)_3 &
+\DS \left(\curL F(\VEC{x})\right)_2 \\
+\DS \left(\curL F(\VEC{x})\right)_3 & 0 &
+\DS -\left(\curL F(\VEC{x})\right)_1 \\
+\DS -\left(\curL F(\VEC{x})\right)_2 & 
+\DS \left(\curL F(\VEC{x})\right)_1 & 0
 \end{pmatrix} \ ,
 \end{align*}
-where $(\curL F(\VEC{x}))_i$ is the $\displaystyle i^{th}$ coordinates of
+where $(\curL F(\VEC{x}))_i$ is the $\DS i^{th}$ coordinates of
 $\curL F(\VEC{x})$.
 
 When $\curL F = \VEC{0}$, the flow is
@@ -2292,7 +2292,7 @@ Since $\VEC{w} = (0,0,\omega)$, we have
 = \VEC{w} \times \VEC{x} = (-\omega x_2, \omega x_1, 0)
 \]
 because $P(\VEC{x})$ is parallel to $\VEC{w}$.  Hence
-$\displaystyle \curL \VEC{v}  = 2\, \omega\, \VEC{e}_3$.
+$\DS \curL \VEC{v}  = 2\, \omega\, \VEC{e}_3$.
 
 In general, an object that spins like a spinning top with an angular
 velocity $\omega$ will satisfy $\curL \VEC{v}  = 2\, \omega\, \VEC{u}$
@@ -2307,8 +2307,8 @@ $\curL F = 0$, then the object does not spin like a spinning top.
 \subsubsection{A Physical Interpretation of the Curl  (Continued)}
 
 We consider a sufficiently smooth vector field
-$\displaystyle F:\RR^3 \to \RR^3$ and a point
-$\displaystyle \VEC{y} \in \RR^3$.  Let $\VEC{n}$ be
+$\DS F:\RR^3 \to \RR^3$ and a point
+$\DS \VEC{y} \in \RR^3$.  Let $\VEC{n}$ be
 a unit vector not necessarily tangent to the flow near $\VEC{y}$;
 namely, not necessarily parallel to $F(\VEC{x})$ for some $\VEC{x}$ near
 $\VEC{y}$.  Let $S_r$ be a disk of radius $r$ centred at
@@ -2343,7 +2343,7 @@ for some $\VEC{u}_r \in S_r$.  Thus
   \curL F(\VEC{u}_r) \cdot \VEC{n}  = \frac{1}{\pi r^2}
   \int_{C_r} F\cdot \VEC{t} \dx{s} \ .
 \]
-Since $\displaystyle \lim_{r\to 0}\VEC{u}_r = \VEC{y}$, we get
+Since $\DS \lim_{r\to 0}\VEC{u}_r = \VEC{y}$, we get
 \[
 \curL F(\VEC{y}) \cdot \VEC{n}
 = \lim_{r\to 0} \curL F(\VEC{u}_r) \cdot \VEC{n}
@@ -2352,9 +2352,9 @@ Since $\displaystyle \lim_{r\to 0}\VEC{u}_r = \VEC{y}$, we get
 Since $F(\VEC{u})\cdot \VEC{t}(\VEC{u})$ is the length of the
 component of the vector field $F$ tangent to $\partial S_r$ at
 $\VEC{u} \in \partial S_r$, the integral
-$\displaystyle \int_{\partial S_r} F \cdot \VEC{t} \dx{s}$ expresses the
+$\DS \int_{\partial S_r} F \cdot \VEC{t} \dx{s}$ expresses the
 displacement along $\partial S_r$.  Thus, for very small $r$,
-$\displaystyle \frac{1}{\pi r^2} \int_{\partial S_r} F \cdot \VEC{t} \dx{s}$
+$\DS \frac{1}{\pi r^2} \int_{\partial S_r} F \cdot \VEC{t} \dx{s}$
 can be used as a measure of the curl around the point $\VEC{y}$ per
 unit of area in the plane perpendicular to $\VEC{n}$.  Hence, as
 $r \to 0$, we get that $\curL F(\VEC{y}) \cdot \VEC{n}$ measure the curl
@@ -2362,7 +2362,7 @@ around the axis $\VEC{n}$ at the point $\VEC{y}$.
 
 We have that $\curL F(\VEC{y}) \cdot \VEC{n}$ reaches its maximal
 value with
-$\displaystyle \VEC{n} = \|\curL F(\VEC{y})\|^{-1} \curL F(\VEC{y})$.
+$\DS \VEC{n} = \|\curL F(\VEC{y})\|^{-1} \curL F(\VEC{y})$.
 In this case, $\curL F(\VEC{y}) \cdot \VEC{n} = \|\curL F(\VEC{y})\|$ and
 we may conclude that the angular velocity of the rotation around the
 axis given by $\curL F(\VEC{y})$ at $\VEC{y}$ is $\|\curL F(\VEC{y})\|$.
@@ -2390,14 +2390,14 @@ Theorem~\ref{GenStokesTh} or Theorem~\ref{GenStokesThV2}.
 Compute the arc length of the following curves.
 
 \subQ{a} The curve $C$ with the parametric representation
-$\displaystyle g:[0,2\pi]\to \RR^3$ given by
+$\DS g:[0,2\pi]\to \RR^3$ given by
 $g(t) = (a\cos(t),bt, a\sin(t))$.\\
 \subQ{b} The curve $C$ with the parametric representation
-$\displaystyle h:[0,2]\to \RR^2$ given by
-$\displaystyle h(t) = \left(t^3/3-t,t^2\right)$.\\
+$\DS h:[0,2]\to \RR^2$ given by
+$\DS h(t) = \left(t^3/3-t,t^2\right)$.\\
 \subQ{c} The curve $C$ with the parametric representation
-$\displaystyle f:[1,e]\to \RR^3$ given by
-$\displaystyle f(t) = (\ln(t),2t,t^2)$.\\
+$\DS f:[1,e]\to \RR^3$ given by
+$\DS f(t) = (\ln(t),2t,t^2)$.\\
 \end{question}
 
 \begin{sol}
@@ -2430,22 +2430,22 @@ The arc length is
 
 \begin{question}
 Integrals of the form
-$\displaystyle E(k) = \int_0^{\pi/2} \sqrt{1- k^2\sin^2(t)}\dx{t}$ with
+$\DS E(k) = \int_0^{\pi/2} \sqrt{1- k^2\sin^2(t)}\dx{t}$ with
 $0<k<1$ are called elliptic integrals.
 
 \subQ{a} Write the arc length of the ellipse
-$\displaystyle \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ in terms of an
+$\DS \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ in terms of an
 elliptic integral.\\
 \subQ{b} Write the arc length of the curve $C$ given by intersection
-of the sphere $\displaystyle x^2 + y^2 + z^2 =4$ and the cylinder
-$\displaystyle x^2 + y^2 -2xy = 0$ for $z\geq 0$.
+of the sphere $\DS x^2 + y^2 + z^2 =4$ and the cylinder
+$\DS x^2 + y^2 -2xy = 0$ for $z\geq 0$.
 \end{question}
 
 \begin{sol}
 \subQ{a}  Let $C$ be the curve represented by the ellipse.  We assume
 that $a > b$.  We get a similar result if $b > a$.
 A parametric representation for the ellipse is given by
-$\displaystyle g:[0,2\pi]\to \RR^2$ defined by
+$\DS g:[0,2\pi]\to \RR^2$ defined by
 $g(t) = (a\sin(t), b\cos(t))$.    The arc length of $C$ is
 \begin{align*}
 \int_0^{2\pi} \|g'(t)\|\dx{t}
@@ -2463,7 +2463,7 @@ We have
 \[
   x^2 +y^2 -2y = 0 \Rightarrow x^2 + (y-1)^2 = 1 \ .
 \]
-This suggests that $\displaystyle g:[0,\pi]\to \RR^3$
+This suggests that $\DS g:[0,\pi]\to \RR^3$
 defined by
 \[
 g(t) = \left(\sin(t), 1-\cos(t), \sqrt{4 - \sin^2(t) -(1+\cos(t))^2}\right)
@@ -2490,14 +2490,14 @@ equality.
 
 \begin{question}
 Let $C$ be a curve with the parametric representation
-$\displaystyle g:[0,2\pi]\to \RR^3$ defined by
-$\displaystyle g(t) = (2\cos(t),2\sin(t), t^2)$.
-Compute $\displaystyle \int_C\sqrt{z} \dx{s}$.
+$\DS g:[0,2\pi]\to \RR^3$ defined by
+$\DS g(t) = (2\cos(t),2\sin(t), t^2)$.
+Compute $\DS \int_C\sqrt{z} \dx{s}$.
 \end{question}
 
 \begin{sol}
 Since $g'(t) = (-2\sin(t), 2\cos(t) , 2t )$, we have that
-$\displaystyle \|g'(t)\| = 2\sqrt{1 + t^2}$.  Thus
+$\DS \|g'(t)\| = 2\sqrt{1 + t^2}$.  Thus
 \[
 \int_C \sqrt{z} \dx{s} = 2 \int_0^{2\pi} t \sqrt{1+t^2} \dx{t}
 = \frac{2}{3} (1+ t^2)^{3/2}\bigg|_{t=0}^{2\pi} = \frac{2}{3}
@@ -2507,13 +2507,13 @@ $\displaystyle \|g'(t)\| = 2\sqrt{1 + t^2}$.  Thus
 
 \begin{question}
 For each of the following vector fields $F$ and curves $C$, compute
-$\displaystyle \int_C F \cdot \dx{\VEC{s}}$.
+$\DS \int_C F \cdot \dx{\VEC{s}}$.
 
 \subQ{a} $C$ is the straight line from the origin to $(1,1,1)$ and
-$\displaystyle F(x,y,z) = (yz , x^2, xz)$.\\
-\subQ{b} $C$ is the curve $\displaystyle \{(x,x^2,x^3) : 0 \leq x \leq 1\}$ from
-$(0,0,0)$ to $(1,1,1)$ and $\displaystyle F(x,y,z) = (yz , x^2, xz)$.\\
-\subQ{c} $C$ is the circle $\displaystyle x^2+y^2 =1$ oriented clockwise and
+$\DS F(x,y,z) = (yz , x^2, xz)$.\\
+\subQ{b} $C$ is the curve $\DS \{(x,x^2,x^3) : 0 \leq x \leq 1\}$ from
+$(0,0,0)$ to $(1,1,1)$ and $\DS F(x,y,z) = (yz , x^2, xz)$.\\
+\subQ{c} $C$ is the circle $\DS x^2+y^2 =1$ oriented clockwise and
 $F(x,y,z) = (x-y,x+y)$.
 \end{question}
 
@@ -2528,7 +2528,7 @@ $g(t) = (t,t,t)$ for $0 \leq t \leq 1$.  We have
 \]
 
 \subQ{b} We use the parametric representation of $C$ given by
-$\displaystyle g(t) = (t,t^2,t^3)$ for $0 \leq t \leq 1$.  We have
+$\DS g(t) = (t,t^2,t^3)$ for $0 \leq t \leq 1$.  We have
 \begin{align*}
 \int_C F \cdot \dx{\VEC{s}}
 &= \int_C F \cdot g'(t) \dx{t}
@@ -2555,21 +2555,21 @@ as required by the orientation on the curve $C$.  We have
 
 \begin{question}
 For each of the following differential 1-form $\omega$ and curves $C$,
-compute $\displaystyle \int_C \omega$.
+compute $\DS \int_C \omega$.
 
-\subQ{a} $C$ is the curve $\displaystyle \{(x,x^2) : 0 \leq x \leq 1\}$
+\subQ{a} $C$ is the curve $\DS \{(x,x^2) : 0 \leq x \leq 1\}$
 from $(0,0)$ to $(1,1)$ and
-$\displaystyle \omega = xe^{-y} \df{x} + \sin(\pi x)\df{y}$.\\
+$\DS \omega = xe^{-y} \df{x} + \sin(\pi x)\df{y}$.\\
 \subQ{b} $C$ is the curve $\{(\cos(t),\sin(t),t) : 0 \leq t \leq 2\pi\}$ 
 from $(1.0,0)$ to $(1,0,2\pi)$ and $\omega = y\df{x} + z \df{y} + xy\df{z}$.\\
 \subQ{c} $C$ is the triangle with vertices at $(0,0)$, $(1,0)$ and
 $(1,1)$ oriented counterclockwise and
-$\displaystyle \omega = y^2 \df{x} - 2 x\df{y}$.
+$\DS \omega = y^2 \df{x} - 2 x\df{y}$.
 \end{question}
 
 \begin{sol}
 \subQ{a} The curve $C$ is the singular $1$-cube given by
-$\displaystyle \sigma(t) = (t,t^2)$ for $0 \leq t \leq 1$.  We have
+$\DS \sigma(t) = (t,t^2)$ for $0 \leq t \leq 1$.  We have
 \begin{align*}
 \int_\sigma \omega &= \int_{[0,1]} \sigma^\ast(\omega) 
 = \int_0^1 \left( te^{-t^2} +2 t \sin(\pi t) \right)\dx{t} \\
@@ -2598,11 +2598,11 @@ $0 \leq t \leq 1$, $C_2$ from $(1,0)$ to $(1,1)$ is given by
 $\sigma_2(t) = (1,t)$ for $0 \leq t \leq 1$, and
 $C_3$ from $(1,1)$ to $(0,0)$ is given by $\sigma_3(t) = (1-t,1-t)$ for
 $0 \leq t \leq 1$.  Since
-$\displaystyle \int_{\sigma_1} \omega = \int_{[0,1]} \sigma_1^\ast(\omega)
+$\DS \int_{\sigma_1} \omega = \int_{[0,1]} \sigma_1^\ast(\omega)
 = \int_0^1 0 \dx{t} = 0$,
-$\displaystyle \int_{\sigma_2} \omega = \int_{[0,1]} \sigma_2^\ast(\omega)
+$\DS \int_{\sigma_2} \omega = \int_{[0,1]} \sigma_2^\ast(\omega)
 = \int_0^1 (-2) \dx{t} = -2$ and
-$\displaystyle \int_{\sigma_3} \omega = \int_{[0,1]} \sigma_3^\ast(\omega)
+$\DS \int_{\sigma_3} \omega = \int_{[0,1]} \sigma_3^\ast(\omega)
 = \int_0^1 \left( -(1-t)^2 +2 (1-t)\right) \dx{t} = \frac{2}{3}$,
 we find that
 \[
@@ -2612,14 +2612,14 @@ we find that
 \end{sol}
 
 \begin{question}
-Let $\displaystyle F:\RR^n \to \RR^n$ be a continuous vector fields
-and $\displaystyle C \subset \RR^n$ be a curve.  Prove that
-$\displaystyle  \left| \int_C F \cdot \dx{\VEC{s}} \right|
+Let $\DS F:\RR^n \to \RR^n$ be a continuous vector fields
+and $\DS C \subset \RR^n$ be a curve.  Prove that
+$\DS  \left| \int_C F \cdot \dx{\VEC{s}} \right|
 \leq \int_C \|F\|\dx{s}$.
 \end{question}
 
 \begin{sol}
-Let $\displaystyle \sigma:[0,1]\to \RR^n$ be a parametric
+Let $\DS \sigma:[0,1]\to \RR^n$ be a parametric
 representation of $C$.  Then
 \begin{align*}
 \left| \int_C F \cdot \dx{\VEC{s}} \right|
@@ -2641,12 +2641,12 @@ sum of the lengths of $C_1$ and $C_2$.
 
 \begin{sol}
 Since $C$ is a curve, there exists a parametric representation
-$\displaystyle g: [a,b] \to \RR^n$ of $C$ such that $g$ is one-to-one except
+$\DS g: [a,b] \to \RR^n$ of $C$ such that $g$ is one-to-one except
 possibly at a finite number of points.
 Since $C$ is the union of two curves $C_1$ and $C_2$, there exists
-$c$ between $a$ and $b$ such that $\displaystyle g: [a,c] \to \RR^n$
+$c$ between $a$ and $b$ such that $\DS g: [a,c] \to \RR^n$
 is a parametric representation of $C_1$ and
-$\displaystyle g: [c,b] \to \RR^n$ is a parametric representation of $C_2$.
+$\DS g: [c,b] \to \RR^n$ is a parametric representation of $C_2$.
 
 Let $L$ be the length of $C$ and $L_i$ be the length of $C_i$ for
 $1 \leq i \leq 2$.
@@ -2656,14 +2656,14 @@ partition $Q = P \cup \{c\}$.  The partition $Q$ is a refinement of
 $P$.  Moreover $Q_1 = Q \cap [a,c]$ is a partition of $[a,c]$ and
 $Q_2 = Q \cap [c,b]$ is a partition of $[c,b]$.
 We have that
-$\displaystyle L_P(g) \leq L_Q(g) = L_{Q_1}(g) + L_{Q_2}(g) \leq L_1 + L_2$.
+$\DS L_P(g) \leq L_Q(g) = L_{Q_1}(g) + L_{Q_2}(g) \leq L_1 + L_2$.
 Since this is true for all partitions $P$ of $[a,b]$, we get that
 $L \leq L_1 + L_2$.
 
 \stage{ii}  Choose $\epsilon >0$.  Let $P_1$ and $P_2$ be partitions
 of $[a,c]$ and $[c,b]$ respectively such that
-$\displaystyle L_1 - L_{P_1}(g) < \epsilon/2$ and
-$\displaystyle L_2 - L_{P_2}(g) < \epsilon/2$.
+$\DS L_1 - L_{P_1}(g) < \epsilon/2$ and
+$\DS L_2 - L_{P_2}(g) < \epsilon/2$.
 We have that $P = P_1 \cup P_2$ is a partition of $[a,b]$ such that
 \[
 0 \leq L_1 + L_2 - L_{P}(g)
@@ -2676,7 +2676,7 @@ $L_1 + L_2 \leq L$.
 \end{sol}
 
 \begin{question}
-Compute the surface integral $\displaystyle \iint_S z\dx{S}$ over the
+Compute the surface integral $\DS \iint_S z\dx{S}$ over the
 upper hemisphere $S$ of radius $a$ using two different parametric
 representations.
 \end{question}
@@ -2692,7 +2692,7 @@ g(\theta,\phi) =
 (a\cos(\theta)\sin(\phi) , a\sin(\theta)\sin(\phi) , a\cos(\phi) )
 \]
 for $0\leq \theta < 2\pi$ and $0\leq \phi \leq \pi/2$.  We have that
-$\displaystyle \left\| \pdydx{g}{\theta} \times \pdydx{g}{\phi} \right\| =
+$\DS \left\| \pdydx{g}{\theta} \times \pdydx{g}{\phi} \right\| =
 a^2 \sin(\phi)$.  Thus
 \begin{align*}
 \iint_S z \dx{S} &= \int_0^{2\pi} \int_0^{\pi/2} a \cos(\phi) 
@@ -2707,8 +2707,8 @@ a^2 \sin(\phi)$.  Thus
 
 \subI{Second representation}
 The parametric representation is given by the Cartesian coordinates
-$\displaystyle g(x,y) = (x, y, \sqrt{a^2-x^2-y^2})$ for
-$\displaystyle x^2+y^2\leq a$.  We have
+$\DS g(x,y) = (x, y, \sqrt{a^2-x^2-y^2})$ for
+$\DS x^2+y^2\leq a$.  We have
 \begin{align*}
 \dx{S} &= \sqrt{ \left(\pdydx{z}{x}\right)^2 +
   \left(\pdydx{z}{y}\right)^2 + 1} \ \dx{y}\dx{x} \\
@@ -2716,9 +2716,9 @@ $\displaystyle x^2+y^2\leq a$.  We have
   \left(\frac{-y}{\sqrt{a^2-x^2-y^2}}\right)^2 + 1} \ \dx{y}\dx{x}
 = \frac{a}{\sqrt{a^2-x^2-y^2}}  \dx{y}\dx{x} \ .
 \end{align*}
-On the disk $\displaystyle x^2 +y^2 \leq a$, we have that
+On the disk $\DS x^2 +y^2 \leq a$, we have that
 $-a\leq x \leq a$ and
-$\displaystyle -\sqrt{a^2-x^2} \leq y \leq \sqrt{a^2-x^2}$.
+$\DS -\sqrt{a^2-x^2} \leq y \leq \sqrt{a^2-x^2}$.
 Hence
 \begin{align*}
 \iint_S z \dx{S} &= \int_{-a}^a \int_{-\sqrt{a^2-x^2}}^{\sqrt{a^2-x^2}}
@@ -2735,8 +2735,8 @@ representation may seriously simplify the computations.
 \end{sol}
 
 \begin{question}
-Compute the surface integral $\displaystyle \iint_S( x^2 + y^2)\dx{S}$
-over the portion $S$ of the sphere $\displaystyle x^2+y^2+z^2=25$
+Compute the surface integral $\DS \iint_S( x^2 + y^2)\dx{S}$
+over the portion $S$ of the sphere $\DS x^2+y^2+z^2=25$
 above $z=4$; namely, $z \geq 4$.
 \end{question}
 
@@ -2767,7 +2767,7 @@ of $S$.
 % = 25 \sin(\phi) \ .
 % \]
 Since
-$\displaystyle \left\| \pdydx{g}{\theta} \times \pdydx{g}{\phi} \right\|
+$\DS \left\| \pdydx{g}{\theta} \times \pdydx{g}{\phi} \right\|
 = 25 \sin(\phi)$, the area is
 \begin{align*}
 \iint_S (x^2 + y^2) \dx{S}
@@ -2783,7 +2783,7 @@ equality.
 \end{sol}
 
 \begin{question}
-Compute $\displaystyle \int_S (x^2 + y^2 - 2z^2) \dx{S}$ where $S$ is
+Compute $\DS \int_S (x^2 + y^2 - 2z^2) \dx{S}$ where $S$ is
 the unit sphere centred at the origin.
 \end{question}
 
@@ -2795,12 +2795,12 @@ We have
 \]
 A little observation may safe us of a long computation.  Because of
 the symmetry, we have that
-$\displaystyle \int_S x^2 \dx{S} = \int_S y^2 \dx{S} = \int_S z^2 \dx{S}$.
-Thus $\displaystyle \int_S (x^2 + y^2 - 2z^2) \dx{S} = 0$.
+$\DS \int_S x^2 \dx{S} = \int_S y^2 \dx{S} = \int_S z^2 \dx{S}$.
+Thus $\DS \int_S (x^2 + y^2 - 2z^2) \dx{S} = 0$.
 \end{sol}
 
 \begin{question}
-Compute the integral $\displaystyle \iint_S xyz \dx{S}$ where $S$ is
+Compute the integral $\DS \iint_S xyz \dx{S}$ where $S$ is
 the triangular surface represented in the following figure.
 \pdfbox{vect_calculus/extra18}
 \end{question}
@@ -2814,11 +2814,11 @@ $\VEC{n} = \VEC{v}_1 \times \VEC{v}_2 = (2,1,1)$
 and the equation of the plane is
 $\ps{\big((x,y,z)-\VEC{p}_1\big)}{\VEC{n}} = 2x -2 +y+z = 0$.
 A parametric representation of the triangular surface is given by
-$\displaystyle \phi(x,y) = (x, y, 2-2x-y)$ for $0\leq x \leq 1$ and
+$\DS \phi(x,y) = (x, y, 2-2x-y)$ for $0\leq x \leq 1$ and
 $1-x\leq y \leq 2-2x$.
 \pdfbox{vect_calculus/extra19}
 We have that
-$\displaystyle \dx{S}
+$\DS \dx{S}
 = \left\| \pdydx{\phi}{x} \times \pdydx{\phi}{y} \right\| \dx{y}\dx{x}
 = \|\VEC{n}\| \dx{y}\dx{x} = \sqrt{6}\ \dx{y}\dx{x}$.
 Hence
@@ -2843,23 +2843,23 @@ $\dx{S}$.
 
 \begin{question}
 Find the area of the surface $z=xy$ inside the cylinder
-$\displaystyle x^2+y^2 = a^2$.
+$\DS x^2+y^2 = a^2$.
 \end{question}
 
 \begin{sol}
 Let $S$ be the surface defined in the statement of the question.  A
 parametric representation of this surface is given by
-$\displaystyle g(r,\theta) = \left( r\cos(\theta),  r\sin(\theta) ,
+$\DS g(r,\theta) = \left( r\cos(\theta),  r\sin(\theta) ,
 r^2 \cos(\theta)\sin(\theta) \right)$
 for $0 \leq r \leq a$ and $0\leq \theta \leq 2\pi$.
 Since
-$\displaystyle \pdydx{g}{r} = \left( \cos(\theta) , \sin(\theta) ,
+$\DS \pdydx{g}{r} = \left( \cos(\theta) , \sin(\theta) ,
 2r \cos(\theta)\sin(\theta) \right)$
 and\\
-$\displaystyle \pdydx{g}{\theta} = \left( -r \sin(\theta) , r\cos(\theta) ,
+$\DS \pdydx{g}{\theta} = \left( -r \sin(\theta) , r\cos(\theta) ,
 r^2 (\cos^2(\theta)-\sin^2(\theta)) \right)$,
 we get that\\
-$\displaystyle \left\| \pdydx{g}{r} \times \pdydx{g}{\theta} \right\|
+$\DS \left\| \pdydx{g}{r} \times \pdydx{g}{\theta} \right\|
 = \left\| \left(-r^2\sin(\theta), -r^2\cos(\theta), r \right)\right\|
 = r \sqrt{r^2+1}$.
 Hence, the area is
@@ -2871,21 +2871,21 @@ Hence, the area is
 \end{sol}
 
 \begin{question}
-Find the area of the surface $\displaystyle z=x^2+y^2$ inside the cylinder
-$\displaystyle x^2+y^2 = a^2$.
+Find the area of the surface $\DS z=x^2+y^2$ inside the cylinder
+$\DS x^2+y^2 = a^2$.
 \end{question}
 
 \begin{sol}
 Let $S$ be the surface defined in the statement of the question.  A
 parametric representation of this surface is given by
-$\displaystyle g(r,\theta) = \left( r\cos(\theta), r\sin(\theta),  r^2
+$\DS g(r,\theta) = \left( r\cos(\theta), r\sin(\theta),  r^2
 \right)$ for $0 \leq r \leq a$ and $0\leq \theta \leq 2\pi$.
 Since
-$\displaystyle \pdydx{g}{r} = \left( \cos(\theta) , \sin(\theta) ,
+$\DS \pdydx{g}{r} = \left( \cos(\theta) , \sin(\theta) ,
 2r \right)$ and
-$\displaystyle \pdydx{g}{\theta} = \left( -r \sin(\theta) ,
+$\DS \pdydx{g}{\theta} = \left( -r \sin(\theta) ,
 r\cos(\theta) , 0 \right)$, we get that
-$\displaystyle \left\| \pdydx{g}{r} \times \pdydx{g}{\theta} \right\|
+$\DS \left\| \pdydx{g}{r} \times \pdydx{g}{\theta} \right\|
 = \left\| \left(-2 r^2\cos(\theta), -2r^2\sin(\theta), r \right) \right\|
 = r \sqrt{4r^2+1}$.
 Hence, the area is
@@ -2898,17 +2898,17 @@ Hence, the area is
 
 \begin{question}
 Let $S$ be the solid bounded below by the paraboloid
-$\displaystyle z=x^2+y^2$ and above by
-the sphere $\displaystyle x^2+y^2+z^2=4z$ for $z\geq 0$.  Find the
+$\DS z=x^2+y^2$ and above by
+the sphere $\DS x^2+y^2+z^2=4z$ for $z\geq 0$.  Find the
 area of the surface of $S$.
 \end{question}
 
 \begin{sol}
 The value of $z$ at the intersection of the paraboloid with the sphere is
-given by $\displaystyle z + z^2 = 4z$; namely,
-$\displaystyle z^2-3z=z(z-3)=0$.  For $z=0$, the sphere
+given by $\DS z + z^2 = 4z$; namely,
+$\DS z^2-3z=z(z-3)=0$.  For $z=0$, the sphere
 touches the paraboloid at its lowest point.  For $z=3$, we get the circle
-$\displaystyle x^2+y^2=3$.
+$\DS x^2+y^2=3$.
 
 The surface $S$ is shown in the following figure.
 \pdfbox{vect_calculus/finalB}
@@ -2959,14 +2959,14 @@ Hence, the area is
 
 \begin{question}
 Given $0 < a < b$, compute the area of the torus obtained from the
-rotation of the circle $\displaystyle (x-b)^2+z^2 = a^2$ about the $z$ axis.
+rotation of the circle $\DS (x-b)^2+z^2 = a^2$ about the $z$ axis.
 \end{question}
 
 \begin{sol}
 \pdfbox{vect_calculus/question31}
-A parametric representation of the circle $\displaystyle (x-b)^2+z^2 = a^2$
+A parametric representation of the circle $\DS (x-b)^2+z^2 = a^2$
 is given by\\
-$\displaystyle h(\phi) =
+$\DS h(\phi) =
 \begin{pmatrix} b+ a \cos(\phi) & 0 & a\sin(\phi) \end{pmatrix}^\top$
 for $0 \leq \phi \leq 2\pi$.  To obtain the torus, it suffices to
 rotate this circle about the $z$ axis.  This is done by multiplying
@@ -2992,14 +2992,14 @@ b+ a \cos(\phi) \\ 0 \\ a\sin(\phi)
 \]
 for $0\leq \phi \leq 2\pi$ and $0 \leq \theta \leq 2\pi$.
 Since
-$\displaystyle \pdydx{g}{\phi} =
+$\DS \pdydx{g}{\phi} =
 \begin{pmatrix}
 -a \sin(\phi)\cos(\theta) \\
 -a \sin(\phi)\sin(\theta) \\
 a \cos(\phi) 
 \end{pmatrix}$
 and\\
-$\displaystyle \pdydx{g}{\theta} =
+$\DS \pdydx{g}{\theta} =
 \begin{pmatrix}
 -(b+a\cos(\phi))\sin(\theta) \\
 (b +a \cos(\phi)) \cos(\theta) \\
@@ -3034,14 +3034,14 @@ area of this Mobiüs strip.  What is the surface of a Mobiüs strip?
 
 \begin{question}
 Find the surface area of the portion of the paraboloid
-$\displaystyle z=x^2+y^2$ which is
-inside the region bounded by the cylinders $\displaystyle x^2+y^2=2$
-and $\displaystyle x^2+y^2=6$.
+$\DS z=x^2+y^2$ which is
+inside the region bounded by the cylinders $\DS x^2+y^2=2$
+and $\DS x^2+y^2=6$.
 \end{question}
 
 \begin{question}
 Find the area of the portion of the sphere of radius $R$ centred at
-the origin which is inside the cylinder $\displaystyle x^2+y^2 -Ry\leq 0$ and
+the origin which is inside the cylinder $\DS x^2+y^2 -Ry\leq 0$ and
 satisfies $x \geq 0$.
 \end{question}
 
@@ -3050,13 +3050,13 @@ Suppose that $f:[a,b]\to \RR$ is a continuously differentiable function.
 We learn in calculus that the area $A$ of the surface of revolution $S$
 obtained by revolving the graph of $f$ (in the $x,y$ plane) around the
 $x$ axis is
-$\displaystyle A = 2\pi \int_a^b |f(x)|\sqrt{1+(f'(x))^2}\dx{x}$.  Prove this
+$\DS A = 2\pi \int_a^b |f(x)|\sqrt{1+(f'(x))^2}\dx{x}$.  Prove this
 formula using a surface integral.
 \end{question}
 
 \begin{sol}
 A parametric representation of the surface of revolution is given by\\
-$\displaystyle \phi(x,\theta) = \big(x,f(x)\cos(\theta),
+$\DS \phi(x,\theta) = \big(x,f(x)\cos(\theta),
 f(x)\sin(\theta)\big)$ for $a\leq x \leq b$ and $0 \leq \theta \leq 2\pi$.
 Hence
 \begin{align*}
@@ -3076,9 +3076,9 @@ Thus, the area is
 
 \begin{question}
 Evaluate directly the surface integral
-$\displaystyle \iint_S \VEC{F} \cdot \dx{\VEC{S}}$ where
+$\DS \iint_S \VEC{F} \cdot \dx{\VEC{S}}$ where
 $F(x,y,z) = (x, y, z)$ and $S$ is the cylinder defined by
-$\displaystyle x^2+y^2=1$ and $0\leq z \leq 1$.  The orientation on $S$ is
+$\DS x^2+y^2=1$ and $0\leq z \leq 1$.  The orientation on $S$ is
 given by the unit normal to $S$ pointing away from the $z$ axis.
 \end{question}
 
@@ -3086,7 +3086,7 @@ given by the unit normal to $S$ pointing away from the $z$ axis.
 The surface $S$ is shown in the following figure.
 \pdfbox{vect_calculus/extra20}
 We choose the parametric representation
-$\displaystyle \phi(\theta,z) = \big( \cos(\theta), \sin(\theta), z\big)$
+$\DS \phi(\theta,z) = \big( \cos(\theta), \sin(\theta), z\big)$
 for $0\leq \theta < 2\pi$ and $0\leq z \leq 1$.  Hence
 \[
 \pdydx{\phi}{\theta} \times \pdydx{\phi}{z} =
@@ -3097,7 +3097,7 @@ for $0\leq \theta < 2\pi$ and $0\leq z \leq 1$.  Hence
 \]
 This is a vector pointing away from the $z$ axis as required by the
 orientation on $S$.  Since it is a vector of norm one, we have that
-$\displaystyle \VEC{n} = \pdydx{\phi}{\theta} \times \pdydx{\phi}{z}$
+$\DS \VEC{n} = \pdydx{\phi}{\theta} \times \pdydx{\phi}{z}$
 is the unit normal associated to the orientation on $S$.  Thus
 \begin{align*}
 \iint_S F \cdot \dx{\VEC{S}} &= \int_S F \cdot \VEC{n} \dx{S}
@@ -3109,9 +3109,9 @@ is the unit normal associated to the orientation on $S$.  Thus
 
 \begin{question}
 Evaluate directly the surface integral
-$\displaystyle \iint_S \VEC{F} \cdot \dx{\VEC{S}}$ where
-$\displaystyle F(x,y,z) = \big( x^2y, -3 xy^2, 4y^3\big)$ and $S$ is the
-portion of the surface $\displaystyle z=x^2+y^2+9$ with
+$\DS \iint_S \VEC{F} \cdot \dx{\VEC{S}}$ where
+$\DS F(x,y,z) = \big( x^2y, -3 xy^2, 4y^3\big)$ and $S$ is the
+portion of the surface $\DS z=x^2+y^2+9$ with
 $0\leq x \leq 2$ and $0\leq y \leq 1$.
 The orientation on $S$ is given by the unit normal to $S$
 pointing in the direction of $z$ negative.
@@ -3121,7 +3121,7 @@ pointing in the direction of $z$ negative.
 The surface $S$ is shown in the following figure.
 \pdfbox{vect_calculus/extra21}
 We choose the parametric representation
-$\displaystyle \phi(x,y) = (x,y, (x^2+y^2-9)\big)$
+$\DS \phi(x,y) = (x,y, (x^2+y^2-9)\big)$
 for $0\leq x < 2$ and $0\leq y \leq 1$.  Hence
 \[
 \pdydx{\phi}{x} \times \pdydx{\phi}{y} =
@@ -3141,7 +3141,7 @@ on $S$.  Therefore
 \end{align*}
 is a normal vector pointing in the direction of $z$ negative as
 required and\\
-$\displaystyle \dx{S} = \left\|\pdydx{\phi}{x} \times \pdydx{\phi}{y}\right\|
+$\DS \dx{S} = \left\|\pdydx{\phi}{x} \times \pdydx{\phi}{y}\right\|
 \dx{y}\dx{x} = \sqrt{4x^2+4y^2+1} \dx{y}\dx{x}$.
 Hence
 \begin{align*}
@@ -3158,15 +3158,15 @@ Hence
 
 \begin{question}
 Evaluate directly the surface integral
-$\displaystyle \iint_R F \cdot \dx{\VEC{S}}$ where
+$\DS \iint_R F \cdot \dx{\VEC{S}}$ where
 $F(x,y,z) = (x,0,y)$ and $R$ is one of the surfaces described below.
 
 \subQ{a} $R$ is the surface with the parametric representation
-$\displaystyle g(u,v) = \big( u + v, u^2 - v^2,  v\cos(u/2)\big)$
+$\DS g(u,v) = \big( u + v, u^2 - v^2,  v\cos(u/2)\big)$
 for $0 \leq u \leq 1$ and $0 \leq v \leq 1$.  We assume that this
 parametric representation is consistent with the chosen orientation on
 $R$.\\
-\subQ{b} $R$ is the surface of the cylinder $\displaystyle y^2+z^2 = 1$ with
+\subQ{b} $R$ is the surface of the cylinder $\DS y^2+z^2 = 1$ with
 $0\leq x \leq 1$.  The orientation is given by the unit normal
 pointing away from the $x$ axis.\\
 \subQ{c} $R$ is the boundary of the unit cube
@@ -3175,25 +3175,25 @@ unit normal pointing outward.
 \end{question}
 
 \begin{question}
-Compute $\displaystyle \int_S F \cdot \dx{\VEC{S}}$    \label{surfQuestionA}
+Compute $\DS \int_S F \cdot \dx{\VEC{S}}$    \label{surfQuestionA}
 for each of the following vector fields $F$ and surfaces $S$.
 
 \subQ{a} $F(x,y,z) = (xz,0,-xy)$ and $S$ is the portion of the surface
 $z=xy$ for $0 \leq x \leq 1$ and $0\leq y \leq 2$.  The orientation on
 $S$ is give by a normal pointing in the direction of $z$ positive.\\
-\subQ{b} $\displaystyle F(x,y,z) = (x^2,z,-y)$ and $S$ is the unit
+\subQ{b} $\DS F(x,y,z) = (x^2,z,-y)$ and $S$ is the unit
 sphere centred at the origin.  The orientation on $S$ is give by a
 normal pointing outward.\\
 \subQ{c} $F(x,y,z) = (xy,z,0)$ and $S$ is the triangular surface with
 vertices at $(2,0,0)$, $(0,2,0)$ and $(0,0,2)$.  The orientation on
 $S$ is give by a normal pointing in the direction of $z$ positive.\\
-\subQ{d} $\displaystyle F(x,y,z) = (0,0,z^2)$ and $S$ is the boundary
-of the region enclosed by the cylinder $\displaystyle x^2+y^2=1$ and
+\subQ{d} $\DS F(x,y,z) = (0,0,z^2)$ and $S$ is the boundary
+of the region enclosed by the cylinder $\DS x^2+y^2=1$ and
 the planes $z=a,b$ with $a < b$.  The orientation on $S$ is
 given by a normal pointing outward.\\
 \subQ{e} $F(x,y,z) = (x,y,z)$ and $S$ is the boundary of the region
-enclosed by the surface $\displaystyle z=x^2+y^2$ and the sphere
-$\displaystyle x^2+y^2+z^2=20$.
+enclosed by the surface $\DS z=x^2+y^2$ and the sphere
+$\DS x^2+y^2+z^2=20$.
 The orientation on $S$ is given by a normal pointing outward.
 \end{question}
 
@@ -3201,9 +3201,9 @@ The orientation on $S$ is given by a normal pointing outward.
 \subQ{a} we choose the parametric representation
 $g(u,v) = (u,v,uv)$ for $0 \leq u \leq 1$ and $0 \leq v \leq 2$.
 Since
-$\displaystyle \pdydx{g}{u} = (1,0,v)$ and
-$\displaystyle \pdydx{g}{v} = (0,1,u)$, we get that
-$\displaystyle \pdydx{g}{u} \times \pdydx{g}{v} = (-v,-u,1)$.
+$\DS \pdydx{g}{u} = (1,0,v)$ and
+$\DS \pdydx{g}{v} = (0,1,u)$, we get that
+$\DS \pdydx{g}{u} \times \pdydx{g}{v} = (-v,-u,1)$.
 Since $(-v,-u,1)$ is a vector that point in the direction of $z$
 positive, the parametric representation is consistent with the
 required orientation on $S$.  Thus
@@ -3218,7 +3218,7 @@ required orientation on $S$.  Thus
 \end{align*}
 
 \subQ{b} We have that
-$\displaystyle \iint_S F \cdot \dx{\VEC{S}} = \iint_S F \cdot \VEC{n} \dx{S}$
+$\DS \iint_S F \cdot \dx{\VEC{S}} = \iint_S F \cdot \VEC{n} \dx{S}$
 where $\VEC{n}$ is a unit vector pointing outside $S$ at each point of
 $S$.  Since $S$ is a unit sphere centred at the origin, we have that
 $\VEC{n} = (x,y,z)$ at every point $(x,y,z)$ of $S$.  Thus
@@ -3226,9 +3226,9 @@ $\VEC{n} = (x,y,z)$ at every point $(x,y,z)$ of $S$.  Thus
 \iint_S F \cdot \dx{\VEC{S}} = \iint_S (x^2,z,-y) \cdot (x,y,z) \dx{S}
 = \iint_S x^3 \dx{S} \ .
 \]
-Since $\displaystyle x \mapsto x^3$ is an odd function and $S$ is
+Since $\DS x \mapsto x^3$ is an odd function and $S$ is
 symmetric with respect to the $y,z$ plane, the last integral is
-null.  Hence $\displaystyle \iint_S F \cdot \dx{\VEC{S}} = 0$.
+null.  Hence $\DS \iint_S F \cdot \dx{\VEC{S}} = 0$.
 
 \subQ{c} We first need to find the equation of the plane that contains
 the points $(2,0,0)$, $(0,2,0)$ and $(0,0,2)$.  A normal to this plane
@@ -3246,9 +3246,9 @@ namely, $z = 2 -x -y$.  We choose the parametric representation
 $g(u,v) = (u,v,2-u-v)$ for $0 \leq u \leq 2$ and $0 \leq v \leq 2 - u$.
 \pdfbox{vect_calculus/question33}
 Since
-$\displaystyle \pdydx{g}{u} = (1,0,-1)$ and
-$\displaystyle \pdydx{g}{v} = (0,1,-1)$, we get
-$\displaystyle \pdydx{g}{u} \times \pdydx{g}{v} = (1,1,1)$.
+$\DS \pdydx{g}{u} = (1,0,-1)$ and
+$\DS \pdydx{g}{v} = (0,1,-1)$, we get
+$\DS \pdydx{g}{u} \times \pdydx{g}{v} = (1,1,1)$.
 Since $(1,1,1)$ is a vector that point in the direction of $z$
 positive, the parametric representation is consistent with the
 required orientation on $S$.  Thus
@@ -3288,16 +3288,16 @@ Hence
 = -a^2 \iint_{S_1} \dx{S} + b^2 \iint_{S_3} \dx{S} \ .
 \end{align*}
 Since
-$\displaystyle \iint_{S_1} \dx{S} = \iint_{S_3} \dx{S} =
+$\DS \iint_{S_1} \dx{S} = \iint_{S_3} \dx{S} =
   \iint_{x^2+y^2\leq 1} \dx{S} = \pi$,
 the area of a disk of radius $1$, we get that
-$\displaystyle \iint_S F \cdot \dx{\VEC{S}} = (b^2-a^2)\pi$.
+$\DS \iint_S F \cdot \dx{\VEC{S}} = (b^2-a^2)\pi$.
 
 \subQ{e} We first find the intersection of the two surfaces.
 On the intersection, $z$ must satisfy
-$\displaystyle z^2+z-20 = (z+5)(z-4)=0$.  Since
-$\displaystyle z = x^2+y^2$ is non negative, we get $z=4$.  Thus the
-intersection is the circle $\displaystyle x^2+y^2=4$ with $z=4$.
+$\DS z^2+z-20 = (z+5)(z-4)=0$.  Since
+$\DS z = x^2+y^2$ is non negative, we get $z=4$.  Thus the
+intersection is the circle $\DS x^2+y^2=4$ with $z=4$.
 
 We have
 \[
@@ -3305,9 +3305,9 @@ We have
 = \iint_{S_1} F \cdot \VEC{n} \dx{S} + \iint_{S_2} F \cdot \VEC{n} \dx{S} \ ,
 \]
 where
-$\displaystyle S_1 = \{ (x,y,\sqrt{20-x^2-y^2}) : x^2 + y^2 \leq 4 \}$ is the
+$\DS S_1 = \{ (x,y,\sqrt{20-x^2-y^2}) : x^2 + y^2 \leq 4 \}$ is the
 top of $S$ and
-$\displaystyle S_2 = \{ (x,y,x^2+y^2) : x^2 + y^2 \leq 1\}$ is the bottom
+$\DS S_2 = \{ (x,y,x^2+y^2) : x^2 + y^2 \leq 1\}$ is the bottom
 of $S$.
 \pdfbox{vect_calculus/question35}
 As usual, $\VEC{n}$ is a unit vector pointing outside $S$.
@@ -3356,15 +3356,15 @@ required orientation on $S_1$.  We have
 \end{align*}
 
 On $S_2$, we choose the parametric representation
-$\displaystyle
+$\DS
 g_2(\theta,r) = \big( r \cos(\theta), r \sin(\theta), r^2 \big)$ for
 $0 \leq \theta \leq 2\pi$ and $0 \leq r \leq 2$.  Since
-$\displaystyle
+$\DS
 \pdydx{g_2}{\theta} = \left(-r \sin(\theta), r \cos(\theta), 0 \right)$
 and
-$\displaystyle \pdydx{g_2}{r} = \left( \cos(\theta), \sin(\theta), 2r \right)$,
+$\DS \pdydx{g_2}{r} = \left( \cos(\theta), \sin(\theta), 2r \right)$,
 we get that
-$\displaystyle \pdydx{g_2}{\theta} \times \pdydx{g_2}{r}
+$\DS \pdydx{g_2}{\theta} \times \pdydx{g_2}{r}
 =\left( 2 r^2 \cos(\theta) , 2 r^2\sin(\theta), -r \right)$.
 This is a vector that point in the direction of $z$
 negative, thus the parametric representation is consistent with the
@@ -3379,7 +3379,7 @@ required orientation on $S_2$.  We have
 = 8 \pi \ .
 \end{align*}
 We therefore have that
-$\displaystyle 
+$\DS 
 \iint_S F \cdot \dx{\VEC{S}} = 80\pi \sqrt{5} - 160\pi + 8\pi
 = 8\pi(10\sqrt{5} - 19)$.
 \end{sol}
@@ -3391,13 +3391,13 @@ Using two different methods, evaluate the line integral
 $\int_C F \cdot \dx{\VEC{s}}$ where 
 $F(x,y) = (y,x)$ and $C$ is the closed curve defined by the parametric
 representation
-$\displaystyle \sigma(t) = (t^2-1,t^3-t)$ for $-1 \leq t \leq 1$.
+$\DS \sigma(t) = (t^2-1,t^3-t)$ for $-1 \leq t \leq 1$.
 We assume that the parametric representation is consistent with the
 orientation on $C$.
 \end{question}
 
 \begin{sol}
-\stage{i} Since $\displaystyle \sigma'(t) = (2t, 3t^2-1)$. the line
+\stage{i} Since $\DS \sigma'(t) = (2t, 3t^2-1)$. the line
 integral is
 \begin{align*}
 \int_C F \cdot \dx{\VEC{s}} &= \int_{-1}^1
@@ -3408,10 +3408,10 @@ integral is
 
 \stage{ii} Suppose that $D$ is the region enclosed by $C$.  Note that
 $C$ is a closed curve like a circle.  To justify this claim, consider
-$\displaystyle t^3 -t = t(t^2-1)$.  We have that $\displaystyle x=t^2-1$
-decreases from $0$ to $-1$ with $\displaystyle y =t^3-t>0$ when $t$
-goes from $-1$ to $0$, and $\displaystyle x=t^2-1$ increases from $-1$
-to $0$ with $\displaystyle y =t^3-t<0$ when $t$ goes from $0$ to 
+$\DS t^3 -t = t(t^2-1)$.  We have that $\DS x=t^2-1$
+decreases from $0$ to $-1$ with $\DS y =t^3-t>0$ when $t$
+goes from $-1$ to $0$, and $\DS x=t^2-1$ increases from $-1$
+to $0$ with $\DS y =t^3-t<0$ when $t$ goes from $0$ to 
 $1$.
 
 We select the orientation on $C$ such that $D$ is to the left when
@@ -3429,17 +3429,17 @@ is null.
 \end{sol}
 
 \begin{question}
-Compute $\displaystyle \int_C F \cdot \dx{\VEC{s}}$ using Green's
+Compute $\DS \int_C F \cdot \dx{\VEC{s}}$ using Green's
 Theorem in each of the following cases.
 
 \subQ{a} $F(x,y) = (x-y,x+y)$ and $C$ is the unit circle oriented
 clockwise.\\
-\subQ{b} $\displaystyle F(x,y) = (y^2, -2x)$ and $C$ is the triangle
+\subQ{b} $\DS F(x,y) = (y^2, -2x)$ and $C$ is the triangle
 with vertices $(0,0)$, $(1,0)$ and $(1,1)$ oriented counterclockwise.\\
-\subQ{c} $\displaystyle F(x,y) = (x^2 + 10 xy + y^2, 5x^2 + 5xy)$ and
+\subQ{c} $\DS F(x,y) = (x^2 + 10 xy + y^2, 5x^2 + 5xy)$ and
 $C$ is the square with vertices $(0,0)$, $(2,0)$, $(0,2)$ and $(2,2)$ oriented
 counterclockwise.\\
-\subQ{d} $\displaystyle F(x,y) = (3 x^2 \sin(y^2), 2 x^3 y \cos(y^2))$
+\subQ{d} $\DS F(x,y) = (3 x^2 \sin(y^2), 2 x^3 y \cos(y^2))$
 and $C$ is the boundary of a bounded region $D$ with a continuously
 differentiable boundary where the orientation on
 $C$ is the positive orientation with respect to $D$.
@@ -3447,7 +3447,7 @@ $C$ is the positive orientation with respect to $D$.
 
 \begin{sol}
 \subQ{a} Since clockwise is not the positive orientation on the
-boundary of the disk $\displaystyle D = \{ (x,y) : x^2 + y^2 \leq 1
+boundary of the disk $\DS D = \{ (x,y) : x^2 + y^2 \leq 1
 \}$, we have
 \[
 \int_C F \cdot \dx{\VEC{s}} = -\int_{\partial D} F \cdot \dx{\VEC{s}}
@@ -3492,14 +3492,14 @@ with respect to $D$.  Thus
 \end{sol}
 
 \begin{question}
-Let $D$ be the annulus $\displaystyle \{ (x,y) : 1 \leq x^2 + y^2 \leq 4\}$.
-Compute $\displaystyle \int_{\partial D} x y^2 \dx{y} - x^2 y \dx{x}$
+Let $D$ be the annulus $\DS \{ (x,y) : 1 \leq x^2 + y^2 \leq 4\}$.
+Compute $\DS \int_{\partial D} x y^2 \dx{y} - x^2 y \dx{x}$
 where $\partial D$ has the positive orientation with respect to $D$.
 \end{question}
 
 \begin{sol}
-We have $\displaystyle \int_{\partial D} F \cdot \dx{\VEC{s}}$ where
-$\displaystyle F(x,y) = (-x^2y, x y^2)$.  Thus
+We have $\DS \int_{\partial D} F \cdot \dx{\VEC{s}}$ where
+$\DS F(x,y) = (-x^2y, x y^2)$.  Thus
 \[
 \int_{\partial D} x y^2 \dx{y} - x^2 y \dx{x}
 = \int_{\partial D} F \cdot \dx{\VEC{s}}
@@ -3509,7 +3509,7 @@ $\displaystyle F(x,y) = (-x^2y, x y^2)$.  Thus
 To compute the double integral, we use the change of variables
 $x = r\cos(\theta)$ and $y = r\sin(\theta)$ for $1 \leq r \leq 2$ and
 $0 \leq \theta \leq 2\pi$.   Thus
-$\displaystyle \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$
+$\DS \left| \frac{\partial(x,y)}{\partial(r,\theta)} \right| = r$
 and
 \[
 \iint_D \left( y^2 + x^2 \right) \dx{A}
@@ -3520,15 +3520,15 @@ and
 \end{sol}
 
 \begin{question}
-Find the simple closed curve $C$ of class $\displaystyle C^1$
+Find the simple closed curve $C$ of class $\DS C^1$
 that maximize the line integral
-$\displaystyle I_C = \int_C F \cdot \dx{\VEC{s}}$ where
-$\displaystyle F(x,y) = (y^3, 3x-x^3)$.
+$\DS I_C = \int_C F \cdot \dx{\VEC{s}}$ where
+$\DS F(x,y) = (y^3, 3x-x^3)$.
 \end{question}
 
 \begin{sol}
 Suppose that $C = \partial D$ is the boundary of a bounded region $D$
-with a boundary of class $\displaystyle C^1$.  Moreover, suppose that the
+with a boundary of class $\DS C^1$.  Moreover, suppose that the
 orientation on $C$ is the positive orientation with respect to $D$.
 We have from Green's Theorem that
 \[
@@ -3537,8 +3537,8 @@ I_C = \int_C F \cdot \dx{\VEC{s}}
 = 3 \iint_D \left( 1 -x^2 -y^2 \right) \dx{A} \ .
 \]
 The maximum of the double integral is reached for
-$\displaystyle D=\{ (x,y) : x^2 + y^2 \leq 1\}$, the largest region on which
-$\displaystyle 1-x^2-y^2$ is non-negative.  Thus $C$ is the unit
+$\DS D=\{ (x,y) : x^2 + y^2 \leq 1\}$, the largest region on which
+$\DS 1-x^2-y^2$ is non-negative.  Thus $C$ is the unit
 circle with the counterclockwise orientation, the positive orientation
 of $\partial D$ with respect to $D$
 \end{sol}
@@ -3546,16 +3546,16 @@ of $\partial D$ with respect to $D$
 \begin{question}
 Let $f:[a,b] \to [0,\infty[$ be a continuously differentiable function.
 Show that the area under the graph of $f$ for $a\leq x \leq b$
-is given by $\displaystyle -\int_{\partial S} y \dx{x}$ where
+is given by $\DS -\int_{\partial S} y \dx{x}$ where
 $S = \{ (x,y) : a\leq x \leq b \text{ and } 0 \leq y \leq f(x) \}$
 and the orientation on $\partial S$ is counterclockwise.
 \end{question}
 
 \begin{sol}
 We show that
-$\displaystyle \int_a^b f(x) \dx{x} = -\int_{\partial S} y \dx{x}$.
+$\DS \int_a^b f(x) \dx{x} = -\int_{\partial S} y \dx{x}$.
 We have that
-$\displaystyle \int_{\partial S} y \dx{x} = \sum_{i=1}^4 \int_{C_i} y \dx{x}$
+$\DS \int_{\partial S} y \dx{x} = \sum_{i=1}^4 \int_{C_i} y \dx{x}$
 where
 $C_1$ is the straight line with parametric representation
 $g_1(t) = (t,0)$ for $a\leq t \leq b$,
@@ -3567,14 +3567,14 @@ $C_4$ is the straight line with parametric representation
 $g_4(t) = (a,f(a)-t)$ for $ 0\leq t \leq f(a)$.
 All parametric representations are respecting the positive orientation
 on $\partial S$ with respect to $S$.  We can easily see that
-$\displaystyle \int_{C_i} y \dx{x} = 0$ for $i=1$, $2$ and $4$ because
+$\DS \int_{C_i} y \dx{x} = 0$ for $i=1$, $2$ and $4$ because
 either $x$ is constant or $y=0$.  Moreover
 \[
 \int_{C_3} y\dx{x} = \int_0^1 f(b+t(a-b)) (a-b) \dx{t} 
 = \int_b^a f(x) \dx{x} = - \int_a^b f(x) \dx{x} ,
 \]
 where we have used the substitution $x= b+t(a-b)$.   Thus
-$\displaystyle \int_{\partial S} y \dx{x} = - \int_a^b f(x) \dx{x}$
+$\DS \int_{\partial S} y \dx{x} = - \int_a^b f(x) \dx{x}$
 as required.
 \end{sol}
 
@@ -3584,7 +3584,7 @@ $x=a(u - \sin(u))$ and $y=a(1 - \cos(u))$.
 \end{question}
 
 \begin{sol}
-Since $\displaystyle \dydx{x}{u} = a (1 -\cos(u)) >0$ for
+Since $\DS \dydx{x}{u} = a (1 -\cos(u)) >0$ for
 $u \neq 2n\pi$ with $n \in \ZZ$, we have
 that $x$ is strictly increasing.  Moreover, $y \geq 0$ for all $u$ and
 $y = 0$ only for $u = 2n \pi$ with $n\in \ZZ$.  Therefore, there is an
@@ -3610,7 +3610,7 @@ the arch is given by
 \iint_D \dx{A} = \int_{\partial D} x \dx{y} 
 = \int_{C_1} x \dx{y} - \int_{C_2} x \dx{y} \ .
 \]
-However $\displaystyle \int_{C_1} x \dx{y} = 0$ and
+However $\DS \int_{C_1} x \dx{y} = 0$ and
 \begin{align*}
 \int_{C_2} x \dx{y}
 &= 2 \pi a^2 \int_n^{n+1}(2\pi u - \sin(2\pi u)) \sin(2\pi u)\dx{u} \\
@@ -3623,7 +3623,7 @@ However $\displaystyle \int_{C_1} x \dx{y} = 0$ and
 -  \pi a^2 \left( u - \frac{\sin(4 \pi u)}{4\pi} \right)\bigg|_{u=n}^{n+1} \\
 & = - 2 \pi a^2 - \pi a^2 = - 3\pi a^2   \ .
 \end{align*}
-Thus $\displaystyle \iint_D \dx{A} = 3\pi a^2$.
+Thus $\DS \iint_D \dx{A} = 3\pi a^2$.
 
 We could have used $n=0$ in the computation above because
 each arch has the same shape and area due to the
@@ -3632,25 +3632,25 @@ $2\pi$ periodicity of the cosine and sine functions.
 
 \begin{question}
 For each of the following vector fields $F$ and closed surfaces $S$,
-compute the integral $\displaystyle \iint_S F \cdot \dx{\VEC{S}}$
+compute the integral $\DS \iint_S F \cdot \dx{\VEC{S}}$
 using the divergence theorem where the positive orientation on $S$ is
 given by the unit normal pointing outside the region enclosed by $S$.
 
-\subQ{a} $\displaystyle F(x,y,z) = (x^2,z,-y)$ and $S$ is the sphere
+\subQ{a} $\DS F(x,y,z) = (x^2,z,-y)$ and $S$ is the sphere
 of radius $1$ centred at the origin.\\
 \subQ{b} $F(x,y,z) = (x,y,z)$ and $S$ is the boundary of the region\\
-$\displaystyle R = \{ x^2+y^2 \leq z \leq \sqrt{20-x^2-y^2}$.\\
+$\DS R = \{ x^2+y^2 \leq z \leq \sqrt{20-x^2-y^2}$.\\
 \subQ{c} $F(x,y,z) = (x^2,y^2,z^2)$ and $S$ is the surface of the cube
 $R = \{ (x,y,z) : a \leq x,y,z \leq b \}$.\\
-\subQ{d} $\displaystyle F(x,y,z) =
+\subQ{d} $\DS F(x,y,z) =
 \left(\frac{x}{a^2}, \frac{y}{b^2}, \frac{z}{c^2}\right)$
 and $S$ is the ellipsoid
-$\displaystyle \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$.\\
-\subQ{e} $\displaystyle F(x,y,z) = (x^2, -2xy,z^2)$ and $S$ is the
+$\DS \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$.\\
+\subQ{e} $\DS F(x,y,z) = (x^2, -2xy,z^2)$ and $S$ is the
 boundary of the cylinder
 $R = \{ (x,y,z) : (x,y)\in D \text{ and } a \leq z \leq b\}$,
-where $\displaystyle D\subset \RR^2$ is a surface with a boundary of
-class $\displaystyle C^1$ and an area that is equal to $A$.
+where $\DS D\subset \RR^2$ is a surface with a boundary of
+class $\DS C^1$ and an area that is equal to $A$.
 \end{question}
 
 \begin{sol}
@@ -3659,13 +3659,13 @@ class $\displaystyle C^1$ and an area that is equal to $A$.
 \iint_S F \cdot \dx{\VEC{S}} = \iiint_R \diV F \, \dx{V}
 = \iiint_R 2x \dx{V}
 \]
-where $\displaystyle R = \{ (x,y,z) : x^2 + y^2 + z^2 \leq 1 \}$ is the
+where $\DS R = \{ (x,y,z) : x^2 + y^2 + z^2 \leq 1 \}$ is the
 ball of radius $1$ centred at the origin and $S = \partial R$.
 To compute the triple integral, we note that $x \mapsto 2x$ is a
 symmetric function with respect to the $y$,$z$ plane and that the
 integral is computed over a symmetric domain with respect to the
 $y$,$z$ plane; namely, the ball $R$.  Thus
-$\displaystyle = \iiint_R 2x \dx{V} = 0$.
+$\DS = \iiint_R 2x \dx{V} = 0$.
 
 \subQ{b} A sketch of the region $R$ and additional details about this
 region can be found in the solution of Question~\ref{surfQuestionA} (e).
@@ -3679,7 +3679,7 @@ To compute this triple integral, we use the cylindrical coordinates
 $x = r \cos(\theta)$, $y = r \sin(\theta)$ and $z=z$ for
 $0\leq r \leq 2$, $0 \leq \theta \leq 2\pi$ and
 $r^2 \leq z \leq \sqrt{20 - r^2}$.  Since
-$\displaystyle
+$\DS
 \left|\frac{\partial(x,y,z)}{\partial(r,\theta,z)}\right| = r$,
 we get
 \begin{align*}
@@ -3708,21 +3708,21 @@ we get
 = \iiint_R \left(\frac{1}{a^2} + \frac{1}{b^2} +\frac{1}{c^2}\right) \dx{V}
 = \left(\frac{1}{a^2} + \frac{1}{b^2} +\frac{1}{c^2}\right) \iiint_R \dx{V} \ ,
 \]
-where $\displaystyle R = \left\{ (x,y,z) :
+where $\DS R = \left\{ (x,y,z) :
 \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} \leq 1 \right\}$.
 Let us assume that we do not know the formula to compute the volume of
-an ellipsoid.  To compute the integral $\displaystyle \iiint_R \dx{V}$,
+an ellipsoid.  To compute the integral $\DS \iiint_R \dx{V}$,
 we first reduce it to an integral over a sphere of radius $1$ centred
 at the origin.  We use the change of variables $x=au$, $y=bv$ and $z=cw$ for
-$\displaystyle u^2 + v^2 + w^2 \leq 1$.  Since
-$\displaystyle \left|\frac{\partial(x,y,z)}{\partial(u,v,w)}\right| = abc$,
+$\DS u^2 + v^2 + w^2 \leq 1$.  Since
+$\DS \left|\frac{\partial(x,y,z)}{\partial(u,v,w)}\right| = abc$,
 we get
 \[
 \iiint_R \dx{V} = abc \iint_{x^2+y^2+z^2\leq 1} \dx{V}
 = \frac{4\pi}{3} \, abc \ ,
 \]
 where we have used the well known formula
-$\displaystyle V = 4\pi r^3/3$ to compute the volume of a ball
+$\DS V = 4\pi r^3/3$ to compute the volume of a ball
 of radius $r$.  Thus
 \[
   \iint_S F \cdot \dx{\VEC{S}} = 
@@ -3742,10 +3742,10 @@ of radius $r$.  Thus
 
 \begin{question}
 Let $F$ be the vector field
-$\displaystyle F(x,y,z) = (x^2+y^2+z^2) (x, y, z)$ and $S$ be the
+$\DS F(x,y,z) = (x^2+y^2+z^2) (x, y, z)$ and $S$ be the
 sphere of radius $a$ centred at the origin.  Suppose that the
 orientation on $S$ is given by the unit normal pointing away from the
-origin.  Compute $\displaystyle \iint_S F \cdot \dx{\VEC{S}}$ with and
+origin.  Compute $\DS \iint_S F \cdot \dx{\VEC{S}}$ with and
 without the divergence theorem.
 \end{question}
 
@@ -3762,7 +3762,7 @@ a^2\cos(\phi)\sin(\phi) \big) \ .
 \]
 We note that this parametric representation is consistent with the
 selected orientation on $S$; namely,
-$\displaystyle \pdydx{g}{\phi} \times \pdydx{g}{\theta}$ points outside the
+$\DS \pdydx{g}{\phi} \times \pdydx{g}{\theta}$ points outside the
 ball $R$ of radius $a$ centred at the origin.  Thus
 \begin{align*}
 \iint_S F \cdot \dx{\VEC{S}}
@@ -3786,7 +3786,7 @@ compute the triple integral, we use the spherical coordinates
 $x= r \cos(\theta)\sin(\phi)$, $y= r\sin(\theta)\sin(\phi)$ and
 $z= r \cos(\phi)$ for $0 \leq r \leq a$, $0\leq \theta \leq 2\pi$ and
 $0\leq \phi \leq \pi$.  Since
-$\displaystyle \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
+$\DS \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
   = r^2 \sin(\phi)$, we get
 \begin{align*}
 \iiint_R 5(x^2+y^2+z^2) \dx{V}
@@ -3799,28 +3799,28 @@ $\displaystyle \left| \frac{\partial(x,y,z)}{\partial(r,\theta,\phi)} \right|
 
 \begin{question}
 Consider the vector field
-$\displaystyle F(x,y,z) = \big(x^3 +y\sin(z), y^3+z\sin(x), 2z\big)$
+$\DS F(x,y,z) = \big(x^3 +y\sin(z), y^3+z\sin(x), 2z\big)$
 and the solid
-$\displaystyle R = \{ (x,y,z) : 1 \leq x^2 + y^2 + z^2 \leq 9
+$\DS R = \{ (x,y,z) : 1 \leq x^2 + y^2 + z^2 \leq 9
 \ \text{and}\ z\geq 0\}$.
-Compute $\displaystyle \iint_{\partial R} F\cdot \dx{\VEC{S}}$
+Compute $\DS \iint_{\partial R} F\cdot \dx{\VEC{S}}$
 where the positive orientation on $\partial R$ is given by the unit normal
 pointing outside $R$.
 \end{question}
 
 \begin{sol}
 From the divergence theorem, we have that
-$\displaystyle \iint_{\partial R} F\cdot \dx{\VEC{S}}
+$\DS \iint_{\partial R} F\cdot \dx{\VEC{S}}
 = \iiint_{R} \diV F \dx{x}\dx{y}\dx{z}$
 where
-$\displaystyle \diV F = \pdydx{F_1}{x} + \pdydx{F_2}{y} + \pdydx{F_3}{z}
+$\DS \diV F = \pdydx{F_1}{x} + \pdydx{F_2}{y} + \pdydx{F_3}{z}
 = 3x^2 + 3 y^2 + 2$.
 We use the spherical coordinates to compute the triple integral.  The
 region $R$ is the image of \\
-$\displaystyle g(\theta,\phi, r) =
+$\DS g(\theta,\phi, r) =
 \big( r \cos(\theta)\sin(\phi) ,r \sin(\theta)\sin(\phi) ,r \cos(\phi)\big)$
 for $1\leq r \leq 3$, $0\leq \theta \leq 2\pi$ and $0\leq \phi \leq \pi/2$.
-Since $\displaystyle |\det \diff g(\theta,\phi,r)| = r^2 \sin(\phi)$,
+Since $\DS |\det \diff g(\theta,\phi,r)| = r^2 \sin(\phi)$,
 we get
 \begin{align*}
 &\iiint_R \diV F \dx{x}\dx{y}\dx{z} \\
@@ -3844,26 +3844,26 @@ we get
 
 \begin{question}
 Consider the vector field
-$\displaystyle F(x,y,z) = \big( x^2y, xy^2, 2xyz\big)$.  Let $R$
+$\DS F(x,y,z) = \big( x^2y, xy^2, 2xyz\big)$.  Let $R$
 be the tetrahedron with vertices at $(0,0,0)$, $(2,0,0)$, $(0,1,0)$ and
-$(0,0,2)$.  Compute $\displaystyle \iint_{\partial R} F\cdot \dx{\VEC{S}}$
+$(0,0,2)$.  Compute $\DS \iint_{\partial R} F\cdot \dx{\VEC{S}}$
 where the orientation on $\partial R$ is given by the unit normal
 pointing outside $R$.
 \end{question}
 
 \begin{question}
-Consider the vector Field $\displaystyle F:\RR^3\to \RR^3$ defined by
-$\displaystyle F(x,y,z) = \big(xz^2, z, x^2z \big)$.  Compute the integral
-$\displaystyle \iint_D F\cdot \dx{\VEC{S}}$ where $D$ is the surface of the
-solid $\displaystyle R = \{(x,y,z) : 1 \leq x^2+z^2 \leq 4 \ \text{and}
+Consider the vector Field $\DS F:\RR^3\to \RR^3$ defined by
+$\DS F(x,y,z) = \big(xz^2, z, x^2z \big)$.  Compute the integral
+$\DS \iint_D F\cdot \dx{\VEC{S}}$ where $D$ is the surface of the
+solid $\DS R = \{(x,y,z) : 1 \leq x^2+z^2 \leq 4 \ \text{and}
 \ -1 \leq y \leq 1\}$ and
 the orientation on $D$ is given by the unit normal pointing outside of $R$.
 \end{question}
 
 \begin{sol}
 From the divergence theorem, we have that
-$\displaystyle \iint_D F\cdot \dx{\VEC{S}} = \int_R \diV F$
-where $\displaystyle \diV F = z^2 + x^2$.  To compute the
+$\DS \iint_D F\cdot \dx{\VEC{S}} = \int_R \diV F$
+where $\DS \diV F = z^2 + x^2$.  To compute the
 integral on $R$, we use the cylindrical coordinates; namely,
 $g(r,\theta,y) = \big(r\cos(\theta), y, r\sin(\theta)\big)$
 for $-1\leq y \leq 1$, $0\leq \theta \leq 2\pi$ and $1 \leq r \leq 2$.
@@ -3883,10 +3883,10 @@ r^3 \dx{r} \dx{y} \dx{\theta}
 \end{sol}
 
 \begin{question}
-Let $R$ be a bounded region in $\displaystyle \RR^3$ with a piecewise
+Let $R$ be a bounded region in $\DS \RR^3$ with a piecewise
 continuously differentiable boundary $\partial R$.  Show that the
 volume of $R$ is given by
-$\displaystyle \frac{1}{3} \iint_{\partial R} F \cdot \dx{\VEC{S}}$
+$\DS \frac{1}{3} \iint_{\partial R} F \cdot \dx{\VEC{S}}$
 where $F(x,y,z) = (x,y,z)$ and the orientation on $\partial R$ is
 given by the unit normal to $\partial R$ pointing outside $R$.
 \end{question}
@@ -3897,20 +3897,20 @@ Since $\diV F = 3$, we get from the divergence theorem that
 \iint_{\partial R} F \cdot \dx{\VEC{S}}
 = \iiint_R \diV F \dx{V} = 3 \iiint_R \dx{V}
 \]
-where $\displaystyle \iiint_R \dx{V}$ is the volume of $R$.
+where $\DS \iiint_R \dx{V}$ is the volume of $R$.
 \end{sol}
 
 \begin{question}
-Use Stokes' theorem to evaluate $\displaystyle \int_C F \cdot \dx{\VEC{s}}$
+Use Stokes' theorem to evaluate $\DS \int_C F \cdot \dx{\VEC{s}}$
 in each of the following cases.
 
 \subQ{a} $F(x,y,z) = (x-z,x+y,y+z)$ and $C$ is the ellipse resulting
 from the intersection of the plane $z=my+b$ with the cylinder
-$\displaystyle x^2+y^2=4$.  The orientation on $C$ is counterclockwise
+$\DS x^2+y^2=4$.  The orientation on $C$ is counterclockwise
 when viewed from the positive $z$ axis.\\
 \subQ{b} $F(x,y,z) = (y, y^2,x+2z)$ and $C$ is the curve resulting
 from the intersection of the plane $z=a-y$ with the sphere
-$\displaystyle x^2+y^2+z^2=a^2$.
+$\DS x^2+y^2+z^2=a^2$.
 The orientation on $C$ is counterclockwise when viewed from the
 positive $z$ axis.
 \end{question}
@@ -3921,18 +3921,18 @@ The ellipse $C$ is the boundary of the region $S$ of the plane $z = my +b$
 that is enclosed by $C$.  For $C$ to be positively oriented with respect
 to $S$, the orientation on $S$ must be given by
 the unit normal
-$\displaystyle \VEC{n} = (0, -m/\sqrt{1+m^2}, 1/\sqrt{1+m^2})$.  This is
+$\DS \VEC{n} = (0, -m/\sqrt{1+m^2}, 1/\sqrt{1+m^2})$.  This is
 shown in the following figure for $m>0$ and $b=0$.
 \pdfbox{vect_calculus/question37}
 According to Stokes' theorem, we have that
-$\displaystyle \int_C F\cdot \dx{\VEC{s}} = \iint_S \curL F \cdot
+$\DS \int_C F\cdot \dx{\VEC{s}} = \iint_S \curL F \cdot
 \dx{\VEC{S}}$
 where
 \[
 \curL F = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\
 x-z & x+y & y+z
 \end{pmatrix} = (1,-1,1) \ .
 \]
@@ -3979,13 +3979,13 @@ $\VEC{n} = (0, 1/\sqrt{2}, 1/\sqrt{2})$.  This is shown in the
 following figure.
 \pdfbox{vect_calculus/question38}
 According to Stokes' theorem, we have that
-$\displaystyle \int_C F\cdot \dx{\VEC{s}} = \iint_S \curL F \cdot \dx{\VEC{S}}$
+$\DS \int_C F\cdot \dx{\VEC{s}} = \iint_S \curL F \cdot \dx{\VEC{S}}$
 where
 \[
 \curL F = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\
 y & y^2 & x+2z
 \end{pmatrix} = (0,-1,-1) \ .
 \]
@@ -4000,18 +4000,18 @@ for $0 \leq r \leq 1$ and $0 \leq \theta \leq 2\pi$.  We have
 \pdydx{g}{r} \times \pdydx{g}{\theta}
 = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle (a/\sqrt{2}) \cos(\theta) &
-\displaystyle (a/2)\sin(\theta) &
-\displaystyle -(a/2)\sin(\theta) \\
-\displaystyle -(a r/\sqrt{2}) \sin(\theta) &
-\displaystyle (a r/2)\cos(\theta) &
-\displaystyle -(a r/2)\cos(\theta)
+\DS (a/\sqrt{2}) \cos(\theta) &
+\DS (a/2)\sin(\theta) &
+\DS -(a/2)\sin(\theta) \\
+\DS -(a r/\sqrt{2}) \sin(\theta) &
+\DS (a r/2)\cos(\theta) &
+\DS -(a r/2)\cos(\theta)
 \end{pmatrix} = \left( 0, \frac{a^2r}{2\sqrt{2}},  \frac{a^2r}{2\sqrt{2}}
 \right) \ .
 \]
 Therefore, the parametric representation is consistent with the
 orientation on $S$ because
-$\displaystyle \left( 0,\frac{a^2r}{2\sqrt{2}},\frac{a^2r}{2\sqrt{2}}\right)$
+$\DS \left( 0,\frac{a^2r}{2\sqrt{2}},\frac{a^2r}{2\sqrt{2}}\right)$
 points in the same direction as $\VEC{n}$.
 Hence
 \begin{align*}
@@ -4026,8 +4026,8 @@ Hence
 \end{sol}
 
 \begin{question}
-Compute $\displaystyle \iint_S \curL F \cdot \dx{\VEC{S}}$ where
-$\displaystyle F(x,y,z) = (y , x-2x^3z,xy^3)$ and $S$ is the upper half of the
+Compute $\DS \iint_S \curL F \cdot \dx{\VEC{S}}$ where
+$\DS F(x,y,z) = (y , x-2x^3z,xy^3)$ and $S$ is the upper half of the
 sphere of radius $a$ centred at the origin.  The orientation on $S$ is
 given by a normal pointing away from the origin.
 \end{question}
@@ -4035,7 +4035,7 @@ given by a normal pointing away from the origin.
 \begin{sol}
 We could obviously compute directly the integral but it may require
 less work to use Stokes' theorem; namely,
-$\displaystyle \iint_S \curL F \cdot \dx{\VEC{S}}
+$\DS \iint_S \curL F \cdot \dx{\VEC{S}}
 = \int_{\partial S} F \cdot \dx{\VEC{s}}$
 where $\partial S$ is the circle of radius $a$ centred at the origin
 and contained in the plan $z=0$.  The positive orientation on
@@ -4059,10 +4059,10 @@ a^4\cos(\theta)\sin^3(\theta)\big) \cdot
 \noindent{\bfseries Note}: Instead of computing the line integral
 $\int_{\partial S} F \cdot \dx{\VEC{s}}$, we can use Stokes' theorem
 again to replace this integral by a surface integral.  We have that
-$\displaystyle \int_{\partial S} F \cdot \dx{\VEC{s}}
+$\DS \int_{\partial S} F \cdot \dx{\VEC{s}}
 = \iint_S \curL F \cdot \dx{\VEC{S}}$
 where $D$ is the disk
-$\displaystyle D = \{ (x,y,0) : x^2 + y^2 \leq a^2 \}$ and the
+$\DS D = \{ (x,y,0) : x^2 + y^2 \leq a^2 \}$ and the
 orientation on $D$ is the orientation given by the unit vector $\VEC{e}_3$.
 A parametric representation of $D$ is given by
 $g(r,\theta) = (r\cos(\theta), r\sin(\theta),0)$ for $0\leq r \leq a$
@@ -4081,8 +4081,8 @@ on $D$.  Since
 \[
 \curL F = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\
 y & x - 2 x^3 z & xy^3
 \end{pmatrix}
 =\big( 3xy^2 + 2 x^3, - y^3 ,- 6 x^2 z \big)\ ,
@@ -4099,9 +4099,9 @@ we get
 \end{sol}
 
 \begin{question}
-Let $\displaystyle F(x,y,z) = (-x^2y, x^3, x^2 + yz)$ and $S$ be the
+Let $\DS F(x,y,z) = (-x^2y, x^3, x^2 + yz)$ and $S$ be the
 lower half of the ellipsoid
-$\displaystyle \frac{x^2}{4} + \frac{y^2}{9} + \frac{z^2}{25} = 1$;
+$\DS \frac{x^2}{4} + \frac{y^2}{9} + \frac{z^2}{25} = 1$;
 namely, for $z \leq 0$.  Compute the flow of $\curL F$ across the surface
 $S$ if the orientation on $S$ is given by the unit vector pointing in
 the direction of $z$ positive.
@@ -4109,13 +4109,13 @@ the direction of $z$ positive.
 
 \begin{sol}
 To compute the flow of $\curL F$ across the surface $S$, we need to
-compute $\displaystyle \iint_S \curL F \cdot \dx{\VEC{S}}$.  We could
+compute $\DS \iint_S \curL F \cdot \dx{\VEC{S}}$.  We could
 obviously compute directly this integral but it may require less work
 to use Stokes' theorem; namely
-$\displaystyle \iint_S \curL F \cdot \dx{\VEC{S}}
+$\DS \iint_S \curL F \cdot \dx{\VEC{S}}
 = \int_{\partial S} F \cdot \dx{\VEC{s}}$
 where $\partial S$ is the ellipse
-$\displaystyle \frac{x^2}{4} + \frac{y^2}{9} = 1$
+$\DS \frac{x^2}{4} + \frac{y^2}{9} = 1$
 contained in the plan $z=0$.  The positive orientation on $\partial S$
 is counterclockwise when view from the positive side of the $z$ axis.
 
@@ -4137,12 +4137,12 @@ It is consistent with the positive orientation on $\partial S$.  Thus
 \end{align*}
 
 \noindent{\bfseries Note}: Instead of computing the line integral
-$\displaystyle \int_{\partial S} F \cdot \dx{\VEC{s}}$, we may use
+$\DS \int_{\partial S} F \cdot \dx{\VEC{s}}$, we may use
 Stokes' theorem again to replace this integral by a surface integral;
-namely, $\displaystyle \int_{\partial S} F \cdot \dx{\VEC{s}}
+namely, $\DS \int_{\partial S} F \cdot \dx{\VEC{s}}
 = \iint_D \curL F \cdot \dx{\VEC{S}}$
 where $D$ is the region
-$\displaystyle D = \left\{ (x,y,0) : \frac{x^2}{4} + \frac{y^2}{9}
+$\DS D = \left\{ (x,y,0) : \frac{x^2}{4} + \frac{y^2}{9}
 \leq 1 \right\}$ with the orientation given by the unit vector $\VEC{e}_3$.
 A parametric representation of $D$ is given by
 $g(r,\theta) = (2r\cos(\theta), 3r\sin(\theta),0)$ for $0\leq r \leq 1$
@@ -4161,8 +4161,8 @@ on $D$.  Since
 \[
 \curL F = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\
 2xy & 3x & x^2 + z^2
 \end{pmatrix}
 = (z,-2 x, 4x^2) \ ,
@@ -4180,13 +4180,13 @@ we get
 \end{sol}
 
 \begin{question}
-Let $\displaystyle F(x,y,z) = \left(\frac{-y}{x^2+y^2},
+Let $\DS F(x,y,z) = \left(\frac{-y}{x^2+y^2},
 \frac{x}{x^2+y^2},0 \right)$ for $(x,y) \neq (0,0)$.
 
 \subQ{a} Show that $\curL F = \VEC{0}$.\\
-\subQ{b} Show that $\displaystyle \int_C F \cdot \dx{\VEC{s}} = 2 \pi$
+\subQ{b} Show that $\DS \int_C F \cdot \dx{\VEC{s}} = 2 \pi$
 where $C$ is the circle
-$\displaystyle C = \{ (x,y,b) : x^2 +y^2 = a^2\}$ oriented
+$\DS C = \{ (x,y,b) : x^2 +y^2 = a^2\}$ oriented
 counterclockwise for $a,b \in \RR$ arbitrary but fixed.\\
 \subQ{c} Explain why (a) and (b) do not contradict Stokes' theorem.
 \end{question}
@@ -4196,10 +4196,10 @@ counterclockwise for $a,b \in \RR$ arbitrary but fixed.\\
 \[
 \curL F = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} &  \displaystyle \pdydx{}{y} &  
-\displaystyle \pdydx{}{z} \\
-\displaystyle \frac{-y}{x^2+y^2} &
-\displaystyle \frac{x}{x^2+y^2}  & 0
+\DS \pdydx{}{x} &  \DS \pdydx{}{y} &  
+\DS \pdydx{}{z} \\
+\DS \frac{-y}{x^2+y^2} &
+\DS \frac{x}{x^2+y^2}  & 0
 \end{pmatrix}
 = \left(0, 0, \pdfdx{\left(\frac{x}{x^2+y^2}\right)}{x} -
 \pdfdx{\left(\frac{-y}{x^2+y^2}\right)}{y} \right) = \VEC{0}
@@ -4221,7 +4221,7 @@ It is consistent with the orientation on $C$.  Thus
 \end{align*}
 
 \subQ{c} We cannot use Stokes' theorem because there is no surface
-$\displaystyle S \subset \RR^3$ such that $C = \partial S$ and $F$ is
+$\DS S \subset \RR^3$ such that $C = \partial S$ and $F$ is
 continuously differentiable on an open set containing $S$.  The vector
 field $F$ is not defined along the $z$ axis and it cannot be
 continuously extended to the $z$ axis.
@@ -4229,17 +4229,17 @@ continuously extended to the $z$ axis.
 
 \begin{question}
 Consider the vector field
-$\displaystyle F(x,y,z) = \big(xyz^3, xyz, \sin(xyz)\big)$.
+$\DS F(x,y,z) = \big(xyz^3, xyz, \sin(xyz)\big)$.
 Let $R$ be the portion of the sphere
-$\displaystyle x^2 + y^2 +z^2 = 9$ between the
+$\DS x^2 + y^2 +z^2 = 9$ between the
 planes $z=0$ and $z=2$.  The orientation on $R$ is given by the unit
 normal pointing away from the $z$ axis.  Compute the integral
-$\displaystyle \iint_R \curL F \cdot \dx{\VEC{S}}$.
+$\DS \iint_R \curL F \cdot \dx{\VEC{S}}$.
 \end{question}
 
 \begin{sol}
 According to Stokes' theorem, we have that
-$\displaystyle \iint_R \curL F \cdot \dx{\VEC{S}}
+$\DS \iint_R \curL F \cdot \dx{\VEC{S}}
 = \int_{\partial R} F \cdot \dx{\VEC{s}}$
 where $\partial R$ is the union of two circles:
 $C_1$ with the parametric representation
@@ -4268,11 +4268,11 @@ $\sigma_2'(\theta) = \big(\sqrt{5} \cos(\theta), -\sqrt{5}
 
 \begin{question}
 Consider the vector field
-$\displaystyle F(x,y,z) = \big( yz, xyz, \cos(xy)e^{xz}\big)$.
+$\DS F(x,y,z) = \big( yz, xyz, \cos(xy)e^{xz}\big)$.
 Let $R$ be the portion of the paraboloid
-$\displaystyle z= 11 - x^2 - y^2$ above the plan
+$\DS z= 11 - x^2 - y^2$ above the plan
 $z=2$.  Compute
-$\displaystyle \int_{\partial R} F \cdot \dx{\VEC{s}}$ where the
+$\DS \int_{\partial R} F \cdot \dx{\VEC{s}}$ where the
 orientation on $\partial R$ is counterclockwise when view from the
 positive side of the $z$ axis.
 \end{question}
@@ -4281,16 +4281,16 @@ positive side of the $z$ axis.
 The region $R$ is shown in the following figure.
 \pdfbox{vect_calculus/supp4}
 According to Stokes' theorem, we have that
-$\displaystyle \int_{\partial R} F \cdot \dx{\VEC{s}} =
+$\DS \int_{\partial R} F \cdot \dx{\VEC{s}} =
 \int_R \curL F \cdot \dx{\VEC{S}}$
 where we choose the orientation on $R$ to be given by the unit normal
 pointing in the direction of $z$ positive to ensure that the
 orientation on $\partial R$ induced by $R$ matches the
 orientation on $\partial R$ stated in the question.  Both integrals are
 terrible to compute.  However, since the vector field
-$\displaystyle F:\RR^3\to \RR^3$ is smooth, we
+$\DS F:\RR^3\to \RR^3$ is smooth, we
 may use any surface $V$ whose boundary is $\partial R$.  We take $V$
-to be the disk $\displaystyle x^2+y^2 \leq 9$ with $z=2$.
+to be the disk $\DS x^2+y^2 \leq 9$ with $z=2$.
 A parametric representation of $V$ is given by
 $g(r,\theta) = (r\cos(\theta), r\sin(\theta), 2)$
 for $0\leq \theta \leq 2\pi$ and $0\leq r \leq 3$.  We have that
@@ -4309,7 +4309,7 @@ The parametric representation is therefore consistent with the
 orientation that we need on $V$.  Moreover, because the unit normal to
 $V$ is $\VEC{e}_3$, we only need the 
 third component of $\curL F$, that is
-$\displaystyle
+$\DS
 (\curL F)_3 = \left( \pdfdx{(xyz)}{x} - \pdfdx{(yz)}{y}\right)\VEC{e}_3
 = z(y-1)\VEC{e}_3$.
 Hence
@@ -4329,11 +4329,11 @@ Hence
 
 \begin{question}
 Consider the vector field
-$\displaystyle F(x,y,z) = \big(xy^3z, \sin(xyz) , xyz\big)$.
-Let $R$ be the portion of the cone $\displaystyle y^2 = x^2+z^2$
+$\DS F(x,y,z) = \big(xy^3z, \sin(xyz) , xyz\big)$.
+Let $R$ be the portion of the cone $\DS y^2 = x^2+z^2$
 between the planes $y=1$ and $y=3$.  The orientation on $R$ is given
 by the unit normal pointing away from the $y$ axis.  Compute the integral
-$\displaystyle \int_R \curL F \cdot \dx{\VEC{S}}$.
+$\DS \int_R \curL F \cdot \dx{\VEC{S}}$.
 \end{question}
 
 \begin{sol}
@@ -4342,7 +4342,7 @@ The region $R$ is shown in the following figure.
 We present two solutions.
 
 \stage{i} According to Stokes' theorem, we have that
-$\displaystyle
+$\DS
 \int_R \curL F \cdot \dx{\VEC{S}} = \int_{\partial R} F \cdot \dx{\VEC{s}}$
 where $\partial R$ is the union of two circles: $C_1$ with the
 parametric representation
@@ -4402,8 +4402,8 @@ the parametric representation is consistent with the orientation on
 $B_\rho$.  Since
 \begin{align*}
 \curL F &= \begin{pmatrix} \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\[0.8em]
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\[0.8em]
 xy^3z & \sin(xyz) & xyz
 \end{pmatrix} \\
 &= \big( xz - xy\cos(xyz) , -(yz - xy^3), yz\cos(xyz) - 3x^2y^2 z\big) \ ,
@@ -4415,7 +4415,7 @@ we get
 \rho^3r\sin(\theta)\right)r\dx{r}\dx{\theta} = 0
 \]
 for $\rho=1$ and $\rho=3$.  It follows from (\ref{supp3equ})
-that $\displaystyle \int_{\partial R} F \cdot \dx{\VEC{s}} = 0$.
+that $\DS \int_{\partial R} F \cdot \dx{\VEC{s}} = 0$.
 
 \noindent {\bfseries Note}: A parametric representation of the cone is
 given by
@@ -4431,37 +4431,37 @@ for $0 \leq \theta \leq 2\pi$ and $1\leq r \leq 3$.  We have
 \]
 Since this vector points away from the $y$ axis, the
 parametric representation is consistent with the orientation on $R$.
-Hence, $\displaystyle \int_R \curL F \cdot \dx{\VEC{S}} =
+Hence, $\DS \int_R \curL F \cdot \dx{\VEC{S}} =
 \int_0^{2\pi} \int_1^3 \ldots \dx{r}\dx{\theta}$ is an integral of a function
 involving expressions of the form $\cos(r^3\cos(\theta)\sin(\theta))$ which
 cannot be integrated with standard methods.
 \end{sol}
 
 \begin{question}
-Let $\displaystyle F:\RR^2\setminus \{\VEC{0}\} \to \RR^2$ be a continuously
+Let $\DS F:\RR^2\setminus \{\VEC{0}\} \to \RR^2$ be a continuously
 differentiable vector fields such that
-$\displaystyle \pdydx{F_2}{x} - \pdydx{F_1}{y} = 0$ on 
+$\DS \pdydx{F_2}{x} - \pdydx{F_1}{y} = 0$ on 
 $\RR^2\setminus \{\VEC{0}\}$.
 
-\subQ{a} Prove that $\displaystyle \int_{C_r} F \cdot \dx{\VEC{s}} = \alpha$, a
+\subQ{a} Prove that $\DS \int_{C_r} F \cdot \dx{\VEC{s}} = \alpha$, a
 constant, for all circles $C_r$ of radius $r$ centred at the origin if we
 assume that the orientation on $C_r$ is counterclockwise.\\
 \subQ{b} Expand (a) by showing that
-$\displaystyle \int_C F \cdot \dx{\VEC{s}} = \alpha$
+$\DS \int_C F \cdot \dx{\VEC{s}} = \alpha$
 for all closed curves $C$ that surround the origin if we
 assume that the orientation on $C$ is ``globally'' counterclockwise.
 We assume here that the closed curves $C$ can be continuously deformed 
 into a circle without intersecting the origin.\\
 \subQ{c} Let
-$\displaystyle F_0(x,y) = \left( \frac{-y}{x^2+y^2}, \frac{x}{x^2+y^2}\right)$.
-Prove that $\displaystyle G = F - \frac{\alpha}{2\pi} F_0$ is conservative on
-$\displaystyle \RR^2\setminus \{\VEC{0}\}$ and thus is the gradient of
+$\DS F_0(x,y) = \left( \frac{-y}{x^2+y^2}, \frac{x}{x^2+y^2}\right)$.
+Prove that $\DS G = F - \frac{\alpha}{2\pi} F_0$ is conservative on
+$\DS \RR^2\setminus \{\VEC{0}\}$ and thus is the gradient of
 a function. Such a result is fundamental in the studies of Green's
 Functions.
 \end{question}
 
 \begin{sol}
-Let $\displaystyle C_r = \{ (x,y) : x^2 + y^2 = r^2 \}$ and
+Let $\DS C_r = \{ (x,y) : x^2 + y^2 = r^2 \}$ and
 \[
 S_r = \begin{cases}
 \{ (x,y) : 1 \leq x^2 +y^2 \leq r^2 \} & \quad \text{if}\ r > 1 \\
@@ -4483,10 +4483,10 @@ Note that the orientation on $C_1$ is not consistent with the
 orientation on $\partial S_r$ if $r < 1$ while it is
 the orientation on $C_r$ that is not consistent with the
 orientation on $\partial S_r$ if $r < 1$.
-Thus $\displaystyle \int_{C_r} F \cdot \dx{\VEC{s}}
+Thus $\DS \int_{C_r} F \cdot \dx{\VEC{s}}
 = \int_{C_1} F \cdot \dx{\VEC{s}}$ for all $r$.  If we let
-$\alpha = \displaystyle \int_{C_1} F \cdot \dx{\VEC{s}}$,
-then $\displaystyle \int_{C_r} F \cdot \dx{\VEC{s}} = \alpha$ for all
+$\alpha = \DS \int_{C_1} F \cdot \dx{\VEC{s}}$,
+then $\DS \int_{C_r} F \cdot \dx{\VEC{s}} = \alpha$ for all
 $r>0$.
 
 \subQ{b} Let $C$ be any closed curve surrounding the origin as
@@ -4503,7 +4503,7 @@ Theorem that
 = 0  \ .
 \]
 Note that the orientation on $C_\epsilon$ is not consistent with the
-orientation on $\partial S$.  Thus $\displaystyle
+orientation on $\partial S$.  Thus $\DS
 \int_C F \cdot \dx{\VEC{s}} = \int_{C_\epsilon} F \cdot \dx{\VEC{s}} = \alpha$.
 
 \subQ{c} If we use the parametric representation
@@ -4516,7 +4516,7 @@ $0 \leq \theta < 2\pi$, then we find that
 = \int_0^{2\pi} \dx{\theta} = 2\pi
 \]
 for all $r>0$.  As in (b), we get that
-$\displaystyle \int_C F_0\cdot \dx{\VEC{s}} = 2\pi$ for any closed curve
+$\DS \int_C F_0\cdot \dx{\VEC{s}} = 2\pi$ for any closed curve
 surrounding the origin as described in (b).  Hence
 \[
 \int_C G \cdot \dx{\VEC{s}}
@@ -4540,25 +4540,25 @@ Moreover
 + \frac{1}{x^2+y^2} - \frac{2y^2}{(x^2+y^2)^2}\right)
 = 0
 \end{align*}
-on $\displaystyle \RR^2 \setminus \{\VEC{0}\}$.  Hence, using Green's
+on $\DS \RR^2 \setminus \{\VEC{0}\}$.  Hence, using Green's
 Theorem as we did in (a) and (b), we get that
-$\displaystyle \int_C G \cdot \dx{\VEC{s}} = 0$ 
+$\DS \int_C G \cdot \dx{\VEC{s}} = 0$ 
 for any closed curve $C$ that does not surround the origin.
 
 It follows from Proposition~\ref{DGoint} that $G$ is conservative in
-$\displaystyle \RR^2 \setminus \{\VEC{0}\}$.  That $G$ is the gradient of a
+$\DS \RR^2 \setminus \{\VEC{0}\}$.  That $G$ is the gradient of a
 function follows from Proposition~\ref{DGconserveA}.
 \end{sol}
 
 \begin{question}
-\subQ{a} Suppose that $\displaystyle F:\RR^2\to \RR^2$      \label{GreenFormMV}
-is a vector field of class $\displaystyle C^1$.
+\subQ{a} Suppose that $\DS F:\RR^2\to \RR^2$      \label{GreenFormMV}
+is a vector field of class $\DS C^1$.
 Prove that
 \begin{equation} \label{equC}
 \int_{\partial S} F \cdot \VEC{n} \dx{s} =
 \iint_s \left(\pdydx{F_1}{x} + \pdydx{F_2}{y}\right) \dx{A} \ ,
 \end{equation}
-where $S$ is a bounded region in $\displaystyle \RR^2$ with a smooth
+where $S$ is a bounded region in $\DS \RR^2$ with a smooth
 boundary, $\VEC{n}$ is the unit normal to $\partial S$ pointing
 outside of $S$, and $\partial S$ is positively oriented with respect to $S$.\\
 \subQ{b} Use the result in (a) to prove the
@@ -4571,16 +4571,16 @@ outside of $S$, and $\partial S$ is positively oriented with respect to $S$.\\
 \int_{\partial S} \left(f \graD g - g \graD f\right) \cdot \VEC{n} \dx{s} &=
 \iint_S \left( f \graD^2 g - g \graD^2 f \right) \dx{A} \label{equB}
 \end{align}
-where $\displaystyle f:\RR^2\to \RR$ and
-$\displaystyle g:\RR^2\to \RR$ are two twice continuously
+where $\DS f:\RR^2\to \RR$ and
+$\DS g:\RR^2\to \RR$ are two twice continuously
 differentiable functions.\\
-Note that $\displaystyle \graD^2 f = \diV(\graD f)$ is the {\bfseries
+Note that $\DS \graD^2 f = \diV(\graD f)$ is the {\bfseries
 Laplacian}\index{Laplacien} of $f$ and is more often denoted $\Delta f$.\\
-\subQ{c} Let $\displaystyle g(x,y) = \ln(x^2+y^2)$.  Verify that
-$\displaystyle \graD g = \frac{2}{x^2+y^2}\, (x,y)$ and
-$\displaystyle \graD^2 g(x,y) = 0$ for $(x,y)\neq (0,0)$.\\
-\subQ{d} Suppose that $\displaystyle f:\RR^2\to \RR$ is twice continuously
-differentiable and $\displaystyle \graD^2 f = 0$.  Use $g$ defined in (c)
+\subQ{c} Let $\DS g(x,y) = \ln(x^2+y^2)$.  Verify that
+$\DS \graD g = \frac{2}{x^2+y^2}\, (x,y)$ and
+$\DS \graD^2 g(x,y) = 0$ for $(x,y)\neq (0,0)$.\\
+\subQ{d} Suppose that $\DS f:\RR^2\to \RR$ is twice continuously
+differentiable and $\DS \graD^2 f = 0$.  Use $g$ defined in (c)
 and the results in (b) to prove that mean value of $f$ on circles
 $r_1$ and $r_2$ centred at the origin are equal.  Namely,
 \begin{equation} \label{equD}
@@ -4597,7 +4597,7 @@ assume that the orientation on the circles is counterclockwise.
 \begin{sol}
 \subQ{a} We apply the classical Stokes' theorem,
 Theorem~\ref{StandardStokesTh}, to the vector field
-$\displaystyle \tilde{F}:\RR^3 \to \RR^3$
+$\DS \tilde{F}:\RR^3 \to \RR^3$
 defined by $\tilde{F}(x,y,z) = (-F_2(x,y), F_1(x,y), 0)$ and the region
 $\tilde{S} = \{ (x,y,0) : (x,y) \in S\}$.  We get
 \begin{equation}\label{twistedGreen1}
@@ -4625,7 +4625,7 @@ and
 \dx{S} \ .
 \end{equation}
 Since everything in the previous discussion is independent of the
-third component in $\displaystyle \RR^3$, we may substitute
+third component in $\DS \RR^3$, we may substitute
 (\ref{twistedGreen2}) and (\ref{twistedGreen3}) in
 (\ref{twistedGreen1}) to get the relation
 \[
@@ -4642,7 +4642,7 @@ following figure.
 \pdfbox{vect_calculus/twistedGreen}
 
 \subQ{b} To prove (\ref{equA}), we substitute
-$\displaystyle F=f \graD g = \left( f\pdydx{g}{x} , f \pdydx{g}{y} \right)$ in
+$\DS F=f \graD g = \left( f\pdydx{g}{x} , f \pdydx{g}{y} \right)$ in
 (\ref{equC}) to get
 \begin{align*}
 &\int_{\partial S} f \graD g \cdot \VEC{n} \dx{s} =
@@ -4672,7 +4672,7 @@ and
 
 \subQ{d}  Since $\graD^2 f = 0$ and $\graD^2 g = 0$, we get from
 (\ref{equB}) that
-$\displaystyle
+$\DS
 \int_{\partial S} \left(f \graD g - g \graD f\right) \cdot \VEC{n} \dx{s} = 0$
 where $S$ is the annulus bounded by the circle $C_{r_1}$ and $C_{r_2}$.  Thus
 \begin{equation}\label{secondGEQ}
@@ -4689,8 +4689,8 @@ above.  However, for $(x,y) \in C(r_1)$, we have
 \graD g(x,y) = \frac{2}{x^2+y^2} (x,y) = \frac{2}{\sqrt{x^2+y^2}} \VEC{n}
 = \frac{2}{r_1} \VEC{n}
 \]
-and $\displaystyle g(x,y) = \ln(x^2+y^2) = \ln(r_1^2)$.  Thus
-$\displaystyle \int_{C_{r_1}} f \graD g \cdot \VEC{n} \dx{s}
+and $\DS g(x,y) = \ln(x^2+y^2) = \ln(r_1^2)$.  Thus
+$\DS \int_{C_{r_1}} f \graD g \cdot \VEC{n} \dx{s}
 = \frac{2}{r_1} \int_{C_{r_1}} f \dx{s}$ and
 \[
 \int_{C_{r_1}} g \graD f \cdot \VEC{n} \dx{s} =
@@ -4698,29 +4698,29 @@ $\displaystyle \int_{C_{r_1}} f \graD g \cdot \VEC{n} \dx{s}
 \ln(r_1^2) \iint_{B_{r_1}(\VEC{0})} \graD^2 f \dx{S} = 0
 \]
 because of (\ref{equC}).  Similarly,
-$\displaystyle \int_{C_{r_2}} f \graD g \cdot \VEC{n} \dx{s}
+$\DS \int_{C_{r_2}} f \graD g \cdot \VEC{n} \dx{s}
 = \frac{2}{r_2} \int_{C_{r_2}} f \dx{s}$ and
-$\displaystyle \int_{C_{r_2}} g \graD f \cdot \VEC{n} \dx{s} = 0$.
+$\DS \int_{C_{r_2}} g \graD f \cdot \VEC{n} \dx{s} = 0$.
 We get from (\ref{secondGEQ}) that
-$\displaystyle
+$\DS
 \frac{2}{r_2} \int_{C_{r_2}} f \dx{s} = \frac{2}{r_1} \int_{_{r_1}} f \dx{s}$.
 Hence, after multiplying this equality by $1/(4\pi)$, we get (\ref{equD}).
 
 \subQ{e}
 From (d), we have that
-$\displaystyle \frac{1}{2\pi r} \int_{C_r} f \dx{s} = M$
+$\DS \frac{1}{2\pi r} \int_{C_r} f \dx{s} = M$
 for all $r$, where $M$ is a constant.  From the Mean Value Theorem for
 Integrals, we have for each $r$ that
-$\displaystyle \frac{1}{2\pi r} \int_{C(r)} f \dx{s} = f(\VEC{a}_r)$
+$\DS \frac{1}{2\pi r} \int_{C(r)} f \dx{s} = f(\VEC{a}_r)$
 for some $\VEC{a}_r \in C_r$.  So $f(\VEC{a}_r) = M$ for all $\VEC{a}_r$.
-Since $\displaystyle \lim_{r\to 0} \VEC{a}_r = \VEC{0}$ and
+Since $\DS \lim_{r\to 0} \VEC{a}_r = \VEC{0}$ and
 $f$ is continuous, we get that
-$\displaystyle M = \lim_{r\to 0^+} f(\VEC{a}_r) = f(\VEC{0})$.
+$\DS M = \lim_{r\to 0^+} f(\VEC{a}_r) = f(\VEC{0})$.
 \end{sol}
 
 \begin{question}
-Let $R$ be a bounded region in $\displaystyle \RR^3$ with a piecewise smooth
-boundary $\partial R$.  Suppose that $\displaystyle f,g:\RR^3\to \RR$ are two
+Let $R$ be a bounded region in $\DS \RR^3$ with a piecewise smooth
+boundary $\partial R$.  Suppose that $\DS f,g:\RR^3\to \RR$ are two
 continuously differentiable functions.  Prove that
 \begin{equation}\label{MultIBP}
   \iiint_R f \pdydx{g}{x_1} \dx{V}
@@ -4739,7 +4739,7 @@ $x_3$.
 
 \begin{sol}
 Let $F(\VEC{x}) = (f(\VEC{x})g(\VEC{x}), 0,0)$.  Since
-$\displaystyle \diV F = \pdydx{f}{x_1} g + f \pdydx{g}{x_1}$, we get
+$\DS \diV F = \pdydx{f}{x_1} g + f \pdydx{g}{x_1}$, we get
 from the divergence theorem that
 \begin{align*}
 \iint_{\partial R} f g\, n_1 \dx{S}
@@ -4749,14 +4749,14 @@ from the divergence theorem that
 &= \iiint_R \left( \pdydx{f}{x_1} g + f \pdydx{g}{x_1} \right) \dx{V} \ .
 \end{align*}
 We get (\ref{MultIBP}) by subtracting
-$\displaystyle \iiint_R \pdydx{f}{x_1} g \dx{V}$
+$\DS \iiint_R \pdydx{f}{x_1} g \dx{V}$
 on both sides of the previous equality.
 \end{sol}
 
 \begin{question}
-Suppose that $\displaystyle f:\RR^3\to \RR$           \label{divCons}
-is a function of class $\displaystyle C^2$.
-Let $R$ be a bounded region in $\displaystyle \RR^3$ with a piecewise smooth
+Suppose that $\DS f:\RR^3\to \RR$           \label{divCons}
+is a function of class $\DS C^2$.
+Let $R$ be a bounded region in $\DS \RR^3$ with a piecewise smooth
 boundary $\partial R$ and $\VEC{n}$ be the unit normal pointing outside
 $R$ at every point of $\partial R$.  The orientation on
 $\partial R$ given by this unit normal is the orientation induced on
@@ -4768,7 +4768,7 @@ Definition~\ref{manifdbOrient}.
 \iint_{\partial R} \pdydx{f}{\VEC{n}} \cdot \dx{S}
 = \iiint_R \graD^2 f \dx{V} \ .
 \]
-\subQ{b} If $\displaystyle \graD^2 f = 0$, show that
+\subQ{b} If $\DS \graD^2 f = 0$, show that
 \[
 \iint_{\partial R} f \pdydx{f}{\VEC{n}} \dx{S}
 = \iiint_R \| \graD f \|^2 \dx{V} \ .
@@ -4794,18 +4794,18 @@ Definition~\ref{manifdbOrient}.
 = \iiint_R \left( \graD f \cdot \graD f + f \graD^2 f \right) \dx{V}
 = \iiint_R \| \graD f \|^2 \dx{V} \ .
 \end{align*}
-because $\displaystyle \graD^2 f = 0$ on $R$ by assumption.
+because $\DS \graD^2 f = 0$ on $R$ by assumption.
 \end{sol}
 
 \begin{question}
 Let              \label{introGreenFunct}
-$\displaystyle g(\VEC{x}) = \frac{1}{\|\VEC{x}\|}$ for
-$\displaystyle \VEC{x} \in \RR^3 \setminus \{\VEC{0}\}$.
+$\DS g(\VEC{x}) = \frac{1}{\|\VEC{x}\|}$ for
+$\DS \VEC{x} \in \RR^3 \setminus \{\VEC{0}\}$.
 
 \subQ{a} Compute $\graD g$ and show that
-$\displaystyle \graD^2 g(\VEC{x}) = 0$ for all $\VEC{x} \neq \VEC{0}$.\\
+$\DS \graD^2 g(\VEC{x}) = 0$ for all $\VEC{x} \neq \VEC{0}$.\\
 \subQ{b} Show that
-$\displaystyle \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
+$\DS \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
 = - 4 \pi$
 where $B_r(\VEC{0})$ is the open ball of radius $r$ centred at the origin,
 $\VEC{n}$ is the unit normal to $\partial B_r(\VEC{0})$ pointing outside
@@ -4814,9 +4814,9 @@ given by the vector $\VEC{n}$.\\
 \subQ{c} Explain why (a) and (b) do not contradict (a) of
 Question~\ref{divCons}.\\
 \subQ{d} Show that
-$\displaystyle \iint_{\partial R} \pdydx{g}{\VEC{n}} \dx{S} = - 4 \pi$
+$\DS \iint_{\partial R} \pdydx{g}{\VEC{n}} \dx{S} = - 4 \pi$
 for any bounded region $R$ with a piecewise smooth boundary such
-that $\displaystyle \VEC{0} \in R^\circ$.  The
+that $\DS \VEC{0} \in R^\circ$.  The
 vector $\VEC{n}$ is the unit normal to $\partial R$ pointing outside
 $R$ and the orientation on $\partial R$ is given by $\VEC{n}$.
 \end{question}
@@ -4852,7 +4852,7 @@ for $\VEC{x} \neq \VEC{0}$.
 = -\frac{1}{r^2} \iint_{\partial B_r(\VEC{0})}  \dx{S}
 \end{align*}
 where we have used the fact that
-$\displaystyle \VEC{n}(\VEC{x}) = \|\VEC{x}\|^{-1} \VEC{x}$ for
+$\DS \VEC{n}(\VEC{x}) = \|\VEC{x}\|^{-1} \VEC{x}$ for
 $\VEC{x} \in \partial B_r(\VEC{0})$.
 
 For those who do not know by heart the formula for the area of the
@@ -4867,16 +4867,16 @@ and $0 \leq \phi \leq \pi$ to find that the area is
 = \int_0^{2\pi} \int_0^{\pi} r^2 \sin(\phi) \dx{\phi} \dx{\theta}
 = 4\pi r^2 \ .
 \]
-Thus $\displaystyle  \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
+Thus $\DS  \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
 = - 4\pi$.
 
 \subQ{c} We get from (a) and (b) that
-$\displaystyle  \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
+$\DS  \iint_{\partial B_r(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}
 = - 4 \pi \neq 0 = \iiint_{B_r(\VEC{0})} \graD^2 g \dx{V}$.
 The formula in (a) of Question~\ref{divCons} cannot be used
 because $g$ is not defined at the origin (and cannot be continuously
-extended to $\displaystyle \RR^3$) and thus it is certainly not
-of class $\displaystyle C^2$ in any open set containing $B_r(\VEC{0})$
+extended to $\DS \RR^3$) and thus it is certainly not
+of class $\DS C^2$ in any open set containing $B_r(\VEC{0})$
 as required.
 
 \subQ{d} Choose $\epsilon >0$ such that $B_\epsilon(\VEC{0}) \subset R$.
@@ -4885,7 +4885,7 @@ Let $R_\epsilon = R \setminus B_\epsilon(\VEC{0})$.
 
 If we use (a) of Question~\ref{divCons} and (a) of the present
 question, then we get
-$\displaystyle \iint_{\partial R_\epsilon} \pdydx{g}{\VEC{n}} \dx{S}
+$\DS \iint_{\partial R_\epsilon} \pdydx{g}{\VEC{n}} \dx{S}
 = \iiint_{R_\epsilon} \graD^2 g \dx{V} = 0$
 where the orientation on $\partial R$ is given by the
 unit normal that point outside of $R$ at all points of $\partial R$.
@@ -4897,13 +4897,13 @@ Thus
 = \iint_{\partial R} \pdydx{g}{\VEC{n}} \dx{S} + 4\pi
 \]
 because of (b).  The minus sign in front of the integral
-$\displaystyle \iint_{\partial B_\epsilon(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}$
+$\DS \iint_{\partial B_\epsilon(\VEC{0})} \pdydx{g}{\VEC{n}} \dx{S}$
 comes from the fact that the orientation on
 $\partial B_\epsilon(\VEC{0})$ given by the unit normal that point
 outside $B_\epsilon(\VEC{0})$ for all $\VEC{x} \in B_\epsilon(\VEC{0})$
 is not consistent with the orientation on $\partial R_\epsilon$.
 Hence
-$\displaystyle \iint_{\partial R} \pdydx{g}{\VEC{n}} \dx{S} = - 4\pi$.
+$\DS \iint_{\partial R} \pdydx{g}{\VEC{n}} \dx{S} = - 4\pi$.
 \end{sol}
 
 \begin{question}
@@ -4921,14 +4921,14 @@ formulas presented in part (b) of that question.
 &= \iiint_R \left( f \graD^2 g - g \graD^2 f\right) \dx{V}
 \label{GreenFormNo2}
 \end{align}
-where $\displaystyle f, g : \RR^3 \to \RR$ are two functions of class
-$\displaystyle C^2$, the vector $\VEC{n}(\VEC{x})$ is the unit normal
+where $\DS f, g : \RR^3 \to \RR$ are two functions of class
+$\DS C^2$, the vector $\VEC{n}(\VEC{x})$ is the unit normal
 to $\partial R$ pointing outside $R$ at $\VEC{x} \in \partial R$, and
 the orientation on $\partial R$ is given by the vector $\VEC{n}$.
 This is the orientation induced on $\partial R$ by the orientation on
 $R$ as defined in Definition~\ref{manifdbOrient}.\\
-\subQ{b} Suppose that $\displaystyle f: \RR^3 \to \RR$ is a function
-of class $\displaystyle C^2$ and $\displaystyle \graD^2 f = 0$, prove that
+\subQ{b} Suppose that $\DS f: \RR^3 \to \RR$ is a function
+of class $\DS C^2$ and $\DS \graD^2 f = 0$, prove that
 \[
 \frac{1}{4\pi r_1^2} \iint_{\partial B_{r_1}(\VEC{0})} f \dx{S}
 = \frac{1}{4\pi r_2^2} \iint_{\partial B_{r_2}(\VEC{0})} f \dx{S}
@@ -4937,12 +4937,12 @@ where $B_r(\VEC{0})$ is the ball of radius $r$ centred at the origin,
 and the orientation on $\partial B_r(\VEC{0})$ is given by the unit
 normal to $\partial B_r(\VEC{0})$ pointing outside $B_r(\VEC{0})$.\\
 \subQ{c} Use (b) to prove that
-$\displaystyle f(\VEC{0})
+$\DS f(\VEC{0})
 = \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f \dx{S}$
 for all $r>0$.  In general, prove that
-$\displaystyle f(\VEC{a})
+$\DS f(\VEC{a})
 = \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{a})} f \dx{S}$
-for all $\displaystyle \VEC{a} \in \RR^3$ and $r>0$.
+for all $\DS \VEC{a} \in \RR^3$ and $r>0$.
 \end{question}
 
 \begin{sol}
@@ -4962,14 +4962,14 @@ the resulting equation from the previous equation, then we get
 \subQ{b}  Without lost of generality, we may assume that $r_1 > r_2$.
 Let $R = \overline{B_{r_1}(\VEC{0}) \setminus B_{r_2}(\VEC{0})}$.
 From the second Green's formula with $f$ and
-$\displaystyle g(\VEC{x}) = \frac{1}{\|\VEC{x}\|}$ for $\VEC{x} \in R$,
+$\DS g(\VEC{x}) = \frac{1}{\|\VEC{x}\|}$ for $\VEC{x} \in R$,
 we get
 \[
 \iint_{\partial R} \left( f \graD g - g \graD f\right) \cdot \dx{\VEC{S}}  
 = \iiint_R \left( f \graD^2 g - g \graD^2 f\right) \dx{V}
 = 0
 \]
-because $\displaystyle \graD^2 f= 0$ by hypothesis and $\displaystyle
+because $\DS \graD^2 f= 0$ by hypothesis and $\DS
 \graD^2 g = 0$ as we have shown in (a) of
 Question~\ref{introGreenFunct}.  The orientation on
 $\partial R$ is given by the unit normal to $\partial R$ that points
@@ -5011,10 +5011,10 @@ last equality.  Thus
 = - \frac{1}{r_1^2} \iint_{\partial B_{r_1}(\VEC{0})} f \dx{S} \ .
 \]
 Similarly, we get
-$\displaystyle \iint_{\partial B_{r_2}(\VEC{0})} f \graD g \cdot \dx{\VEC{S}}
+$\DS \iint_{\partial B_{r_2}(\VEC{0})} f \graD g \cdot \dx{\VEC{S}}
 = - \frac{1}{r_2^2} \iint_{\partial B_{r_2}(\VEC{0})} f \dx{S}$
 and
-$\displaystyle \iint_{\partial B_{r_2}(\VEC{0})} g \graD f \cdot \dx{\VEC{S}}
+$\DS \iint_{\partial B_{r_2}(\VEC{0})} g \graD f \cdot \dx{\VEC{S}}
 = 0$.  Thus
 \[
 \iint_{\partial B_{r_2}(\VEC{0})}
@@ -5025,17 +5025,17 @@ Hence, we get the result in (b) from (\ref{GreenMVa}) after
 dividing by $-4 \pi$.
 
 \subQ{c} We have from (b) that
-$\displaystyle \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f \dx{S} = C$,
+$\DS \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f \dx{S} = C$,
 a constant, for all $r>0$.  Hence
-$\displaystyle \lim_{r\to 0^+}
+$\DS \lim_{r\to 0^+}
 \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f \dx{S} = C$.
 Moreover, from the Mean Value Theorem for Integrals, we have that
-$\displaystyle \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f
+$\DS \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f
 \dx{S} = f(\VEC{a}_r)$ for some $\VEC{a}_r \in \partial B_r(\VEC{0})$.
-Note that $\displaystyle \iint_{\partial B_r(\VEC{0})} f \dx{S} = 4\pi r^2$
+Note that $\DS \iint_{\partial B_r(\VEC{0})} f \dx{S} = 4\pi r^2$
 is the area of the sphere of radius $r$.  Since $f$ is 
-continuous and $\VEC{a}_r \to \VEC{0}$ as $\displaystyle r \to 0^+$, we get that
-$\displaystyle
+continuous and $\VEC{a}_r \to \VEC{0}$ as $\DS r \to 0^+$, we get that
+$\DS
 C = \lim_{r\to 0^+} \frac{1}{4\pi r^2} \iint_{\partial B_r(\VEC{0})} f \dx{S}
 = \lim_{r\to 0^+} f(\VEC{a}_r) = f(\VEC{0})$.
 
@@ -5044,14 +5044,14 @@ at the origin with the change of variable $\VEC{x} = \VEC{y} + \VEC{a}$.
 \end{sol}
 
 \begin{question}
-Suppose that $\displaystyle S \subset \RR^3$ is a surface with a piecewise
+Suppose that $\DS S \subset \RR^3$ is a surface with a piecewise
 continuously differentiable boundary $\partial S$.  Moreover,
 assume that the orientation on $\partial S$ with respect to $S$ is
 positive; namely, the orientation on $\partial S$ is the orientation
 induced from the orientation on $S$.
-If $\displaystyle f:\RR^3 \to \RR$ is a function of class
-$\displaystyle C^1$ and $\displaystyle g : \RR^3 \to \RR$ is function
-of class $\displaystyle C^2$, prove that
+If $\DS f:\RR^3 \to \RR$ is a function of class
+$\DS C^1$ and $\DS g : \RR^3 \to \RR$ is function
+of class $\DS C^2$, prove that
 \begin{equation}\label{curlCons}
 \int_{\partial S} f \graD g \cdot \dx{\VEC{s}}
 = \iint_S (\graD f \times \graD g) \cdot \dx{\VEC{S}} \ .
@@ -5060,7 +5060,7 @@ of class $\displaystyle C^2$, prove that
 
 \begin{sol}
 We prove that (\ref{curlCons}) is given by Stokes' theorem and the relation
-$\displaystyle \curL( f \graD g) = \graD f \cdot \graD g$.
+$\DS \curL( f \graD g) = \graD f \cdot \graD g$.
 We present two methods to prove this relation.
 
 \stage{First method} We use brute force.
@@ -5068,10 +5068,10 @@ We present two methods to prove this relation.
 &\curL( f \graD g)
 = \det \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\
-\displaystyle f\pdydx{g}{x} & \displaystyle f \pdydx{g}{y} &
-\displaystyle f \pdydx{g}{z}
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\
+\DS f\pdydx{g}{x} & \DS f \pdydx{g}{y} &
+\DS f \pdydx{g}{z}
 \end{pmatrix} \\
 &= \bigg( \pdfdx{\left(f \pdydx{g}{z}\right)}{y}
 - \pdfdx{\left(f \pdydx{g}{y}\right)}{z}  ,
@@ -5090,10 +5090,10 @@ We present two methods to prove this relation.
 \pdydx{f}{x} \pdydx{g}{y} - \pdydx{f}{y} \pdydx{g}{x} \bigg)
 = \graD f \times \graD g
 \end{align*}
-because $\displaystyle \pdydxnm{g}{z}{y}{2}{}{} = \pdydxnm{g}{y}{z}{2}{}{}$,
-$\displaystyle \pdydxnm{g}{z}{x}{2}{}{} = \pdydxnm{g}{x}{z}{2}{}{}$
-and $\displaystyle \pdydxnm{g}{y}{x}{2}{}{} = \pdydxnm{g}{x}{y}{2}{}{}$
-for functions of class $\displaystyle C^2$ like $g$.
+because $\DS \pdydxnm{g}{z}{y}{2}{}{} = \pdydxnm{g}{y}{z}{2}{}{}$,
+$\DS \pdydxnm{g}{z}{x}{2}{}{} = \pdydxnm{g}{x}{z}{2}{}{}$
+and $\DS \pdydxnm{g}{y}{x}{2}{}{} = \pdydxnm{g}{x}{y}{2}{}{}$
+for functions of class $\DS C^2$ like $g$.
 
 \stage{Second method}
 We use differential forms.  We have that
@@ -5105,7 +5105,7 @@ $\curL( f \graD g) \longleftrightarrow \df{(f \df{g})}
 where we have used item (3) of Theorem~\ref{stokesDF} to conclude that
 $\df{(\df{g})} = 0$. 
 Moreover, we have
-$\displaystyle \graD f \times \graD g \longleftrightarrow \df{f}
+$\DS \graD f \times \graD g \longleftrightarrow \df{f}
 \wedge \df{g}$.  Thus
 $\curL( f \graD g) = \graD f \times \graD g$.
 The second method is much shorter than the first one.
@@ -5119,9 +5119,9 @@ To answer the question, we use Stokes' theorem to get
 \end{sol}
 
 \begin{question}
-Suppose that $\displaystyle F:\RR^3 \to \RR^3$ is a continuously differentiable
+Suppose that $\DS F:\RR^3 \to \RR^3$ is a continuously differentiable
 vector field such that $\curL F \cdot \VEC{e}_2 = 0$ everywhere in the
-$x,z$ plane.  Show that $\displaystyle \int_C F \cdot \dx{\VEC{s}}$
+$x,z$ plane.  Show that $\DS \int_C F \cdot \dx{\VEC{s}}$
 yields the same value for every closed curve $C$ entirely in the
 $x,z$ plane that surrounds the origin if we
 assume that the orientation on $C$ is ``globally'' counterclockwise
@@ -5131,7 +5131,7 @@ in the $x,z$ plane into a circle without intersecting the origin.
 \end{question}
 
 \begin{sol}
-Let $\displaystyle C_r = \{ (x,0,z) : x^2 + z^2 = r^2 \}$ and
+Let $\DS C_r = \{ (x,0,z) : x^2 + z^2 = r^2 \}$ and
 \[
 S_r = \begin{cases}
 \{ (x,0,z) : 1 \leq x^2 +z^2 \leq r^2 \} & \quad \text{if}\ r > 1 \\
@@ -5155,10 +5155,10 @@ Note that the orientation on $C_1$ is not consistent with the
 orientation on $\partial S_r$ if $r > 1$ while it is
 the orientation on $C_r$ that is not consistent with the
 orientation on $\partial S_r$ if $r < 1$.  Thus
-$\displaystyle \int_{C_r} F \cdot \dx{\VEC{s}} = \int_{C_1} F \cdot
+$\DS \int_{C_r} F \cdot \dx{\VEC{s}} = \int_{C_1} F \cdot
 \dx{\VEC{s}}$ for all $r$.  If
-$\displaystyle K = \int_{C_1} F \cdot \dx{\VEC{s}}$,
-then $\displaystyle \int_{C_r} F \cdot \dx{\VEC{s}} = K$ for all $r>0$.
+$\DS K = \int_{C_1} F \cdot \dx{\VEC{s}}$,
+then $\DS \int_{C_r} F \cdot \dx{\VEC{s}} = K$ for all $r>0$.
 
 \stage{ii} Let $C$ be any closed curves entirely in the $x,z$ plane
 that surrounds the origin as described in the statement of the
@@ -5176,7 +5176,7 @@ by $C$ and the circle $C_\epsilon$, then we get from Stokes' theorem that
 \]
 Note that the orientation on $C_\epsilon$ is not consistent with the
 orientation on $\partial S$.  Thus
-$\displaystyle \int_C F \cdot \dx{\VEC{s}}
+$\DS \int_C F \cdot \dx{\VEC{s}}
 = \int_{C_\epsilon} F \cdot \dx{\VEC{s}} = K$.
 \end{sol}
 
@@ -5186,12 +5186,12 @@ $\displaystyle \int_C F \cdot \dx{\VEC{s}}
 For each of the vector fields $F$ below, determine if it is conservative and
 if there exists a function $f$ such that $F = \graD f$.  If it is possible,
 find a function $f$.\\
-\subQ{a} $\displaystyle F(x,y,z) = \big( yz^2, xz^2, 2xyz \big)$.\\
-\subQ{b} $\displaystyle F(x,y,z) = \big(2xy + x^2, x^2 - y^2, 0)$.\\
-\subQ{c} $\displaystyle F(x,y,z) = \big(3y^2 + 5x^4, x^5 + 6xy, 0 \big)$.\\
-\subQ{d} $\displaystyle F(x,y,z) = \big(yz -y \sin(xy),
+\subQ{a} $\DS F(x,y,z) = \big( yz^2, xz^2, 2xyz \big)$.\\
+\subQ{b} $\DS F(x,y,z) = \big(2xy + x^2, x^2 - y^2, 0)$.\\
+\subQ{c} $\DS F(x,y,z) = \big(3y^2 + 5x^4, x^5 + 6xy, 0 \big)$.\\
+\subQ{d} $\DS F(x,y,z) = \big(yz -y \sin(xy),
 xz -x \sin(xy)  + z\cos(yz), xy + y\cos(yz)\big)$.\\
-\subQ{e} $\displaystyle F(x,y,z) = \big(y-z, x-z, x-y\big)$.
+\subQ{e} $\DS F(x,y,z) = \big(y-z, x-z, x-y\big)$.
 \end{question}
 
 \begin{sol}
@@ -5200,16 +5200,16 @@ xz -x \sin(xy)  + z\cos(yz), xy + y\cos(yz)\big)$.\\
 \curL F(x,y,z) = \det
 \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\[0.7em]
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\[0.7em]
 yz^2 &  xz^2 & 2xyz
 \end{pmatrix} = \VEC{0}
 \]
-for all $\displaystyle (x,y,z)\in \RR^3$ and $F$ is a continuously
-differentiable vector field on the convex set $\displaystyle \RR^3$,
+for all $\DS (x,y,z)\in \RR^3$ and $F$ is a continuously
+differentiable vector field on the convex set $\DS \RR^3$,
 we get from Proposition~\ref{DGconserveB} that $F$ is conservative and
 we get from Proposition~\ref{DGconserveA} that there exists a
-function $\displaystyle f:\RR^3\to \RR$ such that $\graD f = F$.  The
+function $\DS f:\RR^3\to \RR$ such that $\graD f = F$.  The
 function $f$ must satisfy the relations
 \begin{equation} \label{finalB}
 \pdydx{f}{x} = yz^2 \quad , \quad
@@ -5217,32 +5217,32 @@ function $f$ must satisfy the relations
 \quad \pdydx{f}{z} = 2xyz \ .
 \end{equation}
 From the first equation in (\ref{finalB}), we get that
-$\displaystyle f(x,y,z) = xyz^2 + \phi(y,z)$.  If we substitute this
+$\DS f(x,y,z) = xyz^2 + \phi(y,z)$.  If we substitute this
 expression for $f$ in the second equation in (\ref{finalB}), then we get that
-$\displaystyle xz^2 + \pdydx{\phi}{y} = xz^2$.  Thus
-$\displaystyle \pdydx{\phi}{y} = 0$ and we conclude that $\phi$ is only a
+$\DS xz^2 + \pdydx{\phi}{y} = xz^2$.  Thus
+$\DS \pdydx{\phi}{y} = 0$ and we conclude that $\phi$ is only a
 function of $z$.  If we substitute
-$\displaystyle f(x,y,z) = xyz^2 + \phi(z)$ in the
+$\DS f(x,y,z) = xyz^2 + \phi(z)$ in the
 last equation in (\ref{finalB}), then we get that
-$\displaystyle 2xyz + \dydx{\phi}{z} = 2xyz$.  Thus
-$\displaystyle \dydx{\phi}{z} = 0$ and $\phi(z) = C$, a
-constant.  We find that $\displaystyle f(x,y,z) = xyz^2 + C$.
+$\DS 2xyz + \dydx{\phi}{z} = 2xyz$.  Thus
+$\DS \dydx{\phi}{z} = 0$ and $\phi(z) = C$, a
+constant.  We find that $\DS f(x,y,z) = xyz^2 + C$.
 
 \subQ{b} Since
 \[
 \curL F(x,y,z) = \det
 \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\[0.7em]
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\[0.7em]
 2xy + x^2 &  x^2-y^2 & 0
 \end{pmatrix} = \VEC{0}
 \]
-for all $\displaystyle (x,y,z)\in \RR^3$ and $F$ is a continuously
-differentiable vector field on the convex set $\displaystyle \RR^3$,
+for all $\DS (x,y,z)\in \RR^3$ and $F$ is a continuously
+differentiable vector field on the convex set $\DS \RR^3$,
 we get from Proposition~\ref{DGconserveB} that $F$ is conservative and
 we get from Proposition~\ref{DGconserveA} that there exists a
-function $\displaystyle f:\RR^3\to \RR$ such that $\graD f = F$.  The
+function $\DS f:\RR^3\to \RR$ such that $\graD f = F$.  The
 function $f$ must satisfy the relations
 \begin{equation} \label{consQ4}
 \pdydx{f}{x} = 2xy + x^2 \quad , \quad
@@ -5250,17 +5250,17 @@ function $f$ must satisfy the relations
 \quad \pdydx{f}{z} = 0 \ .
 \end{equation}
 From the first equation in (\ref{consQ4}), we get that
-$\displaystyle f(x,y,z) = x^2y + \frac{x^3}{3} + \phi(y,z)$.  If we
+$\DS f(x,y,z) = x^2y + \frac{x^3}{3} + \phi(y,z)$.  If we
 substitute this expression for $f$ in the second equation in
 (\ref{consQ4}), then we get that
-$\displaystyle x^2 + \pdydx{\phi}{y} = x^2 - y^2$.  Thus
-$\displaystyle \pdydx{\phi}{y} = -y^2$ and we conclude that
-$\displaystyle \phi(y,z) = - \frac{y^3}{3} + \phi(z)$.  If we
+$\DS x^2 + \pdydx{\phi}{y} = x^2 - y^2$.  Thus
+$\DS \pdydx{\phi}{y} = -y^2$ and we conclude that
+$\DS \phi(y,z) = - \frac{y^3}{3} + \phi(z)$.  If we
 substitute
-$\displaystyle f(x,y,z) = x^2y + \frac{x^3}{3} - \frac{y^3}{3} + \phi(z)$
+$\DS f(x,y,z) = x^2y + \frac{x^3}{3} - \frac{y^3}{3} + \phi(z)$
 in the last equation in (\ref{consQ4}), then we get that
-$\displaystyle \dydx{\phi}{z} = 0$.  Thus $\phi(z) = C$, a
-constant.  We find that $\displaystyle
+$\DS \dydx{\phi}{z} = 0$.  Thus $\phi(z) = C$, a
+constant.  We find that $\DS
 f(x,y,z) = x^2y + \frac{x^3}{3} - \frac{y^3}{3} + C$.
 
 \subQ{c} We have
@@ -5268,33 +5268,33 @@ f(x,y,z) = x^2y + \frac{x^3}{3} - \frac{y^3}{3} + C$.
 \curL F(x,y,z) = \det
 \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\[0.7em]
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\[0.7em]
 3y^2 + 5x^4 &  x^5 + 6xy & 0
 \end{pmatrix} = 5 x^4 \VEC{e}_3 \neq \VEC{0}
 \]
 except if $x=0$.  Since $F$ is a continuously differentiable
-vector field on the convex set $\displaystyle \RR^3$, we get from
+vector field on the convex set $\DS \RR^3$, we get from
 Proposition~\ref{DGconserveA} that $F$ cannot be conservative because
 we would then have that $F = \graD f$ for a function
-$\displaystyle f:\RR^3 \to \RR$
-and hence $\curL F = \curL( \graD f) = \VEC{0}$ on $\displaystyle \RR^3$.
+$\DS f:\RR^3 \to \RR$
+and hence $\curL F = \curL( \graD f) = \VEC{0}$ on $\DS \RR^3$.
 
 \subQ{d} Since
 \[
 \curL F(x,y,z) = \det
 \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\[0.7em]
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\[0.7em]
 yz -y\sin(xy) & xz -x\sin(xy)+z\cos(yz) & xy + y \cos(yz)
 \end{pmatrix} = \VEC{0}
 \]
-for all $\displaystyle (x,y,z)\in \RR^3$ and $F$ is a continuously
-differentiable vector field on the convex set $\displaystyle \RR^3$,
+for all $\DS (x,y,z)\in \RR^3$ and $F$ is a continuously
+differentiable vector field on the convex set $\DS \RR^3$,
 we get from Proposition~\ref{DGconserveB} that $F$ is conservative and
 we get from Proposition~\ref{DGconserveA} that there exists a
-function $\displaystyle f:\RR^3\to \RR$ such that $\graD f = F$.  The
+function $\DS f:\RR^3\to \RR$ such that $\graD f = F$.  The
 function $f$ must satisfy the relations
 \begin{equation} \label{consQ3}
 \pdydx{f}{x} = yz - y \sin(xy) \ , \
@@ -5302,18 +5302,18 @@ function $f$ must satisfy the relations
 \pdydx{f}{z} = xy + y \cos(yz)
 \end{equation}
 From the first equation in (\ref{consQ3}), we get that
-$\displaystyle f(x,y,z) = xyz + \cos(xy) + \phi(y,z)$.  If we
+$\DS f(x,y,z) = xyz + \cos(xy) + \phi(y,z)$.  If we
 substitute this expression for $f$ in the second equation in
 (\ref{consQ3}), then we get that
-$\displaystyle xz -x \sin(xy) + \pdydx{\phi}{y} = xz - x\sin(xy) + z
-\cos(yz)$.   Thus $\displaystyle \pdydx{\phi}{y} = z\cos(yz)$ and we
-conclude that $\displaystyle \phi(y,z) = \sin(yz) + \phi(z)$.  If we
+$\DS xz -x \sin(xy) + \pdydx{\phi}{y} = xz - x\sin(xy) + z
+\cos(yz)$.   Thus $\DS \pdydx{\phi}{y} = z\cos(yz)$ and we
+conclude that $\DS \phi(y,z) = \sin(yz) + \phi(z)$.  If we
 substitute
-$\displaystyle f(x,y,z) = xyz + \cos(xy) + \sin(yz) + \phi(z)$
+$\DS f(x,y,z) = xyz + \cos(xy) + \sin(yz) + \phi(z)$
 in the last equation in (\ref{consQ3}), then we get that
-$\displaystyle xy + y\cos(yz) + \dydx{\phi}{z} = xy + y \cos(yz)$.
-Thus $\displaystyle \dydx{\phi}{z} = 0$ and $\phi(z) = C$, a
-constant.  We find that $\displaystyle
+$\DS xy + y\cos(yz) + \dydx{\phi}{z} = xy + y \cos(yz)$.
+Thus $\DS \dydx{\phi}{z} = 0$ and $\phi(z) = C$, a
+constant.  We find that $\DS
 f(x,y,z) = xyz + \cos(xy) + \sin(yz) + C$.
 
 \subQ{e} We have
@@ -5321,30 +5321,30 @@ f(x,y,z) = xyz + \cos(xy) + \sin(yz) + C$.
 \curL F(x,y,z) = \det
 \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\[0.7em]
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\[0.7em]
 y-z &  x-z & x-y
 \end{pmatrix} = -2 \VEC{e}_2 \neq \VEC{0} \ .
 \]
 Since $F$ is a continuously differentiable
-vector field on the convex set $\displaystyle \RR^3$, we get from
+vector field on the convex set $\DS \RR^3$, we get from
 Proposition~\ref{DGconserveA} that $F$ cannot be conservative because
 we would then have that $F = \graD f$ for a function
-$\displaystyle f:\RR^3 \to \RR$
-and hence $\curL F = \curL( \graD f) = \VEC{0}$ on $\displaystyle \RR^3$.
+$\DS f:\RR^3 \to \RR$
+and hence $\curL F = \curL( \graD f) = \VEC{0}$ on $\DS \RR^3$.
 \end{sol}
 
 \begin{question}
-For each of the vector fields $F$ defined on $\displaystyle \RR^3$
+For each of the vector fields $F$ defined on $\DS \RR^3$
 below, determine if it is conservative and if there exists a vector
 field $G$ such that $F = \curL G$.  If it is possible, find a vector
 field $G$.\\
-\subQ{a} $\displaystyle F(x,y,z)
+\subQ{a} $\DS F(x,y,z)
 = \big(3y^2z -3xz^2, x^2y, z^3 -x^2z\big)$.\\
-\subQ{b} $\displaystyle F(x,y,z) = \big(0,2yz+z, z\big)$.\\
-\subQ{c} $\displaystyle F(x,y,z) = \big(x^3+yz, y - 3x^2y, 4y^2-z) \big)$.\\
-\subQ{d} $\displaystyle F(x,y,z) = \big(xy+z , xz, -yz+x\big)$.\\
-\subQ{e} $\displaystyle F(x,y,z) = \big(x e^{-x^2z^2} - 6 x, 5y+2z,
+\subQ{b} $\DS F(x,y,z) = \big(0,2yz+z, z\big)$.\\
+\subQ{c} $\DS F(x,y,z) = \big(x^3+yz, y - 3x^2y, 4y^2-z) \big)$.\\
+\subQ{d} $\DS F(x,y,z) = \big(xy+z , xz, -yz+x\big)$.\\
+\subQ{e} $\DS F(x,y,z) = \big(x e^{-x^2z^2} - 6 x, 5y+2z,
 z-z e^{-x^2z^2}\big)$.
 \end{question}
 
@@ -5356,13 +5356,13 @@ Since
 = \pdfdx{(3y^2z -3xz^2)}{x} + \pdfdx{(x^2y)}{y} + \pdfdx{(z^3 -x^2z)}{z}
 = -3 z^2 +x^2 +3z^2 -x^2 = 0
 \]
-for all $\displaystyle (x,y,z) \in \RR^3$ and
-$\displaystyle F:\RR^3 \to \RR^3$ is continuously
-differentiable on the convex set $\displaystyle \RR^3$, it follows
+for all $\DS (x,y,z) \in \RR^3$ and
+$\DS F:\RR^3 \to \RR^3$ is continuously
+differentiable on the convex set $\DS \RR^3$, it follows
 from Proposition~\ref{DGclosedexact} that there exists
-$\displaystyle G:\RR^3\to \RR^3$ such that $\curL G = F$.
+$\DS G:\RR^3\to \RR^3$ such that $\curL G = F$.
 As explained in Remark~\ref{CEtrick}, we may seek
-$\displaystyle G:\RR^3\to \RR^3$ such that
+$\DS G:\RR^3\to \RR^3$ such that
 \begin{align*}
 G_1(x,y,z) &= \int_0^z F_2(x,y,s)\dx{s} + \psi(x,y) 
 = \int_0^z x^2y \dx{s} + \psi(x,y) = x^2yz + \psi(x,y) \ , \\
@@ -5380,7 +5380,7 @@ z^3 + \pdydx{\phi}{x} - x^2z - \pdydx{\psi}{y}
 \]
 If we choose $\phi(x,y) = 0$ and $\psi(x,y) = 0$ for all $(x,y)$,
 then we get that\\
-$\displaystyle
+$\DS
 G(x,y,z) = \Big(x^2yz, -\frac{3}{2}y^2z^2 +xz^3, 0 \Big)$.
 
 \subQ{b}
@@ -5391,8 +5391,8 @@ Since
 = 2z + 1 \neq 0
 \]
 for $z \neq -1/2$, we cannot write $F$ as $F = \curL G$ for some vector
-field $\displaystyle G:\RR^3\to \RR^3$ because we would then have that
-$\diV F = \diV(\curL F) = 0$ on $\displaystyle \RR^3$.
+field $\DS G:\RR^3\to \RR^3$ because we would then have that
+$\diV F = \diV(\curL F) = 0$ on $\DS \RR^3$.
 
 \subQ{c}
 Since
@@ -5401,13 +5401,13 @@ Since
 = \pdfdx{(x^3+yz)}{x} + \pdfdx{(y-3x^2y)}{y} + \pdfdx{(4y^2 -z)}{z}
 = 3 x^2 +1 -3x^2 -1 = 0
 \]
-for all $\displaystyle (x,y,z) \in \RR^3$ and
-$\displaystyle F:\RR^3 \to \RR^3$ is continuously
-differentiable on the convex set $\displaystyle \RR^3$, it follows
+for all $\DS (x,y,z) \in \RR^3$ and
+$\DS F:\RR^3 \to \RR^3$ is continuously
+differentiable on the convex set $\DS \RR^3$, it follows
 from Proposition~\ref{DGclosedexact} that there exists
-$\displaystyle G:\RR^3\to \RR^3$ such that $\curL G = F$.
+$\DS G:\RR^3\to \RR^3$ such that $\curL G = F$.
 As explained in Remark~\ref{CEtrick}, we may seek
-$\displaystyle G:\RR^3\to \RR^3$ such that
+$\DS G:\RR^3\to \RR^3$ such that
 \begin{align*}
 G_1(x,y,z) &= \int_0^z F_2(x,y,s)\dx{s} + \psi(x,y) 
 = \int_0^z (y-3x^2y) \dx{s} + \psi(x,y) \\
@@ -5424,9 +5424,9 @@ with
 &= 4y^2 -z
 \Rightarrow \pdydx{\phi}{x}(x,y) - \pdydx{\psi}{y}(x,y) = 4 y^2 \ .
 \end{align*}
-If we choose $\displaystyle \phi(x,y) = 4xy^2$ and $\psi(x,y) = 0$
+If we choose $\DS \phi(x,y) = 4xy^2$ and $\psi(x,y) = 0$
 for all $(x,y)$, then we get that
-$\displaystyle G(x,y,z) = \Big(yz - 3x^2yz), -x^3z - \frac{yz^2}{2} + 4xy^2,
+$\DS G(x,y,z) = \Big(yz - 3x^2yz), -x^3z - \frac{yz^2}{2} + 4xy^2,
 0 \Big)$.
 
 \subQ{d}
@@ -5436,13 +5436,13 @@ Since
 = \pdfdx{(xy + z)}{x} + \pdfdx{(xz)}{y} + \pdfdx{(-yz+x)}{z}
 = y -y = 0
 \]
-for all $\displaystyle (x,y,z) \in \RR^3$ and
-$\displaystyle F:\RR^3 \to \RR^3$ is continuously
-differentiable on the convex set $\displaystyle \RR^3$, it follows
+for all $\DS (x,y,z) \in \RR^3$ and
+$\DS F:\RR^3 \to \RR^3$ is continuously
+differentiable on the convex set $\DS \RR^3$, it follows
 from Proposition~\ref{DGclosedexact} that there exists
-$\displaystyle G:\RR^3\to \RR^3$ such that $\curL G = F$.
+$\DS G:\RR^3\to \RR^3$ such that $\curL G = F$.
 As explained in Remark~\ref{CEtrick}, we may seek
-$\displaystyle G:\RR^3\to \RR^3$ such that
+$\DS G:\RR^3\to \RR^3$ such that
 \begin{align*}
 G_1(x,y,z) &= \int_0^z F_2(x,y,s)\dx{s} + \psi(x,y) 
 = \int_0^z xs \dx{s} + \psi(x,y) = \frac{xz^2}{2} + \psi(x,y) \ , \\
@@ -5457,9 +5457,9 @@ with
 -yz + \pdydx{\phi}{x} - \pdydx{\psi}{y} = -yz + x
 \Rightarrow \pdydx{\phi}{x}(x,y) - \pdydx{\psi}{y}(x,y) = x \ .
 \]
-If we choose $\displaystyle \phi(x,y) = \frac{x^2}{2}$ and
+If we choose $\DS \phi(x,y) = \frac{x^2}{2}$ and
 $\psi(x,y) = 0$ for all $(x,y)$, then we get that
-$\displaystyle G(x,y,z) = \Big( \frac{xz^2}{2} ,-xyz - \frac{z^2}{2}
+$\DS G(x,y,z) = \Big( \frac{xz^2}{2} ,-xyz - \frac{z^2}{2}
 + \frac{x^2}{2} , 0 \Big)$.
 
 \subQ{e}
@@ -5471,13 +5471,13 @@ Since
 &= (e^{-x^2z^2}- 2x^2z^2e^{-x^2z^2}-6) + 5 + (1 - e^{-x^2z^2} +
 2x^2z^2e^{-x^2z^2})  = 0
 \end{align*}
-for all $\displaystyle (x,y,z) \in \RR^3$ and
-$\displaystyle F:\RR^3 \to \RR^3$ is continuously
-differentiable on the convex set $\displaystyle \RR^3$, it follows
+for all $\DS (x,y,z) \in \RR^3$ and
+$\DS F:\RR^3 \to \RR^3$ is continuously
+differentiable on the convex set $\DS \RR^3$, it follows
 from Proposition~\ref{DGclosedexact} that there exists
-$\displaystyle G:\RR^3\to \RR^3$ such that $\curL G = F$.
+$\DS G:\RR^3\to \RR^3$ such that $\curL G = F$.
 As explained in Remark~\ref{CEtrick}, we may seek
-$\displaystyle G:\RR^3\to \RR^3$ such that
+$\DS G:\RR^3\to \RR^3$ such that
 \begin{align*}
 G_1(x,y,z) &= -\int_0^y F_3(x,s,z)\dx{s} + \psi(x,z) 
 = -\int_0^y (z-z e^{-x^2z^2}) \dx{s} + \psi(x,z) \\
@@ -5495,19 +5495,19 @@ with
  = 5y+2z \\
 &\Rightarrow \pdydx{\psi}{z}(x,z) - \pdydx{\phi}{x}(x,z) = 2z \ .
 \end{align*}
-If we choose $\displaystyle \psi(x,z) = z^2$ and
+If we choose $\DS \psi(x,z) = z^2$ and
 $\phi(x,z) = 0$ for all $(x,z)$, then we get that
-$\displaystyle G(x,y,z) = \Big( -yz + yz e^{-x^2z^2} +z^2 , 0,
+$\DS G(x,y,z) = \Big( -yz + yz e^{-x^2z^2} +z^2 , 0,
 xy e^{-x^2z^2} - 6 xy \Big)$.
 \end{sol}
 
 \begin{question}
-Consider the vector field $\displaystyle F:\RR^3 \to \RR^3$ defined by
-$\displaystyle F(x,y,z) = \big( e^x\sin(y) , e^x\cos(y) , z^2 \big)$.
+Consider the vector field $\DS F:\RR^3 \to \RR^3$ defined by
+$\DS F(x,y,z) = \big( e^x\sin(y) , e^x\cos(y) , z^2 \big)$.
 Evaluate the
-integral $\displaystyle \int_C F\cdot \dx{\VEC{s}}$ where $C$ is the curve
+integral $\DS \int_C F\cdot \dx{\VEC{s}}$ where $C$ is the curve
 with the parametric representation
-$\displaystyle \sigma(t) = \big( t^{1/3}, t^5, e^{t^{1/2}} \big)$ for
+$\DS \sigma(t) = \big( t^{1/3}, t^5, e^{t^{1/2}} \big)$ for
 $0 \leq t \leq 1$.  We assume that the parametric representation of
 $C$ is consistent with the orientation on $C$.
 \end{question}
@@ -5517,17 +5517,17 @@ Since
 \[
 \curL F = \begin{pmatrix}
 \VEC{e}_1 & \VEC{e}_2 & \VEC{e}_3 \\
-\displaystyle \pdydx{}{x} & \displaystyle \pdydx{}{y} &
-\displaystyle \pdydx{}{z} \\
+\DS \pdydx{}{x} & \DS \pdydx{}{y} &
+\DS \pdydx{}{z} \\
 e^x\sin(y) & e^x \cos(y) & z^2
 \end{pmatrix}
 = \VEC{0}
 \]
-for all $\displaystyle (x,y,z)\in \RR^3$ and $F$ is a continuously
-differentiable vector field on the convex set $\displaystyle \RR^3$,
+for all $\DS (x,y,z)\in \RR^3$ and $F$ is a continuously
+differentiable vector field on the convex set $\DS \RR^3$,
 we get from Proposition~\ref{DGconserveB} that $F$ is conservative and
 we get from Proposition~\ref{DGconserveA} that there exists a
-function $\displaystyle f:\RR^3\to \RR$ such that $\graD f = F$.
+function $\DS f:\RR^3\to \RR$ such that $\graD f = F$.
 Hence
 \begin{align*}
 \int_C F\cdot \dx{\VEC{s}} &= \int_C \graD f \cdot \dx{\VEC{s}}
@@ -5542,45 +5542,45 @@ We only have to find $f$.  The function $f$ must satisfy the relations
 \quad \pdydx{f}{z} = z^2 \ .
 \end{equation}
 From the first equation in (\ref{finalA}), we get that
-$\displaystyle f(x,y,z) = e^x \sin(y) + \phi(y,z)$.  If we substitute
+$\DS f(x,y,z) = e^x \sin(y) + \phi(y,z)$.  If we substitute
 this expression for $f$ in the second equation in (\ref{finalA}), then
 we get that
-$\displaystyle e^x \cos(y) + \pdydx{\phi}{y} = e^x \cos(y)$.  Thus
-$\displaystyle \pdydx{\phi}{y} = 0$ and we conclude that $\phi$ is only a
+$\DS e^x \cos(y) + \pdydx{\phi}{y} = e^x \cos(y)$.  Thus
+$\DS \pdydx{\phi}{y} = 0$ and we conclude that $\phi$ is only a
 function of $z$.  If we substitute
-$\displaystyle f(x,y,z) = e^x \sin(y) + \phi(z)$ in the
+$\DS f(x,y,z) = e^x \sin(y) + \phi(z)$ in the
 last equation in (\ref{finalA}), then we get that
-$\displaystyle \dydx{\phi}{z} = z^2$.  Thus
-$\displaystyle \phi(z) = \frac{z^3}{3}$.  We may ignore the constant
+$\DS \dydx{\phi}{z} = z^2$.  Thus
+$\DS \phi(z) = \frac{z^3}{3}$.  We may ignore the constant
 of integration because we are going to evaluate $f$ between two points
 later and the constant will cancel out.  We have found that
-$\displaystyle f(x,y,z) = e^x \sin(y) + \frac{z^3}{3}$.
+$\DS f(x,y,z) = e^x \sin(y) + \frac{z^3}{3}$.
 Hence
-$\displaystyle \int_C F\cdot \dx{\VEC{s}} = f(1.1.e) - f(0,0,1) =
+$\DS \int_C F\cdot \dx{\VEC{s}} = f(1.1.e) - f(0,0,1) =
 e\sin(1) +(e^3-1)/3$.
 \end{sol}
 
 \begin{question}
-Let $C$ be the path in $\displaystyle \RR^3$ defined by the segments
+Let $C$ be the path in $\DS \RR^3$ defined by the segments
 from $(0,0,0)$ to $(1,1,1)$, from $(1,1,1)$ to $(1,1,0)$, from
 $(1,1,0)$ to $(1,0,0)$, from $(1,0,0)$ to $(2,2,2)$, from $(2,2,2)$ to
 $(2,2,0)$, from $(2,2,0)$ to $(2,0,0)$, \ldots, from $(100,100,0)$ to
 $(100,0,0)$ in the given order.  Compute
-$\displaystyle \int_{C} 2xyz \dx{x} + x^2z \dx{y} + x^2y \dx{z}$.
+$\DS \int_{C} 2xyz \dx{x} + x^2z \dx{y} + x^2y \dx{z}$.
 \end{question}
 
 \begin{question}
 Compute the integral
-$\displaystyle \int_C (2y-3z)\dx{x} + (2x+z)\dx{y} +(y-3x)\dx{z}$
+$\DS \int_C (2y-3z)\dx{x} + (2x+z)\dx{y} +(y-3x)\dx{z}$
 where $C$ is the curve with the parametric representation
-$\displaystyle \sigma(t) = (t^{1/3},  \sqrt{t} e^{-t}, e^{\cos(t\pi)})$
+$\DS \sigma(t) = (t^{1/3},  \sqrt{t} e^{-t}, e^{\cos(t\pi)})$
 for $0\leq t \leq 1$.
 We assume that the parametric representation of $C$ is consistent with
 the orientation on $C$.
 \end{question}
 
 \begin{question}
-Let $\displaystyle F(x,y,z) = - \frac{GMm}{(x^2+y^2+z^2)^{3/2}} \, ( x, y, z)$.
+Let $\DS F(x,y,z) = - \frac{GMm}{(x^2+y^2+z^2)^{3/2}} \, ( x, y, z)$.
 This is the gravitational force field of a object of mass $M$ on a particle
 of mass $m$.  Show that the work done by $F$ on the particle as it moves from
 $(x_0,y_0,z_0)$ to $(x_1,y_1,z_1)$ is a function of
